@@ -25,6 +25,18 @@ from winrt._winrt_microsoft_windows_widgets_feeds_providers import (
     IFeedProviderMessage,
     IFeedResourceProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_windows_widgets_feeds_providers import (
+        ImplementsIFeedAnnouncementInvokedTarget,
+        ImplementsIFeedManager,
+        ImplementsIFeedManager2,
+        ImplementsIFeedProvider,
+        ImplementsIFeedProviderAnalytics,
+        ImplementsIFeedProviderErrors,
+        ImplementsIFeedProviderMessage,
+        ImplementsIFeedResourceProvider,
+    )
 
 __all__ = [
     "CustomQueryParametersRequestedArgs",

@@ -20,6 +20,12 @@ from winrt._winrt_windows_gaming_input import (
     IGameController,
     IGameControllerBatteryInfo,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_gaming_input import (
+        ImplementsIGameController,
+        ImplementsIGameControllerBatteryInfo,
+    )
 
 __all__ = [
     "ArcadeStickButtons",

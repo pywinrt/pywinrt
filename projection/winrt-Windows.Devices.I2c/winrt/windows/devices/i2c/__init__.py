@@ -10,6 +10,11 @@ from winrt._winrt_windows_devices_i2c import (
     I2cDevice,
     II2cDeviceStatics,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_i2c import (
+        ImplementsII2cDeviceStatics,
+    )
 
 __all__ = [
     "I2cBusSpeed",

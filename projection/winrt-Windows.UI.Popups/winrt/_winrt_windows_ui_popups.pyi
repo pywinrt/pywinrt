@@ -61,7 +61,7 @@ class PopupMenu(winrt.system.Object):
     def commands(self) -> typing.MutableSequence[IUICommand]: ...
 
 @typing.final
-class UICommand(IUICommand, winrt.system.Object):
+class UICommand(winrt.system.Object, ImplementsIUICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UICommand: ...
     @typing.overload
@@ -86,7 +86,7 @@ class UICommand(IUICommand, winrt.system.Object):
     def id(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
-class UICommandSeparator(IUICommand, winrt.system.Object):
+class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UICommandSeparator: ...
     def __new__(cls: typing.Type[UICommandSeparator]) -> UICommandSeparator: ...
@@ -103,7 +103,10 @@ class UICommandSeparator(IUICommand, winrt.system.Object):
     @id.setter
     def id(self, value: winrt.system.Object) -> None: ...
 
-class IUICommand(winrt.system.Object):
+class ImplementsIUICommand():
+    pass
+
+class IUICommand(winrt.system.Object, ImplementsIUICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUICommand: ...
     @_property

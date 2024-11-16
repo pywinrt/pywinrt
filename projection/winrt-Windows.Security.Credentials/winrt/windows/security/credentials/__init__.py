@@ -16,6 +16,11 @@ from winrt._winrt_windows_security_credentials import (
     WebAccountProvider,
     IWebAccount,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_security_credentials import (
+        ImplementsIWebAccount,
+    )
 
 __all__ = [
     "KeyCredentialAttestationStatus",

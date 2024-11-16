@@ -153,7 +153,7 @@ class CalendarViewTemplateSettings(windows_ui_xaml.DependencyObject):
 class CarouselPanel_Static(windows_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class CarouselPanel(IScrollSnapPointsInfo, windows_ui_xaml_controls.VirtualizingPanel, metaclass=CarouselPanel_Static):
+class CarouselPanel(windows_ui_xaml_controls.VirtualizingPanel, ImplementsIScrollSnapPointsInfo, metaclass=CarouselPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
     def __new__(cls: typing.Type[CarouselPanel]) -> CarouselPanel: ...
@@ -721,7 +721,7 @@ class JumpListItemBackgroundConverter_Static(windows_ui_xaml.DependencyObject_St
     def enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemBackgroundConverter(windows_ui_xaml_data.IValueConverter, windows_ui_xaml.DependencyObject, metaclass=JumpListItemBackgroundConverter_Static):
+class JumpListItemBackgroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemBackgroundConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpListItemBackgroundConverter: ...
     def __new__(cls: typing.Type[JumpListItemBackgroundConverter]) -> JumpListItemBackgroundConverter: ...
@@ -744,7 +744,7 @@ class JumpListItemForegroundConverter_Static(windows_ui_xaml.DependencyObject_St
     def enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemForegroundConverter(windows_ui_xaml_data.IValueConverter, windows_ui_xaml.DependencyObject, metaclass=JumpListItemForegroundConverter_Static):
+class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemForegroundConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpListItemForegroundConverter: ...
     def __new__(cls: typing.Type[JumpListItemForegroundConverter]) -> JumpListItemForegroundConverter: ...
@@ -1196,7 +1196,7 @@ class LoopingSelectorItem(windows_ui_xaml_controls.ContentControl):
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorItem: ...
 
 @typing.final
-class LoopingSelectorPanel(IScrollSnapPointsInfo, windows_ui_xaml_controls.Canvas):
+class LoopingSelectorPanel(windows_ui_xaml_controls.Canvas, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorPanel: ...
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -1240,7 +1240,7 @@ class NavigationViewItemPresenter(windows_ui_xaml_controls.ContentControl, metac
 class OrientedVirtualizingPanel_Static(windows_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class OrientedVirtualizingPanel(windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, windows_ui_xaml_controls.VirtualizingPanel, metaclass=OrientedVirtualizingPanel_Static):
+class OrientedVirtualizingPanel(windows_ui_xaml_controls.VirtualizingPanel, windows_ui_xaml_controls.ImplementsIInsertionPanel, ImplementsIScrollSnapPointsInfo, metaclass=OrientedVirtualizingPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -1319,7 +1319,7 @@ class PivotHeaderPanel(windows_ui_xaml_controls.Canvas):
     def __new__(cls: typing.Type[PivotHeaderPanel]) -> PivotHeaderPanel: ...
 
 @typing.final
-class PivotPanel(IScrollSnapPointsInfo, windows_ui_xaml_controls.Panel):
+class PivotPanel(windows_ui_xaml_controls.Panel, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotPanel: ...
     def __new__(cls: typing.Type[PivotPanel]) -> PivotPanel: ...
@@ -1725,7 +1725,10 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
     @_property
     def from_vertical_offset(self) -> winrt.system.Double: ...
 
-class IScrollSnapPointsInfo(winrt.system.Object):
+class ImplementsIScrollSnapPointsInfo():
+    pass
+
+class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollSnapPointsInfo: ...
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...

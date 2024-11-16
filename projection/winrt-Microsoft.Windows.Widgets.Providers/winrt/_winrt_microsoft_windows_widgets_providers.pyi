@@ -94,7 +94,7 @@ class WidgetManager_Static(type):
     def get_default(cls) -> WidgetManager: ...
 
 @typing.final
-class WidgetManager(IWidgetManager, winrt.system.Object, metaclass=WidgetManager_Static):
+class WidgetManager(winrt.system.Object, ImplementsIWidgetManager, metaclass=WidgetManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WidgetManager: ...
     def delete_widget(self, widget_id: str, /) -> None: ...
@@ -128,7 +128,10 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     @_property
     def widget_id(self) -> str: ...
 
-class IWidgetManager(winrt.system.Object):
+class ImplementsIWidgetManager():
+    pass
+
+class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetManager: ...
     def delete_widget(self, widget_id: str, /) -> None: ...
@@ -137,7 +140,10 @@ class IWidgetManager(winrt.system.Object):
     def get_widget_infos(self) -> winrt.system.Array[WidgetInfo]: ...
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
-class IWidgetProvider(winrt.system.Object):
+class ImplementsIWidgetProvider():
+    pass
+
+class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProvider: ...
     def activate(self, widget_context: WidgetContext, /) -> None: ...
@@ -147,17 +153,26 @@ class IWidgetProvider(winrt.system.Object):
     def on_action_invoked(self, action_invoked_args: WidgetActionInvokedArgs, /) -> None: ...
     def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
-class IWidgetProvider2(winrt.system.Object):
+class ImplementsIWidgetProvider2():
+    pass
+
+class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProvider2: ...
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
-class IWidgetProviderAnalytics(winrt.system.Object):
+class ImplementsIWidgetProviderAnalytics():
+    pass
+
+class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAnalytics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProviderAnalytics: ...
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
-class IWidgetProviderErrors(winrt.system.Object):
+class ImplementsIWidgetProviderErrors():
+    pass
+
+class IWidgetProviderErrors(winrt.system.Object, ImplementsIWidgetProviderErrors):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProviderErrors: ...
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...

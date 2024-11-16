@@ -969,7 +969,7 @@ class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
     def power_in_milliwatts(self) -> winrt.system.Double: ...
 
 @typing.final
-class PedometerDataThreshold(ISensorDataThreshold, winrt.system.Object):
+class PedometerDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PedometerDataThreshold: ...
     def __new__(cls: typing.Type[PedometerDataThreshold], sensor: Pedometer, step_goal: winrt.system.Int32) -> PedometerDataThreshold: ...
@@ -1016,13 +1016,13 @@ class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
     def min_distance_in_millimeters(self) -> typing.Optional[winrt.system.UInt32]: ...
 
 @typing.final
-class ProximitySensorDataThreshold(ISensorDataThreshold, winrt.system.Object):
+class ProximitySensorDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximitySensorDataThreshold: ...
     def __new__(cls: typing.Type[ProximitySensorDataThreshold], sensor: ProximitySensor) -> ProximitySensorDataThreshold: ...
 
 @typing.final
-class ProximitySensorDisplayOnOffController(windows_foundation.IClosable, winrt.system.Object):
+class ProximitySensorDisplayOnOffController(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1134,7 +1134,10 @@ class WakeOnApproachOptions(winrt.system.Object):
     @allow_when_external_display_connected.setter
     def allow_when_external_display_connected(self, value: bool) -> None: ...
 
-class IHumanPresenceSensorExtension(winrt.system.Object):
+class ImplementsIHumanPresenceSensorExtension():
+    pass
+
+class IHumanPresenceSensorExtension(winrt.system.Object, ImplementsIHumanPresenceSensorExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IHumanPresenceSensorExtension: ...
     def initialize(self, device_interface: str, /) -> None: ...
@@ -1145,7 +1148,10 @@ class IHumanPresenceSensorExtension(winrt.system.Object):
     def stop(self) -> None: ...
     def uninitialize(self) -> None: ...
 
-class ISensorDataThreshold(winrt.system.Object):
+class ImplementsISensorDataThreshold():
+    pass
+
+class ISensorDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISensorDataThreshold: ...
 

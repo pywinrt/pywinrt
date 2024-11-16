@@ -453,6 +453,17 @@ if TYPE_CHECKING:
         TreeViewItem_Static,
         TreeViewList_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_controls import (
+        ImplementsICommandBarElement,
+        ImplementsICommandBarElement2,
+        ImplementsIInsertionPanel,
+        ImplementsIItemContainerMapping,
+        ImplementsINavigate,
+        ImplementsIScrollAnchorProvider,
+        ImplementsISemanticZoomInformation,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation

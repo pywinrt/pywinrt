@@ -18,10 +18,10 @@ import winrt.windows.devices.spi.provider as windows_devices_spi_provider
 Self = typing.TypeVar('Self')
 
 @typing.final
-class LowLevelDevicesAggregateProvider(ILowLevelDevicesAggregateProvider, winrt.system.Object):
+class LowLevelDevicesAggregateProvider(winrt.system.Object, ImplementsILowLevelDevicesAggregateProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesAggregateProvider: ...
-    def __new__(cls: typing.Type[LowLevelDevicesAggregateProvider], adc: windows_devices_adc_provider.IAdcControllerProvider, pwm: windows_devices_pwm_provider.IPwmControllerProvider, gpio: windows_devices_gpio_provider.IGpioControllerProvider, i2c: windows_devices_i2c_provider.II2cControllerProvider, spi: windows_devices_spi_provider.ISpiControllerProvider) -> LowLevelDevicesAggregateProvider: ...
+    def __new__(cls: typing.Type[LowLevelDevicesAggregateProvider], adc: windows_devices_adc_provider.ImplementsIAdcControllerProvider, pwm: windows_devices_pwm_provider.ImplementsIPwmControllerProvider, gpio: windows_devices_gpio_provider.ImplementsIGpioControllerProvider, i2c: windows_devices_i2c_provider.ImplementsII2cControllerProvider, spi: windows_devices_spi_provider.ImplementsISpiControllerProvider) -> LowLevelDevicesAggregateProvider: ...
     @_property
     def adc_controller_provider(self) -> windows_devices_adc_provider.IAdcControllerProvider: ...
     @_property
@@ -45,7 +45,10 @@ class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesCo
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesController: ...
 
-class ILowLevelDevicesAggregateProvider(winrt.system.Object):
+class ImplementsILowLevelDevicesAggregateProvider():
+    pass
+
+class ILowLevelDevicesAggregateProvider(winrt.system.Object, ImplementsILowLevelDevicesAggregateProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILowLevelDevicesAggregateProvider: ...
     @_property

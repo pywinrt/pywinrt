@@ -26,6 +26,14 @@ from winrt._winrt_windows_graphics_printing import (
     IPrintTaskOptionsCoreProperties,
     IPrintTaskOptionsCoreUIConfiguration,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_graphics_printing import (
+        ImplementsIPrintDocumentSource,
+        ImplementsIPrintTaskOptionsCore,
+        ImplementsIPrintTaskOptionsCoreProperties,
+        ImplementsIPrintTaskOptionsCoreUIConfiguration,
+    )
 
 __all__ = [
     "PrintBinding",

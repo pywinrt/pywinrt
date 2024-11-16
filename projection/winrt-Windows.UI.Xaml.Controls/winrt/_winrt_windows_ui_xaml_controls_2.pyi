@@ -280,12 +280,19 @@ from ._winrt_windows_ui_xaml_controls import (
     WebViewUnsupportedUriSchemeIdentifiedEventArgs,
     WebViewUnviewableContentIdentifiedEventArgs,
     WebViewWebResourceRequestedEventArgs,
+    ImplementsICommandBarElement,
     ICommandBarElement,
+    ImplementsICommandBarElement2,
     ICommandBarElement2,
+    ImplementsIInsertionPanel,
     IInsertionPanel,
+    ImplementsIItemContainerMapping,
     IItemContainerMapping,
+    ImplementsINavigate,
     INavigate,
+    ImplementsIScrollAnchorProvider,
     IScrollAnchorProvider,
+    ImplementsISemanticZoomInformation,
     ISemanticZoomInformation,
 )
 
@@ -310,7 +317,7 @@ class AppBarButton_Static(Button_Static):
     @_property
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarButton(ICommandBarElement2, ICommandBarElement, Button, metaclass=AppBarButton_Static):
+class AppBarButton(Button, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarButton: ...
     def __new__(cls: typing.Type[AppBarButton]) -> AppBarButton: ...
@@ -359,7 +366,7 @@ class AppBarToggleButton_Static(windows_ui_xaml_controls_primitives.ToggleButton
     @_property
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarToggleButton(ICommandBarElement2, ICommandBarElement, windows_ui_xaml_controls_primitives.ToggleButton, metaclass=AppBarToggleButton_Static):
+class AppBarToggleButton(windows_ui_xaml_controls_primitives.ToggleButton, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarToggleButton: ...
     def __new__(cls: typing.Type[AppBarToggleButton]) -> AppBarToggleButton: ...
@@ -1049,7 +1056,7 @@ class ListViewBase_Static(windows_ui_xaml_controls_primitives.Selector_Static):
     @_property
     def single_selection_follows_focus_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class ListViewBase(ISemanticZoomInformation, windows_ui_xaml_controls_primitives.Selector, metaclass=ListViewBase_Static):
+class ListViewBase(windows_ui_xaml_controls_primitives.Selector, ImplementsISemanticZoomInformation, metaclass=ListViewBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBase: ...
     def complete_view_change(self) -> None: ...

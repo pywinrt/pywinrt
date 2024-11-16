@@ -14,6 +14,11 @@ from winrt._winrt_windows_devices_lights_effects import (
     LampArrayUpdateRequestedEventArgs,
     ILampArrayEffect,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_lights_effects import (
+        ImplementsILampArrayEffect,
+    )
 
 __all__ = [
     "LampArrayEffectCompletionBehavior",

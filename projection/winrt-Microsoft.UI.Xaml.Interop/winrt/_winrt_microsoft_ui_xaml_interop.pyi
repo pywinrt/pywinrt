@@ -22,7 +22,7 @@ class NotifyCollectionChangedEventArgs_Static(type):
 class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotifyCollectionChangedEventArgs: ...
-    def __new__(cls: typing.Type[NotifyCollectionChangedEventArgs], action: NotifyCollectionChangedAction, new_items: IBindableVector, old_items: IBindableVector, new_index: winrt.system.Int32, old_index: winrt.system.Int32) -> NotifyCollectionChangedEventArgs: ...
+    def __new__(cls: typing.Type[NotifyCollectionChangedEventArgs], action: NotifyCollectionChangedAction, new_items: ImplementsIBindableVector, old_items: ImplementsIBindableVector, new_index: winrt.system.Int32, old_index: winrt.system.Int32) -> NotifyCollectionChangedEventArgs: ...
     @_property
     def action(self) -> NotifyCollectionChangedAction: ...
     @_property
@@ -34,12 +34,18 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyColl
     @_property
     def old_starting_index(self) -> winrt.system.Int32: ...
 
-class IBindableIterable(winrt.system.Object):
+class ImplementsIBindableIterable():
+    pass
+
+class IBindableIterable(winrt.system.Object, ImplementsIBindableIterable):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterable: ...
     def first(self) -> IBindableIterator: ...
 
-class IBindableIterator(winrt.system.Object):
+class ImplementsIBindableIterator():
+    pass
+
+class IBindableIterator(winrt.system.Object, ImplementsIBindableIterator):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterator: ...
     def move_next(self) -> bool: ...
@@ -48,7 +54,10 @@ class IBindableIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
-class IBindableObservableVector(IBindableVector, IBindableIterable, winrt.system.Object):
+class ImplementsIBindableObservableVector():
+    pass
+
+class IBindableObservableVector(winrt.system.Object, ImplementsIBindableObservableVector, ImplementsIBindableVector, ImplementsIBindableIterable):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableObservableVector: ...
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -66,7 +75,10 @@ class IBindableObservableVector(IBindableVector, IBindableIterable, winrt.system
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class IBindableVector(IBindableIterable, winrt.system.Object):
+class ImplementsIBindableVector():
+    pass
+
+class IBindableVector(winrt.system.Object, ImplementsIBindableVector, ImplementsIBindableIterable):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVector: ...
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -82,7 +94,10 @@ class IBindableVector(IBindableIterable, winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class IBindableVectorView(IBindableIterable, winrt.system.Object):
+class ImplementsIBindableVectorView():
+    pass
+
+class IBindableVectorView(winrt.system.Object, ImplementsIBindableVectorView, ImplementsIBindableIterable):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVectorView: ...
     def first(self) -> IBindableIterator: ...
@@ -91,7 +106,10 @@ class IBindableVectorView(IBindableIterable, winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class INotifyCollectionChanged(winrt.system.Object):
+class ImplementsINotifyCollectionChanged():
+    pass
+
+class INotifyCollectionChanged(winrt.system.Object, ImplementsINotifyCollectionChanged):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyCollectionChanged: ...
     def add_collection_changed(self, handler: NotifyCollectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...

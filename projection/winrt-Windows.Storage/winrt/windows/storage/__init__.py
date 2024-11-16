@@ -51,6 +51,21 @@ from winrt._winrt_windows_storage import (
     IStorageItemPropertiesWithProvider,
     IStreamedFileDataRequest,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage import (
+        ImplementsIStorageFile,
+        ImplementsIStorageFile2,
+        ImplementsIStorageFilePropertiesWithAvailability,
+        ImplementsIStorageFolder,
+        ImplementsIStorageFolder2,
+        ImplementsIStorageItem,
+        ImplementsIStorageItem2,
+        ImplementsIStorageItemProperties,
+        ImplementsIStorageItemProperties2,
+        ImplementsIStorageItemPropertiesWithProvider,
+        ImplementsIStreamedFileDataRequest,
+    )
 
 __all__ = [
     "ApplicationDataCreateDisposition",

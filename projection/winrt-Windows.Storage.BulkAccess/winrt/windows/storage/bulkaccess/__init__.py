@@ -7,6 +7,11 @@ from winrt._winrt_windows_storage_bulkaccess import (
     FolderInformation,
     IStorageItemInformation,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_bulkaccess import (
+        ImplementsIStorageItemInformation,
+    )
 
 __all__ = [
     "FileInformation",

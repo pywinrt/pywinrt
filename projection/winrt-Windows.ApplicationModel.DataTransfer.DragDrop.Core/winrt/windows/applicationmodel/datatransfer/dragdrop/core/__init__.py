@@ -11,6 +11,11 @@ from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
     CoreDropOperationTargetRequestedEventArgs,
     ICoreDropOperationTarget,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
+        ImplementsICoreDropOperationTarget,
+    )
 
 __all__ = [
     "CoreDragUIContentMode",

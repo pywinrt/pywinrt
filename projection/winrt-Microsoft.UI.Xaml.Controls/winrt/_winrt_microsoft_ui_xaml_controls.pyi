@@ -331,7 +331,7 @@ class AppBarElementContainer_Static(ContentControl_Static):
     @_property
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarElementContainer(ICommandBarElement, ContentControl, metaclass=AppBarElementContainer_Static):
+class AppBarElementContainer(ContentControl, ImplementsICommandBarElement, metaclass=AppBarElementContainer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarElementContainer: ...
     def __new__(cls: typing.Type[AppBarElementContainer]) -> AppBarElementContainer: ...
@@ -354,7 +354,7 @@ class AppBarSeparator_Static(Control_Static):
     @_property
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarSeparator(ICommandBarElement, Control, metaclass=AppBarSeparator_Static):
+class AppBarSeparator(Control, ImplementsICommandBarElement, metaclass=AppBarSeparator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarSeparator: ...
     def __new__(cls: typing.Type[AppBarSeparator]) -> AppBarSeparator: ...
@@ -2190,7 +2190,7 @@ class CoreWebView2InitializedEventArgs(winrt.system.Object):
 class DataTemplateSelector_Static(type):
     pass
 
-class DataTemplateSelector(microsoft_ui_xaml.IElementFactory, winrt.system.Object, metaclass=DataTemplateSelector_Static):
+class DataTemplateSelector(winrt.system.Object, microsoft_ui_xaml.ImplementsIElementFactory, metaclass=DataTemplateSelector_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataTemplateSelector: ...
     def __new__(cls: typing.Type[DataTemplateSelector]) -> DataTemplateSelector: ...
@@ -2318,7 +2318,7 @@ class DatePickerFlyoutItem_Static(microsoft_ui_xaml.DependencyObject_Static):
     def secondary_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class DatePickerFlyoutItem(microsoft_ui_xaml_data.ICustomPropertyProvider, microsoft_ui_xaml.DependencyObject, metaclass=DatePickerFlyoutItem_Static):
+class DatePickerFlyoutItem(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsICustomPropertyProvider, metaclass=DatePickerFlyoutItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerFlyoutItem: ...
     def get_custom_property(self, name: str, /) -> microsoft_ui_xaml_data.ICustomProperty: ...
@@ -2605,7 +2605,7 @@ class Frame_Static(ContentControl_Static):
     @_property
     def source_page_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Frame(INavigate, ContentControl, metaclass=Frame_Static):
+class Frame(ContentControl, ImplementsINavigate, metaclass=Frame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Frame: ...
     def __new__(cls: typing.Type[Frame]) -> Frame: ...
@@ -2742,7 +2742,7 @@ class GroupItem(ContentControl, metaclass=GroupItem_Static):
 class GroupStyle_Static(type):
     pass
 
-class GroupStyle(microsoft_ui_xaml_data.INotifyPropertyChanged, winrt.system.Object, metaclass=GroupStyle_Static):
+class GroupStyle(winrt.system.Object, microsoft_ui_xaml_data.ImplementsINotifyPropertyChanged, metaclass=GroupStyle_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GroupStyle: ...
     def __new__(cls: typing.Type[GroupStyle]) -> GroupStyle: ...
@@ -2809,7 +2809,7 @@ class Hub_Static(Control_Static):
     @_property
     def semantic_zoom_owner_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Hub(ISemanticZoomInformation, Control, metaclass=Hub_Static):
+class Hub(Control, ImplementsISemanticZoomInformation, metaclass=Hub_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Hub: ...
     def __new__(cls: typing.Type[Hub]) -> Hub: ...
@@ -3215,7 +3215,7 @@ class ItemClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     def clicked_item(self) -> winrt.system.Object: ...
 
 @typing.final
-class ItemCollection(windows_foundation_collections.IObservableVector[winrt.system.Object], winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Object]):
+class ItemCollection(winrt.system.Object, windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[winrt.system.Object]: ...
     @typing.overload
@@ -3364,7 +3364,7 @@ class ItemsControl_Static(Control_Static):
     @_property
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemsControl(IItemContainerMapping, Control, metaclass=ItemsControl_Static):
+class ItemsControl(Control, ImplementsIItemContainerMapping, metaclass=ItemsControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsControl: ...
     def __new__(cls: typing.Type[ItemsControl]) -> ItemsControl: ...
@@ -3454,7 +3454,7 @@ class ItemsPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ItemsPresenter(microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, microsoft_ui_xaml.FrameworkElement, metaclass=ItemsPresenter_Static):
+class ItemsPresenter(microsoft_ui_xaml.FrameworkElement, microsoft_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=ItemsPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsPresenter: ...
     def __new__(cls: typing.Type[ItemsPresenter]) -> ItemsPresenter: ...
@@ -3607,7 +3607,7 @@ class ItemsRepeaterScrollHost(microsoft_ui_xaml.FrameworkElement):
 class ItemsSourceView_Static(type):
     pass
 
-class ItemsSourceView(microsoft_ui_xaml_interop.INotifyCollectionChanged, winrt.system.Object, metaclass=ItemsSourceView_Static):
+class ItemsSourceView(winrt.system.Object, microsoft_ui_xaml_interop.ImplementsINotifyCollectionChanged, metaclass=ItemsSourceView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsSourceView: ...
     def __new__(cls: typing.Type[ItemsSourceView], source: winrt.system.Object) -> ItemsSourceView: ...
@@ -6962,7 +6962,7 @@ class ScrollViewer_Static(ContentControl_Static):
     def zoom_snap_points_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ScrollViewer(IScrollAnchorProvider, ContentControl, metaclass=ScrollViewer_Static):
+class ScrollViewer(ContentControl, ImplementsIScrollAnchorProvider, metaclass=ScrollViewer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollViewer: ...
     def __new__(cls: typing.Type[ScrollViewer]) -> ScrollViewer: ...
@@ -7565,7 +7565,7 @@ class StackPanel_Static(Panel_Static):
     @_property
     def spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class StackPanel(IInsertionPanel, microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, Panel, metaclass=StackPanel_Static):
+class StackPanel(Panel, ImplementsIInsertionPanel, microsoft_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=StackPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StackPanel: ...
     def __new__(cls: typing.Type[StackPanel]) -> StackPanel: ...
@@ -9567,7 +9567,10 @@ class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=Xaml
     @use_compact_resources.setter
     def use_compact_resources(self, value: bool) -> None: ...
 
-class IAnimatedVisual(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIAnimatedVisual():
+    pass
+
+class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -9580,7 +9583,10 @@ class IAnimatedVisual(windows_foundation.IClosable, winrt.system.Object):
     @_property
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
-class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIAnimatedVisual2():
+    pass
+
+class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -9595,12 +9601,18 @@ class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt.syst
     @_property
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
-class IAnimatedVisualSource(winrt.system.Object):
+class ImplementsIAnimatedVisualSource():
+    pass
+
+class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource: ...
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[IAnimatedVisual, winrt.system.Object]: ...
 
-class IAnimatedVisualSource2(IAnimatedVisualSource, winrt.system.Object):
+class ImplementsIAnimatedVisualSource2():
+    pass
+
+class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSource2, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource2: ...
     def set_color_property(self, property_name: str, value: windows_ui.Color, /) -> None: ...
@@ -9608,12 +9620,18 @@ class IAnimatedVisualSource2(IAnimatedVisualSource, winrt.system.Object):
     @_property
     def markers(self) -> typing.Mapping[str, winrt.system.Double]: ...
 
-class IAnimatedVisualSource3(winrt.system.Object):
+class ImplementsIAnimatedVisualSource3():
+    pass
+
+class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSource3):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource3: ...
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, create_animations: bool, /) -> typing.Tuple[IAnimatedVisual2, winrt.system.Object]: ...
 
-class ICommandBarElement(winrt.system.Object):
+class ImplementsICommandBarElement():
+    pass
+
+class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement: ...
     @_property
@@ -9627,19 +9645,28 @@ class ICommandBarElement(winrt.system.Object):
     @_property
     def is_in_overflow(self) -> bool: ...
 
-class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt.system.Object):
+class ImplementsIDynamicAnimatedVisualSource():
+    pass
+
+class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimatedVisualSource, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDynamicAnimatedVisualSource: ...
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[IAnimatedVisual, winrt.system.Object]: ...
     def add_animated_visual_invalidated(self, handler: windows_foundation.TypedEventHandler[IDynamicAnimatedVisualSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class IInsertionPanel(winrt.system.Object):
+class ImplementsIInsertionPanel():
+    pass
+
+class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInsertionPanel: ...
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
-class IItemContainerMapping(winrt.system.Object):
+class ImplementsIItemContainerMapping():
+    pass
+
+class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerMapping: ...
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
@@ -9647,18 +9674,27 @@ class IItemContainerMapping(winrt.system.Object):
     def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
-class IKeyIndexMapping(winrt.system.Object):
+class ImplementsIKeyIndexMapping():
+    pass
+
+class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IKeyIndexMapping: ...
     def index_from_key(self, key: str, /) -> winrt.system.Int32: ...
     def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
 
-class INavigate(winrt.system.Object):
+class ImplementsINavigate():
+    pass
+
+class INavigate(winrt.system.Object, ImplementsINavigate):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INavigate: ...
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
-class IScrollAnchorProvider(winrt.system.Object):
+class ImplementsIScrollAnchorProvider():
+    pass
+
+class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollAnchorProvider: ...
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
@@ -9666,7 +9702,10 @@ class IScrollAnchorProvider(winrt.system.Object):
     @_property
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
-class ISemanticZoomInformation(winrt.system.Object):
+class ImplementsISemanticZoomInformation():
+    pass
+
+class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISemanticZoomInformation: ...
     def complete_view_change(self) -> None: ...

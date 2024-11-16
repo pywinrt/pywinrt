@@ -33,6 +33,11 @@ if TYPE_CHECKING:
         ContentSiteView_Static,
         DesktopSiteBridge_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_content import (
+        ImplementsIContentSiteBridge,
+    )
 
 __all__ = [
     "ContentCoordinateRoundingMode",

@@ -5,6 +5,11 @@ from winrt._winrt_windows_phone_startscreen import (
     DualSimTile,
     IToastNotificationManagerStatics3,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_phone_startscreen import (
+        ImplementsIToastNotificationManagerStatics3,
+    )
 
 __all__ = [
     "DualSimTile",

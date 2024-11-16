@@ -9,6 +9,11 @@ from winrt._winrt_windows_web_http_filters import (
     HttpServerCustomValidationRequestedEventArgs,
     IHttpFilter,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_web_http_filters import (
+        ImplementsIHttpFilter,
+    )
 
 __all__ = [
     "HttpCacheReadBehavior",

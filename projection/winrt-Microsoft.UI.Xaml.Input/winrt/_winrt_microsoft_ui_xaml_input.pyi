@@ -642,7 +642,7 @@ class XamlUICommand_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class XamlUICommand(ICommand, microsoft_ui_xaml.DependencyObject, metaclass=XamlUICommand_Static):
+class XamlUICommand(microsoft_ui_xaml.DependencyObject, ImplementsICommand, metaclass=XamlUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...
     def __new__(cls: typing.Type[XamlUICommand]) -> XamlUICommand: ...
@@ -678,7 +678,10 @@ class XamlUICommand(ICommand, microsoft_ui_xaml.DependencyObject, metaclass=Xaml
     @_property
     def keyboard_accelerators(self) -> typing.MutableSequence[KeyboardAccelerator]: ...
 
-class ICommand(winrt.system.Object):
+class ImplementsICommand():
+    pass
+
+class ICommand(winrt.system.Object, ImplementsICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommand: ...
     def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...

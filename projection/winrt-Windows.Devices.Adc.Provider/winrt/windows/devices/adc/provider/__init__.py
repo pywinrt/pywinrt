@@ -7,6 +7,12 @@ from winrt._winrt_windows_devices_adc_provider import (
     IAdcControllerProvider,
     IAdcProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_adc_provider import (
+        ImplementsIAdcControllerProvider,
+        ImplementsIAdcProvider,
+    )
 
 __all__ = [
     "ProviderAdcChannelMode",

@@ -42,12 +42,18 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
     @chip_select_line.setter
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
-class ISpiControllerProvider(winrt.system.Object):
+class ImplementsISpiControllerProvider():
+    pass
+
+class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiControllerProvider: ...
     def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
 
-class ISpiDeviceProvider(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsISpiDeviceProvider():
+    pass
+
+class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -62,7 +68,10 @@ class ISpiDeviceProvider(windows_foundation.IClosable, winrt.system.Object):
     @_property
     def device_id(self) -> str: ...
 
-class ISpiProvider(winrt.system.Object):
+class ImplementsISpiProvider():
+    pass
+
+class ISpiProvider(winrt.system.Object, ImplementsISpiProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiProvider: ...
     def get_controllers_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ISpiControllerProvider]]: ...

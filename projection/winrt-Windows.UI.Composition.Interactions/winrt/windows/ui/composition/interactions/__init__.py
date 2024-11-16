@@ -31,6 +31,12 @@ if TYPE_CHECKING:
         InteractionTrackerVector2InertiaModifier_Static,
         VisualInteractionSource_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_composition_interactions import (
+        ImplementsICompositionInteractionSource,
+        ImplementsIInteractionTrackerOwner,
+    )
 
 __all__ = [
     "InteractionBindingAxisModes",

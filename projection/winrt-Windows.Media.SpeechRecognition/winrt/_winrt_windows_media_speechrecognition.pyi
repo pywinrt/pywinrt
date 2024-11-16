@@ -59,7 +59,7 @@ class SpeechRecognitionCompilationResult(winrt.system.Object):
     def status(self) -> SpeechRecognitionResultStatus: ...
 
 @typing.final
-class SpeechRecognitionGrammarFileConstraint(ISpeechRecognitionConstraint, winrt.system.Object):
+class SpeechRecognitionGrammarFileConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionGrammarFileConstraint: ...
     @typing.overload
@@ -98,7 +98,7 @@ class SpeechRecognitionHypothesisGeneratedEventArgs(winrt.system.Object):
     def hypothesis(self) -> SpeechRecognitionHypothesis: ...
 
 @typing.final
-class SpeechRecognitionListConstraint(ISpeechRecognitionConstraint, winrt.system.Object):
+class SpeechRecognitionListConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionListConstraint: ...
     @typing.overload
@@ -161,7 +161,7 @@ class SpeechRecognitionSemanticInterpretation(winrt.system.Object):
     def properties(self) -> typing.Mapping[str, typing.Sequence[str]]: ...
 
 @typing.final
-class SpeechRecognitionTopicConstraint(ISpeechRecognitionConstraint, winrt.system.Object):
+class SpeechRecognitionTopicConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionTopicConstraint: ...
     @typing.overload
@@ -188,7 +188,7 @@ class SpeechRecognitionTopicConstraint(ISpeechRecognitionConstraint, winrt.syste
     def topic_hint(self) -> str: ...
 
 @typing.final
-class SpeechRecognitionVoiceCommandDefinitionConstraint(ISpeechRecognitionConstraint, winrt.system.Object):
+class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionVoiceCommandDefinitionConstraint: ...
     @_property
@@ -217,7 +217,7 @@ class SpeechRecognizer_Static(type):
     def system_speech_language(cls) -> windows_globalization.Language: ...
 
 @typing.final
-class SpeechRecognizer(windows_foundation.IClosable, winrt.system.Object, metaclass=SpeechRecognizer_Static):
+class SpeechRecognizer(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=SpeechRecognizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -315,7 +315,10 @@ class VoiceCommandSet(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
-class ISpeechRecognitionConstraint(winrt.system.Object):
+class ImplementsISpeechRecognitionConstraint():
+    pass
+
+class ISpeechRecognitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpeechRecognitionConstraint: ...
     @_property

@@ -23,6 +23,12 @@ from winrt._winrt_windows_ui_shell import (
     IAdaptiveCard,
     IAdaptiveCardBuilderStatics,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_shell import (
+        ImplementsIAdaptiveCard,
+        ImplementsIAdaptiveCardBuilderStatics,
+    )
 
 __all__ = [
     "SecurityAppKind",

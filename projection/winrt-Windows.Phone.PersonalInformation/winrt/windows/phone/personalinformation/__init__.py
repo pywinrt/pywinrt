@@ -15,6 +15,12 @@ from winrt._winrt_windows_phone_personalinformation import (
     IContactInformation,
     IContactInformation2,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_phone_personalinformation import (
+        ImplementsIContactInformation,
+        ImplementsIContactInformation2,
+    )
 
 __all__ = [
     "ContactChangeType",

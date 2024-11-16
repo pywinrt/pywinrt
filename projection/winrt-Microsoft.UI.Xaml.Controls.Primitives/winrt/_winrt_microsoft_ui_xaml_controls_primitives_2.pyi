@@ -99,8 +99,11 @@ from ._winrt_microsoft_ui_xaml_controls_primitives import (
     ToolTipTemplateSettings,
     ZoomSnapPoint,
     ZoomSnapPointBase,
+    ImplementsIScrollController,
     IScrollController,
+    ImplementsIScrollControllerPanningInfo,
     IScrollControllerPanningInfo,
+    ImplementsIScrollSnapPointsInfo,
     IScrollSnapPointsInfo,
 )
 

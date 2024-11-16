@@ -42,6 +42,11 @@ from winrt._winrt_windows_applicationmodel_chat import (
     RemoteParticipantComposingChangedEventArgs,
     IChatItem,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel_chat import (
+        ImplementsIChatItem,
+    )
 
 __all__ = [
     "ChatConversationThreadingKind",

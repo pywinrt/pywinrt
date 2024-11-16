@@ -34,4 +34,4 @@ class WorkItemPriority(enum.IntEnum):
 
 TimerDestroyedHandler = typing.Callable[[ThreadPoolTimer], None]
 TimerElapsedHandler = typing.Callable[[ThreadPoolTimer], None]
-WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], None]
+WorkItemHandler = typing.Callable[["windows_foundation.ImplementsIAsyncAction"], None]

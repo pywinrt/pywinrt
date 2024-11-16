@@ -19,6 +19,16 @@ if TYPE_CHECKING:
     from winrt._winrt_microsoft_ui_xaml_interop import (
         NotifyCollectionChangedEventArgs_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_interop import (
+        ImplementsIBindableIterable,
+        ImplementsIBindableIterator,
+        ImplementsIBindableObservableVector,
+        ImplementsIBindableVector,
+        ImplementsIBindableVectorView,
+        ImplementsINotifyCollectionChanged,
+    )
 
 __all__ = [
     "NotifyCollectionChangedAction",
@@ -40,5 +50,5 @@ class NotifyCollectionChangedAction(enum.IntEnum):
     MOVE = 3
     RESET = 4
 
-BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
+BindableVectorChangedEventHandler = typing.Callable[[ImplementsIBindableObservableVector, winrt.system.Object], None]
 NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]

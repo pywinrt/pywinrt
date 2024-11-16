@@ -22,6 +22,22 @@ from winrt._winrt_windows_foundation_collections import (
     IVectorView,
     IVector,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_foundation_collections import (
+        ImplementsIIterable,
+        ImplementsIIterator,
+        ImplementsIKeyValuePair,
+        ImplementsIMapChangedEventArgs,
+        ImplementsIMapView,
+        ImplementsIMap,
+        ImplementsIObservableMap,
+        ImplementsIObservableVector,
+        ImplementsIPropertySet,
+        ImplementsIVectorChangedEventArgs,
+        ImplementsIVectorView,
+        ImplementsIVector,
+    )
 
 __all__ = [
     "CollectionChange",
@@ -63,5 +79,5 @@ winrt.system._mixin_mutable_sequence(IObservableVector)
 winrt.system._mixin_mutable_mapping(IPropertySet)
 winrt.system._mixin_sequence(IVectorView)
 winrt.system._mixin_mutable_sequence(IVector)
-MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
-VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]
+MapChangedEventHandler = typing.Callable[[ImplementsIObservableMap[K, V], ImplementsIMapChangedEventArgs[K]], None]
+VectorChangedEventHandler = typing.Callable[[ImplementsIObservableVector[T], ImplementsIVectorChangedEventArgs], None]

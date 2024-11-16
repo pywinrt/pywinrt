@@ -43,6 +43,18 @@ from winrt._winrt_windows_ui_core import (
     ICoreWindowEventArgs,
     IInitializeWithCoreWindow,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_core import (
+        ImplementsICoreAcceleratorKeys,
+        ImplementsICoreInputSourceBase,
+        ImplementsICorePointerInputSource,
+        ImplementsICorePointerInputSource2,
+        ImplementsICorePointerRedirector,
+        ImplementsICoreWindow,
+        ImplementsICoreWindowEventArgs,
+        ImplementsIInitializeWithCoreWindow,
+    )
 
 __all__ = [
     "AppViewBackButtonVisibility",

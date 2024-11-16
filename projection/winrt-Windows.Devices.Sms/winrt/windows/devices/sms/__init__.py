@@ -37,6 +37,15 @@ from winrt._winrt_windows_devices_sms import (
     ISmsMessageBase,
     ISmsTextMessage,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_sms import (
+        ImplementsISmsBinaryMessage,
+        ImplementsISmsDevice,
+        ImplementsISmsMessage,
+        ImplementsISmsMessageBase,
+        ImplementsISmsTextMessage,
+    )
 
 __all__ = [
     "CellularClass",

@@ -43,6 +43,11 @@ from winrt._winrt_windows_ui_notifications import (
     UserNotificationChangedEventArgs,
     IAdaptiveNotificationContent,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_notifications import (
+        ImplementsIAdaptiveNotificationContent,
+    )
 
 __all__ = [
     "AdaptiveNotificationContentKind",

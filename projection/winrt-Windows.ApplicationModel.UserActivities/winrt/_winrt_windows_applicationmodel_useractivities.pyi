@@ -108,7 +108,7 @@ class UserActivityContentInfo_Static(type):
     def from_json(cls, value: str, /) -> UserActivityContentInfo: ...
 
 @typing.final
-class UserActivityContentInfo(IUserActivityContentInfo, winrt.system.Object, metaclass=UserActivityContentInfo_Static):
+class UserActivityContentInfo(winrt.system.Object, ImplementsIUserActivityContentInfo, metaclass=UserActivityContentInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserActivityContentInfo: ...
     def to_json(self) -> str: ...
@@ -139,7 +139,7 @@ class UserActivityRequestedEventArgs(winrt.system.Object):
     def request(self) -> UserActivityRequest: ...
 
 @typing.final
-class UserActivitySession(windows_foundation.IClosable, winrt.system.Object):
+class UserActivitySession(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -188,7 +188,10 @@ class UserActivityVisualElements(winrt.system.Object):
     @attribution_display_text.setter
     def attribution_display_text(self, value: str) -> None: ...
 
-class IUserActivityContentInfo(winrt.system.Object):
+class ImplementsIUserActivityContentInfo():
+    pass
+
+class IUserActivityContentInfo(winrt.system.Object, ImplementsIUserActivityContentInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserActivityContentInfo: ...
     def to_json(self) -> str: ...

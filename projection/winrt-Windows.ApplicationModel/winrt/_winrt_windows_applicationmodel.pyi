@@ -146,7 +146,7 @@ class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
     pass
 
 @typing.final
-class EnteredBackgroundEventArgs(IEnteredBackgroundEventArgs, winrt.system.Object):
+class EnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnteredBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -200,7 +200,7 @@ class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLa
     pass
 
 @typing.final
-class LeavingBackgroundEventArgs(ILeavingBackgroundEventArgs, winrt.system.Object):
+class LeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LeavingBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -559,53 +559,71 @@ class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
     def task_id(self) -> str: ...
 
 @typing.final
-class SuspendingDeferral(ISuspendingDeferral, winrt.system.Object):
+class SuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
-class SuspendingEventArgs(ISuspendingEventArgs, winrt.system.Object):
+class SuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
 @typing.final
-class SuspendingOperation(ISuspendingOperation, winrt.system.Object):
+class SuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingOperation: ...
     def get_deferral(self) -> SuspendingDeferral: ...
     @_property
     def deadline(self) -> datetime.datetime: ...
 
-class IEnteredBackgroundEventArgs(winrt.system.Object):
+class ImplementsIEnteredBackgroundEventArgs():
+    pass
+
+class IEnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IEnteredBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
-class ILeavingBackgroundEventArgs(winrt.system.Object):
+class ImplementsILeavingBackgroundEventArgs():
+    pass
+
+class ILeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILeavingBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
-class IPackageCatalogStatics2(winrt.system.Object):
+class ImplementsIPackageCatalogStatics2():
+    pass
+
+class IPackageCatalogStatics2(winrt.system.Object, ImplementsIPackageCatalogStatics2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPackageCatalogStatics2: ...
     def open_for_package(self, package: Package, /) -> PackageCatalog: ...
 
-class ISuspendingDeferral(winrt.system.Object):
+class ImplementsISuspendingDeferral():
+    pass
+
+class ISuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingDeferral: ...
     def complete(self) -> None: ...
 
-class ISuspendingEventArgs(winrt.system.Object):
+class ImplementsISuspendingEventArgs():
+    pass
+
+class ISuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
-class ISuspendingOperation(winrt.system.Object):
+class ImplementsISuspendingOperation():
+    pass
+
+class ISuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingOperation: ...
     def get_deferral(self) -> SuspendingDeferral: ...

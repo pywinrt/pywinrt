@@ -20,7 +20,7 @@ from winrt.windows.ai.machinelearning.preview import FeatureElementKindPreview, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ImageVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+class ImageVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageVariableDescriptorPreview: ...
     @_property
@@ -75,7 +75,7 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def bind(self, name: str, value: winrt.system.Object, /) -> None: ...
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
-    def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
+    def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def clear(self) -> None: ...
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]: ...
@@ -118,9 +118,9 @@ class LearningModelEvaluationResultPreview(winrt.system.Object):
 @typing.final
 class LearningModelPreview_Static(type):
     # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
-    def load_model_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
+    def load_model_from_storage_file_async(cls, model_file: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
     # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
-    def load_model_from_stream_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
+    def load_model_from_stream_async(cls, model_stream: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
 
 @typing.final
 class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_Static):
@@ -138,7 +138,7 @@ class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_S
     def description(self) -> LearningModelDescriptionPreview: ...
 
 @typing.final
-class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+class LearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LearningModelVariableDescriptorPreview: ...
     @_property
@@ -151,7 +151,7 @@ class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPre
     def name(self) -> str: ...
 
 @typing.final
-class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+class MapVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapVariableDescriptorPreview: ...
     @_property
@@ -172,7 +172,7 @@ class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winr
     def valid_string_keys(self) -> typing.Iterable[str]: ...
 
 @typing.final
-class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+class SequenceVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SequenceVariableDescriptorPreview: ...
     @_property
@@ -187,7 +187,7 @@ class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview,
     def element_type(self) -> ILearningModelVariableDescriptorPreview: ...
 
 @typing.final
-class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+class TensorVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TensorVariableDescriptorPreview: ...
     @_property
@@ -203,7 +203,10 @@ class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, w
     @_property
     def shape(self) -> typing.Iterable[winrt.system.Int64]: ...
 
-class ILearningModelVariableDescriptorPreview(winrt.system.Object):
+class ImplementsILearningModelVariableDescriptorPreview():
+    pass
+
+class ILearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelVariableDescriptorPreview: ...
     @_property

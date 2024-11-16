@@ -30,7 +30,10 @@ class Direct3DSurfaceDescription:
     multisample_description: Direct3DMultisampleDescription
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0, format: windows_graphics_directx.DirectXPixelFormat = windows_graphics_directx.DirectXPixelFormat(0), multisample_description: Direct3DMultisampleDescription = Direct3DMultisampleDescription()) -> None: ...
 
-class IDirect3DDevice(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIDirect3DDevice():
+    pass
+
+class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -38,7 +41,10 @@ class IDirect3DDevice(windows_foundation.IClosable, winrt.system.Object):
     def close(self) -> None: ...
     def trim(self) -> None: ...
 
-class IDirect3DSurface(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIDirect3DSurface():
+    pass
+
+class IDirect3DSurface(winrt.system.Object, ImplementsIDirect3DSurface, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

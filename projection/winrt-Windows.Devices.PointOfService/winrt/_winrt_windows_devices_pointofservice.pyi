@@ -33,7 +33,7 @@ class BarcodeScanner_Static(type):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class BarcodeScanner(windows_foundation.IClosable, winrt.system.Object, metaclass=BarcodeScanner_Static):
+class BarcodeScanner(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=BarcodeScanner_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -101,7 +101,7 @@ class BarcodeScannerImagePreviewReceivedEventArgs(winrt.system.Object):
 class BarcodeScannerReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerReport: ...
-    def __new__(cls: typing.Type[BarcodeScannerReport], scan_data_type: winrt.system.UInt32, scan_data: windows_storage_streams.IBuffer, scan_data_label: windows_storage_streams.IBuffer) -> BarcodeScannerReport: ...
+    def __new__(cls: typing.Type[BarcodeScannerReport], scan_data_type: winrt.system.UInt32, scan_data: windows_storage_streams.ImplementsIBuffer, scan_data_label: windows_storage_streams.ImplementsIBuffer) -> BarcodeScannerReport: ...
     @_property
     def scan_data(self) -> windows_storage_streams.IBuffer: ...
     @_property
@@ -353,7 +353,7 @@ class CashDrawer_Static(type):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class CashDrawer(windows_foundation.IClosable, winrt.system.Object, metaclass=CashDrawer_Static):
+class CashDrawer(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=CashDrawer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -417,7 +417,7 @@ class CashDrawerCloseAlarm(winrt.system.Object):
     def alarm_timeout(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
-class CashDrawerClosedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
+class CashDrawerClosedEventArgs(winrt.system.Object, ImplementsICashDrawerEventSourceEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CashDrawerClosedEventArgs: ...
     @_property
@@ -433,7 +433,7 @@ class CashDrawerEventSource(winrt.system.Object):
     def remove_drawer_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class CashDrawerOpenedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
+class CashDrawerOpenedEventArgs(winrt.system.Object, ImplementsICashDrawerEventSourceEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CashDrawerOpenedEventArgs: ...
     @_property
@@ -456,7 +456,7 @@ class CashDrawerStatusUpdatedEventArgs(winrt.system.Object):
     def status(self) -> CashDrawerStatus: ...
 
 @typing.final
-class ClaimedBarcodeScanner(windows_foundation.IClosable, winrt.system.Object):
+class ClaimedBarcodeScanner(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -512,7 +512,7 @@ class ClaimedBarcodeScannerClosedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ClaimedBarcodeScannerClosedEventArgs: ...
 
 @typing.final
-class ClaimedCashDrawer(windows_foundation.IClosable, winrt.system.Object):
+class ClaimedCashDrawer(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -543,7 +543,7 @@ class ClaimedCashDrawerClosedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ClaimedCashDrawerClosedEventArgs: ...
 
 @typing.final
-class ClaimedJournalPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+class ClaimedJournalPrinter(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedJournalPrinter: ...
     def create_job(self) -> JournalPrintJob: ...
@@ -592,7 +592,7 @@ class ClaimedLineDisplay_Static(type):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class ClaimedLineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=ClaimedLineDisplay_Static):
+class ClaimedLineDisplay(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=ClaimedLineDisplay_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -647,7 +647,7 @@ class ClaimedLineDisplayClosedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ClaimedLineDisplayClosedEventArgs: ...
 
 @typing.final
-class ClaimedMagneticStripeReader(windows_foundation.IClosable, winrt.system.Object):
+class ClaimedMagneticStripeReader(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -708,7 +708,7 @@ class ClaimedMagneticStripeReaderClosedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ClaimedMagneticStripeReaderClosedEventArgs: ...
 
 @typing.final
-class ClaimedPosPrinter(windows_foundation.IClosable, winrt.system.Object):
+class ClaimedPosPrinter(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -754,7 +754,7 @@ class ClaimedPosPrinterClosedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ClaimedPosPrinterClosedEventArgs: ...
 
 @typing.final
-class ClaimedReceiptPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+class ClaimedReceiptPrinter(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedReceiptPrinter: ...
     def create_job(self) -> ReceiptPrintJob: ...
@@ -807,7 +807,7 @@ class ClaimedReceiptPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object
     def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ClaimedSlipPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+class ClaimedSlipPrinter(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedSlipPrinter: ...
     def change_print_side(self, print_side: PosPrinterPrintSide, /) -> None: ...
@@ -869,7 +869,7 @@ class ClaimedSlipPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
     def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JournalPrintJob(IPosPrinterJob, winrt.system.Object):
+class JournalPrintJob(winrt.system.Object, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JournalPrintJob: ...
     def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -883,7 +883,7 @@ class JournalPrintJob(IPosPrinterJob, winrt.system.Object):
     def print_newline(self) -> None: ...
 
 @typing.final
-class JournalPrinterCapabilities(ICommonPosPrintStationCapabilities, winrt.system.Object):
+class JournalPrinterCapabilities(winrt.system.Object, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JournalPrinterCapabilities: ...
     @_property
@@ -935,7 +935,7 @@ class LineDisplay_Static(type):
     def statistics_category_selector(cls) -> LineDisplayStatisticsCategorySelector: ...
 
 @typing.final
-class LineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=LineDisplay_Static):
+class LineDisplay(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=LineDisplay_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1078,7 +1078,7 @@ class LineDisplayCursorAttributes(winrt.system.Object):
 class LineDisplayCustomGlyphs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayCustomGlyphs: ...
-    def try_redefine_async(self, glyph_code: winrt.system.UInt32, glyph_data: windows_storage_streams.IBuffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    def try_redefine_async(self, glyph_code: winrt.system.UInt32, glyph_data: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
     @_property
     def size_in_pixels(self) -> windows_foundation.Size: ...
     @_property
@@ -1130,7 +1130,7 @@ class LineDisplayStoredBitmap(winrt.system.Object):
     def escape_sequence(self) -> str: ...
 
 @typing.final
-class LineDisplayWindow(windows_foundation.IClosable, winrt.system.Object):
+class LineDisplayWindow(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1168,7 +1168,7 @@ class MagneticStripeReader_Static(type):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class MagneticStripeReader(windows_foundation.IClosable, winrt.system.Object, metaclass=MagneticStripeReader_Static):
+class MagneticStripeReader(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=MagneticStripeReader_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1385,7 +1385,7 @@ class PosPrinter_Static(type):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class PosPrinter(windows_foundation.IClosable, winrt.system.Object, metaclass=PosPrinter_Static):
+class PosPrinter(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=PosPrinter_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1539,7 +1539,7 @@ class PosPrinterStatusUpdatedEventArgs(winrt.system.Object):
     def status(self) -> PosPrinterStatus: ...
 
 @typing.final
-class ReceiptPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
+class ReceiptPrintJob(winrt.system.Object, ImplementsIReceiptOrSlipJob, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReceiptPrintJob: ...
     def cut_paper(self, percentage: winrt.system.Double, /) -> None: ...
@@ -1572,7 +1572,7 @@ class ReceiptPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
     def stamp_paper(self) -> None: ...
 
 @typing.final
-class ReceiptPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
+class ReceiptPrinterCapabilities(winrt.system.Object, ImplementsICommonReceiptSlipCapabilities, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReceiptPrinterCapabilities: ...
     @_property
@@ -1639,7 +1639,7 @@ class ReceiptPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrint
     def is_superscript_supported(self) -> bool: ...
 
 @typing.final
-class SlipPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
+class SlipPrintJob(winrt.system.Object, ImplementsIReceiptOrSlipJob, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlipPrintJob: ...
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
@@ -1668,7 +1668,7 @@ class SlipPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
     def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
 
 @typing.final
-class SlipPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
+class SlipPrinterCapabilities(winrt.system.Object, ImplementsICommonReceiptSlipCapabilities, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlipPrinterCapabilities: ...
     @_property
@@ -1746,13 +1746,19 @@ class UnifiedPosErrorData(winrt.system.Object):
     @_property
     def severity(self) -> UnifiedPosErrorSeverity: ...
 
-class ICashDrawerEventSourceEventArgs(winrt.system.Object):
+class ImplementsICashDrawerEventSourceEventArgs():
+    pass
+
+class ICashDrawerEventSourceEventArgs(winrt.system.Object, ImplementsICashDrawerEventSourceEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICashDrawerEventSourceEventArgs: ...
     @_property
     def cash_drawer(self) -> CashDrawer: ...
 
-class ICommonClaimedPosPrinterStation(winrt.system.Object):
+class ImplementsICommonClaimedPosPrinterStation():
+    pass
+
+class ICommonClaimedPosPrinterStation(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonClaimedPosPrinterStation: ...
     def validate_data(self, data: str, /) -> bool: ...
@@ -1793,7 +1799,10 @@ class ICommonClaimedPosPrinterStation(winrt.system.Object):
     @_property
     def line_width(self) -> winrt.system.UInt32: ...
 
-class ICommonPosPrintStationCapabilities(winrt.system.Object):
+class ImplementsICommonPosPrintStationCapabilities():
+    pass
+
+class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonPosPrintStationCapabilities: ...
     @_property
@@ -1823,7 +1832,10 @@ class ICommonPosPrintStationCapabilities(winrt.system.Object):
     @_property
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
-class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt.system.Object):
+class ImplementsICommonReceiptSlipCapabilities():
+    pass
+
+class ICommonReceiptSlipCapabilities(winrt.system.Object, ImplementsICommonReceiptSlipCapabilities, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonReceiptSlipCapabilities: ...
     @_property
@@ -1871,7 +1883,10 @@ class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt.s
     @_property
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
-class IPosPrinterJob(winrt.system.Object):
+class ImplementsIPosPrinterJob():
+    pass
+
+class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPosPrinterJob: ...
     def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -1879,7 +1894,10 @@ class IPosPrinterJob(winrt.system.Object):
     def print_line(self, data: str, /) -> None: ...
     def print_newline(self) -> None: ...
 
-class IReceiptOrSlipJob(IPosPrinterJob, winrt.system.Object):
+class ImplementsIReceiptOrSlipJob():
+    pass
+
+class IReceiptOrSlipJob(winrt.system.Object, ImplementsIReceiptOrSlipJob, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IReceiptOrSlipJob: ...
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...

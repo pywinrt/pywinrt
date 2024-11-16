@@ -95,6 +95,11 @@ if TYPE_CHECKING:
     from winrt._winrt_windows_ui_xaml_controls_primitives_2 import (
         ColorPickerSlider_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_controls_primitives import (
+        ImplementsIScrollSnapPointsInfo,
+    )
 
 __all__ = [
     "AnimationDirection",

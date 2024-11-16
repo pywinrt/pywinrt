@@ -334,18 +334,31 @@ from ._winrt_microsoft_ui_xaml_controls import (
     VirtualizingPanel,
     WebView2,
     XamlControlsResources,
+    ImplementsIAnimatedVisual,
     IAnimatedVisual,
+    ImplementsIAnimatedVisual2,
     IAnimatedVisual2,
+    ImplementsIAnimatedVisualSource,
     IAnimatedVisualSource,
+    ImplementsIAnimatedVisualSource2,
     IAnimatedVisualSource2,
+    ImplementsIAnimatedVisualSource3,
     IAnimatedVisualSource3,
+    ImplementsICommandBarElement,
     ICommandBarElement,
+    ImplementsIDynamicAnimatedVisualSource,
     IDynamicAnimatedVisualSource,
+    ImplementsIInsertionPanel,
     IInsertionPanel,
+    ImplementsIItemContainerMapping,
     IItemContainerMapping,
+    ImplementsIKeyIndexMapping,
     IKeyIndexMapping,
+    ImplementsINavigate,
     INavigate,
+    ImplementsIScrollAnchorProvider,
     IScrollAnchorProvider,
+    ImplementsISemanticZoomInformation,
     ISemanticZoomInformation,
 )
 
@@ -370,7 +383,7 @@ class AppBarButton_Static(Button_Static):
     @_property
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarButton(ICommandBarElement, Button, metaclass=AppBarButton_Static):
+class AppBarButton(Button, ImplementsICommandBarElement, metaclass=AppBarButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarButton: ...
     def __new__(cls: typing.Type[AppBarButton]) -> AppBarButton: ...
@@ -419,7 +432,7 @@ class AppBarToggleButton_Static(microsoft_ui_xaml_controls_primitives.ToggleButt
     @_property
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarToggleButton(ICommandBarElement, microsoft_ui_xaml_controls_primitives.ToggleButton, metaclass=AppBarToggleButton_Static):
+class AppBarToggleButton(microsoft_ui_xaml_controls_primitives.ToggleButton, ImplementsICommandBarElement, metaclass=AppBarToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarToggleButton: ...
     def __new__(cls: typing.Type[AppBarToggleButton]) -> AppBarToggleButton: ...
@@ -892,7 +905,7 @@ class ListViewBase_Static(microsoft_ui_xaml_controls_primitives.Selector_Static)
     @_property
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ListViewBase(ISemanticZoomInformation, microsoft_ui_xaml_controls_primitives.Selector, metaclass=ListViewBase_Static):
+class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ImplementsISemanticZoomInformation, metaclass=ListViewBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBase: ...
     def complete_view_change(self) -> None: ...

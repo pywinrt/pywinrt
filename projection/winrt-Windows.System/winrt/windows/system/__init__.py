@@ -54,6 +54,11 @@ from winrt._winrt_windows_system import (
     UserWatcher,
     ILauncherViewOptions,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_system import (
+        ImplementsILauncherViewOptions,
+    )
 
 __all__ = [
     "AppDiagnosticInfoWatcherStatus",

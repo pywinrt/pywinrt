@@ -12,6 +12,11 @@ from winrt._winrt_windows_storage_accesscache import (
     StorageItemMostRecentlyUsedList,
     IStorageItemAccessList,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_accesscache import (
+        ImplementsIStorageItemAccessList,
+    )
 
 __all__ = [
     "AccessCacheOptions",

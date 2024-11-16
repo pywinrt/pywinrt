@@ -38,7 +38,7 @@ from winrt.windows.applicationmodel.activation import ActivationKind, Applicatio
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppointmentsProviderAddAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderAddAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderAddAppointmentActivatedEventArgs: ...
     @_property
@@ -55,7 +55,7 @@ class AppointmentsProviderAddAppointmentActivatedEventArgs(IActivatedEventArgsWi
     def add_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderRemoveAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderRemoveAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
     @_property
@@ -72,7 +72,7 @@ class AppointmentsProviderRemoveAppointmentActivatedEventArgs(IActivatedEventArg
     def remove_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderReplaceAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderReplaceAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
     @_property
@@ -89,7 +89,7 @@ class AppointmentsProviderReplaceAppointmentActivatedEventArgs(IActivatedEventAr
     def replace_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
     @_property
@@ -110,7 +110,7 @@ class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IActivatedEve
     def roaming_id(self) -> str: ...
 
 @typing.final
-class AppointmentsProviderShowTimeFrameActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowTimeFrameActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderShowTimeFrameActivatedEventArgs: ...
     @_property
@@ -129,14 +129,14 @@ class AppointmentsProviderShowTimeFrameActivatedEventArgs(IActivatedEventArgsWit
     def time_to_show(self) -> datetime.datetime: ...
 
 @typing.final
-class BackgroundActivatedEventArgs(IBackgroundActivatedEventArgs, winrt.system.Object):
+class BackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundActivatedEventArgs: ...
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
-class BarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsWithUser, IBarcodeScannerPreviewActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIBarcodeScannerPreviewActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerPreviewActivatedEventArgs: ...
     @_property
@@ -151,7 +151,7 @@ class BarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsWithUser, IBarc
     def connection_id(self) -> str: ...
 
 @typing.final
-class CachedFileUpdaterActivatedEventArgs(IActivatedEventArgsWithUser, ICachedFileUpdaterActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class CachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsICachedFileUpdaterActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdaterActivatedEventArgs: ...
     @_property
@@ -166,7 +166,7 @@ class CachedFileUpdaterActivatedEventArgs(IActivatedEventArgsWithUser, ICachedFi
     def cached_file_updater_ui(self) -> windows_storage_provider.CachedFileUpdaterUI: ...
 
 @typing.final
-class CameraSettingsActivatedEventArgs(ICameraSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class CameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraSettingsActivatedEventArgs: ...
     @_property
@@ -181,7 +181,7 @@ class CameraSettingsActivatedEventArgs(ICameraSettingsActivatedEventArgs, IActiv
     def video_device_extension(self) -> winrt.system.Object: ...
 
 @typing.final
-class CommandLineActivatedEventArgs(IActivatedEventArgsWithUser, ICommandLineActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class CommandLineActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsICommandLineActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandLineActivatedEventArgs: ...
     @_property
@@ -210,7 +210,7 @@ class CommandLineActivationOperation(winrt.system.Object):
     def current_directory_path(self) -> str: ...
 
 @typing.final
-class ContactCallActivatedEventArgs(IContactCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactCallActivatedEventArgs: ...
     @_property
@@ -229,7 +229,7 @@ class ContactCallActivatedEventArgs(IContactCallActivatedEventArgs, IContactActi
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactMapActivatedEventArgs(IContactMapActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactMapActivatedEventArgs: ...
     @_property
@@ -246,7 +246,7 @@ class ContactMapActivatedEventArgs(IContactMapActivatedEventArgs, IContactActiva
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
 @typing.final
-class ContactMessageActivatedEventArgs(IContactMessageActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactMessageActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactMessageActivatedEventArgs: ...
     @_property
@@ -265,7 +265,7 @@ class ContactMessageActivatedEventArgs(IContactMessageActivatedEventArgs, IConta
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactPanelActivatedEventArgs(IActivatedEventArgsWithUser, IActivatedEventArgs, IContactPanelActivatedEventArgs, winrt.system.Object):
+class ContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgs, ImplementsIContactPanelActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPanelActivatedEventArgs: ...
     @_property
@@ -282,7 +282,7 @@ class ContactPanelActivatedEventArgs(IActivatedEventArgsWithUser, IActivatedEven
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
 @typing.final
-class ContactPickerActivatedEventArgs(IContactPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPickerActivatedEventArgs: ...
     @_property
@@ -295,7 +295,7 @@ class ContactPickerActivatedEventArgs(IContactPickerActivatedEventArgs, IActivat
     def contact_picker_ui(self) -> windows_applicationmodel_contacts_provider.ContactPickerUI: ...
 
 @typing.final
-class ContactPostActivatedEventArgs(IContactPostActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPostActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPostActivatedEventArgs: ...
     @_property
@@ -314,7 +314,7 @@ class ContactPostActivatedEventArgs(IContactPostActivatedEventArgs, IContactActi
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactVideoCallActivatedEventArgs(IContactVideoCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContactVideoCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactVideoCallActivatedEventArgs: ...
     @_property
@@ -333,7 +333,7 @@ class ContactVideoCallActivatedEventArgs(IContactVideoCallActivatedEventArgs, IC
     def service_user_id(self) -> str: ...
 
 @typing.final
-class DeviceActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDeviceActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class DeviceActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIDeviceActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceActivatedEventArgs: ...
     @_property
@@ -354,7 +354,7 @@ class DeviceActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvide
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class DevicePairingActivatedEventArgs(IActivatedEventArgsWithUser, IDevicePairingActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class DevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIDevicePairingActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePairingActivatedEventArgs: ...
     @_property
@@ -369,7 +369,7 @@ class DevicePairingActivatedEventArgs(IActivatedEventArgsWithUser, IDevicePairin
     def device_information(self) -> windows_devices_enumeration.DeviceInformation: ...
 
 @typing.final
-class DialReceiverActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDialReceiverActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class DialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIDialReceiverActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialReceiverActivatedEventArgs: ...
     @_property
@@ -392,7 +392,7 @@ class DialReceiverActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherP
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class FileActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IFileActivatedEventArgsWithCallerPackageFamilyName, IFileActivatedEventArgsWithNeighboringFiles, IFileActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FileActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileActivatedEventArgs: ...
     @_property
@@ -417,7 +417,7 @@ class FileActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider,
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class FileOpenPickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerActivatedEventArgs2, IFileOpenPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileOpenPickerActivatedEventArgs2, ImplementsIFileOpenPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPickerActivatedEventArgs: ...
     @_property
@@ -434,7 +434,7 @@ class FileOpenPickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileOpenPic
     def caller_package_family_name(self) -> str: ...
 
 @typing.final
-class FileOpenPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileOpenPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPickerContinuationEventArgs: ...
     @_property
@@ -451,7 +451,7 @@ class FileOpenPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileOpen
     def files(self) -> typing.Sequence[windows_storage.StorageFile]: ...
 
 @typing.final
-class FileSavePickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileSavePickerActivatedEventArgs2, IFileSavePickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileSavePickerActivatedEventArgs2, ImplementsIFileSavePickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePickerActivatedEventArgs: ...
     @_property
@@ -470,7 +470,7 @@ class FileSavePickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileSavePic
     def enterprise_id(self) -> str: ...
 
 @typing.final
-class FileSavePickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileSavePickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileSavePickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePickerContinuationEventArgs: ...
     @_property
@@ -487,7 +487,7 @@ class FileSavePickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileSave
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
-class FolderPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFolderPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class FolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFolderPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderPickerContinuationEventArgs: ...
     @_property
@@ -504,7 +504,7 @@ class FolderPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFolderPick
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
-class LaunchActivatedEventArgs(IActivatedEventArgsWithUser, ILaunchActivatedEventArgs2, IViewSwitcherProvider, IPrelaunchActivatedEventArgs, IApplicationViewActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class LaunchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsILaunchActivatedEventArgs2, ImplementsIViewSwitcherProvider, ImplementsIPrelaunchActivatedEventArgs, ImplementsIApplicationViewActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LaunchActivatedEventArgs: ...
     @_property
@@ -529,7 +529,7 @@ class LaunchActivatedEventArgs(IActivatedEventArgsWithUser, ILaunchActivatedEven
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class LockScreenActivatedEventArgs(IActivatedEventArgsWithUser, ILockScreenActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class LockScreenActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsILockScreenActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenActivatedEventArgs: ...
     @_property
@@ -544,7 +544,7 @@ class LockScreenActivatedEventArgs(IActivatedEventArgsWithUser, ILockScreenActiv
     def info(self) -> winrt.system.Object: ...
 
 @typing.final
-class LockScreenCallActivatedEventArgs(IViewSwitcherProvider, IApplicationViewActivatedEventArgs, ILockScreenCallActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class LockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsILockScreenCallActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenCallActivatedEventArgs: ...
     @_property
@@ -565,7 +565,7 @@ class LockScreenCallActivatedEventArgs(IViewSwitcherProvider, IApplicationViewAc
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class LockScreenComponentActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class LockScreenComponentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenComponentActivatedEventArgs: ...
     @_property
@@ -576,7 +576,7 @@ class LockScreenComponentActivatedEventArgs(IActivatedEventArgs, winrt.system.Ob
     def splash_screen(self) -> SplashScreen: ...
 
 @typing.final
-class PhoneCallActivatedEventArgs(IActivatedEventArgsWithUser, IPhoneCallActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class PhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIPhoneCallActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallActivatedEventArgs: ...
     @_property
@@ -591,7 +591,7 @@ class PhoneCallActivatedEventArgs(IActivatedEventArgsWithUser, IPhoneCallActivat
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class PickerReturnedActivatedEventArgs(IPickerReturnedActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class PickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerReturnedActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerReturnedActivatedEventArgs: ...
     @_property
@@ -604,7 +604,7 @@ class PickerReturnedActivatedEventArgs(IPickerReturnedActivatedEventArgs, IActiv
     def picker_operation_id(self) -> str: ...
 
 @typing.final
-class Print3DWorkflowActivatedEventArgs(IPrint3DWorkflowActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class Print3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3DWorkflowActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DWorkflowActivatedEventArgs: ...
     @_property
@@ -617,7 +617,7 @@ class Print3DWorkflowActivatedEventArgs(IPrint3DWorkflowActivatedEventArgs, IAct
     def workflow(self) -> windows_devices_printers_extensions.Print3DWorkflow: ...
 
 @typing.final
-class PrintTaskSettingsActivatedEventArgs(IPrintTaskSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class PrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrintTaskSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskSettingsActivatedEventArgs: ...
     @_property
@@ -630,7 +630,7 @@ class PrintTaskSettingsActivatedEventArgs(IPrintTaskSettingsActivatedEventArgs, 
     def configuration(self) -> windows_devices_printers_extensions.PrintTaskConfiguration: ...
 
 @typing.final
-class ProtocolActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ProtocolActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIProtocolActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtocolActivatedEventArgs: ...
     @_property
@@ -653,7 +653,7 @@ class ProtocolActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvi
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class ProtocolForResultsActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IProtocolForResultsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIProtocolActivatedEventArgs, ImplementsIProtocolForResultsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtocolForResultsActivatedEventArgs: ...
     @_property
@@ -678,7 +678,7 @@ class ProtocolForResultsActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwi
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class RestrictedLaunchActivatedEventArgs(IActivatedEventArgsWithUser, IRestrictedLaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class RestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIRestrictedLaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RestrictedLaunchActivatedEventArgs: ...
     @_property
@@ -693,7 +693,7 @@ class RestrictedLaunchActivatedEventArgs(IActivatedEventArgsWithUser, IRestricte
     def shared_context(self) -> winrt.system.Object: ...
 
 @typing.final
-class SearchActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, ISearchActivatedEventArgsWithLinguisticDetails, IApplicationViewActivatedEventArgs, ISearchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class SearchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsISearchActivatedEventArgsWithLinguisticDetails, ImplementsIApplicationViewActivatedEventArgs, ImplementsISearchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchActivatedEventArgs: ...
     @_property
@@ -716,7 +716,7 @@ class SearchActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvide
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class ShareTargetActivatedEventArgs(IActivatedEventArgsWithUser, IShareTargetActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIShareTargetActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareTargetActivatedEventArgs: ...
     @_property
@@ -740,7 +740,7 @@ class SplashScreen(winrt.system.Object):
     def image_location(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class StartupTaskActivatedEventArgs(IActivatedEventArgsWithUser, IStartupTaskActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class StartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIStartupTaskActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StartupTaskActivatedEventArgs: ...
     @_property
@@ -762,7 +762,7 @@ class TileActivatedInfo(winrt.system.Object):
     def recently_shown_notifications(self) -> typing.Sequence[windows_ui_notifications.ShownTileNotification]: ...
 
 @typing.final
-class ToastNotificationActivatedEventArgs(IApplicationViewActivatedEventArgs, IActivatedEventArgsWithUser, IToastNotificationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIApplicationViewActivatedEventArgs, ImplementsIActivatedEventArgsWithUser, ImplementsIToastNotificationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationActivatedEventArgs: ...
     @_property
@@ -781,7 +781,7 @@ class ToastNotificationActivatedEventArgs(IApplicationViewActivatedEventArgs, IA
     def user_input(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
-class UserDataAccountProviderActivatedEventArgs(IUserDataAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class UserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIUserDataAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderActivatedEventArgs: ...
     @_property
@@ -794,7 +794,7 @@ class UserDataAccountProviderActivatedEventArgs(IUserDataAccountProviderActivate
     def operation(self) -> windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation: ...
 
 @typing.final
-class VoiceCommandActivatedEventArgs(IActivatedEventArgsWithUser, IVoiceCommandActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class VoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIVoiceCommandActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandActivatedEventArgs: ...
     @_property
@@ -809,7 +809,7 @@ class VoiceCommandActivatedEventArgs(IActivatedEventArgsWithUser, IVoiceCommandA
     def result(self) -> windows_media_speechrecognition.SpeechRecognitionResult: ...
 
 @typing.final
-class WalletActionActivatedEventArgs(IWalletActionActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class WalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActionActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletActionActivatedEventArgs: ...
     @_property
@@ -826,7 +826,7 @@ class WalletActionActivatedEventArgs(IWalletActionActivatedEventArgs, IActivated
     def item_id(self) -> str: ...
 
 @typing.final
-class WebAccountProviderActivatedEventArgs(IActivatedEventArgsWithUser, IWebAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class WebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIWebAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderActivatedEventArgs: ...
     @_property
@@ -841,7 +841,7 @@ class WebAccountProviderActivatedEventArgs(IActivatedEventArgsWithUser, IWebAcco
     def operation(self) -> windows_security_authentication_web_provider.IWebAccountProviderOperation: ...
 
 @typing.final
-class WebAuthenticationBrokerContinuationEventArgs(IWebAuthenticationBrokerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIWebAuthenticationBrokerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationBrokerContinuationEventArgs: ...
     @_property
@@ -855,7 +855,10 @@ class WebAuthenticationBrokerContinuationEventArgs(IWebAuthenticationBrokerConti
     @_property
     def web_authentication_result(self) -> windows_security_authentication_web.WebAuthenticationResult: ...
 
-class IActivatedEventArgs(winrt.system.Object):
+class ImplementsIActivatedEventArgs():
+    pass
+
+class IActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgs: ...
     @_property
@@ -865,7 +868,10 @@ class IActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IActivatedEventArgsWithUser(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIActivatedEventArgsWithUser():
+    pass
+
+class IActivatedEventArgsWithUser(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgsWithUser: ...
     @_property
@@ -877,7 +883,10 @@ class IActivatedEventArgsWithUser(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IApplicationViewActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIApplicationViewActivatedEventArgs():
+    pass
+
+class IApplicationViewActivatedEventArgs(winrt.system.Object, ImplementsIApplicationViewActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IApplicationViewActivatedEventArgs: ...
     @_property
@@ -889,7 +898,10 @@ class IApplicationViewActivatedEventArgs(IActivatedEventArgs, winrt.system.Objec
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderActivatedEventArgs: ...
     @_property
@@ -901,7 +913,10 @@ class IAppointmentsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderAddAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderAddAppointmentActivatedEventArgs: ...
     @_property
@@ -915,7 +930,10 @@ class IAppointmentsProviderAddAppointmentActivatedEventArgs(IAppointmentsProvide
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
     @_property
@@ -929,7 +947,10 @@ class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(IAppointmentsProv
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
     @_property
@@ -943,7 +964,10 @@ class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(IAppointmentsPro
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
     @_property
@@ -961,7 +985,10 @@ class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IAppointment
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IAppointmentsProviderShowTimeFrameActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs():
+    pass
+
+class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowTimeFrameActivatedEventArgs: ...
     @_property
@@ -977,13 +1004,19 @@ class IAppointmentsProviderShowTimeFrameActivatedEventArgs(IAppointmentsProvider
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IBackgroundActivatedEventArgs(winrt.system.Object):
+class ImplementsIBackgroundActivatedEventArgs():
+    pass
+
+class IBackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundActivatedEventArgs: ...
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
-class IBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIBarcodeScannerPreviewActivatedEventArgs():
+    pass
+
+class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIBarcodeScannerPreviewActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBarcodeScannerPreviewActivatedEventArgs: ...
     @_property
@@ -995,7 +1028,10 @@ class IBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgs, winrt.system
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ICachedFileUpdaterActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsICachedFileUpdaterActivatedEventArgs():
+    pass
+
+class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsICachedFileUpdaterActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICachedFileUpdaterActivatedEventArgs: ...
     @_property
@@ -1007,7 +1043,10 @@ class ICachedFileUpdaterActivatedEventArgs(IActivatedEventArgs, winrt.system.Obj
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ICameraSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsICameraSettingsActivatedEventArgs():
+    pass
+
+class ICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICameraSettingsActivatedEventArgs: ...
     @_property
@@ -1021,7 +1060,10 @@ class ICameraSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ICommandLineActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsICommandLineActivatedEventArgs():
+    pass
+
+class ICommandLineActivatedEventArgs(winrt.system.Object, ImplementsICommandLineActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandLineActivatedEventArgs: ...
     @_property
@@ -1033,7 +1075,10 @@ class ICommandLineActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactActivatedEventArgs():
+    pass
+
+class IContactActivatedEventArgs(winrt.system.Object, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactActivatedEventArgs: ...
     @_property
@@ -1045,7 +1090,10 @@ class IContactActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactCallActivatedEventArgs():
+    pass
+
+class IContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactCallActivatedEventArgs: ...
     @_property
@@ -1063,7 +1111,10 @@ class IContactCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEvent
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactMapActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactMapActivatedEventArgs():
+    pass
+
+class IContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMapActivatedEventArgs: ...
     @_property
@@ -1079,7 +1130,10 @@ class IContactMapActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventA
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactMessageActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactMessageActivatedEventArgs():
+    pass
+
+class IContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactMessageActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMessageActivatedEventArgs: ...
     @_property
@@ -1097,7 +1151,10 @@ class IContactMessageActivatedEventArgs(IContactActivatedEventArgs, IActivatedEv
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactPanelActivatedEventArgs(winrt.system.Object):
+class ImplementsIContactPanelActivatedEventArgs():
+    pass
+
+class IContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIContactPanelActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPanelActivatedEventArgs: ...
     @_property
@@ -1105,7 +1162,10 @@ class IContactPanelActivatedEventArgs(winrt.system.Object):
     @_property
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
-class IContactPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactPickerActivatedEventArgs():
+    pass
+
+class IContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPickerActivatedEventArgs: ...
     @_property
@@ -1117,7 +1177,10 @@ class IContactPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object)
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactPostActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactPostActivatedEventArgs():
+    pass
+
+class IContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPostActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPostActivatedEventArgs: ...
     @_property
@@ -1135,7 +1198,10 @@ class IContactPostActivatedEventArgs(IContactActivatedEventArgs, IActivatedEvent
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactVideoCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactVideoCallActivatedEventArgs():
+    pass
+
+class IContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContactVideoCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactVideoCallActivatedEventArgs: ...
     @_property
@@ -1153,7 +1219,10 @@ class IContactVideoCallActivatedEventArgs(IContactActivatedEventArgs, IActivated
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContactsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContactsProviderActivatedEventArgs():
+    pass
+
+class IContactsProviderActivatedEventArgs(winrt.system.Object, ImplementsIContactsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactsProviderActivatedEventArgs: ...
     @_property
@@ -1165,7 +1234,10 @@ class IContactsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Obje
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IContinuationActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIContinuationActivatedEventArgs():
+    pass
+
+class IContinuationActivatedEventArgs(winrt.system.Object, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContinuationActivatedEventArgs: ...
     @_property
@@ -1177,7 +1249,10 @@ class IContinuationActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IDeviceActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIDeviceActivatedEventArgs():
+    pass
+
+class IDeviceActivatedEventArgs(winrt.system.Object, ImplementsIDeviceActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDeviceActivatedEventArgs: ...
     @_property
@@ -1191,7 +1266,10 @@ class IDeviceActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IDevicePairingActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIDevicePairingActivatedEventArgs():
+    pass
+
+class IDevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIDevicePairingActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingActivatedEventArgs: ...
     @_property
@@ -1203,7 +1281,10 @@ class IDevicePairingActivatedEventArgs(IActivatedEventArgs, winrt.system.Object)
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IDialReceiverActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIDialReceiverActivatedEventArgs():
+    pass
+
+class IDialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIDialReceiverActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDialReceiverActivatedEventArgs: ...
     @_property
@@ -1219,7 +1300,10 @@ class IDialReceiverActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEvent
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileActivatedEventArgs():
+    pass
+
+class IFileActivatedEventArgs(winrt.system.Object, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgs: ...
     @_property
@@ -1233,7 +1317,10 @@ class IFileActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileActivatedEventArgsWithCallerPackageFamilyName(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName():
+    pass
+
+class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object, ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithCallerPackageFamilyName: ...
     @_property
@@ -1245,7 +1332,10 @@ class IFileActivatedEventArgsWithCallerPackageFamilyName(IActivatedEventArgs, wi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileActivatedEventArgsWithNeighboringFiles(IFileActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileActivatedEventArgsWithNeighboringFiles():
+    pass
+
+class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object, ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithNeighboringFiles: ...
     @_property
@@ -1261,7 +1351,10 @@ class IFileActivatedEventArgsWithNeighboringFiles(IFileActivatedEventArgs, IActi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileOpenPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileOpenPickerActivatedEventArgs():
+    pass
+
+class IFileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs: ...
     @_property
@@ -1273,13 +1366,19 @@ class IFileOpenPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileOpenPickerActivatedEventArgs2(winrt.system.Object):
+class ImplementsIFileOpenPickerActivatedEventArgs2():
+    pass
+
+class IFileOpenPickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs2: ...
     @_property
     def caller_package_family_name(self) -> str: ...
 
-class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileOpenPickerContinuationEventArgs():
+    pass
+
+class IFileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIFileOpenPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerContinuationEventArgs: ...
     @_property
@@ -1293,7 +1392,10 @@ class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IAct
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileSavePickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileSavePickerActivatedEventArgs():
+    pass
+
+class IFileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs: ...
     @_property
@@ -1305,7 +1407,10 @@ class IFileSavePickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFileSavePickerActivatedEventArgs2(winrt.system.Object):
+class ImplementsIFileSavePickerActivatedEventArgs2():
+    pass
+
+class IFileSavePickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs2: ...
     @_property
@@ -1313,7 +1418,10 @@ class IFileSavePickerActivatedEventArgs2(winrt.system.Object):
     @_property
     def enterprise_id(self) -> str: ...
 
-class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFileSavePickerContinuationEventArgs():
+    pass
+
+class IFileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIFileSavePickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerContinuationEventArgs: ...
     @_property
@@ -1327,7 +1435,10 @@ class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IAct
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIFolderPickerContinuationEventArgs():
+    pass
+
+class IFolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIFolderPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFolderPickerContinuationEventArgs: ...
     @_property
@@ -1341,7 +1452,10 @@ class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActiv
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ILaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsILaunchActivatedEventArgs():
+    pass
+
+class ILaunchActivatedEventArgs(winrt.system.Object, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs: ...
     @_property
@@ -1355,7 +1469,10 @@ class ILaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ILaunchActivatedEventArgs2(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsILaunchActivatedEventArgs2():
+    pass
+
+class ILaunchActivatedEventArgs2(winrt.system.Object, ImplementsILaunchActivatedEventArgs2, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs2: ...
     @_property
@@ -1371,7 +1488,10 @@ class ILaunchActivatedEventArgs2(ILaunchActivatedEventArgs, IActivatedEventArgs,
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ILockScreenActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsILockScreenActivatedEventArgs():
+    pass
+
+class ILockScreenActivatedEventArgs(winrt.system.Object, ImplementsILockScreenActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenActivatedEventArgs: ...
     @_property
@@ -1383,7 +1503,10 @@ class ILockScreenActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ILockScreenCallActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsILockScreenCallActivatedEventArgs():
+    pass
+
+class ILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsILockScreenCallActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenCallActivatedEventArgs: ...
     @_property
@@ -1399,7 +1522,10 @@ class ILockScreenCallActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEve
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IPhoneCallActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIPhoneCallActivatedEventArgs():
+    pass
+
+class IPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIPhoneCallActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPhoneCallActivatedEventArgs: ...
     @_property
@@ -1411,7 +1537,10 @@ class IPhoneCallActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IPickerReturnedActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIPickerReturnedActivatedEventArgs():
+    pass
+
+class IPickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerReturnedActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPickerReturnedActivatedEventArgs: ...
     @_property
@@ -1423,7 +1552,10 @@ class IPickerReturnedActivatedEventArgs(IActivatedEventArgs, winrt.system.Object
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IPrelaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIPrelaunchActivatedEventArgs():
+    pass
+
+class IPrelaunchActivatedEventArgs(winrt.system.Object, ImplementsIPrelaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrelaunchActivatedEventArgs: ...
     @_property
@@ -1435,7 +1567,10 @@ class IPrelaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IPrint3DWorkflowActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIPrint3DWorkflowActivatedEventArgs():
+    pass
+
+class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3DWorkflowActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrint3DWorkflowActivatedEventArgs: ...
     @_property
@@ -1447,7 +1582,10 @@ class IPrint3DWorkflowActivatedEventArgs(IActivatedEventArgs, winrt.system.Objec
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IPrintTaskSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIPrintTaskSettingsActivatedEventArgs():
+    pass
+
+class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrintTaskSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskSettingsActivatedEventArgs: ...
     @_property
@@ -1459,7 +1597,10 @@ class IPrintTaskSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Obj
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IProtocolActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIProtocolActivatedEventArgs():
+    pass
+
+class IProtocolActivatedEventArgs(winrt.system.Object, ImplementsIProtocolActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgs: ...
     @_property
@@ -1471,7 +1612,10 @@ class IProtocolActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData():
+    pass
+
+class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system.Object, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData: ...
     @_property
@@ -1485,7 +1629,10 @@ class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(IActivatedEv
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IProtocolForResultsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIProtocolForResultsActivatedEventArgs():
+    pass
+
+class IProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIProtocolForResultsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolForResultsActivatedEventArgs: ...
     @_property
@@ -1497,7 +1644,10 @@ class IProtocolForResultsActivatedEventArgs(IActivatedEventArgs, winrt.system.Ob
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IRestrictedLaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIRestrictedLaunchActivatedEventArgs():
+    pass
+
+class IRestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIRestrictedLaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRestrictedLaunchActivatedEventArgs: ...
     @_property
@@ -1509,7 +1659,10 @@ class IRestrictedLaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Obje
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ISearchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsISearchActivatedEventArgs():
+    pass
+
+class ISearchActivatedEventArgs(winrt.system.Object, ImplementsISearchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgs: ...
     @_property
@@ -1523,13 +1676,19 @@ class ISearchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object):
+class ImplementsISearchActivatedEventArgsWithLinguisticDetails():
+    pass
+
+class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object, ImplementsISearchActivatedEventArgsWithLinguisticDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgsWithLinguisticDetails: ...
     @_property
     def linguistic_details(self) -> windows_applicationmodel_search.SearchPaneQueryLinguisticDetails: ...
 
-class IShareTargetActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIShareTargetActivatedEventArgs():
+    pass
+
+class IShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIShareTargetActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IShareTargetActivatedEventArgs: ...
     @_property
@@ -1541,7 +1700,10 @@ class IShareTargetActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IStartupTaskActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIStartupTaskActivatedEventArgs():
+    pass
+
+class IStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIStartupTaskActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStartupTaskActivatedEventArgs: ...
     @_property
@@ -1553,7 +1715,10 @@ class IStartupTaskActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IToastNotificationActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIToastNotificationActivatedEventArgs():
+    pass
+
+class IToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIToastNotificationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationActivatedEventArgs: ...
     @_property
@@ -1567,7 +1732,10 @@ class IToastNotificationActivatedEventArgs(IActivatedEventArgs, winrt.system.Obj
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IUserDataAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIUserDataAccountProviderActivatedEventArgs():
+    pass
+
+class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIUserDataAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderActivatedEventArgs: ...
     @_property
@@ -1579,7 +1747,10 @@ class IUserDataAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.syst
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IViewSwitcherProvider(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIViewSwitcherProvider():
+    pass
+
+class IViewSwitcherProvider(winrt.system.Object, ImplementsIViewSwitcherProvider, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IViewSwitcherProvider: ...
     @_property
@@ -1591,7 +1762,10 @@ class IViewSwitcherProvider(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIVoiceCommandActivatedEventArgs():
+    pass
+
+class IVoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIVoiceCommandActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVoiceCommandActivatedEventArgs: ...
     @_property
@@ -1603,7 +1777,10 @@ class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIWalletActionActivatedEventArgs():
+    pass
+
+class IWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActionActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWalletActionActivatedEventArgs: ...
     @_property
@@ -1619,7 +1796,10 @@ class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IWebAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+class ImplementsIWebAccountProviderActivatedEventArgs():
+    pass
+
+class IWebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIWebAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderActivatedEventArgs: ...
     @_property
@@ -1631,7 +1811,10 @@ class IWebAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Ob
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class IWebAuthenticationBrokerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+class ImplementsIWebAuthenticationBrokerContinuationEventArgs():
+    pass
+
+class IWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIWebAuthenticationBrokerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAuthenticationBrokerContinuationEventArgs: ...
     @_property

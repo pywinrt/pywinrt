@@ -76,6 +76,12 @@ from winrt._winrt_windows_devices_sensors import (
     IHumanPresenceSensorExtension,
     ISensorDataThreshold,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_sensors import (
+        ImplementsIHumanPresenceSensorExtension,
+        ImplementsISensorDataThreshold,
+    )
 
 __all__ = [
     "AccelerometerReadingType",

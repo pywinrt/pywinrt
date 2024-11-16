@@ -35,6 +35,19 @@ from winrt._winrt_windows_storage_provider import (
     IStorageProviderUICommand,
     IStorageProviderUriSource,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_provider import (
+        ImplementsIStorageProviderItemPropertySource,
+        ImplementsIStorageProviderKnownFolderSyncInfoSource,
+        ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory,
+        ImplementsIStorageProviderPropertyCapabilities,
+        ImplementsIStorageProviderShareLinkSource,
+        ImplementsIStorageProviderStatusUISource,
+        ImplementsIStorageProviderStatusUISourceFactory,
+        ImplementsIStorageProviderUICommand,
+        ImplementsIStorageProviderUriSource,
+    )
 
 __all__ = [
     "CachedFileOptions",

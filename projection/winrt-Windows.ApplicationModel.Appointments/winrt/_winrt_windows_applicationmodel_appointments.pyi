@@ -255,7 +255,7 @@ class AppointmentException(winrt.system.Object):
     def is_deleted(self) -> bool: ...
 
 @typing.final
-class AppointmentInvitee(IAppointmentParticipant, winrt.system.Object):
+class AppointmentInvitee(winrt.system.Object, ImplementsIAppointmentParticipant):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentInvitee: ...
     def __new__(cls: typing.Type[AppointmentInvitee]) -> AppointmentInvitee: ...
@@ -318,7 +318,7 @@ class AppointmentManagerForUser(winrt.system.Object):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class AppointmentOrganizer(IAppointmentParticipant, winrt.system.Object):
+class AppointmentOrganizer(winrt.system.Object, ImplementsIAppointmentParticipant):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentOrganizer: ...
     def __new__(cls: typing.Type[AppointmentOrganizer]) -> AppointmentOrganizer: ...
@@ -531,7 +531,10 @@ class FindAppointmentsOptions(winrt.system.Object):
     @_property
     def fetch_properties(self) -> typing.MutableSequence[str]: ...
 
-class IAppointmentParticipant(winrt.system.Object):
+class ImplementsIAppointmentParticipant():
+    pass
+
+class IAppointmentParticipant(winrt.system.Object, ImplementsIAppointmentParticipant):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentParticipant: ...
     @_property

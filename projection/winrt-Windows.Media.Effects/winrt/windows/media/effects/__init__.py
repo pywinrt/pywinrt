@@ -25,6 +25,16 @@ from winrt._winrt_windows_media_effects import (
     IVideoCompositorDefinition,
     IVideoEffectDefinition,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_effects import (
+        ImplementsIAudioEffectDefinition,
+        ImplementsIBasicAudioEffect,
+        ImplementsIBasicVideoEffect,
+        ImplementsIVideoCompositor,
+        ImplementsIVideoCompositorDefinition,
+        ImplementsIVideoEffectDefinition,
+    )
 
 __all__ = [
     "AudioEffectState",

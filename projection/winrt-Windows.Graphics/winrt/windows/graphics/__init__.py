@@ -9,6 +9,11 @@ from winrt._winrt_windows_graphics import (
     SizeInt32,
     IGeometrySource2D,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_graphics import (
+        ImplementsIGeometrySource2D,
+    )
 
 __all__ = [
     "DisplayAdapterId",

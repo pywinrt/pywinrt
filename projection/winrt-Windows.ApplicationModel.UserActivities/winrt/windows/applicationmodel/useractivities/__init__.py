@@ -16,6 +16,11 @@ from winrt._winrt_windows_applicationmodel_useractivities import (
     UserActivityVisualElements,
     IUserActivityContentInfo,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel_useractivities import (
+        ImplementsIUserActivityContentInfo,
+    )
 
 __all__ = [
     "UserActivityState",

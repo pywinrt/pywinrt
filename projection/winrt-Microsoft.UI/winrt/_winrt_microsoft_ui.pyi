@@ -331,7 +331,10 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Colors: ...
 
-class IClosableNotifier(winrt.system.Object):
+class ImplementsIClosableNotifier():
+    pass
+
+class IClosableNotifier(winrt.system.Object, ImplementsIClosableNotifier):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IClosableNotifier: ...
     def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...

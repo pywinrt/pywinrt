@@ -64,7 +64,7 @@ class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
     def size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class WebUICommandBarBitmapIcon(IWebUICommandBarIcon, winrt.system.Object):
+class WebUICommandBarBitmapIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarBitmapIcon: ...
     @typing.overload
@@ -77,7 +77,7 @@ class WebUICommandBarBitmapIcon(IWebUICommandBarIcon, winrt.system.Object):
     def uri(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
-class WebUICommandBarConfirmationButton(IWebUICommandBarElement, winrt.system.Object):
+class WebUICommandBarConfirmationButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarConfirmationButton: ...
     def __new__(cls: typing.Type[WebUICommandBarConfirmationButton]) -> WebUICommandBarConfirmationButton: ...
@@ -89,7 +89,7 @@ class WebUICommandBarConfirmationButton(IWebUICommandBarElement, winrt.system.Ob
     def text(self, value: str) -> None: ...
 
 @typing.final
-class WebUICommandBarIconButton(IWebUICommandBarElement, winrt.system.Object):
+class WebUICommandBarIconButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarIconButton: ...
     def __new__(cls: typing.Type[WebUICommandBarIconButton]) -> WebUICommandBarIconButton: ...
@@ -131,7 +131,7 @@ class WebUICommandBarSizeChangedEventArgs(winrt.system.Object):
     def size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class WebUICommandBarSymbolIcon(IWebUICommandBarIcon, winrt.system.Object):
+class WebUICommandBarSymbolIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarSymbolIcon: ...
     @typing.overload
@@ -143,11 +143,17 @@ class WebUICommandBarSymbolIcon(IWebUICommandBarIcon, winrt.system.Object):
     @symbol.setter
     def symbol(self, value: str) -> None: ...
 
-class IWebUICommandBarElement(winrt.system.Object):
+class ImplementsIWebUICommandBarElement():
+    pass
+
+class IWebUICommandBarElement(winrt.system.Object, ImplementsIWebUICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarElement: ...
 
-class IWebUICommandBarIcon(winrt.system.Object):
+class ImplementsIWebUICommandBarIcon():
+    pass
+
+class IWebUICommandBarIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarIcon: ...
 

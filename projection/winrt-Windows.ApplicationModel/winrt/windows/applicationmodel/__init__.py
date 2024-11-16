@@ -46,6 +46,16 @@ from winrt._winrt_windows_applicationmodel import (
     ISuspendingEventArgs,
     ISuspendingOperation,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel import (
+        ImplementsIEnteredBackgroundEventArgs,
+        ImplementsILeavingBackgroundEventArgs,
+        ImplementsIPackageCatalogStatics2,
+        ImplementsISuspendingDeferral,
+        ImplementsISuspendingEventArgs,
+        ImplementsISuspendingOperation,
+    )
 
 __all__ = [
     "AddResourcePackageOptions",

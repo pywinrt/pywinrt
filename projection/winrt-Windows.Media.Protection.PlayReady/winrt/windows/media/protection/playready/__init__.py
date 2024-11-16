@@ -57,6 +57,33 @@ from winrt._winrt_windows_media_protection_playready import (
     IPlayReadySecureStopServiceRequest,
     IPlayReadyServiceRequest,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_protection_playready import (
+        ImplementsINDClosedCaptionDataReceivedEventArgs,
+        ImplementsINDCustomData,
+        ImplementsINDDownloadEngine,
+        ImplementsINDDownloadEngineNotifier,
+        ImplementsINDLicenseFetchCompletedEventArgs,
+        ImplementsINDLicenseFetchDescriptor,
+        ImplementsINDLicenseFetchResult,
+        ImplementsINDMessenger,
+        ImplementsINDProximityDetectionCompletedEventArgs,
+        ImplementsINDRegistrationCompletedEventArgs,
+        ImplementsINDSendResult,
+        ImplementsINDStartResult,
+        ImplementsINDStorageFileHelper,
+        ImplementsINDStreamParser,
+        ImplementsINDStreamParserNotifier,
+        ImplementsINDTransmitterProperties,
+        ImplementsIPlayReadyDomain,
+        ImplementsIPlayReadyLicense,
+        ImplementsIPlayReadyLicenseAcquisitionServiceRequest,
+        ImplementsIPlayReadyLicenseSession,
+        ImplementsIPlayReadyLicenseSession2,
+        ImplementsIPlayReadySecureStopServiceRequest,
+        ImplementsIPlayReadyServiceRequest,
+    )
 
 __all__ = [
     "NDCertificateFeature",

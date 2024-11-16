@@ -56,7 +56,7 @@ class AccessoryManager_Static(type):
     def make_phone_call_with_video(cls, phone_line: _uuid.UUID, phone_number: str, /) -> None: ...
     def make_phone_call_with_video_on_audio_endpoint(cls, phone_line: _uuid.UUID, phone_number: str, end_point: PhoneCallAudioEndpoint, /) -> None: ...
     def perform_media_playback_command(cls, command: PlaybackCommand, /) -> None: ...
-    def process_trigger_details(cls, p_details: IAccessoryNotificationTriggerDetails, /) -> None: ...
+    def process_trigger_details(cls, p_details: ImplementsIAccessoryNotificationTriggerDetails, /) -> None: ...
     def register_accessory_app(cls) -> str: ...
     def reject_phone_call(cls, phone_call_id: winrt.system.UInt32, /) -> None: ...
     def reject_phone_call_with_text(cls, phone_call_id: winrt.system.UInt32, text_response_id: winrt.system.UInt32, /) -> None: ...
@@ -103,7 +103,7 @@ class AccessoryManager(winrt.system.Object, metaclass=AccessoryManager_Static):
     pass
 
 @typing.final
-class AlarmNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class AlarmNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AlarmNotificationTriggerDetails: ...
     @_property
@@ -148,7 +148,7 @@ class BinaryId(winrt.system.Object):
     def length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class CalendarChangedNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class CalendarChangedNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarChangedNotificationTriggerDetails: ...
     @_property
@@ -169,7 +169,7 @@ class CalendarChangedNotificationTriggerDetails(IAccessoryNotificationTriggerDet
     def item_id(self) -> str: ...
 
 @typing.final
-class CortanaTileNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class CortanaTileNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaTileNotificationTriggerDetails: ...
     @_property
@@ -224,7 +224,7 @@ class EmailFolderInfo(winrt.system.Object):
     def is_notification_enabled(self) -> bool: ...
 
 @typing.final
-class EmailNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class EmailNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailNotificationTriggerDetails: ...
     @_property
@@ -255,7 +255,7 @@ class EmailNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winr
     def message_entry_id(self) -> BinaryId: ...
 
 @typing.final
-class EmailReadNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class EmailReadNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailReadNotificationTriggerDetails: ...
     @_property
@@ -280,7 +280,7 @@ class EmailReadNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, 
     def parent_folder_name(self) -> str: ...
 
 @typing.final
-class MediaControlsTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class MediaControlsTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaControlsTriggerDetails: ...
     @_property
@@ -368,7 +368,7 @@ class PhoneLineDetails(winrt.system.Object):
     def missed_call_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PhoneNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class PhoneNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNotificationTriggerDetails: ...
     @_property
@@ -391,7 +391,7 @@ class PhoneNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winr
     def phone_notification_type(self) -> PhoneNotificationType: ...
 
 @typing.final
-class ReminderNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class ReminderNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReminderNotificationTriggerDetails: ...
     @_property
@@ -444,7 +444,7 @@ class TextResponse(winrt.system.Object):
     def id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ToastNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
+class ToastNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationTriggerDetails: ...
     @_property
@@ -487,7 +487,10 @@ class VolumeInfo(winrt.system.Object):
     @_property
     def system_volume(self) -> winrt.system.UInt32: ...
 
-class IAccessoryNotificationTriggerDetails(winrt.system.Object):
+class ImplementsIAccessoryNotificationTriggerDetails():
+    pass
+
+class IAccessoryNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAccessoryNotificationTriggerDetails: ...
     @_property

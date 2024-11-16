@@ -26,6 +26,15 @@ from winrt._winrt_windows_data_xml_dom import (
     IXmlNodeSerializer,
     IXmlText,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_data_xml_dom import (
+        ImplementsIXmlCharacterData,
+        ImplementsIXmlNode,
+        ImplementsIXmlNodeSelector,
+        ImplementsIXmlNodeSerializer,
+        ImplementsIXmlText,
+    )
 
 __all__ = [
     "NodeType",

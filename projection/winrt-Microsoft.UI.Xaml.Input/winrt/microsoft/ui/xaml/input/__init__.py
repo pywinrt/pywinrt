@@ -55,6 +55,11 @@ if TYPE_CHECKING:
         StandardUICommand_Static,
         XamlUICommand_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_input import (
+        ImplementsICommand,
+    )
 
 __all__ = [
     "FocusInputDeviceKind",

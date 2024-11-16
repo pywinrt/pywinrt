@@ -15,7 +15,7 @@ import winrt.windows.ui.composition as windows_ui_composition
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CompositorController(windows_foundation.IClosable, winrt.system.Object):
+class CompositorController(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

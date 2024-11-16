@@ -18,7 +18,7 @@ from winrt.windows.devices.adc import AdcChannelMode
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
+class AdcChannel(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -31,7 +31,7 @@ class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class AdcController_Static(type):
-    def get_controllers_async(cls, provider: windows_devices_adc_provider.IAdcProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AdcController]]: ...
+    def get_controllers_async(cls, provider: windows_devices_adc_provider.ImplementsIAdcProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AdcController]]: ...
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[AdcController]: ...
 
 @typing.final

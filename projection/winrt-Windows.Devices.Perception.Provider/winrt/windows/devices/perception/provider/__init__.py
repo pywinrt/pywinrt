@@ -18,6 +18,12 @@ from winrt._winrt_windows_devices_perception_provider import (
     IPerceptionFrameProvider,
     IPerceptionFrameProviderManager,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_perception_provider import (
+        ImplementsIPerceptionFrameProvider,
+        ImplementsIPerceptionFrameProviderManager,
+    )
 
 __all__ = [
     "KnownPerceptionFrameKind",

@@ -22,6 +22,15 @@ from winrt._winrt_windows_foundation_diagnostics import (
     ILoggingSession,
     ILoggingTarget,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_foundation_diagnostics import (
+        ImplementsIErrorReportingSettings,
+        ImplementsIFileLoggingSession,
+        ImplementsILoggingChannel,
+        ImplementsILoggingSession,
+        ImplementsILoggingTarget,
+    )
 
 __all__ = [
     "CausalityRelation",

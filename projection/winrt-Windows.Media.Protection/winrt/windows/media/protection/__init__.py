@@ -18,6 +18,11 @@ from winrt._winrt_windows_media_protection import (
     ServiceRequestedEventArgs,
     IMediaProtectionServiceRequest,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_protection import (
+        ImplementsIMediaProtectionServiceRequest,
+    )
 
 __all__ = [
     "GraphicsTrustStatus",

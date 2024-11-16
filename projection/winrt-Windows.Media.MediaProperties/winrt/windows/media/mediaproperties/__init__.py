@@ -20,6 +20,11 @@ from winrt._winrt_windows_media_mediaproperties import (
     Vp9ProfileIds,
     IMediaEncodingProperties,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_mediaproperties import (
+        ImplementsIMediaEncodingProperties,
+    )
 
 __all__ = [
     "AudioEncodingQuality",

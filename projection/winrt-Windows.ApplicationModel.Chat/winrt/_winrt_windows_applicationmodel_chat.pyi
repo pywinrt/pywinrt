@@ -46,7 +46,7 @@ class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesMan
     pass
 
 @typing.final
-class ChatConversation(IChatItem, winrt.system.Object):
+class ChatConversation(winrt.system.Object, ImplementsIChatItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversation: ...
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
@@ -115,7 +115,7 @@ class ChatConversationThreadingInfo(winrt.system.Object):
     def participants(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class ChatMessage(IChatItem, winrt.system.Object):
+class ChatMessage(winrt.system.Object, ImplementsIChatItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessage: ...
     def __new__(cls: typing.Type[ChatMessage]) -> ChatMessage: ...
@@ -222,7 +222,7 @@ class ChatMessage(IChatItem, winrt.system.Object):
 class ChatMessageAttachment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageAttachment: ...
-    def __new__(cls: typing.Type[ChatMessageAttachment], mime_type: str, data_stream_reference: windows_storage_streams.IRandomAccessStreamReference) -> ChatMessageAttachment: ...
+    def __new__(cls: typing.Type[ChatMessageAttachment], mime_type: str, data_stream_reference: windows_storage_streams.ImplementsIRandomAccessStreamReference) -> ChatMessageAttachment: ...
     @_property
     def text(self) -> str: ...
     @text.setter
@@ -610,7 +610,10 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
-class IChatItem(winrt.system.Object):
+class ImplementsIChatItem():
+    pass
+
+class IChatItem(winrt.system.Object, ImplementsIChatItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IChatItem: ...
     @_property
