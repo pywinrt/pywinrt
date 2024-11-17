@@ -60,8 +60,10 @@ static class ObjectWriterExtensions
 
                 if (prop.SetMethod is not null)
                 {
+                    var setType = prop.SetMethod.Parameters[0].ToPyInParamTyping(ns);
+
                     w.WriteLine($"@{name}.setter");
-                    w.WriteLine($"def {name}(cls, value: {propType}) -> None: ...");
+                    w.WriteLine($"def {name}(cls, value: {setType}) -> None: ...");
                 }
 
                 hasMembers = true;
@@ -379,8 +381,10 @@ static class ObjectWriterExtensions
 
             if (prop.SetMethod is not null)
             {
+                var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
+
                 w.WriteLine($"@{name}.setter");
-                w.WriteLine($"def {name}(self, value: {propType}) -> None: ...");
+                w.WriteLine($"def {name}(self, value: {setType}) -> None: ...");
             }
         }
 
