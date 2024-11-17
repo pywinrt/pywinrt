@@ -1486,8 +1486,24 @@ namespace py
             winrt::impl::error_fail, L"Unraisable Python exception");
     }
 
+    template<typename D, typename... I>
+    struct python_implements : winrt::implements<D, I...>
+    {
+        PyGILState_STATE state;
+
+        void abi_enter() noexcept
+        {
+            state = PyGILState_Ensure();
+        }
+
+        void abi_exit() const noexcept
+        {
+            PyGILState_Release(state);
+        }
+    };
+
     template<typename T>
-    struct python_iterator : winrt::implements<
+    struct python_iterator : python_implements<
                                  python_iterator<T>,
                                  winrt::Windows::Foundation::Collections::IIterator<T>>
     {
@@ -1585,7 +1601,7 @@ namespace py
     };
 
     template<typename T>
-    struct python_iterable : winrt::implements<
+    struct python_iterable : python_implements<
                                  python_iterable<T>,
                                  winrt::Windows::Foundation::Collections::IIterable<T>>
     {
@@ -1609,7 +1625,7 @@ namespace py
 
     template<typename T>
     struct python_vector_view
-        : winrt::implements<
+        : python_implements<
               python_vector_view<T>,
               winrt::Windows::Foundation::Collections::IVectorView<T>,
               winrt::Windows::Foundation::Collections::IIterable<T>>
@@ -1714,7 +1730,7 @@ namespace py
     };
 
     template<typename T>
-    struct python_vector : winrt::implements<
+    struct python_vector : python_implements<
                                python_vector<T>,
                                winrt::Windows::Foundation::Collections::IVector<T>,
                                winrt::Windows::Foundation::Collections::IIterable<T>>
@@ -1953,7 +1969,7 @@ namespace py
 
     template<typename K, typename V>
     struct python_key_value_pair
-        : winrt::implements<
+        : python_implements<
               python_key_value_pair<K, V>,
               winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
     {
@@ -1987,7 +2003,7 @@ namespace py
 
     template<typename K, typename V>
     struct python_mapping_iterator
-        : winrt::implements<
+        : python_implements<
               python_mapping_iterator<K, V>,
               winrt::Windows::Foundation::Collections::IIterator<
                   winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>
@@ -2090,7 +2106,7 @@ namespace py
 
     template<typename K, typename V>
     struct python_map_view
-        : winrt::implements<
+        : python_implements<
               python_map_view<K, V>,
               winrt::Windows::Foundation::Collections::IMapView<K, V>,
               winrt::Windows::Foundation::Collections::IIterable<
@@ -2204,7 +2220,7 @@ namespace py
 
     template<typename K, typename V>
     struct python_map
-        : winrt::implements<
+        : python_implements<
               python_map<K, V>,
               winrt::Windows::Foundation::Collections::IMap<K, V>,
               winrt::Windows::Foundation::Collections::IIterable<
