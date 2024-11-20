@@ -687,7 +687,8 @@ namespace py
             return nullptr;
         }
 
-        auto py_instance = PyObject_New(py::winrt_struct_wrapper<T>, type_object);
+        auto py_instance = reinterpret_cast<py::winrt_struct_wrapper<T>*>(
+            type_object->tp_alloc(type_object, 0));
 
         if (!py_instance)
         {
@@ -717,7 +718,8 @@ namespace py
             return nullptr;
         }
 
-        auto py_instance = PyObject_New(py::winrt_wrapper<T>, type_object);
+        auto py_instance = reinterpret_cast<py::winrt_wrapper<T>*>(
+            type_object->tp_alloc(type_object, 0));
 
         if (!py_instance)
         {
@@ -746,8 +748,9 @@ namespace py
             return nullptr;
         }
 
-        auto py_instance = PyObject_New(
-            py::winrt_pinterface_wrapper<typename ptype::abstract>, type);
+        auto py_instance
+            = reinterpret_cast<py::winrt_pinterface_wrapper<typename ptype::abstract>*>(
+                type->tp_alloc(type, 0));
 
         if (!py_instance)
         {
