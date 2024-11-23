@@ -1029,8 +1029,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- BitmapSource class --------------------
 
-    struct PyWinrtBitmapSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::BitmapSourceT<PyWinrtBitmapSource>
+    struct PyWinrtBitmapSource;
+    using BasePyWinrtBitmapSource = winrt::Windows::UI::Xaml::Media::Imaging::BitmapSourceT<PyWinrtBitmapSource, py::IPywinrtObject>;
+
+    struct PyWinrtBitmapSource : py::py_obj_ref, BasePyWinrtBitmapSource
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBitmapSource* instance, bool is_last_reference)
         {
@@ -1968,10 +1979,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SurfaceImageSource class --------------------
 
-    struct PyWinrtSurfaceImageSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>
+    struct PyWinrtSurfaceImageSource;
+    using BasePyWinrtSurfaceImageSource = winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource, py::IPywinrtObject>;
+
+    struct PyWinrtSurfaceImageSource : py::py_obj_ref, BasePyWinrtSurfaceImageSource
     {
-        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight) {}
-        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight, isOpaque) {}
+        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight) : py::py_obj_ref(py_obj), BasePyWinrtSurfaceImageSource(pixelWidth, pixelHeight) {}
+        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : py::py_obj_ref(py_obj), BasePyWinrtSurfaceImageSource(pixelWidth, pixelHeight, isOpaque) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSurfaceImageSource* instance, bool is_last_reference)
         {
@@ -2147,10 +2169,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SvgImageSource class --------------------
 
-    struct PyWinrtSvgImageSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>
+    struct PyWinrtSvgImageSource;
+    using BasePyWinrtSvgImageSource = winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource, py::IPywinrtObject>;
+
+    struct PyWinrtSvgImageSource : py::py_obj_ref, BasePyWinrtSvgImageSource
     {
-        PyWinrtSvgImageSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>() {}
-        PyWinrtSvgImageSource(PyObject* py_obj, winrt::Windows::Foundation::Uri uriSource) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>(uriSource) {}
+        PyWinrtSvgImageSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSvgImageSource() {}
+        PyWinrtSvgImageSource(PyObject* py_obj, winrt::Windows::Foundation::Uri uriSource) : py::py_obj_ref(py_obj), BasePyWinrtSvgImageSource(uriSource) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSvgImageSource* instance, bool is_last_reference)
         {
@@ -3168,8 +3201,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- XamlRenderingBackgroundTask class --------------------
 
-    struct PyWinrtXamlRenderingBackgroundTask : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTaskT<PyWinrtXamlRenderingBackgroundTask>
+    struct PyWinrtXamlRenderingBackgroundTask;
+    using BasePyWinrtXamlRenderingBackgroundTask = winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTaskT<PyWinrtXamlRenderingBackgroundTask, py::IPywinrtObject>;
+
+    struct PyWinrtXamlRenderingBackgroundTask : py::py_obj_ref, BasePyWinrtXamlRenderingBackgroundTask
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtXamlRenderingBackgroundTask* instance, bool is_last_reference)
         {

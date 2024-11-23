@@ -378,9 +378,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
     // ----- PrintDocument class --------------------
 
-    struct PyWinrtPrintDocument : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>
+    struct PyWinrtPrintDocument;
+    using BasePyWinrtPrintDocument = winrt::Microsoft::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument, py::IPywinrtObject>;
+
+    struct PyWinrtPrintDocument : py::py_obj_ref, BasePyWinrtPrintDocument
     {
-        PyWinrtPrintDocument(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>() {}
+        PyWinrtPrintDocument(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtPrintDocument() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPrintDocument* instance, bool is_last_reference)
         {

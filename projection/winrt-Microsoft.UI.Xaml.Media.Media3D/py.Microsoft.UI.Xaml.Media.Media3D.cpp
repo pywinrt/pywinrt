@@ -1896,8 +1896,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     // ----- Transform3D class --------------------
 
-    struct PyWinrtTransform3D : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3DT<PyWinrtTransform3D>
+    struct PyWinrtTransform3D;
+    using BasePyWinrtTransform3D = winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3DT<PyWinrtTransform3D, py::IPywinrtObject>;
+
+    struct PyWinrtTransform3D : py::py_obj_ref, BasePyWinrtTransform3D
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTransform3D* instance, bool is_last_reference)
         {

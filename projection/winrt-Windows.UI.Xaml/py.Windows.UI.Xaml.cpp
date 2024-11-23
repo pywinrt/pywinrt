@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml
 {
     // ----- AdaptiveTrigger class --------------------
 
-    struct PyWinrtAdaptiveTrigger : py::py_obj_ref, winrt::Windows::UI::Xaml::AdaptiveTriggerT<PyWinrtAdaptiveTrigger>
+    struct PyWinrtAdaptiveTrigger;
+    using BasePyWinrtAdaptiveTrigger = winrt::Windows::UI::Xaml::AdaptiveTriggerT<PyWinrtAdaptiveTrigger, py::IPywinrtObject>;
+
+    struct PyWinrtAdaptiveTrigger : py::py_obj_ref, BasePyWinrtAdaptiveTrigger
     {
-        PyWinrtAdaptiveTrigger(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::AdaptiveTriggerT<PyWinrtAdaptiveTrigger>() {}
+        PyWinrtAdaptiveTrigger(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAdaptiveTrigger() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAdaptiveTrigger* instance, bool is_last_reference)
         {
@@ -328,9 +339,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- Application class --------------------
 
-    struct PyWinrtApplication : py::py_obj_ref, winrt::Windows::UI::Xaml::ApplicationT<PyWinrtApplication>
+    struct PyWinrtApplication;
+    using BasePyWinrtApplication = winrt::Windows::UI::Xaml::ApplicationT<PyWinrtApplication, py::IPywinrtObject>;
+
+    struct PyWinrtApplication : py::py_obj_ref, BasePyWinrtApplication
     {
-        PyWinrtApplication(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ApplicationT<PyWinrtApplication>() {}
+        PyWinrtApplication(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtApplication() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtApplication* instance, bool is_last_reference)
         {
@@ -2406,9 +2428,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- BrushTransition class --------------------
 
-    struct PyWinrtBrushTransition : py::py_obj_ref, winrt::Windows::UI::Xaml::BrushTransitionT<PyWinrtBrushTransition>
+    struct PyWinrtBrushTransition;
+    using BasePyWinrtBrushTransition = winrt::Windows::UI::Xaml::BrushTransitionT<PyWinrtBrushTransition, py::IPywinrtObject>;
+
+    struct PyWinrtBrushTransition : py::py_obj_ref, BasePyWinrtBrushTransition
     {
-        PyWinrtBrushTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::BrushTransitionT<PyWinrtBrushTransition>() {}
+        PyWinrtBrushTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBrushTransition() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBrushTransition* instance, bool is_last_reference)
         {
@@ -2612,9 +2645,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ColorPaletteResources class --------------------
 
-    struct PyWinrtColorPaletteResources : py::py_obj_ref, winrt::Windows::UI::Xaml::ColorPaletteResourcesT<PyWinrtColorPaletteResources>
+    struct PyWinrtColorPaletteResources;
+    using BasePyWinrtColorPaletteResources = winrt::Windows::UI::Xaml::ColorPaletteResourcesT<PyWinrtColorPaletteResources, py::IPywinrtObject>;
+
+    struct PyWinrtColorPaletteResources : py::py_obj_ref, BasePyWinrtColorPaletteResources
     {
-        PyWinrtColorPaletteResources(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ColorPaletteResourcesT<PyWinrtColorPaletteResources>() {}
+        PyWinrtColorPaletteResources(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtColorPaletteResources() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorPaletteResources* instance, bool is_last_reference)
         {
@@ -4757,9 +4801,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DataTemplate class --------------------
 
-    struct PyWinrtDataTemplate : py::py_obj_ref, winrt::Windows::UI::Xaml::DataTemplateT<PyWinrtDataTemplate>
+    struct PyWinrtDataTemplate;
+    using BasePyWinrtDataTemplate = winrt::Windows::UI::Xaml::DataTemplateT<PyWinrtDataTemplate, py::IPywinrtObject>;
+
+    struct PyWinrtDataTemplate : py::py_obj_ref, BasePyWinrtDataTemplate
     {
-        PyWinrtDataTemplate(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::DataTemplateT<PyWinrtDataTemplate>() {}
+        PyWinrtDataTemplate(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDataTemplate() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDataTemplate* instance, bool is_last_reference)
         {
@@ -5124,10 +5179,21 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DataTemplateKey class --------------------
 
-    struct PyWinrtDataTemplateKey : py::py_obj_ref, winrt::Windows::UI::Xaml::DataTemplateKeyT<PyWinrtDataTemplateKey>
+    struct PyWinrtDataTemplateKey;
+    using BasePyWinrtDataTemplateKey = winrt::Windows::UI::Xaml::DataTemplateKeyT<PyWinrtDataTemplateKey, py::IPywinrtObject>;
+
+    struct PyWinrtDataTemplateKey : py::py_obj_ref, BasePyWinrtDataTemplateKey
     {
-        PyWinrtDataTemplateKey(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::DataTemplateKeyT<PyWinrtDataTemplateKey>() {}
-        PyWinrtDataTemplateKey(PyObject* py_obj, winrt::Windows::Foundation::IInspectable dataType) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::DataTemplateKeyT<PyWinrtDataTemplateKey>(dataType) {}
+        PyWinrtDataTemplateKey(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDataTemplateKey() {}
+        PyWinrtDataTemplateKey(PyObject* py_obj, winrt::Windows::Foundation::IInspectable dataType) : py::py_obj_ref(py_obj), BasePyWinrtDataTemplateKey(dataType) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDataTemplateKey* instance, bool is_last_reference)
         {
@@ -5857,8 +5923,19 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DependencyObject class --------------------
 
-    struct PyWinrtDependencyObject : py::py_obj_ref, winrt::Windows::UI::Xaml::DependencyObjectT<PyWinrtDependencyObject>
+    struct PyWinrtDependencyObject;
+    using BasePyWinrtDependencyObject = winrt::Windows::UI::Xaml::DependencyObjectT<PyWinrtDependencyObject, py::IPywinrtObject>;
+
+    struct PyWinrtDependencyObject : py::py_obj_ref, BasePyWinrtDependencyObject
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDependencyObject* instance, bool is_last_reference)
         {
@@ -6263,9 +6340,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DependencyObjectCollection class --------------------
 
-    struct PyWinrtDependencyObjectCollection : py::py_obj_ref, winrt::Windows::UI::Xaml::DependencyObjectCollectionT<PyWinrtDependencyObjectCollection>
+    struct PyWinrtDependencyObjectCollection;
+    using BasePyWinrtDependencyObjectCollection = winrt::Windows::UI::Xaml::DependencyObjectCollectionT<PyWinrtDependencyObjectCollection, py::IPywinrtObject>;
+
+    struct PyWinrtDependencyObjectCollection : py::py_obj_ref, BasePyWinrtDependencyObjectCollection
     {
-        PyWinrtDependencyObjectCollection(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::DependencyObjectCollectionT<PyWinrtDependencyObjectCollection>() {}
+        PyWinrtDependencyObjectCollection(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDependencyObjectCollection() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDependencyObjectCollection* instance, bool is_last_reference)
         {
@@ -7490,9 +7578,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DispatcherTimer class --------------------
 
-    struct PyWinrtDispatcherTimer : py::py_obj_ref, winrt::Windows::UI::Xaml::DispatcherTimerT<PyWinrtDispatcherTimer>
+    struct PyWinrtDispatcherTimer;
+    using BasePyWinrtDispatcherTimer = winrt::Windows::UI::Xaml::DispatcherTimerT<PyWinrtDispatcherTimer, py::IPywinrtObject>;
+
+    struct PyWinrtDispatcherTimer : py::py_obj_ref, BasePyWinrtDispatcherTimer
     {
-        PyWinrtDispatcherTimer(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::DispatcherTimerT<PyWinrtDispatcherTimer>() {}
+        PyWinrtDispatcherTimer(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDispatcherTimer() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDispatcherTimer* instance, bool is_last_reference)
         {
@@ -10148,9 +10247,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ElementFactoryGetArgs class --------------------
 
-    struct PyWinrtElementFactoryGetArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::ElementFactoryGetArgsT<PyWinrtElementFactoryGetArgs>
+    struct PyWinrtElementFactoryGetArgs;
+    using BasePyWinrtElementFactoryGetArgs = winrt::Windows::UI::Xaml::ElementFactoryGetArgsT<PyWinrtElementFactoryGetArgs, py::IPywinrtObject>;
+
+    struct PyWinrtElementFactoryGetArgs : py::py_obj_ref, BasePyWinrtElementFactoryGetArgs
     {
-        PyWinrtElementFactoryGetArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ElementFactoryGetArgsT<PyWinrtElementFactoryGetArgs>() {}
+        PyWinrtElementFactoryGetArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtElementFactoryGetArgs() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtElementFactoryGetArgs* instance, bool is_last_reference)
         {
@@ -10416,9 +10526,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ElementFactoryRecycleArgs class --------------------
 
-    struct PyWinrtElementFactoryRecycleArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::ElementFactoryRecycleArgsT<PyWinrtElementFactoryRecycleArgs>
+    struct PyWinrtElementFactoryRecycleArgs;
+    using BasePyWinrtElementFactoryRecycleArgs = winrt::Windows::UI::Xaml::ElementFactoryRecycleArgsT<PyWinrtElementFactoryRecycleArgs, py::IPywinrtObject>;
+
+    struct PyWinrtElementFactoryRecycleArgs : py::py_obj_ref, BasePyWinrtElementFactoryRecycleArgs
     {
-        PyWinrtElementFactoryRecycleArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ElementFactoryRecycleArgsT<PyWinrtElementFactoryRecycleArgs>() {}
+        PyWinrtElementFactoryRecycleArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtElementFactoryRecycleArgs() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtElementFactoryRecycleArgs* instance, bool is_last_reference)
         {
@@ -11296,8 +11417,19 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- FrameworkElement class --------------------
 
-    struct PyWinrtFrameworkElement : py::py_obj_ref, winrt::Windows::UI::Xaml::FrameworkElementT<PyWinrtFrameworkElement>
+    struct PyWinrtFrameworkElement;
+    using BasePyWinrtFrameworkElement = winrt::Windows::UI::Xaml::FrameworkElementT<PyWinrtFrameworkElement, py::IPywinrtObject>;
+
+    struct PyWinrtFrameworkElement : py::py_obj_ref, BasePyWinrtFrameworkElement
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFrameworkElement* instance, bool is_last_reference)
         {
@@ -14406,8 +14538,19 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- FrameworkTemplate class --------------------
 
-    struct PyWinrtFrameworkTemplate : py::py_obj_ref, winrt::Windows::UI::Xaml::FrameworkTemplateT<PyWinrtFrameworkTemplate>
+    struct PyWinrtFrameworkTemplate;
+    using BasePyWinrtFrameworkTemplate = winrt::Windows::UI::Xaml::FrameworkTemplateT<PyWinrtFrameworkTemplate, py::IPywinrtObject>;
+
+    struct PyWinrtFrameworkTemplate : py::py_obj_ref, BasePyWinrtFrameworkTemplate
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFrameworkTemplate* instance, bool is_last_reference)
         {
@@ -15493,10 +15636,21 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- PropertyMetadata class --------------------
 
-    struct PyWinrtPropertyMetadata : py::py_obj_ref, winrt::Windows::UI::Xaml::PropertyMetadataT<PyWinrtPropertyMetadata>
+    struct PyWinrtPropertyMetadata;
+    using BasePyWinrtPropertyMetadata = winrt::Windows::UI::Xaml::PropertyMetadataT<PyWinrtPropertyMetadata, py::IPywinrtObject>;
+
+    struct PyWinrtPropertyMetadata : py::py_obj_ref, BasePyWinrtPropertyMetadata
     {
-        PyWinrtPropertyMetadata(PyObject* py_obj, winrt::Windows::Foundation::IInspectable defaultValue) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::PropertyMetadataT<PyWinrtPropertyMetadata>(defaultValue) {}
-        PyWinrtPropertyMetadata(PyObject* py_obj, winrt::Windows::Foundation::IInspectable defaultValue, winrt::Windows::UI::Xaml::PropertyChangedCallback propertyChangedCallback) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::PropertyMetadataT<PyWinrtPropertyMetadata>(defaultValue, propertyChangedCallback) {}
+        PyWinrtPropertyMetadata(PyObject* py_obj, winrt::Windows::Foundation::IInspectable defaultValue) : py::py_obj_ref(py_obj), BasePyWinrtPropertyMetadata(defaultValue) {}
+        PyWinrtPropertyMetadata(PyObject* py_obj, winrt::Windows::Foundation::IInspectable defaultValue, winrt::Windows::UI::Xaml::PropertyChangedCallback propertyChangedCallback) : py::py_obj_ref(py_obj), BasePyWinrtPropertyMetadata(defaultValue, propertyChangedCallback) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPropertyMetadata* instance, bool is_last_reference)
         {
@@ -16634,9 +16788,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ResourceDictionary class --------------------
 
-    struct PyWinrtResourceDictionary : py::py_obj_ref, winrt::Windows::UI::Xaml::ResourceDictionaryT<PyWinrtResourceDictionary>
+    struct PyWinrtResourceDictionary;
+    using BasePyWinrtResourceDictionary = winrt::Windows::UI::Xaml::ResourceDictionaryT<PyWinrtResourceDictionary, py::IPywinrtObject>;
+
+    struct PyWinrtResourceDictionary : py::py_obj_ref, BasePyWinrtResourceDictionary
     {
-        PyWinrtResourceDictionary(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ResourceDictionaryT<PyWinrtResourceDictionary>() {}
+        PyWinrtResourceDictionary(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtResourceDictionary() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtResourceDictionary* instance, bool is_last_reference)
         {
@@ -17363,9 +17528,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- RoutedEventArgs class --------------------
 
-    struct PyWinrtRoutedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::RoutedEventArgsT<PyWinrtRoutedEventArgs>
+    struct PyWinrtRoutedEventArgs;
+    using BasePyWinrtRoutedEventArgs = winrt::Windows::UI::Xaml::RoutedEventArgsT<PyWinrtRoutedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtRoutedEventArgs : py::py_obj_ref, BasePyWinrtRoutedEventArgs
     {
-        PyWinrtRoutedEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::RoutedEventArgsT<PyWinrtRoutedEventArgs>() {}
+        PyWinrtRoutedEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRoutedEventArgs() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRoutedEventArgs* instance, bool is_last_reference)
         {
@@ -17534,9 +17710,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ScalarTransition class --------------------
 
-    struct PyWinrtScalarTransition : py::py_obj_ref, winrt::Windows::UI::Xaml::ScalarTransitionT<PyWinrtScalarTransition>
+    struct PyWinrtScalarTransition;
+    using BasePyWinrtScalarTransition = winrt::Windows::UI::Xaml::ScalarTransitionT<PyWinrtScalarTransition, py::IPywinrtObject>;
+
+    struct PyWinrtScalarTransition : py::py_obj_ref, BasePyWinrtScalarTransition
     {
-        PyWinrtScalarTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::ScalarTransitionT<PyWinrtScalarTransition>() {}
+        PyWinrtScalarTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtScalarTransition() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtScalarTransition* instance, bool is_last_reference)
         {
@@ -19458,8 +19645,19 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- StateTriggerBase class --------------------
 
-    struct PyWinrtStateTriggerBase : py::py_obj_ref, winrt::Windows::UI::Xaml::StateTriggerBaseT<PyWinrtStateTriggerBase>
+    struct PyWinrtStateTriggerBase;
+    using BasePyWinrtStateTriggerBase = winrt::Windows::UI::Xaml::StateTriggerBaseT<PyWinrtStateTriggerBase, py::IPywinrtObject>;
+
+    struct PyWinrtStateTriggerBase : py::py_obj_ref, BasePyWinrtStateTriggerBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtStateTriggerBase* instance, bool is_last_reference)
         {
@@ -30422,9 +30620,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- UIElementWeakCollection class --------------------
 
-    struct PyWinrtUIElementWeakCollection : py::py_obj_ref, winrt::Windows::UI::Xaml::UIElementWeakCollectionT<PyWinrtUIElementWeakCollection>
+    struct PyWinrtUIElementWeakCollection;
+    using BasePyWinrtUIElementWeakCollection = winrt::Windows::UI::Xaml::UIElementWeakCollectionT<PyWinrtUIElementWeakCollection, py::IPywinrtObject>;
+
+    struct PyWinrtUIElementWeakCollection : py::py_obj_ref, BasePyWinrtUIElementWeakCollection
     {
-        PyWinrtUIElementWeakCollection(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::UIElementWeakCollectionT<PyWinrtUIElementWeakCollection>() {}
+        PyWinrtUIElementWeakCollection(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtUIElementWeakCollection() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtUIElementWeakCollection* instance, bool is_last_reference)
         {
@@ -31384,9 +31593,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- Vector3Transition class --------------------
 
-    struct PyWinrtVector3Transition : py::py_obj_ref, winrt::Windows::UI::Xaml::Vector3TransitionT<PyWinrtVector3Transition>
+    struct PyWinrtVector3Transition;
+    using BasePyWinrtVector3Transition = winrt::Windows::UI::Xaml::Vector3TransitionT<PyWinrtVector3Transition, py::IPywinrtObject>;
+
+    struct PyWinrtVector3Transition : py::py_obj_ref, BasePyWinrtVector3Transition
     {
-        PyWinrtVector3Transition(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Vector3TransitionT<PyWinrtVector3Transition>() {}
+        PyWinrtVector3Transition(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtVector3Transition() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtVector3Transition* instance, bool is_last_reference)
         {
@@ -32471,9 +32691,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- VisualStateManager class --------------------
 
-    struct PyWinrtVisualStateManager : py::py_obj_ref, winrt::Windows::UI::Xaml::VisualStateManagerT<PyWinrtVisualStateManager>
+    struct PyWinrtVisualStateManager;
+    using BasePyWinrtVisualStateManager = winrt::Windows::UI::Xaml::VisualStateManagerT<PyWinrtVisualStateManager, py::IPywinrtObject>;
+
+    struct PyWinrtVisualStateManager : py::py_obj_ref, BasePyWinrtVisualStateManager
     {
-        PyWinrtVisualStateManager(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::VisualStateManagerT<PyWinrtVisualStateManager>() {}
+        PyWinrtVisualStateManager(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtVisualStateManager() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtVisualStateManager* instance, bool is_last_reference)
         {
@@ -32802,9 +33033,20 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- VisualTransition class --------------------
 
-    struct PyWinrtVisualTransition : py::py_obj_ref, winrt::Windows::UI::Xaml::VisualTransitionT<PyWinrtVisualTransition>
+    struct PyWinrtVisualTransition;
+    using BasePyWinrtVisualTransition = winrt::Windows::UI::Xaml::VisualTransitionT<PyWinrtVisualTransition, py::IPywinrtObject>;
+
+    struct PyWinrtVisualTransition : py::py_obj_ref, BasePyWinrtVisualTransition
     {
-        PyWinrtVisualTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::VisualTransitionT<PyWinrtVisualTransition>() {}
+        PyWinrtVisualTransition(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtVisualTransition() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtVisualTransition* instance, bool is_last_reference)
         {

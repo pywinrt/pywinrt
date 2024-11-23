@@ -1,11 +1,11 @@
+#include "pybase.h"
+#include <py.Windows.System.h>
+
 #include <winrt/base.h>
 #include <winrt/Windows.System.h>
 #include <DispatcherQueue.h>
 
 #include <Python.h>
-
-#include "pybase.h"
-#include <py.Windows.System.h>
 
 // https://learn.microsoft.com/en-us/windows/win32/api/dispatcherqueue
 

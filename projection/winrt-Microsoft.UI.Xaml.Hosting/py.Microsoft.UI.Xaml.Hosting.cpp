@@ -6,9 +6,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 {
     // ----- DesktopWindowXamlSource class --------------------
 
-    struct PyWinrtDesktopWindowXamlSource : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>
+    struct PyWinrtDesktopWindowXamlSource;
+    using BasePyWinrtDesktopWindowXamlSource = winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource, py::IPywinrtObject>;
+
+    struct PyWinrtDesktopWindowXamlSource : py::py_obj_ref, BasePyWinrtDesktopWindowXamlSource
     {
-        PyWinrtDesktopWindowXamlSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>() {}
+        PyWinrtDesktopWindowXamlSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDesktopWindowXamlSource() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDesktopWindowXamlSource* instance, bool is_last_reference)
         {

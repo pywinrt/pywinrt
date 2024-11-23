@@ -1,8 +1,8 @@
-#include <winrt/base.h>
-#include <Python.h>
-
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
+
+#include <winrt/base.h>
+#include <Python.h>
 
 namespace py::cpp::_winrt
 {

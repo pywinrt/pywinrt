@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 {
     // ----- NotifyCollectionChangedEventArgs class --------------------
 
-    struct PyWinrtNotifyCollectionChangedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>
+    struct PyWinrtNotifyCollectionChangedEventArgs;
+    using BasePyWinrtNotifyCollectionChangedEventArgs = winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtNotifyCollectionChangedEventArgs : py::py_obj_ref, BasePyWinrtNotifyCollectionChangedEventArgs
     {
-        PyWinrtNotifyCollectionChangedEventArgs(PyObject* py_obj, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Windows::UI::Xaml::Interop::IBindableVector newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>(action, newItems, oldItems, newIndex, oldIndex) {}
+        PyWinrtNotifyCollectionChangedEventArgs(PyObject* py_obj, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Windows::UI::Xaml::Interop::IBindableVector newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : py::py_obj_ref(py_obj), BasePyWinrtNotifyCollectionChangedEventArgs(action, newItems, oldItems, newIndex, oldIndex) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtNotifyCollectionChangedEventArgs* instance, bool is_last_reference)
         {

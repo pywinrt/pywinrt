@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
 {
     // ----- Binding class --------------------
 
-    struct PyWinrtBinding : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::BindingT<PyWinrtBinding>
+    struct PyWinrtBinding;
+    using BasePyWinrtBinding = winrt::Windows::UI::Xaml::Data::BindingT<PyWinrtBinding, py::IPywinrtObject>;
+
+    struct PyWinrtBinding : py::py_obj_ref, BasePyWinrtBinding
     {
-        PyWinrtBinding(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::BindingT<PyWinrtBinding>() {}
+        PyWinrtBinding(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBinding() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBinding* instance, bool is_last_reference)
         {
@@ -832,9 +843,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     // ----- BindingBase class --------------------
 
-    struct PyWinrtBindingBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::BindingBaseT<PyWinrtBindingBase>
+    struct PyWinrtBindingBase;
+    using BasePyWinrtBindingBase = winrt::Windows::UI::Xaml::Data::BindingBaseT<PyWinrtBindingBase, py::IPywinrtObject>;
+
+    struct PyWinrtBindingBase : py::py_obj_ref, BasePyWinrtBindingBase
     {
-        PyWinrtBindingBase(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::BindingBaseT<PyWinrtBindingBase>() {}
+        PyWinrtBindingBase(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBindingBase() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBindingBase* instance, bool is_last_reference)
         {
@@ -1817,10 +1839,21 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     // ----- CurrentChangingEventArgs class --------------------
 
-    struct PyWinrtCurrentChangingEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>
+    struct PyWinrtCurrentChangingEventArgs;
+    using BasePyWinrtCurrentChangingEventArgs = winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtCurrentChangingEventArgs : py::py_obj_ref, BasePyWinrtCurrentChangingEventArgs
     {
-        PyWinrtCurrentChangingEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>() {}
-        PyWinrtCurrentChangingEventArgs(PyObject* py_obj, bool isCancelable) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>(isCancelable) {}
+        PyWinrtCurrentChangingEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCurrentChangingEventArgs() {}
+        PyWinrtCurrentChangingEventArgs(PyObject* py_obj, bool isCancelable) : py::py_obj_ref(py_obj), BasePyWinrtCurrentChangingEventArgs(isCancelable) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCurrentChangingEventArgs* instance, bool is_last_reference)
         {
@@ -2080,9 +2113,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     // ----- ItemIndexRange class --------------------
 
-    struct PyWinrtItemIndexRange : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::ItemIndexRangeT<PyWinrtItemIndexRange>
+    struct PyWinrtItemIndexRange;
+    using BasePyWinrtItemIndexRange = winrt::Windows::UI::Xaml::Data::ItemIndexRangeT<PyWinrtItemIndexRange, py::IPywinrtObject>;
+
+    struct PyWinrtItemIndexRange : py::py_obj_ref, BasePyWinrtItemIndexRange
     {
-        PyWinrtItemIndexRange(PyObject* py_obj, int32_t firstIndex, uint32_t length) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::ItemIndexRangeT<PyWinrtItemIndexRange>(firstIndex, length) {}
+        PyWinrtItemIndexRange(PyObject* py_obj, int32_t firstIndex, uint32_t length) : py::py_obj_ref(py_obj), BasePyWinrtItemIndexRange(firstIndex, length) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtItemIndexRange* instance, bool is_last_reference)
         {
@@ -2308,9 +2352,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     // ----- PropertyChangedEventArgs class --------------------
 
-    struct PyWinrtPropertyChangedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgsT<PyWinrtPropertyChangedEventArgs>
+    struct PyWinrtPropertyChangedEventArgs;
+    using BasePyWinrtPropertyChangedEventArgs = winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgsT<PyWinrtPropertyChangedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtPropertyChangedEventArgs : py::py_obj_ref, BasePyWinrtPropertyChangedEventArgs
     {
-        PyWinrtPropertyChangedEventArgs(PyObject* py_obj, winrt::hstring name) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgsT<PyWinrtPropertyChangedEventArgs>(name) {}
+        PyWinrtPropertyChangedEventArgs(PyObject* py_obj, winrt::hstring name) : py::py_obj_ref(py_obj), BasePyWinrtPropertyChangedEventArgs(name) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPropertyChangedEventArgs* instance, bool is_last_reference)
         {
@@ -2481,9 +2536,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     // ----- RelativeSource class --------------------
 
-    struct PyWinrtRelativeSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Data::RelativeSourceT<PyWinrtRelativeSource>
+    struct PyWinrtRelativeSource;
+    using BasePyWinrtRelativeSource = winrt::Windows::UI::Xaml::Data::RelativeSourceT<PyWinrtRelativeSource, py::IPywinrtObject>;
+
+    struct PyWinrtRelativeSource : py::py_obj_ref, BasePyWinrtRelativeSource
     {
-        PyWinrtRelativeSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Data::RelativeSourceT<PyWinrtRelativeSource>() {}
+        PyWinrtRelativeSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRelativeSource() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRelativeSource* instance, bool is_last_reference)
         {

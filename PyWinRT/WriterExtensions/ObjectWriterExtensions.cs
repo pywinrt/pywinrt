@@ -400,9 +400,13 @@ static class ObjectWriterExtensions
             return;
         }
 
-        var baseType = $"{type.CppWinrtType}T<PyWinrt{type.Name}>";
+        w.WriteLine($"struct PyWinrt{type.Name};");
+        w.WriteLine(
+            $"using BasePyWinrt{type.Name} = {type.CppWinrtType}T<PyWinrt{type.Name}, py::IPywinrtObject>;"
+        );
+        w.WriteBlankLine();
 
-        w.WriteLine($"struct PyWinrt{type.Name} : py::py_obj_ref, {baseType}");
+        w.WriteLine($"struct PyWinrt{type.Name} : py::py_obj_ref, BasePyWinrt{type.Name}");
         w.WriteLine("{");
         w.Indent++;
 
@@ -416,9 +420,20 @@ static class ObjectWriterExtensions
             var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
 
             w.WriteLine(
-                $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), {baseType}({argList}) {{}}"
+                $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), BasePyWinrt{type.Name}({argList}) {{}}"
             );
         }
+
+        w.WriteBlankLine();
+        w.WriteLine("using py::py_obj_ref::get_py_obj;");
+        w.WriteBlankLine();
+        w.WriteLine("int32_t GetPyObject(PyObject*& obj)");
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteLine("obj = get_py_obj();");
+        w.WriteLine("return 0;");
+        w.Indent--;
+        w.WriteLine("}");
 
         w.WriteBlankLine();
         w.WriteLine(

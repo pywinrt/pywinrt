@@ -6,9 +6,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 {
     // ----- AcrylicBrush class --------------------
 
-    struct PyWinrtAcrylicBrush : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>
+    struct PyWinrtAcrylicBrush;
+    using BasePyWinrtAcrylicBrush = winrt::Microsoft::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush, py::IPywinrtObject>;
+
+    struct PyWinrtAcrylicBrush : py::py_obj_ref, BasePyWinrtAcrylicBrush
     {
-        PyWinrtAcrylicBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>() {}
+        PyWinrtAcrylicBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAcrylicBrush() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAcrylicBrush* instance, bool is_last_reference)
         {
@@ -1621,8 +1632,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- Brush class --------------------
 
-    struct PyWinrtBrush : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::BrushT<PyWinrtBrush>
+    struct PyWinrtBrush;
+    using BasePyWinrtBrush = winrt::Microsoft::UI::Xaml::Media::BrushT<PyWinrtBrush, py::IPywinrtObject>;
+
+    struct PyWinrtBrush : py::py_obj_ref, BasePyWinrtBrush
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBrush* instance, bool is_last_reference)
         {
@@ -2753,8 +2775,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- CacheMode class --------------------
 
-    struct PyWinrtCacheMode : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::CacheModeT<PyWinrtCacheMode>
+    struct PyWinrtCacheMode;
+    using BasePyWinrtCacheMode = winrt::Microsoft::UI::Xaml::Media::CacheModeT<PyWinrtCacheMode, py::IPywinrtObject>;
+
+    struct PyWinrtCacheMode : py::py_obj_ref, BasePyWinrtCacheMode
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCacheMode* instance, bool is_last_reference)
         {
@@ -4072,9 +4105,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- DesktopAcrylicBackdrop class --------------------
 
-    struct PyWinrtDesktopAcrylicBackdrop : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdropT<PyWinrtDesktopAcrylicBackdrop>
+    struct PyWinrtDesktopAcrylicBackdrop;
+    using BasePyWinrtDesktopAcrylicBackdrop = winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdropT<PyWinrtDesktopAcrylicBackdrop, py::IPywinrtObject>;
+
+    struct PyWinrtDesktopAcrylicBackdrop : py::py_obj_ref, BasePyWinrtDesktopAcrylicBackdrop
     {
-        PyWinrtDesktopAcrylicBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdropT<PyWinrtDesktopAcrylicBackdrop>() {}
+        PyWinrtDesktopAcrylicBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDesktopAcrylicBackdrop() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDesktopAcrylicBackdrop* instance, bool is_last_reference)
         {
@@ -5320,9 +5364,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- FontFamily class --------------------
 
-    struct PyWinrtFontFamily : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>
+    struct PyWinrtFontFamily;
+    using BasePyWinrtFontFamily = winrt::Microsoft::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily, py::IPywinrtObject>;
+
+    struct PyWinrtFontFamily : py::py_obj_ref, BasePyWinrtFontFamily
     {
-        PyWinrtFontFamily(PyObject* py_obj, winrt::hstring familyName) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>(familyName) {}
+        PyWinrtFontFamily(PyObject* py_obj, winrt::hstring familyName) : py::py_obj_ref(py_obj), BasePyWinrtFontFamily(familyName) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFontFamily* instance, bool is_last_reference)
         {
@@ -5520,8 +5575,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- GeneralTransform class --------------------
 
-    struct PyWinrtGeneralTransform : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::GeneralTransformT<PyWinrtGeneralTransform>
+    struct PyWinrtGeneralTransform;
+    using BasePyWinrtGeneralTransform = winrt::Microsoft::UI::Xaml::Media::GeneralTransformT<PyWinrtGeneralTransform, py::IPywinrtObject>;
+
+    struct PyWinrtGeneralTransform : py::py_obj_ref, BasePyWinrtGeneralTransform
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGeneralTransform* instance, bool is_last_reference)
         {
@@ -7053,8 +7119,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- GradientBrush class --------------------
 
-    struct PyWinrtGradientBrush : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::GradientBrushT<PyWinrtGradientBrush>
+    struct PyWinrtGradientBrush;
+    using BasePyWinrtGradientBrush = winrt::Microsoft::UI::Xaml::Media::GradientBrushT<PyWinrtGradientBrush, py::IPywinrtObject>;
+
+    struct PyWinrtGradientBrush : py::py_obj_ref, BasePyWinrtGradientBrush
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGradientBrush* instance, bool is_last_reference)
         {
@@ -11064,9 +11141,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- MicaBackdrop class --------------------
 
-    struct PyWinrtMicaBackdrop : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::MicaBackdropT<PyWinrtMicaBackdrop>
+    struct PyWinrtMicaBackdrop;
+    using BasePyWinrtMicaBackdrop = winrt::Microsoft::UI::Xaml::Media::MicaBackdropT<PyWinrtMicaBackdrop, py::IPywinrtObject>;
+
+    struct PyWinrtMicaBackdrop : py::py_obj_ref, BasePyWinrtMicaBackdrop
     {
-        PyWinrtMicaBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::MicaBackdropT<PyWinrtMicaBackdrop>() {}
+        PyWinrtMicaBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMicaBackdrop() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMicaBackdrop* instance, bool is_last_reference)
         {
@@ -16161,8 +16249,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- Projection class --------------------
 
-    struct PyWinrtProjection : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::ProjectionT<PyWinrtProjection>
+    struct PyWinrtProjection;
+    using BasePyWinrtProjection = winrt::Microsoft::UI::Xaml::Media::ProjectionT<PyWinrtProjection, py::IPywinrtObject>;
+
+    struct PyWinrtProjection : py::py_obj_ref, BasePyWinrtProjection
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtProjection* instance, bool is_last_reference)
         {
@@ -16552,9 +16651,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- RadialGradientBrush class --------------------
 
-    struct PyWinrtRadialGradientBrush : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::RadialGradientBrushT<PyWinrtRadialGradientBrush>
+    struct PyWinrtRadialGradientBrush;
+    using BasePyWinrtRadialGradientBrush = winrt::Microsoft::UI::Xaml::Media::RadialGradientBrushT<PyWinrtRadialGradientBrush, py::IPywinrtObject>;
+
+    struct PyWinrtRadialGradientBrush : py::py_obj_ref, BasePyWinrtRadialGradientBrush
     {
-        PyWinrtRadialGradientBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::RadialGradientBrushT<PyWinrtRadialGradientBrush>() {}
+        PyWinrtRadialGradientBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRadialGradientBrush() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRadialGradientBrush* instance, bool is_last_reference)
         {
@@ -19360,8 +19470,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- SystemBackdrop class --------------------
 
-    struct PyWinrtSystemBackdrop : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::SystemBackdropT<PyWinrtSystemBackdrop>
+    struct PyWinrtSystemBackdrop;
+    using BasePyWinrtSystemBackdrop = winrt::Microsoft::UI::Xaml::Media::SystemBackdropT<PyWinrtSystemBackdrop, py::IPywinrtObject>;
+
+    struct PyWinrtSystemBackdrop : py::py_obj_ref, BasePyWinrtSystemBackdrop
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSystemBackdrop* instance, bool is_last_reference)
         {
@@ -19500,9 +19621,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- ThemeShadow class --------------------
 
-    struct PyWinrtThemeShadow : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>
+    struct PyWinrtThemeShadow;
+    using BasePyWinrtThemeShadow = winrt::Microsoft::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow, py::IPywinrtObject>;
+
+    struct PyWinrtThemeShadow : py::py_obj_ref, BasePyWinrtThemeShadow
     {
-        PyWinrtThemeShadow(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>() {}
+        PyWinrtThemeShadow(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtThemeShadow() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtThemeShadow* instance, bool is_last_reference)
         {
@@ -19671,8 +19803,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- TileBrush class --------------------
 
-    struct PyWinrtTileBrush : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::TileBrushT<PyWinrtTileBrush>
+    struct PyWinrtTileBrush;
+    using BasePyWinrtTileBrush = winrt::Microsoft::UI::Xaml::Media::TileBrushT<PyWinrtTileBrush, py::IPywinrtObject>;
+
+    struct PyWinrtTileBrush : py::py_obj_ref, BasePyWinrtTileBrush
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTileBrush* instance, bool is_last_reference)
         {
@@ -21862,8 +22005,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- XamlCompositionBrushBase class --------------------
 
-    struct PyWinrtXamlCompositionBrushBase : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBaseT<PyWinrtXamlCompositionBrushBase>
+    struct PyWinrtXamlCompositionBrushBase;
+    using BasePyWinrtXamlCompositionBrushBase = winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBaseT<PyWinrtXamlCompositionBrushBase, py::IPywinrtObject>;
+
+    struct PyWinrtXamlCompositionBrushBase : py::py_obj_ref, BasePyWinrtXamlCompositionBrushBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtXamlCompositionBrushBase* instance, bool is_last_reference)
         {
@@ -22051,9 +22205,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- XamlLight class --------------------
 
-    struct PyWinrtXamlLight : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>
+    struct PyWinrtXamlLight;
+    using BasePyWinrtXamlLight = winrt::Microsoft::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight, py::IPywinrtObject>;
+
+    struct PyWinrtXamlLight : py::py_obj_ref, BasePyWinrtXamlLight
     {
-        PyWinrtXamlLight(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>() {}
+        PyWinrtXamlLight(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtXamlLight() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtXamlLight* instance, bool is_last_reference)
         {

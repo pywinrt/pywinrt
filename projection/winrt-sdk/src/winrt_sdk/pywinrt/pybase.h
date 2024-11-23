@@ -7,6 +7,10 @@
 #include "pythoncapi_compat.h"
 #include "pywinrt_version.h"
 
+#define COM_NO_WINDOWS_H
+#define NOMINMAX
+#include <unknwn.h>
+#undef GetCurrentTime
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Metadata.h>
 
@@ -323,6 +327,15 @@ namespace py
         static constexpr const char* type_name = 0;
     };
 
+    struct
+#if WINRT_IMPL_HAS_DECLSPEC_UUID
+        __declspec(uuid("9c3654bc-4adc-463a-b392-d6bc9289c925"))
+#endif
+        IPywinrtObject : ::IUnknown
+    {
+        virtual int32_t __stdcall GetPyObject(PyObject*&) = 0;
+    };
+
     /**
      * Base class for WinRT type wrapping Python subclass of composable type.
      */
@@ -336,6 +349,11 @@ namespace py
 
         py_obj_ref(PyObject* py_obj) : py_obj{py_obj}
         {
+        }
+
+        PyObject* get_py_obj() noexcept
+        {
+            return Py_NewRef(py_obj);
         }
 
         static void toggle_reference(py_obj_ref* obj, bool is_last_reference) noexcept
@@ -864,7 +882,7 @@ namespace py
                 "py::buffer<%s>::is_compatible() is not implemented",
                 typeid(T).name());
             return false;
-        }
+        } // namespace py
     };
 
     // PEP 3118 struct formats
@@ -1346,6 +1364,22 @@ namespace py
             if (!value)
             {
                 Py_RETURN_NONE;
+            }
+
+            try
+            {
+                winrt::com_ptr<IPywinrtObject> obj{};
+                if (value.try_as(obj))
+                {
+                    PyObject* pyobj;
+                    winrt::check_hresult(obj->GetPyObject(pyobj));
+                    return pyobj;
+                }
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
             }
 
             auto object_type = get_object_type();
@@ -2683,6 +2717,22 @@ namespace py
     {
         static PyObject* convert(T const& instance) noexcept
         {
+            try
+            {
+                winrt::com_ptr<IPywinrtObject> obj{};
+                if (instance.try_as(obj))
+                {
+                    PyObject* pyobj;
+                    winrt::check_hresult(obj->GetPyObject(pyobj));
+                    return pyobj;
+                }
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+
             return wrap(instance);
         }
 
@@ -3213,3 +3263,11 @@ namespace py
         }
     };
 } // namespace py
+
+#if !WINRT_IMPL_HAS_DECLSPEC_UUID
+__CRT_UUID_DECL(
+    py::IPywinrtObject,
+    // clang-format off
+    0x9c3654bc, 0x4adc, 0x463a, 0xb3, 0x92, 0xd6, 0xbc, 0x92, 0x89, 0xc9, 0x25
+);
+#endif

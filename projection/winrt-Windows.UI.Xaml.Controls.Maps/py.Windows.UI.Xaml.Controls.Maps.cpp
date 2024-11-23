@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
     // ----- CustomMapTileDataSource class --------------------
 
-    struct PyWinrtCustomMapTileDataSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSourceT<PyWinrtCustomMapTileDataSource>
+    struct PyWinrtCustomMapTileDataSource;
+    using BasePyWinrtCustomMapTileDataSource = winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSourceT<PyWinrtCustomMapTileDataSource, py::IPywinrtObject>;
+
+    struct PyWinrtCustomMapTileDataSource : py::py_obj_ref, BasePyWinrtCustomMapTileDataSource
     {
-        PyWinrtCustomMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSourceT<PyWinrtCustomMapTileDataSource>() {}
+        PyWinrtCustomMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCustomMapTileDataSource() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCustomMapTileDataSource* instance, bool is_last_reference)
         {
@@ -209,10 +220,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- HttpMapTileDataSource class --------------------
 
-    struct PyWinrtHttpMapTileDataSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>
+    struct PyWinrtHttpMapTileDataSource;
+    using BasePyWinrtHttpMapTileDataSource = winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource, py::IPywinrtObject>;
+
+    struct PyWinrtHttpMapTileDataSource : py::py_obj_ref, BasePyWinrtHttpMapTileDataSource
     {
-        PyWinrtHttpMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>() {}
-        PyWinrtHttpMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>(uriFormatString) {}
+        PyWinrtHttpMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtHttpMapTileDataSource() {}
+        PyWinrtHttpMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), BasePyWinrtHttpMapTileDataSource(uriFormatString) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtHttpMapTileDataSource* instance, bool is_last_reference)
         {
@@ -593,10 +615,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- LocalMapTileDataSource class --------------------
 
-    struct PyWinrtLocalMapTileDataSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>
+    struct PyWinrtLocalMapTileDataSource;
+    using BasePyWinrtLocalMapTileDataSource = winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource, py::IPywinrtObject>;
+
+    struct PyWinrtLocalMapTileDataSource : py::py_obj_ref, BasePyWinrtLocalMapTileDataSource
     {
-        PyWinrtLocalMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>() {}
-        PyWinrtLocalMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>(uriFormatString) {}
+        PyWinrtLocalMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtLocalMapTileDataSource() {}
+        PyWinrtLocalMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), BasePyWinrtLocalMapTileDataSource(uriFormatString) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtLocalMapTileDataSource* instance, bool is_last_reference)
         {
@@ -9904,9 +9937,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapCustomExperience class --------------------
 
-    struct PyWinrtMapCustomExperience : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceT<PyWinrtMapCustomExperience>
+    struct PyWinrtMapCustomExperience;
+    using BasePyWinrtMapCustomExperience = winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceT<PyWinrtMapCustomExperience, py::IPywinrtObject>;
+
+    struct PyWinrtMapCustomExperience : py::py_obj_ref, BasePyWinrtMapCustomExperience
     {
-        PyWinrtMapCustomExperience(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceT<PyWinrtMapCustomExperience>() {}
+        PyWinrtMapCustomExperience(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapCustomExperience() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapCustomExperience* instance, bool is_last_reference)
         {
@@ -10136,9 +10180,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapElement class --------------------
 
-    struct PyWinrtMapElement : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapElementT<PyWinrtMapElement>
+    struct PyWinrtMapElement;
+    using BasePyWinrtMapElement = winrt::Windows::UI::Xaml::Controls::Maps::MapElementT<PyWinrtMapElement, py::IPywinrtObject>;
+
+    struct PyWinrtMapElement : py::py_obj_ref, BasePyWinrtMapElement
     {
-        PyWinrtMapElement(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapElementT<PyWinrtMapElement>() {}
+        PyWinrtMapElement(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapElement() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapElement* instance, bool is_last_reference)
         {
@@ -14162,9 +14217,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapLayer class --------------------
 
-    struct PyWinrtMapLayer : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapLayerT<PyWinrtMapLayer>
+    struct PyWinrtMapLayer;
+    using BasePyWinrtMapLayer = winrt::Windows::UI::Xaml::Controls::Maps::MapLayerT<PyWinrtMapLayer, py::IPywinrtObject>;
+
+    struct PyWinrtMapLayer : py::py_obj_ref, BasePyWinrtMapLayer
     {
-        PyWinrtMapLayer(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapLayerT<PyWinrtMapLayer>() {}
+        PyWinrtMapLayer(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapLayer() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapLayer* instance, bool is_last_reference)
         {
@@ -14573,9 +14639,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapModel3D class --------------------
 
-    struct PyWinrtMapModel3D : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DT<PyWinrtMapModel3D>
+    struct PyWinrtMapModel3D;
+    using BasePyWinrtMapModel3D = winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DT<PyWinrtMapModel3D, py::IPywinrtObject>;
+
+    struct PyWinrtMapModel3D : py::py_obj_ref, BasePyWinrtMapModel3D
     {
-        PyWinrtMapModel3D(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DT<PyWinrtMapModel3D>() {}
+        PyWinrtMapModel3D(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapModel3D() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapModel3D* instance, bool is_last_reference)
         {
@@ -15884,9 +15961,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapRouteView class --------------------
 
-    struct PyWinrtMapRouteView : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapRouteViewT<PyWinrtMapRouteView>
+    struct PyWinrtMapRouteView;
+    using BasePyWinrtMapRouteView = winrt::Windows::UI::Xaml::Controls::Maps::MapRouteViewT<PyWinrtMapRouteView, py::IPywinrtObject>;
+
+    struct PyWinrtMapRouteView : py::py_obj_ref, BasePyWinrtMapRouteView
     {
-        PyWinrtMapRouteView(PyObject* py_obj, winrt::Windows::Services::Maps::MapRoute route) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapRouteViewT<PyWinrtMapRouteView>(route) {}
+        PyWinrtMapRouteView(PyObject* py_obj, winrt::Windows::Services::Maps::MapRoute route) : py::py_obj_ref(py_obj), BasePyWinrtMapRouteView(route) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapRouteView* instance, bool is_last_reference)
         {
@@ -19761,9 +19849,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapTileDataSource class --------------------
 
-    struct PyWinrtMapTileDataSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSourceT<PyWinrtMapTileDataSource>
+    struct PyWinrtMapTileDataSource;
+    using BasePyWinrtMapTileDataSource = winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSourceT<PyWinrtMapTileDataSource, py::IPywinrtObject>;
+
+    struct PyWinrtMapTileDataSource : py::py_obj_ref, BasePyWinrtMapTileDataSource
     {
-        PyWinrtMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSourceT<PyWinrtMapTileDataSource>() {}
+        PyWinrtMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapTileDataSource() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapTileDataSource* instance, bool is_last_reference)
         {
@@ -19905,13 +20004,24 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapTileSource class --------------------
 
-    struct PyWinrtMapTileSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>
+    struct PyWinrtMapTileSource;
+    using BasePyWinrtMapTileSource = winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource, py::IPywinrtObject>;
+
+    struct PyWinrtMapTileSource : py::py_obj_ref, BasePyWinrtMapTileSource
     {
-        PyWinrtMapTileSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>() {}
-        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource) {}
-        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange) {}
-        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange, bounds) {}
-        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds, int32_t tileSizeInPixels) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange, bounds, tileSizeInPixels) {}
+        PyWinrtMapTileSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource() {}
+        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource) {}
+        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource, zoomLevelRange) {}
+        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource, zoomLevelRange, bounds) {}
+        PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds, int32_t tileSizeInPixels) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource, zoomLevelRange, bounds, tileSizeInPixels) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMapTileSource* instance, bool is_last_reference)
         {
