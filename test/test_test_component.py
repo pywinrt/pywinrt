@@ -1,7 +1,10 @@
+import gc
 import unittest
+import weakref
 from uuid import UUID
 
 import winrt.testcomponent as tc
+import winrt.windows.foundation.collections as wfc
 
 from test._util import catch_unraisable
 
@@ -41,6 +44,51 @@ class TestTestComponent(unittest.TestCase):
         self.assertIsInstance(c, tc.Composable)
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
+
+    def test_object_lifetime_py(self):
+        class C(tc.Composable):
+            pass
+
+        c = C()
+        wr = weakref.ref(c)
+
+        del c
+        gc.collect()
+
+        self.assertIsNone(
+            wr(),
+            "object should be collected when no Python or WinRT references exist",
+        )
+
+    def test_object_lifetime_winrt(self):
+        class C(tc.Composable):
+            pass
+
+        c = C()
+        wr = weakref.ref(c)
+
+        pset = wfc.PropertySet()
+        pset.insert("c", c)
+
+        self.assertFalse(
+            gc.is_tracked(c),
+            "object should not be GC tracked while any WinRT references exist",
+        )
+
+        del c
+        gc.collect()
+
+        self.assertIsNotNone(
+            wr(),
+            "object should not be collected while any WinRT references exist",
+        )
+
+        pset.clear()
+        gc.collect()
+
+        self.assertIsNone(
+            wr(), "object should be collected when WinRT references are gone"
+        )
 
     def test_composable_inheritance(self):
         d = tc.Derived()

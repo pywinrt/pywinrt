@@ -378,9 +378,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     // ----- PrintDocument class --------------------
 
-    struct PyWinrtPrintDocument : winrt::Windows::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>
+    struct PyWinrtPrintDocument : py::py_obj_ref, winrt::Windows::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>
     {
-        PyWinrtPrintDocument() : winrt::Windows::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>() {}
+        PyWinrtPrintDocument(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>() {}
+
+        static void toggle_reference(PyWinrtPrintDocument* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_PrintDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -405,17 +410,16 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtPrintDocument>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Printing::PrintDocument*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Printing::PrintDocument*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Printing::PrintDocument*>(self.get())->obj = winrt::make<PyWinrtPrintDocument>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Printing::PrintDocument instance{};

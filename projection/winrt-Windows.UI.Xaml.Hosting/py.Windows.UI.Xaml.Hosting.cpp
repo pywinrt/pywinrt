@@ -688,9 +688,14 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     // ----- DesktopWindowXamlSource class --------------------
 
-    struct PyWinrtDesktopWindowXamlSource : winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>
+    struct PyWinrtDesktopWindowXamlSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>
     {
-        PyWinrtDesktopWindowXamlSource() : winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>() {}
+        PyWinrtDesktopWindowXamlSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>() {}
+
+        static void toggle_reference(PyWinrtDesktopWindowXamlSource* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_DesktopWindowXamlSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -715,17 +720,16 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtDesktopWindowXamlSource>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*>(self.get())->obj = winrt::make<PyWinrtDesktopWindowXamlSource>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource instance{};

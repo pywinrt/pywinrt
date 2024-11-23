@@ -563,9 +563,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     // ----- Path class --------------------
 
-    struct PyWinrtPath : winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>
+    struct PyWinrtPath : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>
     {
-        PyWinrtPath() : winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>() {}
+        PyWinrtPath(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>() {}
+
+        static void toggle_reference(PyWinrtPath* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Path(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -590,17 +595,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtPath>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(self.get())->obj = winrt::make<PyWinrtPath>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Shapes::Path instance{};
@@ -1665,8 +1669,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     // ----- Shape class --------------------
 
-    struct PyWinrtShape : winrt::Microsoft::UI::Xaml::Shapes::ShapeT<PyWinrtShape>
+    struct PyWinrtShape : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Shapes::ShapeT<PyWinrtShape>
     {
+
+        static void toggle_reference(PyWinrtShape* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Shape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept

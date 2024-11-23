@@ -6,9 +6,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 {
     // ----- FrameNavigationOptions class --------------------
 
-    struct PyWinrtFrameNavigationOptions : winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>
+    struct PyWinrtFrameNavigationOptions : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>
     {
-        PyWinrtFrameNavigationOptions() : winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>() {}
+        PyWinrtFrameNavigationOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>() {}
+
+        static void toggle_reference(PyWinrtFrameNavigationOptions* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_FrameNavigationOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -33,17 +38,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtFrameNavigationOptions>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions*>(self.get())->obj = winrt::make<PyWinrtFrameNavigationOptions>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions instance{};

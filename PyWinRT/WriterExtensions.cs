@@ -1144,13 +1144,7 @@ static class WriterExtensions
                         }
                         else if (type.HasComposableFactory)
                         {
-                            w.WriteLine(
-                                $"auto obj = winrt::make<PyWinrt{type.Name}>({ctor.Method.Parameters.ToParameterList()});"
-                            );
-                            w.WriteBlankLine();
-                            w.WriteLine(
-                                $"auto self = reinterpret_cast<{type.CppPyWrapperType}*>(type->tp_alloc(type, 0));"
-                            );
+                            w.WriteLine($"py::pyobj_handle self{{type->tp_alloc(type, 0)}};");
                             w.WriteLine("if (!self)");
                             w.WriteLine("{");
                             w.Indent++;
@@ -1158,9 +1152,24 @@ static class WriterExtensions
                             w.Indent--;
                             w.WriteLine("}");
                             w.WriteBlankLine();
-                            w.WriteLine($"std::construct_at(&self->obj, std::move(obj));");
+
+                            string ctorParams =
+                                ctor.Method.Parameters.Count > 0
+                                    ? $"self.get(), {ctor.Method.Parameters.ToParameterList()}"
+                                    : "self.get()";
+
+                            // NB: doing construct_at with nullptr first in case of exception,
+                            // otherwise we will destruct an uninitialized value when pyobj_handle
+                            // goes out of scope
+                            w.WriteLine(
+                                $"std::construct_at(&reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj, nullptr);"
+                            );
+                            w.WriteLine(
+                                $"reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj = winrt::make<PyWinrt{type.Name}>({ctorParams});"
+                            );
                             w.WriteBlankLine();
-                            w.WriteLine("return reinterpret_cast<PyObject*>(self);");
+
+                            w.WriteLine("return self.detach();");
                         }
                         else
                         {

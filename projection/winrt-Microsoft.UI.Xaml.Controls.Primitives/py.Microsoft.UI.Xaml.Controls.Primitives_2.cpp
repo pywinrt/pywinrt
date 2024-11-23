@@ -6,9 +6,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 {
     // ----- ColorPickerSlider class --------------------
 
-    struct PyWinrtColorPickerSlider : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>
+    struct PyWinrtColorPickerSlider : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>
     {
-        PyWinrtColorPickerSlider() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>() {}
+        PyWinrtColorPickerSlider(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>() {}
+
+        static void toggle_reference(PyWinrtColorPickerSlider* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_ColorPickerSlider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -33,17 +38,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtColorPickerSlider>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(self.get())->obj = winrt::make<PyWinrtColorPickerSlider>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider instance{};
@@ -235,9 +239,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- TabViewListView class --------------------
 
-    struct PyWinrtTabViewListView : winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>
+    struct PyWinrtTabViewListView : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>
     {
-        PyWinrtTabViewListView() : winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>() {}
+        PyWinrtTabViewListView(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>() {}
+
+        static void toggle_reference(PyWinrtTabViewListView* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_TabViewListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -262,17 +271,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtTabViewListView>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView*>(self.get())->obj = winrt::make<PyWinrtTabViewListView>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView instance{};

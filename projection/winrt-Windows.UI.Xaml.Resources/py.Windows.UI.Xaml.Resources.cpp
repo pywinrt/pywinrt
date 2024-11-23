@@ -6,9 +6,14 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 {
     // ----- CustomXamlResourceLoader class --------------------
 
-    struct PyWinrtCustomXamlResourceLoader : winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>
+    struct PyWinrtCustomXamlResourceLoader : py::py_obj_ref, winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>
     {
-        PyWinrtCustomXamlResourceLoader() : winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>() {}
+        PyWinrtCustomXamlResourceLoader(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>() {}
+
+        static void toggle_reference(PyWinrtCustomXamlResourceLoader* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_CustomXamlResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -33,17 +38,16 @@ namespace py::cpp::Windows::UI::Xaml::Resources
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtCustomXamlResourceLoader>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader*>(self.get())->obj = winrt::make<PyWinrtCustomXamlResourceLoader>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoader instance{};

@@ -6,9 +6,14 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 {
     // ----- NotifyCollectionChangedEventArgs class --------------------
 
-    struct PyWinrtNotifyCollectionChangedEventArgs : winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>
+    struct PyWinrtNotifyCollectionChangedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>
     {
-        PyWinrtNotifyCollectionChangedEventArgs(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Windows::UI::Xaml::Interop::IBindableVector newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>(action, newItems, oldItems, newIndex, oldIndex) {}
+        PyWinrtNotifyCollectionChangedEventArgs(PyObject* py_obj, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Windows::UI::Xaml::Interop::IBindableVector newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>(action, newItems, oldItems, newIndex, oldIndex) {}
+
+        static void toggle_reference(PyWinrtNotifyCollectionChangedEventArgs* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_NotifyCollectionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -39,17 +44,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtNotifyCollectionChangedEventArgs>(param0, param1, param2, param3, param4);
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(self.get())->obj = winrt::make<PyWinrtNotifyCollectionChangedEventArgs>(self.get(), param0, param1, param2, param3, param4);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs instance{param0, param1, param2, param3, param4};

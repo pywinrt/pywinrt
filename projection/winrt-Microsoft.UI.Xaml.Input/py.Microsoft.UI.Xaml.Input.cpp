@@ -4822,9 +4822,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     // ----- KeyboardAccelerator class --------------------
 
-    struct PyWinrtKeyboardAccelerator : winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>
+    struct PyWinrtKeyboardAccelerator : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>
     {
-        PyWinrtKeyboardAccelerator() : winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>() {}
+        PyWinrtKeyboardAccelerator(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>() {}
+
+        static void toggle_reference(PyWinrtKeyboardAccelerator* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_KeyboardAccelerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4849,17 +4854,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtKeyboardAccelerator>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::KeyboardAccelerator*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::KeyboardAccelerator*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::KeyboardAccelerator*>(self.get())->obj = winrt::make<PyWinrtKeyboardAccelerator>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator instance{};
@@ -7410,9 +7414,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     // ----- ManipulationStartedRoutedEventArgs class --------------------
 
-    struct PyWinrtManipulationStartedRoutedEventArgs : winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>
+    struct PyWinrtManipulationStartedRoutedEventArgs : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>
     {
-        PyWinrtManipulationStartedRoutedEventArgs() : winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>() {}
+        PyWinrtManipulationStartedRoutedEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>() {}
+
+        static void toggle_reference(PyWinrtManipulationStartedRoutedEventArgs* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_ManipulationStartedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7437,17 +7446,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtManipulationStartedRoutedEventArgs>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(self.get())->obj = winrt::make<PyWinrtManipulationStartedRoutedEventArgs>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs instance{};
@@ -9135,10 +9143,15 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     // ----- StandardUICommand class --------------------
 
-    struct PyWinrtStandardUICommand : winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>
+    struct PyWinrtStandardUICommand : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>
     {
-        PyWinrtStandardUICommand() : winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>() {}
-        PyWinrtStandardUICommand(winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind kind) : winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>(kind) {}
+        PyWinrtStandardUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>() {}
+        PyWinrtStandardUICommand(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind kind) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>(kind) {}
+
+        static void toggle_reference(PyWinrtStandardUICommand* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_StandardUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -9163,17 +9176,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtStandardUICommand>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{};
@@ -9193,17 +9205,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtStandardUICommand>(param0);
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get(), param0);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{param0};
@@ -9611,9 +9622,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     // ----- XamlUICommand class --------------------
 
-    struct PyWinrtXamlUICommand : winrt::Microsoft::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>
+    struct PyWinrtXamlUICommand : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>
     {
-        PyWinrtXamlUICommand() : winrt::Microsoft::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>() {}
+        PyWinrtXamlUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>() {}
+
+        static void toggle_reference(PyWinrtXamlUICommand* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_XamlUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -9638,17 +9654,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtXamlUICommand>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::XamlUICommand*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::XamlUICommand*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Input::XamlUICommand*>(self.get())->obj = winrt::make<PyWinrtXamlUICommand>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Input::XamlUICommand instance{};

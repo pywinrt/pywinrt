@@ -402,7 +402,7 @@ static class ObjectWriterExtensions
 
         var baseType = $"{type.CppWinrtType}T<PyWinrt{type.Name}>";
 
-        w.WriteLine($"struct PyWinrt{type.Name} : {baseType}");
+        w.WriteLine($"struct PyWinrt{type.Name} : py::py_obj_ref, {baseType}");
         w.WriteLine("{");
         w.Indent++;
 
@@ -411,11 +411,24 @@ static class ObjectWriterExtensions
             var paramList = string.Join(
                 ", ",
                 ctor.Method.Parameters.Select(p => $"{p.ParameterType.ToCppTypeName()} {p.Name}")
+                    .Prepend("PyObject* py_obj")
             );
             var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
 
-            w.WriteLine($"PyWinrt{type.Name}({paramList}) : {baseType}({argList}) {{}}");
+            w.WriteLine(
+                $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), {baseType}({argList}) {{}}"
+            );
         }
+
+        w.WriteBlankLine();
+        w.WriteLine(
+            $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
+        );
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteLine("py::py_obj_ref::toggle_reference(instance, is_last_reference);");
+        w.Indent--;
+        w.WriteLine("}");
 
         // foreach (
         //     var method in type.Type.Methods.Where(m =>

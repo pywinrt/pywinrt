@@ -22,6 +22,16 @@ subprocess.check_call(
     [CPPWINRT_EXE, "-input", WINDOWS_SDK, "-output", SDK_PACKAGE_PATH]
 )
 
+# apply patches
+subprocess.check_call(
+    [
+        "git",
+        "apply",
+        "--quiet",
+        REPO_ROOT_PATH / "patches" / "cppwinrt-toggle-ref.diff",
+    ]
+)
+
 # generate headers for WebView2
 
 WEBVIEW2_PACKAGE_METADATA = (
@@ -32,7 +42,9 @@ WEBVIEW2_PACKAGE_METADATA = (
     / "Microsoft.Web.WebView2.Core.winmd"
 )
 
-WEBVIEW2_PACKAGE_PATH = PROJECTION_PATH / "winrt-Microsoft.Web.WebView2.Core" / "cppwinrt"
+WEBVIEW2_PACKAGE_PATH = (
+    PROJECTION_PATH / "winrt-Microsoft.Web.WebView2.Core" / "cppwinrt"
+)
 
 shutil.rmtree(WEBVIEW2_PACKAGE_PATH, ignore_errors=True)
 subprocess.check_call(

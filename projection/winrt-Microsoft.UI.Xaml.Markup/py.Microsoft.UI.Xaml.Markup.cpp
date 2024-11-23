@@ -6,9 +6,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 {
     // ----- MarkupExtension class --------------------
 
-    struct PyWinrtMarkupExtension : winrt::Microsoft::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>
+    struct PyWinrtMarkupExtension : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>
     {
-        PyWinrtMarkupExtension() : winrt::Microsoft::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>() {}
+        PyWinrtMarkupExtension(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>() {}
+
+        static void toggle_reference(PyWinrtMarkupExtension* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_MarkupExtension(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -33,17 +38,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtMarkupExtension>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension*>(self.get())->obj = winrt::make<PyWinrtMarkupExtension>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Markup::MarkupExtension instance{};
