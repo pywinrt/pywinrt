@@ -44,6 +44,13 @@ static class WriterExtensions
         var category = type.Category.ToString().ToLowerInvariant();
 
         w.WriteLine($"// ----- {type.Name} {category} --------------------");
+
+        if (type.HasComposableFactory)
+        {
+            w.WriteBlankLine();
+            w.WriteComposableTypeImpl(type);
+        }
+
         w.WriteNewFunction(type);
         w.WriteDeallocFunction(type);
         w.WriteMethodFunctions(type, componentDlls);
@@ -1082,6 +1089,20 @@ static class WriterExtensions
 
             w.WriteLine("auto arg_count = PyTuple_Size(args);");
 
+            if (type.IsComposable)
+            {
+                w.WriteBlankLine();
+
+                w.WriteLine($"auto self_type = get_python_type_for<{type.CppWinrtType}>();");
+                w.WriteLine("if (!self_type)");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("return nullptr;");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+            }
+
             foreach (var (i, ctor) in type.Constructors.Select((c, i) => (i, c)))
             {
                 if (i > 0)
@@ -1101,6 +1122,54 @@ static class WriterExtensions
 
                     if (ctor.Method.Parameters.Count > 0)
                     {
+                        w.WriteBlankLine();
+                    }
+
+                    if (type.IsComposable)
+                    {
+                        w.WriteLine("if (type != self_type)");
+                        w.WriteLine("{");
+                        w.Indent++;
+
+                        // HACK: work around https://github.com/microsoft/cppwinrt/issues/1457
+                        if (
+                            type.Namespace == "Windows.UI.Xaml.Controls"
+                            && type.Name == "DataTemplateSelector"
+                        )
+                        {
+                            w.WriteLine(
+                                "PyErr_SetString(PyExc_NotImplementedError, \"DataTemplateSelector has compile bug preventing implementation\");"
+                            );
+                            w.WriteLine("return nullptr;");
+                        }
+                        else if (type.HasComposableFactory)
+                        {
+                            w.WriteLine(
+                                $"auto obj = winrt::make<PyWinrt{type.Name}>({ctor.Method.Parameters.ToParameterList()});"
+                            );
+                            w.WriteBlankLine();
+                            w.WriteLine(
+                                $"auto self = reinterpret_cast<{type.CppPyWrapperType}*>(type->tp_alloc(type, 0));"
+                            );
+                            w.WriteLine("if (!self)");
+                            w.WriteLine("{");
+                            w.Indent++;
+                            w.WriteLine("return nullptr;");
+                            w.Indent--;
+                            w.WriteLine("}");
+                            w.WriteBlankLine();
+                            w.WriteLine($"std::construct_at(&self->obj, std::move(obj));");
+                            w.WriteBlankLine();
+                            w.WriteLine("return reinterpret_cast<PyObject*>(self);");
+                        }
+                        else
+                        {
+                            w.WriteLine("py::set_invalid_activation_error(type->tp_name);");
+                            w.WriteLine("return nullptr;");
+                        }
+
+                        w.Indent--;
+                        w.WriteLine("}");
                         w.WriteBlankLine();
                     }
 

@@ -6,6 +6,10 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 {
     // ----- Block class --------------------
 
+    struct PyWinrtBlock : winrt::Windows::UI::Xaml::Documents::BlockT<PyWinrtBlock>
+    {
+    };
+
     static PyObject* _new_Block(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Block>::type_name);
@@ -3176,6 +3180,10 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_ContentLinkInvokedEventArgs};
 
     // ----- ContentLinkProvider class --------------------
+
+    struct PyWinrtContentLinkProvider : winrt::Windows::UI::Xaml::Documents::ContentLinkProviderT<PyWinrtContentLinkProvider>
+    {
+    };
 
     static PyObject* _new_ContentLinkProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -6601,6 +6609,10 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- Inline class --------------------
 
+    struct PyWinrtInline : winrt::Windows::UI::Xaml::Documents::InlineT<PyWinrtInline>
+    {
+    };
+
     static PyObject* _new_Inline(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Inline>::type_name);
@@ -8301,6 +8313,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- Span class --------------------
 
+    struct PyWinrtSpan : winrt::Windows::UI::Xaml::Documents::SpanT<PyWinrtSpan>
+    {
+        PyWinrtSpan() : winrt::Windows::UI::Xaml::Documents::SpanT<PyWinrtSpan>() {}
+    };
+
     static PyObject* _new_Span(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8310,10 +8327,32 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Documents::Span>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSpan>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Documents::Span*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Documents::Span instance{};
                 return py::wrap(instance, type);
             }
@@ -10582,6 +10621,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- TextHighlighter class --------------------
 
+    struct PyWinrtTextHighlighter : winrt::Windows::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>
+    {
+        PyWinrtTextHighlighter() : winrt::Windows::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>() {}
+    };
+
     static PyObject* _new_TextHighlighter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -10591,10 +10635,32 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Documents::TextHighlighter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTextHighlighter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Documents::TextHighlighter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Documents::TextHighlighter instance{};
                 return py::wrap(instance, type);
             }

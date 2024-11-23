@@ -6,6 +6,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
 {
     // ----- NotifyCollectionChangedEventArgs class --------------------
 
+    struct PyWinrtNotifyCollectionChangedEventArgs : winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>
+    {
+        PyWinrtNotifyCollectionChangedEventArgs(winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Microsoft::UI::Xaml::Interop::IBindableVector newItems, winrt::Microsoft::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgsT<PyWinrtNotifyCollectionChangedEventArgs>(action, newItems, oldItems, newIndex, oldIndex) {}
+    };
+
     static PyObject* _new_NotifyCollectionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,6 +20,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 5)
         {
             try
@@ -24,6 +36,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Interop::IBindableVector>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
                 auto param4 = py::convert_to<int32_t>(args, 4);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNotifyCollectionChangedEventArgs>(param0, param1, param2, param3, param4);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);

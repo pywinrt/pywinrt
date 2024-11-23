@@ -1029,6 +1029,10 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- BitmapSource class --------------------
 
+    struct PyWinrtBitmapSource : winrt::Windows::UI::Xaml::Media::Imaging::BitmapSourceT<PyWinrtBitmapSource>
+    {
+    };
+
     static PyObject* _new_BitmapSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::type_name);
@@ -1959,6 +1963,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SurfaceImageSource class --------------------
 
+    struct PyWinrtSurfaceImageSource : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>
+    {
+        PyWinrtSurfaceImageSource(int32_t pixelWidth, int32_t pixelHeight) : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight) {}
+        PyWinrtSurfaceImageSource(int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight, isOpaque) {}
+    };
+
     static PyObject* _new_SurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1968,12 +1978,34 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSurfaceImageSource>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1};
                 return py::wrap(instance, type);
@@ -1991,6 +2023,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSurfaceImageSource>(param0, param1, param2);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1, param2};
                 return py::wrap(instance, type);
@@ -2092,6 +2139,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SvgImageSource class --------------------
 
+    struct PyWinrtSvgImageSource : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>
+    {
+        PyWinrtSvgImageSource() : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>() {}
+        PyWinrtSvgImageSource(winrt::Windows::Foundation::Uri uriSource) : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>(uriSource) {}
+    };
+
     static PyObject* _new_SvgImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -2101,10 +2154,32 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSvgImageSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource instance{};
                 return py::wrap(instance, type);
             }
@@ -2119,6 +2194,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSvgImageSource>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource instance{param0};
                 return py::wrap(instance, type);
@@ -3066,6 +3156,10 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         _type_slots_WriteableBitmap};
 
     // ----- XamlRenderingBackgroundTask class --------------------
+
+    struct PyWinrtXamlRenderingBackgroundTask : winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTaskT<PyWinrtXamlRenderingBackgroundTask>
+    {
+    };
 
     static PyObject* _new_XamlRenderingBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {

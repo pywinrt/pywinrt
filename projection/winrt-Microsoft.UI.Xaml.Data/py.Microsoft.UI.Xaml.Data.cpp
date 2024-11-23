@@ -6,6 +6,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 {
     // ----- Binding class --------------------
 
+    struct PyWinrtBinding : winrt::Microsoft::UI::Xaml::Data::BindingT<PyWinrtBinding>
+    {
+        PyWinrtBinding() : winrt::Microsoft::UI::Xaml::Data::BindingT<PyWinrtBinding>() {}
+    };
+
     static PyObject* _new_Binding(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::Binding>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtBinding>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::Binding*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Data::Binding instance{};
                 return py::wrap(instance, type);
             }
@@ -801,6 +828,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- BindingBase class --------------------
 
+    struct PyWinrtBindingBase : winrt::Microsoft::UI::Xaml::Data::BindingBaseT<PyWinrtBindingBase>
+    {
+        PyWinrtBindingBase() : winrt::Microsoft::UI::Xaml::Data::BindingBaseT<PyWinrtBindingBase>() {}
+    };
+
     static PyObject* _new_BindingBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -810,10 +842,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::BindingBase>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtBindingBase>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::BindingBase*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Data::BindingBase instance{};
                 return py::wrap(instance, type);
             }
@@ -1755,6 +1809,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- CurrentChangingEventArgs class --------------------
 
+    struct PyWinrtCurrentChangingEventArgs : winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>
+    {
+        PyWinrtCurrentChangingEventArgs() : winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>() {}
+        PyWinrtCurrentChangingEventArgs(bool isCancelable) : winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgsT<PyWinrtCurrentChangingEventArgs>(isCancelable) {}
+    };
+
     static PyObject* _new_CurrentChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1764,10 +1824,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCurrentChangingEventArgs>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{};
                 return py::wrap(instance, type);
             }
@@ -1782,6 +1864,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             try
             {
                 auto param0 = py::convert_to<bool>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCurrentChangingEventArgs>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{param0};
                 return py::wrap(instance, type);
@@ -2124,6 +2221,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- ItemIndexRange class --------------------
 
+    struct PyWinrtItemIndexRange : winrt::Microsoft::UI::Xaml::Data::ItemIndexRangeT<PyWinrtItemIndexRange>
+    {
+        PyWinrtItemIndexRange(int32_t firstIndex, uint32_t length) : winrt::Microsoft::UI::Xaml::Data::ItemIndexRangeT<PyWinrtItemIndexRange>(firstIndex, length) {}
+    };
+
     static PyObject* _new_ItemIndexRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -2133,12 +2235,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::ItemIndexRange>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtItemIndexRange>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::ItemIndexRange*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Data::ItemIndexRange instance{param0, param1};
                 return py::wrap(instance, type);
@@ -2321,6 +2445,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- PropertyChangedEventArgs class --------------------
 
+    struct PyWinrtPropertyChangedEventArgs : winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgsT<PyWinrtPropertyChangedEventArgs>
+    {
+        PyWinrtPropertyChangedEventArgs(winrt::hstring name) : winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgsT<PyWinrtPropertyChangedEventArgs>(name) {}
+    };
+
     static PyObject* _new_PropertyChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -2330,11 +2459,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPropertyChangedEventArgs>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs instance{param0};
                 return py::wrap(instance, type);
@@ -2463,6 +2614,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- RelativeSource class --------------------
 
+    struct PyWinrtRelativeSource : winrt::Microsoft::UI::Xaml::Data::RelativeSourceT<PyWinrtRelativeSource>
+    {
+        PyWinrtRelativeSource() : winrt::Microsoft::UI::Xaml::Data::RelativeSourceT<PyWinrtRelativeSource>() {}
+    };
+
     static PyObject* _new_RelativeSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -2472,10 +2628,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::RelativeSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRelativeSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Data::RelativeSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Data::RelativeSource instance{};
                 return py::wrap(instance, type);
             }

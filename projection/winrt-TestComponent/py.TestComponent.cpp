@@ -118,6 +118,12 @@ namespace py::cpp::TestComponent
 
     // ----- Composable class --------------------
 
+    struct PyWinrtComposable : winrt::TestComponent::ComposableT<PyWinrtComposable>
+    {
+        PyWinrtComposable() : winrt::TestComponent::ComposableT<PyWinrtComposable>() {}
+        PyWinrtComposable(int32_t init) : winrt::TestComponent::ComposableT<PyWinrtComposable>(init) {}
+    };
+
     static PyObject* _new_Composable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -127,10 +133,32 @@ namespace py::cpp::TestComponent
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::TestComponent::Composable>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComposable>();
+
+                    auto self = reinterpret_cast<py::wrapper::TestComponent::Composable*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::TestComponent::Composable instance{};
                 return py::wrap(instance, type);
             }
@@ -145,6 +173,21 @@ namespace py::cpp::TestComponent
             try
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComposable>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::TestComponent::Composable*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::TestComponent::Composable instance{param0};
                 return py::wrap(instance, type);
@@ -508,6 +551,11 @@ namespace py::cpp::TestComponent
 
     // ----- Derived class --------------------
 
+    struct PyWinrtDerived : winrt::TestComponent::DerivedT<PyWinrtDerived>
+    {
+        PyWinrtDerived() : winrt::TestComponent::DerivedT<PyWinrtDerived>() {}
+    };
+
     static PyObject* _new_Derived(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -517,10 +565,32 @@ namespace py::cpp::TestComponent
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::TestComponent::Derived>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDerived>();
+
+                    auto self = reinterpret_cast<py::wrapper::TestComponent::Derived*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::TestComponent::Derived instance{};
                 return py::wrap(instance, type);
             }

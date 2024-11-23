@@ -688,6 +688,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     // ----- DesktopWindowXamlSource class --------------------
 
+    struct PyWinrtDesktopWindowXamlSource : winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>
+    {
+        PyWinrtDesktopWindowXamlSource() : winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceT<PyWinrtDesktopWindowXamlSource>() {}
+    };
+
     static PyObject* _new_DesktopWindowXamlSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -697,10 +702,32 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDesktopWindowXamlSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource instance{};
                 return py::wrap(instance, type);
             }

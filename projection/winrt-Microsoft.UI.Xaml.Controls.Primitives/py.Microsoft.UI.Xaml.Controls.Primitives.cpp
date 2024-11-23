@@ -726,6 +726,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ButtonBase class --------------------
 
+    struct PyWinrtButtonBase : winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBaseT<PyWinrtButtonBase>
+    {
+    };
+
     static PyObject* _new_ButtonBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>::type_name);
@@ -1810,6 +1814,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- CarouselPanel class --------------------
 
+    struct PyWinrtCarouselPanel : winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanelT<PyWinrtCarouselPanel>
+    {
+        PyWinrtCarouselPanel() : winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanelT<PyWinrtCarouselPanel>() {}
+    };
+
     static PyObject* _new_CarouselPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1819,10 +1828,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCarouselPanel>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel instance{};
                 return py::wrap(instance, type);
             }
@@ -3112,6 +3143,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ColorSpectrum class --------------------
 
+    struct PyWinrtColorSpectrum : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrumT<PyWinrtColorSpectrum>
+    {
+        PyWinrtColorSpectrum() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrumT<PyWinrtColorSpectrum>() {}
+    };
+
     static PyObject* _new_ColorSpectrum(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -3121,10 +3157,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtColorSpectrum>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum instance{};
                 return py::wrap(instance, type);
             }
@@ -4174,6 +4232,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ColumnMajorUniformToLargestGridLayout class --------------------
 
+    struct PyWinrtColumnMajorUniformToLargestGridLayout : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayoutT<PyWinrtColumnMajorUniformToLargestGridLayout>
+    {
+        PyWinrtColumnMajorUniformToLargestGridLayout() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayoutT<PyWinrtColumnMajorUniformToLargestGridLayout>() {}
+    };
+
     static PyObject* _new_ColumnMajorUniformToLargestGridLayout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4183,10 +4246,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtColumnMajorUniformToLargestGridLayout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout instance{};
                 return py::wrap(instance, type);
             }
@@ -4953,6 +5038,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- CommandBarFlyoutCommandBar class --------------------
 
+    struct PyWinrtCommandBarFlyoutCommandBar : winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarT<PyWinrtCommandBarFlyoutCommandBar>
+    {
+        PyWinrtCommandBarFlyoutCommandBar() : winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarT<PyWinrtCommandBarFlyoutCommandBar>() {}
+    };
+
     static PyObject* _new_CommandBarFlyoutCommandBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4962,10 +5052,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCommandBarFlyoutCommandBar>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar instance{};
                 return py::wrap(instance, type);
             }
@@ -7091,6 +7203,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- DragCompletedEventArgs class --------------------
 
+    struct PyWinrtDragCompletedEventArgs : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgsT<PyWinrtDragCompletedEventArgs>
+    {
+        PyWinrtDragCompletedEventArgs(double horizontalChange, double verticalChange, bool canceled) : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgsT<PyWinrtDragCompletedEventArgs>(horizontalChange, verticalChange, canceled) {}
+    };
+
     static PyObject* _new_DragCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7100,6 +7217,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 3)
         {
             try
@@ -7107,6 +7231,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDragCompletedEventArgs>(param0, param1, param2);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs instance{param0, param1, param2};
                 return py::wrap(instance, type);
@@ -7289,6 +7428,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- DragDeltaEventArgs class --------------------
 
+    struct PyWinrtDragDeltaEventArgs : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgsT<PyWinrtDragDeltaEventArgs>
+    {
+        PyWinrtDragDeltaEventArgs(double horizontalChange, double verticalChange) : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgsT<PyWinrtDragDeltaEventArgs>(horizontalChange, verticalChange) {}
+    };
+
     static PyObject* _new_DragDeltaEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7298,12 +7442,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDragDeltaEventArgs>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs instance{param0, param1};
                 return py::wrap(instance, type);
@@ -7459,6 +7625,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- DragStartedEventArgs class --------------------
 
+    struct PyWinrtDragStartedEventArgs : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgsT<PyWinrtDragStartedEventArgs>
+    {
+        PyWinrtDragStartedEventArgs(double horizontalOffset, double verticalOffset) : winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgsT<PyWinrtDragStartedEventArgs>(horizontalOffset, verticalOffset) {}
+    };
+
     static PyObject* _new_DragStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7468,12 +7639,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDragStartedEventArgs>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs instance{param0, param1};
                 return py::wrap(instance, type);
@@ -7628,6 +7821,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     };
 
     // ----- FlyoutBase class --------------------
+
+    struct PyWinrtFlyoutBase : winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBaseT<PyWinrtFlyoutBase>
+    {
+    };
 
     static PyObject* _new_FlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -9531,6 +9728,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- FlyoutShowOptions class --------------------
 
+    struct PyWinrtFlyoutShowOptions : winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptionsT<PyWinrtFlyoutShowOptions>
+    {
+        PyWinrtFlyoutShowOptions() : winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptionsT<PyWinrtFlyoutShowOptions>() {}
+    };
+
     static PyObject* _new_FlyoutShowOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9540,10 +9742,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlyoutShowOptions>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions instance{};
                 return py::wrap(instance, type);
             }
@@ -10023,6 +10247,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- GridViewItemPresenter class --------------------
 
+    struct PyWinrtGridViewItemPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenterT<PyWinrtGridViewItemPresenter>
+    {
+        PyWinrtGridViewItemPresenter() : winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenterT<PyWinrtGridViewItemPresenter>() {}
+    };
+
     static PyObject* _new_GridViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -10032,10 +10261,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewItemPresenter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter instance{};
                 return py::wrap(instance, type);
             }
@@ -12187,6 +12438,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- InfoBarPanel class --------------------
 
+    struct PyWinrtInfoBarPanel : winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanelT<PyWinrtInfoBarPanel>
+    {
+        PyWinrtInfoBarPanel() : winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanelT<PyWinrtInfoBarPanel>() {}
+    };
+
     static PyObject* _new_InfoBarPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12196,10 +12452,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInfoBarPanel>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel instance{};
                 return py::wrap(instance, type);
             }
@@ -13851,6 +14129,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ListViewItemPresenter class --------------------
 
+    struct PyWinrtListViewItemPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenterT<PyWinrtListViewItemPresenter>
+    {
+        PyWinrtListViewItemPresenter() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenterT<PyWinrtListViewItemPresenter>() {}
+    };
+
     static PyObject* _new_ListViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13860,10 +14143,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewItemPresenter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter instance{};
                 return py::wrap(instance, type);
             }
@@ -20664,6 +20969,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- MonochromaticOverlayPresenter class --------------------
 
+    struct PyWinrtMonochromaticOverlayPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenterT<PyWinrtMonochromaticOverlayPresenter>
+    {
+        PyWinrtMonochromaticOverlayPresenter() : winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenterT<PyWinrtMonochromaticOverlayPresenter>() {}
+    };
+
     static PyObject* _new_MonochromaticOverlayPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -20673,10 +20983,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMonochromaticOverlayPresenter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter instance{};
                 return py::wrap(instance, type);
             }
@@ -20955,6 +21287,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- NavigationViewItemPresenter class --------------------
 
+    struct PyWinrtNavigationViewItemPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterT<PyWinrtNavigationViewItemPresenter>
+    {
+        PyWinrtNavigationViewItemPresenter() : winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterT<PyWinrtNavigationViewItemPresenter>() {}
+    };
+
     static PyObject* _new_NavigationViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -20964,10 +21301,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItemPresenter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter instance{};
                 return py::wrap(instance, type);
             }
@@ -21300,6 +21659,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- NavigationViewItemPresenterTemplateSettings class --------------------
 
+    struct PyWinrtNavigationViewItemPresenterTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettingsT<PyWinrtNavigationViewItemPresenterTemplateSettings>
+    {
+        PyWinrtNavigationViewItemPresenterTemplateSettings() : winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettingsT<PyWinrtNavigationViewItemPresenterTemplateSettings>() {}
+    };
+
     static PyObject* _new_NavigationViewItemPresenterTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -21309,10 +21673,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItemPresenterTemplateSettings>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings instance{};
                 return py::wrap(instance, type);
             }
@@ -22854,6 +23240,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- PickerFlyoutBase class --------------------
 
+    struct PyWinrtPickerFlyoutBase : winrt::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBaseT<PyWinrtPickerFlyoutBase>
+    {
+    };
+
     static PyObject* _new_PickerFlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase>::type_name);
@@ -23052,6 +23442,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- PivotHeaderItem class --------------------
 
+    struct PyWinrtPivotHeaderItem : winrt::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItemT<PyWinrtPivotHeaderItem>
+    {
+        PyWinrtPivotHeaderItem() : winrt::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItemT<PyWinrtPivotHeaderItem>() {}
+    };
+
     static PyObject* _new_PivotHeaderItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -23061,10 +23456,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPivotHeaderItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem instance{};
                 return py::wrap(instance, type);
             }
@@ -24929,6 +25346,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- RangeBase class --------------------
 
+    struct PyWinrtRangeBase : winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBaseT<PyWinrtRangeBase>
+    {
+    };
+
     static PyObject* _new_RangeBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>::type_name);
@@ -25935,6 +26356,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- RepeatedScrollSnapPoint class --------------------
 
+    struct PyWinrtRepeatedScrollSnapPoint : winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPointT<PyWinrtRepeatedScrollSnapPoint>
+    {
+        PyWinrtRepeatedScrollSnapPoint(double offset, double interval, double start, double end, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointsAlignment alignment) : winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPointT<PyWinrtRepeatedScrollSnapPoint>(offset, interval, start, end, alignment) {}
+    };
+
     static PyObject* _new_RepeatedScrollSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -25944,6 +26370,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 5)
         {
             try
@@ -25953,6 +26386,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto param2 = py::convert_to<double>(args, 2);
                 auto param3 = py::convert_to<double>(args, 3);
                 auto param4 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointsAlignment>(args, 4);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRepeatedScrollSnapPoint>(param0, param1, param2, param3, param4);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
@@ -26162,6 +26610,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- RepeatedZoomSnapPoint class --------------------
 
+    struct PyWinrtRepeatedZoomSnapPoint : winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPointT<PyWinrtRepeatedZoomSnapPoint>
+    {
+        PyWinrtRepeatedZoomSnapPoint(double offset, double interval, double start, double end) : winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPointT<PyWinrtRepeatedZoomSnapPoint>(offset, interval, start, end) {}
+    };
+
     static PyObject* _new_RepeatedZoomSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -26171,6 +26624,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 4)
         {
             try
@@ -26179,6 +26639,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
                 auto param3 = py::convert_to<double>(args, 3);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRepeatedZoomSnapPoint>(param0, param1, param2, param3);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
@@ -27769,6 +28244,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ScrollPresenter class --------------------
 
+    struct PyWinrtScrollPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenterT<PyWinrtScrollPresenter>
+    {
+        PyWinrtScrollPresenter() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenterT<PyWinrtScrollPresenter>() {}
+    };
+
     static PyObject* _new_ScrollPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -27778,10 +28258,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtScrollPresenter>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter instance{};
                 return py::wrap(instance, type);
             }
@@ -30959,6 +31461,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ScrollSnapPoint class --------------------
 
+    struct PyWinrtScrollSnapPoint : winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointT<PyWinrtScrollSnapPoint>
+    {
+        PyWinrtScrollSnapPoint(double snapPointValue, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointsAlignment alignment) : winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointT<PyWinrtScrollSnapPoint>(snapPointValue, alignment) {}
+    };
+
     static PyObject* _new_ScrollSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -30968,12 +31475,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointsAlignment>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtScrollSnapPoint>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint instance{param0, param1};
                 return py::wrap(instance, type);
@@ -31853,6 +32382,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     };
 
     // ----- SelectorItem class --------------------
+
+    struct PyWinrtSelectorItem : winrt::Microsoft::UI::Xaml::Controls::Primitives::SelectorItemT<PyWinrtSelectorItem>
+    {
+    };
 
     static PyObject* _new_SelectorItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -32937,6 +33470,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ToggleButton class --------------------
 
+    struct PyWinrtToggleButton : winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButtonT<PyWinrtToggleButton>
+    {
+        PyWinrtToggleButton() : winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButtonT<PyWinrtToggleButton>() {}
+    };
+
     static PyObject* _new_ToggleButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -32946,10 +33484,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtToggleButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton instance{};
                 return py::wrap(instance, type);
             }
@@ -33807,6 +34367,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- ZoomSnapPoint class --------------------
 
+    struct PyWinrtZoomSnapPoint : winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPointT<PyWinrtZoomSnapPoint>
+    {
+        PyWinrtZoomSnapPoint(double snapPointValue) : winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPointT<PyWinrtZoomSnapPoint>(snapPointValue) {}
+    };
+
     static PyObject* _new_ZoomSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -33816,11 +34381,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<double>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtZoomSnapPoint>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint instance{param0};
                 return py::wrap(instance, type);

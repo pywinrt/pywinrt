@@ -6,6 +6,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 {
     // ----- ColorPickerSlider class --------------------
 
+    struct PyWinrtColorPickerSlider : winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>
+    {
+        PyWinrtColorPickerSlider() : winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>() {}
+    };
+
     static PyObject* _new_ColorPickerSlider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtColorPickerSlider>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider instance{};
                 return py::wrap(instance, type);
             }
