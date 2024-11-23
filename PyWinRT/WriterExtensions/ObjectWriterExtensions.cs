@@ -391,4 +391,50 @@ static class ObjectWriterExtensions
         w.Indent--;
         w.WriteBlankLine();
     }
+
+    public static void WriteComposableTypeImpl(this IndentedTextWriter w, ProjectedType type)
+    {
+        // HACK: work around https://github.com/microsoft/cppwinrt/issues/1457
+        if (type.Namespace == "Windows.UI.Xaml.Controls" && type.Name == "DataTemplateSelector")
+        {
+            return;
+        }
+
+        var baseType = $"{type.CppWinrtType}T<PyWinrt{type.Name}>";
+
+        w.WriteLine($"struct PyWinrt{type.Name} : {baseType}");
+        w.WriteLine("{");
+        w.Indent++;
+
+        foreach (var ctor in type.Constructors)
+        {
+            var paramList = string.Join(
+                ", ",
+                ctor.Method.Parameters.Select(p => $"{p.ParameterType.ToCppTypeName()} {p.Name}")
+            );
+            var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
+
+            w.WriteLine($"PyWinrt{type.Name}({paramList}) : {baseType}({argList}) {{}}");
+        }
+
+        // foreach (
+        //     var method in type.Type.Methods.Where(m =>
+        //         !m.IsPublic && !m.IsStatic && !m.IsSpecialName && !m.IsConstructor
+        //     )
+        // )
+        // {
+        //     var returnType = method.ReturnType.ToCppTypeName();
+        //     var paramList = string.Join(
+        //         ", ",
+        //         method.Parameters.Select(p => $"{p.ParameterType.ToCppTypeName()} /*unused*/")
+        //     );
+
+        //     w.WriteLine(
+        //         $"{returnType} {method.Name}({paramList}) {{ throw winrt::hresult_error(); }}"
+        //     );
+        // }
+
+        w.Indent--;
+        w.WriteLine("};");
+    }
 }

@@ -6,6 +6,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 {
     // ----- AnimatedVisualPlayerAutomationPeer class --------------------
 
+    struct PyWinrtAnimatedVisualPlayerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeerT<PyWinrtAnimatedVisualPlayerAutomationPeer>
+    {
+        PyWinrtAnimatedVisualPlayerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::AnimatedVisualPlayer owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeerT<PyWinrtAnimatedVisualPlayerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_AnimatedVisualPlayerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,11 +20,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisualPlayer>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAnimatedVisualPlayerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -121,6 +148,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- AppBarAutomationPeer class --------------------
 
+    struct PyWinrtAppBarAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeerT<PyWinrtAppBarAutomationPeer>
+    {
+        PyWinrtAppBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::AppBar owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeerT<PyWinrtAppBarAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_AppBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -130,11 +162,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::AppBar>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAppBarAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -683,6 +737,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- AppBarButtonAutomationPeer class --------------------
 
+    struct PyWinrtAppBarButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeerT<PyWinrtAppBarButtonAutomationPeer>
+    {
+        PyWinrtAppBarButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::AppBarButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeerT<PyWinrtAppBarButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_AppBarButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -692,11 +751,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::AppBarButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAppBarButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -901,6 +982,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- AppBarToggleButtonAutomationPeer class --------------------
 
+    struct PyWinrtAppBarToggleButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeerT<PyWinrtAppBarToggleButtonAutomationPeer>
+    {
+        PyWinrtAppBarToggleButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeerT<PyWinrtAppBarToggleButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_AppBarToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -910,11 +996,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAppBarToggleButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -1143,6 +1251,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         _type_slots_AutoSuggestBoxAutomationPeer};
 
     // ----- AutomationPeer class --------------------
+
+    struct PyWinrtAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeerT<PyWinrtAutomationPeer>
+    {
+    };
 
     static PyObject* _new_AutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -3655,6 +3767,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- BreadcrumbBarItemAutomationPeer class --------------------
 
+    struct PyWinrtBreadcrumbBarItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeerT<PyWinrtBreadcrumbBarItemAutomationPeer>
+    {
+        PyWinrtBreadcrumbBarItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBarItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeerT<PyWinrtBreadcrumbBarItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_BreadcrumbBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -3664,11 +3781,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBarItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtBreadcrumbBarItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -3808,6 +3947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ButtonAutomationPeer class --------------------
 
+    struct PyWinrtButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeerT<PyWinrtButtonAutomationPeer>
+    {
+        PyWinrtButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Button owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeerT<PyWinrtButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -3817,11 +3961,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Button>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -3961,6 +4127,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ButtonBaseAutomationPeer class --------------------
 
+    struct PyWinrtButtonBaseAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeerT<PyWinrtButtonBaseAutomationPeer>
+    {
+    };
+
     static PyObject* _new_ButtonBaseAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::type_name);
@@ -4052,6 +4222,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- CalendarDatePickerAutomationPeer class --------------------
 
+    struct PyWinrtCalendarDatePickerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeerT<PyWinrtCalendarDatePickerAutomationPeer>
+    {
+        PyWinrtCalendarDatePickerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::CalendarDatePicker owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeerT<PyWinrtCalendarDatePickerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_CalendarDatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4061,11 +4236,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::CalendarDatePicker>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCalendarDatePickerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -4299,6 +4496,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- CheckBoxAutomationPeer class --------------------
 
+    struct PyWinrtCheckBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeerT<PyWinrtCheckBoxAutomationPeer>
+    {
+        PyWinrtCheckBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::CheckBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeerT<PyWinrtCheckBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_CheckBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4308,11 +4510,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::CheckBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCheckBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -4414,6 +4638,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ColorPickerSliderAutomationPeer class --------------------
 
+    struct PyWinrtColorPickerSliderAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeerT<PyWinrtColorPickerSliderAutomationPeer>
+    {
+        PyWinrtColorPickerSliderAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeerT<PyWinrtColorPickerSliderAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ColorPickerSliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4423,11 +4652,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtColorPickerSliderAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -4529,6 +4780,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ColorSpectrumAutomationPeer class --------------------
 
+    struct PyWinrtColorSpectrumAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeerT<PyWinrtColorSpectrumAutomationPeer>
+    {
+        PyWinrtColorSpectrumAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeerT<PyWinrtColorSpectrumAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ColorSpectrumAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4538,11 +4794,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtColorSpectrumAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -4644,6 +4922,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxAutomationPeer class --------------------
 
+    struct PyWinrtComboBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeerT<PyWinrtComboBoxAutomationPeer>
+    {
+        PyWinrtComboBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ComboBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeerT<PyWinrtComboBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ComboBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4653,11 +4936,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ComboBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComboBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -5235,6 +5540,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxItemAutomationPeer class --------------------
 
+    struct PyWinrtComboBoxItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeerT<PyWinrtComboBoxItemAutomationPeer>
+    {
+        PyWinrtComboBoxItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ComboBoxItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeerT<PyWinrtComboBoxItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ComboBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5244,11 +5554,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ComboBoxItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComboBoxItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -5350,6 +5682,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxItemDataAutomationPeer class --------------------
 
+    struct PyWinrtComboBoxItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeerT<PyWinrtComboBoxItemDataAutomationPeer>
+    {
+        PyWinrtComboBoxItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeerT<PyWinrtComboBoxItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_ComboBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5359,12 +5696,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComboBoxItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -5504,6 +5863,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- DatePickerAutomationPeer class --------------------
 
+    struct PyWinrtDatePickerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeerT<PyWinrtDatePickerAutomationPeer>
+    {
+        PyWinrtDatePickerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::DatePicker owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeerT<PyWinrtDatePickerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_DatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5513,11 +5877,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::DatePicker>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDatePickerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -5685,6 +6071,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- DropDownButtonAutomationPeer class --------------------
 
+    struct PyWinrtDropDownButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeerT<PyWinrtDropDownButtonAutomationPeer>
+    {
+        PyWinrtDropDownButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::DropDownButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeerT<PyWinrtDropDownButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_DropDownButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5694,11 +6085,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDropDownButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -5903,6 +6316,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ExpanderAutomationPeer class --------------------
 
+    struct PyWinrtExpanderAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeerT<PyWinrtExpanderAutomationPeer>
+    {
+        PyWinrtExpanderAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Expander owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeerT<PyWinrtExpanderAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ExpanderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5912,11 +6330,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Expander>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtExpanderAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6121,6 +6561,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- FlipViewAutomationPeer class --------------------
 
+    struct PyWinrtFlipViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeerT<PyWinrtFlipViewAutomationPeer>
+    {
+        PyWinrtFlipViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::FlipView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeerT<PyWinrtFlipViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_FlipViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6130,11 +6575,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::FlipView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlipViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6236,6 +6703,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- FlipViewItemAutomationPeer class --------------------
 
+    struct PyWinrtFlipViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeerT<PyWinrtFlipViewItemAutomationPeer>
+    {
+        PyWinrtFlipViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::FlipViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeerT<PyWinrtFlipViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_FlipViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6245,11 +6717,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlipViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6351,6 +6845,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- FlipViewItemDataAutomationPeer class --------------------
 
+    struct PyWinrtFlipViewItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeerT<PyWinrtFlipViewItemDataAutomationPeer>
+    {
+        PyWinrtFlipViewItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeerT<PyWinrtFlipViewItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_FlipViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6360,12 +6859,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlipViewItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -6505,6 +7026,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- FlyoutPresenterAutomationPeer class --------------------
 
+    struct PyWinrtFlyoutPresenterAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeerT<PyWinrtFlyoutPresenterAutomationPeer>
+    {
+        PyWinrtFlyoutPresenterAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeerT<PyWinrtFlyoutPresenterAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_FlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6514,11 +7040,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlyoutPresenterAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6620,6 +7168,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- FrameworkElementAutomationPeer class --------------------
 
+    struct PyWinrtFrameworkElementAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeerT<PyWinrtFrameworkElementAutomationPeer>
+    {
+        PyWinrtFrameworkElementAutomationPeer(winrt::Microsoft::UI::Xaml::FrameworkElement owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeerT<PyWinrtFrameworkElementAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_FrameworkElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6629,11 +7182,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFrameworkElementAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6840,6 +7415,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- GridViewAutomationPeer class --------------------
 
+    struct PyWinrtGridViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeerT<PyWinrtGridViewAutomationPeer>
+    {
+        PyWinrtGridViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::GridView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeerT<PyWinrtGridViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_GridViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6849,11 +7429,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::GridView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -6955,6 +7557,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- GridViewHeaderItemAutomationPeer class --------------------
 
+    struct PyWinrtGridViewHeaderItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeerT<PyWinrtGridViewHeaderItemAutomationPeer>
+    {
+        PyWinrtGridViewHeaderItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::GridViewHeaderItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeerT<PyWinrtGridViewHeaderItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_GridViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6964,11 +7571,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::GridViewHeaderItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewHeaderItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7070,6 +7699,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- GridViewItemAutomationPeer class --------------------
 
+    struct PyWinrtGridViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeerT<PyWinrtGridViewItemAutomationPeer>
+    {
+        PyWinrtGridViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::GridViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeerT<PyWinrtGridViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_GridViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7079,11 +7713,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::GridViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7185,6 +7841,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- GridViewItemDataAutomationPeer class --------------------
 
+    struct PyWinrtGridViewItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeerT<PyWinrtGridViewItemDataAutomationPeer>
+    {
+        PyWinrtGridViewItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeerT<PyWinrtGridViewItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_GridViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7194,12 +7855,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -7339,6 +8022,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- GroupItemAutomationPeer class --------------------
 
+    struct PyWinrtGroupItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeerT<PyWinrtGroupItemAutomationPeer>
+    {
+        PyWinrtGroupItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::GroupItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeerT<PyWinrtGroupItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_GroupItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7348,11 +8036,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::GroupItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGroupItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7454,6 +8164,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- HubAutomationPeer class --------------------
 
+    struct PyWinrtHubAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeerT<PyWinrtHubAutomationPeer>
+    {
+        PyWinrtHubAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Hub owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeerT<PyWinrtHubAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_HubAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7463,11 +8178,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Hub>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHubAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7569,6 +8306,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- HubSectionAutomationPeer class --------------------
 
+    struct PyWinrtHubSectionAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeerT<PyWinrtHubSectionAutomationPeer>
+    {
+        PyWinrtHubSectionAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::HubSection owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeerT<PyWinrtHubSectionAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_HubSectionAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7578,11 +8320,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::HubSection>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHubSectionAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7722,6 +8486,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- HyperlinkButtonAutomationPeer class --------------------
 
+    struct PyWinrtHyperlinkButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeerT<PyWinrtHyperlinkButtonAutomationPeer>
+    {
+        PyWinrtHyperlinkButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::HyperlinkButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeerT<PyWinrtHyperlinkButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_HyperlinkButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7731,11 +8500,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::HyperlinkButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHyperlinkButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7875,6 +8666,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ImageAutomationPeer class --------------------
 
+    struct PyWinrtImageAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeerT<PyWinrtImageAutomationPeer>
+    {
+        PyWinrtImageAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Image owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeerT<PyWinrtImageAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ImageAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7884,11 +8680,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Image>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtImageAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -7990,6 +8808,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- InfoBarAutomationPeer class --------------------
 
+    struct PyWinrtInfoBarAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeerT<PyWinrtInfoBarAutomationPeer>
+    {
+        PyWinrtInfoBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::InfoBar owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeerT<PyWinrtInfoBarAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_InfoBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7999,11 +8822,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::InfoBar>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInfoBarAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -8105,6 +8950,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ItemAutomationPeer class --------------------
 
+    struct PyWinrtItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeerT<PyWinrtItemAutomationPeer>
+    {
+        PyWinrtItemAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeerT<PyWinrtItemAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_ItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8114,12 +8964,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtItemAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -8313,6 +9185,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ItemContainerAutomationPeer class --------------------
 
+    struct PyWinrtItemContainerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeerT<PyWinrtItemContainerAutomationPeer>
+    {
+        PyWinrtItemContainerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ItemContainer owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeerT<PyWinrtItemContainerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ItemContainerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8322,11 +9199,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ItemContainer>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtItemContainerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -8634,6 +9533,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ItemsControlAutomationPeer class --------------------
 
+    struct PyWinrtItemsControlAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeerT<PyWinrtItemsControlAutomationPeer>
+    {
+        PyWinrtItemsControlAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ItemsControl owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeerT<PyWinrtItemsControlAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ItemsControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8643,11 +9547,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ItemsControl>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtItemsControlAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -8829,6 +9755,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ItemsViewAutomationPeer class --------------------
 
+    struct PyWinrtItemsViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeerT<PyWinrtItemsViewAutomationPeer>
+    {
+        PyWinrtItemsViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ItemsView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeerT<PyWinrtItemsViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ItemsViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8838,11 +9769,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ItemsView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtItemsViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9035,6 +9988,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListBoxAutomationPeer class --------------------
 
+    struct PyWinrtListBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeerT<PyWinrtListBoxAutomationPeer>
+    {
+        PyWinrtListBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeerT<PyWinrtListBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9044,11 +10002,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9150,6 +10130,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListBoxItemAutomationPeer class --------------------
 
+    struct PyWinrtListBoxItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeerT<PyWinrtListBoxItemAutomationPeer>
+    {
+        PyWinrtListBoxItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListBoxItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeerT<PyWinrtListBoxItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9159,11 +10144,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListBoxItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListBoxItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9265,6 +10272,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListBoxItemDataAutomationPeer class --------------------
 
+    struct PyWinrtListBoxItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeerT<PyWinrtListBoxItemDataAutomationPeer>
+    {
+        PyWinrtListBoxItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeerT<PyWinrtListBoxItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_ListBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9274,12 +10286,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListBoxItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -9485,6 +10519,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewAutomationPeer class --------------------
 
+    struct PyWinrtListViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeerT<PyWinrtListViewAutomationPeer>
+    {
+        PyWinrtListViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeerT<PyWinrtListViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9494,11 +10533,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9600,6 +10661,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewBaseAutomationPeer class --------------------
 
+    struct PyWinrtListViewBaseAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeerT<PyWinrtListViewBaseAutomationPeer>
+    {
+        PyWinrtListViewBaseAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListViewBase owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeerT<PyWinrtListViewBaseAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListViewBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9609,11 +10675,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListViewBase>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewBaseAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9769,6 +10857,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
 
+    struct PyWinrtListViewBaseHeaderItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeerT<PyWinrtListViewBaseHeaderItemAutomationPeer>
+    {
+    };
+
     static PyObject* _new_ListViewBaseHeaderItemAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::type_name);
@@ -9860,6 +10952,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewHeaderItemAutomationPeer class --------------------
 
+    struct PyWinrtListViewHeaderItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeerT<PyWinrtListViewHeaderItemAutomationPeer>
+    {
+        PyWinrtListViewHeaderItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListViewHeaderItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeerT<PyWinrtListViewHeaderItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9869,11 +10966,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListViewHeaderItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewHeaderItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -9975,6 +11094,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewItemAutomationPeer class --------------------
 
+    struct PyWinrtListViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeerT<PyWinrtListViewItemAutomationPeer>
+    {
+        PyWinrtListViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ListViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeerT<PyWinrtListViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ListViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9984,11 +11108,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -10090,6 +11236,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ListViewItemDataAutomationPeer class --------------------
 
+    struct PyWinrtListViewItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeerT<PyWinrtListViewItemDataAutomationPeer>
+    {
+        PyWinrtListViewItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeerT<PyWinrtListViewItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_ListViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -10099,12 +11250,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -11062,6 +12235,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MediaPlayerElementAutomationPeer class --------------------
 
+    struct PyWinrtMediaPlayerElementAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeerT<PyWinrtMediaPlayerElementAutomationPeer>
+    {
+        PyWinrtMediaPlayerElementAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeerT<PyWinrtMediaPlayerElementAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MediaPlayerElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11071,11 +12249,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMediaPlayerElementAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11177,6 +12377,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MediaTransportControlsAutomationPeer class --------------------
 
+    struct PyWinrtMediaTransportControlsAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeerT<PyWinrtMediaTransportControlsAutomationPeer>
+    {
+        PyWinrtMediaTransportControlsAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeerT<PyWinrtMediaTransportControlsAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MediaTransportControlsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11186,11 +12391,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMediaTransportControlsAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11292,6 +12519,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MenuBarAutomationPeer class --------------------
 
+    struct PyWinrtMenuBarAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeerT<PyWinrtMenuBarAutomationPeer>
+    {
+        PyWinrtMenuBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MenuBar owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeerT<PyWinrtMenuBarAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MenuBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11301,11 +12533,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MenuBar>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuBarAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11407,6 +12661,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MenuBarItemAutomationPeer class --------------------
 
+    struct PyWinrtMenuBarItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeerT<PyWinrtMenuBarItemAutomationPeer>
+    {
+        PyWinrtMenuBarItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MenuBarItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeerT<PyWinrtMenuBarItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MenuBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11416,11 +12675,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MenuBarItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuBarItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11663,6 +12944,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MenuFlyoutItemAutomationPeer class --------------------
 
+    struct PyWinrtMenuFlyoutItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeerT<PyWinrtMenuFlyoutItemAutomationPeer>
+    {
+        PyWinrtMenuFlyoutItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeerT<PyWinrtMenuFlyoutItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11672,11 +12958,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuFlyoutItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11816,6 +13124,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- MenuFlyoutPresenterAutomationPeer class --------------------
 
+    struct PyWinrtMenuFlyoutPresenterAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeerT<PyWinrtMenuFlyoutPresenterAutomationPeer>
+    {
+        PyWinrtMenuFlyoutPresenterAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutPresenter owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeerT<PyWinrtMenuFlyoutPresenterAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_MenuFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11825,11 +13138,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutPresenter>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuFlyoutPresenterAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -11931,6 +13266,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- NavigationViewAutomationPeer class --------------------
 
+    struct PyWinrtNavigationViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeerT<PyWinrtNavigationViewAutomationPeer>
+    {
+        PyWinrtNavigationViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::NavigationView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeerT<PyWinrtNavigationViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_NavigationViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11940,11 +13280,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::NavigationView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -12046,6 +13408,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- NavigationViewItemAutomationPeer class --------------------
 
+    struct PyWinrtNavigationViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeerT<PyWinrtNavigationViewItemAutomationPeer>
+    {
+        PyWinrtNavigationViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::NavigationViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeerT<PyWinrtNavigationViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_NavigationViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12055,11 +13422,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -12264,6 +13653,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- NumberBoxAutomationPeer class --------------------
 
+    struct PyWinrtNumberBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeerT<PyWinrtNumberBoxAutomationPeer>
+    {
+        PyWinrtNumberBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::NumberBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeerT<PyWinrtNumberBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_NumberBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12273,11 +13667,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::NumberBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNumberBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -12379,6 +13795,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- PasswordBoxAutomationPeer class --------------------
 
+    struct PyWinrtPasswordBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeerT<PyWinrtPasswordBoxAutomationPeer>
+    {
+        PyWinrtPasswordBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PasswordBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeerT<PyWinrtPasswordBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_PasswordBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12388,11 +13809,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::PasswordBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPasswordBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -12494,6 +13937,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- PersonPictureAutomationPeer class --------------------
 
+    struct PyWinrtPersonPictureAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeerT<PyWinrtPersonPictureAutomationPeer>
+    {
+        PyWinrtPersonPictureAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PersonPicture owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeerT<PyWinrtPersonPictureAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_PersonPictureAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12503,11 +13951,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::PersonPicture>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPersonPictureAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -12675,6 +14145,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- PipsPagerAutomationPeer class --------------------
 
+    struct PyWinrtPipsPagerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeerT<PyWinrtPipsPagerAutomationPeer>
+    {
+        PyWinrtPipsPagerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PipsPager owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeerT<PyWinrtPipsPagerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_PipsPagerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -12684,11 +14159,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::PipsPager>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPipsPagerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -13640,6 +15137,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ProgressBarAutomationPeer class --------------------
 
+    struct PyWinrtProgressBarAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeerT<PyWinrtProgressBarAutomationPeer>
+    {
+        PyWinrtProgressBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ProgressBar owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeerT<PyWinrtProgressBarAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ProgressBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13649,11 +15151,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ProgressBar>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtProgressBarAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -13755,6 +15279,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ProgressRingAutomationPeer class --------------------
 
+    struct PyWinrtProgressRingAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeerT<PyWinrtProgressRingAutomationPeer>
+    {
+        PyWinrtProgressRingAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ProgressRing owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeerT<PyWinrtProgressRingAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ProgressRingAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13764,11 +15293,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ProgressRing>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtProgressRingAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -14072,6 +15623,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RadioButtonAutomationPeer class --------------------
 
+    struct PyWinrtRadioButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeerT<PyWinrtRadioButtonAutomationPeer>
+    {
+        PyWinrtRadioButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RadioButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeerT<PyWinrtRadioButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RadioButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14081,11 +15637,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RadioButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRadioButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -14355,6 +15933,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RadioButtonsAutomationPeer class --------------------
 
+    struct PyWinrtRadioButtonsAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeerT<PyWinrtRadioButtonsAutomationPeer>
+    {
+        PyWinrtRadioButtonsAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RadioButtons owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeerT<PyWinrtRadioButtonsAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RadioButtonsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14364,11 +15947,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RadioButtons>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRadioButtonsAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -14470,6 +16075,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RangeBaseAutomationPeer class --------------------
 
+    struct PyWinrtRangeBaseAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeerT<PyWinrtRangeBaseAutomationPeer>
+    {
+        PyWinrtRangeBaseAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeerT<PyWinrtRangeBaseAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RangeBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14479,11 +16089,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRangeBaseAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -14787,6 +16419,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RatingControlAutomationPeer class --------------------
 
+    struct PyWinrtRatingControlAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeerT<PyWinrtRatingControlAutomationPeer>
+    {
+        PyWinrtRatingControlAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RatingControl owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeerT<PyWinrtRatingControlAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RatingControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14796,11 +16433,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RatingControl>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRatingControlAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -14902,6 +16561,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RepeatButtonAutomationPeer class --------------------
 
+    struct PyWinrtRepeatButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeerT<PyWinrtRepeatButtonAutomationPeer>
+    {
+        PyWinrtRepeatButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeerT<PyWinrtRepeatButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RepeatButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14911,11 +16575,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRepeatButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15055,6 +16741,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RepeaterAutomationPeer class --------------------
 
+    struct PyWinrtRepeaterAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeerT<PyWinrtRepeaterAutomationPeer>
+    {
+        PyWinrtRepeaterAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ItemsRepeater owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeerT<PyWinrtRepeaterAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RepeaterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15064,11 +16755,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeater>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRepeaterAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15170,6 +16883,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RichEditBoxAutomationPeer class --------------------
 
+    struct PyWinrtRichEditBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeerT<PyWinrtRichEditBoxAutomationPeer>
+    {
+        PyWinrtRichEditBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RichEditBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeerT<PyWinrtRichEditBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RichEditBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15179,11 +16897,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RichEditBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRichEditBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15285,6 +17025,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RichTextBlockAutomationPeer class --------------------
 
+    struct PyWinrtRichTextBlockAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeerT<PyWinrtRichTextBlockAutomationPeer>
+    {
+        PyWinrtRichTextBlockAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RichTextBlock owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeerT<PyWinrtRichTextBlockAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RichTextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15294,11 +17039,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RichTextBlock>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRichTextBlockAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15400,6 +17167,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- RichTextBlockOverflowAutomationPeer class --------------------
 
+    struct PyWinrtRichTextBlockOverflowAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeerT<PyWinrtRichTextBlockOverflowAutomationPeer>
+    {
+        PyWinrtRichTextBlockOverflowAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::RichTextBlockOverflow owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeerT<PyWinrtRichTextBlockOverflowAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_RichTextBlockOverflowAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15409,11 +17181,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::RichTextBlockOverflow>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRichTextBlockOverflowAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15515,6 +17309,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ScrollBarAutomationPeer class --------------------
 
+    struct PyWinrtScrollBarAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeerT<PyWinrtScrollBarAutomationPeer>
+    {
+        PyWinrtScrollBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeerT<PyWinrtScrollBarAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ScrollBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15524,11 +17323,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtScrollBarAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15630,6 +17451,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ScrollPresenterAutomationPeer class --------------------
 
+    struct PyWinrtScrollPresenterAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeerT<PyWinrtScrollPresenterAutomationPeer>
+    {
+        PyWinrtScrollPresenterAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeerT<PyWinrtScrollPresenterAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ScrollPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15639,11 +17465,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtScrollPresenterAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -15745,6 +17593,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ScrollViewerAutomationPeer class --------------------
 
+    struct PyWinrtScrollViewerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeerT<PyWinrtScrollViewerAutomationPeer>
+    {
+        PyWinrtScrollViewerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ScrollViewer owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeerT<PyWinrtScrollViewerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ScrollViewerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15754,11 +17607,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollViewer>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtScrollViewerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -16104,6 +17979,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SelectorAutomationPeer class --------------------
 
+    struct PyWinrtSelectorAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeerT<PyWinrtSelectorAutomationPeer>
+    {
+        PyWinrtSelectorAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeerT<PyWinrtSelectorAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_SelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16113,11 +17993,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSelectorAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -16310,6 +18212,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SelectorBarItemAutomationPeer class --------------------
 
+    struct PyWinrtSelectorBarItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeerT<PyWinrtSelectorBarItemAutomationPeer>
+    {
+        PyWinrtSelectorBarItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeerT<PyWinrtSelectorBarItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_SelectorBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16319,11 +18226,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSelectorBarItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -16425,6 +18354,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SelectorItemAutomationPeer class --------------------
 
+    struct PyWinrtSelectorItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeerT<PyWinrtSelectorItemAutomationPeer>
+    {
+        PyWinrtSelectorItemAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeerT<PyWinrtSelectorItemAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_SelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16434,12 +18368,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSelectorItemAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -16709,6 +18665,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SemanticZoomAutomationPeer class --------------------
 
+    struct PyWinrtSemanticZoomAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeerT<PyWinrtSemanticZoomAutomationPeer>
+    {
+        PyWinrtSemanticZoomAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::SemanticZoom owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeerT<PyWinrtSemanticZoomAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_SemanticZoomAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16718,11 +18679,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SemanticZoom>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSemanticZoomAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -16889,6 +18872,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SliderAutomationPeer class --------------------
 
+    struct PyWinrtSliderAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeerT<PyWinrtSliderAutomationPeer>
+    {
+        PyWinrtSliderAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Slider owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeerT<PyWinrtSliderAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_SliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16898,11 +18886,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Slider>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSliderAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17004,6 +19014,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- SplitButtonAutomationPeer class --------------------
 
+    struct PyWinrtSplitButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeerT<PyWinrtSplitButtonAutomationPeer>
+    {
+        PyWinrtSplitButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::SplitButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeerT<PyWinrtSplitButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_SplitButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17013,11 +19028,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SplitButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSplitButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17260,6 +19297,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TabViewAutomationPeer class --------------------
 
+    struct PyWinrtTabViewAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeerT<PyWinrtTabViewAutomationPeer>
+    {
+        PyWinrtTabViewAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TabView owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeerT<PyWinrtTabViewAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TabViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17269,11 +19311,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TabView>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTabViewAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17375,6 +19439,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TabViewItemAutomationPeer class --------------------
 
+    struct PyWinrtTabViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeerT<PyWinrtTabViewItemAutomationPeer>
+    {
+        PyWinrtTabViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TabViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeerT<PyWinrtTabViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TabViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17384,11 +19453,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTabViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17490,6 +19581,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TeachingTipAutomationPeer class --------------------
 
+    struct PyWinrtTeachingTipAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeerT<PyWinrtTeachingTipAutomationPeer>
+    {
+        PyWinrtTeachingTipAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TeachingTip owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeerT<PyWinrtTeachingTipAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TeachingTipAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17499,11 +19595,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTeachingTipAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17605,6 +19723,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TextBlockAutomationPeer class --------------------
 
+    struct PyWinrtTextBlockAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeerT<PyWinrtTextBlockAutomationPeer>
+    {
+        PyWinrtTextBlockAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TextBlock owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeerT<PyWinrtTextBlockAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17614,11 +19737,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TextBlock>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTextBlockAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17720,6 +19865,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TextBoxAutomationPeer class --------------------
 
+    struct PyWinrtTextBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeerT<PyWinrtTextBoxAutomationPeer>
+    {
+        PyWinrtTextBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TextBox owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeerT<PyWinrtTextBoxAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TextBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17729,11 +19879,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TextBox>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTextBoxAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17835,6 +20007,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ThumbAutomationPeer class --------------------
 
+    struct PyWinrtThumbAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeerT<PyWinrtThumbAutomationPeer>
+    {
+        PyWinrtThumbAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::Thumb owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeerT<PyWinrtThumbAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ThumbAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17844,11 +20021,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::Thumb>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtThumbAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -17950,6 +20149,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TimePickerAutomationPeer class --------------------
 
+    struct PyWinrtTimePickerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeerT<PyWinrtTimePickerAutomationPeer>
+    {
+        PyWinrtTimePickerAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TimePicker owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeerT<PyWinrtTimePickerAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TimePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17959,11 +20163,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TimePicker>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTimePickerAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -18131,6 +20357,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ToggleButtonAutomationPeer class --------------------
 
+    struct PyWinrtToggleButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeerT<PyWinrtToggleButtonAutomationPeer>
+    {
+        PyWinrtToggleButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeerT<PyWinrtToggleButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18140,11 +20371,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtToggleButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -18311,6 +20564,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ToggleMenuFlyoutItemAutomationPeer class --------------------
 
+    struct PyWinrtToggleMenuFlyoutItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeerT<PyWinrtToggleMenuFlyoutItemAutomationPeer>
+    {
+        PyWinrtToggleMenuFlyoutItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeerT<PyWinrtToggleMenuFlyoutItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ToggleMenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18320,11 +20578,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtToggleMenuFlyoutItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -18491,6 +20771,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ToggleSplitButtonAutomationPeer class --------------------
 
+    struct PyWinrtToggleSplitButtonAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeerT<PyWinrtToggleSplitButtonAutomationPeer>
+    {
+        PyWinrtToggleSplitButtonAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeerT<PyWinrtToggleSplitButtonAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ToggleSplitButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18500,11 +20785,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtToggleSplitButtonAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -18774,6 +21081,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- ToggleSwitchAutomationPeer class --------------------
 
+    struct PyWinrtToggleSwitchAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeerT<PyWinrtToggleSwitchAutomationPeer>
+    {
+        PyWinrtToggleSwitchAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::ToggleSwitch owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeerT<PyWinrtToggleSwitchAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_ToggleSwitchAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18783,11 +21095,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ToggleSwitch>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtToggleSwitchAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -18954,6 +21288,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TreeViewItemAutomationPeer class --------------------
 
+    struct PyWinrtTreeViewItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeerT<PyWinrtTreeViewItemAutomationPeer>
+    {
+        PyWinrtTreeViewItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TreeViewItem owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeerT<PyWinrtTreeViewItemAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TreeViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18963,11 +21302,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TreeViewItem>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTreeViewItemAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -19172,6 +21533,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TreeViewItemDataAutomationPeer class --------------------
 
+    struct PyWinrtTreeViewItemDataAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeerT<PyWinrtTreeViewItemDataAutomationPeer>
+    {
+        PyWinrtTreeViewItemDataAutomationPeer(winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer parent) : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeerT<PyWinrtTreeViewItemDataAutomationPeer>(item, parent) {}
+    };
+
     static PyObject* _new_TreeViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -19181,12 +21547,34 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 2)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTreeViewItemDataAutomationPeer>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer instance{param0, param1};
                 return py::wrap(instance, type);
@@ -19391,6 +21779,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- TreeViewListAutomationPeer class --------------------
 
+    struct PyWinrtTreeViewListAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeerT<PyWinrtTreeViewListAutomationPeer>
+    {
+        PyWinrtTreeViewListAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TreeViewList owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeerT<PyWinrtTreeViewListAutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_TreeViewListAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -19400,11 +21793,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::TreeViewList>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTreeViewListAutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer instance{param0};
                 return py::wrap(instance, type);
@@ -19506,6 +21921,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     // ----- WebView2AutomationPeer class --------------------
 
+    struct PyWinrtWebView2AutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeerT<PyWinrtWebView2AutomationPeer>
+    {
+        PyWinrtWebView2AutomationPeer(winrt::Microsoft::UI::Xaml::Controls::WebView2 owner) : winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeerT<PyWinrtWebView2AutomationPeer>(owner) {}
+    };
+
     static PyObject* _new_WebView2AutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -19515,11 +21935,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::WebView2>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtWebView2AutomationPeer>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer instance{param0};
                 return py::wrap(instance, type);

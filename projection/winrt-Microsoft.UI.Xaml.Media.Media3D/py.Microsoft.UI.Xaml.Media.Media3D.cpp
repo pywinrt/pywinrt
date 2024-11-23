@@ -1896,6 +1896,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     // ----- Transform3D class --------------------
 
+    struct PyWinrtTransform3D : winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3DT<PyWinrtTransform3D>
+    {
+    };
+
     static PyObject* _new_Transform3D(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>::type_name);

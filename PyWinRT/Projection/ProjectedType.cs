@@ -104,10 +104,15 @@ class ProjectedType
             .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
             .ToArray();
 
+        var factories = GetFactories(type);
         Constructors = EnumerateConstructors(type).ToArray();
         Methods = EnumerateMethods(type).ToList();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
+
+        HasComposableFactory = factories.Values.Any(f =>
+            f.IsComposable && f.Type?.Methods.Count > 0
+        );
     }
 
     private enum Mark
@@ -327,6 +332,11 @@ class ProjectedType
     /// </summary>
     public IReadOnlyCollection<ProjectedEvent> Events { get; }
 
+    /// <summary>
+    /// True if the type has any factory methods for creating instances of a composable type.
+    /// </summary>
+    public bool HasComposableFactory { get; }
+
     public string GetMethodInvokeContext(MethodDefinition method)
     {
         if (IsGeneric)
@@ -367,6 +377,43 @@ class ProjectedType
         return type
             .Methods.Where(m => m.IsConstructor && m.IsPublic)
             .Select(m => new ProjectedMethod(m, [type], default));
+    }
+
+    public readonly record struct FactoryInfo(
+        TypeDefinition? Type,
+        bool IsActivatable,
+        bool IsStatic,
+        bool IsComposable,
+        bool IsVisible
+    ) { }
+
+    private static IReadOnlyDictionary<string, FactoryInfo> GetFactories(TypeDefinition type)
+    {
+        var factories = new Dictionary<string, FactoryInfo>();
+
+        foreach (
+            var attr in type.CustomAttributes.Where(a =>
+                a.AttributeType.Namespace == "Windows.Foundation.Metadata"
+            )
+        )
+        {
+            var constructorType = attr.ConstructorArguments.FirstOrDefault(a =>
+                a.Type.FullName == "System.Type"
+            );
+            var infoType = ((TypeReference)constructorType.Value)?.Resolve();
+
+            var info = new FactoryInfo(
+                infoType,
+                attr.AttributeType.Name == "ActivatableAttribute",
+                attr.AttributeType.Name == "StaticAttribute",
+                attr.AttributeType.Name == "ComposableAttribute",
+                false // not implemented yet
+            );
+
+            factories[info.Type?.FullName ?? ""] = info;
+        }
+
+        return factories;
     }
 
     private static IEnumerable<ProjectedMethod> EnumerateMethods(TypeDefinition type)

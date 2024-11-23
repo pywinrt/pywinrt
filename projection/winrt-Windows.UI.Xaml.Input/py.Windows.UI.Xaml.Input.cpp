@@ -4770,6 +4770,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- KeyboardAccelerator class --------------------
 
+    struct PyWinrtKeyboardAccelerator : winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>
+    {
+        PyWinrtKeyboardAccelerator() : winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>() {}
+    };
+
     static PyObject* _new_KeyboardAccelerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4779,10 +4784,32 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtKeyboardAccelerator>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Input::KeyboardAccelerator instance{};
                 return py::wrap(instance, type);
             }
@@ -7331,6 +7358,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ManipulationStartedRoutedEventArgs class --------------------
 
+    struct PyWinrtManipulationStartedRoutedEventArgs : winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>
+    {
+        PyWinrtManipulationStartedRoutedEventArgs() : winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>() {}
+    };
+
     static PyObject* _new_ManipulationStartedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7340,10 +7372,32 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtManipulationStartedRoutedEventArgs>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
@@ -9029,6 +9083,12 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- StandardUICommand class --------------------
 
+    struct PyWinrtStandardUICommand : winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>
+    {
+        PyWinrtStandardUICommand() : winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>() {}
+        PyWinrtStandardUICommand(winrt::Windows::UI::Xaml::Input::StandardUICommandKind kind) : winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>(kind) {}
+    };
+
     static PyObject* _new_StandardUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9038,10 +9098,32 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::StandardUICommand>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtStandardUICommand>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Input::StandardUICommand instance{};
                 return py::wrap(instance, type);
             }
@@ -9056,6 +9138,21 @@ namespace py::cpp::Windows::UI::Xaml::Input
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::StandardUICommandKind>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtStandardUICommand>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Input::StandardUICommand instance{param0};
                 return py::wrap(instance, type);
@@ -9462,6 +9559,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- XamlUICommand class --------------------
 
+    struct PyWinrtXamlUICommand : winrt::Windows::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>
+    {
+        PyWinrtXamlUICommand() : winrt::Windows::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>() {}
+    };
+
     static PyObject* _new_XamlUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9471,10 +9573,32 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::XamlUICommand>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtXamlUICommand>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::XamlUICommand*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Input::XamlUICommand instance{};
                 return py::wrap(instance, type);
             }

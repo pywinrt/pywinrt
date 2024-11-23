@@ -18,8 +18,36 @@ class TestTestComponent(unittest.TestCase):
         # subclassing a class type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
-            class s(tc.TestRunner):  # type: ignore
+            class s(tc.Class):  # type: ignore
                 pass
+
+    def test_composable_subclass(self):
+        class C(tc.Composable):
+            pass
+
+        c = C()
+        self.assertIsInstance(c, C)
+        self.assertIsInstance(c, tc.Composable)
+        self.assertEqual(c.value, 0)
+        self.assertEqual(c.one(), 1)
+
+    def test_overriding_new(self):
+        class C(tc.Composable):
+            def __new__(cls):
+                return super().__new__(cls, 2)
+
+        c = C()
+        self.assertIsInstance(c, C)
+        self.assertIsInstance(c, tc.Composable)
+        self.assertEqual(c.value, 2)
+        self.assertEqual(c.one(), 1)
+
+    def test_composable_inheritance(self):
+        d = tc.Derived()
+
+        self.assertIsInstance(d, tc.Composable)
+        # TODO: implement runtime checking for interface implementation
+        # self.assertIsInstance(d, tc.ImplementsIRequiredOne)
 
     def test_interface_subclass(self):
         # subclassing a interface type is not allowed

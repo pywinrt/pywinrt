@@ -6,6 +6,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 {
     // ----- CustomXamlResourceLoader class --------------------
 
+    struct PyWinrtCustomXamlResourceLoader : winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>
+    {
+        PyWinrtCustomXamlResourceLoader() : winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoaderT<PyWinrtCustomXamlResourceLoader>() {}
+    };
+
     static PyObject* _new_CustomXamlResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCustomXamlResourceLoader>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader instance{};
                 return py::wrap(instance, type);
             }

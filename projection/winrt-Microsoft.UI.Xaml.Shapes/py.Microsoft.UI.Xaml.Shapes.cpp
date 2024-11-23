@@ -563,6 +563,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     // ----- Path class --------------------
 
+    struct PyWinrtPath : winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>
+    {
+        PyWinrtPath() : winrt::Microsoft::UI::Xaml::Shapes::PathT<PyWinrtPath>() {}
+    };
+
     static PyObject* _new_Path(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -572,10 +577,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Shapes::Path>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPath>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Shapes::Path instance{};
                 return py::wrap(instance, type);
             }
@@ -1637,6 +1664,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     };
 
     // ----- Shape class --------------------
+
+    struct PyWinrtShape : winrt::Microsoft::UI::Xaml::Shapes::ShapeT<PyWinrtShape>
+    {
+    };
 
     static PyObject* _new_Shape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {

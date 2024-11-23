@@ -6,6 +6,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
     // ----- CustomMapTileDataSource class --------------------
 
+    struct PyWinrtCustomMapTileDataSource : winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSourceT<PyWinrtCustomMapTileDataSource>
+    {
+        PyWinrtCustomMapTileDataSource() : winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSourceT<PyWinrtCustomMapTileDataSource>() {}
+    };
+
     static PyObject* _new_CustomMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCustomMapTileDataSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
@@ -178,6 +205,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- HttpMapTileDataSource class --------------------
 
+    struct PyWinrtHttpMapTileDataSource : winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>
+    {
+        PyWinrtHttpMapTileDataSource() : winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>() {}
+        PyWinrtHttpMapTileDataSource(winrt::hstring uriFormatString) : winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSourceT<PyWinrtHttpMapTileDataSource>(uriFormatString) {}
+    };
+
     static PyObject* _new_HttpMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -187,10 +220,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHttpMapTileDataSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
@@ -205,6 +260,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHttpMapTileDataSource>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{param0};
                 return py::wrap(instance, type);
@@ -516,6 +586,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- LocalMapTileDataSource class --------------------
 
+    struct PyWinrtLocalMapTileDataSource : winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>
+    {
+        PyWinrtLocalMapTileDataSource() : winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>() {}
+        PyWinrtLocalMapTileDataSource(winrt::hstring uriFormatString) : winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSourceT<PyWinrtLocalMapTileDataSource>(uriFormatString) {}
+    };
+
     static PyObject* _new_LocalMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -525,10 +601,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtLocalMapTileDataSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
@@ -543,6 +641,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtLocalMapTileDataSource>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{param0};
                 return py::wrap(instance, type);
@@ -9781,6 +9894,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapCustomExperience class --------------------
 
+    struct PyWinrtMapCustomExperience : winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceT<PyWinrtMapCustomExperience>
+    {
+        PyWinrtMapCustomExperience() : winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceT<PyWinrtMapCustomExperience>() {}
+    };
+
     static PyObject* _new_MapCustomExperience(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9790,10 +9908,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapCustomExperience>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience instance{};
                 return py::wrap(instance, type);
             }
@@ -9982,6 +10122,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapElement class --------------------
 
+    struct PyWinrtMapElement : winrt::Windows::UI::Xaml::Controls::Maps::MapElementT<PyWinrtMapElement>
+    {
+        PyWinrtMapElement() : winrt::Windows::UI::Xaml::Controls::Maps::MapElementT<PyWinrtMapElement>() {}
+    };
+
     static PyObject* _new_MapElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9991,10 +10136,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapElement>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapElement instance{};
                 return py::wrap(instance, type);
             }
@@ -13977,6 +14144,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapLayer class --------------------
 
+    struct PyWinrtMapLayer : winrt::Windows::UI::Xaml::Controls::Maps::MapLayerT<PyWinrtMapLayer>
+    {
+        PyWinrtMapLayer() : winrt::Windows::UI::Xaml::Controls::Maps::MapLayerT<PyWinrtMapLayer>() {}
+    };
+
     static PyObject* _new_MapLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13986,10 +14158,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapLayer>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapLayer instance{};
                 return py::wrap(instance, type);
             }
@@ -14357,6 +14551,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapModel3D class --------------------
 
+    struct PyWinrtMapModel3D : winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DT<PyWinrtMapModel3D>
+    {
+        PyWinrtMapModel3D() : winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DT<PyWinrtMapModel3D>() {}
+    };
+
     static PyObject* _new_MapModel3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14366,10 +14565,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapModel3D>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D instance{};
                 return py::wrap(instance, type);
             }
@@ -15637,6 +15858,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapRouteView class --------------------
 
+    struct PyWinrtMapRouteView : winrt::Windows::UI::Xaml::Controls::Maps::MapRouteViewT<PyWinrtMapRouteView>
+    {
+        PyWinrtMapRouteView(winrt::Windows::Services::Maps::MapRoute route) : winrt::Windows::UI::Xaml::Controls::Maps::MapRouteViewT<PyWinrtMapRouteView>(route) {}
+    };
+
     static PyObject* _new_MapRouteView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15646,11 +15872,33 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 1)
         {
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapRouteView>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView instance{param0};
                 return py::wrap(instance, type);
@@ -19483,6 +19731,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapTileDataSource class --------------------
 
+    struct PyWinrtMapTileDataSource : winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSourceT<PyWinrtMapTileDataSource>
+    {
+        PyWinrtMapTileDataSource() : winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSourceT<PyWinrtMapTileDataSource>() {}
+    };
+
     static PyObject* _new_MapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -19492,10 +19745,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileDataSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
@@ -19596,6 +19871,15 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapTileSource class --------------------
 
+    struct PyWinrtMapTileSource : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>
+    {
+        PyWinrtMapTileSource() : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>() {}
+        PyWinrtMapTileSource(winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource) : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource) {}
+        PyWinrtMapTileSource(winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange) : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange) {}
+        PyWinrtMapTileSource(winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds) : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange, bounds) {}
+        PyWinrtMapTileSource(winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds, int32_t tileSizeInPixels) : winrt::Windows::UI::Xaml::Controls::Maps::MapTileSourceT<PyWinrtMapTileSource>(dataSource, zoomLevelRange, bounds, tileSizeInPixels) {}
+    };
+
     static PyObject* _new_MapTileSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -19605,10 +19889,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileSource>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{};
                 return py::wrap(instance, type);
             }
@@ -19623,6 +19929,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(args, 0);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileSource>(param0);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0};
                 return py::wrap(instance, type);
@@ -19639,6 +19960,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(args, 1);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileSource>(param0, param1);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1};
                 return py::wrap(instance, type);
@@ -19657,6 +19993,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 2);
 
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileSource>(param0, param1, param2);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
@@ -19674,6 +20025,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
+
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMapTileSource>(param0, param1, param2, param3);
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
 
                 winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);

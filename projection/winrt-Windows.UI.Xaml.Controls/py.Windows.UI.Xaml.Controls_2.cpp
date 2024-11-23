@@ -6,6 +6,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 {
     // ----- AppBarButton class --------------------
 
+    struct PyWinrtAppBarButton : winrt::Windows::UI::Xaml::Controls::AppBarButtonT<PyWinrtAppBarButton>
+    {
+        PyWinrtAppBarButton() : winrt::Windows::UI::Xaml::Controls::AppBarButtonT<PyWinrtAppBarButton>() {}
+    };
+
     static PyObject* _new_AppBarButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::AppBarButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAppBarButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::AppBarButton instance{};
                 return py::wrap(instance, type);
             }
@@ -734,6 +761,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- AppBarToggleButton class --------------------
 
+    struct PyWinrtAppBarToggleButton : winrt::Windows::UI::Xaml::Controls::AppBarToggleButtonT<PyWinrtAppBarToggleButton>
+    {
+        PyWinrtAppBarToggleButton() : winrt::Windows::UI::Xaml::Controls::AppBarToggleButtonT<PyWinrtAppBarToggleButton>() {}
+    };
+
     static PyObject* _new_AppBarToggleButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -743,10 +775,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtAppBarToggleButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::AppBarToggleButton instance{};
                 return py::wrap(instance, type);
             }
@@ -1462,6 +1516,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- Button class --------------------
 
+    struct PyWinrtButton : winrt::Windows::UI::Xaml::Controls::ButtonT<PyWinrtButton>
+    {
+        PyWinrtButton() : winrt::Windows::UI::Xaml::Controls::ButtonT<PyWinrtButton>() {}
+    };
+
     static PyObject* _new_Button(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1471,10 +1530,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Button>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Button*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Button instance{};
                 return py::wrap(instance, type);
             }
@@ -1664,6 +1745,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- CheckBox class --------------------
 
+    struct PyWinrtCheckBox : winrt::Windows::UI::Xaml::Controls::CheckBoxT<PyWinrtCheckBox>
+    {
+        PyWinrtCheckBox() : winrt::Windows::UI::Xaml::Controls::CheckBoxT<PyWinrtCheckBox>() {}
+    };
+
     static PyObject* _new_CheckBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1673,10 +1759,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::CheckBox>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCheckBox>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CheckBox*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::CheckBox instance{};
                 return py::wrap(instance, type);
             }
@@ -1777,6 +1885,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ComboBox class --------------------
 
+    struct PyWinrtComboBox : winrt::Windows::UI::Xaml::Controls::ComboBoxT<PyWinrtComboBox>
+    {
+        PyWinrtComboBox() : winrt::Windows::UI::Xaml::Controls::ComboBoxT<PyWinrtComboBox>() {}
+    };
+
     static PyObject* _new_ComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -1786,10 +1899,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ComboBox>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComboBox>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBox*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ComboBox instance{};
                 return py::wrap(instance, type);
             }
@@ -3332,6 +3467,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ComboBoxItem class --------------------
 
+    struct PyWinrtComboBoxItem : winrt::Windows::UI::Xaml::Controls::ComboBoxItemT<PyWinrtComboBoxItem>
+    {
+        PyWinrtComboBoxItem() : winrt::Windows::UI::Xaml::Controls::ComboBoxItemT<PyWinrtComboBoxItem>() {}
+    };
+
     static PyObject* _new_ComboBoxItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -3341,10 +3481,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ComboBoxItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtComboBoxItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBoxItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ComboBoxItem instance{};
                 return py::wrap(instance, type);
             }
@@ -3445,6 +3607,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- CommandBarFlyout class --------------------
 
+    struct PyWinrtCommandBarFlyout : winrt::Windows::UI::Xaml::Controls::CommandBarFlyoutT<PyWinrtCommandBarFlyout>
+    {
+        PyWinrtCommandBarFlyout() : winrt::Windows::UI::Xaml::Controls::CommandBarFlyoutT<PyWinrtCommandBarFlyout>() {}
+    };
+
     static PyObject* _new_CommandBarFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -3454,10 +3621,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtCommandBarFlyout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::CommandBarFlyout instance{};
                 return py::wrap(instance, type);
             }
@@ -4713,6 +4902,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- DropDownButton class --------------------
 
+    struct PyWinrtDropDownButton : winrt::Windows::UI::Xaml::Controls::DropDownButtonT<PyWinrtDropDownButton>
+    {
+        PyWinrtDropDownButton() : winrt::Windows::UI::Xaml::Controls::DropDownButtonT<PyWinrtDropDownButton>() {}
+    };
+
     static PyObject* _new_DropDownButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4722,10 +4916,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::DropDownButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDropDownButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::DropDownButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::DropDownButton instance{};
                 return py::wrap(instance, type);
             }
@@ -4826,6 +5042,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- FlipView class --------------------
 
+    struct PyWinrtFlipView : winrt::Windows::UI::Xaml::Controls::FlipViewT<PyWinrtFlipView>
+    {
+        PyWinrtFlipView() : winrt::Windows::UI::Xaml::Controls::FlipViewT<PyWinrtFlipView>() {}
+    };
+
     static PyObject* _new_FlipView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4835,10 +5056,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::FlipView>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlipView>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipView*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::FlipView instance{};
                 return py::wrap(instance, type);
             }
@@ -5028,6 +5271,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- FlipViewItem class --------------------
 
+    struct PyWinrtFlipViewItem : winrt::Windows::UI::Xaml::Controls::FlipViewItemT<PyWinrtFlipViewItem>
+    {
+        PyWinrtFlipViewItem() : winrt::Windows::UI::Xaml::Controls::FlipViewItemT<PyWinrtFlipViewItem>() {}
+    };
+
     static PyObject* _new_FlipViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5037,10 +5285,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::FlipViewItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlipViewItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipViewItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::FlipViewItem instance{};
                 return py::wrap(instance, type);
             }
@@ -5141,6 +5411,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- Flyout class --------------------
 
+    struct PyWinrtFlyout : winrt::Windows::UI::Xaml::Controls::FlyoutT<PyWinrtFlyout>
+    {
+        PyWinrtFlyout() : winrt::Windows::UI::Xaml::Controls::FlyoutT<PyWinrtFlyout>() {}
+    };
+
     static PyObject* _new_Flyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5150,10 +5425,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Flyout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFlyout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Flyout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Flyout instance{};
                 return py::wrap(instance, type);
             }
@@ -5432,6 +5729,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- GridView class --------------------
 
+    struct PyWinrtGridView : winrt::Windows::UI::Xaml::Controls::GridViewT<PyWinrtGridView>
+    {
+        PyWinrtGridView() : winrt::Windows::UI::Xaml::Controls::GridViewT<PyWinrtGridView>() {}
+    };
+
     static PyObject* _new_GridView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5441,10 +5743,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::GridView>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridView>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridView*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::GridView instance{};
                 return py::wrap(instance, type);
             }
@@ -5545,6 +5869,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- GridViewItem class --------------------
 
+    struct PyWinrtGridViewItem : winrt::Windows::UI::Xaml::Controls::GridViewItemT<PyWinrtGridViewItem>
+    {
+        PyWinrtGridViewItem() : winrt::Windows::UI::Xaml::Controls::GridViewItemT<PyWinrtGridViewItem>() {}
+    };
+
     static PyObject* _new_GridViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5554,10 +5883,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::GridViewItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGridViewItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridViewItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::GridViewItem instance{};
                 return py::wrap(instance, type);
             }
@@ -5685,6 +6036,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- HyperlinkButton class --------------------
 
+    struct PyWinrtHyperlinkButton : winrt::Windows::UI::Xaml::Controls::HyperlinkButtonT<PyWinrtHyperlinkButton>
+    {
+        PyWinrtHyperlinkButton() : winrt::Windows::UI::Xaml::Controls::HyperlinkButtonT<PyWinrtHyperlinkButton>() {}
+    };
+
     static PyObject* _new_HyperlinkButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5694,10 +6050,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtHyperlinkButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::HyperlinkButton instance{};
                 return py::wrap(instance, type);
             }
@@ -5887,6 +6265,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarBallpointPenButton class --------------------
 
+    struct PyWinrtInkToolbarBallpointPenButton : winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButtonT<PyWinrtInkToolbarBallpointPenButton>
+    {
+        PyWinrtInkToolbarBallpointPenButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButtonT<PyWinrtInkToolbarBallpointPenButton>() {}
+    };
+
     static PyObject* _new_InkToolbarBallpointPenButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -5896,10 +6279,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarBallpointPenButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton instance{};
                 return py::wrap(instance, type);
             }
@@ -6000,6 +6405,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarCustomPenButton class --------------------
 
+    struct PyWinrtInkToolbarCustomPenButton : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButtonT<PyWinrtInkToolbarCustomPenButton>
+    {
+        PyWinrtInkToolbarCustomPenButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButtonT<PyWinrtInkToolbarCustomPenButton>() {}
+    };
+
     static PyObject* _new_InkToolbarCustomPenButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6009,10 +6419,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarCustomPenButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton instance{};
                 return py::wrap(instance, type);
             }
@@ -6291,6 +6723,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarCustomToggleButton class --------------------
 
+    struct PyWinrtInkToolbarCustomToggleButton : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButtonT<PyWinrtInkToolbarCustomToggleButton>
+    {
+        PyWinrtInkToolbarCustomToggleButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButtonT<PyWinrtInkToolbarCustomToggleButton>() {}
+    };
+
     static PyObject* _new_InkToolbarCustomToggleButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6300,10 +6737,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarCustomToggleButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton instance{};
                 return py::wrap(instance, type);
             }
@@ -6404,6 +6863,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarCustomToolButton class --------------------
 
+    struct PyWinrtInkToolbarCustomToolButton : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButtonT<PyWinrtInkToolbarCustomToolButton>
+    {
+        PyWinrtInkToolbarCustomToolButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButtonT<PyWinrtInkToolbarCustomToolButton>() {}
+    };
+
     static PyObject* _new_InkToolbarCustomToolButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6413,10 +6877,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarCustomToolButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton instance{};
                 return py::wrap(instance, type);
             }
@@ -6606,6 +7092,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarEraserButton class --------------------
 
+    struct PyWinrtInkToolbarEraserButton : winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButtonT<PyWinrtInkToolbarEraserButton>
+    {
+        PyWinrtInkToolbarEraserButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButtonT<PyWinrtInkToolbarEraserButton>() {}
+    };
+
     static PyObject* _new_InkToolbarEraserButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6615,10 +7106,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarEraserButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton instance{};
                 return py::wrap(instance, type);
             }
@@ -6808,6 +7321,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarFlyoutItem class --------------------
 
+    struct PyWinrtInkToolbarFlyoutItem : winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItemT<PyWinrtInkToolbarFlyoutItem>
+    {
+        PyWinrtInkToolbarFlyoutItem() : winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItemT<PyWinrtInkToolbarFlyoutItem>() {}
+    };
+
     static PyObject* _new_InkToolbarFlyoutItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -6817,10 +7335,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarFlyoutItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem instance{};
                 return py::wrap(instance, type);
             }
@@ -7217,6 +7757,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarHighlighterButton class --------------------
 
+    struct PyWinrtInkToolbarHighlighterButton : winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButtonT<PyWinrtInkToolbarHighlighterButton>
+    {
+        PyWinrtInkToolbarHighlighterButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButtonT<PyWinrtInkToolbarHighlighterButton>() {}
+    };
+
     static PyObject* _new_InkToolbarHighlighterButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -7226,10 +7771,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarHighlighterButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton instance{};
                 return py::wrap(instance, type);
             }
@@ -8127,6 +8694,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarPencilButton class --------------------
 
+    struct PyWinrtInkToolbarPencilButton : winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButtonT<PyWinrtInkToolbarPencilButton>
+    {
+        PyWinrtInkToolbarPencilButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButtonT<PyWinrtInkToolbarPencilButton>() {}
+    };
+
     static PyObject* _new_InkToolbarPencilButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8136,10 +8708,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarPencilButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPencilButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton instance{};
                 return py::wrap(instance, type);
             }
@@ -8240,6 +8834,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarRulerButton class --------------------
 
+    struct PyWinrtInkToolbarRulerButton : winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButtonT<PyWinrtInkToolbarRulerButton>
+    {
+        PyWinrtInkToolbarRulerButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButtonT<PyWinrtInkToolbarRulerButton>() {}
+    };
+
     static PyObject* _new_InkToolbarRulerButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8249,10 +8848,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarRulerButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton instance{};
                 return py::wrap(instance, type);
             }
@@ -8407,6 +9028,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- InkToolbarStencilButton class --------------------
 
+    struct PyWinrtInkToolbarStencilButton : winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButtonT<PyWinrtInkToolbarStencilButton>
+    {
+        PyWinrtInkToolbarStencilButton() : winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButtonT<PyWinrtInkToolbarStencilButton>() {}
+    };
+
     static PyObject* _new_InkToolbarStencilButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -8416,10 +9042,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtInkToolbarStencilButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton instance{};
                 return py::wrap(instance, type);
             }
@@ -9220,6 +9868,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ListBox class --------------------
 
+    struct PyWinrtListBox : winrt::Windows::UI::Xaml::Controls::ListBoxT<PyWinrtListBox>
+    {
+        PyWinrtListBox() : winrt::Windows::UI::Xaml::Controls::ListBoxT<PyWinrtListBox>() {}
+    };
+
     static PyObject* _new_ListBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9229,10 +9882,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ListBox>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListBox>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBox*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ListBox instance{};
                 return py::wrap(instance, type);
             }
@@ -9616,6 +10291,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ListBoxItem class --------------------
 
+    struct PyWinrtListBoxItem : winrt::Windows::UI::Xaml::Controls::ListBoxItemT<PyWinrtListBoxItem>
+    {
+        PyWinrtListBoxItem() : winrt::Windows::UI::Xaml::Controls::ListBoxItemT<PyWinrtListBoxItem>() {}
+    };
+
     static PyObject* _new_ListBoxItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -9625,10 +10305,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ListBoxItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListBoxItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBoxItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ListBoxItem instance{};
                 return py::wrap(instance, type);
             }
@@ -10679,6 +11381,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ListView class --------------------
 
+    struct PyWinrtListView : winrt::Windows::UI::Xaml::Controls::ListViewT<PyWinrtListView>
+    {
+        PyWinrtListView() : winrt::Windows::UI::Xaml::Controls::ListViewT<PyWinrtListView>() {}
+    };
+
     static PyObject* _new_ListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -10688,10 +11395,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ListView>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListView>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListView*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ListView instance{};
                 return py::wrap(instance, type);
             }
@@ -10791,6 +11520,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     };
 
     // ----- ListViewBase class --------------------
+
+    struct PyWinrtListViewBase : winrt::Windows::UI::Xaml::Controls::ListViewBaseT<PyWinrtListViewBase>
+    {
+    };
 
     static PyObject* _new_ListViewBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -13835,6 +14568,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ListViewItem class --------------------
 
+    struct PyWinrtListViewItem : winrt::Windows::UI::Xaml::Controls::ListViewItemT<PyWinrtListViewItem>
+    {
+        PyWinrtListViewItem() : winrt::Windows::UI::Xaml::Controls::ListViewItemT<PyWinrtListViewItem>() {}
+    };
+
     static PyObject* _new_ListViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13844,10 +14582,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ListViewItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtListViewItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListViewItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ListViewItem instance{};
                 return py::wrap(instance, type);
             }
@@ -13975,6 +14735,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- MenuBarItemFlyout class --------------------
 
+    struct PyWinrtMenuBarItemFlyout : winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyoutT<PyWinrtMenuBarItemFlyout>
+    {
+        PyWinrtMenuBarItemFlyout() : winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyoutT<PyWinrtMenuBarItemFlyout>() {}
+    };
+
     static PyObject* _new_MenuBarItemFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -13984,10 +14749,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuBarItemFlyout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuBarItemFlyout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout instance{};
                 return py::wrap(instance, type);
             }
@@ -14088,6 +14875,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- MenuFlyout class --------------------
 
+    struct PyWinrtMenuFlyout : winrt::Windows::UI::Xaml::Controls::MenuFlyoutT<PyWinrtMenuFlyout>
+    {
+        PyWinrtMenuFlyout() : winrt::Windows::UI::Xaml::Controls::MenuFlyoutT<PyWinrtMenuFlyout>() {}
+    };
+
     static PyObject* _new_MenuFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14097,10 +14889,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::MenuFlyout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtMenuFlyout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::MenuFlyout instance{};
                 return py::wrap(instance, type);
             }
@@ -14358,6 +15172,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- NavigationViewItem class --------------------
 
+    struct PyWinrtNavigationViewItem : winrt::Windows::UI::Xaml::Controls::NavigationViewItemT<PyWinrtNavigationViewItem>
+    {
+        PyWinrtNavigationViewItem() : winrt::Windows::UI::Xaml::Controls::NavigationViewItemT<PyWinrtNavigationViewItem>() {}
+    };
+
     static PyObject* _new_NavigationViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14367,10 +15186,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::NavigationViewItem instance{};
                 return py::wrap(instance, type);
             }
@@ -14794,6 +15635,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- NavigationViewItemHeader class --------------------
 
+    struct PyWinrtNavigationViewItemHeader : winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeaderT<PyWinrtNavigationViewItemHeader>
+    {
+        PyWinrtNavigationViewItemHeader() : winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeaderT<PyWinrtNavigationViewItemHeader>() {}
+    };
+
     static PyObject* _new_NavigationViewItemHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14803,10 +15649,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItemHeader>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemHeader*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader instance{};
                 return py::wrap(instance, type);
             }
@@ -14907,6 +15775,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- NavigationViewItemSeparator class --------------------
 
+    struct PyWinrtNavigationViewItemSeparator : winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparatorT<PyWinrtNavigationViewItemSeparator>
+    {
+        PyWinrtNavigationViewItemSeparator() : winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparatorT<PyWinrtNavigationViewItemSeparator>() {}
+    };
+
     static PyObject* _new_NavigationViewItemSeparator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -14916,10 +15789,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewItemSeparator>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemSeparator*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator instance{};
                 return py::wrap(instance, type);
             }
@@ -15020,6 +15915,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- NavigationViewList class --------------------
 
+    struct PyWinrtNavigationViewList : winrt::Windows::UI::Xaml::Controls::NavigationViewListT<PyWinrtNavigationViewList>
+    {
+        PyWinrtNavigationViewList() : winrt::Windows::UI::Xaml::Controls::NavigationViewListT<PyWinrtNavigationViewList>() {}
+    };
+
     static PyObject* _new_NavigationViewList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15029,10 +15929,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::NavigationViewList>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtNavigationViewList>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewList*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::NavigationViewList instance{};
                 return py::wrap(instance, type);
             }
@@ -15522,6 +16444,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ProgressBar class --------------------
 
+    struct PyWinrtProgressBar : winrt::Windows::UI::Xaml::Controls::ProgressBarT<PyWinrtProgressBar>
+    {
+        PyWinrtProgressBar() : winrt::Windows::UI::Xaml::Controls::ProgressBarT<PyWinrtProgressBar>() {}
+    };
+
     static PyObject* _new_ProgressBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15531,10 +16458,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::ProgressBar>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtProgressBar>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ProgressBar*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::ProgressBar instance{};
                 return py::wrap(instance, type);
             }
@@ -15929,6 +16878,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- RadioButton class --------------------
 
+    struct PyWinrtRadioButton : winrt::Windows::UI::Xaml::Controls::RadioButtonT<PyWinrtRadioButton>
+    {
+        PyWinrtRadioButton() : winrt::Windows::UI::Xaml::Controls::RadioButtonT<PyWinrtRadioButton>() {}
+    };
+
     static PyObject* _new_RadioButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15938,10 +16892,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::RadioButton>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtRadioButton>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::RadioButton*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::RadioButton instance{};
                 return py::wrap(instance, type);
             }
@@ -16131,6 +17107,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- Slider class --------------------
 
+    struct PyWinrtSlider : winrt::Windows::UI::Xaml::Controls::SliderT<PyWinrtSlider>
+    {
+        PyWinrtSlider() : winrt::Windows::UI::Xaml::Controls::SliderT<PyWinrtSlider>() {}
+    };
+
     static PyObject* _new_Slider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -16140,10 +17121,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Slider>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtSlider>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Slider*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::Slider instance{};
                 return py::wrap(instance, type);
             }
@@ -17223,6 +18226,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- TextCommandBarFlyout class --------------------
 
+    struct PyWinrtTextCommandBarFlyout : winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyoutT<PyWinrtTextCommandBarFlyout>
+    {
+        PyWinrtTextCommandBarFlyout() : winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyoutT<PyWinrtTextCommandBarFlyout>() {}
+    };
+
     static PyObject* _new_TextCommandBarFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17232,10 +18240,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTextCommandBarFlyout>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TextCommandBarFlyout*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout instance{};
                 return py::wrap(instance, type);
             }
@@ -17814,6 +18844,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- TreeViewItem class --------------------
 
+    struct PyWinrtTreeViewItem : winrt::Windows::UI::Xaml::Controls::TreeViewItemT<PyWinrtTreeViewItem>
+    {
+        PyWinrtTreeViewItem() : winrt::Windows::UI::Xaml::Controls::TreeViewItemT<PyWinrtTreeViewItem>() {}
+    };
+
     static PyObject* _new_TreeViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -17823,10 +18858,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::TreeViewItem>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTreeViewItem>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::TreeViewItem instance{};
                 return py::wrap(instance, type);
             }
@@ -18693,6 +19750,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- TreeViewList class --------------------
 
+    struct PyWinrtTreeViewList : winrt::Windows::UI::Xaml::Controls::TreeViewListT<PyWinrtTreeViewList>
+    {
+        PyWinrtTreeViewList() : winrt::Windows::UI::Xaml::Controls::TreeViewListT<PyWinrtTreeViewList>() {}
+    };
+
     static PyObject* _new_TreeViewList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -18702,10 +19764,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::TreeViewList>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtTreeViewList>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewList*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Controls::TreeViewList instance{};
                 return py::wrap(instance, type);
             }

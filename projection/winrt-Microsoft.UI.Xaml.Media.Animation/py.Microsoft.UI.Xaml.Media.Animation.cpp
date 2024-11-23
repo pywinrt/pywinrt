@@ -296,6 +296,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     // ----- BasicConnectedAnimationConfiguration class --------------------
 
+    struct PyWinrtBasicConnectedAnimationConfiguration : winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfigurationT<PyWinrtBasicConnectedAnimationConfiguration>
+    {
+        PyWinrtBasicConnectedAnimationConfiguration() : winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfigurationT<PyWinrtBasicConnectedAnimationConfiguration>() {}
+    };
+
     static PyObject* _new_BasicConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -305,10 +310,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtBasicConnectedAnimationConfiguration>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
@@ -1776,6 +1803,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     };
 
     // ----- ColorKeyFrame class --------------------
+
+    struct PyWinrtColorKeyFrame : winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameT<PyWinrtColorKeyFrame>
+    {
+    };
 
     static PyObject* _new_ColorKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -4810,6 +4841,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     // ----- DirectConnectedAnimationConfiguration class --------------------
 
+    struct PyWinrtDirectConnectedAnimationConfiguration : winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfigurationT<PyWinrtDirectConnectedAnimationConfiguration>
+    {
+        PyWinrtDirectConnectedAnimationConfiguration() : winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfigurationT<PyWinrtDirectConnectedAnimationConfiguration>() {}
+    };
+
     static PyObject* _new_DirectConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -4819,10 +4855,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtDirectConnectedAnimationConfiguration>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
@@ -6061,6 +6119,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     };
 
     // ----- DoubleKeyFrame class --------------------
+
+    struct PyWinrtDoubleKeyFrame : winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameT<PyWinrtDoubleKeyFrame>
+    {
+    };
 
     static PyObject* _new_DoubleKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -11389,6 +11451,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     // ----- GravityConnectedAnimationConfiguration class --------------------
 
+    struct PyWinrtGravityConnectedAnimationConfiguration : winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfigurationT<PyWinrtGravityConnectedAnimationConfiguration>
+    {
+        PyWinrtGravityConnectedAnimationConfiguration() : winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfigurationT<PyWinrtGravityConnectedAnimationConfiguration>() {}
+    };
+
     static PyObject* _new_GravityConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -11398,10 +11465,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtGravityConnectedAnimationConfiguration>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
@@ -12372,6 +12461,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     // ----- NavigationTransitionInfo class --------------------
 
+    struct PyWinrtNavigationTransitionInfo : winrt::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfoT<PyWinrtNavigationTransitionInfo>
+    {
+    };
+
     static PyObject* _new_NavigationTransitionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo>::type_name);
@@ -12691,6 +12784,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     };
 
     // ----- ObjectKeyFrame class --------------------
+
+    struct PyWinrtObjectKeyFrame : winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameT<PyWinrtObjectKeyFrame>
+    {
+    };
 
     static PyObject* _new_ObjectKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -14673,6 +14770,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     };
 
     // ----- PointKeyFrame class --------------------
+
+    struct PyWinrtPointKeyFrame : winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameT<PyWinrtPointKeyFrame>
+    {
+    };
 
     static PyObject* _new_PointKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -23060,6 +23161,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     };
 
     // ----- Timeline class --------------------
+
+    struct PyWinrtTimeline : winrt::Microsoft::UI::Xaml::Media::Animation::TimelineT<PyWinrtTimeline>
+    {
+    };
 
     static PyObject* _new_Timeline(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {

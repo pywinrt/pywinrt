@@ -378,6 +378,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
     // ----- PrintDocument class --------------------
 
+    struct PyWinrtPrintDocument : winrt::Microsoft::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>
+    {
+        PyWinrtPrintDocument() : winrt::Microsoft::UI::Xaml::Printing::PrintDocumentT<PyWinrtPrintDocument>() {}
+    };
+
     static PyObject* _new_PrintDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -387,10 +392,32 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Printing::PrintDocument>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtPrintDocument>();
+
+                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Microsoft::UI::Xaml::Printing::PrintDocument instance{};
                 return py::wrap(instance, type);
             }

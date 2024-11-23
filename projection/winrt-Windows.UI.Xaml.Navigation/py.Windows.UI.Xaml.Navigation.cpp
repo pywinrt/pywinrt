@@ -6,6 +6,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 {
     // ----- FrameNavigationOptions class --------------------
 
+    struct PyWinrtFrameNavigationOptions : winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>
+    {
+        PyWinrtFrameNavigationOptions() : winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>() {}
+    };
+
     static PyObject* _new_FrameNavigationOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
         if (kwds != nullptr)
@@ -15,10 +20,32 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         }
 
         auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
         if (arg_count == 0)
         {
             try
             {
+                if (type != self_type)
+                {
+                    auto obj = winrt::make<PyWinrtFrameNavigationOptions>();
+
+                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Navigation::FrameNavigationOptions*>(type->tp_alloc(type, 0));
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&self->obj, std::move(obj));
+
+                    return reinterpret_cast<PyObject*>(self);
+                }
+
                 winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions instance{};
                 return py::wrap(instance, type);
             }
