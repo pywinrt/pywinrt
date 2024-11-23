@@ -4770,9 +4770,20 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- KeyboardAccelerator class --------------------
 
-    struct PyWinrtKeyboardAccelerator : py::py_obj_ref, winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>
+    struct PyWinrtKeyboardAccelerator;
+    using BasePyWinrtKeyboardAccelerator = winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator, py::IPywinrtObject>;
+
+    struct PyWinrtKeyboardAccelerator : py::py_obj_ref, BasePyWinrtKeyboardAccelerator
     {
-        PyWinrtKeyboardAccelerator(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorT<PyWinrtKeyboardAccelerator>() {}
+        PyWinrtKeyboardAccelerator(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtKeyboardAccelerator() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtKeyboardAccelerator* instance, bool is_last_reference)
         {
@@ -7362,9 +7373,20 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ManipulationStartedRoutedEventArgs class --------------------
 
-    struct PyWinrtManipulationStartedRoutedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>
+    struct PyWinrtManipulationStartedRoutedEventArgs;
+    using BasePyWinrtManipulationStartedRoutedEventArgs = winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtManipulationStartedRoutedEventArgs : py::py_obj_ref, BasePyWinrtManipulationStartedRoutedEventArgs
     {
-        PyWinrtManipulationStartedRoutedEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgsT<PyWinrtManipulationStartedRoutedEventArgs>() {}
+        PyWinrtManipulationStartedRoutedEventArgs(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtManipulationStartedRoutedEventArgs() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtManipulationStartedRoutedEventArgs* instance, bool is_last_reference)
         {
@@ -9091,10 +9113,21 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- StandardUICommand class --------------------
 
-    struct PyWinrtStandardUICommand : py::py_obj_ref, winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>
+    struct PyWinrtStandardUICommand;
+    using BasePyWinrtStandardUICommand = winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand, py::IPywinrtObject>;
+
+    struct PyWinrtStandardUICommand : py::py_obj_ref, BasePyWinrtStandardUICommand
     {
-        PyWinrtStandardUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>() {}
-        PyWinrtStandardUICommand(PyObject* py_obj, winrt::Windows::UI::Xaml::Input::StandardUICommandKind kind) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Input::StandardUICommandT<PyWinrtStandardUICommand>(kind) {}
+        PyWinrtStandardUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtStandardUICommand() {}
+        PyWinrtStandardUICommand(PyObject* py_obj, winrt::Windows::UI::Xaml::Input::StandardUICommandKind kind) : py::py_obj_ref(py_obj), BasePyWinrtStandardUICommand(kind) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtStandardUICommand* instance, bool is_last_reference)
         {
@@ -9570,9 +9603,20 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- XamlUICommand class --------------------
 
-    struct PyWinrtXamlUICommand : py::py_obj_ref, winrt::Windows::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>
+    struct PyWinrtXamlUICommand;
+    using BasePyWinrtXamlUICommand = winrt::Windows::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand, py::IPywinrtObject>;
+
+    struct PyWinrtXamlUICommand : py::py_obj_ref, BasePyWinrtXamlUICommand
     {
-        PyWinrtXamlUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Input::XamlUICommandT<PyWinrtXamlUICommand>() {}
+        PyWinrtXamlUICommand(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtXamlUICommand() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtXamlUICommand* instance, bool is_last_reference)
         {

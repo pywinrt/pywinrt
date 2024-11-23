@@ -6,9 +6,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 {
     // ----- FrameNavigationOptions class --------------------
 
-    struct PyWinrtFrameNavigationOptions : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>
+    struct PyWinrtFrameNavigationOptions;
+    using BasePyWinrtFrameNavigationOptions = winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions, py::IPywinrtObject>;
+
+    struct PyWinrtFrameNavigationOptions : py::py_obj_ref, BasePyWinrtFrameNavigationOptions
     {
-        PyWinrtFrameNavigationOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptionsT<PyWinrtFrameNavigationOptions>() {}
+        PyWinrtFrameNavigationOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFrameNavigationOptions() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFrameNavigationOptions* instance, bool is_last_reference)
         {

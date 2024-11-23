@@ -6,8 +6,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 {
     // ----- Block class --------------------
 
-    struct PyWinrtBlock : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::BlockT<PyWinrtBlock>
+    struct PyWinrtBlock;
+    using BasePyWinrtBlock = winrt::Microsoft::UI::Xaml::Documents::BlockT<PyWinrtBlock, py::IPywinrtObject>;
+
+    struct PyWinrtBlock : py::py_obj_ref, BasePyWinrtBlock
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBlock* instance, bool is_last_reference)
         {
@@ -3950,8 +3961,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- Inline class --------------------
 
-    struct PyWinrtInline : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::InlineT<PyWinrtInline>
+    struct PyWinrtInline;
+    using BasePyWinrtInline = winrt::Microsoft::UI::Xaml::Documents::InlineT<PyWinrtInline, py::IPywinrtObject>;
+
+    struct PyWinrtInline : py::py_obj_ref, BasePyWinrtInline
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtInline* instance, bool is_last_reference)
         {
@@ -5571,9 +5593,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- Span class --------------------
 
-    struct PyWinrtSpan : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>
+    struct PyWinrtSpan;
+    using BasePyWinrtSpan = winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan, py::IPywinrtObject>;
+
+    struct PyWinrtSpan : py::py_obj_ref, BasePyWinrtSpan
     {
-        PyWinrtSpan(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>() {}
+        PyWinrtSpan(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSpan() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSpan* instance, bool is_last_reference)
         {
@@ -7883,9 +7916,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- TextHighlighter class --------------------
 
-    struct PyWinrtTextHighlighter : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>
+    struct PyWinrtTextHighlighter;
+    using BasePyWinrtTextHighlighter = winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter, py::IPywinrtObject>;
+
+    struct PyWinrtTextHighlighter : py::py_obj_ref, BasePyWinrtTextHighlighter
     {
-        PyWinrtTextHighlighter(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>() {}
+        PyWinrtTextHighlighter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTextHighlighter() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTextHighlighter* instance, bool is_last_reference)
         {

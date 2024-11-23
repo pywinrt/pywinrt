@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 {
     // ----- AppBarAutomationPeer class --------------------
 
-    struct PyWinrtAppBarAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeerT<PyWinrtAppBarAutomationPeer>
+    struct PyWinrtAppBarAutomationPeer;
+    using BasePyWinrtAppBarAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeerT<PyWinrtAppBarAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtAppBarAutomationPeer : py::py_obj_ref, BasePyWinrtAppBarAutomationPeer
     {
-        PyWinrtAppBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBar owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeerT<PyWinrtAppBarAutomationPeer>(owner) {}
+        PyWinrtAppBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBar owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAppBarAutomationPeer* instance, bool is_last_reference)
         {
@@ -599,9 +610,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- AppBarButtonAutomationPeer class --------------------
 
-    struct PyWinrtAppBarButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeerT<PyWinrtAppBarButtonAutomationPeer>
+    struct PyWinrtAppBarButtonAutomationPeer;
+    using BasePyWinrtAppBarButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeerT<PyWinrtAppBarButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtAppBarButtonAutomationPeer : py::py_obj_ref, BasePyWinrtAppBarButtonAutomationPeer
     {
-        PyWinrtAppBarButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBarButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeerT<PyWinrtAppBarButtonAutomationPeer>(owner) {}
+        PyWinrtAppBarButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBarButton owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAppBarButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -848,9 +870,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- AppBarToggleButtonAutomationPeer class --------------------
 
-    struct PyWinrtAppBarToggleButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeerT<PyWinrtAppBarToggleButtonAutomationPeer>
+    struct PyWinrtAppBarToggleButtonAutomationPeer;
+    using BasePyWinrtAppBarToggleButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeerT<PyWinrtAppBarToggleButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtAppBarToggleButtonAutomationPeer : py::py_obj_ref, BasePyWinrtAppBarToggleButtonAutomationPeer
     {
-        PyWinrtAppBarToggleButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBarToggleButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeerT<PyWinrtAppBarToggleButtonAutomationPeer>(owner) {}
+        PyWinrtAppBarToggleButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::AppBarToggleButton owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarToggleButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAppBarToggleButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -1122,8 +1155,19 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- AutomationPeer class --------------------
 
-    struct PyWinrtAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerT<PyWinrtAutomationPeer>
+    struct PyWinrtAutomationPeer;
+    using BasePyWinrtAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerT<PyWinrtAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtAutomationPeer : py::py_obj_ref, BasePyWinrtAutomationPeer
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtAutomationPeer* instance, bool is_last_reference)
         {
@@ -3642,9 +3686,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ButtonAutomationPeer class --------------------
 
-    struct PyWinrtButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeerT<PyWinrtButtonAutomationPeer>
+    struct PyWinrtButtonAutomationPeer;
+    using BasePyWinrtButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeerT<PyWinrtButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtButtonAutomationPeer : py::py_obj_ref, BasePyWinrtButtonAutomationPeer
     {
-        PyWinrtButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Button owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeerT<PyWinrtButtonAutomationPeer>(owner) {}
+        PyWinrtButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Button owner) : py::py_obj_ref(py_obj), BasePyWinrtButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -3826,8 +3881,19 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ButtonBaseAutomationPeer class --------------------
 
-    struct PyWinrtButtonBaseAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeerT<PyWinrtButtonBaseAutomationPeer>
+    struct PyWinrtButtonBaseAutomationPeer;
+    using BasePyWinrtButtonBaseAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeerT<PyWinrtButtonBaseAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtButtonBaseAutomationPeer : py::py_obj_ref, BasePyWinrtButtonBaseAutomationPeer
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtButtonBaseAutomationPeer* instance, bool is_last_reference)
         {
@@ -3926,9 +3992,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- CalendarDatePickerAutomationPeer class --------------------
 
-    struct PyWinrtCalendarDatePickerAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeerT<PyWinrtCalendarDatePickerAutomationPeer>
+    struct PyWinrtCalendarDatePickerAutomationPeer;
+    using BasePyWinrtCalendarDatePickerAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeerT<PyWinrtCalendarDatePickerAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtCalendarDatePickerAutomationPeer : py::py_obj_ref, BasePyWinrtCalendarDatePickerAutomationPeer
     {
-        PyWinrtCalendarDatePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CalendarDatePicker owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeerT<PyWinrtCalendarDatePickerAutomationPeer>(owner) {}
+        PyWinrtCalendarDatePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CalendarDatePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtCalendarDatePickerAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCalendarDatePickerAutomationPeer* instance, bool is_last_reference)
         {
@@ -4204,9 +4281,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- CaptureElementAutomationPeer class --------------------
 
-    struct PyWinrtCaptureElementAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeerT<PyWinrtCaptureElementAutomationPeer>
+    struct PyWinrtCaptureElementAutomationPeer;
+    using BasePyWinrtCaptureElementAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeerT<PyWinrtCaptureElementAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtCaptureElementAutomationPeer : py::py_obj_ref, BasePyWinrtCaptureElementAutomationPeer
     {
-        PyWinrtCaptureElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CaptureElement owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeerT<PyWinrtCaptureElementAutomationPeer>(owner) {}
+        PyWinrtCaptureElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CaptureElement owner) : py::py_obj_ref(py_obj), BasePyWinrtCaptureElementAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCaptureElementAutomationPeer* instance, bool is_last_reference)
         {
@@ -4350,9 +4438,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- CheckBoxAutomationPeer class --------------------
 
-    struct PyWinrtCheckBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeerT<PyWinrtCheckBoxAutomationPeer>
+    struct PyWinrtCheckBoxAutomationPeer;
+    using BasePyWinrtCheckBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeerT<PyWinrtCheckBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtCheckBoxAutomationPeer : py::py_obj_ref, BasePyWinrtCheckBoxAutomationPeer
     {
-        PyWinrtCheckBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CheckBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeerT<PyWinrtCheckBoxAutomationPeer>(owner) {}
+        PyWinrtCheckBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::CheckBox owner) : py::py_obj_ref(py_obj), BasePyWinrtCheckBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCheckBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -4496,9 +4595,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ColorPickerSliderAutomationPeer class --------------------
 
-    struct PyWinrtColorPickerSliderAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeerT<PyWinrtColorPickerSliderAutomationPeer>
+    struct PyWinrtColorPickerSliderAutomationPeer;
+    using BasePyWinrtColorPickerSliderAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeerT<PyWinrtColorPickerSliderAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtColorPickerSliderAutomationPeer : py::py_obj_ref, BasePyWinrtColorPickerSliderAutomationPeer
     {
-        PyWinrtColorPickerSliderAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeerT<PyWinrtColorPickerSliderAutomationPeer>(owner) {}
+        PyWinrtColorPickerSliderAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider owner) : py::py_obj_ref(py_obj), BasePyWinrtColorPickerSliderAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorPickerSliderAutomationPeer* instance, bool is_last_reference)
         {
@@ -4642,9 +4752,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ColorSpectrumAutomationPeer class --------------------
 
-    struct PyWinrtColorSpectrumAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeerT<PyWinrtColorSpectrumAutomationPeer>
+    struct PyWinrtColorSpectrumAutomationPeer;
+    using BasePyWinrtColorSpectrumAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeerT<PyWinrtColorSpectrumAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtColorSpectrumAutomationPeer : py::py_obj_ref, BasePyWinrtColorSpectrumAutomationPeer
     {
-        PyWinrtColorSpectrumAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeerT<PyWinrtColorSpectrumAutomationPeer>(owner) {}
+        PyWinrtColorSpectrumAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum owner) : py::py_obj_ref(py_obj), BasePyWinrtColorSpectrumAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorSpectrumAutomationPeer* instance, bool is_last_reference)
         {
@@ -4788,9 +4909,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxAutomationPeer class --------------------
 
-    struct PyWinrtComboBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeerT<PyWinrtComboBoxAutomationPeer>
+    struct PyWinrtComboBoxAutomationPeer;
+    using BasePyWinrtComboBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeerT<PyWinrtComboBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtComboBoxAutomationPeer : py::py_obj_ref, BasePyWinrtComboBoxAutomationPeer
     {
-        PyWinrtComboBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ComboBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeerT<PyWinrtComboBoxAutomationPeer>(owner) {}
+        PyWinrtComboBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ComboBox owner) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtComboBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -5410,9 +5542,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxItemAutomationPeer class --------------------
 
-    struct PyWinrtComboBoxItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeerT<PyWinrtComboBoxItemAutomationPeer>
+    struct PyWinrtComboBoxItemAutomationPeer;
+    using BasePyWinrtComboBoxItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeerT<PyWinrtComboBoxItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtComboBoxItemAutomationPeer : py::py_obj_ref, BasePyWinrtComboBoxItemAutomationPeer
     {
-        PyWinrtComboBoxItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ComboBoxItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeerT<PyWinrtComboBoxItemAutomationPeer>(owner) {}
+        PyWinrtComboBoxItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ComboBoxItem owner) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtComboBoxItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -5556,9 +5699,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ComboBoxItemDataAutomationPeer class --------------------
 
-    struct PyWinrtComboBoxItemDataAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeerT<PyWinrtComboBoxItemDataAutomationPeer>
+    struct PyWinrtComboBoxItemDataAutomationPeer;
+    using BasePyWinrtComboBoxItemDataAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeerT<PyWinrtComboBoxItemDataAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtComboBoxItemDataAutomationPeer : py::py_obj_ref, BasePyWinrtComboBoxItemDataAutomationPeer
     {
-        PyWinrtComboBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeerT<PyWinrtComboBoxItemDataAutomationPeer>(item, parent) {}
+        PyWinrtComboBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItemDataAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtComboBoxItemDataAutomationPeer* instance, bool is_last_reference)
         {
@@ -5741,9 +5895,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- DatePickerAutomationPeer class --------------------
 
-    struct PyWinrtDatePickerAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeerT<PyWinrtDatePickerAutomationPeer>
+    struct PyWinrtDatePickerAutomationPeer;
+    using BasePyWinrtDatePickerAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeerT<PyWinrtDatePickerAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtDatePickerAutomationPeer : py::py_obj_ref, BasePyWinrtDatePickerAutomationPeer
     {
-        PyWinrtDatePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::DatePicker owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeerT<PyWinrtDatePickerAutomationPeer>(owner) {}
+        PyWinrtDatePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::DatePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtDatePickerAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDatePickerAutomationPeer* instance, bool is_last_reference)
         {
@@ -5953,9 +6118,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- FlipViewAutomationPeer class --------------------
 
-    struct PyWinrtFlipViewAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeerT<PyWinrtFlipViewAutomationPeer>
+    struct PyWinrtFlipViewAutomationPeer;
+    using BasePyWinrtFlipViewAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeerT<PyWinrtFlipViewAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtFlipViewAutomationPeer : py::py_obj_ref, BasePyWinrtFlipViewAutomationPeer
     {
-        PyWinrtFlipViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlipView owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeerT<PyWinrtFlipViewAutomationPeer>(owner) {}
+        PyWinrtFlipViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlipView owner) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlipViewAutomationPeer* instance, bool is_last_reference)
         {
@@ -6099,9 +6275,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- FlipViewItemAutomationPeer class --------------------
 
-    struct PyWinrtFlipViewItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeerT<PyWinrtFlipViewItemAutomationPeer>
+    struct PyWinrtFlipViewItemAutomationPeer;
+    using BasePyWinrtFlipViewItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeerT<PyWinrtFlipViewItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtFlipViewItemAutomationPeer : py::py_obj_ref, BasePyWinrtFlipViewItemAutomationPeer
     {
-        PyWinrtFlipViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlipViewItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeerT<PyWinrtFlipViewItemAutomationPeer>(owner) {}
+        PyWinrtFlipViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlipViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlipViewItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -6245,9 +6432,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- FlipViewItemDataAutomationPeer class --------------------
 
-    struct PyWinrtFlipViewItemDataAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeerT<PyWinrtFlipViewItemDataAutomationPeer>
+    struct PyWinrtFlipViewItemDataAutomationPeer;
+    using BasePyWinrtFlipViewItemDataAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeerT<PyWinrtFlipViewItemDataAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtFlipViewItemDataAutomationPeer : py::py_obj_ref, BasePyWinrtFlipViewItemDataAutomationPeer
     {
-        PyWinrtFlipViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeerT<PyWinrtFlipViewItemDataAutomationPeer>(item, parent) {}
+        PyWinrtFlipViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItemDataAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlipViewItemDataAutomationPeer* instance, bool is_last_reference)
         {
@@ -6430,9 +6628,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- FlyoutPresenterAutomationPeer class --------------------
 
-    struct PyWinrtFlyoutPresenterAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeerT<PyWinrtFlyoutPresenterAutomationPeer>
+    struct PyWinrtFlyoutPresenterAutomationPeer;
+    using BasePyWinrtFlyoutPresenterAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeerT<PyWinrtFlyoutPresenterAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtFlyoutPresenterAutomationPeer : py::py_obj_ref, BasePyWinrtFlyoutPresenterAutomationPeer
     {
-        PyWinrtFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlyoutPresenter owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeerT<PyWinrtFlyoutPresenterAutomationPeer>(owner) {}
+        PyWinrtFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::FlyoutPresenter owner) : py::py_obj_ref(py_obj), BasePyWinrtFlyoutPresenterAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlyoutPresenterAutomationPeer* instance, bool is_last_reference)
         {
@@ -6576,9 +6785,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- FrameworkElementAutomationPeer class --------------------
 
-    struct PyWinrtFrameworkElementAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeerT<PyWinrtFrameworkElementAutomationPeer>
+    struct PyWinrtFrameworkElementAutomationPeer;
+    using BasePyWinrtFrameworkElementAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeerT<PyWinrtFrameworkElementAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtFrameworkElementAutomationPeer : py::py_obj_ref, BasePyWinrtFrameworkElementAutomationPeer
     {
-        PyWinrtFrameworkElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::FrameworkElement owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeerT<PyWinrtFrameworkElementAutomationPeer>(owner) {}
+        PyWinrtFrameworkElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::FrameworkElement owner) : py::py_obj_ref(py_obj), BasePyWinrtFrameworkElementAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFrameworkElementAutomationPeer* instance, bool is_last_reference)
         {
@@ -6827,9 +7047,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- GridViewAutomationPeer class --------------------
 
-    struct PyWinrtGridViewAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeerT<PyWinrtGridViewAutomationPeer>
+    struct PyWinrtGridViewAutomationPeer;
+    using BasePyWinrtGridViewAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeerT<PyWinrtGridViewAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtGridViewAutomationPeer : py::py_obj_ref, BasePyWinrtGridViewAutomationPeer
     {
-        PyWinrtGridViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridView owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeerT<PyWinrtGridViewAutomationPeer>(owner) {}
+        PyWinrtGridViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridView owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGridViewAutomationPeer* instance, bool is_last_reference)
         {
@@ -6973,9 +7204,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- GridViewHeaderItemAutomationPeer class --------------------
 
-    struct PyWinrtGridViewHeaderItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeerT<PyWinrtGridViewHeaderItemAutomationPeer>
+    struct PyWinrtGridViewHeaderItemAutomationPeer;
+    using BasePyWinrtGridViewHeaderItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeerT<PyWinrtGridViewHeaderItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtGridViewHeaderItemAutomationPeer : py::py_obj_ref, BasePyWinrtGridViewHeaderItemAutomationPeer
     {
-        PyWinrtGridViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeerT<PyWinrtGridViewHeaderItemAutomationPeer>(owner) {}
+        PyWinrtGridViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewHeaderItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGridViewHeaderItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -7119,9 +7361,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- GridViewItemAutomationPeer class --------------------
 
-    struct PyWinrtGridViewItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeerT<PyWinrtGridViewItemAutomationPeer>
+    struct PyWinrtGridViewItemAutomationPeer;
+    using BasePyWinrtGridViewItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeerT<PyWinrtGridViewItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtGridViewItemAutomationPeer : py::py_obj_ref, BasePyWinrtGridViewItemAutomationPeer
     {
-        PyWinrtGridViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridViewItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeerT<PyWinrtGridViewItemAutomationPeer>(owner) {}
+        PyWinrtGridViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GridViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGridViewItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -7265,9 +7518,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- GridViewItemDataAutomationPeer class --------------------
 
-    struct PyWinrtGridViewItemDataAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeerT<PyWinrtGridViewItemDataAutomationPeer>
+    struct PyWinrtGridViewItemDataAutomationPeer;
+    using BasePyWinrtGridViewItemDataAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeerT<PyWinrtGridViewItemDataAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtGridViewItemDataAutomationPeer : py::py_obj_ref, BasePyWinrtGridViewItemDataAutomationPeer
     {
-        PyWinrtGridViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeerT<PyWinrtGridViewItemDataAutomationPeer>(item, parent) {}
+        PyWinrtGridViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemDataAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGridViewItemDataAutomationPeer* instance, bool is_last_reference)
         {
@@ -7450,9 +7714,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- GroupItemAutomationPeer class --------------------
 
-    struct PyWinrtGroupItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeerT<PyWinrtGroupItemAutomationPeer>
+    struct PyWinrtGroupItemAutomationPeer;
+    using BasePyWinrtGroupItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeerT<PyWinrtGroupItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtGroupItemAutomationPeer : py::py_obj_ref, BasePyWinrtGroupItemAutomationPeer
     {
-        PyWinrtGroupItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GroupItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeerT<PyWinrtGroupItemAutomationPeer>(owner) {}
+        PyWinrtGroupItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::GroupItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGroupItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGroupItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -7596,9 +7871,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- HubAutomationPeer class --------------------
 
-    struct PyWinrtHubAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeerT<PyWinrtHubAutomationPeer>
+    struct PyWinrtHubAutomationPeer;
+    using BasePyWinrtHubAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeerT<PyWinrtHubAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtHubAutomationPeer : py::py_obj_ref, BasePyWinrtHubAutomationPeer
     {
-        PyWinrtHubAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Hub owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeerT<PyWinrtHubAutomationPeer>(owner) {}
+        PyWinrtHubAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Hub owner) : py::py_obj_ref(py_obj), BasePyWinrtHubAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtHubAutomationPeer* instance, bool is_last_reference)
         {
@@ -7742,9 +8028,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- HubSectionAutomationPeer class --------------------
 
-    struct PyWinrtHubSectionAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeerT<PyWinrtHubSectionAutomationPeer>
+    struct PyWinrtHubSectionAutomationPeer;
+    using BasePyWinrtHubSectionAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeerT<PyWinrtHubSectionAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtHubSectionAutomationPeer : py::py_obj_ref, BasePyWinrtHubSectionAutomationPeer
     {
-        PyWinrtHubSectionAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::HubSection owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeerT<PyWinrtHubSectionAutomationPeer>(owner) {}
+        PyWinrtHubSectionAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::HubSection owner) : py::py_obj_ref(py_obj), BasePyWinrtHubSectionAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtHubSectionAutomationPeer* instance, bool is_last_reference)
         {
@@ -7926,9 +8223,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- HyperlinkButtonAutomationPeer class --------------------
 
-    struct PyWinrtHyperlinkButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeerT<PyWinrtHyperlinkButtonAutomationPeer>
+    struct PyWinrtHyperlinkButtonAutomationPeer;
+    using BasePyWinrtHyperlinkButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeerT<PyWinrtHyperlinkButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtHyperlinkButtonAutomationPeer : py::py_obj_ref, BasePyWinrtHyperlinkButtonAutomationPeer
     {
-        PyWinrtHyperlinkButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::HyperlinkButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeerT<PyWinrtHyperlinkButtonAutomationPeer>(owner) {}
+        PyWinrtHyperlinkButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::HyperlinkButton owner) : py::py_obj_ref(py_obj), BasePyWinrtHyperlinkButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtHyperlinkButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -8110,9 +8418,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ImageAutomationPeer class --------------------
 
-    struct PyWinrtImageAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeerT<PyWinrtImageAutomationPeer>
+    struct PyWinrtImageAutomationPeer;
+    using BasePyWinrtImageAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeerT<PyWinrtImageAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtImageAutomationPeer : py::py_obj_ref, BasePyWinrtImageAutomationPeer
     {
-        PyWinrtImageAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Image owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeerT<PyWinrtImageAutomationPeer>(owner) {}
+        PyWinrtImageAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Image owner) : py::py_obj_ref(py_obj), BasePyWinrtImageAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtImageAutomationPeer* instance, bool is_last_reference)
         {
@@ -8322,9 +8641,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ItemAutomationPeer class --------------------
 
-    struct PyWinrtItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeerT<PyWinrtItemAutomationPeer>
+    struct PyWinrtItemAutomationPeer;
+    using BasePyWinrtItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeerT<PyWinrtItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtItemAutomationPeer : py::py_obj_ref, BasePyWinrtItemAutomationPeer
     {
-        PyWinrtItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeerT<PyWinrtItemAutomationPeer>(item, parent) {}
+        PyWinrtItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtItemAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -8561,9 +8891,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ItemsControlAutomationPeer class --------------------
 
-    struct PyWinrtItemsControlAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeerT<PyWinrtItemsControlAutomationPeer>
+    struct PyWinrtItemsControlAutomationPeer;
+    using BasePyWinrtItemsControlAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeerT<PyWinrtItemsControlAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtItemsControlAutomationPeer : py::py_obj_ref, BasePyWinrtItemsControlAutomationPeer
     {
-        PyWinrtItemsControlAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ItemsControl owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeerT<PyWinrtItemsControlAutomationPeer>(owner) {}
+        PyWinrtItemsControlAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ItemsControl owner) : py::py_obj_ref(py_obj), BasePyWinrtItemsControlAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtItemsControlAutomationPeer* instance, bool is_last_reference)
         {
@@ -8787,9 +9128,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListBoxAutomationPeer class --------------------
 
-    struct PyWinrtListBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeerT<PyWinrtListBoxAutomationPeer>
+    struct PyWinrtListBoxAutomationPeer;
+    using BasePyWinrtListBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeerT<PyWinrtListBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListBoxAutomationPeer : py::py_obj_ref, BasePyWinrtListBoxAutomationPeer
     {
-        PyWinrtListBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeerT<PyWinrtListBoxAutomationPeer>(owner) {}
+        PyWinrtListBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListBox owner) : py::py_obj_ref(py_obj), BasePyWinrtListBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -8933,9 +9285,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListBoxItemAutomationPeer class --------------------
 
-    struct PyWinrtListBoxItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeerT<PyWinrtListBoxItemAutomationPeer>
+    struct PyWinrtListBoxItemAutomationPeer;
+    using BasePyWinrtListBoxItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeerT<PyWinrtListBoxItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListBoxItemAutomationPeer : py::py_obj_ref, BasePyWinrtListBoxItemAutomationPeer
     {
-        PyWinrtListBoxItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListBoxItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeerT<PyWinrtListBoxItemAutomationPeer>(owner) {}
+        PyWinrtListBoxItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListBoxItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListBoxItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -9079,9 +9442,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListBoxItemDataAutomationPeer class --------------------
 
-    struct PyWinrtListBoxItemDataAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeerT<PyWinrtListBoxItemDataAutomationPeer>
+    struct PyWinrtListBoxItemDataAutomationPeer;
+    using BasePyWinrtListBoxItemDataAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeerT<PyWinrtListBoxItemDataAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListBoxItemDataAutomationPeer : py::py_obj_ref, BasePyWinrtListBoxItemDataAutomationPeer
     {
-        PyWinrtListBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeerT<PyWinrtListBoxItemDataAutomationPeer>(item, parent) {}
+        PyWinrtListBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItemDataAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListBoxItemDataAutomationPeer* instance, bool is_last_reference)
         {
@@ -9330,9 +9704,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewAutomationPeer class --------------------
 
-    struct PyWinrtListViewAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeerT<PyWinrtListViewAutomationPeer>
+    struct PyWinrtListViewAutomationPeer;
+    using BasePyWinrtListViewAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeerT<PyWinrtListViewAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewAutomationPeer : py::py_obj_ref, BasePyWinrtListViewAutomationPeer
     {
-        PyWinrtListViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListView owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeerT<PyWinrtListViewAutomationPeer>(owner) {}
+        PyWinrtListViewAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListView owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewAutomationPeer* instance, bool is_last_reference)
         {
@@ -9476,9 +9861,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewBaseAutomationPeer class --------------------
 
-    struct PyWinrtListViewBaseAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeerT<PyWinrtListViewBaseAutomationPeer>
+    struct PyWinrtListViewBaseAutomationPeer;
+    using BasePyWinrtListViewBaseAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeerT<PyWinrtListViewBaseAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewBaseAutomationPeer : py::py_obj_ref, BasePyWinrtListViewBaseAutomationPeer
     {
-        PyWinrtListViewBaseAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewBase owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeerT<PyWinrtListViewBaseAutomationPeer>(owner) {}
+        PyWinrtListViewBaseAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewBase owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewBaseAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewBaseAutomationPeer* instance, bool is_last_reference)
         {
@@ -9676,8 +10072,19 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
 
-    struct PyWinrtListViewBaseHeaderItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeerT<PyWinrtListViewBaseHeaderItemAutomationPeer>
+    struct PyWinrtListViewBaseHeaderItemAutomationPeer;
+    using BasePyWinrtListViewBaseHeaderItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeerT<PyWinrtListViewBaseHeaderItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewBaseHeaderItemAutomationPeer : py::py_obj_ref, BasePyWinrtListViewBaseHeaderItemAutomationPeer
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewBaseHeaderItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -9776,9 +10183,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewHeaderItemAutomationPeer class --------------------
 
-    struct PyWinrtListViewHeaderItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeerT<PyWinrtListViewHeaderItemAutomationPeer>
+    struct PyWinrtListViewHeaderItemAutomationPeer;
+    using BasePyWinrtListViewHeaderItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeerT<PyWinrtListViewHeaderItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewHeaderItemAutomationPeer : py::py_obj_ref, BasePyWinrtListViewHeaderItemAutomationPeer
     {
-        PyWinrtListViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeerT<PyWinrtListViewHeaderItemAutomationPeer>(owner) {}
+        PyWinrtListViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewHeaderItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewHeaderItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -9922,9 +10340,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewItemAutomationPeer class --------------------
 
-    struct PyWinrtListViewItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeerT<PyWinrtListViewItemAutomationPeer>
+    struct PyWinrtListViewItemAutomationPeer;
+    using BasePyWinrtListViewItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeerT<PyWinrtListViewItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewItemAutomationPeer : py::py_obj_ref, BasePyWinrtListViewItemAutomationPeer
     {
-        PyWinrtListViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeerT<PyWinrtListViewItemAutomationPeer>(owner) {}
+        PyWinrtListViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ListViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -10068,9 +10497,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewItemDataAutomationPeer class --------------------
 
-    struct PyWinrtListViewItemDataAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeerT<PyWinrtListViewItemDataAutomationPeer>
+    struct PyWinrtListViewItemDataAutomationPeer;
+    using BasePyWinrtListViewItemDataAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeerT<PyWinrtListViewItemDataAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtListViewItemDataAutomationPeer : py::py_obj_ref, BasePyWinrtListViewItemDataAutomationPeer
     {
-        PyWinrtListViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeerT<PyWinrtListViewItemDataAutomationPeer>(item, parent) {}
+        PyWinrtListViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemDataAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewItemDataAutomationPeer* instance, bool is_last_reference)
         {
@@ -11875,9 +12315,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MediaElementAutomationPeer class --------------------
 
-    struct PyWinrtMediaElementAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeerT<PyWinrtMediaElementAutomationPeer>
+    struct PyWinrtMediaElementAutomationPeer;
+    using BasePyWinrtMediaElementAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeerT<PyWinrtMediaElementAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMediaElementAutomationPeer : py::py_obj_ref, BasePyWinrtMediaElementAutomationPeer
     {
-        PyWinrtMediaElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaElement owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeerT<PyWinrtMediaElementAutomationPeer>(owner) {}
+        PyWinrtMediaElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaElement owner) : py::py_obj_ref(py_obj), BasePyWinrtMediaElementAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMediaElementAutomationPeer* instance, bool is_last_reference)
         {
@@ -12021,9 +12472,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MediaPlayerElementAutomationPeer class --------------------
 
-    struct PyWinrtMediaPlayerElementAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeerT<PyWinrtMediaPlayerElementAutomationPeer>
+    struct PyWinrtMediaPlayerElementAutomationPeer;
+    using BasePyWinrtMediaPlayerElementAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeerT<PyWinrtMediaPlayerElementAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMediaPlayerElementAutomationPeer : py::py_obj_ref, BasePyWinrtMediaPlayerElementAutomationPeer
     {
-        PyWinrtMediaPlayerElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaPlayerElement owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeerT<PyWinrtMediaPlayerElementAutomationPeer>(owner) {}
+        PyWinrtMediaPlayerElementAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaPlayerElement owner) : py::py_obj_ref(py_obj), BasePyWinrtMediaPlayerElementAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMediaPlayerElementAutomationPeer* instance, bool is_last_reference)
         {
@@ -12167,9 +12629,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MediaTransportControlsAutomationPeer class --------------------
 
-    struct PyWinrtMediaTransportControlsAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeerT<PyWinrtMediaTransportControlsAutomationPeer>
+    struct PyWinrtMediaTransportControlsAutomationPeer;
+    using BasePyWinrtMediaTransportControlsAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeerT<PyWinrtMediaTransportControlsAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMediaTransportControlsAutomationPeer : py::py_obj_ref, BasePyWinrtMediaTransportControlsAutomationPeer
     {
-        PyWinrtMediaTransportControlsAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaTransportControls owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeerT<PyWinrtMediaTransportControlsAutomationPeer>(owner) {}
+        PyWinrtMediaTransportControlsAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MediaTransportControls owner) : py::py_obj_ref(py_obj), BasePyWinrtMediaTransportControlsAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMediaTransportControlsAutomationPeer* instance, bool is_last_reference)
         {
@@ -12313,9 +12786,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MenuBarAutomationPeer class --------------------
 
-    struct PyWinrtMenuBarAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeerT<PyWinrtMenuBarAutomationPeer>
+    struct PyWinrtMenuBarAutomationPeer;
+    using BasePyWinrtMenuBarAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeerT<PyWinrtMenuBarAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMenuBarAutomationPeer : py::py_obj_ref, BasePyWinrtMenuBarAutomationPeer
     {
-        PyWinrtMenuBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuBar owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeerT<PyWinrtMenuBarAutomationPeer>(owner) {}
+        PyWinrtMenuBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuBar owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMenuBarAutomationPeer* instance, bool is_last_reference)
         {
@@ -12459,9 +12943,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MenuBarItemAutomationPeer class --------------------
 
-    struct PyWinrtMenuBarItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeerT<PyWinrtMenuBarItemAutomationPeer>
+    struct PyWinrtMenuBarItemAutomationPeer;
+    using BasePyWinrtMenuBarItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeerT<PyWinrtMenuBarItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMenuBarItemAutomationPeer : py::py_obj_ref, BasePyWinrtMenuBarItemAutomationPeer
     {
-        PyWinrtMenuBarItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuBarItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeerT<PyWinrtMenuBarItemAutomationPeer>(owner) {}
+        PyWinrtMenuBarItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuBarItem owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMenuBarItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -12746,9 +13241,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MenuFlyoutItemAutomationPeer class --------------------
 
-    struct PyWinrtMenuFlyoutItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeerT<PyWinrtMenuFlyoutItemAutomationPeer>
+    struct PyWinrtMenuFlyoutItemAutomationPeer;
+    using BasePyWinrtMenuFlyoutItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeerT<PyWinrtMenuFlyoutItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMenuFlyoutItemAutomationPeer : py::py_obj_ref, BasePyWinrtMenuFlyoutItemAutomationPeer
     {
-        PyWinrtMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeerT<PyWinrtMenuFlyoutItemAutomationPeer>(owner) {}
+        PyWinrtMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyoutItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMenuFlyoutItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -12930,9 +13436,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MenuFlyoutPresenterAutomationPeer class --------------------
 
-    struct PyWinrtMenuFlyoutPresenterAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeerT<PyWinrtMenuFlyoutPresenterAutomationPeer>
+    struct PyWinrtMenuFlyoutPresenterAutomationPeer;
+    using BasePyWinrtMenuFlyoutPresenterAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeerT<PyWinrtMenuFlyoutPresenterAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtMenuFlyoutPresenterAutomationPeer : py::py_obj_ref, BasePyWinrtMenuFlyoutPresenterAutomationPeer
     {
-        PyWinrtMenuFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeerT<PyWinrtMenuFlyoutPresenterAutomationPeer>(owner) {}
+        PyWinrtMenuFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyoutPresenterAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMenuFlyoutPresenterAutomationPeer* instance, bool is_last_reference)
         {
@@ -13076,9 +13593,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- NavigationViewItemAutomationPeer class --------------------
 
-    struct PyWinrtNavigationViewItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeerT<PyWinrtNavigationViewItemAutomationPeer>
+    struct PyWinrtNavigationViewItemAutomationPeer;
+    using BasePyWinrtNavigationViewItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeerT<PyWinrtNavigationViewItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtNavigationViewItemAutomationPeer : py::py_obj_ref, BasePyWinrtNavigationViewItemAutomationPeer
     {
-        PyWinrtNavigationViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::NavigationViewItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeerT<PyWinrtNavigationViewItemAutomationPeer>(owner) {}
+        PyWinrtNavigationViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::NavigationViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtNavigationViewItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtNavigationViewItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -13222,9 +13750,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- PasswordBoxAutomationPeer class --------------------
 
-    struct PyWinrtPasswordBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeerT<PyWinrtPasswordBoxAutomationPeer>
+    struct PyWinrtPasswordBoxAutomationPeer;
+    using BasePyWinrtPasswordBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeerT<PyWinrtPasswordBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtPasswordBoxAutomationPeer : py::py_obj_ref, BasePyWinrtPasswordBoxAutomationPeer
     {
-        PyWinrtPasswordBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::PasswordBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeerT<PyWinrtPasswordBoxAutomationPeer>(owner) {}
+        PyWinrtPasswordBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::PasswordBox owner) : py::py_obj_ref(py_obj), BasePyWinrtPasswordBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPasswordBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -13368,9 +13907,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- PersonPictureAutomationPeer class --------------------
 
-    struct PyWinrtPersonPictureAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeerT<PyWinrtPersonPictureAutomationPeer>
+    struct PyWinrtPersonPictureAutomationPeer;
+    using BasePyWinrtPersonPictureAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeerT<PyWinrtPersonPictureAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtPersonPictureAutomationPeer : py::py_obj_ref, BasePyWinrtPersonPictureAutomationPeer
     {
-        PyWinrtPersonPictureAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::PersonPicture owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeerT<PyWinrtPersonPictureAutomationPeer>(owner) {}
+        PyWinrtPersonPictureAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::PersonPicture owner) : py::py_obj_ref(py_obj), BasePyWinrtPersonPictureAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPersonPictureAutomationPeer* instance, bool is_last_reference)
         {
@@ -14430,9 +14980,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ProgressBarAutomationPeer class --------------------
 
-    struct PyWinrtProgressBarAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeerT<PyWinrtProgressBarAutomationPeer>
+    struct PyWinrtProgressBarAutomationPeer;
+    using BasePyWinrtProgressBarAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeerT<PyWinrtProgressBarAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtProgressBarAutomationPeer : py::py_obj_ref, BasePyWinrtProgressBarAutomationPeer
     {
-        PyWinrtProgressBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ProgressBar owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeerT<PyWinrtProgressBarAutomationPeer>(owner) {}
+        PyWinrtProgressBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ProgressBar owner) : py::py_obj_ref(py_obj), BasePyWinrtProgressBarAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtProgressBarAutomationPeer* instance, bool is_last_reference)
         {
@@ -14576,9 +15137,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ProgressRingAutomationPeer class --------------------
 
-    struct PyWinrtProgressRingAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeerT<PyWinrtProgressRingAutomationPeer>
+    struct PyWinrtProgressRingAutomationPeer;
+    using BasePyWinrtProgressRingAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeerT<PyWinrtProgressRingAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtProgressRingAutomationPeer : py::py_obj_ref, BasePyWinrtProgressRingAutomationPeer
     {
-        PyWinrtProgressRingAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ProgressRing owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeerT<PyWinrtProgressRingAutomationPeer>(owner) {}
+        PyWinrtProgressRingAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ProgressRing owner) : py::py_obj_ref(py_obj), BasePyWinrtProgressRingAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtProgressRingAutomationPeer* instance, bool is_last_reference)
         {
@@ -14722,9 +15294,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RadioButtonAutomationPeer class --------------------
 
-    struct PyWinrtRadioButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeerT<PyWinrtRadioButtonAutomationPeer>
+    struct PyWinrtRadioButtonAutomationPeer;
+    using BasePyWinrtRadioButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeerT<PyWinrtRadioButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRadioButtonAutomationPeer : py::py_obj_ref, BasePyWinrtRadioButtonAutomationPeer
     {
-        PyWinrtRadioButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RadioButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeerT<PyWinrtRadioButtonAutomationPeer>(owner) {}
+        PyWinrtRadioButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RadioButton owner) : py::py_obj_ref(py_obj), BasePyWinrtRadioButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRadioButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -15036,9 +15619,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RangeBaseAutomationPeer class --------------------
 
-    struct PyWinrtRangeBaseAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeerT<PyWinrtRangeBaseAutomationPeer>
+    struct PyWinrtRangeBaseAutomationPeer;
+    using BasePyWinrtRangeBaseAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeerT<PyWinrtRangeBaseAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRangeBaseAutomationPeer : py::py_obj_ref, BasePyWinrtRangeBaseAutomationPeer
     {
-        PyWinrtRangeBaseAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeerT<PyWinrtRangeBaseAutomationPeer>(owner) {}
+        PyWinrtRangeBaseAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase owner) : py::py_obj_ref(py_obj), BasePyWinrtRangeBaseAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRangeBaseAutomationPeer* instance, bool is_last_reference)
         {
@@ -15384,9 +15978,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RatingControlAutomationPeer class --------------------
 
-    struct PyWinrtRatingControlAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeerT<PyWinrtRatingControlAutomationPeer>
+    struct PyWinrtRatingControlAutomationPeer;
+    using BasePyWinrtRatingControlAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeerT<PyWinrtRatingControlAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRatingControlAutomationPeer : py::py_obj_ref, BasePyWinrtRatingControlAutomationPeer
     {
-        PyWinrtRatingControlAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RatingControl owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeerT<PyWinrtRatingControlAutomationPeer>(owner) {}
+        PyWinrtRatingControlAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RatingControl owner) : py::py_obj_ref(py_obj), BasePyWinrtRatingControlAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRatingControlAutomationPeer* instance, bool is_last_reference)
         {
@@ -15530,9 +16135,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RepeatButtonAutomationPeer class --------------------
 
-    struct PyWinrtRepeatButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeerT<PyWinrtRepeatButtonAutomationPeer>
+    struct PyWinrtRepeatButtonAutomationPeer;
+    using BasePyWinrtRepeatButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeerT<PyWinrtRepeatButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRepeatButtonAutomationPeer : py::py_obj_ref, BasePyWinrtRepeatButtonAutomationPeer
     {
-        PyWinrtRepeatButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeerT<PyWinrtRepeatButtonAutomationPeer>(owner) {}
+        PyWinrtRepeatButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton owner) : py::py_obj_ref(py_obj), BasePyWinrtRepeatButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRepeatButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -15714,9 +16330,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RichEditBoxAutomationPeer class --------------------
 
-    struct PyWinrtRichEditBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeerT<PyWinrtRichEditBoxAutomationPeer>
+    struct PyWinrtRichEditBoxAutomationPeer;
+    using BasePyWinrtRichEditBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeerT<PyWinrtRichEditBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRichEditBoxAutomationPeer : py::py_obj_ref, BasePyWinrtRichEditBoxAutomationPeer
     {
-        PyWinrtRichEditBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichEditBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeerT<PyWinrtRichEditBoxAutomationPeer>(owner) {}
+        PyWinrtRichEditBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichEditBox owner) : py::py_obj_ref(py_obj), BasePyWinrtRichEditBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRichEditBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -15860,9 +16487,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RichTextBlockAutomationPeer class --------------------
 
-    struct PyWinrtRichTextBlockAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeerT<PyWinrtRichTextBlockAutomationPeer>
+    struct PyWinrtRichTextBlockAutomationPeer;
+    using BasePyWinrtRichTextBlockAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeerT<PyWinrtRichTextBlockAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRichTextBlockAutomationPeer : py::py_obj_ref, BasePyWinrtRichTextBlockAutomationPeer
     {
-        PyWinrtRichTextBlockAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichTextBlock owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeerT<PyWinrtRichTextBlockAutomationPeer>(owner) {}
+        PyWinrtRichTextBlockAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichTextBlock owner) : py::py_obj_ref(py_obj), BasePyWinrtRichTextBlockAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRichTextBlockAutomationPeer* instance, bool is_last_reference)
         {
@@ -16006,9 +16644,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RichTextBlockOverflowAutomationPeer class --------------------
 
-    struct PyWinrtRichTextBlockOverflowAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeerT<PyWinrtRichTextBlockOverflowAutomationPeer>
+    struct PyWinrtRichTextBlockOverflowAutomationPeer;
+    using BasePyWinrtRichTextBlockOverflowAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeerT<PyWinrtRichTextBlockOverflowAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtRichTextBlockOverflowAutomationPeer : py::py_obj_ref, BasePyWinrtRichTextBlockOverflowAutomationPeer
     {
-        PyWinrtRichTextBlockOverflowAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeerT<PyWinrtRichTextBlockOverflowAutomationPeer>(owner) {}
+        PyWinrtRichTextBlockOverflowAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow owner) : py::py_obj_ref(py_obj), BasePyWinrtRichTextBlockOverflowAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRichTextBlockOverflowAutomationPeer* instance, bool is_last_reference)
         {
@@ -16152,9 +16801,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ScrollBarAutomationPeer class --------------------
 
-    struct PyWinrtScrollBarAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeerT<PyWinrtScrollBarAutomationPeer>
+    struct PyWinrtScrollBarAutomationPeer;
+    using BasePyWinrtScrollBarAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeerT<PyWinrtScrollBarAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtScrollBarAutomationPeer : py::py_obj_ref, BasePyWinrtScrollBarAutomationPeer
     {
-        PyWinrtScrollBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeerT<PyWinrtScrollBarAutomationPeer>(owner) {}
+        PyWinrtScrollBarAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar owner) : py::py_obj_ref(py_obj), BasePyWinrtScrollBarAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtScrollBarAutomationPeer* instance, bool is_last_reference)
         {
@@ -16298,9 +16958,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ScrollViewerAutomationPeer class --------------------
 
-    struct PyWinrtScrollViewerAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeerT<PyWinrtScrollViewerAutomationPeer>
+    struct PyWinrtScrollViewerAutomationPeer;
+    using BasePyWinrtScrollViewerAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeerT<PyWinrtScrollViewerAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtScrollViewerAutomationPeer : py::py_obj_ref, BasePyWinrtScrollViewerAutomationPeer
     {
-        PyWinrtScrollViewerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ScrollViewer owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeerT<PyWinrtScrollViewerAutomationPeer>(owner) {}
+        PyWinrtScrollViewerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ScrollViewer owner) : py::py_obj_ref(py_obj), BasePyWinrtScrollViewerAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtScrollViewerAutomationPeer* instance, bool is_last_reference)
         {
@@ -16688,9 +17359,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SearchBoxAutomationPeer class --------------------
 
-    struct PyWinrtSearchBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeerT<PyWinrtSearchBoxAutomationPeer>
+    struct PyWinrtSearchBoxAutomationPeer;
+    using BasePyWinrtSearchBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeerT<PyWinrtSearchBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSearchBoxAutomationPeer : py::py_obj_ref, BasePyWinrtSearchBoxAutomationPeer
     {
-        PyWinrtSearchBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SearchBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeerT<PyWinrtSearchBoxAutomationPeer>(owner) {}
+        PyWinrtSearchBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SearchBox owner) : py::py_obj_ref(py_obj), BasePyWinrtSearchBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSearchBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -16834,9 +17516,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SelectorAutomationPeer class --------------------
 
-    struct PyWinrtSelectorAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeerT<PyWinrtSelectorAutomationPeer>
+    struct PyWinrtSelectorAutomationPeer;
+    using BasePyWinrtSelectorAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeerT<PyWinrtSelectorAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSelectorAutomationPeer : py::py_obj_ref, BasePyWinrtSelectorAutomationPeer
     {
-        PyWinrtSelectorAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::Selector owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeerT<PyWinrtSelectorAutomationPeer>(owner) {}
+        PyWinrtSelectorAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::Selector owner) : py::py_obj_ref(py_obj), BasePyWinrtSelectorAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSelectorAutomationPeer* instance, bool is_last_reference)
         {
@@ -17071,9 +17764,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SelectorItemAutomationPeer class --------------------
 
-    struct PyWinrtSelectorItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeerT<PyWinrtSelectorItemAutomationPeer>
+    struct PyWinrtSelectorItemAutomationPeer;
+    using BasePyWinrtSelectorItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeerT<PyWinrtSelectorItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSelectorItemAutomationPeer : py::py_obj_ref, BasePyWinrtSelectorItemAutomationPeer
     {
-        PyWinrtSelectorItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer parent) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeerT<PyWinrtSelectorItemAutomationPeer>(item, parent) {}
+        PyWinrtSelectorItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtSelectorItemAutomationPeer(item, parent) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSelectorItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -17386,9 +18090,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SemanticZoomAutomationPeer class --------------------
 
-    struct PyWinrtSemanticZoomAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeerT<PyWinrtSemanticZoomAutomationPeer>
+    struct PyWinrtSemanticZoomAutomationPeer;
+    using BasePyWinrtSemanticZoomAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeerT<PyWinrtSemanticZoomAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSemanticZoomAutomationPeer : py::py_obj_ref, BasePyWinrtSemanticZoomAutomationPeer
     {
-        PyWinrtSemanticZoomAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SemanticZoom owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeerT<PyWinrtSemanticZoomAutomationPeer>(owner) {}
+        PyWinrtSemanticZoomAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SemanticZoom owner) : py::py_obj_ref(py_obj), BasePyWinrtSemanticZoomAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSemanticZoomAutomationPeer* instance, bool is_last_reference)
         {
@@ -17597,9 +18312,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SettingsFlyoutAutomationPeer class --------------------
 
-    struct PyWinrtSettingsFlyoutAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeerT<PyWinrtSettingsFlyoutAutomationPeer>
+    struct PyWinrtSettingsFlyoutAutomationPeer;
+    using BasePyWinrtSettingsFlyoutAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeerT<PyWinrtSettingsFlyoutAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSettingsFlyoutAutomationPeer : py::py_obj_ref, BasePyWinrtSettingsFlyoutAutomationPeer
     {
-        PyWinrtSettingsFlyoutAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SettingsFlyout owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeerT<PyWinrtSettingsFlyoutAutomationPeer>(owner) {}
+        PyWinrtSettingsFlyoutAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::SettingsFlyout owner) : py::py_obj_ref(py_obj), BasePyWinrtSettingsFlyoutAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSettingsFlyoutAutomationPeer* instance, bool is_last_reference)
         {
@@ -17743,9 +18469,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- SliderAutomationPeer class --------------------
 
-    struct PyWinrtSliderAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeerT<PyWinrtSliderAutomationPeer>
+    struct PyWinrtSliderAutomationPeer;
+    using BasePyWinrtSliderAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeerT<PyWinrtSliderAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtSliderAutomationPeer : py::py_obj_ref, BasePyWinrtSliderAutomationPeer
     {
-        PyWinrtSliderAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Slider owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeerT<PyWinrtSliderAutomationPeer>(owner) {}
+        PyWinrtSliderAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Slider owner) : py::py_obj_ref(py_obj), BasePyWinrtSliderAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSliderAutomationPeer* instance, bool is_last_reference)
         {
@@ -17889,9 +18626,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TextBlockAutomationPeer class --------------------
 
-    struct PyWinrtTextBlockAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeerT<PyWinrtTextBlockAutomationPeer>
+    struct PyWinrtTextBlockAutomationPeer;
+    using BasePyWinrtTextBlockAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeerT<PyWinrtTextBlockAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtTextBlockAutomationPeer : py::py_obj_ref, BasePyWinrtTextBlockAutomationPeer
     {
-        PyWinrtTextBlockAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TextBlock owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeerT<PyWinrtTextBlockAutomationPeer>(owner) {}
+        PyWinrtTextBlockAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TextBlock owner) : py::py_obj_ref(py_obj), BasePyWinrtTextBlockAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTextBlockAutomationPeer* instance, bool is_last_reference)
         {
@@ -18035,9 +18783,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TextBoxAutomationPeer class --------------------
 
-    struct PyWinrtTextBoxAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeerT<PyWinrtTextBoxAutomationPeer>
+    struct PyWinrtTextBoxAutomationPeer;
+    using BasePyWinrtTextBoxAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeerT<PyWinrtTextBoxAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtTextBoxAutomationPeer : py::py_obj_ref, BasePyWinrtTextBoxAutomationPeer
     {
-        PyWinrtTextBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TextBox owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeerT<PyWinrtTextBoxAutomationPeer>(owner) {}
+        PyWinrtTextBoxAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TextBox owner) : py::py_obj_ref(py_obj), BasePyWinrtTextBoxAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTextBoxAutomationPeer* instance, bool is_last_reference)
         {
@@ -18181,9 +18940,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ThumbAutomationPeer class --------------------
 
-    struct PyWinrtThumbAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeerT<PyWinrtThumbAutomationPeer>
+    struct PyWinrtThumbAutomationPeer;
+    using BasePyWinrtThumbAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeerT<PyWinrtThumbAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtThumbAutomationPeer : py::py_obj_ref, BasePyWinrtThumbAutomationPeer
     {
-        PyWinrtThumbAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::Thumb owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeerT<PyWinrtThumbAutomationPeer>(owner) {}
+        PyWinrtThumbAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::Thumb owner) : py::py_obj_ref(py_obj), BasePyWinrtThumbAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtThumbAutomationPeer* instance, bool is_last_reference)
         {
@@ -18327,9 +19097,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TimePickerAutomationPeer class --------------------
 
-    struct PyWinrtTimePickerAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeerT<PyWinrtTimePickerAutomationPeer>
+    struct PyWinrtTimePickerAutomationPeer;
+    using BasePyWinrtTimePickerAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeerT<PyWinrtTimePickerAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtTimePickerAutomationPeer : py::py_obj_ref, BasePyWinrtTimePickerAutomationPeer
     {
-        PyWinrtTimePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TimePicker owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeerT<PyWinrtTimePickerAutomationPeer>(owner) {}
+        PyWinrtTimePickerAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TimePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtTimePickerAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTimePickerAutomationPeer* instance, bool is_last_reference)
         {
@@ -18539,9 +19320,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ToggleButtonAutomationPeer class --------------------
 
-    struct PyWinrtToggleButtonAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeerT<PyWinrtToggleButtonAutomationPeer>
+    struct PyWinrtToggleButtonAutomationPeer;
+    using BasePyWinrtToggleButtonAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeerT<PyWinrtToggleButtonAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtToggleButtonAutomationPeer : py::py_obj_ref, BasePyWinrtToggleButtonAutomationPeer
     {
-        PyWinrtToggleButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeerT<PyWinrtToggleButtonAutomationPeer>(owner) {}
+        PyWinrtToggleButtonAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleButtonAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtToggleButtonAutomationPeer* instance, bool is_last_reference)
         {
@@ -18750,9 +19542,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ToggleMenuFlyoutItemAutomationPeer class --------------------
 
-    struct PyWinrtToggleMenuFlyoutItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeerT<PyWinrtToggleMenuFlyoutItemAutomationPeer>
+    struct PyWinrtToggleMenuFlyoutItemAutomationPeer;
+    using BasePyWinrtToggleMenuFlyoutItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeerT<PyWinrtToggleMenuFlyoutItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtToggleMenuFlyoutItemAutomationPeer : py::py_obj_ref, BasePyWinrtToggleMenuFlyoutItemAutomationPeer
     {
-        PyWinrtToggleMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeerT<PyWinrtToggleMenuFlyoutItemAutomationPeer>(owner) {}
+        PyWinrtToggleMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleMenuFlyoutItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtToggleMenuFlyoutItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -18961,9 +19764,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ToggleSwitchAutomationPeer class --------------------
 
-    struct PyWinrtToggleSwitchAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeerT<PyWinrtToggleSwitchAutomationPeer>
+    struct PyWinrtToggleSwitchAutomationPeer;
+    using BasePyWinrtToggleSwitchAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeerT<PyWinrtToggleSwitchAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtToggleSwitchAutomationPeer : py::py_obj_ref, BasePyWinrtToggleSwitchAutomationPeer
     {
-        PyWinrtToggleSwitchAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ToggleSwitch owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeerT<PyWinrtToggleSwitchAutomationPeer>(owner) {}
+        PyWinrtToggleSwitchAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::ToggleSwitch owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleSwitchAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtToggleSwitchAutomationPeer* instance, bool is_last_reference)
         {
@@ -19172,9 +19986,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TreeViewItemAutomationPeer class --------------------
 
-    struct PyWinrtTreeViewItemAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeerT<PyWinrtTreeViewItemAutomationPeer>
+    struct PyWinrtTreeViewItemAutomationPeer;
+    using BasePyWinrtTreeViewItemAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeerT<PyWinrtTreeViewItemAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtTreeViewItemAutomationPeer : py::py_obj_ref, BasePyWinrtTreeViewItemAutomationPeer
     {
-        PyWinrtTreeViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TreeViewItem owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeerT<PyWinrtTreeViewItemAutomationPeer>(owner) {}
+        PyWinrtTreeViewItemAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TreeViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewItemAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTreeViewItemAutomationPeer* instance, bool is_last_reference)
         {
@@ -19421,9 +20246,20 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TreeViewListAutomationPeer class --------------------
 
-    struct PyWinrtTreeViewListAutomationPeer : py::py_obj_ref, winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeerT<PyWinrtTreeViewListAutomationPeer>
+    struct PyWinrtTreeViewListAutomationPeer;
+    using BasePyWinrtTreeViewListAutomationPeer = winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeerT<PyWinrtTreeViewListAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtTreeViewListAutomationPeer : py::py_obj_ref, BasePyWinrtTreeViewListAutomationPeer
     {
-        PyWinrtTreeViewListAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TreeViewList owner) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeerT<PyWinrtTreeViewListAutomationPeer>(owner) {}
+        PyWinrtTreeViewListAutomationPeer(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::TreeViewList owner) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewListAutomationPeer(owner) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTreeViewListAutomationPeer* instance, bool is_last_reference)
         {

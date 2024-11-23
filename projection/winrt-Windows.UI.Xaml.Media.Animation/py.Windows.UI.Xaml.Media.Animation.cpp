@@ -296,9 +296,20 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- BasicConnectedAnimationConfiguration class --------------------
 
-    struct PyWinrtBasicConnectedAnimationConfiguration : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfigurationT<PyWinrtBasicConnectedAnimationConfiguration>
+    struct PyWinrtBasicConnectedAnimationConfiguration;
+    using BasePyWinrtBasicConnectedAnimationConfiguration = winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfigurationT<PyWinrtBasicConnectedAnimationConfiguration, py::IPywinrtObject>;
+
+    struct PyWinrtBasicConnectedAnimationConfiguration : py::py_obj_ref, BasePyWinrtBasicConnectedAnimationConfiguration
     {
-        PyWinrtBasicConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfigurationT<PyWinrtBasicConnectedAnimationConfiguration>() {}
+        PyWinrtBasicConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBasicConnectedAnimationConfiguration() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtBasicConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
@@ -1808,8 +1819,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ColorKeyFrame class --------------------
 
-    struct PyWinrtColorKeyFrame : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameT<PyWinrtColorKeyFrame>
+    struct PyWinrtColorKeyFrame;
+    using BasePyWinrtColorKeyFrame = winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameT<PyWinrtColorKeyFrame, py::IPywinrtObject>;
+
+    struct PyWinrtColorKeyFrame : py::py_obj_ref, BasePyWinrtColorKeyFrame
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorKeyFrame* instance, bool is_last_reference)
         {
@@ -4850,9 +4872,20 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- DirectConnectedAnimationConfiguration class --------------------
 
-    struct PyWinrtDirectConnectedAnimationConfiguration : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfigurationT<PyWinrtDirectConnectedAnimationConfiguration>
+    struct PyWinrtDirectConnectedAnimationConfiguration;
+    using BasePyWinrtDirectConnectedAnimationConfiguration = winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfigurationT<PyWinrtDirectConnectedAnimationConfiguration, py::IPywinrtObject>;
+
+    struct PyWinrtDirectConnectedAnimationConfiguration : py::py_obj_ref, BasePyWinrtDirectConnectedAnimationConfiguration
     {
-        PyWinrtDirectConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfigurationT<PyWinrtDirectConnectedAnimationConfiguration>() {}
+        PyWinrtDirectConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDirectConnectedAnimationConfiguration() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDirectConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
@@ -6133,8 +6166,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- DoubleKeyFrame class --------------------
 
-    struct PyWinrtDoubleKeyFrame : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameT<PyWinrtDoubleKeyFrame>
+    struct PyWinrtDoubleKeyFrame;
+    using BasePyWinrtDoubleKeyFrame = winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameT<PyWinrtDoubleKeyFrame, py::IPywinrtObject>;
+
+    struct PyWinrtDoubleKeyFrame : py::py_obj_ref, BasePyWinrtDoubleKeyFrame
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDoubleKeyFrame* instance, bool is_last_reference)
         {
@@ -11469,9 +11513,20 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- GravityConnectedAnimationConfiguration class --------------------
 
-    struct PyWinrtGravityConnectedAnimationConfiguration : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfigurationT<PyWinrtGravityConnectedAnimationConfiguration>
+    struct PyWinrtGravityConnectedAnimationConfiguration;
+    using BasePyWinrtGravityConnectedAnimationConfiguration = winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfigurationT<PyWinrtGravityConnectedAnimationConfiguration, py::IPywinrtObject>;
+
+    struct PyWinrtGravityConnectedAnimationConfiguration : py::py_obj_ref, BasePyWinrtGravityConnectedAnimationConfiguration
     {
-        PyWinrtGravityConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfigurationT<PyWinrtGravityConnectedAnimationConfiguration>() {}
+        PyWinrtGravityConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGravityConnectedAnimationConfiguration() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGravityConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
@@ -12483,8 +12538,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- NavigationTransitionInfo class --------------------
 
-    struct PyWinrtNavigationTransitionInfo : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfoT<PyWinrtNavigationTransitionInfo>
+    struct PyWinrtNavigationTransitionInfo;
+    using BasePyWinrtNavigationTransitionInfo = winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfoT<PyWinrtNavigationTransitionInfo, py::IPywinrtObject>;
+
+    struct PyWinrtNavigationTransitionInfo : py::py_obj_ref, BasePyWinrtNavigationTransitionInfo
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtNavigationTransitionInfo* instance, bool is_last_reference)
         {
@@ -12812,8 +12878,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ObjectKeyFrame class --------------------
 
-    struct PyWinrtObjectKeyFrame : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameT<PyWinrtObjectKeyFrame>
+    struct PyWinrtObjectKeyFrame;
+    using BasePyWinrtObjectKeyFrame = winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameT<PyWinrtObjectKeyFrame, py::IPywinrtObject>;
+
+    struct PyWinrtObjectKeyFrame : py::py_obj_ref, BasePyWinrtObjectKeyFrame
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtObjectKeyFrame* instance, bool is_last_reference)
         {
@@ -14803,8 +14880,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- PointKeyFrame class --------------------
 
-    struct PyWinrtPointKeyFrame : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameT<PyWinrtPointKeyFrame>
+    struct PyWinrtPointKeyFrame;
+    using BasePyWinrtPointKeyFrame = winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameT<PyWinrtPointKeyFrame, py::IPywinrtObject>;
+
+    struct PyWinrtPointKeyFrame : py::py_obj_ref, BasePyWinrtPointKeyFrame
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPointKeyFrame* instance, bool is_last_reference)
         {
@@ -23199,8 +23287,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- Timeline class --------------------
 
-    struct PyWinrtTimeline : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Animation::TimelineT<PyWinrtTimeline>
+    struct PyWinrtTimeline;
+    using BasePyWinrtTimeline = winrt::Windows::UI::Xaml::Media::Animation::TimelineT<PyWinrtTimeline, py::IPywinrtObject>;
+
+    struct PyWinrtTimeline : py::py_obj_ref, BasePyWinrtTimeline
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTimeline* instance, bool is_last_reference)
         {

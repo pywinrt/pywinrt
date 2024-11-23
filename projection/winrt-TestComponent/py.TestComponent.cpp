@@ -118,10 +118,21 @@ namespace py::cpp::TestComponent
 
     // ----- Composable class --------------------
 
-    struct PyWinrtComposable : py::py_obj_ref, winrt::TestComponent::ComposableT<PyWinrtComposable>
+    struct PyWinrtComposable;
+    using BasePyWinrtComposable = winrt::TestComponent::ComposableT<PyWinrtComposable, py::IPywinrtObject>;
+
+    struct PyWinrtComposable : py::py_obj_ref, BasePyWinrtComposable
     {
-        PyWinrtComposable(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::TestComponent::ComposableT<PyWinrtComposable>() {}
-        PyWinrtComposable(PyObject* py_obj, int32_t init) : py::py_obj_ref(py_obj), winrt::TestComponent::ComposableT<PyWinrtComposable>(init) {}
+        PyWinrtComposable(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComposable() {}
+        PyWinrtComposable(PyObject* py_obj, int32_t init) : py::py_obj_ref(py_obj), BasePyWinrtComposable(init) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtComposable* instance, bool is_last_reference)
         {
@@ -554,9 +565,20 @@ namespace py::cpp::TestComponent
 
     // ----- Derived class --------------------
 
-    struct PyWinrtDerived : py::py_obj_ref, winrt::TestComponent::DerivedT<PyWinrtDerived>
+    struct PyWinrtDerived;
+    using BasePyWinrtDerived = winrt::TestComponent::DerivedT<PyWinrtDerived, py::IPywinrtObject>;
+
+    struct PyWinrtDerived : py::py_obj_ref, BasePyWinrtDerived
     {
-        PyWinrtDerived(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::TestComponent::DerivedT<PyWinrtDerived>() {}
+        PyWinrtDerived(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDerived() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDerived* instance, bool is_last_reference)
         {

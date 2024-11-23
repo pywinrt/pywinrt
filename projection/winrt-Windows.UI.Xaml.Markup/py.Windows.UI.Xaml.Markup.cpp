@@ -6,9 +6,20 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 {
     // ----- MarkupExtension class --------------------
 
-    struct PyWinrtMarkupExtension : py::py_obj_ref, winrt::Windows::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>
+    struct PyWinrtMarkupExtension;
+    using BasePyWinrtMarkupExtension = winrt::Windows::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension, py::IPywinrtObject>;
+
+    struct PyWinrtMarkupExtension : py::py_obj_ref, BasePyWinrtMarkupExtension
     {
-        PyWinrtMarkupExtension(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Markup::MarkupExtensionT<PyWinrtMarkupExtension>() {}
+        PyWinrtMarkupExtension(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMarkupExtension() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtMarkupExtension* instance, bool is_last_reference)
         {

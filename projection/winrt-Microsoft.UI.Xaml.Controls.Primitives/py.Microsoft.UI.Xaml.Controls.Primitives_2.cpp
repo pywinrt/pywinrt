@@ -6,9 +6,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 {
     // ----- ColorPickerSlider class --------------------
 
-    struct PyWinrtColorPickerSlider : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>
+    struct PyWinrtColorPickerSlider;
+    using BasePyWinrtColorPickerSlider = winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider, py::IPywinrtObject>;
+
+    struct PyWinrtColorPickerSlider : py::py_obj_ref, BasePyWinrtColorPickerSlider
     {
-        PyWinrtColorPickerSlider(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSliderT<PyWinrtColorPickerSlider>() {}
+        PyWinrtColorPickerSlider(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtColorPickerSlider() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorPickerSlider* instance, bool is_last_reference)
         {
@@ -239,9 +250,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- TabViewListView class --------------------
 
-    struct PyWinrtTabViewListView : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>
+    struct PyWinrtTabViewListView;
+    using BasePyWinrtTabViewListView = winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView, py::IPywinrtObject>;
+
+    struct PyWinrtTabViewListView : py::py_obj_ref, BasePyWinrtTabViewListView
     {
-        PyWinrtTabViewListView(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListViewT<PyWinrtTabViewListView>() {}
+        PyWinrtTabViewListView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTabViewListView() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtTabViewListView* instance, bool is_last_reference)
         {

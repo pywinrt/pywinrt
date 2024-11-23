@@ -528,8 +528,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ButtonBase class --------------------
 
-    struct PyWinrtButtonBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBaseT<PyWinrtButtonBase>
+    struct PyWinrtButtonBase;
+    using BasePyWinrtButtonBase = winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBaseT<PyWinrtButtonBase, py::IPywinrtObject>;
+
+    struct PyWinrtButtonBase : py::py_obj_ref, BasePyWinrtButtonBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtButtonBase* instance, bool is_last_reference)
         {
@@ -1621,9 +1632,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- CarouselPanel class --------------------
 
-    struct PyWinrtCarouselPanel : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanelT<PyWinrtCarouselPanel>
+    struct PyWinrtCarouselPanel;
+    using BasePyWinrtCarouselPanel = winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanelT<PyWinrtCarouselPanel, py::IPywinrtObject>;
+
+    struct PyWinrtCarouselPanel : py::py_obj_ref, BasePyWinrtCarouselPanel
     {
-        PyWinrtCarouselPanel(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanelT<PyWinrtCarouselPanel>() {}
+        PyWinrtCarouselPanel(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCarouselPanel() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCarouselPanel* instance, bool is_last_reference)
         {
@@ -2954,9 +2976,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ColorSpectrum class --------------------
 
-    struct PyWinrtColorSpectrum : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrumT<PyWinrtColorSpectrum>
+    struct PyWinrtColorSpectrum;
+    using BasePyWinrtColorSpectrum = winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrumT<PyWinrtColorSpectrum, py::IPywinrtObject>;
+
+    struct PyWinrtColorSpectrum : py::py_obj_ref, BasePyWinrtColorSpectrum
     {
-        PyWinrtColorSpectrum(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrumT<PyWinrtColorSpectrum>() {}
+        PyWinrtColorSpectrum(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtColorSpectrum() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtColorSpectrum* instance, bool is_last_reference)
         {
@@ -4248,9 +4281,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- CommandBarFlyoutCommandBar class --------------------
 
-    struct PyWinrtCommandBarFlyoutCommandBar : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarT<PyWinrtCommandBarFlyoutCommandBar>
+    struct PyWinrtCommandBarFlyoutCommandBar;
+    using BasePyWinrtCommandBarFlyoutCommandBar = winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarT<PyWinrtCommandBarFlyoutCommandBar, py::IPywinrtObject>;
+
+    struct PyWinrtCommandBarFlyoutCommandBar : py::py_obj_ref, BasePyWinrtCommandBarFlyoutCommandBar
     {
-        PyWinrtCommandBarFlyoutCommandBar(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarT<PyWinrtCommandBarFlyoutCommandBar>() {}
+        PyWinrtCommandBarFlyoutCommandBar(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCommandBarFlyoutCommandBar() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtCommandBarFlyoutCommandBar* instance, bool is_last_reference)
         {
@@ -5415,9 +5459,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- DragCompletedEventArgs class --------------------
 
-    struct PyWinrtDragCompletedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgsT<PyWinrtDragCompletedEventArgs>
+    struct PyWinrtDragCompletedEventArgs;
+    using BasePyWinrtDragCompletedEventArgs = winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgsT<PyWinrtDragCompletedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtDragCompletedEventArgs : py::py_obj_ref, BasePyWinrtDragCompletedEventArgs
     {
-        PyWinrtDragCompletedEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange, bool canceled) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgsT<PyWinrtDragCompletedEventArgs>(horizontalChange, verticalChange, canceled) {}
+        PyWinrtDragCompletedEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange, bool canceled) : py::py_obj_ref(py_obj), BasePyWinrtDragCompletedEventArgs(horizontalChange, verticalChange, canceled) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDragCompletedEventArgs* instance, bool is_last_reference)
         {
@@ -5644,9 +5699,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- DragDeltaEventArgs class --------------------
 
-    struct PyWinrtDragDeltaEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgsT<PyWinrtDragDeltaEventArgs>
+    struct PyWinrtDragDeltaEventArgs;
+    using BasePyWinrtDragDeltaEventArgs = winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgsT<PyWinrtDragDeltaEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtDragDeltaEventArgs : py::py_obj_ref, BasePyWinrtDragDeltaEventArgs
     {
-        PyWinrtDragDeltaEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgsT<PyWinrtDragDeltaEventArgs>(horizontalChange, verticalChange) {}
+        PyWinrtDragDeltaEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange) : py::py_obj_ref(py_obj), BasePyWinrtDragDeltaEventArgs(horizontalChange, verticalChange) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDragDeltaEventArgs* instance, bool is_last_reference)
         {
@@ -5845,9 +5911,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- DragStartedEventArgs class --------------------
 
-    struct PyWinrtDragStartedEventArgs : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgsT<PyWinrtDragStartedEventArgs>
+    struct PyWinrtDragStartedEventArgs;
+    using BasePyWinrtDragStartedEventArgs = winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgsT<PyWinrtDragStartedEventArgs, py::IPywinrtObject>;
+
+    struct PyWinrtDragStartedEventArgs : py::py_obj_ref, BasePyWinrtDragStartedEventArgs
     {
-        PyWinrtDragStartedEventArgs(PyObject* py_obj, double horizontalOffset, double verticalOffset) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgsT<PyWinrtDragStartedEventArgs>(horizontalOffset, verticalOffset) {}
+        PyWinrtDragStartedEventArgs(PyObject* py_obj, double horizontalOffset, double verticalOffset) : py::py_obj_ref(py_obj), BasePyWinrtDragStartedEventArgs(horizontalOffset, verticalOffset) {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtDragStartedEventArgs* instance, bool is_last_reference)
         {
@@ -6046,8 +6123,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- FlyoutBase class --------------------
 
-    struct PyWinrtFlyoutBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseT<PyWinrtFlyoutBase>
+    struct PyWinrtFlyoutBase;
+    using BasePyWinrtFlyoutBase = winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseT<PyWinrtFlyoutBase, py::IPywinrtObject>;
+
+    struct PyWinrtFlyoutBase : py::py_obj_ref, BasePyWinrtFlyoutBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlyoutBase* instance, bool is_last_reference)
         {
@@ -7856,9 +7944,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- FlyoutShowOptions class --------------------
 
-    struct PyWinrtFlyoutShowOptions : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptionsT<PyWinrtFlyoutShowOptions>
+    struct PyWinrtFlyoutShowOptions;
+    using BasePyWinrtFlyoutShowOptions = winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptionsT<PyWinrtFlyoutShowOptions, py::IPywinrtObject>;
+
+    struct PyWinrtFlyoutShowOptions : py::py_obj_ref, BasePyWinrtFlyoutShowOptions
     {
-        PyWinrtFlyoutShowOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptionsT<PyWinrtFlyoutShowOptions>() {}
+        PyWinrtFlyoutShowOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlyoutShowOptions() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtFlyoutShowOptions* instance, bool is_last_reference)
         {
@@ -8379,9 +8478,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GridViewItemPresenter class --------------------
 
-    struct PyWinrtGridViewItemPresenter : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenterT<PyWinrtGridViewItemPresenter>
+    struct PyWinrtGridViewItemPresenter;
+    using BasePyWinrtGridViewItemPresenter = winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenterT<PyWinrtGridViewItemPresenter, py::IPywinrtObject>;
+
+    struct PyWinrtGridViewItemPresenter : py::py_obj_ref, BasePyWinrtGridViewItemPresenter
     {
-        PyWinrtGridViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenterT<PyWinrtGridViewItemPresenter>() {}
+        PyWinrtGridViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemPresenter() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtGridViewItemPresenter* instance, bool is_last_reference)
         {
@@ -11733,9 +11843,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ListViewItemPresenter class --------------------
 
-    struct PyWinrtListViewItemPresenter : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterT<PyWinrtListViewItemPresenter>
+    struct PyWinrtListViewItemPresenter;
+    using BasePyWinrtListViewItemPresenter = winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterT<PyWinrtListViewItemPresenter, py::IPywinrtObject>;
+
+    struct PyWinrtListViewItemPresenter : py::py_obj_ref, BasePyWinrtListViewItemPresenter
     {
-        PyWinrtListViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterT<PyWinrtListViewItemPresenter>() {}
+        PyWinrtListViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemPresenter() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtListViewItemPresenter* instance, bool is_last_reference)
         {
@@ -18577,9 +18698,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- NavigationViewItemPresenter class --------------------
 
-    struct PyWinrtNavigationViewItemPresenter : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterT<PyWinrtNavigationViewItemPresenter>
+    struct PyWinrtNavigationViewItemPresenter;
+    using BasePyWinrtNavigationViewItemPresenter = winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterT<PyWinrtNavigationViewItemPresenter, py::IPywinrtObject>;
+
+    struct PyWinrtNavigationViewItemPresenter : py::py_obj_ref, BasePyWinrtNavigationViewItemPresenter
     {
-        PyWinrtNavigationViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterT<PyWinrtNavigationViewItemPresenter>() {}
+        PyWinrtNavigationViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtNavigationViewItemPresenter() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtNavigationViewItemPresenter* instance, bool is_last_reference)
         {
@@ -20143,8 +20275,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- PickerFlyoutBase class --------------------
 
-    struct PyWinrtPickerFlyoutBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBaseT<PyWinrtPickerFlyoutBase>
+    struct PyWinrtPickerFlyoutBase;
+    using BasePyWinrtPickerFlyoutBase = winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBaseT<PyWinrtPickerFlyoutBase, py::IPywinrtObject>;
+
+    struct PyWinrtPickerFlyoutBase : py::py_obj_ref, BasePyWinrtPickerFlyoutBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPickerFlyoutBase* instance, bool is_last_reference)
         {
@@ -20350,9 +20493,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- PivotHeaderItem class --------------------
 
-    struct PyWinrtPivotHeaderItem : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItemT<PyWinrtPivotHeaderItem>
+    struct PyWinrtPivotHeaderItem;
+    using BasePyWinrtPivotHeaderItem = winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItemT<PyWinrtPivotHeaderItem, py::IPywinrtObject>;
+
+    struct PyWinrtPivotHeaderItem : py::py_obj_ref, BasePyWinrtPivotHeaderItem
     {
-        PyWinrtPivotHeaderItem(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItemT<PyWinrtPivotHeaderItem>() {}
+        PyWinrtPivotHeaderItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtPivotHeaderItem() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtPivotHeaderItem* instance, bool is_last_reference)
         {
@@ -22571,8 +22725,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- RangeBase class --------------------
 
-    struct PyWinrtRangeBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseT<PyWinrtRangeBase>
+    struct PyWinrtRangeBase;
+    using BasePyWinrtRangeBase = winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseT<PyWinrtRangeBase, py::IPywinrtObject>;
+
+    struct PyWinrtRangeBase : py::py_obj_ref, BasePyWinrtRangeBase
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtRangeBase* instance, bool is_last_reference)
         {
@@ -24801,8 +24966,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- SelectorItem class --------------------
 
-    struct PyWinrtSelectorItem : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItemT<PyWinrtSelectorItem>
+    struct PyWinrtSelectorItem;
+    using BasePyWinrtSelectorItem = winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItemT<PyWinrtSelectorItem, py::IPywinrtObject>;
+
+    struct PyWinrtSelectorItem : py::py_obj_ref, BasePyWinrtSelectorItem
     {
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtSelectorItem* instance, bool is_last_reference)
         {
@@ -26030,9 +26206,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ToggleButton class --------------------
 
-    struct PyWinrtToggleButton : py::py_obj_ref, winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButtonT<PyWinrtToggleButton>
+    struct PyWinrtToggleButton;
+    using BasePyWinrtToggleButton = winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButtonT<PyWinrtToggleButton, py::IPywinrtObject>;
+
+    struct PyWinrtToggleButton : py::py_obj_ref, BasePyWinrtToggleButton
     {
-        PyWinrtToggleButton(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButtonT<PyWinrtToggleButton>() {}
+        PyWinrtToggleButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtToggleButton() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
 
         static void toggle_reference(PyWinrtToggleButton* instance, bool is_last_reference)
         {

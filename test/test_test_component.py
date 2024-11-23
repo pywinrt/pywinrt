@@ -45,6 +45,31 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
+    def test_object_round_trip(self):
+        class C(tc.Composable):
+            pass
+
+        c = C()
+
+        pset = wfc.PropertySet()
+        pset.insert("c", c)
+
+        c2 = pset.lookup("c")
+
+        self.assertIs(
+            c,
+            c2,
+            "user-created subclass instance should survive round-trip to WinRT-land",
+        )
+
+        c3 = tc.Composable._from(c)
+
+        self.assertIs(
+            c,
+            c3,
+            "user-created subclass instance should survive round-trip from WinRT-land",
+        )
+
     def test_object_lifetime_py(self):
         class C(tc.Composable):
             pass
