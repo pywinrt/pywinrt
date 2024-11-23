@@ -6,8 +6,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 {
     // ----- Block class --------------------
 
-    struct PyWinrtBlock : winrt::Microsoft::UI::Xaml::Documents::BlockT<PyWinrtBlock>
+    struct PyWinrtBlock : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::BlockT<PyWinrtBlock>
     {
+
+        static void toggle_reference(PyWinrtBlock* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Block(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3945,8 +3950,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- Inline class --------------------
 
-    struct PyWinrtInline : winrt::Microsoft::UI::Xaml::Documents::InlineT<PyWinrtInline>
+    struct PyWinrtInline : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::InlineT<PyWinrtInline>
     {
+
+        static void toggle_reference(PyWinrtInline* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Inline(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5561,9 +5571,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- Span class --------------------
 
-    struct PyWinrtSpan : winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>
+    struct PyWinrtSpan : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>
     {
-        PyWinrtSpan() : winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>() {}
+        PyWinrtSpan(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Documents::SpanT<PyWinrtSpan>() {}
+
+        static void toggle_reference(PyWinrtSpan* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Span(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5588,17 +5603,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtSpan>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::Span*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::Span*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::Span*>(self.get())->obj = winrt::make<PyWinrtSpan>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Documents::Span instance{};
@@ -7869,9 +7883,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- TextHighlighter class --------------------
 
-    struct PyWinrtTextHighlighter : winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>
+    struct PyWinrtTextHighlighter : py::py_obj_ref, winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>
     {
-        PyWinrtTextHighlighter() : winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>() {}
+        PyWinrtTextHighlighter(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Microsoft::UI::Xaml::Documents::TextHighlighterT<PyWinrtTextHighlighter>() {}
+
+        static void toggle_reference(PyWinrtTextHighlighter* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_TextHighlighter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7896,17 +7915,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtTextHighlighter>();
-
-                    auto self = reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter*>(self.get())->obj = winrt::make<PyWinrtTextHighlighter>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Microsoft::UI::Xaml::Documents::TextHighlighter instance{};

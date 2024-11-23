@@ -1029,8 +1029,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- BitmapSource class --------------------
 
-    struct PyWinrtBitmapSource : winrt::Windows::UI::Xaml::Media::Imaging::BitmapSourceT<PyWinrtBitmapSource>
+    struct PyWinrtBitmapSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::BitmapSourceT<PyWinrtBitmapSource>
     {
+
+        static void toggle_reference(PyWinrtBitmapSource* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_BitmapSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1963,10 +1968,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SurfaceImageSource class --------------------
 
-    struct PyWinrtSurfaceImageSource : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>
+    struct PyWinrtSurfaceImageSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>
     {
-        PyWinrtSurfaceImageSource(int32_t pixelWidth, int32_t pixelHeight) : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight) {}
-        PyWinrtSurfaceImageSource(int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight, isOpaque) {}
+        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight) {}
+        PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSourceT<PyWinrtSurfaceImageSource>(pixelWidth, pixelHeight, isOpaque) {}
+
+        static void toggle_reference(PyWinrtSurfaceImageSource* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_SurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -1994,17 +2004,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtSurfaceImageSource>(param0, param1);
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1};
@@ -2026,17 +2035,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtSurfaceImageSource>(param0, param1, param2);
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1, param2);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1, param2};
@@ -2139,10 +2147,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SvgImageSource class --------------------
 
-    struct PyWinrtSvgImageSource : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>
+    struct PyWinrtSvgImageSource : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>
     {
-        PyWinrtSvgImageSource() : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>() {}
-        PyWinrtSvgImageSource(winrt::Windows::Foundation::Uri uriSource) : winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>(uriSource) {}
+        PyWinrtSvgImageSource(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>() {}
+        PyWinrtSvgImageSource(PyObject* py_obj, winrt::Windows::Foundation::Uri uriSource) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceT<PyWinrtSvgImageSource>(uriSource) {}
+
+        static void toggle_reference(PyWinrtSvgImageSource* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_SvgImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2167,17 +2180,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtSvgImageSource>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource instance{};
@@ -2197,17 +2209,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtSvgImageSource>(param0);
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get(), param0);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource instance{param0};
@@ -3157,8 +3168,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- XamlRenderingBackgroundTask class --------------------
 
-    struct PyWinrtXamlRenderingBackgroundTask : winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTaskT<PyWinrtXamlRenderingBackgroundTask>
+    struct PyWinrtXamlRenderingBackgroundTask : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTaskT<PyWinrtXamlRenderingBackgroundTask>
     {
+
+        static void toggle_reference(PyWinrtXamlRenderingBackgroundTask* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_XamlRenderingBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept

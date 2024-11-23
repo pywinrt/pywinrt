@@ -6,9 +6,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 {
     // ----- AcrylicBrush class --------------------
 
-    struct PyWinrtAcrylicBrush : winrt::Windows::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>
+    struct PyWinrtAcrylicBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>
     {
-        PyWinrtAcrylicBrush() : winrt::Windows::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>() {}
+        PyWinrtAcrylicBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::AcrylicBrushT<PyWinrtAcrylicBrush>() {}
+
+        static void toggle_reference(PyWinrtAcrylicBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_AcrylicBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -33,17 +38,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtAcrylicBrush>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush*>(self.get())->obj = winrt::make<PyWinrtAcrylicBrush>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::AcrylicBrush instance{};
@@ -1706,8 +1710,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Brush class --------------------
 
-    struct PyWinrtBrush : winrt::Windows::UI::Xaml::Media::BrushT<PyWinrtBrush>
+    struct PyWinrtBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::BrushT<PyWinrtBrush>
     {
+
+        static void toggle_reference(PyWinrtBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Brush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2833,8 +2842,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- CacheMode class --------------------
 
-    struct PyWinrtCacheMode : winrt::Windows::UI::Xaml::Media::CacheModeT<PyWinrtCacheMode>
+    struct PyWinrtCacheMode : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::CacheModeT<PyWinrtCacheMode>
     {
+
+        static void toggle_reference(PyWinrtCacheMode* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_CacheMode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5214,9 +5228,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- FontFamily class --------------------
 
-    struct PyWinrtFontFamily : winrt::Windows::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>
+    struct PyWinrtFontFamily : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>
     {
-        PyWinrtFontFamily(winrt::hstring familyName) : winrt::Windows::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>(familyName) {}
+        PyWinrtFontFamily(PyObject* py_obj, winrt::hstring familyName) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::FontFamilyT<PyWinrtFontFamily>(familyName) {}
+
+        static void toggle_reference(PyWinrtFontFamily* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_FontFamily(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5243,17 +5262,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtFontFamily>(param0);
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::FontFamily*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::FontFamily*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::FontFamily*>(self.get())->obj = winrt::make<PyWinrtFontFamily>(self.get(), param0);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::FontFamily instance{param0};
@@ -5410,8 +5428,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- GeneralTransform class --------------------
 
-    struct PyWinrtGeneralTransform : winrt::Windows::UI::Xaml::Media::GeneralTransformT<PyWinrtGeneralTransform>
+    struct PyWinrtGeneralTransform : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::GeneralTransformT<PyWinrtGeneralTransform>
     {
+
+        static void toggle_reference(PyWinrtGeneralTransform* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_GeneralTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6938,8 +6961,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- GradientBrush class --------------------
 
-    struct PyWinrtGradientBrush : winrt::Windows::UI::Xaml::Media::GradientBrushT<PyWinrtGradientBrush>
+    struct PyWinrtGradientBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::GradientBrushT<PyWinrtGradientBrush>
     {
+
+        static void toggle_reference(PyWinrtGradientBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_GradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15950,8 +15978,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Projection class --------------------
 
-    struct PyWinrtProjection : winrt::Windows::UI::Xaml::Media::ProjectionT<PyWinrtProjection>
+    struct PyWinrtProjection : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::ProjectionT<PyWinrtProjection>
     {
+
+        static void toggle_reference(PyWinrtProjection* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Projection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16812,9 +16845,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RevealBackgroundBrush class --------------------
 
-    struct PyWinrtRevealBackgroundBrush : winrt::Windows::UI::Xaml::Media::RevealBackgroundBrushT<PyWinrtRevealBackgroundBrush>
+    struct PyWinrtRevealBackgroundBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::RevealBackgroundBrushT<PyWinrtRevealBackgroundBrush>
     {
-        PyWinrtRevealBackgroundBrush() : winrt::Windows::UI::Xaml::Media::RevealBackgroundBrushT<PyWinrtRevealBackgroundBrush>() {}
+        PyWinrtRevealBackgroundBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::RevealBackgroundBrushT<PyWinrtRevealBackgroundBrush>() {}
+
+        static void toggle_reference(PyWinrtRevealBackgroundBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_RevealBackgroundBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16839,17 +16877,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtRevealBackgroundBrush>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush*>(self.get())->obj = winrt::make<PyWinrtRevealBackgroundBrush>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush instance{};
@@ -16952,9 +16989,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RevealBorderBrush class --------------------
 
-    struct PyWinrtRevealBorderBrush : winrt::Windows::UI::Xaml::Media::RevealBorderBrushT<PyWinrtRevealBorderBrush>
+    struct PyWinrtRevealBorderBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::RevealBorderBrushT<PyWinrtRevealBorderBrush>
     {
-        PyWinrtRevealBorderBrush() : winrt::Windows::UI::Xaml::Media::RevealBorderBrushT<PyWinrtRevealBorderBrush>() {}
+        PyWinrtRevealBorderBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::RevealBorderBrushT<PyWinrtRevealBorderBrush>() {}
+
+        static void toggle_reference(PyWinrtRevealBorderBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_RevealBorderBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16979,17 +17021,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtRevealBorderBrush>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush*>(self.get())->obj = winrt::make<PyWinrtRevealBorderBrush>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::RevealBorderBrush instance{};
@@ -17092,8 +17133,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RevealBrush class --------------------
 
-    struct PyWinrtRevealBrush : winrt::Windows::UI::Xaml::Media::RevealBrushT<PyWinrtRevealBrush>
+    struct PyWinrtRevealBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::RevealBrushT<PyWinrtRevealBrush>
     {
+
+        static void toggle_reference(PyWinrtRevealBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_RevealBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19187,9 +19233,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- ThemeShadow class --------------------
 
-    struct PyWinrtThemeShadow : winrt::Windows::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>
+    struct PyWinrtThemeShadow : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>
     {
-        PyWinrtThemeShadow() : winrt::Windows::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>() {}
+        PyWinrtThemeShadow(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::ThemeShadowT<PyWinrtThemeShadow>() {}
+
+        static void toggle_reference(PyWinrtThemeShadow* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_ThemeShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -19214,17 +19265,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtThemeShadow>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::ThemeShadow*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::ThemeShadow*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::ThemeShadow*>(self.get())->obj = winrt::make<PyWinrtThemeShadow>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::ThemeShadow instance{};
@@ -19354,8 +19404,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- TileBrush class --------------------
 
-    struct PyWinrtTileBrush : winrt::Windows::UI::Xaml::Media::TileBrushT<PyWinrtTileBrush>
+    struct PyWinrtTileBrush : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::TileBrushT<PyWinrtTileBrush>
     {
+
+        static void toggle_reference(PyWinrtTileBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_TileBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22794,8 +22849,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- XamlCompositionBrushBase class --------------------
 
-    struct PyWinrtXamlCompositionBrushBase : winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBaseT<PyWinrtXamlCompositionBrushBase>
+    struct PyWinrtXamlCompositionBrushBase : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBaseT<PyWinrtXamlCompositionBrushBase>
     {
+
+        static void toggle_reference(PyWinrtXamlCompositionBrushBase* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_XamlCompositionBrushBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22978,9 +23038,14 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- XamlLight class --------------------
 
-    struct PyWinrtXamlLight : winrt::Windows::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>
+    struct PyWinrtXamlLight : py::py_obj_ref, winrt::Windows::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>
     {
-        PyWinrtXamlLight() : winrt::Windows::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>() {}
+        PyWinrtXamlLight(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::Windows::UI::Xaml::Media::XamlLightT<PyWinrtXamlLight>() {}
+
+        static void toggle_reference(PyWinrtXamlLight* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_XamlLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -23005,17 +23070,16 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtXamlLight>();
-
-                    auto self = reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::XamlLight*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::XamlLight*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::XamlLight*>(self.get())->obj = winrt::make<PyWinrtXamlLight>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::Windows::UI::Xaml::Media::XamlLight instance{};

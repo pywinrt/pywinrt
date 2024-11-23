@@ -323,6 +323,46 @@ namespace py
         static constexpr const char* type_name = 0;
     };
 
+    /**
+     * Base class for WinRT type wrapping Python subclass of composable type.
+     */
+    struct py_obj_ref
+    {
+      private:
+        PyObject* py_obj;
+
+      protected:
+        py_obj_ref() = delete;
+
+        py_obj_ref(PyObject* py_obj) : py_obj{py_obj}
+        {
+        }
+
+        static void toggle_reference(py_obj_ref* obj, bool is_last_reference) noexcept
+        {
+            auto state = PyGILState_Ensure();
+
+            if (is_last_reference)
+            {
+                // We hold the only WinRT reference - allow the Python object
+                // to be GC'd
+                PyObject_GC_Track(obj->py_obj);
+                // This might be the last reference to the Python object, so
+                // obj may be destroyed after this call and no longer valid!
+                Py_DECREF(obj->py_obj);
+            }
+            else
+            {
+                // external WinRT code has a reference - don't allow Python
+                // object to be GC'd
+                Py_INCREF(obj->py_obj);
+                PyObject_GC_UnTrack(obj->py_obj);
+            }
+
+            PyGILState_Release(state);
+        }
+    };
+
     struct pyobj_ptr_traits
     {
         using type = PyObject*;

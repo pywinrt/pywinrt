@@ -118,10 +118,15 @@ namespace py::cpp::TestComponent
 
     // ----- Composable class --------------------
 
-    struct PyWinrtComposable : winrt::TestComponent::ComposableT<PyWinrtComposable>
+    struct PyWinrtComposable : py::py_obj_ref, winrt::TestComponent::ComposableT<PyWinrtComposable>
     {
-        PyWinrtComposable() : winrt::TestComponent::ComposableT<PyWinrtComposable>() {}
-        PyWinrtComposable(int32_t init) : winrt::TestComponent::ComposableT<PyWinrtComposable>(init) {}
+        PyWinrtComposable(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::TestComponent::ComposableT<PyWinrtComposable>() {}
+        PyWinrtComposable(PyObject* py_obj, int32_t init) : py::py_obj_ref(py_obj), winrt::TestComponent::ComposableT<PyWinrtComposable>(init) {}
+
+        static void toggle_reference(PyWinrtComposable* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Composable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -146,17 +151,16 @@ namespace py::cpp::TestComponent
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtComposable>();
-
-                    auto self = reinterpret_cast<py::wrapper::TestComponent::Composable*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::TestComponent::Composable instance{};
@@ -176,17 +180,16 @@ namespace py::cpp::TestComponent
 
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtComposable>(param0);
-
-                    auto self = reinterpret_cast<py::wrapper::TestComponent::Composable*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get(), param0);
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::TestComponent::Composable instance{param0};
@@ -551,9 +554,14 @@ namespace py::cpp::TestComponent
 
     // ----- Derived class --------------------
 
-    struct PyWinrtDerived : winrt::TestComponent::DerivedT<PyWinrtDerived>
+    struct PyWinrtDerived : py::py_obj_ref, winrt::TestComponent::DerivedT<PyWinrtDerived>
     {
-        PyWinrtDerived() : winrt::TestComponent::DerivedT<PyWinrtDerived>() {}
+        PyWinrtDerived(PyObject* py_obj) : py::py_obj_ref(py_obj), winrt::TestComponent::DerivedT<PyWinrtDerived>() {}
+
+        static void toggle_reference(PyWinrtDerived* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
     };
 
     static PyObject* _new_Derived(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -578,17 +586,16 @@ namespace py::cpp::TestComponent
             {
                 if (type != self_type)
                 {
-                    auto obj = winrt::make<PyWinrtDerived>();
-
-                    auto self = reinterpret_cast<py::wrapper::TestComponent::Derived*>(type->tp_alloc(type, 0));
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
                     if (!self)
                     {
                         return nullptr;
                     }
 
-                    std::construct_at(&self->obj, std::move(obj));
+                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Derived*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::TestComponent::Derived*>(self.get())->obj = winrt::make<PyWinrtDerived>(self.get());
 
-                    return reinterpret_cast<PyObject*>(self);
+                    return self.detach();
                 }
 
                 winrt::TestComponent::Derived instance{};

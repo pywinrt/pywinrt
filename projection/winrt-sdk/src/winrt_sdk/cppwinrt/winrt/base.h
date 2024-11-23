@@ -7695,26 +7695,62 @@ namespace winrt::impl
                 {
                     if (is_weak_ref(count_or_pointer))
                     {
-                        return decode_weak_ref(count_or_pointer)->increment_strong();
+                        auto target = decode_weak_ref(count_or_pointer)->increment_strong();
+                        
+                        if constexpr (has_toggle_reference::value)
+                        {
+                            if (target == 2)
+                            {
+                                D::toggle_reference(static_cast<D*>(this), false);
+                            }
+                        }
+
+                        return target;
                     }
 
                     uintptr_t const target = count_or_pointer + 1;
 
                     if (m_references.compare_exchange_weak(count_or_pointer, target, std::memory_order_relaxed))
                     {
+                        if constexpr (has_toggle_reference::value)
+                        {
+                            if (target == 2)
+                            {
+                                D::toggle_reference(static_cast<D*>(this), false);
+                            }
+                        }
+
                         return static_cast<uint32_t>(target);
                     }
                 }
             }
             else
             {
-                return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+                auto target = 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+                
+                if constexpr (has_toggle_reference::value)
+                {
+                    if (target == 2)
+                    {
+                        D::toggle_reference(static_cast<D*>(this), false);
+                    }
+                }
+
+                return target;
             }
         }
 
         uint32_t __stdcall NonDelegatingRelease() noexcept
         {
             uint32_t const target = subtract_reference();
+
+            if constexpr (has_toggle_reference::value)
+            {
+                if (target == 1)
+                {
+                    D::toggle_reference(static_cast<D*>(this), true);
+                }
+            }
 
             if (target == 0)
             {
@@ -7876,6 +7912,18 @@ namespace winrt::impl
         {
             template <typename U, typename = decltype(std::declval<U>().final_release(0))> static constexpr bool get_value(int) { return true; }
             template <typename> static constexpr bool get_value(...) { return false; }
+
+        public:
+
+            static constexpr bool value = get_value<D>(0);
+        };
+
+        class has_toggle_reference
+        {
+            template <typename U, typename = decltype(std::declval<U>().toggle_reference(0, false))>
+            static constexpr bool get_value(int) { return true; }
+            template <typename>
+            static constexpr bool get_value(...) { return false; }
 
         public:
 
