@@ -340,9 +340,7 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            w.WriteLine(
-                $"def __new__(cls: typing.Type[{type.Name}]{paramList}) -> {type.Name}: ..."
-            );
+            w.WriteLine($"def __new__(cls: typing.Type[Self]{paramList}) -> Self: ...");
         }
 
         foreach (var method in type.Methods.Where(m => !m.IsStatic))
