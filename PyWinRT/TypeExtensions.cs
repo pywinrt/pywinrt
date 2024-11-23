@@ -264,6 +264,7 @@ static class TypeExtensions
             ByReferenceType byRef => byRef.ElementType.ToCppTypeName(map),
             OptionalModifierType opt => opt.ElementType.ToCppTypeName(map),
             ArrayType t => t.ElementType.ToCppTypeName(map),
+            { FullName: "System.Void" } => "void",
             { FullName: "System.Boolean" } => "bool",
             { FullName: "System.SByte" } => "int8_t",
             { FullName: "System.Byte" } => "uint8_t",
