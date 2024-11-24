@@ -1131,18 +1131,7 @@ static class WriterExtensions
                         w.WriteLine("{");
                         w.Indent++;
 
-                        // HACK: work around https://github.com/microsoft/cppwinrt/issues/1457
-                        if (
-                            type.Namespace == "Windows.UI.Xaml.Controls"
-                            && type.Name == "DataTemplateSelector"
-                        )
-                        {
-                            w.WriteLine(
-                                "PyErr_SetString(PyExc_NotImplementedError, \"DataTemplateSelector has compile bug preventing implementation\");"
-                            );
-                            w.WriteLine("return nullptr;");
-                        }
-                        else if (type.HasComposableFactory)
+                        if (type.HasComposableFactory)
                         {
                             w.WriteLine($"py::pyobj_handle self{{type->tp_alloc(type, 0)}};");
                             w.WriteLine("if (!self)");
