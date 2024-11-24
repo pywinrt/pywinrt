@@ -6158,6 +6158,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
+    static PyObject* FlyoutBase_CreatePresenter(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* FlyoutBase_GetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -6231,6 +6237,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* FlyoutBase_SetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
@@ -7724,7 +7736,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_FlyoutBase[] = {
+        { "_create_presenter", reinterpret_cast<PyCFunction>(FlyoutBase_CreatePresenter), METH_VARARGS, nullptr },
         { "hide", reinterpret_cast<PyCFunction>(FlyoutBase_Hide), METH_VARARGS, nullptr },
+        { "_on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(FlyoutBase_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
         { "show_at", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAt), METH_VARARGS, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(FlyoutBase_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(FlyoutBase_add_Closed), METH_O, nullptr },
@@ -20348,6 +20362,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
+    static PyObject* PickerFlyoutBase_OnConfirmed(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* PickerFlyoutBase_SetTitle(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -20386,6 +20406,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* PickerFlyoutBase_get_TitleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
@@ -20439,6 +20465,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_PickerFlyoutBase[] = {
+        { "_on_confirmed", reinterpret_cast<PyCFunction>(PickerFlyoutBase_OnConfirmed), METH_VARARGS, nullptr },
+        { "_should_show_confirmation_buttons", reinterpret_cast<PyCFunction>(PickerFlyoutBase_ShouldShowConfirmationButtons), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PickerFlyoutBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyoutBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -22760,6 +22788,24 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
+    static PyObject* RangeBase_OnMaximumChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* RangeBase_OnMinimumChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* RangeBase_OnValueChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* RangeBase_get_Value(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
         try
@@ -23277,6 +23323,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_RangeBase[] = {
+        { "_on_maximum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMaximumChanged), METH_VARARGS, nullptr },
+        { "_on_minimum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMinimumChanged), METH_VARARGS, nullptr },
+        { "_on_value_changed", reinterpret_cast<PyCFunction>(RangeBase_OnValueChanged), METH_VARARGS, nullptr },
         { "add_value_changed", reinterpret_cast<PyCFunction>(RangeBase_add_ValueChanged), METH_O, nullptr },
         { "remove_value_changed", reinterpret_cast<PyCFunction>(RangeBase_remove_ValueChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_RangeBase, METH_O | METH_STATIC, nullptr },
@@ -26285,6 +26334,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
+    static PyObject* ToggleButton_OnToggle(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* ToggleButton_get_IsThreeState(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
     {
         try
@@ -26655,6 +26710,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_ToggleButton[] = {
+        { "_on_toggle", reinterpret_cast<PyCFunction>(ToggleButton_OnToggle), METH_VARARGS, nullptr },
         { "add_checked", reinterpret_cast<PyCFunction>(ToggleButton_add_Checked), METH_O, nullptr },
         { "remove_checked", reinterpret_cast<PyCFunction>(ToggleButton_remove_Checked), METH_O, nullptr },
         { "add_indeterminate", reinterpret_cast<PyCFunction>(ToggleButton_add_Indeterminate), METH_O, nullptr },

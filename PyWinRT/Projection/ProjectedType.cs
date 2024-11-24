@@ -369,8 +369,8 @@ class ProjectedType
         return "self->obj.";
     }
 
-    public string GetMethodSelfParam(bool isStatic) =>
-        isStatic ? "PyObject* /*unused*/" : $"{CppPyWrapperType}* self";
+    public string GetMethodSelfParam(bool isUnused) =>
+        isUnused ? "PyObject* /*unused*/" : $"{CppPyWrapperType}* self";
 
     private static IEnumerable<ProjectedMethod> EnumerateConstructors(TypeDefinition type)
     {
@@ -429,7 +429,7 @@ class ProjectedType
             IReadOnlyDictionary<GenericParameter, TypeReference>? map
         )
         {
-            foreach (var method in methods.Where(m => !m.IsSpecialName && m.IsPublic))
+            foreach (var method in methods.Where(m => !m.IsSpecialName))
             {
                 var projected = new ProjectedMethod(method, inheritance, map);
 

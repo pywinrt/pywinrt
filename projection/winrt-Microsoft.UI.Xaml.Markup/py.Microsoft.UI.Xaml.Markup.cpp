@@ -85,6 +85,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
+    static PyObject* MarkupExtension_ProvideValue(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* MarkupExtension_ProvideValueWithIXamlServiceProvider(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_MarkupExtension(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Markup::MarkupExtension>>();
@@ -110,6 +122,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_MarkupExtension[] = {
+        { "_provide_value", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValue), METH_VARARGS, nullptr },
+        { "_provide_value_with_ixaml_service_provider", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValueWithIXamlServiceProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MarkupExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MarkupExtension), METH_O | METH_STATIC, nullptr },
         { }

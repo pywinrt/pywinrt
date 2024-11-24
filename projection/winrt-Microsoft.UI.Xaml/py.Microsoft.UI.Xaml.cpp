@@ -536,6 +536,12 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* Application_OnLaunched(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* Application_Start(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1075,6 +1081,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyMethodDef _methods_Application[] = {
         { "exit", reinterpret_cast<PyCFunction>(Application_Exit), METH_VARARGS, nullptr },
+        { "_on_launched", reinterpret_cast<PyCFunction>(Application_OnLaunched), METH_VARARGS, nullptr },
         { "add_unhandled_exception", reinterpret_cast<PyCFunction>(Application_add_UnhandledException), METH_O, nullptr },
         { "remove_unhandled_exception", reinterpret_cast<PyCFunction>(Application_remove_UnhandledException), METH_O, nullptr },
         { "add_resource_manager_requested", reinterpret_cast<PyCFunction>(Application_add_ResourceManagerRequested), METH_O, nullptr },
@@ -11423,6 +11430,12 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_DECREF(tp);
     }
 
+    static PyObject* FrameworkElement_ArrangeOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* FrameworkElement_DeferTree(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -11536,6 +11549,30 @@ namespace py::cpp::Microsoft::UI::Xaml
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* FrameworkElement_GoToElementStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* FrameworkElement_InvalidateViewport(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* FrameworkElement_MeasureOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* FrameworkElement_OnApplyTemplate(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* FrameworkElement_SetBinding(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
@@ -14381,8 +14418,13 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_FrameworkElement[] = {
+        { "_arrange_override", reinterpret_cast<PyCFunction>(FrameworkElement_ArrangeOverride), METH_VARARGS, nullptr },
         { "find_name", reinterpret_cast<PyCFunction>(FrameworkElement_FindName), METH_VARARGS, nullptr },
         { "get_binding_expression", reinterpret_cast<PyCFunction>(FrameworkElement_GetBindingExpression), METH_VARARGS, nullptr },
+        { "_go_to_element_state_core", reinterpret_cast<PyCFunction>(FrameworkElement_GoToElementStateCore), METH_VARARGS, nullptr },
+        { "_invalidate_viewport", reinterpret_cast<PyCFunction>(FrameworkElement_InvalidateViewport), METH_VARARGS, nullptr },
+        { "_measure_override", reinterpret_cast<PyCFunction>(FrameworkElement_MeasureOverride), METH_VARARGS, nullptr },
+        { "_on_apply_template", reinterpret_cast<PyCFunction>(FrameworkElement_OnApplyTemplate), METH_VARARGS, nullptr },
         { "set_binding", reinterpret_cast<PyCFunction>(FrameworkElement_SetBinding), METH_VARARGS, nullptr },
         { "add_actual_theme_changed", reinterpret_cast<PyCFunction>(FrameworkElement_add_ActualThemeChanged), METH_O, nullptr },
         { "remove_actual_theme_changed", reinterpret_cast<PyCFunction>(FrameworkElement_remove_ActualThemeChanged), METH_O, nullptr },
@@ -19899,6 +19941,12 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_DECREF(tp);
     }
 
+    static PyObject* StateTriggerBase_SetActive(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_StateTriggerBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::StateTriggerBase>>();
@@ -19924,6 +19972,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_StateTriggerBase[] = {
+        { "_set_active", reinterpret_cast<PyCFunction>(StateTriggerBase_SetActive), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StateTriggerBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StateTriggerBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -22470,6 +22519,12 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* UIElement_FindSubElementsForTouchTargeting(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* UIElement_Focus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -22506,6 +22561,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* UIElement_GetChildrenInTabFocusOrder(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* UIElement_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
@@ -22657,6 +22718,36 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* UIElement_OnBringIntoViewRequested(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* UIElement_OnCreateAutomationPeer(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* UIElement_OnDisconnectVisualChildren(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* UIElement_OnKeyboardAcceleratorInvoked(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* UIElement_OnProcessKeyboardAccelerators(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* UIElement_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -22695,6 +22786,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* UIElement_PopulatePropertyInfoOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* UIElement_RegisterAsScrollPort(PyObject* /*unused*/, PyObject* args) noexcept
@@ -31331,12 +31428,20 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "arrange", reinterpret_cast<PyCFunction>(UIElement_Arrange), METH_VARARGS, nullptr },
         { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(UIElement_CancelDirectManipulations), METH_VARARGS, nullptr },
         { "capture_pointer", reinterpret_cast<PyCFunction>(UIElement_CapturePointer), METH_VARARGS, nullptr },
+        { "_find_sub_elements_for_touch_targeting", reinterpret_cast<PyCFunction>(UIElement_FindSubElementsForTouchTargeting), METH_VARARGS, nullptr },
         { "focus", reinterpret_cast<PyCFunction>(UIElement_Focus), METH_VARARGS, nullptr },
+        { "_get_children_in_tab_focus_order", reinterpret_cast<PyCFunction>(UIElement_GetChildrenInTabFocusOrder), METH_VARARGS, nullptr },
         { "get_visual_internal", reinterpret_cast<PyCFunction>(UIElement_GetVisualInternal), METH_VARARGS, nullptr },
         { "invalidate_arrange", reinterpret_cast<PyCFunction>(UIElement_InvalidateArrange), METH_VARARGS, nullptr },
         { "invalidate_measure", reinterpret_cast<PyCFunction>(UIElement_InvalidateMeasure), METH_VARARGS, nullptr },
         { "measure", reinterpret_cast<PyCFunction>(UIElement_Measure), METH_VARARGS, nullptr },
+        { "_on_bring_into_view_requested", reinterpret_cast<PyCFunction>(UIElement_OnBringIntoViewRequested), METH_VARARGS, nullptr },
+        { "_on_create_automation_peer", reinterpret_cast<PyCFunction>(UIElement_OnCreateAutomationPeer), METH_VARARGS, nullptr },
+        { "_on_disconnect_visual_children", reinterpret_cast<PyCFunction>(UIElement_OnDisconnectVisualChildren), METH_VARARGS, nullptr },
+        { "_on_keyboard_accelerator_invoked", reinterpret_cast<PyCFunction>(UIElement_OnKeyboardAcceleratorInvoked), METH_VARARGS, nullptr },
+        { "_on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(UIElement_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "_populate_property_info_override", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfoOverride), METH_VARARGS, nullptr },
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "release_pointer_captures", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCaptures), METH_VARARGS, nullptr },
         { "remove_handler", reinterpret_cast<PyCFunction>(UIElement_RemoveHandler), METH_VARARGS, nullptr },
@@ -33893,6 +33998,24 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* VisualStateManager_GoToStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* VisualStateManager_RaiseCurrentStateChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* VisualStateManager_RaiseCurrentStateChanging(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* VisualStateManager_SetCustomVisualStateManager(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -33984,6 +34107,9 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_VisualStateManager[] = {
+        { "_go_to_state_core", reinterpret_cast<PyCFunction>(VisualStateManager_GoToStateCore), METH_VARARGS, nullptr },
+        { "_raise_current_state_changed", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanged), METH_VARARGS, nullptr },
+        { "_raise_current_state_changing", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanging), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualStateManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualStateManager), METH_O | METH_STATIC, nullptr },
         { }

@@ -5863,6 +5863,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
+    static PyObject* TextElement_OnDisconnectVisualChildren(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* TextElement_get_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
     {
         try
@@ -7817,6 +7823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyMethodDef _methods_TextElement[] = {
         { "find_name", reinterpret_cast<PyCFunction>(TextElement_FindName), METH_VARARGS, nullptr },
+        { "_on_disconnect_visual_children", reinterpret_cast<PyCFunction>(TextElement_OnDisconnectVisualChildren), METH_VARARGS, nullptr },
         { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayRequested), METH_O, nullptr },

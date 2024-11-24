@@ -1262,6 +1262,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetAcceleratorKeyCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetAccessKey(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1296,6 +1302,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetAccessKeyCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetAnnotations(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1334,6 +1346,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetAnnotationsCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetAutomationControlType(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1368,6 +1386,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetAutomationControlTypeCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetAutomationId(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1406,6 +1430,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetAutomationIdCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetBoundingRectangle(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1440,6 +1470,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetBoundingRectangleCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetChildren(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1478,6 +1514,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetChildrenCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetClassName(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1512,6 +1554,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetClassNameCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetClickablePoint(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1550,6 +1598,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetClickablePointCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetControlledPeers(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1586,6 +1640,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetControlledPeersCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetCulture(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1620,6 +1680,18 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetCultureCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* AutomationPeer_GetDescribedByCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetElementFromPoint(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1660,6 +1732,24 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetElementFromPointCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* AutomationPeer_GetFlowsFromCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* AutomationPeer_GetFlowsToCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetFocusedElement(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1694,6 +1784,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetFocusedElementCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetFullDescription(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1732,6 +1828,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetFullDescriptionCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetHeadingLevel(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1766,6 +1868,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetHeadingLevelCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetHelpText(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1804,6 +1912,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetHelpTextCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetItemStatus(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1838,6 +1952,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetItemStatusCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetItemType(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1876,6 +1996,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetItemTypeCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetLabeledBy(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1910,6 +2036,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetLabeledByCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetLandmarkType(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -1948,6 +2080,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetLandmarkTypeCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetLevel(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1982,6 +2120,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetLevelCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetLiveSetting(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2020,6 +2164,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetLiveSettingCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetLocalizedControlType(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2054,6 +2204,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetLocalizedControlTypeCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetLocalizedLandmarkType(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2092,6 +2248,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetLocalizedLandmarkTypeCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetName(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2128,6 +2290,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetNameCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetOrientation(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2162,6 +2330,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetOrientationCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetParent(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2238,6 +2412,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetPatternCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetPeerFromPoint(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2276,6 +2456,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetPeerFromPointCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_GetPositionInSet(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2310,6 +2496,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_GetPositionInSetCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_GetSizeOfSet(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2348,6 +2540,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_GetSizeOfSetCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_HasKeyboardFocus(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2382,6 +2580,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_HasKeyboardFocusCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_InvalidatePeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2457,6 +2661,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_IsContentElementCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_IsControlElement(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2491,6 +2701,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_IsControlElementCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_IsDataValidForForm(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2529,6 +2745,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_IsDataValidForFormCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_IsDialog(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2563,6 +2785,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_IsDialogCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_IsEnabled(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2601,6 +2829,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_IsEnabledCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_IsKeyboardFocusable(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2635,6 +2869,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_IsKeyboardFocusableCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_IsOffscreen(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2673,6 +2913,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_IsOffscreenCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_IsPassword(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2707,6 +2953,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_IsPasswordCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_IsPeripheral(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -2745,6 +2997,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_IsPeripheralCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_IsRequiredForForm(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2779,6 +3037,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_IsRequiredForFormCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_ListenerExists(PyObject* /*unused*/, PyObject* args) noexcept
@@ -2855,6 +3119,24 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_NavigateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* AutomationPeer_PeerFromProvider(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* AutomationPeer_ProviderFromPeer(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_RaiseAutomationEvent(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
@@ -3096,6 +3378,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* AutomationPeer_SetFocusCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* AutomationPeer_SetParent(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3170,6 +3458,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             py::set_invalid_arg_count_error(arg_count);
             return nullptr;
         }
+    }
+
+    static PyObject* AutomationPeer_ShowContextMenuCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
     }
 
     static PyObject* AutomationPeer_get_EventsSource(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self, void* /*unused*/) noexcept
@@ -3259,57 +3553,106 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     static PyMethodDef _methods_AutomationPeer[] = {
         { "get_accelerator_key", reinterpret_cast<PyCFunction>(AutomationPeer_GetAcceleratorKey), METH_VARARGS, nullptr },
+        { "_get_accelerator_key_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAcceleratorKeyCore), METH_VARARGS, nullptr },
         { "get_access_key", reinterpret_cast<PyCFunction>(AutomationPeer_GetAccessKey), METH_VARARGS, nullptr },
+        { "_get_access_key_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAccessKeyCore), METH_VARARGS, nullptr },
         { "get_annotations", reinterpret_cast<PyCFunction>(AutomationPeer_GetAnnotations), METH_VARARGS, nullptr },
+        { "_get_annotations_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAnnotationsCore), METH_VARARGS, nullptr },
         { "get_automation_control_type", reinterpret_cast<PyCFunction>(AutomationPeer_GetAutomationControlType), METH_VARARGS, nullptr },
+        { "_get_automation_control_type_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAutomationControlTypeCore), METH_VARARGS, nullptr },
         { "get_automation_id", reinterpret_cast<PyCFunction>(AutomationPeer_GetAutomationId), METH_VARARGS, nullptr },
+        { "_get_automation_id_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAutomationIdCore), METH_VARARGS, nullptr },
         { "get_bounding_rectangle", reinterpret_cast<PyCFunction>(AutomationPeer_GetBoundingRectangle), METH_VARARGS, nullptr },
+        { "_get_bounding_rectangle_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetBoundingRectangleCore), METH_VARARGS, nullptr },
         { "get_children", reinterpret_cast<PyCFunction>(AutomationPeer_GetChildren), METH_VARARGS, nullptr },
+        { "_get_children_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetChildrenCore), METH_VARARGS, nullptr },
         { "get_class_name", reinterpret_cast<PyCFunction>(AutomationPeer_GetClassName), METH_VARARGS, nullptr },
+        { "_get_class_name_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetClassNameCore), METH_VARARGS, nullptr },
         { "get_clickable_point", reinterpret_cast<PyCFunction>(AutomationPeer_GetClickablePoint), METH_VARARGS, nullptr },
+        { "_get_clickable_point_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetClickablePointCore), METH_VARARGS, nullptr },
         { "get_controlled_peers", reinterpret_cast<PyCFunction>(AutomationPeer_GetControlledPeers), METH_VARARGS, nullptr },
+        { "_get_controlled_peers_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetControlledPeersCore), METH_VARARGS, nullptr },
         { "get_culture", reinterpret_cast<PyCFunction>(AutomationPeer_GetCulture), METH_VARARGS, nullptr },
+        { "_get_culture_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetCultureCore), METH_VARARGS, nullptr },
+        { "_get_described_by_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetDescribedByCore), METH_VARARGS, nullptr },
         { "get_element_from_point", reinterpret_cast<PyCFunction>(AutomationPeer_GetElementFromPoint), METH_VARARGS, nullptr },
+        { "_get_element_from_point_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetElementFromPointCore), METH_VARARGS, nullptr },
+        { "_get_flows_from_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetFlowsFromCore), METH_VARARGS, nullptr },
+        { "_get_flows_to_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetFlowsToCore), METH_VARARGS, nullptr },
         { "get_focused_element", reinterpret_cast<PyCFunction>(AutomationPeer_GetFocusedElement), METH_VARARGS, nullptr },
+        { "_get_focused_element_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetFocusedElementCore), METH_VARARGS, nullptr },
         { "get_full_description", reinterpret_cast<PyCFunction>(AutomationPeer_GetFullDescription), METH_VARARGS, nullptr },
+        { "_get_full_description_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetFullDescriptionCore), METH_VARARGS, nullptr },
         { "get_heading_level", reinterpret_cast<PyCFunction>(AutomationPeer_GetHeadingLevel), METH_VARARGS, nullptr },
+        { "_get_heading_level_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetHeadingLevelCore), METH_VARARGS, nullptr },
         { "get_help_text", reinterpret_cast<PyCFunction>(AutomationPeer_GetHelpText), METH_VARARGS, nullptr },
+        { "_get_help_text_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetHelpTextCore), METH_VARARGS, nullptr },
         { "get_item_status", reinterpret_cast<PyCFunction>(AutomationPeer_GetItemStatus), METH_VARARGS, nullptr },
+        { "_get_item_status_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetItemStatusCore), METH_VARARGS, nullptr },
         { "get_item_type", reinterpret_cast<PyCFunction>(AutomationPeer_GetItemType), METH_VARARGS, nullptr },
+        { "_get_item_type_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetItemTypeCore), METH_VARARGS, nullptr },
         { "get_labeled_by", reinterpret_cast<PyCFunction>(AutomationPeer_GetLabeledBy), METH_VARARGS, nullptr },
+        { "_get_labeled_by_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLabeledByCore), METH_VARARGS, nullptr },
         { "get_landmark_type", reinterpret_cast<PyCFunction>(AutomationPeer_GetLandmarkType), METH_VARARGS, nullptr },
+        { "_get_landmark_type_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLandmarkTypeCore), METH_VARARGS, nullptr },
         { "get_level", reinterpret_cast<PyCFunction>(AutomationPeer_GetLevel), METH_VARARGS, nullptr },
+        { "_get_level_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLevelCore), METH_VARARGS, nullptr },
         { "get_live_setting", reinterpret_cast<PyCFunction>(AutomationPeer_GetLiveSetting), METH_VARARGS, nullptr },
+        { "_get_live_setting_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLiveSettingCore), METH_VARARGS, nullptr },
         { "get_localized_control_type", reinterpret_cast<PyCFunction>(AutomationPeer_GetLocalizedControlType), METH_VARARGS, nullptr },
+        { "_get_localized_control_type_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLocalizedControlTypeCore), METH_VARARGS, nullptr },
         { "get_localized_landmark_type", reinterpret_cast<PyCFunction>(AutomationPeer_GetLocalizedLandmarkType), METH_VARARGS, nullptr },
+        { "_get_localized_landmark_type_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetLocalizedLandmarkTypeCore), METH_VARARGS, nullptr },
         { "get_name", reinterpret_cast<PyCFunction>(AutomationPeer_GetName), METH_VARARGS, nullptr },
+        { "_get_name_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetNameCore), METH_VARARGS, nullptr },
         { "get_orientation", reinterpret_cast<PyCFunction>(AutomationPeer_GetOrientation), METH_VARARGS, nullptr },
+        { "_get_orientation_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetOrientationCore), METH_VARARGS, nullptr },
         { "get_parent", reinterpret_cast<PyCFunction>(AutomationPeer_GetParent), METH_VARARGS, nullptr },
         { "get_pattern", reinterpret_cast<PyCFunction>(AutomationPeer_GetPattern), METH_VARARGS, nullptr },
+        { "_get_pattern_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetPatternCore), METH_VARARGS, nullptr },
         { "get_peer_from_point", reinterpret_cast<PyCFunction>(AutomationPeer_GetPeerFromPoint), METH_VARARGS, nullptr },
+        { "_get_peer_from_point_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetPeerFromPointCore), METH_VARARGS, nullptr },
         { "get_position_in_set", reinterpret_cast<PyCFunction>(AutomationPeer_GetPositionInSet), METH_VARARGS, nullptr },
+        { "_get_position_in_set_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetPositionInSetCore), METH_VARARGS, nullptr },
         { "get_size_of_set", reinterpret_cast<PyCFunction>(AutomationPeer_GetSizeOfSet), METH_VARARGS, nullptr },
+        { "_get_size_of_set_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetSizeOfSetCore), METH_VARARGS, nullptr },
         { "has_keyboard_focus", reinterpret_cast<PyCFunction>(AutomationPeer_HasKeyboardFocus), METH_VARARGS, nullptr },
+        { "_has_keyboard_focus_core", reinterpret_cast<PyCFunction>(AutomationPeer_HasKeyboardFocusCore), METH_VARARGS, nullptr },
         { "invalidate_peer", reinterpret_cast<PyCFunction>(AutomationPeer_InvalidatePeer), METH_VARARGS, nullptr },
         { "is_content_element", reinterpret_cast<PyCFunction>(AutomationPeer_IsContentElement), METH_VARARGS, nullptr },
+        { "_is_content_element_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsContentElementCore), METH_VARARGS, nullptr },
         { "is_control_element", reinterpret_cast<PyCFunction>(AutomationPeer_IsControlElement), METH_VARARGS, nullptr },
+        { "_is_control_element_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsControlElementCore), METH_VARARGS, nullptr },
         { "is_data_valid_for_form", reinterpret_cast<PyCFunction>(AutomationPeer_IsDataValidForForm), METH_VARARGS, nullptr },
+        { "_is_data_valid_for_form_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsDataValidForFormCore), METH_VARARGS, nullptr },
         { "is_dialog", reinterpret_cast<PyCFunction>(AutomationPeer_IsDialog), METH_VARARGS, nullptr },
+        { "_is_dialog_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsDialogCore), METH_VARARGS, nullptr },
         { "is_enabled", reinterpret_cast<PyCFunction>(AutomationPeer_IsEnabled), METH_VARARGS, nullptr },
+        { "_is_enabled_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsEnabledCore), METH_VARARGS, nullptr },
         { "is_keyboard_focusable", reinterpret_cast<PyCFunction>(AutomationPeer_IsKeyboardFocusable), METH_VARARGS, nullptr },
+        { "_is_keyboard_focusable_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsKeyboardFocusableCore), METH_VARARGS, nullptr },
         { "is_offscreen", reinterpret_cast<PyCFunction>(AutomationPeer_IsOffscreen), METH_VARARGS, nullptr },
+        { "_is_offscreen_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsOffscreenCore), METH_VARARGS, nullptr },
         { "is_password", reinterpret_cast<PyCFunction>(AutomationPeer_IsPassword), METH_VARARGS, nullptr },
+        { "_is_password_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsPasswordCore), METH_VARARGS, nullptr },
         { "is_peripheral", reinterpret_cast<PyCFunction>(AutomationPeer_IsPeripheral), METH_VARARGS, nullptr },
+        { "_is_peripheral_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsPeripheralCore), METH_VARARGS, nullptr },
         { "is_required_for_form", reinterpret_cast<PyCFunction>(AutomationPeer_IsRequiredForForm), METH_VARARGS, nullptr },
+        { "_is_required_for_form_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsRequiredForFormCore), METH_VARARGS, nullptr },
         { "navigate", reinterpret_cast<PyCFunction>(AutomationPeer_Navigate), METH_VARARGS, nullptr },
+        { "_navigate_core", reinterpret_cast<PyCFunction>(AutomationPeer_NavigateCore), METH_VARARGS, nullptr },
+        { "_peer_from_provider", reinterpret_cast<PyCFunction>(AutomationPeer_PeerFromProvider), METH_VARARGS, nullptr },
+        { "_provider_from_peer", reinterpret_cast<PyCFunction>(AutomationPeer_ProviderFromPeer), METH_VARARGS, nullptr },
         { "raise_automation_event", reinterpret_cast<PyCFunction>(AutomationPeer_RaiseAutomationEvent), METH_VARARGS, nullptr },
         { "raise_notification_event", reinterpret_cast<PyCFunction>(AutomationPeer_RaiseNotificationEvent), METH_VARARGS, nullptr },
         { "raise_property_changed_event", reinterpret_cast<PyCFunction>(AutomationPeer_RaisePropertyChangedEvent), METH_VARARGS, nullptr },
         { "raise_structure_changed_event", reinterpret_cast<PyCFunction>(AutomationPeer_RaiseStructureChangedEvent), METH_VARARGS, nullptr },
         { "raise_text_edit_text_changed_event", reinterpret_cast<PyCFunction>(AutomationPeer_RaiseTextEditTextChangedEvent), METH_VARARGS, nullptr },
         { "set_focus", reinterpret_cast<PyCFunction>(AutomationPeer_SetFocus), METH_VARARGS, nullptr },
+        { "_set_focus_core", reinterpret_cast<PyCFunction>(AutomationPeer_SetFocusCore), METH_VARARGS, nullptr },
         { "set_parent", reinterpret_cast<PyCFunction>(AutomationPeer_SetParent), METH_VARARGS, nullptr },
         { "show_context_menu", reinterpret_cast<PyCFunction>(AutomationPeer_ShowContextMenu), METH_VARARGS, nullptr },
+        { "_show_context_menu_core", reinterpret_cast<PyCFunction>(AutomationPeer_ShowContextMenuCore), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AutomationPeer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationPeer), METH_O | METH_STATIC, nullptr },
         { }
@@ -9050,6 +9393,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
+    static PyObject* ItemsControlAutomationPeer_OnCreateItemAutomationPeer(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_ItemsControlAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>>();
@@ -9077,6 +9426,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static PyMethodDef _methods_ItemsControlAutomationPeer[] = {
         { "create_item_automation_peer", reinterpret_cast<PyCFunction>(ItemsControlAutomationPeer_CreateItemAutomationPeer), METH_VARARGS, nullptr },
         { "find_item_by_property", reinterpret_cast<PyCFunction>(ItemsControlAutomationPeer_FindItemByProperty), METH_VARARGS, nullptr },
+        { "_on_create_item_automation_peer", reinterpret_cast<PyCFunction>(ItemsControlAutomationPeer_OnCreateItemAutomationPeer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ItemsControlAutomationPeer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ItemsControlAutomationPeer), METH_O | METH_STATIC, nullptr },
         { }

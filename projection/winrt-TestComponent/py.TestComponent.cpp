@@ -823,6 +823,24 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* OverloadClass_OverloadWithOne(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* OverloadClass_OverloadWithThree(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* OverloadClass_OverloadWithTwo(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_OverloadClass(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::TestComponent::OverloadClass>>();
@@ -849,6 +867,9 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_OverloadClass[] = {
         { "overload", reinterpret_cast<PyCFunction>(OverloadClass_Overload), METH_VARARGS, nullptr },
+        { "_overload_with_one", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithOne), METH_VARARGS, nullptr },
+        { "_overload_with_three", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithThree), METH_VARARGS, nullptr },
+        { "_overload_with_two", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithTwo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OverloadClass, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OverloadClass), METH_O | METH_STATIC, nullptr },
         { }

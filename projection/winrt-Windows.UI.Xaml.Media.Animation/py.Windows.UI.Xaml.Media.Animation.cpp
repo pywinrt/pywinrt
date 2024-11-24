@@ -12573,6 +12573,18 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* NavigationTransitionInfo_GetNavigationStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* NavigationTransitionInfo_SetNavigationStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_NavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>>();
@@ -12598,6 +12610,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_NavigationTransitionInfo[] = {
+        { "_get_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetNavigationStateCore), METH_VARARGS, nullptr },
+        { "_set_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetNavigationStateCore), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }

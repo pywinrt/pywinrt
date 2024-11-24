@@ -17,11 +17,7 @@ class ProjectedMethod(
     // TODO: this should eventually made private
     public readonly MethodDefinition Method = method;
 
-    /// <summary>
-    /// Gets the projected name of the method. For many overloaded methods, this
-    /// is different from the C++/WinRT name.
-    /// </summary>
-    public string Name { get; } =
+    private static string GetName(MethodDefinition method) =>
         (
             method.CustomAttributes.SingleOrDefault(a =>
                 a.AttributeType.FullName == "Windows.Foundation.Metadata.OverloadAttribute"
@@ -32,10 +28,23 @@ class ProjectedMethod(
             : method.Name;
 
     /// <summary>
+    /// Gets the projected name of the method. For many overloaded methods, this
+    /// is different from the C++/WinRT name.
+    /// </summary>
+    public string Name { get; } = GetName(method);
+
+    /// <summary>
     /// Gets the C++/WinRT name of the method.
     /// </summary>
     public string CppName { get; } =
         method.IsSpecialName ? method.Name.Substring(method.Name.IndexOf('_') + 1) : method.Name;
+
+    /// <summary>
+    /// Gets the Python name of the method.
+    /// </summary>
+    public string PyName { get; } =
+        (method.IsPublic ? "" : "_")
+        + GetName(method).ToPythonIdentifier(isTypeMethod: method.IsStatic);
 
     /// <summary>
     /// Gets the inherence chain of the method.
@@ -78,6 +87,11 @@ class ProjectedMethod(
     /// Gets a value indicating whether the method is static.
     /// </summary>
     public bool IsStatic { get; } = method.IsStatic;
+
+    /// <summary>
+    /// Gets a value indicating if the method is either protected or overridable.
+    /// </summary>
+    public bool IsProtected { get; } = method.IsFamily;
 
     /// <summary>
     /// Gets a value indicating whether the method is deprecated.

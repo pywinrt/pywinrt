@@ -1796,6 +1796,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
+    static PyObject* Brush_PopulatePropertyInfoOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* Brush_get_Transform(py::wrapper::Windows::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
     {
         try
@@ -2083,6 +2089,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyMethodDef _methods_Brush[] = {
         { "populate_property_info", reinterpret_cast<PyCFunction>(Brush_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "_populate_property_info_override", reinterpret_cast<PyCFunction>(Brush_PopulatePropertyInfoOverride), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Brush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Brush), METH_O | METH_STATIC, nullptr },
         { }
@@ -5545,6 +5552,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
+    static PyObject* GeneralTransform_TransformBoundsCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* GeneralTransform_TransformPoint(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -5634,6 +5647,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
+    static PyObject* GeneralTransform_TryTransformCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* GeneralTransform_get_Inverse(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, void* /*unused*/) noexcept
     {
         try
@@ -5686,8 +5705,10 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyMethodDef _methods_GeneralTransform[] = {
         { "transform_bounds", reinterpret_cast<PyCFunction>(GeneralTransform_TransformBounds), METH_VARARGS, nullptr },
+        { "_transform_bounds_core", reinterpret_cast<PyCFunction>(GeneralTransform_TransformBoundsCore), METH_VARARGS, nullptr },
         { "transform_point", reinterpret_cast<PyCFunction>(GeneralTransform_TransformPoint), METH_VARARGS, nullptr },
         { "try_transform", reinterpret_cast<PyCFunction>(GeneralTransform_TryTransform), METH_VARARGS, nullptr },
+        { "_try_transform_core", reinterpret_cast<PyCFunction>(GeneralTransform_TryTransformCore), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GeneralTransform, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeneralTransform), METH_O | METH_STATIC, nullptr },
         { }
@@ -23016,6 +23037,18 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
+    static PyObject* XamlCompositionBrushBase_OnConnected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* XamlCompositionBrushBase_OnDisconnected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* XamlCompositionBrushBase_get_FallbackColor(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
     {
         try
@@ -23128,6 +23161,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_XamlCompositionBrushBase[] = {
+        { "_on_connected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnConnected), METH_VARARGS, nullptr },
+        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnDisconnected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlCompositionBrushBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlCompositionBrushBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -23340,6 +23375,24 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
+    static PyObject* XamlLight_GetId(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* XamlLight_OnConnected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* XamlLight_OnDisconnected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* XamlLight_RemoveTargetBrush(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -23445,6 +23498,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_XamlLight[] = {
+        { "_get_id", reinterpret_cast<PyCFunction>(XamlLight_GetId), METH_VARARGS, nullptr },
+        { "_on_connected", reinterpret_cast<PyCFunction>(XamlLight_OnConnected), METH_VARARGS, nullptr },
+        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlLight_OnDisconnected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlLight), METH_O | METH_STATIC, nullptr },
         { }

@@ -45,6 +45,15 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
+    def test_overriding_method(self):
+        class C(tc.OverloadClass):
+            pass
+
+        c = C()
+
+        with self.assertRaisesRegex(RuntimeError, "cannot call protected method"):
+            c._overload_with_one(1)
+
     def test_object_round_trip(self):
         class C(tc.Composable):
             pass
