@@ -718,6 +718,186 @@ namespace py::cpp::TestComponent
         type_slots_Derived_Static
     };
 
+    // ----- OverloadClass class --------------------
+
+    struct PyWinrtOverloadClass;
+    using BasePyWinrtOverloadClass = winrt::TestComponent::OverloadClassT<PyWinrtOverloadClass, py::IPywinrtObject>;
+
+    struct PyWinrtOverloadClass : py::py_obj_ref, BasePyWinrtOverloadClass
+    {
+        PyWinrtOverloadClass(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtOverloadClass() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
+
+        static void toggle_reference(PyWinrtOverloadClass* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+    };
+
+    static PyObject* _new_OverloadClass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::TestComponent::OverloadClass>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::OverloadClass*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::TestComponent::OverloadClass*>(self.get())->obj = winrt::make<PyWinrtOverloadClass>(self.get());
+
+                    return self.detach();
+                }
+
+                winrt::TestComponent::OverloadClass instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_OverloadClass(py::wrapper::TestComponent::OverloadClass* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* OverloadClass_Overload(py::wrapper::TestComponent::OverloadClass* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_OverloadClass(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::OverloadClass>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_OverloadClass(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::OverloadClass>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_OverloadClass[] = {
+        { "overload", reinterpret_cast<PyCFunction>(OverloadClass_Overload), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_OverloadClass, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_OverloadClass), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_OverloadClass[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_OverloadClass[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_OverloadClass) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OverloadClass) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_OverloadClass) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_OverloadClass) },
+        { }
+    };
+
+    static PyType_Spec type_spec_OverloadClass = {
+        "winrt._winrt_testcomponent.OverloadClass",
+        sizeof(py::wrapper::TestComponent::OverloadClass),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_OverloadClass};
+
+    static PyGetSetDef getset_OverloadClass_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_OverloadClass_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_OverloadClass_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_OverloadClass_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_OverloadClass_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_OverloadClass_Static =
+    {
+        "winrt._winrt_testcomponent.OverloadClass_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_OverloadClass_Static
+    };
+
     // ----- TestRunner class --------------------
 
     static PyObject* _new_TestRunner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6364,6 +6544,18 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
 
     py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, Derived_bases.get(), reinterpret_cast<PyTypeObject*>(type_Derived_Static.get()))};
     if (!Derived_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_OverloadClass_Static{PyType_FromSpec(&type_spec_OverloadClass_Static)};
+    if (!type_OverloadClass_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle OverloadClass_type{py::register_python_type(module.get(), &type_spec_OverloadClass, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverloadClass_Static.get()))};
+    if (!OverloadClass_type)
     {
         return nullptr;
     }

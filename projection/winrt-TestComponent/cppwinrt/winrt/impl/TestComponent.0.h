@@ -29,6 +29,11 @@ WINRT_EXPORT namespace winrt::TestComponent
     struct IComposableStatics;
     struct IDerived;
     struct IDerivedFactory;
+    struct IOverloadClass;
+    struct IOverloadClassFactory;
+    struct IOverloadClassOverrides;
+    struct IOverloadClassOverrides2;
+    struct IOverloadClassProtected;
     struct IRequiredFour;
     struct IRequiredOne;
     struct IRequiredThree;
@@ -38,6 +43,7 @@ WINRT_EXPORT namespace winrt::TestComponent
     struct Class;
     struct Composable;
     struct Derived;
+    struct OverloadClass;
     struct TestRunner;
     struct Blittable;
     struct Nested;
@@ -93,6 +99,11 @@ namespace winrt::impl
     template <> struct category<winrt::TestComponent::IComposableStatics>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::IDerived>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::IDerivedFactory>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IOverloadClass>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IOverloadClassFactory>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IOverloadClassOverrides>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IOverloadClassOverrides2>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IOverloadClassProtected>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::IRequiredFour>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::IRequiredOne>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::IRequiredThree>{ using type = interface_category; };
@@ -102,6 +113,7 @@ namespace winrt::impl
     template <> struct category<winrt::TestComponent::Class>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::Composable>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::Derived>{ using type = class_category; };
+    template <> struct category<winrt::TestComponent::OverloadClass>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::TestRunner>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::Blittable>{ using type = struct_category<uint8_t, uint16_t, uint32_t, uint64_t, int16_t, int32_t, int64_t, float, double, winrt::guid>; };
     template <> struct category<winrt::TestComponent::Nested>{ using type = struct_category<winrt::TestComponent::Blittable, winrt::TestComponent::NonBlittable>; };
@@ -151,6 +163,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::TestComponent::Class> = L"TestComponent.Class";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Composable> = L"TestComponent.Composable";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Derived> = L"TestComponent.Derived";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::OverloadClass> = L"TestComponent.OverloadClass";
     template <> inline constexpr auto& name_v<winrt::TestComponent::TestRunner> = L"TestComponent.TestRunner";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Blittable> = L"TestComponent.Blittable";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Nested> = L"TestComponent.Nested";
@@ -161,6 +174,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::TestComponent::IComposableStatics> = L"TestComponent.IComposableStatics";
     template <> inline constexpr auto& name_v<winrt::TestComponent::IDerived> = L"TestComponent.IDerived";
     template <> inline constexpr auto& name_v<winrt::TestComponent::IDerivedFactory> = L"TestComponent.IDerivedFactory";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IOverloadClass> = L"TestComponent.IOverloadClass";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IOverloadClassFactory> = L"TestComponent.IOverloadClassFactory";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IOverloadClassOverrides> = L"TestComponent.IOverloadClassOverrides";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IOverloadClassOverrides2> = L"TestComponent.IOverloadClassOverrides2";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IOverloadClassProtected> = L"TestComponent.IOverloadClassProtected";
     template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredFour> = L"TestComponent.IRequiredFour";
     template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredOne> = L"TestComponent.IRequiredOne";
     template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredThree> = L"TestComponent.IRequiredThree";
@@ -215,6 +233,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::TestComponent::IComposableStatics>{ 0x2050A66F,0x2401,0x54FC,{ 0x8C,0x64,0xD2,0x13,0x24,0xA7,0x2C,0xBA } }; // 2050A66F-2401-54FC-8C64-D21324A72CBA
     template <> inline constexpr guid guid_v<winrt::TestComponent::IDerived>{ 0xAD36EED2,0x8C47,0x56C1,{ 0x97,0x48,0xEA,0x1C,0xB2,0xF2,0x64,0x40 } }; // AD36EED2-8C47-56C1-9748-EA1CB2F26440
     template <> inline constexpr guid guid_v<winrt::TestComponent::IDerivedFactory>{ 0x4021AFB8,0xC131,0x5BE1,{ 0x9C,0xB9,0xBE,0x65,0xD1,0x35,0xF9,0x31 } }; // 4021AFB8-C131-5BE1-9CB9-BE65D135F931
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IOverloadClass>{ 0xEF902013,0x00F3,0x4549,{ 0x90,0x32,0x49,0xE8,0x6D,0x53,0x6C,0x07 } }; // EF902013-00F3-4549-9032-49E86D536C07
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IOverloadClassFactory>{ 0xDFDFFB61,0xEA72,0x4977,{ 0xB1,0xA7,0x3F,0x0D,0x2C,0x32,0xBB,0x58 } }; // DFDFFB61-EA72-4977-B1A7-3F0D2C32BB58
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IOverloadClassOverrides>{ 0x32510F72,0x9229,0x4C69,{ 0x95,0xBD,0xDE,0x7B,0x81,0x89,0xC8,0x5C } }; // 32510F72-9229-4C69-95BD-DE7B8189C85C
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IOverloadClassOverrides2>{ 0x50205BCE,0xFAD3,0x4C66,{ 0x80,0x1F,0x17,0xAA,0xD0,0x07,0xB2,0x6C } }; // 50205BCE-FAD3-4C66-801F-17AAD007B26C
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IOverloadClassProtected>{ 0x6EDD1A3F,0x2616,0x45B7,{ 0x97,0x31,0xF8,0x4D,0xA9,0xCC,0xEC,0xA1 } }; // 6EDD1A3F-2616-45B7-9731-F84DA9CCECA1
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredFour>{ 0xAFBF8D43,0xF3FA,0x5093,{ 0x8D,0x16,0x05,0xD0,0xE3,0x59,0x8A,0x5E } }; // AFBF8D43-F3FA-5093-8D16-05D0E3598A5E
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredOne>{ 0x9CDEFEE9,0x59A9,0x5329,{ 0xA7,0xF3,0x59,0x35,0xD9,0xCA,0x27,0x11 } }; // 9CDEFEE9-59A9-5329-A7F3-5935D9CA2711
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredThree>{ 0x541F26D9,0x3083,0x50AE,{ 0x9F,0x32,0x26,0xF9,0x24,0x40,0x36,0x88 } }; // 541F26D9-3083-50AE-9F32-26F924403688
@@ -266,6 +289,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::TestComponent::Class>{ using type = winrt::TestComponent::IClass; };
     template <> struct default_interface<winrt::TestComponent::Composable>{ using type = winrt::TestComponent::IComposable; };
     template <> struct default_interface<winrt::TestComponent::Derived>{ using type = winrt::TestComponent::IDerived; };
+    template <> struct default_interface<winrt::TestComponent::OverloadClass>{ using type = winrt::TestComponent::IOverloadClass; };
     template <> struct abi<winrt::TestComponent::IClass>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -310,6 +334,41 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IOverloadClass>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Overload() noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IOverloadClassFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IOverloadClassOverrides>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall OverloadWithOne(int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IOverloadClassOverrides2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall OverloadWithTwo(int32_t, int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IOverloadClassProtected>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall OverloadWithThree(int32_t, int32_t, int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::TestComponent::IRequiredFour>
@@ -832,6 +891,51 @@ namespace winrt::impl
     template <> struct consume<winrt::TestComponent::IDerivedFactory>
     {
         template <typename D> using type = consume_TestComponent_IDerivedFactory<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IOverloadClass
+    {
+        auto Overload() const;
+    };
+    template <> struct consume<winrt::TestComponent::IOverloadClass>
+    {
+        template <typename D> using type = consume_TestComponent_IOverloadClass<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IOverloadClassFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::TestComponent::IOverloadClassFactory>
+    {
+        template <typename D> using type = consume_TestComponent_IOverloadClassFactory<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IOverloadClassOverrides
+    {
+        auto Overload(int32_t a) const;
+    };
+    template <> struct consume<winrt::TestComponent::IOverloadClassOverrides>
+    {
+        template <typename D> using type = consume_TestComponent_IOverloadClassOverrides<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IOverloadClassOverrides2
+    {
+        auto Overload(int32_t a, int32_t b) const;
+    };
+    template <> struct consume<winrt::TestComponent::IOverloadClassOverrides2>
+    {
+        template <typename D> using type = consume_TestComponent_IOverloadClassOverrides2<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IOverloadClassProtected
+    {
+        auto Overload(int32_t a, int32_t b, int32_t c) const;
+    };
+    template <> struct consume<winrt::TestComponent::IOverloadClassProtected>
+    {
+        template <typename D> using type = consume_TestComponent_IOverloadClassProtected<D>;
     };
     template <typename D>
     struct consume_TestComponent_IRequiredFour

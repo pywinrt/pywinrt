@@ -631,6 +631,12 @@ WINRT_EXPORT namespace winrt::TestComponent
         Derived(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IDerived(ptr, take_ownership_from_abi) {}
         Derived();
     };
+    struct WINRT_IMPL_EMPTY_BASES OverloadClass : winrt::TestComponent::IOverloadClass
+    {
+        OverloadClass(std::nullptr_t) noexcept {}
+        OverloadClass(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IOverloadClass(ptr, take_ownership_from_abi) {}
+        OverloadClass();
+    };
     struct TestRunner
     {
         TestRunner() = delete;
@@ -644,6 +650,24 @@ WINRT_EXPORT namespace winrt::TestComponent
         static auto CreateTimeSpan(uint32_t milliseconds);
         static auto CreateAsyncAction(uint32_t milliseconds);
         static auto ExpectObject(winrt::Windows::Foundation::IInspectable const& value);
+    };
+    template <typename D>
+    class IOverloadClassOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IOverloadClassOverrides = winrt::TestComponent::IOverloadClassOverrides;
+        auto Overload(int32_t a) const;
+    };
+    template <typename D>
+    class IOverloadClassOverrides2T
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IOverloadClassOverrides2 = winrt::TestComponent::IOverloadClassOverrides2;
+        auto Overload(int32_t a, int32_t b) const;
     };
 }
 #endif
