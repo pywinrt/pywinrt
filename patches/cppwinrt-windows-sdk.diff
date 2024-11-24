@@ -87,3 +87,27 @@ index 68076aba4..4c8cef245 100644
          using is_agile = std::negation<std::disjunction<std::is_same<non_agile, I>...>>;
          using is_inspectable = std::disjunction<std::is_base_of<Windows::Foundation::IInspectable, I>...>;
          using is_weak_ref_source = std::negation<std::disjunction<std::is_same<no_weak_ref, I>...>>;
+diff --git a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/Windows.UI.Xaml.Controls.h b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/Windows.UI.Xaml.Controls.h
+index e4ae9309f..c1ff30527 100644
+--- a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/Windows.UI.Xaml.Controls.h
++++ b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/Windows.UI.Xaml.Controls.h
+@@ -66440,6 +66440,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
+         winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverridesT<D>, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2T<D>
+     {
+         using composable = DataTemplateSelector;
++        friend impl::produce<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides>;
++        friend impl::produce<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2>;
+     protected:
+         DataTemplateSelectorT()
+         {
+@@ -66447,8 +66449,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
+         }
+         using impl::consume_t<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelector>::SelectTemplate;
+         using impl::consume_t<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelector2>::SelectTemplate;
+-        using impl::consume_t<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides>::SelectTemplateCore;
+-        using impl::consume_t<D, winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2>::SelectTemplateCore;
++        using winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverridesT<D>::SelectTemplateCore;
++        using winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2T<D>::SelectTemplateCore;
+     };
+     template <typename D, typename... Interfaces>
+     struct DatePickerT :

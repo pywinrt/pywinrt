@@ -392,12 +392,6 @@ static class ObjectWriterExtensions
 
     public static void WriteComposableTypeImpl(this IndentedTextWriter w, ProjectedType type)
     {
-        // HACK: work around https://github.com/microsoft/cppwinrt/issues/1457
-        if (type.Namespace == "Windows.UI.Xaml.Controls" && type.Name == "DataTemplateSelector")
-        {
-            return;
-        }
-
         w.WriteLine($"struct PyWinrt{type.Name};");
         w.WriteLine(
             $"using BasePyWinrt{type.Name} = {type.CppWinrtType}T<PyWinrt{type.Name}, py::IPywinrtObject>;"

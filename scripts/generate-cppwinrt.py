@@ -28,7 +28,7 @@ subprocess.check_call(
         "git",
         "apply",
         "--quiet",
-        REPO_ROOT_PATH / "patches" / "cppwinrt-toggle-ref.diff",
+        REPO_ROOT_PATH / "patches" / "cppwinrt-windows-sdk.diff",
     ]
 )
 
