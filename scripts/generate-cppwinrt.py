@@ -117,3 +117,13 @@ subprocess.check_call(
         TEST_PACKAGE_PATH,
     ]
 )
+
+# apply patches
+subprocess.check_call(
+    [
+        "git",
+        "apply",
+        "--quiet",
+        REPO_ROOT_PATH / "patches" / "cppwinrt-test-component.diff",
+    ]
+)

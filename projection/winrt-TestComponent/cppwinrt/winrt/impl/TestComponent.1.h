@@ -48,6 +48,41 @@ WINRT_EXPORT namespace winrt::TestComponent
         IDerivedFactory(std::nullptr_t = nullptr) noexcept {}
         IDerivedFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IOverloadClass :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverloadClass>
+    {
+        IOverloadClass(std::nullptr_t = nullptr) noexcept {}
+        IOverloadClass(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverloadClassFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverloadClassFactory>
+    {
+        IOverloadClassFactory(std::nullptr_t = nullptr) noexcept {}
+        IOverloadClassFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverloadClassOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverloadClassOverrides>
+    {
+        IOverloadClassOverrides(std::nullptr_t = nullptr) noexcept {}
+        IOverloadClassOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverloadClassOverrides2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverloadClassOverrides2>
+    {
+        IOverloadClassOverrides2(std::nullptr_t = nullptr) noexcept {}
+        IOverloadClassOverrides2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverloadClassProtected :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverloadClassProtected>
+    {
+        IOverloadClassProtected(std::nullptr_t = nullptr) noexcept {}
+        IOverloadClassProtected(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IRequiredFour :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRequiredFour>,

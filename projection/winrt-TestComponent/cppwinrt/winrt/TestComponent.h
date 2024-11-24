@@ -69,6 +69,28 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IDerivedFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return winrt::TestComponent::Derived{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_TestComponent_IOverloadClass<D>::Overload() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClass)->Overload());
+    }
+    template <typename D> auto consume_TestComponent_IOverloadClassFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClassFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::TestComponent::OverloadClass{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_IOverloadClassOverrides<D>::Overload(int32_t a) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClassOverrides)->OverloadWithOne(a));
+    }
+    template <typename D> auto consume_TestComponent_IOverloadClassOverrides2<D>::Overload(int32_t a, int32_t b) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClassOverrides2)->OverloadWithTwo(a, b));
+    }
+    template <typename D> auto consume_TestComponent_IOverloadClassProtected<D>::Overload(int32_t a, int32_t b, int32_t c) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClassProtected)->OverloadWithThree(a, b, c));
+    }
     template <typename D> auto consume_TestComponent_IRequiredFour<D>::Four() const
     {
         int32_t result{};
@@ -1436,6 +1458,71 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverloadClass> : produce_base<D, winrt::TestComponent::IOverloadClass>
+    {
+        int32_t __stdcall Overload() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Overload();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverloadClassFactory> : produce_base<D, winrt::TestComponent::IOverloadClassFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::TestComponent::OverloadClass>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverloadClassOverrides> : produce_base<D, winrt::TestComponent::IOverloadClassOverrides>
+    {
+        int32_t __stdcall OverloadWithOne(int32_t a) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Overload(a);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverloadClassOverrides2> : produce_base<D, winrt::TestComponent::IOverloadClassOverrides2>
+    {
+        int32_t __stdcall OverloadWithTwo(int32_t a, int32_t b) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Overload(a, b);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverloadClassProtected> : produce_base<D, winrt::TestComponent::IOverloadClassProtected>
+    {
+        int32_t __stdcall OverloadWithThree(int32_t a, int32_t b, int32_t c) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Overload(a, b, c);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
     template <typename D>
     struct produce<D, winrt::TestComponent::IRequiredFour> : produce_base<D, winrt::TestComponent::IRequiredFour>
     {
@@ -2490,6 +2577,34 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+template <typename T, typename D>
+struct WINRT_IMPL_EMPTY_BASES produce_dispatch_to_overridable<T, D, winrt::TestComponent::IOverloadClassOverrides>
+    : produce_dispatch_to_overridable_base<T, D, winrt::TestComponent::IOverloadClassOverrides>
+{
+    auto Overload(int32_t a)
+    {
+        if (auto overridable = this->shim_overridable())
+        {
+            return overridable.Overload(a);
+        }
+
+        return this->shim().Overload(a);
+    }
+};
+template <typename T, typename D>
+struct WINRT_IMPL_EMPTY_BASES produce_dispatch_to_overridable<T, D, winrt::TestComponent::IOverloadClassOverrides2>
+    : produce_dispatch_to_overridable_base<T, D, winrt::TestComponent::IOverloadClassOverrides2>
+{
+    auto Overload(int32_t a, int32_t b)
+    {
+        if (auto overridable = this->shim_overridable())
+        {
+            return overridable.Overload(a, b);
+        }
+
+        return this->shim().Overload(a, b);
+    }
+};
 }
 WINRT_EXPORT namespace winrt::TestComponent
 {
@@ -2531,6 +2646,11 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
         *this = impl::call_factory<Derived, IDerivedFactory>([&](IDerivedFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
+    inline OverloadClass::OverloadClass()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<OverloadClass, IOverloadClassFactory>([&](IOverloadClassFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto TestRunner::TestProducer(winrt::TestComponent::ITests const& callee)
     {
@@ -4266,6 +4386,14 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         check_hresult((*(impl::abi_t<TestHandler>**)this)->Invoke(*(void**)(&tests)));
     }
+    template <typename D> auto IOverloadClassOverridesT<D>::Overload(int32_t a) const
+    {
+        return shim().template try_as<IOverloadClassOverrides>().Overload(a);
+    }
+    template <typename D> auto IOverloadClassOverrides2T<D>::Overload(int32_t a, int32_t b) const
+    {
+        return shim().template try_as<IOverloadClassOverrides2>().Overload(a, b);
+    }
     template <typename D, typename... Interfaces>
     struct ComposableT :
         implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
@@ -4296,6 +4424,29 @@ WINRT_EXPORT namespace winrt::TestComponent
             impl::call_factory<Derived, IDerivedFactory>([&](IDerivedFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
+    template <typename D, typename... Interfaces>
+    struct OverloadClassT :
+        implements<D, winrt::TestComponent::IOverloadClassOverrides, winrt::TestComponent::IOverloadClassOverrides2, composing, Interfaces...>,
+        impl::require<D, winrt::TestComponent::IOverloadClass>,
+        protected impl::require<D, winrt::TestComponent::IOverloadClassProtected>,
+        impl::base<D, OverloadClass>,
+        winrt::TestComponent::IOverloadClassOverridesT<D>, winrt::TestComponent::IOverloadClassOverrides2T<D>
+    {
+        using composable = OverloadClass;
+        friend impl::consume_t<D, winrt::TestComponent::IOverloadClassProtected>;
+        friend impl::produce<D, winrt::TestComponent::IOverloadClassOverrides>;
+        friend impl::produce<D, winrt::TestComponent::IOverloadClassOverrides2>;
+        friend impl::require_one<D, winrt::TestComponent::IOverloadClassProtected>;
+    protected:
+        OverloadClassT()
+        {
+            impl::call_factory<OverloadClass, IOverloadClassFactory>([&](IOverloadClassFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+        using impl::consume_t<D, winrt::TestComponent::IOverloadClass>::Overload;
+        using winrt::TestComponent::IOverloadClassOverridesT<D>::Overload;
+        using winrt::TestComponent::IOverloadClassOverrides2T<D>::Overload;
+        using impl::consume_t<D, winrt::TestComponent::IOverloadClassProtected>::Overload;
+    };
 }
 namespace std
 {
@@ -4306,6 +4457,11 @@ namespace std
     template<> struct hash<winrt::TestComponent::IComposableStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IDerived> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IDerivedFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverloadClass> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverloadClassFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverloadClassOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverloadClassOverrides2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverloadClassProtected> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredFour> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredOne> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredThree> : winrt::impl::hash_base {};
@@ -4315,6 +4471,7 @@ namespace std
     template<> struct hash<winrt::TestComponent::Class> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::Composable> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::Derived> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::OverloadClass> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::TestRunner> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
