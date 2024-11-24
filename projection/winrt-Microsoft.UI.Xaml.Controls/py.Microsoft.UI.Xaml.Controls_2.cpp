@@ -2024,6 +2024,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
+    static PyObject* ComboBox_OnDropDownClosed(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* ComboBox_OnDropDownOpened(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* ComboBox_get_TextBoxStyle(py::wrapper::Microsoft::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
     {
         try
@@ -3455,6 +3467,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ComboBox[] = {
+        { "_on_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownClosed), METH_VARARGS, nullptr },
+        { "_on_drop_down_opened", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownOpened), METH_VARARGS, nullptr },
         { "add_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_add_DropDownClosed), METH_O, nullptr },
         { "remove_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_remove_DropDownClosed), METH_O, nullptr },
         { "add_drop_down_opened", reinterpret_cast<PyCFunction>(ComboBox_add_DropDownOpened), METH_O, nullptr },
@@ -16764,6 +16778,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
+    static PyObject* VirtualizingStackPanel_OnCleanUpVirtualizedItem(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* VirtualizingStackPanel_SetVirtualizationMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -17112,6 +17132,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_VirtualizingStackPanel[] = {
+        { "_on_clean_up_virtualized_item", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_OnCleanUpVirtualizedItem), METH_VARARGS, nullptr },
         { "add_clean_up_virtualized_item_event", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_add_CleanUpVirtualizedItemEvent), METH_O, nullptr },
         { "remove_clean_up_virtualized_item_event", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_remove_CleanUpVirtualizedItemEvent), METH_O, nullptr },
         { "_assign_array_", _assign_array_VirtualizingStackPanel, METH_O | METH_STATIC, nullptr },

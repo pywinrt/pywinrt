@@ -139,17 +139,17 @@ static class WriterExtensions
         foreach (var method in type.Methods.Where(m => m.IsStatic).DistinctBy(m => m.Name))
         {
             w.WriteLine(
-                $"{{ \"{method.Name.ToPythonIdentifier(isTypeMethod: true)}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
+                $"{{ \"{method.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
             );
         }
 
         foreach (var @event in type.Events.Where(e => e.IsStatic))
         {
             w.WriteLine(
-                $"{{ \"{@event.AddMethod.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.AddMethod.Name}), METH_O, nullptr }},"
+                $"{{ \"{@event.AddMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.AddMethod.Name}), METH_O, nullptr }},"
             );
             w.WriteLine(
-                $"{{ \"{@event.RemoveMethod.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
+                $"{{ \"{@event.RemoveMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
             );
         }
 
@@ -331,7 +331,7 @@ static class WriterExtensions
             var argumentConventionFlag = getArgumentConventionFlag(method);
 
             w.WriteLine(
-                $"{{ \"{method.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), {argumentConventionFlag}, nullptr }},"
+                $"{{ \"{method.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), {argumentConventionFlag}, nullptr }},"
             );
         }
 
@@ -455,19 +455,26 @@ static class WriterExtensions
     )
     {
         foreach (
-            var (methodName, isStatic) in type.Methods.Select(m => (m.Name, m.IsStatic)).Distinct()
+            var (methodName, isStatic, isProtected) in type
+                .Methods.Select(m => (m.Name, m.IsStatic, m.IsProtected))
+                .Distinct()
         )
         {
-            var selfParam = type.GetMethodSelfParam(isStatic);
+            var selfParam = type.GetMethodSelfParam(isStatic || isProtected);
+            var argsName = isProtected ? "/* unused */" : "args";
 
             w.WriteBlankLine();
             w.WriteLine(
-                $"static PyObject* {type.Name}_{methodName}({selfParam}, PyObject* args) noexcept"
+                $"static PyObject* {type.Name}_{methodName}({selfParam}, PyObject* {argsName}) noexcept"
             );
             w.WriteLine("{");
             w.Indent++;
 
-            if (type.IsGeneric)
+            if (isProtected)
+            {
+                w.WriteProtectedMethod();
+            }
+            else if (type.IsGeneric)
             {
                 w.WriteLine($"return self->impl->{methodName}(args);");
             }
@@ -843,6 +850,12 @@ static class WriterExtensions
         w.WriteLine("Py_RETURN_NONE;");
         w.Indent--;
         w.WriteLine("}");
+    }
+
+    private static void WriteProtectedMethod(this IndentedTextWriter w)
+    {
+        w.WriteLine("PyErr_SetString(PyExc_RuntimeError, \"cannot call protected method\");");
+        w.WriteLine("return nullptr;");
     }
 
     static void WriteMethodOverloads(
@@ -1995,7 +2008,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"def {method.Name.ToPythonIdentifier()}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, method.GenericArgMap)}: ...{typeIgnore}"
+            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, method.GenericArgMap)}: ...{typeIgnore}"
         );
     }
 }

@@ -85,6 +85,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         Py_DECREF(tp);
     }
 
+    static PyObject* CustomXamlResourceLoader_GetResource(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* CustomXamlResourceLoader_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         try
@@ -171,6 +177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
     }
 
     static PyMethodDef _methods_CustomXamlResourceLoader[] = {
+        { "_get_resource", reinterpret_cast<PyCFunction>(CustomXamlResourceLoader_GetResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomXamlResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomXamlResourceLoader), METH_O | METH_STATIC, nullptr },
         { }

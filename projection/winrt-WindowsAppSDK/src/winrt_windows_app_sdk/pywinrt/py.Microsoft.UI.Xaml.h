@@ -25,6 +25,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Windowing.h"
 #endif
 
+#if __has_include("py.Microsoft.UI.Xaml.Automation.Peers.h")
+#include "py.Microsoft.UI.Xaml.Automation.Peers.h"
+#endif
+
 #if __has_include("py.Microsoft.UI.Xaml.Controls.h")
 #include "py.Microsoft.UI.Xaml.Controls.h"
 #endif
@@ -114,6 +118,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Microsoft.UI.Windowing.h>
+#include <winrt/Microsoft.UI.Xaml.Automation.Peers.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
 #include <winrt/Microsoft.UI.Xaml.Data.h>

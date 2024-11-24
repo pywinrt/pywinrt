@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.applicationmodel.background as windows_applicationmodel_background
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.imaging as windows_graphics_imaging
 import winrt.windows.storage.streams as windows_storage_streams
@@ -219,4 +220,5 @@ class XamlRenderingBackgroundTask_Static(type):
 class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBackgroundTask_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlRenderingBackgroundTask: ...
+    def _on_run(self, task_instance: windows_applicationmodel_background.ImplementsIBackgroundTaskInstance, /) -> None: ...
 

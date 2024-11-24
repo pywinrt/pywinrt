@@ -3236,6 +3236,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
+    static PyObject* XamlRenderingBackgroundTask_OnRun(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
     static PyObject* _assign_array_XamlRenderingBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>>();
@@ -3261,6 +3267,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     }
 
     static PyMethodDef _methods_XamlRenderingBackgroundTask[] = {
+        { "_on_run", reinterpret_cast<PyCFunction>(XamlRenderingBackgroundTask_OnRun), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlRenderingBackgroundTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlRenderingBackgroundTask), METH_O | METH_STATIC, nullptr },
         { }
