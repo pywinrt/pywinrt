@@ -637,6 +637,12 @@ WINRT_EXPORT namespace winrt::TestComponent
         OverloadClass(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IOverloadClass(ptr, take_ownership_from_abi) {}
         OverloadClass();
     };
+    struct WINRT_IMPL_EMPTY_BASES Override : winrt::TestComponent::IOverride
+    {
+        Override(std::nullptr_t) noexcept {}
+        Override(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IOverride(ptr, take_ownership_from_abi) {}
+        Override();
+    };
     struct TestRunner
     {
         TestRunner() = delete;
@@ -668,6 +674,15 @@ WINRT_EXPORT namespace winrt::TestComponent
     public:
         using IOverloadClassOverrides2 = winrt::TestComponent::IOverloadClassOverrides2;
         auto Overload(int32_t a, int32_t b) const;
+    };
+    template <typename D>
+    class IOverrideOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IOverrideOverrides = winrt::TestComponent::IOverrideOverrides;
+        auto OnOverridable() const;
     };
 }
 #endif

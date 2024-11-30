@@ -1,8 +1,8 @@
 diff --git a/projection/winrt-TestComponent/cppwinrt/winrt/TestComponent.h b/projection/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
-index 9856c2ab3..a6547c1f3 100644
+index bf309d334..0a747f1fc 100644
 --- a/projection/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
 +++ b/projection/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
-@@ -4434,6 +4434,8 @@ WINRT_EXPORT namespace winrt::TestComponent
+@@ -4596,6 +4596,8 @@ WINRT_EXPORT namespace winrt::TestComponent
      {
          using composable = OverloadClass;
          friend impl::consume_t<D, winrt::TestComponent::IOverloadClassProtected>;
@@ -11,7 +11,7 @@ index 9856c2ab3..a6547c1f3 100644
          friend impl::require_one<D, winrt::TestComponent::IOverloadClassProtected>;
      protected:
          OverloadClassT()
-@@ -4441,8 +4443,8 @@ WINRT_EXPORT namespace winrt::TestComponent
+@@ -4603,8 +4605,8 @@ WINRT_EXPORT namespace winrt::TestComponent
              impl::call_factory<OverloadClass, IOverloadClassFactory>([&](IOverloadClassFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
          }
          using impl::consume_t<D, winrt::TestComponent::IOverloadClass>::Overload;
@@ -21,4 +21,4 @@ index 9856c2ab3..a6547c1f3 100644
 +        using winrt::TestComponent::IOverloadClassOverrides2T<D>::Overload;
          using impl::consume_t<D, winrt::TestComponent::IOverloadClassProtected>::Overload;
      };
- }
+     template <typename D, typename... Interfaces>

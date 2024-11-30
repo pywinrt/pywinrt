@@ -83,6 +83,34 @@ WINRT_EXPORT namespace winrt::TestComponent
         IOverloadClassProtected(std::nullptr_t = nullptr) noexcept {}
         IOverloadClassProtected(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IOverride :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverride>
+    {
+        IOverride(std::nullptr_t = nullptr) noexcept {}
+        IOverride(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverrideFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverrideFactory>
+    {
+        IOverrideFactory(std::nullptr_t = nullptr) noexcept {}
+        IOverrideFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverrideOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverrideOverrides>
+    {
+        IOverrideOverrides(std::nullptr_t = nullptr) noexcept {}
+        IOverrideOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverrideProtected :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverrideProtected>
+    {
+        IOverrideProtected(std::nullptr_t = nullptr) noexcept {}
+        IOverrideProtected(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IRequiredFour :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRequiredFour>,

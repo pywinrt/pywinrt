@@ -1878,6 +1878,7 @@ namespace py::wrapper::TestComponent
     using Composable = py::winrt_wrapper<winrt::TestComponent::Composable>;
     using Derived = py::winrt_wrapper<winrt::TestComponent::Derived>;
     using OverloadClass = py::winrt_wrapper<winrt::TestComponent::OverloadClass>;
+    using Override = py::winrt_wrapper<winrt::TestComponent::Override>;
     using TestRunner = py::winrt_wrapper<winrt::TestComponent::TestRunner>;
     using IRequiredFour = py::winrt_wrapper<winrt::TestComponent::IRequiredFour>;
     using IRequiredOne = py::winrt_wrapper<winrt::TestComponent::IRequiredOne>;
@@ -1931,6 +1932,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.testcomponent.OverloadClass";
         static constexpr const char* module_name = "winrt.testcomponent";
         static constexpr const char* type_name = "OverloadClass";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Override>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Override";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Override";
     };
 
     template<>
