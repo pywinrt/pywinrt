@@ -456,7 +456,7 @@ static class WriterExtensions
     {
         foreach (
             var (methodName, isStatic, isProtected) in type
-                .Methods.Select(m => (m.Name, m.IsStatic, m.IsProtected))
+                .Methods.Select(m => (m.Name, m.IsStatic, m.IsProtected || m.IsOverridable))
                 .Distinct()
         )
         {

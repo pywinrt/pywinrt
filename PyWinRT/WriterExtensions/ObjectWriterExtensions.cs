@@ -37,6 +37,11 @@ static class ObjectWriterExtensions
                     w.WriteLine("@typing.overload");
                 }
 
+                if (method.IsProtected)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WritePythonMethodTyping(method, ns, "cls");
 
                 hasMembers = true;
@@ -348,6 +353,11 @@ static class ObjectWriterExtensions
             if (type.Methods.Count(m => m.Name == method.Name) > 1)
             {
                 w.WriteLine("@typing.overload");
+            }
+
+            if (method.IsProtected)
+            {
+                w.WriteLine("@typing.final");
             }
 
             w.WritePythonMethodTyping(method, ns);
