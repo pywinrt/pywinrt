@@ -12,6 +12,7 @@ from winrt._winrt_testcomponent import (
     Composable,
     Derived,
     OverloadClass,
+    Override,
     TestRunner,
     IRequiredFour,
     IRequiredOne,
@@ -25,6 +26,7 @@ if TYPE_CHECKING:
         Composable_Static,
         Derived_Static,
         OverloadClass_Static,
+        Override_Static,
     )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -50,6 +52,7 @@ __all__ = [
     "Composable",
     "Derived",
     "OverloadClass",
+    "Override",
     "TestRunner",
     "IRequiredFour",
     "IRequiredOne",

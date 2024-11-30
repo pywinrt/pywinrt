@@ -91,6 +91,56 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverloadClassProtected)->OverloadWithThree(a, b, c));
     }
+    template <typename D> auto consume_TestComponent_IOverride<D>::CallProtected() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->CallProtected());
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::ProtectedCalled(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->add_ProtectedCalled(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::ProtectedCalled(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, ProtectedCalled_revoker>(this, ProtectedCalled(handler));
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::ProtectedCalled(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->remove_ProtectedCalled(impl::bind_in(token));
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::CallOverridable() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->CallOverridable());
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::OverridableCalled(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->add_OverridableCalled(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::OverridableCalled(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, OverridableCalled_revoker>(this, OverridableCalled(handler));
+    }
+    template <typename D> auto consume_TestComponent_IOverride<D>::OverridableCalled(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::TestComponent::IOverride)->remove_OverridableCalled(impl::bind_in(token));
+    }
+    template <typename D> auto consume_TestComponent_IOverrideFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverrideFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::TestComponent::Override{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_IOverrideOverrides<D>::OnOverridable() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverrideOverrides)->OnOverridable());
+    }
+    template <typename D> auto consume_TestComponent_IOverrideProtected<D>::OnProtected() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IOverrideProtected)->OnProtected());
+    }
     template <typename D> auto consume_TestComponent_IRequiredFour<D>::Four() const
     {
         int32_t result{};
@@ -1523,6 +1573,95 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverride> : produce_base<D, winrt::TestComponent::IOverride>
+    {
+        int32_t __stdcall CallProtected() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CallProtected();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_ProtectedCalled(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ProtectedCalled(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ProtectedCalled(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProtectedCalled(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall CallOverridable() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CallOverridable();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_OverridableCalled(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().OverridableCalled(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_OverridableCalled(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OverridableCalled(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverrideFactory> : produce_base<D, winrt::TestComponent::IOverrideFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::TestComponent::Override>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverrideOverrides> : produce_base<D, winrt::TestComponent::IOverrideOverrides>
+    {
+        int32_t __stdcall OnOverridable() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnOverridable();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IOverrideProtected> : produce_base<D, winrt::TestComponent::IOverrideProtected>
+    {
+        int32_t __stdcall OnProtected() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnProtected();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
     template <typename D>
     struct produce<D, winrt::TestComponent::IRequiredFour> : produce_base<D, winrt::TestComponent::IRequiredFour>
     {
@@ -2605,6 +2744,20 @@ struct WINRT_IMPL_EMPTY_BASES produce_dispatch_to_overridable<T, D, winrt::TestC
         return this->shim().Overload(a, b);
     }
 };
+template <typename T, typename D>
+struct WINRT_IMPL_EMPTY_BASES produce_dispatch_to_overridable<T, D, winrt::TestComponent::IOverrideOverrides>
+    : produce_dispatch_to_overridable_base<T, D, winrt::TestComponent::IOverrideOverrides>
+{
+    auto OnOverridable()
+    {
+        if (auto overridable = this->shim_overridable())
+        {
+            return overridable.OnOverridable();
+        }
+
+        return this->shim().OnOverridable();
+    }
+};
 }
 WINRT_EXPORT namespace winrt::TestComponent
 {
@@ -2651,6 +2804,11 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
         *this = impl::call_factory<OverloadClass, IOverloadClassFactory>([&](IOverloadClassFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
+    inline Override::Override()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<Override, IOverrideFactory>([&](IOverrideFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto TestRunner::TestProducer(winrt::TestComponent::ITests const& callee)
     {
@@ -4394,6 +4552,10 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         return shim().template try_as<IOverloadClassOverrides2>().Overload(a, b);
     }
+    template <typename D> auto IOverrideOverridesT<D>::OnOverridable() const
+    {
+        return shim().template try_as<IOverrideOverrides>().OnOverridable();
+    }
     template <typename D, typename... Interfaces>
     struct ComposableT :
         implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
@@ -4447,6 +4609,23 @@ WINRT_EXPORT namespace winrt::TestComponent
         using winrt::TestComponent::IOverloadClassOverrides2T<D>::Overload;
         using impl::consume_t<D, winrt::TestComponent::IOverloadClassProtected>::Overload;
     };
+    template <typename D, typename... Interfaces>
+    struct OverrideT :
+        implements<D, winrt::TestComponent::IOverrideOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::TestComponent::IOverride>,
+        protected impl::require<D, winrt::TestComponent::IOverrideProtected>,
+        impl::base<D, Override>,
+        winrt::TestComponent::IOverrideOverridesT<D>
+    {
+        using composable = Override;
+        friend impl::consume_t<D, winrt::TestComponent::IOverrideProtected>;
+        friend impl::require_one<D, winrt::TestComponent::IOverrideProtected>;
+    protected:
+        OverrideT()
+        {
+            impl::call_factory<Override, IOverrideFactory>([&](IOverrideFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
 }
 namespace std
 {
@@ -4462,6 +4641,10 @@ namespace std
     template<> struct hash<winrt::TestComponent::IOverloadClassOverrides> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IOverloadClassOverrides2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IOverloadClassProtected> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverrideFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverrideOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IOverrideProtected> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredFour> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredOne> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::IRequiredThree> : winrt::impl::hash_base {};
@@ -4472,6 +4655,7 @@ namespace std
     template<> struct hash<winrt::TestComponent::Composable> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::Derived> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::OverloadClass> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::Override> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::TestRunner> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format

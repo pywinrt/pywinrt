@@ -919,6 +919,291 @@ namespace py::cpp::TestComponent
         type_slots_OverloadClass_Static
     };
 
+    // ----- Override class --------------------
+
+    struct PyWinrtOverride;
+    using BasePyWinrtOverride = winrt::TestComponent::OverrideT<PyWinrtOverride, py::IPywinrtObject>;
+
+    struct PyWinrtOverride : py::py_obj_ref, BasePyWinrtOverride
+    {
+        PyWinrtOverride(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtOverride() {}
+
+        using py::py_obj_ref::get_py_obj;
+
+        int32_t GetPyObject(PyObject*& obj)
+        {
+            obj = get_py_obj();
+            return 0;
+        }
+
+        static void toggle_reference(PyWinrtOverride* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+    };
+
+    static PyObject* _new_Override(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+
+        auto self_type = get_python_type_for<winrt::TestComponent::Override>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Override*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::wrapper::TestComponent::Override*>(self.get())->obj = winrt::make<PyWinrtOverride>(self.get());
+
+                    return self.detach();
+                }
+
+                winrt::TestComponent::Override instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_Override(py::wrapper::TestComponent::Override* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Override_CallOverridable(py::wrapper::TestComponent::Override* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                self->obj.try_as<winrt::TestComponent::Override>().CallOverridable();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Override_CallProtected(py::wrapper::TestComponent::Override* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                self->obj.try_as<winrt::TestComponent::Override>().CallProtected();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Override_OnOverridable(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* Override_OnProtected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    {
+        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
+        return nullptr;
+    }
+
+    static PyObject* Override_add_OverridableCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Override_remove_OverridableCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Override_add_ProtectedCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Override_remove_ProtectedCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_Override(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Override>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_Override(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::Override>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_Override[] = {
+        { "call_overridable", reinterpret_cast<PyCFunction>(Override_CallOverridable), METH_VARARGS, nullptr },
+        { "call_protected", reinterpret_cast<PyCFunction>(Override_CallProtected), METH_VARARGS, nullptr },
+        { "_on_overridable", reinterpret_cast<PyCFunction>(Override_OnOverridable), METH_VARARGS, nullptr },
+        { "_on_protected", reinterpret_cast<PyCFunction>(Override_OnProtected), METH_VARARGS, nullptr },
+        { "add_overridable_called", reinterpret_cast<PyCFunction>(Override_add_OverridableCalled), METH_O, nullptr },
+        { "remove_overridable_called", reinterpret_cast<PyCFunction>(Override_remove_OverridableCalled), METH_O, nullptr },
+        { "add_protected_called", reinterpret_cast<PyCFunction>(Override_add_ProtectedCalled), METH_O, nullptr },
+        { "remove_protected_called", reinterpret_cast<PyCFunction>(Override_remove_ProtectedCalled), METH_O, nullptr },
+        { "_assign_array_", _assign_array_Override, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_Override), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_Override[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_Override[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_Override) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Override) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Override) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_Override) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Override = {
+        "winrt._winrt_testcomponent.Override",
+        sizeof(py::wrapper::TestComponent::Override),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_Override};
+
+    static PyGetSetDef getset_Override_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Override_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Override_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Override_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Override_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Override_Static =
+    {
+        "winrt._winrt_testcomponent.Override_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_Override_Static
+    };
+
     // ----- TestRunner class --------------------
 
     static PyObject* _new_TestRunner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6577,6 +6862,18 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
 
     py::pytype_handle OverloadClass_type{py::register_python_type(module.get(), &type_spec_OverloadClass, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverloadClass_Static.get()))};
     if (!OverloadClass_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Override_Static{PyType_FromSpec(&type_spec_Override_Static)};
+    if (!type_Override_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Override_type{py::register_python_type(module.get(), &type_spec_Override, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Override_Static.get()))};
+    if (!Override_type)
     {
         return nullptr;
     }
