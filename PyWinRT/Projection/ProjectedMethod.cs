@@ -89,9 +89,38 @@ class ProjectedMethod(
     public bool IsStatic { get; } = method.IsStatic;
 
     /// <summary>
-    /// Gets a value indicating if the method is either protected or overridable.
+    /// Gets a value indicating if the method has WinRT protected semantics
     /// </summary>
-    public bool IsProtected { get; } = method.IsFamily;
+    public bool IsProtected { get; } =
+        method.IsFamily
+        && method
+            .Overrides.SelectMany(o =>
+                method.DeclaringType.Interfaces.Where(i =>
+                    i.InterfaceType.FullName == o.DeclaringType.FullName
+                )
+            )
+            .Any(i =>
+                i.CustomAttributes.Any(a =>
+                    a.AttributeType.FullName == "Windows.Foundation.Metadata.ProtectedAttribute"
+                )
+            );
+
+    /// <summary>
+    /// Gets a value indicating if the method has WinRT overridable semantics
+    /// </summary>
+    public bool IsOverridable { get; } =
+        method.IsFamily
+        && method
+            .Overrides.SelectMany(o =>
+                method.DeclaringType.Interfaces.Where(i =>
+                    i.InterfaceType.FullName == o.DeclaringType.FullName
+                )
+            )
+            .Any(i =>
+                i.CustomAttributes.Any(a =>
+                    a.AttributeType.FullName == "Windows.Foundation.Metadata.OverridableAttribute"
+                )
+            );
 
     /// <summary>
     /// Gets a value indicating whether the method is deprecated.
