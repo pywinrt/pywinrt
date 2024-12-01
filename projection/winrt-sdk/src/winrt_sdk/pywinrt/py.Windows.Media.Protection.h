@@ -67,8 +67,7 @@ namespace py::impl::Windows::Media::Protection
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -100,8 +99,7 @@ namespace py::impl::Windows::Media::Protection
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -145,8 +143,7 @@ namespace py::impl::Windows::Media::Protection
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };

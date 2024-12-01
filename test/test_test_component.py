@@ -67,6 +67,20 @@ class TestTestComponent(unittest.TestCase):
         self.assertTrue(event.is_set())
         self.assertFalse(base_event.is_set())
 
+    def test_unhandled_exception_in_override(self) -> None:
+        class C(tc.Override):
+            def _on_overridable(self) -> None:
+                raise RuntimeError("test")
+
+        c = C()
+
+        with self.assertRaisesRegex(
+            OSError, "Unraisable Python exception"
+        ), catch_unraisable() as exceptions:
+            c.call_overridable()
+
+        self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+
     def test_object_round_trip(self):
         class C(tc.Composable):
             pass

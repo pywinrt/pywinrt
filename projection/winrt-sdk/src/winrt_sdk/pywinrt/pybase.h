@@ -596,6 +596,8 @@ namespace py
     } // namespace cpp::_winrt
 #endif
 
+    const winrt::hresult unraisable_python_exception{static_cast<int32_t>(0xA0EE4005)};
+
     /**
      * Thrown when a Python exception is pending (i.e. PyErr_Occurred() returns
      * non-NULL).
@@ -1557,10 +1559,8 @@ namespace py
     [[noreturn]] inline void write_unraisable_and_throw()
     {
         PyErr_WriteUnraisable(nullptr);
-
-        // REVISIT: should we have a custom error code for this?
         throw winrt::hresult_error(
-            winrt::impl::error_fail, L"Unraisable Python exception");
+            unraisable_python_exception, L"Unraisable Python exception");
     }
 
     template<typename D, typename... I>
