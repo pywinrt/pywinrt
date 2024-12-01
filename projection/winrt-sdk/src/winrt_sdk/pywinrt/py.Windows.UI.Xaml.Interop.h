@@ -25,7 +25,7 @@ namespace py::impl::Windows::UI::Xaml::Interop
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::Interop::IBindableObservableVector const& param0, winrt::Windows::Foundation::IInspectable const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -67,7 +67,7 @@ namespace py::impl::Windows::UI::Xaml::Interop
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

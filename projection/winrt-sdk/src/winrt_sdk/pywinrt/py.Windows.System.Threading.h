@@ -25,7 +25,7 @@ namespace py::impl::Windows::System::Threading
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::System::Threading::ThreadPoolTimer const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -60,7 +60,7 @@ namespace py::impl::Windows::System::Threading
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::System::Threading::ThreadPoolTimer const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -95,7 +95,7 @@ namespace py::impl::Windows::System::Threading
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncAction const& param0)
             {
                 auto gil = py::ensure_gil();
 

@@ -60,7 +60,7 @@ namespace py::impl::Windows::Media::Devices
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -95,7 +95,7 @@ namespace py::impl::Windows::Media::Devices
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::DialRequestedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -137,7 +137,7 @@ namespace py::impl::Windows::Media::Devices
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::KeypadPressedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -179,7 +179,7 @@ namespace py::impl::Windows::Media::Devices
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::RedialRequestedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

@@ -30,7 +30,7 @@ namespace py::impl::Windows::UI::Popups
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Popups::IUICommand const& param0)
             {
                 auto gil = py::ensure_gil();
 

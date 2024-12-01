@@ -531,21 +531,18 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static string ToDelegateParam(this ParameterDefinition param, bool useAuto = true) =>
+    public static string ToDelegateParam(this ParameterDefinition param) =>
         param.GetCategory() switch
         {
-            // TODO: remove useAuto and always use full types
             ParamCategory.In
-                => useAuto
-                    ? $"auto {param.ToParamName()}"
-                    : param.ParameterType switch
-                    {
-                        GenericParameter gen
-                            => $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}",
-                        { IsValueType: true }
-                            => $"{param.ParameterType.ToCppTypeName()} {param.ToParamName()}",
-                        _ => $"{param.ParameterType.ToCppTypeName()} const& {param.ToParamName()}"
-                    },
+                => param.ParameterType switch
+                {
+                    GenericParameter gen
+                        => $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}",
+                    { IsValueType: true }
+                        => $"{param.ParameterType.ToCppTypeName()} {param.ToParamName()}",
+                    _ => $"{param.ParameterType.ToCppTypeName()} const& {param.ToParamName()}"
+                },
             ParamCategory.Out => $"{param.ParameterType.ToCppTypeName()}& {param.ToParamName()}",
             ParamCategory.PassArray
                 => $"winrt::array_view<{param.ParameterType.ToCppTypeName()} const> {param.ToParamName()}",

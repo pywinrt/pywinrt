@@ -135,7 +135,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -170,7 +170,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::BindingFailedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -236,7 +236,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyProperty const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -278,7 +278,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -320,7 +320,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DragEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -362,7 +362,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -404,7 +404,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -446,7 +446,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -488,7 +488,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -530,7 +530,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::RoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -572,7 +572,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::SizeChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -614,7 +614,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::SuspendingEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -656,7 +656,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -698,7 +698,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::VisualStateChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -740,7 +740,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowActivatedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -782,7 +782,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::CoreWindowEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -824,7 +824,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowSizeChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -866,7 +866,7 @@ namespace py::impl::Windows::UI::Xaml
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::VisibilityChangedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

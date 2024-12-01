@@ -30,7 +30,7 @@ namespace py::impl::Windows::System::Threading::Core
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::System::Threading::Core::SignalNotifier const& param0, bool param1)
             {
                 auto gil = py::ensure_gil();
 

@@ -45,7 +45,7 @@ namespace py::impl::Windows::Networking::Proximity
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Networking::Proximity::ProximityDevice const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -80,7 +80,7 @@ namespace py::impl::Windows::Networking::Proximity
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Networking::Proximity::ProximityDevice const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -115,7 +115,7 @@ namespace py::impl::Windows::Networking::Proximity
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Networking::Proximity::ProximityDevice const& param0, winrt::Windows::Networking::Proximity::ProximityMessage const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -157,7 +157,7 @@ namespace py::impl::Windows::Networking::Proximity
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Networking::Proximity::ProximityDevice const& param0, int64_t param1)
             {
                 auto gil = py::ensure_gil();
 

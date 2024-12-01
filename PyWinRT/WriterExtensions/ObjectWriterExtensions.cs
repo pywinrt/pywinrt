@@ -529,7 +529,7 @@ static class ObjectWriterExtensions
             var returnType = method.Method.ReturnType.ToCppTypeName();
             var paramList = string.Join(
                 ", ",
-                method.Method.Parameters.Select(p => p.ToDelegateParam(useAuto: false))
+                method.Method.Parameters.Select(p => p.ToDelegateParam())
             );
 
             w.WriteLine($"{returnType} {method.CppName}({paramList})");

@@ -79,7 +79,7 @@ namespace py::impl::Windows::UI::WebUI::Core
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs const& param0)
             {
                 auto gil = py::ensure_gil();
 

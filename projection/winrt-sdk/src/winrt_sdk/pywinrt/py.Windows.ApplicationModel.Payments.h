@@ -30,7 +30,7 @@ namespace py::impl::Windows::ApplicationModel::Payments
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Payments::PaymentRequest const& param0, winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

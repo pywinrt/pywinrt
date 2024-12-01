@@ -40,7 +40,7 @@ namespace py::impl::Windows::Graphics::Display
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
             {
                 auto gil = py::ensure_gil();
 
