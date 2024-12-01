@@ -37,7 +37,13 @@ static class ObjectWriterExtensions
                     w.WriteLine("@typing.overload");
                 }
 
-                if (method.IsProtected)
+                if (
+                    type.IsComposable
+                    && !method.IsOverridable
+                    && method.IsExclusiveTo
+                    // mypy rule: @typing.final can only be applied to the first overload
+                    && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
+                )
                 {
                     w.WriteLine("@typing.final");
                 }
@@ -355,9 +361,20 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            if (method.IsProtected)
+            if (
+                type.IsComposable
+                && !method.IsOverridable
+                && method.IsExclusiveTo
+                // mypy rule: @typing.final can only be applied to the first overload
+                && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
+            )
             {
-                w.WriteLine("@typing.final");
+                // HACK: There are a couple of problematic methods. Subclasses of
+                // DependencyObject like to override SetValue with a different
+                // parameter type. Subclasses of FlyoutBase like to override ShowAt.
+                var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc]" : "";
+
+                w.WriteLine($"@typing.final{typeIgnore}");
             }
 
             w.WritePythonMethodTyping(method, ns);

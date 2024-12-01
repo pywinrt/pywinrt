@@ -696,4 +696,51 @@ static class TypeExtensions
 
         return depth;
     }
+
+    public static bool IsProblematicOverride(this ProjectedMethod method)
+    {
+        if (method.Method.Name == "SetValue")
+        {
+            for (
+                var baseType = method.Method.DeclaringType.BaseType;
+                baseType is not null;
+                baseType = TryResolve(baseType)?.BaseType
+            )
+            {
+                if (
+                    (
+                        baseType.Namespace == "Microsoft.UI.Xaml"
+                        || baseType.Namespace == "Windows.UI.Xaml"
+                    )
+                    && baseType.Name == "DependencyObject"
+                )
+                {
+                    return true;
+                }
+            }
+        }
+
+        if (method.Method.Name == "ShowAt")
+        {
+            for (
+                var baseType = method.Method.DeclaringType.BaseType;
+                baseType is not null;
+                baseType = TryResolve(baseType)?.BaseType
+            )
+            {
+                if (
+                    (
+                        baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
+                        || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
+                    )
+                    && baseType.Name == "FlyoutBase"
+                )
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }
