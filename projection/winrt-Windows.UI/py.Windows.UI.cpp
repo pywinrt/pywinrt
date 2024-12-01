@@ -4332,7 +4332,7 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj.A = py::converter<uint8_t>::convert_to(arg);
+            self->obj.A = py::convert_to<uint8_t>(arg);
             return 0;
         }
         catch (...)
@@ -4365,7 +4365,7 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj.R = py::converter<uint8_t>::convert_to(arg);
+            self->obj.R = py::convert_to<uint8_t>(arg);
             return 0;
         }
         catch (...)
@@ -4398,7 +4398,7 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj.G = py::converter<uint8_t>::convert_to(arg);
+            self->obj.G = py::convert_to<uint8_t>(arg);
             return 0;
         }
         catch (...)
@@ -4431,7 +4431,7 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj.B = py::converter<uint8_t>::convert_to(arg);
+            self->obj.B = py::convert_to<uint8_t>(arg);
             return 0;
         }
         catch (...)
@@ -4453,7 +4453,7 @@ namespace py::cpp::Windows::UI
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Color>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Color>(other);
 
             if (op == Py_EQ)
             {
@@ -4624,7 +4624,7 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -4643,7 +4643,7 @@ namespace py::cpp::Windows::UI
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::WindowId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::WindowId>(other);
 
             if (op == Py_EQ)
             {

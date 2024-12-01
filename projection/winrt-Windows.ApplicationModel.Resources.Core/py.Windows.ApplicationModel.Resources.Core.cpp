@@ -5219,7 +5219,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj.MajorVersion = py::converter<uint32_t>::convert_to(arg);
+            self->obj.MajorVersion = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5252,7 +5252,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj.MinorVersion = py::converter<uint32_t>::convert_to(arg);
+            self->obj.MinorVersion = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5285,7 +5285,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj.ResourceSubtreeCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ResourceSubtreeCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5318,7 +5318,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj.NamedResourceCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.NamedResourceCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5351,7 +5351,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj.Checksum = py::converter<int32_t>::convert_to(arg);
+            self->obj.Checksum = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5374,7 +5374,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>(other);
 
             if (op == Py_EQ)
             {

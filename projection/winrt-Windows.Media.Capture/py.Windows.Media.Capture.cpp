@@ -24671,7 +24671,7 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
-            self->obj.R = py::converter<double>::convert_to(arg);
+            self->obj.R = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24704,7 +24704,7 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
-            self->obj.G = py::converter<double>::convert_to(arg);
+            self->obj.G = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24737,7 +24737,7 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
-            self->obj.B = py::converter<double>::convert_to(arg);
+            self->obj.B = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24758,7 +24758,7 @@ namespace py::cpp::Windows::Media::Capture
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Capture::WhiteBalanceGain>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Capture::WhiteBalanceGain>(other);
 
             if (op == Py_EQ)
             {

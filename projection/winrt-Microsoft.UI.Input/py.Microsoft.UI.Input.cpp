@@ -12644,7 +12644,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.SelectionStart = py::converter<float>::convert_to(arg);
+            self->obj.SelectionStart = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -12677,7 +12677,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.SpeedBumpStart = py::converter<float>::convert_to(arg);
+            self->obj.SpeedBumpStart = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -12710,7 +12710,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.SpeedBumpEnd = py::converter<float>::convert_to(arg);
+            self->obj.SpeedBumpEnd = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -12743,7 +12743,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.RearrangeStart = py::converter<float>::convert_to(arg);
+            self->obj.RearrangeStart = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -12765,7 +12765,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Input::CrossSlideThresholds>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Input::CrossSlideThresholds>(other);
 
             if (op == Py_EQ)
             {
@@ -12882,7 +12882,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Translation = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Translation);
+            self->obj.Translation = py::convert_to<winrt::Windows::Foundation::Point>(_Translation);
             self->obj.Scale = _Scale;
             self->obj.Rotation = _Rotation;
             self->obj.Expansion = _Expansion;
@@ -12942,7 +12942,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Translation = py::converter<winrt::Windows::Foundation::Point>::convert_to(arg);
+            self->obj.Translation = py::convert_to<winrt::Windows::Foundation::Point>(arg);
             return 0;
         }
         catch (...)
@@ -12975,7 +12975,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Scale = py::converter<float>::convert_to(arg);
+            self->obj.Scale = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -13008,7 +13008,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Rotation = py::converter<float>::convert_to(arg);
+            self->obj.Rotation = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -13041,7 +13041,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Expansion = py::converter<float>::convert_to(arg);
+            self->obj.Expansion = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -13063,7 +13063,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Input::ManipulationDelta>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Input::ManipulationDelta>(other);
 
             if (op == Py_EQ)
             {
@@ -13179,7 +13179,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Linear = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Linear);
+            self->obj.Linear = py::convert_to<winrt::Windows::Foundation::Point>(_Linear);
             self->obj.Angular = _Angular;
             self->obj.Expansion = _Expansion;
 
@@ -13238,7 +13238,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Linear = py::converter<winrt::Windows::Foundation::Point>::convert_to(arg);
+            self->obj.Linear = py::convert_to<winrt::Windows::Foundation::Point>(arg);
             return 0;
         }
         catch (...)
@@ -13271,7 +13271,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Angular = py::converter<float>::convert_to(arg);
+            self->obj.Angular = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -13304,7 +13304,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.Expansion = py::converter<float>::convert_to(arg);
+            self->obj.Expansion = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -13325,7 +13325,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Input::ManipulationVelocities>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Input::ManipulationVelocities>(other);
 
             if (op == Py_EQ)
             {
@@ -13500,7 +13500,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.RepeatCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.RepeatCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -13533,7 +13533,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.ScanCode = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ScanCode = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -13566,7 +13566,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.IsExtendedKey = py::converter<bool>::convert_to(arg);
+            self->obj.IsExtendedKey = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -13599,7 +13599,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.IsMenuKeyDown = py::converter<bool>::convert_to(arg);
+            self->obj.IsMenuKeyDown = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -13632,7 +13632,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.WasKeyDown = py::converter<bool>::convert_to(arg);
+            self->obj.WasKeyDown = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -13665,7 +13665,7 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj.IsKeyReleased = py::converter<bool>::convert_to(arg);
+            self->obj.IsKeyReleased = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -13689,7 +13689,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Input::PhysicalKeyStatus>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Input::PhysicalKeyStatus>(other);
 
             if (op == Py_EQ)
             {

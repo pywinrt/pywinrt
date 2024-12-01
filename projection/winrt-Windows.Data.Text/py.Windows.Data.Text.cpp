@@ -2840,7 +2840,7 @@ namespace py::cpp::Windows::Data::Text
 
         try
         {
-            self->obj.StartPosition = py::converter<uint32_t>::convert_to(arg);
+            self->obj.StartPosition = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2873,7 +2873,7 @@ namespace py::cpp::Windows::Data::Text
 
         try
         {
-            self->obj.Length = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Length = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2893,7 +2893,7 @@ namespace py::cpp::Windows::Data::Text
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Data::Text::TextSegment>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Data::Text::TextSegment>(other);
 
             if (op == Py_EQ)
             {

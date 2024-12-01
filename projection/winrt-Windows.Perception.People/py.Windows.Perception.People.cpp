@@ -1143,8 +1143,8 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position);
-            self->obj.Normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal);
+            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position);
+            self->obj.Normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal);
 
             return 0;
         }
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             return 0;
         }
         catch (...)
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            self->obj.Normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             return 0;
         }
         catch (...)
@@ -1254,7 +1254,7 @@ namespace py::cpp::Windows::Perception::People
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Perception::People::HandMeshVertex>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Perception::People::HandMeshVertex>(other);
 
             if (op == Py_EQ)
             {
@@ -1359,8 +1359,8 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Orientation = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation);
-            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position);
+            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation);
+            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position);
             self->obj.Radius = _Radius;
             self->obj.Accuracy = static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy);
 
@@ -1419,7 +1419,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Orientation = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
             return 0;
         }
         catch (...)
@@ -1452,7 +1452,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             return 0;
         }
         catch (...)
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Radius = py::converter<float>::convert_to(arg);
+            self->obj.Radius = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -1518,7 +1518,7 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj.Accuracy = py::converter<winrt::Windows::Perception::People::JointPoseAccuracy>::convert_to(arg);
+            self->obj.Accuracy = py::convert_to<winrt::Windows::Perception::People::JointPoseAccuracy>(arg);
             return 0;
         }
         catch (...)
@@ -1540,7 +1540,7 @@ namespace py::cpp::Windows::Perception::People
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Perception::People::JointPose>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Perception::People::JointPose>(other);
 
             if (op == Py_EQ)
             {

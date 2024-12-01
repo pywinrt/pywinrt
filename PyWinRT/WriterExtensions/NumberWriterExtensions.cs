@@ -1057,9 +1057,7 @@ static class NumberWriterExtensions
                             break;
                         case 1:
                             var param = method.Parameters[0];
-                            w.WriteLine(
-                                $"auto _arg = py::converter<{param.CppWinrtType}>::convert_to(arg);"
-                            );
+                            w.WriteLine($"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);");
                             w.WriteLine(
                                 $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg);"
                             );
@@ -1141,7 +1139,7 @@ static class NumberWriterExtensions
                                 }
 
                                 w.WriteLine(
-                                    $"auto _arg = py::converter<{param.CppWinrtType}>::convert_to(arg);"
+                                    $"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);"
                                 );
                                 w.WriteLine(
                                     $"auto _result = winrt::Windows::Foundation::Numerics::{overload.Name}(self->obj, _arg);"
@@ -1217,10 +1215,8 @@ static class NumberWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine($"auto _left = py::converter<{type.CppWinrtType}>::convert_to(left);");
-                w.WriteLine(
-                    $"auto _right = py::converter<{type.CppWinrtType}>::convert_to(right);"
-                );
+                w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
                 w.WriteBlankLine();
                 w.WriteLine($"auto _result = _left + _right;");
                 w.WriteLine($"return py::convert(_result);");
@@ -1239,10 +1235,8 @@ static class NumberWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine($"auto _left = py::converter<{type.CppWinrtType}>::convert_to(left);");
-                w.WriteLine(
-                    $"auto _right = py::converter<{type.CppWinrtType}>::convert_to(right);"
-                );
+                w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
                 w.WriteBlankLine();
                 w.WriteLine($"auto _result = _left - _right;");
                 w.WriteLine($"return py::convert(_result);");
@@ -1279,7 +1273,7 @@ static class NumberWriterExtensions
                     w.Indent--;
                     w.WriteLine("}");
                     w.WriteLine(
-                        $"auto _result = static_cast<float>(_left_float) * py::converter<{type.CppWinrtType}>::convert_to(right);"
+                        $"auto _result = static_cast<float>(_left_float) * py::convert_to<{type.CppWinrtType}>(right);"
                     );
                     w.WriteLine($"return py::convert(_result);");
                     w.Indent--;
@@ -1293,7 +1287,7 @@ static class NumberWriterExtensions
                     w.WriteBlankLine();
                 }
 
-                w.WriteLine($"auto _left = py::converter<{type.CppWinrtType}>::convert_to(left);");
+                w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
                 w.WriteBlankLine();
                 w.WriteLine("py::pyobj_handle right_float{PyNumber_Float(right)};");
                 w.WriteLine("if (right_float)");
@@ -1318,9 +1312,7 @@ static class NumberWriterExtensions
                 w.Indent--;
                 w.WriteLine("}");
                 w.WriteBlankLine();
-                w.WriteLine(
-                    $"auto _right = py::converter<{type.CppWinrtType}>::convert_to(right);"
-                );
+                w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
                 w.WriteBlankLine();
                 w.WriteLine($"auto _result = _left * _right;");
                 w.WriteLine($"return py::convert(_result);");
@@ -1341,7 +1333,7 @@ static class NumberWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine($"auto _left = py::converter<{type.CppWinrtType}>::convert_to(left);");
+                w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
 
                 if (type.Name != "Quaternion")
                 {
@@ -1370,9 +1362,7 @@ static class NumberWriterExtensions
                     w.WriteLine("}");
                 }
 
-                w.WriteLine(
-                    $"auto _right = py::converter<{type.CppWinrtType}>::convert_to(right);"
-                );
+                w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
                 w.WriteBlankLine();
                 w.WriteLine($"auto _result = _left / _right;");
                 w.WriteLine($"return py::convert(_result);");
@@ -1391,9 +1381,7 @@ static class NumberWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine(
-                    $"auto _operand = py::converter<{type.CppWinrtType}>::convert_to(operand);"
-                );
+                w.WriteLine($"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);");
                 w.WriteLine($"auto _result = -_operand;");
                 w.WriteLine($"return py::convert(_result);");
             },
@@ -1411,9 +1399,7 @@ static class NumberWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine(
-                    $"auto _operand = py::converter<{type.CppWinrtType}>::convert_to(operand);"
-                );
+                w.WriteLine($"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);");
                 w.WriteLine(
                     $"auto _result = winrt::Windows::Foundation::Numerics::length(_operand);"
                 );

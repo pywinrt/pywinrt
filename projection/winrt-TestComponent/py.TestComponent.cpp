@@ -5864,7 +5864,7 @@ namespace py::cpp::TestComponent
             self->obj.G = _G;
             self->obj.H = _H;
             self->obj.I = _I;
-            self->obj.J = py::converter<winrt::guid>::convert_to(_J);
+            self->obj.J = py::convert_to<winrt::guid>(_J);
 
             return 0;
         }
@@ -5921,7 +5921,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.A = py::converter<uint8_t>::convert_to(arg);
+            self->obj.A = py::convert_to<uint8_t>(arg);
             return 0;
         }
         catch (...)
@@ -5954,7 +5954,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.B = py::converter<uint16_t>::convert_to(arg);
+            self->obj.B = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -5987,7 +5987,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.C = py::converter<uint32_t>::convert_to(arg);
+            self->obj.C = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -6020,7 +6020,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.D = py::converter<uint64_t>::convert_to(arg);
+            self->obj.D = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6053,7 +6053,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.E = py::converter<int16_t>::convert_to(arg);
+            self->obj.E = py::convert_to<int16_t>(arg);
             return 0;
         }
         catch (...)
@@ -6086,7 +6086,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.F = py::converter<int32_t>::convert_to(arg);
+            self->obj.F = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -6119,7 +6119,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.G = py::converter<int64_t>::convert_to(arg);
+            self->obj.G = py::convert_to<int64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6152,7 +6152,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.H = py::converter<float>::convert_to(arg);
+            self->obj.H = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -6185,7 +6185,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.I = py::converter<double>::convert_to(arg);
+            self->obj.I = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6218,7 +6218,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.J = py::converter<winrt::guid>::convert_to(arg);
+            self->obj.J = py::convert_to<winrt::guid>(arg);
             return 0;
         }
         catch (...)
@@ -6246,7 +6246,7 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            auto _other = py::converter<winrt::TestComponent::Blittable>::convert_to(other);
+            auto _other = py::convert_to<winrt::TestComponent::Blittable>(other);
 
             if (op == Py_EQ)
             {
@@ -6397,8 +6397,8 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.Blittable = py::converter<winrt::TestComponent::Blittable>::convert_to(_Blittable);
-            self->obj.NonBlittable = py::converter<winrt::TestComponent::NonBlittable>::convert_to(_NonBlittable);
+            self->obj.Blittable = py::convert_to<winrt::TestComponent::Blittable>(_Blittable);
+            self->obj.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(_NonBlittable);
 
             return 0;
         }
@@ -6455,7 +6455,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.Blittable = py::converter<winrt::TestComponent::Blittable>::convert_to(arg);
+            self->obj.Blittable = py::convert_to<winrt::TestComponent::Blittable>(arg);
             return 0;
         }
         catch (...)
@@ -6488,7 +6488,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.NonBlittable = py::converter<winrt::TestComponent::NonBlittable>::convert_to(arg);
+            self->obj.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(arg);
             return 0;
         }
         catch (...)
@@ -6508,7 +6508,7 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            auto _other = py::converter<winrt::TestComponent::Nested>::convert_to(other);
+            auto _other = py::convert_to<winrt::TestComponent::Nested>(other);
 
             if (op == Py_EQ)
             {
@@ -6614,9 +6614,9 @@ namespace py::cpp::TestComponent
         try
         {
             self->obj.A = _A;
-            self->obj.B = py::converter<char16_t>::convert_to(_B);
-            self->obj.C = py::converter<winrt::hstring>::convert_to(_C);
-            self->obj.D = py::converter<winrt::Windows::Foundation::IReference<int64_t>>::convert_to(_D);
+            self->obj.B = py::convert_to<char16_t>(_B);
+            self->obj.C = py::convert_to<winrt::hstring>(_C);
+            self->obj.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(_D);
 
             return 0;
         }
@@ -6673,7 +6673,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.A = py::converter<bool>::convert_to(arg);
+            self->obj.A = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -6706,7 +6706,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.B = py::converter<char16_t>::convert_to(arg);
+            self->obj.B = py::convert_to<char16_t>(arg);
             return 0;
         }
         catch (...)
@@ -6739,7 +6739,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.C = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.C = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -6772,7 +6772,7 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj.D = py::converter<winrt::Windows::Foundation::IReference<int64_t>>::convert_to(arg);
+            self->obj.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(arg);
             return 0;
         }
         catch (...)
@@ -6794,7 +6794,7 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            auto _other = py::converter<winrt::TestComponent::NonBlittable>::convert_to(other);
+            auto _other = py::convert_to<winrt::TestComponent::NonBlittable>(other);
 
             if (op == Py_EQ)
             {

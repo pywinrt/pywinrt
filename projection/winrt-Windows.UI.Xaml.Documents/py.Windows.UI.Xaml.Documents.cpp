@@ -16268,7 +16268,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
         try
         {
-            self->obj.StartIndex = py::converter<int32_t>::convert_to(arg);
+            self->obj.StartIndex = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -16301,7 +16301,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
         try
         {
-            self->obj.Length = py::converter<int32_t>::convert_to(arg);
+            self->obj.Length = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -16321,7 +16321,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Documents::TextRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Documents::TextRange>(other);
 
             if (op == Py_EQ)
             {

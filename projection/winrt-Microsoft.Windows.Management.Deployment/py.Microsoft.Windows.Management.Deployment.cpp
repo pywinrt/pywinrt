@@ -7281,7 +7281,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
-            self->obj.Status = py::converter<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>::convert_to(arg);
+            self->obj.Status = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(arg);
             return 0;
         }
         catch (...)
@@ -7314,7 +7314,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
-            self->obj.Progress = py::converter<double>::convert_to(arg);
+            self->obj.Progress = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -7334,7 +7334,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>(other);
 
             if (op == Py_EQ)
             {

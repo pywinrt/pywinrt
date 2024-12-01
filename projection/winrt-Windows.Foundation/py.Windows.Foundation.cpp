@@ -8042,7 +8042,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.value = py::converter<int64_t>::convert_to(arg);
+            self->obj.value = py::convert_to<int64_t>(arg);
             return 0;
         }
         catch (...)
@@ -8061,7 +8061,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            auto _other = py::converter<winrt::event_token>::convert_to(other);
+            auto _other = py::convert_to<winrt::event_token>(other);
 
             if (op == Py_EQ)
             {
@@ -8214,7 +8214,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.value = py::converter<int32_t>::convert_to(arg);
+            self->obj.value = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -8233,7 +8233,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            auto _other = py::converter<winrt::hresult>::convert_to(other);
+            auto _other = py::convert_to<winrt::hresult>(other);
 
             if (op == Py_EQ)
             {
@@ -8388,7 +8388,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.X = py::converter<float>::convert_to(arg);
+            self->obj.X = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8421,7 +8421,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Y = py::converter<float>::convert_to(arg);
+            self->obj.Y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8441,7 +8441,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Point>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Point>(other);
 
             if (op == Py_EQ)
             {
@@ -8606,7 +8606,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.X = py::converter<float>::convert_to(arg);
+            self->obj.X = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8639,7 +8639,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Y = py::converter<float>::convert_to(arg);
+            self->obj.Y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8672,7 +8672,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Width = py::converter<float>::convert_to(arg);
+            self->obj.Width = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8705,7 +8705,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Height = py::converter<float>::convert_to(arg);
+            self->obj.Height = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8727,7 +8727,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Rect>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Rect>(other);
 
             if (op == Py_EQ)
             {
@@ -8900,7 +8900,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Width = py::converter<float>::convert_to(arg);
+            self->obj.Width = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8933,7 +8933,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj.Height = py::converter<float>::convert_to(arg);
+            self->obj.Height = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -8953,7 +8953,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Size>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Size>(other);
 
             if (op == Py_EQ)
             {

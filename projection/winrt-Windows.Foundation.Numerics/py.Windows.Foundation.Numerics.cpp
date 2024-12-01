@@ -471,7 +471,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m11 = py::converter<float>::convert_to(arg);
+            self->obj.m11 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m12 = py::converter<float>::convert_to(arg);
+            self->obj.m12 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -537,7 +537,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m21 = py::converter<float>::convert_to(arg);
+            self->obj.m21 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -570,7 +570,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m22 = py::converter<float>::convert_to(arg);
+            self->obj.m22 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -603,7 +603,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m31 = py::converter<float>::convert_to(arg);
+            self->obj.m31 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m32 = py::converter<float>::convert_to(arg);
+            self->obj.m32 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -660,8 +660,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -684,8 +684,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -708,7 +708,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -750,7 +750,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(other);
 
             if (op == Py_EQ)
             {
@@ -1834,7 +1834,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
             return py::convert(_result);
 #endif
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m11 = py::converter<float>::convert_to(arg);
+            self->obj.m11 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -1962,7 +1962,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m12 = py::converter<float>::convert_to(arg);
+            self->obj.m12 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -1995,7 +1995,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m13 = py::converter<float>::convert_to(arg);
+            self->obj.m13 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2028,7 +2028,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m14 = py::converter<float>::convert_to(arg);
+            self->obj.m14 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m21 = py::converter<float>::convert_to(arg);
+            self->obj.m21 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2094,7 +2094,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m22 = py::converter<float>::convert_to(arg);
+            self->obj.m22 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2127,7 +2127,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m23 = py::converter<float>::convert_to(arg);
+            self->obj.m23 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2160,7 +2160,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m24 = py::converter<float>::convert_to(arg);
+            self->obj.m24 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2193,7 +2193,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m31 = py::converter<float>::convert_to(arg);
+            self->obj.m31 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2226,7 +2226,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m32 = py::converter<float>::convert_to(arg);
+            self->obj.m32 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2259,7 +2259,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m33 = py::converter<float>::convert_to(arg);
+            self->obj.m33 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2292,7 +2292,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m34 = py::converter<float>::convert_to(arg);
+            self->obj.m34 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2325,7 +2325,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m41 = py::converter<float>::convert_to(arg);
+            self->obj.m41 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2358,7 +2358,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m42 = py::converter<float>::convert_to(arg);
+            self->obj.m42 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2391,7 +2391,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m43 = py::converter<float>::convert_to(arg);
+            self->obj.m43 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2424,7 +2424,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.m44 = py::converter<float>::convert_to(arg);
+            self->obj.m44 = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2458,8 +2458,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -2482,8 +2482,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -2525,7 +2525,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -2548,7 +2548,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -2570,7 +2570,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(other);
 
             if (op == Py_EQ)
             {
@@ -2808,7 +2808,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal);
+            self->obj.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal);
             self->obj.d = _D;
 
             return 0;
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -2891,7 +2891,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
             return py::convert(_result);
 #endif
@@ -2938,7 +2938,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot_coordinate(self->obj, _arg);
             return py::convert(_result);
 #endif
@@ -2960,7 +2960,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot_normal(self->obj, _arg);
             return py::convert(_result);
 #endif
@@ -3015,7 +3015,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            self->obj.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             return 0;
         }
         catch (...)
@@ -3048,7 +3048,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.d = py::converter<float>::convert_to(arg);
+            self->obj.d = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -3068,7 +3068,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(other);
 
             if (op == Py_EQ)
             {
@@ -3344,7 +3344,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
             return py::convert(_result);
         }
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::concatenate(self->obj, _arg);
             return py::convert(_result);
         }
@@ -3492,7 +3492,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.x = py::converter<float>::convert_to(arg);
+            self->obj.x = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -3525,7 +3525,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.y = py::converter<float>::convert_to(arg);
+            self->obj.y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -3558,7 +3558,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.z = py::converter<float>::convert_to(arg);
+            self->obj.z = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -3591,7 +3591,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.w = py::converter<float>::convert_to(arg);
+            self->obj.w = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -3613,8 +3613,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -3637,8 +3637,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -3661,7 +3661,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -3680,7 +3680,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -3703,8 +3703,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(right);
 
             auto _result = _left / _right;
             return py::convert(_result);
@@ -3727,7 +3727,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -3749,7 +3749,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(operand);
             auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
             return py::convert(_result);
         }
@@ -3771,7 +3771,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(other);
 
             if (op == Py_EQ)
             {
@@ -3979,7 +3979,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.Numerator = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Numerator = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4012,7 +4012,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.Denominator = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Denominator = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4032,7 +4032,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(other);
 
             if (op == Py_EQ)
             {
@@ -4207,7 +4207,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4222,7 +4222,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4237,7 +4237,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4266,7 +4266,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::reflect(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4281,7 +4281,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4296,7 +4296,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4349,7 +4349,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix3x2 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -4361,7 +4361,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -4369,7 +4369,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -4396,14 +4396,14 @@ namespace py::cpp::Windows::Foundation::Numerics
 #else
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix3x2" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
                 return py::convert(_result);
             }
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -4429,7 +4429,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -4437,7 +4437,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -4504,7 +4504,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.x = py::converter<float>::convert_to(arg);
+            self->obj.x = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4537,7 +4537,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.y = py::converter<float>::convert_to(arg);
+            self->obj.y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4557,8 +4557,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -4581,8 +4581,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -4613,7 +4613,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 {
                     return nullptr;
                 }
-                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+                auto _result = static_cast<float>(_left_float) * py::convert_to<winrt::Windows::Foundation::Numerics::float2>(right);
                 return py::convert(_result);
             }
             else
@@ -4621,7 +4621,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -4640,7 +4640,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -4663,7 +4663,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -4681,7 +4681,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             {
                 PyErr_Clear();
             }
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(right);
 
             auto _result = _left / _right;
             return py::convert(_result);
@@ -4704,7 +4704,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -4726,7 +4726,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(operand);
             auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
             return py::convert(_result);
         }
@@ -4748,7 +4748,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(other);
 
             if (op == Py_EQ)
             {
@@ -4965,7 +4965,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4980,7 +4980,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
             return py::convert(_result);
         }
@@ -4995,7 +4995,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5010,7 +5010,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::cross(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5039,7 +5039,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::reflect(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5054,7 +5054,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5069,7 +5069,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5124,14 +5124,14 @@ namespace py::cpp::Windows::Foundation::Numerics
 #else
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -5157,7 +5157,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
             return py::convert(_result);
 #endif
@@ -5179,7 +5179,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -5187,7 +5187,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -5255,7 +5255,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.x = py::converter<float>::convert_to(arg);
+            self->obj.x = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -5288,7 +5288,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.y = py::converter<float>::convert_to(arg);
+            self->obj.y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -5321,7 +5321,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.z = py::converter<float>::convert_to(arg);
+            self->obj.z = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -5342,8 +5342,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -5366,8 +5366,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -5398,7 +5398,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 {
                     return nullptr;
                 }
-                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+                auto _result = static_cast<float>(_left_float) * py::convert_to<winrt::Windows::Foundation::Numerics::float3>(right);
                 return py::convert(_result);
             }
             else
@@ -5406,7 +5406,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -5425,7 +5425,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -5448,7 +5448,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -5466,7 +5466,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             {
                 PyErr_Clear();
             }
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(right);
 
             auto _result = _left / _right;
             return py::convert(_result);
@@ -5489,7 +5489,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -5511,7 +5511,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(operand);
             auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
             return py::convert(_result);
         }
@@ -5533,7 +5533,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(other);
 
             if (op == Py_EQ)
             {
@@ -5764,7 +5764,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5779,7 +5779,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5794,7 +5794,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5838,7 +5838,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
             auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
             return py::convert(_result);
         }
@@ -5891,7 +5891,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
                 return nullptr;
 #else
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
 #endif
@@ -5899,7 +5899,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
             if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
-                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _arg = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
@@ -5963,7 +5963,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.x = py::converter<float>::convert_to(arg);
+            self->obj.x = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -5996,7 +5996,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.y = py::converter<float>::convert_to(arg);
+            self->obj.y = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -6029,7 +6029,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.z = py::converter<float>::convert_to(arg);
+            self->obj.z = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -6062,7 +6062,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj.w = py::converter<float>::convert_to(arg);
+            self->obj.w = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -6084,8 +6084,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(right);
 
             auto _result = _left + _right;
             return py::convert(_result);
@@ -6108,8 +6108,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(left);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(right);
 
             auto _result = _left - _right;
             return py::convert(_result);
@@ -6140,7 +6140,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 {
                     return nullptr;
                 }
-                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+                auto _result = static_cast<float>(_left_float) * py::convert_to<winrt::Windows::Foundation::Numerics::float4>(right);
                 return py::convert(_result);
             }
             else
@@ -6148,7 +6148,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -6167,7 +6167,7 @@ namespace py::cpp::Windows::Foundation::Numerics
                 PyErr_Clear();
             }
 
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(right);
 
             auto _result = _left * _right;
             return py::convert(_result);
@@ -6190,7 +6190,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+            auto _left = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(left);
 
             py::pyobj_handle right_float{PyNumber_Float(right)};
             if (right_float)
@@ -6208,7 +6208,7 @@ namespace py::cpp::Windows::Foundation::Numerics
             {
                 PyErr_Clear();
             }
-            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+            auto _right = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(right);
 
             auto _result = _left / _right;
             return py::convert(_result);
@@ -6231,7 +6231,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(operand);
             auto _result = -_operand;
             return py::convert(_result);
         }
@@ -6253,7 +6253,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(operand);
+            auto _operand = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(operand);
             auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
             return py::convert(_result);
         }
@@ -6275,7 +6275,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(other);
 
             if (op == Py_EQ)
             {

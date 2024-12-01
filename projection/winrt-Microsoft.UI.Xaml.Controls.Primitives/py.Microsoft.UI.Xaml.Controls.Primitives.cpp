@@ -36698,7 +36698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            self->obj.Index = py::converter<int32_t>::convert_to(arg);
+            self->obj.Index = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -36731,7 +36731,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            self->obj.Offset = py::converter<int32_t>::convert_to(arg);
+            self->obj.Offset = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -36751,7 +36751,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition>(other);
 
             if (op == Py_EQ)
             {

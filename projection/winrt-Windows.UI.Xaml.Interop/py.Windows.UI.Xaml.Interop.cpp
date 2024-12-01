@@ -1994,7 +1994,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
         try
         {
-            self->obj.Name = py::converter<winrt::hstring>::convert_to(_Name);
+            self->obj.Name = py::convert_to<winrt::hstring>(_Name);
             self->obj.Kind = static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind);
 
             return 0;
@@ -2052,7 +2052,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
         try
         {
-            self->obj.Name = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.Name = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -2085,7 +2085,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
         try
         {
-            self->obj.Kind = py::converter<winrt::Windows::UI::Xaml::Interop::TypeKind>::convert_to(arg);
+            self->obj.Kind = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeKind>(arg);
             return 0;
         }
         catch (...)
@@ -2105,7 +2105,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Interop::TypeName>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(other);
 
             if (op == Py_EQ)
             {

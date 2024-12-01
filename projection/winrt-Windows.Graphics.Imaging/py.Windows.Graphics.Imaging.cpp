@@ -7143,7 +7143,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.X = py::converter<uint32_t>::convert_to(arg);
+            self->obj.X = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7176,7 +7176,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Y = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Y = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7209,7 +7209,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Width = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7242,7 +7242,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Height = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7264,7 +7264,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapBounds>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBounds>(other);
 
             if (op == Py_EQ)
             {
@@ -7441,7 +7441,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.StartIndex = py::converter<int32_t>::convert_to(arg);
+            self->obj.StartIndex = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7474,7 +7474,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Width = py::converter<int32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Height = py::converter<int32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7540,7 +7540,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Stride = py::converter<int32_t>::convert_to(arg);
+            self->obj.Stride = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7562,7 +7562,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>(other);
 
             if (op == Py_EQ)
             {
@@ -7735,7 +7735,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Width = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7768,7 +7768,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj.Height = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7788,7 +7788,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapSize>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(other);
 
             if (op == Py_EQ)
             {

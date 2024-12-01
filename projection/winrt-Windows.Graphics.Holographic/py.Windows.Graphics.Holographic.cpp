@@ -5585,7 +5585,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.LowPart = py::converter<uint32_t>::convert_to(arg);
+            self->obj.LowPart = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5618,7 +5618,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.HighPart = py::converter<int32_t>::convert_to(arg);
+            self->obj.HighPart = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5638,7 +5638,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicAdapterId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicAdapterId>(other);
 
             if (op == Py_EQ)
             {
@@ -5797,7 +5797,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5816,7 +5816,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicFrameId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicFrameId>(other);
 
             if (op == Py_EQ)
             {
@@ -5913,8 +5913,8 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.Left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Left);
-            self->obj.Right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Right);
+            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Left);
+            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Right);
 
             return 0;
         }
@@ -5971,7 +5971,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.Left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
             return 0;
         }
         catch (...)
@@ -6004,7 +6004,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj.Right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
             return 0;
         }
         catch (...)
@@ -6024,7 +6024,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>(other);
 
             if (op == Py_EQ)
             {

@@ -10513,7 +10513,7 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            self->obj.state = py::converter<winrt::Windows::Management::Deployment::DeploymentProgressState>::convert_to(arg);
+            self->obj.state = py::convert_to<winrt::Windows::Management::Deployment::DeploymentProgressState>(arg);
             return 0;
         }
         catch (...)
@@ -10546,7 +10546,7 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            self->obj.percentage = py::converter<uint32_t>::convert_to(arg);
+            self->obj.percentage = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10566,7 +10566,7 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Management::Deployment::DeploymentProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Management::Deployment::DeploymentProgress>(other);
 
             if (op == Py_EQ)
             {

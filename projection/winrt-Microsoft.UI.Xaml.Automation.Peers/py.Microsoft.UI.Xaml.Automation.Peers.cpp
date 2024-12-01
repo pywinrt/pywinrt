@@ -25322,7 +25322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
         try
         {
-            self->obj.Part1 = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Part1 = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -25355,7 +25355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
         try
         {
-            self->obj.Part2 = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Part2 = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -25375,7 +25375,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>(other);
 
             if (op == Py_EQ)
             {

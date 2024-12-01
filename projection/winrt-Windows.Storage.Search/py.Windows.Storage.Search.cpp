@@ -5797,7 +5797,7 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            self->obj.PropertyName = py::converter<winrt::hstring>::convert_to(_PropertyName);
+            self->obj.PropertyName = py::convert_to<winrt::hstring>(_PropertyName);
             self->obj.AscendingOrder = _AscendingOrder;
 
             return 0;
@@ -5855,7 +5855,7 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            self->obj.PropertyName = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.PropertyName = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -5888,7 +5888,7 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            self->obj.AscendingOrder = py::converter<bool>::convert_to(arg);
+            self->obj.AscendingOrder = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -5908,7 +5908,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Storage::Search::SortEntry>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Storage::Search::SortEntry>(other);
 
             if (op == Py_EQ)
             {

@@ -2854,8 +2854,8 @@ namespace py::cpp::Windows::Storage::AccessCache
 
         try
         {
-            self->obj.Token = py::converter<winrt::hstring>::convert_to(_Token);
-            self->obj.Metadata = py::converter<winrt::hstring>::convert_to(_Metadata);
+            self->obj.Token = py::convert_to<winrt::hstring>(_Token);
+            self->obj.Metadata = py::convert_to<winrt::hstring>(_Metadata);
 
             return 0;
         }
@@ -2912,7 +2912,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
         try
         {
-            self->obj.Token = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.Token = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -2945,7 +2945,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
         try
         {
-            self->obj.Metadata = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.Metadata = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -2965,7 +2965,7 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Storage::AccessCache::AccessListEntry>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Storage::AccessCache::AccessListEntry>(other);
 
             if (op == Py_EQ)
             {

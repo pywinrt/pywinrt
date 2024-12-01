@@ -2128,7 +2128,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M11 = py::converter<double>::convert_to(arg);
+            self->obj.M11 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2161,7 +2161,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M12 = py::converter<double>::convert_to(arg);
+            self->obj.M12 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M13 = py::converter<double>::convert_to(arg);
+            self->obj.M13 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2227,7 +2227,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M14 = py::converter<double>::convert_to(arg);
+            self->obj.M14 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2260,7 +2260,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M21 = py::converter<double>::convert_to(arg);
+            self->obj.M21 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2293,7 +2293,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M22 = py::converter<double>::convert_to(arg);
+            self->obj.M22 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2326,7 +2326,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M23 = py::converter<double>::convert_to(arg);
+            self->obj.M23 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M24 = py::converter<double>::convert_to(arg);
+            self->obj.M24 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2392,7 +2392,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M31 = py::converter<double>::convert_to(arg);
+            self->obj.M31 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2425,7 +2425,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M32 = py::converter<double>::convert_to(arg);
+            self->obj.M32 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2458,7 +2458,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M33 = py::converter<double>::convert_to(arg);
+            self->obj.M33 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2491,7 +2491,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M34 = py::converter<double>::convert_to(arg);
+            self->obj.M34 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2524,7 +2524,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.OffsetX = py::converter<double>::convert_to(arg);
+            self->obj.OffsetX = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2557,7 +2557,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.OffsetY = py::converter<double>::convert_to(arg);
+            self->obj.OffsetY = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2590,7 +2590,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.OffsetZ = py::converter<double>::convert_to(arg);
+            self->obj.OffsetZ = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2623,7 +2623,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj.M44 = py::converter<double>::convert_to(arg);
+            self->obj.M44 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2657,7 +2657,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(other);
 
             if (op == Py_EQ)
             {

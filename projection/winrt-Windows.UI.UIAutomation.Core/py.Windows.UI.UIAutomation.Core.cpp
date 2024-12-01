@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         try
         {
-            self->obj.LocalId = py::converter<int32_t>::convert_to(arg);
+            self->obj.LocalId = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2040,7 +2040,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(other);
 
             if (op == Py_EQ)
             {
@@ -2193,7 +2193,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         try
         {
-            self->obj.Value = py::converter<int32_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(other);
 
             if (op == Py_EQ)
             {
