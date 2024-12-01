@@ -16,6 +16,7 @@ class CustomXamlResourceLoader_Static(type):
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...
     @current.setter
+    @typing.final
     def current(cls, value: CustomXamlResourceLoader) -> None: ...
 
 class CustomXamlResourceLoader(winrt.system.Object, metaclass=CustomXamlResourceLoader_Static):

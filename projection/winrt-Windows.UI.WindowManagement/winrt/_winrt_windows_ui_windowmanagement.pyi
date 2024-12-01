@@ -136,6 +136,7 @@ class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindo
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresentationConfiguration: ...
     @_property
+    @typing.final
     def kind(self) -> AppWindowPresentationKind: ...
 
 @typing.final

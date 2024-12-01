@@ -320,12 +320,16 @@ class KeyRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 class KeyboardAccelerator_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def is_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def key_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def modifiers_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def scope_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAccelerator_Static):
@@ -337,18 +341,22 @@ class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAc
     @_property
     def scope_owner(self) -> windows_ui_xaml.DependencyObject: ...
     @scope_owner.setter
+    @typing.final
     def scope_owner(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     @_property
     def modifiers(self) -> windows_system.VirtualKeyModifiers: ...
     @modifiers.setter
+    @typing.final
     def modifiers(self, value: windows_system.VirtualKeyModifiers) -> None: ...
     @_property
     def key(self) -> windows_system.VirtualKey: ...
     @key.setter
+    @typing.final
     def key(self, value: windows_system.VirtualKey) -> None: ...
     @_property
     def is_enabled(self) -> bool: ...
     @is_enabled.setter
+    @typing.final
     def is_enabled(self, value: bool) -> None: ...
 
 @typing.final
@@ -501,14 +509,19 @@ class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metacl
     @_property
     def handled(self) -> bool: ...
     @handled.setter
+    @typing.final
     def handled(self, value: bool) -> None: ...
     @_property
+    @typing.final
     def container(self) -> windows_ui_xaml.UIElement: ...
     @_property
+    @typing.final
     def cumulative(self) -> windows_ui_input.ManipulationDelta: ...
     @_property
+    @typing.final
     def pointer_device_type(self) -> windows_devices_input.PointerDeviceType: ...
     @_property
+    @typing.final
     def position(self) -> windows_foundation.Point: ...
 
 @typing.final
@@ -604,6 +617,7 @@ class RightTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 class StandardUICommand_Static(XamlUICommand_Static):
     @_property
+    @typing.final
     def kind_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
@@ -616,6 +630,7 @@ class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
     @_property
     def kind(self) -> StandardUICommandKind: ...
     @kind.setter
+    @typing.final
     def kind(self, value: StandardUICommandKind) -> None: ...
 
 @typing.final
@@ -633,16 +648,22 @@ class TappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 class XamlUICommand_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def access_key_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def command_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def description_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def icon_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def keyboard_accelerators_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlUICommand(windows_ui_xaml.DependencyObject, ImplementsICommand, metaclass=XamlUICommand_Static):
@@ -662,24 +683,30 @@ class XamlUICommand(windows_ui_xaml.DependencyObject, ImplementsICommand, metacl
     @_property
     def label(self) -> str: ...
     @label.setter
+    @typing.final
     def label(self, value: str) -> None: ...
     @_property
     def icon_source(self) -> windows_ui_xaml_controls.IconSource: ...
     @icon_source.setter
+    @typing.final
     def icon_source(self, value: windows_ui_xaml_controls.IconSource) -> None: ...
     @_property
     def description(self) -> str: ...
     @description.setter
+    @typing.final
     def description(self, value: str) -> None: ...
     @_property
     def command(self) -> ICommand: ...
     @command.setter
+    @typing.final
     def command(self, value: ImplementsICommand) -> None: ...
     @_property
     def access_key(self) -> str: ...
     @access_key.setter
+    @typing.final
     def access_key(self, value: str) -> None: ...
     @_property
+    @typing.final
     def keyboard_accelerators(self) -> typing.MutableSequence[KeyboardAccelerator]: ...
 
 class ImplementsICommand():

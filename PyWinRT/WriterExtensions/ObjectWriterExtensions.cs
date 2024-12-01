@@ -66,7 +66,23 @@ static class ObjectWriterExtensions
                 var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
                 var propType = prop.PropertyType.ToPyTypeName(ns);
 
-                w.WriteLine("@_property");
+                // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
+                // so far, this is the only case in the entire Windows SDK where
+                // a property is entirely replaced with one of the same name
+                var typeIgnore =
+                    type.Namespace == "Windows.UI.Xaml.Controls.Maps"
+                    && type.Name == "MapControl"
+                    && prop.Name == "StyleProperty"
+                        ? "  # type: ignore[misc]"
+                        : "";
+
+                w.WriteLine($"@_property{typeIgnore}");
+
+                if (type.IsComposable && prop.SetMethod == null)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WriteLine($"def {name}(cls) -> {propType}: ...");
 
                 if (prop.SetMethod is not null)
@@ -74,6 +90,12 @@ static class ObjectWriterExtensions
                     var setType = prop.SetMethod.Parameters[0].ToPyInParamTyping(ns);
 
                     w.WriteLine($"@{name}.setter");
+
+                    if (type.IsComposable)
+                    {
+                        w.WriteLine("@typing.final");
+                    }
+
                     w.WriteLine($"def {name}(cls, value: {setType}) -> None: ...");
                 }
 
@@ -402,6 +424,12 @@ static class ObjectWriterExtensions
                     : "";
 
             w.WriteLine($"@_property{typeIgnore}");
+
+            if (type.IsComposable && prop.SetMethod == null)
+            {
+                w.WriteLine("@typing.final");
+            }
+
             w.WriteLine($"def {name}(self) -> {propType}: ...");
 
             if (prop.SetMethod is not null)
@@ -409,6 +437,12 @@ static class ObjectWriterExtensions
                 var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
 
                 w.WriteLine($"@{name}.setter");
+
+                if (type.IsComposable)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WriteLine($"def {name}(self, value: {setType}) -> None: ...");
             }
         }

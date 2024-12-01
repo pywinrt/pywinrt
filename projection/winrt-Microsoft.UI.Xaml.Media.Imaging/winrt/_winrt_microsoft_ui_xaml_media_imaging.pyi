@@ -87,8 +87,10 @@ class BitmapImage(BitmapSource, metaclass=BitmapImage_Static):
 
 class BitmapSource_Static(microsoft_ui_xaml_media.ImageSource_Static):
     @_property
+    @typing.final
     def pixel_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def pixel_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class BitmapSource(microsoft_ui_xaml_media.ImageSource, metaclass=BitmapSource_Static):
@@ -99,8 +101,10 @@ class BitmapSource(microsoft_ui_xaml_media.ImageSource, metaclass=BitmapSource_S
     @typing.final
     def set_source_async(self, stream_source: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
     @_property
+    @typing.final
     def pixel_height(self) -> winrt.system.Int32: ...
     @_property
+    @typing.final
     def pixel_width(self) -> winrt.system.Int32: ...
 
 @typing.final
@@ -155,10 +159,13 @@ class SurfaceImageSource(microsoft_ui_xaml_media.ImageSource, metaclass=SurfaceI
 
 class SvgImageSource_Static(microsoft_ui_xaml_media.ImageSource_Static):
     @_property
+    @typing.final
     def rasterize_pixel_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def rasterize_pixel_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class SvgImageSource(microsoft_ui_xaml_media.ImageSource, metaclass=SvgImageSource_Static):
@@ -177,14 +184,17 @@ class SvgImageSource(microsoft_ui_xaml_media.ImageSource, metaclass=SvgImageSour
     @_property
     def uri_source(self) -> windows_foundation.Uri: ...
     @uri_source.setter
+    @typing.final
     def uri_source(self, value: windows_foundation.Uri) -> None: ...
     @_property
     def rasterize_pixel_width(self) -> winrt.system.Double: ...
     @rasterize_pixel_width.setter
+    @typing.final
     def rasterize_pixel_width(self, value: winrt.system.Double) -> None: ...
     @_property
     def rasterize_pixel_height(self) -> winrt.system.Double: ...
     @rasterize_pixel_height.setter
+    @typing.final
     def rasterize_pixel_height(self, value: winrt.system.Double) -> None: ...
 
 @typing.final

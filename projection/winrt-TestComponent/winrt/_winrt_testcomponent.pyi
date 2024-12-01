@@ -72,6 +72,7 @@ class Composable(winrt.system.Object, ImplementsIRequiredFour, ImplementsIRequir
     @_property
     def value(self) -> winrt.system.Int32: ...
     @value.setter
+    @typing.final
     def value(self, value: winrt.system.Int32) -> None: ...
 
 class Derived_Static(Composable_Static):

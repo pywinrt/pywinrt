@@ -162,8 +162,10 @@ class ColorAnimationUsingKeyFrames(Timeline, metaclass=ColorAnimationUsingKeyFra
 
 class ColorKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ColorKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ColorKeyFrame_Static):
@@ -172,10 +174,12 @@ class ColorKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ColorKeyFrame_
     @_property
     def value(self) -> windows_ui.Color: ...
     @value.setter
+    @typing.final
     def value(self, value: windows_ui.Color) -> None: ...
     @_property
     def key_time(self) -> KeyTime: ...
     @key_time.setter
+    @typing.final
     def key_time(self, value: KeyTime) -> None: ...
 
 @typing.final
@@ -420,8 +424,10 @@ class DoubleAnimationUsingKeyFrames(Timeline, metaclass=DoubleAnimationUsingKeyF
 
 class DoubleKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class DoubleKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=DoubleKeyFrame_Static):
@@ -430,10 +436,12 @@ class DoubleKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=DoubleKeyFram
     @_property
     def value(self) -> winrt.system.Double: ...
     @value.setter
+    @typing.final
     def value(self, value: winrt.system.Double) -> None: ...
     @_property
     def key_time(self) -> KeyTime: ...
     @key_time.setter
+    @typing.final
     def key_time(self, value: KeyTime) -> None: ...
 
 @typing.final
@@ -631,6 +639,7 @@ class EasingDoubleKeyFrame(DoubleKeyFrame, metaclass=EasingDoubleKeyFrame_Static
 
 class EasingFunctionBase_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def easing_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class EasingFunctionBase(microsoft_ui_xaml.DependencyObject, metaclass=EasingFunctionBase_Static):
@@ -641,6 +650,7 @@ class EasingFunctionBase(microsoft_ui_xaml.DependencyObject, metaclass=EasingFun
     @_property
     def easing_mode(self) -> EasingMode: ...
     @easing_mode.setter
+    @typing.final
     def easing_mode(self, value: EasingMode) -> None: ...
 
 @typing.final
@@ -789,6 +799,7 @@ class GravityConnectedAnimationConfiguration(ConnectedAnimationConfiguration, me
     @_property
     def is_shadow_enabled(self) -> bool: ...
     @is_shadow_enabled.setter
+    @typing.final
     def is_shadow_enabled(self, value: bool) -> None: ...
 
 @typing.final
@@ -875,8 +886,10 @@ class ObjectAnimationUsingKeyFrames(Timeline, metaclass=ObjectAnimationUsingKeyF
 
 class ObjectKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ObjectKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ObjectKeyFrame_Static):
@@ -885,10 +898,12 @@ class ObjectKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ObjectKeyFram
     @_property
     def value(self) -> winrt.system.Object: ...
     @value.setter
+    @typing.final
     def value(self, value: winrt.system.Object) -> None: ...
     @_property
     def key_time(self) -> KeyTime: ...
     @key_time.setter
+    @typing.final
     def key_time(self, value: KeyTime) -> None: ...
 
 @typing.final
@@ -998,8 +1013,10 @@ class PointAnimationUsingKeyFrames(Timeline, metaclass=PointAnimationUsingKeyFra
 
 class PointKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PointKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=PointKeyFrame_Static):
@@ -1008,10 +1025,12 @@ class PointKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=PointKeyFrame_
     @_property
     def value(self) -> windows_foundation.Point: ...
     @value.setter
+    @typing.final
     def value(self, value: windows_foundation.Point) -> None: ...
     @_property
     def key_time(self) -> KeyTime: ...
     @key_time.setter
+    @typing.final
     def key_time(self, value: KeyTime) -> None: ...
 
 @typing.final
@@ -1546,18 +1565,25 @@ class Timeline_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def allow_dependent_animations(cls) -> bool: ...
     @allow_dependent_animations.setter
+    @typing.final
     def allow_dependent_animations(cls, value: bool) -> None: ...
     @_property
+    @typing.final
     def auto_reverse_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def begin_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def duration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def fill_behavior_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def repeat_behavior_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def speed_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Timeline(microsoft_ui_xaml.DependencyObject, metaclass=Timeline_Static):
@@ -1568,26 +1594,32 @@ class Timeline(microsoft_ui_xaml.DependencyObject, metaclass=Timeline_Static):
     @_property
     def speed_ratio(self) -> winrt.system.Double: ...
     @speed_ratio.setter
+    @typing.final
     def speed_ratio(self, value: winrt.system.Double) -> None: ...
     @_property
     def repeat_behavior(self) -> RepeatBehavior: ...
     @repeat_behavior.setter
+    @typing.final
     def repeat_behavior(self, value: RepeatBehavior) -> None: ...
     @_property
     def fill_behavior(self) -> FillBehavior: ...
     @fill_behavior.setter
+    @typing.final
     def fill_behavior(self, value: FillBehavior) -> None: ...
     @_property
     def duration(self) -> microsoft_ui_xaml.Duration: ...
     @duration.setter
+    @typing.final
     def duration(self, value: microsoft_ui_xaml.Duration) -> None: ...
     @_property
     def begin_time(self) -> typing.Optional[datetime.timedelta]: ...
     @begin_time.setter
+    @typing.final
     def begin_time(self, value: typing.Optional[datetime.timedelta]) -> None: ...
     @_property
     def auto_reverse(self) -> bool: ...
     @auto_reverse.setter
+    @typing.final
     def auto_reverse(self, value: bool) -> None: ...
 
 @typing.final

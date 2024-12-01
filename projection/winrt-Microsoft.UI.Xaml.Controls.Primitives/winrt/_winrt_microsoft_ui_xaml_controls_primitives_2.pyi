@@ -114,6 +114,7 @@ Self = typing.TypeVar('Self')
 
 class ColorPickerSlider_Static(microsoft_ui_xaml_controls.Slider_Static):
     @_property
+    @typing.final
     def color_channel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ColorPickerSlider(microsoft_ui_xaml_controls.Slider, metaclass=ColorPickerSlider_Static):
@@ -123,6 +124,7 @@ class ColorPickerSlider(microsoft_ui_xaml_controls.Slider, metaclass=ColorPicker
     @_property
     def color_channel(self) -> microsoft_ui_xaml_controls.ColorPickerHsvChannel: ...
     @color_channel.setter
+    @typing.final
     def color_channel(self, value: microsoft_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
 class TabViewListView_Static(microsoft_ui_xaml_controls.ListView_Static):

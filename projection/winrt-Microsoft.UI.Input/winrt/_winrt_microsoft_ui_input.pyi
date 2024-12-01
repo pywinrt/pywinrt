@@ -458,6 +458,7 @@ class InputObject(winrt.system.Object, metaclass=InputObject_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputObject: ...
     @_property
+    @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
 @typing.final

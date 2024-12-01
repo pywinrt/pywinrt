@@ -78,8 +78,10 @@ class DesktopWindowXamlSource(winrt.system.Object, windows_foundation.Implements
     @_property
     def content(self) -> windows_ui_xaml.UIElement: ...
     @content.setter
+    @typing.final
     def content(self, value: windows_ui_xaml.UIElement) -> None: ...
     @_property
+    @typing.final
     def has_focus(self) -> bool: ...
 
 @typing.final

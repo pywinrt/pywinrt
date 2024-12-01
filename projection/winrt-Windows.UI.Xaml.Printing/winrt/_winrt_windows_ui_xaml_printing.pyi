@@ -46,6 +46,7 @@ class PaginateEventArgs(winrt.system.Object):
 
 class PrintDocument_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def document_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class PrintDocument(windows_ui_xaml.DependencyObject, metaclass=PrintDocument_Static):
@@ -69,5 +70,6 @@ class PrintDocument(windows_ui_xaml.DependencyObject, metaclass=PrintDocument_St
     def add_paginate(self, handler: PaginateEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_paginate(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
+    @typing.final
     def document_source(self) -> windows_graphics_printing.IPrintDocumentSource: ...
 
