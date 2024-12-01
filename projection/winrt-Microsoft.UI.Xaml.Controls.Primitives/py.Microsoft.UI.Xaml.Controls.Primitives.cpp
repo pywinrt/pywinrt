@@ -7961,6 +7961,68 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        winrt::Microsoft::UI::Xaml::Controls::Control CreatePresenter()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_create_presenter")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnProcessKeyboardAccelerators(winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_process_keyboard_accelerators")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_FlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -23514,6 +23576,62 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void OnConfirmed()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_confirmed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        bool ShouldShowConfirmationButtons()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_should_show_confirmation_buttons")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_PickerFlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -25664,6 +25782,141 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtRangeBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        void OnMaximumChanged(double param0, double param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_maximum_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnMinimumChanged(double param0, double param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_minimum_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnValueChanged(double param0, double param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_value_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 
@@ -33902,6 +34155,33 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtToggleButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        void OnToggle()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_toggle")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 

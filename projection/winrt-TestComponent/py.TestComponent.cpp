@@ -739,6 +739,84 @@ namespace py::cpp::TestComponent
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void Overload(int32_t param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_overload_with_one")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void Overload(int32_t param0, int32_t param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_overload_with_two")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_OverloadClass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -939,6 +1017,33 @@ namespace py::cpp::TestComponent
         static void toggle_reference(PyWinrtOverride* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        void OnOverridable()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_overridable")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 

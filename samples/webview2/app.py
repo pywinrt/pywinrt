@@ -8,6 +8,7 @@ from winrt.microsoft.ui.xaml import (
     GridLength,
     GridUnitType,
     HorizontalAlignment,
+    LaunchActivatedEventArgs,
     VerticalAlignment,
     Window,
 )
@@ -35,93 +36,100 @@ def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
         print("Initialization failed", WinError(args.exception.value))
 
 
-def init(_: ApplicationInitializationCallbackParams) -> None:
-    # Always have to create an application object even if you don't use it.
-    # (There seems to be a bug where Window() will segfault if
-    # Application.current is None.)
-    app = Application()
+class App(Application):
+    def _on_launched(self, args: LaunchActivatedEventArgs) -> None:
+        webview = WebView2()
+        webview.source = Uri("https://pywinrt.readthedocs.io/en/latest/")
+        webview.add_core_web_view2_initialized(check_initialized)
 
-    webview = WebView2()
-    webview.source = Uri("https://pywinrt.readthedocs.io/en/latest/")
-    webview.add_core_web_view2_initialized(check_initialized)
+        # Grid is used to make the WebView2 control fill the window.
+        # Equivalent to the following XAML:
+        """
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-    # Grid is used to make the WebView2 control fill the window.
-    # Equivalent to the following XAML:
-    """
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
+            <WebView2 Grid.Row="1" Grid.ColumnSpan="2"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+        """
+        grid = Grid()
+        auto_row = RowDefinition()
+        auto_row.height = GridLength(1, GridUnitType.AUTO)
+        grid.row_definitions.append(auto_row)
+        star_row = RowDefinition()
+        star_row.height = GridLength(1, GridUnitType.STAR)
+        grid.row_definitions.append(star_row)
+        star_col = ColumnDefinition()
+        star_col.width = GridLength(1, GridUnitType.STAR)
+        grid.column_definitions.append(star_col)
+        auto_col = ColumnDefinition()
+        auto_col.width = GridLength(1, GridUnitType.AUTO)
+        grid.column_definitions.append(auto_col)
+        webview.horizontal_alignment = HorizontalAlignment.STRETCH
+        webview.vertical_alignment = VerticalAlignment.STRETCH
+        webview.set_value(Grid.row_property, box_int32(1))
+        webview.set_value(Grid.column_span_property, box_int32(2))
+        grid.children.append(webview)
 
-        <WebView2 Grid.Row="1" Grid.ColumnSpan="2"
-            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-    </Grid>
-    """
-    grid = Grid()
-    auto_row = RowDefinition()
-    auto_row.height = GridLength(1, GridUnitType.AUTO)
-    grid.row_definitions.append(auto_row)
-    star_row = RowDefinition()
-    star_row.height = GridLength(1, GridUnitType.STAR)
-    grid.row_definitions.append(star_row)
-    star_col = ColumnDefinition()
-    star_col.width = GridLength(1, GridUnitType.STAR)
-    grid.column_definitions.append(star_col)
-    auto_col = ColumnDefinition()
-    auto_col.width = GridLength(1, GridUnitType.AUTO)
-    grid.column_definitions.append(auto_col)
-    webview.horizontal_alignment = HorizontalAlignment.STRETCH
-    webview.vertical_alignment = VerticalAlignment.STRETCH
-    webview.set_value(Grid.row_property, box_int32(1))
-    webview.set_value(Grid.column_span_property, box_int32(2))
-    grid.children.append(webview)
+        window = Window()
+        window.add_closed(lambda s, e: self.exit())
+        window.content = grid
 
-    window = Window()
-    window.add_closed(lambda s, e: app.exit())
-    window.content = grid
+        # By default, WebView2 will create a directory in the .exe's directory
+        # which isn't usually desireable. Here we create a temporary directory
+        # since this is just example code. A real app would use some application-
+        # specific user data directory and not delete it at exit.
+        cache_dir = tempfile.TemporaryDirectory(ignore_cleanup_errors=True)
+        atexit.register(cache_dir.cleanup)
 
-    # By default, WebView2 will create a directory in the .exe's directory
-    # which isn't usually desireable. Here we create a temporary directory
-    # since this is just example code. A real app would use some application-
-    # specific user data directory and not delete it at exit.
-    cache_dir = tempfile.TemporaryDirectory(ignore_cleanup_errors=True)
-    atexit.register(cache_dir.cleanup)
+        env_op = CoreWebView2Environment.create_with_options_async(
+            "", cache_dir.name, None
+        )
 
-    env_op = CoreWebView2Environment.create_with_options_async("", cache_dir.name, None)
-
-    def on_env(op: IAsyncOperation[CoreWebView2Environment], status: AsyncStatus):
-        if status == AsyncStatus.ERROR:
-            print("create_with_options_async failed:", WinError(op.error_code.value))
-            return
-
-        if status != AsyncStatus.COMPLETED:
-            return
-
-        env = op.get_results()
-
-        ensure_op = webview.ensure_core_web_view2_with_environment_async(env)
-
-        def on_ensure(op: IAsyncAction, status: AsyncStatus):
+        def on_env(op: IAsyncOperation[CoreWebView2Environment], status: AsyncStatus):
             if status == AsyncStatus.ERROR:
                 print(
-                    "ensure_core_web_view2_async failed:", WinError(op.error_code.value)
+                    "create_with_options_async failed:", WinError(op.error_code.value)
                 )
                 return
 
             if status != AsyncStatus.COMPLETED:
                 return
 
-            # Don't show the window until ready to avoid black box
-            window.activate()
+            env = op.get_results()
 
-        ensure_op.completed = on_ensure
+            ensure_op = webview.ensure_core_web_view2_with_environment_async(env)
 
-    env_op.completed = on_env
+            def on_ensure(op: IAsyncAction, status: AsyncStatus):
+                if status == AsyncStatus.ERROR:
+                    print(
+                        "ensure_core_web_view2_async failed:",
+                        WinError(op.error_code.value),
+                    )
+                    return
+
+                if status != AsyncStatus.COMPLETED:
+                    return
+
+                # Don't show the window until ready to avoid black box
+                window.activate()
+
+            ensure_op.completed = on_ensure
+
+        env_op.completed = on_env
+
+
+def init(_: ApplicationInitializationCallbackParams) -> None:
+    # This implicitly sets Application.current to this object so we don't need
+    # to keep a reference to it.
+    App()
 
 
 if __name__ == "__main__":

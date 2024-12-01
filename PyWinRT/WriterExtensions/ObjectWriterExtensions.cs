@@ -520,22 +520,159 @@ static class ObjectWriterExtensions
         w.Indent--;
         w.WriteLine("}");
 
-        // foreach (
-        //     var method in type.Type.Methods.Where(m =>
-        //         !m.IsPublic && !m.IsStatic && !m.IsSpecialName && !m.IsConstructor
-        //     )
-        // )
-        // {
-        //     var returnType = method.ReturnType.ToCppTypeName();
-        //     var paramList = string.Join(
-        //         ", ",
-        //         method.Parameters.Select(p => $"{p.ParameterType.ToCppTypeName()} /*unused*/")
-        //     );
+        foreach (var method in type.Methods.Where(m => m.IsOverridable))
+        {
+            // TODO: share code from here with WriteDelegateCallableWrapper()
 
-        //     w.WriteLine(
-        //         $"{returnType} {method.Name}({paramList}) {{ throw winrt::hresult_error(); }}"
-        //     );
-        // }
+            w.WriteBlankLine();
+
+            var returnType = method.Method.ReturnType.ToCppTypeName();
+            var paramList = string.Join(
+                ", ",
+                method.Method.Parameters.Select(p => p.ToDelegateParam(useAuto: false))
+            );
+
+            w.WriteLine($"{returnType} {method.CppName}({paramList})");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto gil = py::ensure_gil();");
+            w.WriteBlankLine();
+            w.WriteLine("try");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("py::pyobj_handle self{get_py_obj()};");
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
+            );
+            w.WriteLine("if (!method)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("throw python_exception();");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+
+            var pythonInParams = method.Method.Parameters.Where(p => p.IsPythonInParam()).ToList();
+
+            foreach (var param in pythonInParams)
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle py_{param.ToParamName()}{{py::convert({param.ToParamName()})}};"
+                );
+                w.WriteLine($"if (!py_{param.ToParamName()})");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("throw python_exception();");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+            }
+
+            if (pythonInParams.Count > 1)
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle args{{PyTuple_Pack({pythonInParams.Count}, {string.Join(", ", pythonInParams.Select(p => $"py_{p.ToParamName()}.get()"))})}};"
+                );
+                w.WriteLine("if (!args)");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("throw python_exception();");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+                w.WriteLine(
+                    "py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};"
+                );
+            }
+            else if (pythonInParams.Count == 1)
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle return_value{{PyObject_CallOneArg(method.get(), py_{pythonInParams[0].ToParamName()}.get())}};"
+                );
+            }
+            else
+            {
+                w.WriteLine("py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};");
+            }
+
+            w.WriteLine("if (!return_value)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("throw python_exception();");
+            w.Indent--;
+            w.WriteLine("}");
+
+            var i = method.Method.ReturnType.FullName == "System.Void" ? 0 : 1;
+
+            foreach (var param in method.Method.Parameters.Where(p => p.IsPythonOutParam()))
+            {
+                switch (param.GetCategory())
+                {
+                    case ParamCategory.Out:
+                        w.WriteBlankLine();
+                        w.WriteLine(
+                            $"{param.ToParamName()} = py::convert_to<{param.ParameterType.ToCppTypeName()}>(return_value.get(), {i});"
+                        );
+                        break;
+                    case ParamCategory.ReceiveArray:
+                        w.WriteBlankLine();
+                        w.WriteLine(
+                            $"auto {param.ToParamName()}_buf = py::convert_to<py::pybuf_view<{param.ParameterType.ToCppTypeName()}, false>>(return_value.get(), {i});"
+                        );
+                        w.WriteLine(
+                            $"{param.ToParamName()} = winrt::com_array<{param.ParameterType.ToCppTypeName()}>{{{param.ToParamName()}_buf.begin(), {param.ToParamName()}_buf.end()}};"
+                        );
+                        break;
+                    default:
+                        throw new ArgumentException("Invalid param category");
+                }
+
+                i++;
+            }
+
+            if (method.Method.ReturnType.FullName != "System.Void")
+            {
+                var index = "";
+
+                if (i > 1)
+                {
+                    // delegate has out params and a return value so
+                    // the return value is the first item in the tuple
+                    index = ", 0";
+                }
+
+                w.WriteBlankLine();
+
+                if (method.Method.ReturnType.IsArray)
+                {
+                    w.WriteLine(
+                        $"auto return_buf = py::convert_to<py::pybuf_view<{method.Method.ReturnType.ToCppTypeName()}, false>>(return_value.get(){index});"
+                    );
+                    w.WriteLine(
+                        $"return winrt::com_array<{method.Method.ReturnType.ToCppTypeName()}>{{return_buf.begin(), return_buf.end()}};"
+                    );
+                }
+                else
+                {
+                    w.WriteLine(
+                        $"return py::convert_to<{method.Method.ReturnType.ToCppTypeName()}>(return_value.get(){index});"
+                    );
+                }
+            }
+
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteLine("catch (python_exception)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("PyErr_WriteUnraisable(nullptr);");
+            w.WriteLine("throw winrt::hresult_error();");
+            w.Indent--;
+            w.WriteLine("}");
+            w.Indent--;
+            w.WriteLine("}");
+        }
 
         w.Indent--;
         w.WriteLine("};");
