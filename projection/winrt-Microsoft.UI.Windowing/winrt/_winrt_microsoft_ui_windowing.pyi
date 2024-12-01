@@ -120,6 +120,7 @@ class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Stati
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresenter: ...
     @_property
+    @typing.final
     def kind(self) -> AppWindowPresenterKind: ...
 
 @typing.final

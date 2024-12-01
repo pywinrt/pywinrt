@@ -35,14 +35,19 @@ class Matrix:
 
 class AcrylicBrush_Static(XamlCompositionBrushBase_Static):
     @_property
+    @typing.final
     def always_use_fallback_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def tint_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def tint_opacity_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def tint_transition_duration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def tint_luminosity_opacity_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AcrylicBrush(XamlCompositionBrushBase, metaclass=AcrylicBrush_Static):
@@ -52,22 +57,27 @@ class AcrylicBrush(XamlCompositionBrushBase, metaclass=AcrylicBrush_Static):
     @_property
     def tint_transition_duration(self) -> datetime.timedelta: ...
     @tint_transition_duration.setter
+    @typing.final
     def tint_transition_duration(self, value: datetime.timedelta) -> None: ...
     @_property
     def tint_opacity(self) -> winrt.system.Double: ...
     @tint_opacity.setter
+    @typing.final
     def tint_opacity(self, value: winrt.system.Double) -> None: ...
     @_property
     def tint_color(self) -> windows_ui.Color: ...
     @tint_color.setter
+    @typing.final
     def tint_color(self, value: windows_ui.Color) -> None: ...
     @_property
     def always_use_fallback(self) -> bool: ...
     @always_use_fallback.setter
+    @typing.final
     def always_use_fallback(self, value: bool) -> None: ...
     @_property
     def tint_luminosity_opacity(self) -> typing.Optional[winrt.system.Double]: ...
     @tint_luminosity_opacity.setter
+    @typing.final
     def tint_luminosity_opacity(self, value: typing.Optional[winrt.system.Double]) -> None: ...
 
 @typing.final
@@ -144,10 +154,13 @@ class BitmapCache(CacheMode):
 
 class Brush_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def opacity_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def relative_transform_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def transform_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Brush(microsoft_ui_xaml.DependencyObject, microsoft_ui_composition.ImplementsIAnimationObject, metaclass=Brush_Static):
@@ -158,14 +171,17 @@ class Brush(microsoft_ui_xaml.DependencyObject, microsoft_ui_composition.Impleme
     @_property
     def transform(self) -> Transform: ...
     @transform.setter
+    @typing.final
     def transform(self, value: Transform) -> None: ...
     @_property
     def relative_transform(self) -> Transform: ...
     @relative_transform.setter
+    @typing.final
     def relative_transform(self, value: Transform) -> None: ...
     @_property
     def opacity(self) -> winrt.system.Double: ...
     @opacity.setter
+    @typing.final
     def opacity(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
@@ -358,6 +374,7 @@ class EllipseGeometry(Geometry, metaclass=EllipseGeometry_Static):
 
 class FontFamily_Static(type):
     @_property
+    @typing.final
     def xaml_auto_font_family(cls) -> FontFamily: ...
 
 class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
@@ -365,6 +382,7 @@ class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     def _from(obj: winrt.system.Object, /) -> FontFamily: ...
     def __new__(cls: typing.Type[Self], family_name: str) -> Self: ...
     @_property
+    @typing.final
     def source(self) -> str: ...
 
 class GeneralTransform_Static(microsoft_ui_xaml.DependencyObject_Static):
@@ -382,14 +400,18 @@ class GeneralTransform(microsoft_ui_xaml.DependencyObject, metaclass=GeneralTran
     def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
     def _try_transform_core(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
     @_property
+    @typing.final
     def inverse(self) -> GeneralTransform: ...
 
 class Geometry_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
+    @typing.final
     def empty(cls) -> Geometry: ...
     @_property
+    @typing.final
     def standard_flattening_tolerance(cls) -> winrt.system.Double: ...
     @_property
+    @typing.final
     def transform_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Geometry(microsoft_ui_xaml.DependencyObject, metaclass=Geometry_Static):
@@ -398,8 +420,10 @@ class Geometry(microsoft_ui_xaml.DependencyObject, metaclass=Geometry_Static):
     @_property
     def transform(self) -> Transform: ...
     @transform.setter
+    @typing.final
     def transform(self, value: Transform) -> None: ...
     @_property
+    @typing.final
     def bounds(self) -> windows_foundation.Rect: ...
 
 @typing.final
@@ -459,12 +483,16 @@ class GeometryGroup(Geometry, metaclass=GeometryGroup_Static):
 
 class GradientBrush_Static(Brush_Static):
     @_property
+    @typing.final
     def color_interpolation_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def gradient_stops_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def mapping_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def spread_method_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class GradientBrush(Brush, metaclass=GradientBrush_Static):
@@ -473,18 +501,22 @@ class GradientBrush(Brush, metaclass=GradientBrush_Static):
     @_property
     def spread_method(self) -> GradientSpreadMethod: ...
     @spread_method.setter
+    @typing.final
     def spread_method(self, value: GradientSpreadMethod) -> None: ...
     @_property
     def mapping_mode(self) -> BrushMappingMode: ...
     @mapping_mode.setter
+    @typing.final
     def mapping_mode(self, value: BrushMappingMode) -> None: ...
     @_property
     def gradient_stops(self) -> GradientStopCollection: ...
     @gradient_stops.setter
+    @typing.final
     def gradient_stops(self, value: GradientStopCollection) -> None: ...
     @_property
     def color_interpolation_mode(self) -> ColorInterpolationMode: ...
     @color_interpolation_mode.setter
+    @typing.final
     def color_interpolation_mode(self, value: ColorInterpolationMode) -> None: ...
 
 @typing.final
@@ -710,6 +742,7 @@ class MediaTransportControlsThumbnailRequestedEventArgs(winrt.system.Object):
 
 class MicaBackdrop_Static(SystemBackdrop_Static):
     @_property
+    @typing.final
     def kind_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MicaBackdrop(SystemBackdrop, metaclass=MicaBackdrop_Static):
@@ -719,6 +752,7 @@ class MicaBackdrop(SystemBackdrop, metaclass=MicaBackdrop_Static):
     @_property
     def kind(self) -> microsoft_ui_composition_systembackdrops.MicaKind: ...
     @kind.setter
+    @typing.final
     def kind(self, value: microsoft_ui_composition_systembackdrops.MicaKind) -> None: ...
 
 @typing.final
@@ -1044,18 +1078,25 @@ class QuadraticBezierSegment(PathSegment, metaclass=QuadraticBezierSegment_Stati
 
 class RadialGradientBrush_Static(XamlCompositionBrushBase_Static):
     @_property
+    @typing.final
     def center_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def gradient_origin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def interpolation_space_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def mapping_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def radius_x_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def radius_y_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def spread_method_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RadialGradientBrush(XamlCompositionBrushBase, metaclass=RadialGradientBrush_Static):
@@ -1065,32 +1106,40 @@ class RadialGradientBrush(XamlCompositionBrushBase, metaclass=RadialGradientBrus
     @_property
     def spread_method(self) -> GradientSpreadMethod: ...
     @spread_method.setter
+    @typing.final
     def spread_method(self, value: GradientSpreadMethod) -> None: ...
     @_property
     def radius_y(self) -> winrt.system.Double: ...
     @radius_y.setter
+    @typing.final
     def radius_y(self, value: winrt.system.Double) -> None: ...
     @_property
     def radius_x(self) -> winrt.system.Double: ...
     @radius_x.setter
+    @typing.final
     def radius_x(self, value: winrt.system.Double) -> None: ...
     @_property
     def mapping_mode(self) -> BrushMappingMode: ...
     @mapping_mode.setter
+    @typing.final
     def mapping_mode(self, value: BrushMappingMode) -> None: ...
     @_property
     def interpolation_space(self) -> microsoft_ui_composition.CompositionColorSpace: ...
     @interpolation_space.setter
+    @typing.final
     def interpolation_space(self, value: microsoft_ui_composition.CompositionColorSpace) -> None: ...
     @_property
     def gradient_origin(self) -> windows_foundation.Point: ...
     @gradient_origin.setter
+    @typing.final
     def gradient_origin(self, value: windows_foundation.Point) -> None: ...
     @_property
     def center(self) -> windows_foundation.Point: ...
     @center.setter
+    @typing.final
     def center(self, value: windows_foundation.Point) -> None: ...
     @_property
+    @typing.final
     def gradient_stops(self) -> windows_foundation_collections.IObservableVector[GradientStop]: ...
 
 @typing.final
@@ -1260,14 +1309,18 @@ class ThemeShadow(Shadow, metaclass=ThemeShadow_Static):
     def _from(obj: winrt.system.Object, /) -> ThemeShadow: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
+    @typing.final
     def receivers(self) -> microsoft_ui_xaml.UIElementWeakCollection: ...
 
 class TileBrush_Static(Brush_Static):
     @_property
+    @typing.final
     def alignment_x_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def alignment_y_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
+    @typing.final
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TileBrush(Brush, metaclass=TileBrush_Static):
@@ -1276,14 +1329,17 @@ class TileBrush(Brush, metaclass=TileBrush_Static):
     @_property
     def stretch(self) -> Stretch: ...
     @stretch.setter
+    @typing.final
     def stretch(self, value: Stretch) -> None: ...
     @_property
     def alignment_y(self) -> AlignmentY: ...
     @alignment_y.setter
+    @typing.final
     def alignment_y(self, value: AlignmentY) -> None: ...
     @_property
     def alignment_x(self) -> AlignmentX: ...
     @alignment_x.setter
+    @typing.final
     def alignment_x(self, value: AlignmentX) -> None: ...
 
 class Transform_Static(GeneralTransform_Static):
@@ -1385,6 +1441,7 @@ class VisualTreeHelper(winrt.system.Object, metaclass=VisualTreeHelper_Static):
 
 class XamlCompositionBrushBase_Static(Brush_Static):
     @_property
+    @typing.final
     def fallback_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static):
@@ -1395,6 +1452,7 @@ class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static)
     @_property
     def fallback_color(self) -> windows_ui.Color: ...
     @fallback_color.setter
+    @typing.final
     def fallback_color(self, value: windows_ui.Color) -> None: ...
 
 class XamlLight_Static(microsoft_ui_xaml.DependencyObject_Static):
