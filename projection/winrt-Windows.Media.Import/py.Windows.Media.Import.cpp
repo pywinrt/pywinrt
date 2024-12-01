@@ -4915,7 +4915,7 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj.ItemsImported = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ItemsImported = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4948,7 +4948,7 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj.TotalItemsToImport = py::converter<uint32_t>::convert_to(arg);
+            self->obj.TotalItemsToImport = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4981,7 +4981,7 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj.BytesImported = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesImported = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5014,7 +5014,7 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj.TotalBytesToImport = py::converter<uint64_t>::convert_to(arg);
+            self->obj.TotalBytesToImport = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5047,7 +5047,7 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj.ImportProgress = py::converter<double>::convert_to(arg);
+            self->obj.ImportProgress = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5070,7 +5070,7 @@ namespace py::cpp::Windows::Media::Import
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Import::PhotoImportProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Import::PhotoImportProgress>(other);
 
             if (op == Py_EQ)
             {

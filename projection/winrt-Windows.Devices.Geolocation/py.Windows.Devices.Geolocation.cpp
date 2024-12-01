@@ -4213,7 +4213,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
-            self->obj.Latitude = py::converter<double>::convert_to(arg);
+            self->obj.Latitude = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -4246,7 +4246,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
-            self->obj.Longitude = py::converter<double>::convert_to(arg);
+            self->obj.Longitude = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -4279,7 +4279,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
-            self->obj.Altitude = py::converter<double>::convert_to(arg);
+            self->obj.Altitude = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -4300,7 +4300,7 @@ namespace py::cpp::Windows::Devices::Geolocation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Geolocation::BasicGeoposition>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(other);
 
             if (op == Py_EQ)
             {

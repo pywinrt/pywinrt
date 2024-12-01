@@ -37418,7 +37418,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.TopLeft = py::converter<double>::convert_to(arg);
+            self->obj.TopLeft = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -37451,7 +37451,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.TopRight = py::converter<double>::convert_to(arg);
+            self->obj.TopRight = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -37484,7 +37484,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.BottomRight = py::converter<double>::convert_to(arg);
+            self->obj.BottomRight = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -37517,7 +37517,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.BottomLeft = py::converter<double>::convert_to(arg);
+            self->obj.BottomLeft = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -37539,7 +37539,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::CornerRadius>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::CornerRadius>(other);
 
             if (op == Py_EQ)
             {
@@ -37654,7 +37654,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.TimeSpan = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_TimeSpan);
+            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
             self->obj.Type = static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type);
 
             return 0;
@@ -37712,7 +37712,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.TimeSpan = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -37745,7 +37745,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Type = py::converter<winrt::Microsoft::UI::Xaml::DurationType>::convert_to(arg);
+            self->obj.Type = py::convert_to<winrt::Microsoft::UI::Xaml::DurationType>(arg);
             return 0;
         }
         catch (...)
@@ -37765,7 +37765,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Duration>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(other);
 
             if (op == Py_EQ)
             {
@@ -37926,7 +37926,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Value = py::converter<double>::convert_to(arg);
+            self->obj.Value = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -37959,7 +37959,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.GridUnitType = py::converter<winrt::Microsoft::UI::Xaml::GridUnitType>::convert_to(arg);
+            self->obj.GridUnitType = py::convert_to<winrt::Microsoft::UI::Xaml::GridUnitType>(arg);
             return 0;
         }
         catch (...)
@@ -37979,7 +37979,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::GridLength>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(other);
 
             if (op == Py_EQ)
             {
@@ -38144,7 +38144,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Left = py::converter<double>::convert_to(arg);
+            self->obj.Left = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -38177,7 +38177,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Top = py::converter<double>::convert_to(arg);
+            self->obj.Top = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -38210,7 +38210,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Right = py::converter<double>::convert_to(arg);
+            self->obj.Right = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -38243,7 +38243,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj.Bottom = py::converter<double>::convert_to(arg);
+            self->obj.Bottom = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -38265,7 +38265,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Thickness>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(other);
 
             if (op == Py_EQ)
             {

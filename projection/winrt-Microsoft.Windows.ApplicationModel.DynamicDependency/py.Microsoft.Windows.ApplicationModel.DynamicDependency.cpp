@@ -1423,7 +1423,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
-            self->obj.Id = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Id = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -1442,7 +1442,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>(other);
 
             if (op == Py_EQ)
             {

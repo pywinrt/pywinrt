@@ -5940,7 +5940,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
-            self->obj.Roaming = py::converter<winrt::Windows::Networking::Connectivity::TriStates>::convert_to(arg);
+            self->obj.Roaming = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(arg);
             return 0;
         }
         catch (...)
@@ -5973,7 +5973,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
-            self->obj.Shared = py::converter<winrt::Windows::Networking::Connectivity::TriStates>::convert_to(arg);
+            self->obj.Shared = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(arg);
             return 0;
         }
         catch (...)
@@ -5993,7 +5993,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::Connectivity::NetworkUsageStates>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(other);
 
             if (op == Py_EQ)
             {

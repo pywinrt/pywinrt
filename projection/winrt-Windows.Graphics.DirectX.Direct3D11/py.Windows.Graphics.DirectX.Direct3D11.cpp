@@ -414,7 +414,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.Count = py::converter<int32_t>::convert_to(arg);
+            self->obj.Count = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -447,7 +447,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.Quality = py::converter<int32_t>::convert_to(arg);
+            self->obj.Quality = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -467,7 +467,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(other);
 
             if (op == Py_EQ)
             {
@@ -575,7 +575,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
             self->obj.Width = _Width;
             self->obj.Height = _Height;
             self->obj.Format = static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format);
-            self->obj.MultisampleDescription = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(_MultisampleDescription);
+            self->obj.MultisampleDescription = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(_MultisampleDescription);
 
             return 0;
         }
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.Width = py::converter<int32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.Height = py::converter<int32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -698,7 +698,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.Format = py::converter<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>::convert_to(arg);
+            self->obj.Format = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
             return 0;
         }
         catch (...)
@@ -731,7 +731,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj.MultisampleDescription = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(arg);
+            self->obj.MultisampleDescription = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(arg);
             return 0;
         }
         catch (...)
@@ -753,7 +753,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>(other);
 
             if (op == Py_EQ)
             {

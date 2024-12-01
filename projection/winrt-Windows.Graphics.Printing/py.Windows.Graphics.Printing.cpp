@@ -5060,8 +5060,8 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj.PageSize = py::converter<winrt::Windows::Foundation::Size>::convert_to(_PageSize);
-            self->obj.ImageableRect = py::converter<winrt::Windows::Foundation::Rect>::convert_to(_ImageableRect);
+            self->obj.PageSize = py::convert_to<winrt::Windows::Foundation::Size>(_PageSize);
+            self->obj.ImageableRect = py::convert_to<winrt::Windows::Foundation::Rect>(_ImageableRect);
             self->obj.DpiX = _DpiX;
             self->obj.DpiY = _DpiY;
 
@@ -5120,7 +5120,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj.PageSize = py::converter<winrt::Windows::Foundation::Size>::convert_to(arg);
+            self->obj.PageSize = py::convert_to<winrt::Windows::Foundation::Size>(arg);
             return 0;
         }
         catch (...)
@@ -5153,7 +5153,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj.ImageableRect = py::converter<winrt::Windows::Foundation::Rect>::convert_to(arg);
+            self->obj.ImageableRect = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
             return 0;
         }
         catch (...)
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj.DpiX = py::converter<uint32_t>::convert_to(arg);
+            self->obj.DpiX = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5219,7 +5219,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj.DpiY = py::converter<uint32_t>::convert_to(arg);
+            self->obj.DpiY = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5241,7 +5241,7 @@ namespace py::cpp::Windows::Graphics::Printing
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Printing::PrintPageDescription>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Printing::PrintPageDescription>(other);
 
             if (op == Py_EQ)
             {

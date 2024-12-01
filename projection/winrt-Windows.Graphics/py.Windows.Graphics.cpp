@@ -165,7 +165,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.LowPart = py::converter<uint32_t>::convert_to(arg);
+            self->obj.LowPart = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.HighPart = py::converter<int32_t>::convert_to(arg);
+            self->obj.HighPart = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::Graphics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::DisplayAdapterId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::DisplayAdapterId>(other);
 
             if (op == Py_EQ)
             {
@@ -377,7 +377,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::Graphics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::DisplayId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::DisplayId>(other);
 
             if (op == Py_EQ)
             {
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.X = py::converter<int32_t>::convert_to(arg);
+            self->obj.X = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Y = py::converter<int32_t>::convert_to(arg);
+            self->obj.Y = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -604,7 +604,7 @@ namespace py::cpp::Windows::Graphics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::PointInt32>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::PointInt32>(other);
 
             if (op == Py_EQ)
             {
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.X = py::converter<int32_t>::convert_to(arg);
+            self->obj.X = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -802,7 +802,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Y = py::converter<int32_t>::convert_to(arg);
+            self->obj.Y = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -835,7 +835,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Width = py::converter<int32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -868,7 +868,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Height = py::converter<int32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -890,7 +890,7 @@ namespace py::cpp::Windows::Graphics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::RectInt32>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::RectInt32>(other);
 
             if (op == Py_EQ)
             {
@@ -1063,7 +1063,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Width = py::converter<int32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1096,7 +1096,7 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj.Height = py::converter<int32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1116,7 +1116,7 @@ namespace py::cpp::Windows::Graphics
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::SizeInt32>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::SizeInt32>(other);
 
             if (op == Py_EQ)
             {

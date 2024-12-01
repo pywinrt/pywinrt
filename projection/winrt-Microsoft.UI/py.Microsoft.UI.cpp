@@ -4378,7 +4378,7 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -4397,7 +4397,7 @@ namespace py::cpp::Microsoft::UI
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::DisplayId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::DisplayId>(other);
 
             if (op == Py_EQ)
             {
@@ -4550,7 +4550,7 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -4569,7 +4569,7 @@ namespace py::cpp::Microsoft::UI
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::IconId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::IconId>(other);
 
             if (op == Py_EQ)
             {
@@ -4722,7 +4722,7 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj.Value = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Value = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -4741,7 +4741,7 @@ namespace py::cpp::Microsoft::UI
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::WindowId>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::WindowId>(other);
 
             if (op == Py_EQ)
             {

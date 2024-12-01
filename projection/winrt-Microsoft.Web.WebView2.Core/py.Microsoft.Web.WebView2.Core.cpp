@@ -18613,7 +18613,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.RepeatCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.RepeatCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18646,7 +18646,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.ScanCode = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ScanCode = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18679,7 +18679,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.IsExtendedKey = py::converter<int32_t>::convert_to(arg);
+            self->obj.IsExtendedKey = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18712,7 +18712,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.IsMenuKeyDown = py::converter<int32_t>::convert_to(arg);
+            self->obj.IsMenuKeyDown = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18745,7 +18745,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.WasKeyDown = py::converter<int32_t>::convert_to(arg);
+            self->obj.WasKeyDown = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18778,7 +18778,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj.IsKeyReleased = py::converter<int32_t>::convert_to(arg);
+            self->obj.IsKeyReleased = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -18802,7 +18802,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>(other);
 
             if (op == Py_EQ)
             {

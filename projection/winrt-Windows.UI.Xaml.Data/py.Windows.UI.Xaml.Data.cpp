@@ -5713,7 +5713,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            self->obj.Count = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Count = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -5732,7 +5732,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>(other);
 
             if (op == Py_EQ)
             {

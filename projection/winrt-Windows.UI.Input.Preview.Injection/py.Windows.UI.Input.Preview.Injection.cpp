@@ -2865,7 +2865,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PositionX = py::converter<int32_t>::convert_to(arg);
+            self->obj.PositionX = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2898,7 +2898,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PositionY = py::converter<int32_t>::convert_to(arg);
+            self->obj.PositionY = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2918,7 +2918,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(other);
 
             if (op == Py_EQ)
             {
@@ -3026,7 +3026,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             self->obj.PointerId = _PointerId;
             self->obj.PointerOptions = static_cast<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(_PointerOptions);
-            self->obj.PixelLocation = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(_PixelLocation);
+            self->obj.PixelLocation = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(_PixelLocation);
             self->obj.TimeOffsetInMilliseconds = _TimeOffsetInMilliseconds;
             self->obj.PerformanceCount = _PerformanceCount;
 
@@ -3085,7 +3085,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PointerId = py::converter<uint32_t>::convert_to(arg);
+            self->obj.PointerId = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3118,7 +3118,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PointerOptions = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>::convert_to(arg);
+            self->obj.PointerOptions = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(arg);
             return 0;
         }
         catch (...)
@@ -3151,7 +3151,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PixelLocation = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(arg);
+            self->obj.PixelLocation = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(arg);
             return 0;
         }
         catch (...)
@@ -3184,7 +3184,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.TimeOffsetInMilliseconds = py::converter<uint32_t>::convert_to(arg);
+            self->obj.TimeOffsetInMilliseconds = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3217,7 +3217,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.PerformanceCount = py::converter<uint64_t>::convert_to(arg);
+            self->obj.PerformanceCount = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -3240,7 +3240,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>(other);
 
             if (op == Py_EQ)
             {
@@ -3423,7 +3423,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.Left = py::converter<int32_t>::convert_to(arg);
+            self->obj.Left = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3456,7 +3456,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.Top = py::converter<int32_t>::convert_to(arg);
+            self->obj.Top = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3489,7 +3489,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.Bottom = py::converter<int32_t>::convert_to(arg);
+            self->obj.Bottom = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3522,7 +3522,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj.Right = py::converter<int32_t>::convert_to(arg);
+            self->obj.Right = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3544,7 +3544,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>(other);
 
             if (op == Py_EQ)
             {

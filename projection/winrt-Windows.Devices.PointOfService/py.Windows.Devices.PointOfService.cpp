@@ -31865,7 +31865,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            self->obj.Width = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Width = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -31898,7 +31898,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            self->obj.Height = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Height = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -31918,7 +31918,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::PointOfService::SizeUInt32>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::PointOfService::SizeUInt32>(other);
 
             if (op == Py_EQ)
             {

@@ -2556,7 +2556,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.Major = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Major = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -2589,7 +2589,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.Minor = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Minor = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -2622,7 +2622,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.Build = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Build = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -2655,7 +2655,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.Revision = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Revision = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -2677,7 +2677,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>(other);
 
             if (op == Py_EQ)
             {
@@ -2850,7 +2850,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.PercentCompleted = py::converter<double>::convert_to(arg);
+            self->obj.PercentCompleted = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj.CurrentComponentId = py::converter<uint32_t>::convert_to(arg);
+            self->obj.CurrentComponentId = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2903,7 +2903,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>(other);
 
             if (op == Py_EQ)
             {

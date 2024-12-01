@@ -1115,7 +1115,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj.band1Gain = py::converter<int32_t>::convert_to(arg);
+            self->obj.band1Gain = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1148,7 +1148,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj.band2Gain = py::converter<int32_t>::convert_to(arg);
+            self->obj.band2Gain = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1181,7 +1181,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj.band3Gain = py::converter<int32_t>::convert_to(arg);
+            self->obj.band3Gain = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1214,7 +1214,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj.band4Gain = py::converter<int32_t>::convert_to(arg);
+            self->obj.band4Gain = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1247,7 +1247,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj.band5Gain = py::converter<int32_t>::convert_to(arg);
+            self->obj.band5Gain = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1270,7 +1270,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>(other);
 
             if (op == Py_EQ)
             {

@@ -10840,7 +10840,7 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj.SegmentCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.SegmentCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10873,7 +10873,7 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj.CharacterCountLastSegment = py::converter<uint32_t>::convert_to(arg);
+            self->obj.CharacterCountLastSegment = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10906,7 +10906,7 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj.CharactersPerSegment = py::converter<uint32_t>::convert_to(arg);
+            self->obj.CharactersPerSegment = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10939,7 +10939,7 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj.ByteCountLastSegment = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ByteCountLastSegment = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10972,7 +10972,7 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj.BytesPerSegment = py::converter<uint32_t>::convert_to(arg);
+            self->obj.BytesPerSegment = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10995,7 +10995,7 @@ namespace py::cpp::Windows::Devices::Sms
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Sms::SmsEncodedLength>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Sms::SmsEncodedLength>(other);
 
             if (op == Py_EQ)
             {

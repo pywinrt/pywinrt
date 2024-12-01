@@ -19313,7 +19313,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj.TotalSizeInBytes = py::converter<int32_t>::convert_to(arg);
+            self->obj.TotalSizeInBytes = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -19346,7 +19346,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj.InstalledSizeInBytes = py::converter<int32_t>::convert_to(arg);
+            self->obj.InstalledSizeInBytes = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -19366,7 +19366,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>(other);
 
             if (op == Py_EQ)
             {
@@ -19470,7 +19470,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         try
         {
             self->obj.UsageInMegabytes = _UsageInMegabytes;
-            self->obj.LastSyncTime = py::converter<winrt::Windows::Foundation::DateTime>::convert_to(_LastSyncTime);
+            self->obj.LastSyncTime = py::convert_to<winrt::Windows::Foundation::DateTime>(_LastSyncTime);
 
             return 0;
         }
@@ -19527,7 +19527,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj.UsageInMegabytes = py::converter<uint32_t>::convert_to(arg);
+            self->obj.UsageInMegabytes = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -19560,7 +19560,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj.LastSyncTime = py::converter<winrt::Windows::Foundation::DateTime>::convert_to(arg);
+            self->obj.LastSyncTime = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
             return 0;
         }
         catch (...)
@@ -19580,7 +19580,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::NetworkOperators::ProfileUsage>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::NetworkOperators::ProfileUsage>(other);
 
             if (op == Py_EQ)
             {

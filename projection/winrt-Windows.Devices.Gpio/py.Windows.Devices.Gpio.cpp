@@ -2011,7 +2011,7 @@ namespace py::cpp::Windows::Devices::Gpio
         try
         {
             self->obj.Count = _Count;
-            self->obj.RelativeTime = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_RelativeTime);
+            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
 
             return 0;
         }
@@ -2068,7 +2068,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
         try
         {
-            self->obj.Count = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Count = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -2101,7 +2101,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
         try
         {
-            self->obj.RelativeTime = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -2121,7 +2121,7 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Gpio::GpioChangeCount>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Gpio::GpioChangeCount>(other);
 
             if (op == Py_EQ)
             {
@@ -2224,7 +2224,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
         try
         {
-            self->obj.RelativeTime = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_RelativeTime);
+            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
             self->obj.Edge = static_cast<winrt::Windows::Devices::Gpio::GpioPinEdge>(_Edge);
 
             return 0;
@@ -2282,7 +2282,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
         try
         {
-            self->obj.RelativeTime = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -2315,7 +2315,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
         try
         {
-            self->obj.Edge = py::converter<winrt::Windows::Devices::Gpio::GpioPinEdge>::convert_to(arg);
+            self->obj.Edge = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinEdge>(arg);
             return 0;
         }
         catch (...)
@@ -2335,7 +2335,7 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Gpio::GpioChangeRecord>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Gpio::GpioChangeRecord>(other);
 
             if (op == Py_EQ)
             {

@@ -939,7 +939,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.RedPrimaryX = py::converter<uint16_t>::convert_to(arg);
+            self->obj.RedPrimaryX = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.RedPrimaryY = py::converter<uint16_t>::convert_to(arg);
+            self->obj.RedPrimaryY = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1005,7 +1005,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.GreenPrimaryX = py::converter<uint16_t>::convert_to(arg);
+            self->obj.GreenPrimaryX = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.GreenPrimaryY = py::converter<uint16_t>::convert_to(arg);
+            self->obj.GreenPrimaryY = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1071,7 +1071,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.BluePrimaryX = py::converter<uint16_t>::convert_to(arg);
+            self->obj.BluePrimaryX = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1104,7 +1104,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.BluePrimaryY = py::converter<uint16_t>::convert_to(arg);
+            self->obj.BluePrimaryY = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1137,7 +1137,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.WhitePointX = py::converter<uint16_t>::convert_to(arg);
+            self->obj.WhitePointX = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1170,7 +1170,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.WhitePointY = py::converter<uint16_t>::convert_to(arg);
+            self->obj.WhitePointY = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1203,7 +1203,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.MaxMasteringLuminance = py::converter<uint16_t>::convert_to(arg);
+            self->obj.MaxMasteringLuminance = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.MinMasteringLuminance = py::converter<uint16_t>::convert_to(arg);
+            self->obj.MinMasteringLuminance = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1269,7 +1269,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.MaxContentLightLevel = py::converter<uint16_t>::convert_to(arg);
+            self->obj.MaxContentLightLevel = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1302,7 +1302,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj.MaxFrameAverageLightLevel = py::converter<uint16_t>::convert_to(arg);
+            self->obj.MaxFrameAverageLightLevel = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -1332,7 +1332,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>(other);
 
             if (op == Py_EQ)
             {

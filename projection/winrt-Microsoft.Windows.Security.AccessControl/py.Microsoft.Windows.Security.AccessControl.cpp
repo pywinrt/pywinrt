@@ -179,7 +179,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
         try
         {
-            self->obj.appContainerName = py::converter<winrt::hstring>::convert_to(_appContainerName);
+            self->obj.appContainerName = py::convert_to<winrt::hstring>(_appContainerName);
             self->obj.accessMask = _accessMask;
 
             return 0;
@@ -237,7 +237,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
         try
         {
-            self->obj.appContainerName = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.appContainerName = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -270,7 +270,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
         try
         {
-            self->obj.accessMask = py::converter<uint32_t>::convert_to(arg);
+            self->obj.accessMask = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -290,7 +290,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>(other);
 
             if (op == Py_EQ)
             {

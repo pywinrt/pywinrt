@@ -12278,7 +12278,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.OutboundBitsPerSecond = py::converter<uint64_t>::convert_to(arg);
+            self->obj.OutboundBitsPerSecond = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -12311,7 +12311,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.InboundBitsPerSecond = py::converter<uint64_t>::convert_to(arg);
+            self->obj.InboundBitsPerSecond = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -12344,7 +12344,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.OutboundBitsPerSecondInstability = py::converter<uint64_t>::convert_to(arg);
+            self->obj.OutboundBitsPerSecondInstability = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -12377,7 +12377,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.InboundBitsPerSecondInstability = py::converter<uint64_t>::convert_to(arg);
+            self->obj.InboundBitsPerSecondInstability = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -12410,7 +12410,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.OutboundBandwidthPeaked = py::converter<bool>::convert_to(arg);
+            self->obj.OutboundBandwidthPeaked = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -12443,7 +12443,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.InboundBandwidthPeaked = py::converter<bool>::convert_to(arg);
+            self->obj.InboundBandwidthPeaked = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -12467,7 +12467,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::Sockets::BandwidthStatistics>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::Sockets::BandwidthStatistics>(other);
 
             if (op == Py_EQ)
             {
@@ -12656,7 +12656,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.Variance = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Variance = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -12689,7 +12689,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.Max = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Max = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -12722,7 +12722,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.Min = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Min = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -12755,7 +12755,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj.Sum = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Sum = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -12777,7 +12777,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>(other);
 
             if (op == Py_EQ)
             {

@@ -8951,8 +8951,8 @@ namespace py::cpp::Windows::Media
 
         try
         {
-            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start);
-            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End);
+            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
+            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
 
             return 0;
         }
@@ -9009,7 +9009,7 @@ namespace py::cpp::Windows::Media
 
         try
         {
-            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -9042,7 +9042,7 @@ namespace py::cpp::Windows::Media
 
         try
         {
-            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -9062,7 +9062,7 @@ namespace py::cpp::Windows::Media
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::MediaTimeRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::MediaTimeRange>(other);
 
             if (op == Py_EQ)
             {

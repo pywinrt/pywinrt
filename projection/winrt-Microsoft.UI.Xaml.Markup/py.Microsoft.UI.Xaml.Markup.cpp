@@ -3927,7 +3927,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.InputStreamIndex = py::converter<uint32_t>::convert_to(arg);
+            self->obj.InputStreamIndex = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3960,7 +3960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.LineNumber = py::converter<uint32_t>::convert_to(arg);
+            self->obj.LineNumber = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3993,7 +3993,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.LinePosition = py::converter<uint32_t>::convert_to(arg);
+            self->obj.LinePosition = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4014,7 +4014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>(other);
 
             if (op == Py_EQ)
             {
@@ -4123,8 +4123,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.XmlNamespace = py::converter<winrt::hstring>::convert_to(_XmlNamespace);
-            self->obj.Namespace = py::converter<winrt::hstring>::convert_to(_Namespace);
+            self->obj.XmlNamespace = py::convert_to<winrt::hstring>(_XmlNamespace);
+            self->obj.Namespace = py::convert_to<winrt::hstring>(_Namespace);
 
             return 0;
         }
@@ -4181,7 +4181,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.XmlNamespace = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.XmlNamespace = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -4214,7 +4214,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj.Namespace = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.Namespace = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -4234,7 +4234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>(other);
 
             if (op == Py_EQ)
             {

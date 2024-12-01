@@ -9172,7 +9172,7 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj.PercentComplete = py::converter<uint32_t>::convert_to(arg);
+            self->obj.PercentComplete = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -9191,7 +9191,7 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::ApplicationModel::PackageInstallProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::ApplicationModel::PackageInstallProgress>(other);
 
             if (op == Py_EQ)
             {
@@ -9350,7 +9350,7 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj.Major = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Major = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -9383,7 +9383,7 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj.Minor = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Minor = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -9416,7 +9416,7 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj.Build = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Build = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -9449,7 +9449,7 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj.Revision = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Revision = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -9471,7 +9471,7 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::ApplicationModel::PackageVersion>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(other);
 
             if (op == Py_EQ)
             {

@@ -35224,7 +35224,7 @@ namespace py::cpp::Windows::UI::Composition
 
         try
         {
-            self->obj.Point = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Point);
+            self->obj.Point = py::convert_to<winrt::Windows::Foundation::Point>(_Point);
             self->obj.Radius = _Radius;
 
             return 0;
@@ -35282,7 +35282,7 @@ namespace py::cpp::Windows::UI::Composition
 
         try
         {
-            self->obj.Point = py::converter<winrt::Windows::Foundation::Point>::convert_to(arg);
+            self->obj.Point = py::convert_to<winrt::Windows::Foundation::Point>(arg);
             return 0;
         }
         catch (...)
@@ -35315,7 +35315,7 @@ namespace py::cpp::Windows::UI::Composition
 
         try
         {
-            self->obj.Radius = py::converter<float>::convert_to(arg);
+            self->obj.Radius = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -35335,7 +35335,7 @@ namespace py::cpp::Windows::UI::Composition
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Composition::InkTrailPoint>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Composition::InkTrailPoint>(other);
 
             if (op == Py_EQ)
             {

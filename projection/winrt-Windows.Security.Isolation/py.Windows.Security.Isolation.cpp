@@ -4620,7 +4620,7 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
-            self->obj.State = py::converter<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>::convert_to(arg);
+            self->obj.State = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(arg);
             return 0;
         }
         catch (...)
@@ -4653,7 +4653,7 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
-            self->obj.PercentComplete = py::converter<uint32_t>::convert_to(arg);
+            self->obj.PercentComplete = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -4673,7 +4673,7 @@ namespace py::cpp::Windows::Security::Isolation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>(other);
 
             if (op == Py_EQ)
             {

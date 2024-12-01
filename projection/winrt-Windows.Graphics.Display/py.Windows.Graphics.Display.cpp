@@ -4040,7 +4040,7 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
-            self->obj.MinNits = py::converter<float>::convert_to(arg);
+            self->obj.MinNits = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4073,7 +4073,7 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
-            self->obj.MaxNits = py::converter<float>::convert_to(arg);
+            self->obj.MaxNits = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4106,7 +4106,7 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
-            self->obj.StepSizeNits = py::converter<float>::convert_to(arg);
+            self->obj.StepSizeNits = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4127,7 +4127,7 @@ namespace py::cpp::Windows::Graphics::Display
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Display::NitRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Display::NitRange>(other);
 
             if (op == Py_EQ)
             {

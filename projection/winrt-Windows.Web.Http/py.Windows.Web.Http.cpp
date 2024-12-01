@@ -8777,9 +8777,9 @@ namespace py::cpp::Windows::Web::Http
         {
             self->obj.Stage = static_cast<winrt::Windows::Web::Http::HttpProgressStage>(_Stage);
             self->obj.BytesSent = _BytesSent;
-            self->obj.TotalBytesToSend = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(_TotalBytesToSend);
+            self->obj.TotalBytesToSend = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(_TotalBytesToSend);
             self->obj.BytesReceived = _BytesReceived;
-            self->obj.TotalBytesToReceive = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(_TotalBytesToReceive);
+            self->obj.TotalBytesToReceive = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(_TotalBytesToReceive);
             self->obj.Retries = _Retries;
 
             return 0;
@@ -8837,7 +8837,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.Stage = py::converter<winrt::Windows::Web::Http::HttpProgressStage>::convert_to(arg);
+            self->obj.Stage = py::convert_to<winrt::Windows::Web::Http::HttpProgressStage>(arg);
             return 0;
         }
         catch (...)
@@ -8870,7 +8870,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.BytesSent = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesSent = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -8903,7 +8903,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.TotalBytesToSend = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(arg);
+            self->obj.TotalBytesToSend = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
             return 0;
         }
         catch (...)
@@ -8936,7 +8936,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.BytesReceived = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -8969,7 +8969,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.TotalBytesToReceive = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(arg);
+            self->obj.TotalBytesToReceive = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
             return 0;
         }
         catch (...)
@@ -9002,7 +9002,7 @@ namespace py::cpp::Windows::Web::Http
 
         try
         {
-            self->obj.Retries = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Retries = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -9026,7 +9026,7 @@ namespace py::cpp::Windows::Web::Http
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Web::Http::HttpProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Web::Http::HttpProgress>(other);
 
             if (op == Py_EQ)
             {

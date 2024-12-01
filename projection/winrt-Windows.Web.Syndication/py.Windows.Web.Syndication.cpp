@@ -10267,7 +10267,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.BytesRetrieved = py::converter<uint32_t>::convert_to(arg);
+            self->obj.BytesRetrieved = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10300,7 +10300,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.TotalBytesToRetrieve = py::converter<uint32_t>::convert_to(arg);
+            self->obj.TotalBytesToRetrieve = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10320,7 +10320,7 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Web::Syndication::RetrievalProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Web::Syndication::RetrievalProgress>(other);
 
             if (op == Py_EQ)
             {
@@ -10485,7 +10485,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.BytesSent = py::converter<uint32_t>::convert_to(arg);
+            self->obj.BytesSent = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10518,7 +10518,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.TotalBytesToSend = py::converter<uint32_t>::convert_to(arg);
+            self->obj.TotalBytesToSend = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10551,7 +10551,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.BytesRetrieved = py::converter<uint32_t>::convert_to(arg);
+            self->obj.BytesRetrieved = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10584,7 +10584,7 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj.TotalBytesToRetrieve = py::converter<uint32_t>::convert_to(arg);
+            self->obj.TotalBytesToRetrieve = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -10606,7 +10606,7 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Web::Syndication::TransferProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Web::Syndication::TransferProgress>(other);
 
             if (op == Py_EQ)
             {

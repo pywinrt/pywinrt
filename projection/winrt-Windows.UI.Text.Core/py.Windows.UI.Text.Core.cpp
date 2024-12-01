@@ -3904,7 +3904,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
-            self->obj.StartCaretPosition = py::converter<int32_t>::convert_to(arg);
+            self->obj.StartCaretPosition = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3937,7 +3937,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
-            self->obj.EndCaretPosition = py::converter<int32_t>::convert_to(arg);
+            self->obj.EndCaretPosition = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -3957,7 +3957,7 @@ namespace py::cpp::Windows::UI::Text::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Text::Core::CoreTextRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(other);
 
             if (op == Py_EQ)
             {

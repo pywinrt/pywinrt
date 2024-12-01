@@ -14010,7 +14010,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.RepeatCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.RepeatCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -14043,7 +14043,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.ScanCode = py::converter<uint32_t>::convert_to(arg);
+            self->obj.ScanCode = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -14076,7 +14076,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.IsExtendedKey = py::converter<bool>::convert_to(arg);
+            self->obj.IsExtendedKey = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -14109,7 +14109,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.IsMenuKeyDown = py::converter<bool>::convert_to(arg);
+            self->obj.IsMenuKeyDown = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -14142,7 +14142,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.WasKeyDown = py::converter<bool>::convert_to(arg);
+            self->obj.WasKeyDown = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -14175,7 +14175,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.IsKeyReleased = py::converter<bool>::convert_to(arg);
+            self->obj.IsKeyReleased = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -14199,7 +14199,7 @@ namespace py::cpp::Windows::UI::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Core::CorePhysicalKeyStatus>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Core::CorePhysicalKeyStatus>(other);
 
             if (op == Py_EQ)
             {
@@ -14327,7 +14327,7 @@ namespace py::cpp::Windows::UI::Core
         try
         {
             self->obj.Score = _Score;
-            self->obj.AdjustedPoint = py::converter<winrt::Windows::Foundation::Point>::convert_to(_AdjustedPoint);
+            self->obj.AdjustedPoint = py::convert_to<winrt::Windows::Foundation::Point>(_AdjustedPoint);
 
             return 0;
         }
@@ -14384,7 +14384,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.Score = py::converter<int32_t>::convert_to(arg);
+            self->obj.Score = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -14417,7 +14417,7 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj.AdjustedPoint = py::converter<winrt::Windows::Foundation::Point>::convert_to(arg);
+            self->obj.AdjustedPoint = py::convert_to<winrt::Windows::Foundation::Point>(arg);
             return 0;
         }
         catch (...)
@@ -14437,7 +14437,7 @@ namespace py::cpp::Windows::UI::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Core::CoreProximityEvaluation>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Core::CoreProximityEvaluation>(other);
 
             if (op == Py_EQ)
             {

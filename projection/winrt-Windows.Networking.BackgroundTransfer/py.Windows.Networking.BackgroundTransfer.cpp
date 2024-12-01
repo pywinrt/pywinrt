@@ -6478,7 +6478,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.BytesReceived = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6511,7 +6511,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.TotalBytesToReceive = py::converter<uint64_t>::convert_to(arg);
+            self->obj.TotalBytesToReceive = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6544,7 +6544,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.Status = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>::convert_to(arg);
+            self->obj.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(arg);
             return 0;
         }
         catch (...)
@@ -6577,7 +6577,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.HasResponseChanged = py::converter<bool>::convert_to(arg);
+            self->obj.HasResponseChanged = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -6610,7 +6610,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.HasRestarted = py::converter<bool>::convert_to(arg);
+            self->obj.HasRestarted = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -6633,7 +6633,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>(other);
 
             if (op == Py_EQ)
             {
@@ -6812,7 +6812,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.Offset = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Offset = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6845,7 +6845,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.Length = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Length = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6865,7 +6865,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>(other);
 
             if (op == Py_EQ)
             {
@@ -7036,7 +7036,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.BytesReceived = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -7069,7 +7069,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.BytesSent = py::converter<uint64_t>::convert_to(arg);
+            self->obj.BytesSent = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.TotalBytesToReceive = py::converter<uint64_t>::convert_to(arg);
+            self->obj.TotalBytesToReceive = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -7135,7 +7135,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.TotalBytesToSend = py::converter<uint64_t>::convert_to(arg);
+            self->obj.TotalBytesToSend = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -7168,7 +7168,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.Status = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>::convert_to(arg);
+            self->obj.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(arg);
             return 0;
         }
         catch (...)
@@ -7201,7 +7201,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.HasResponseChanged = py::converter<bool>::convert_to(arg);
+            self->obj.HasResponseChanged = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -7234,7 +7234,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj.HasRestarted = py::converter<bool>::convert_to(arg);
+            self->obj.HasRestarted = py::convert_to<bool>(arg);
             return 0;
         }
         catch (...)
@@ -7259,7 +7259,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>(other);
 
             if (op == Py_EQ)
             {

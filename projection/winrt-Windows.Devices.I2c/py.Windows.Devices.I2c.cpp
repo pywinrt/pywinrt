@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::Devices::I2c
 
         try
         {
-            self->obj.Status = py::converter<winrt::Windows::Devices::I2c::I2cTransferStatus>::convert_to(arg);
+            self->obj.Status = py::convert_to<winrt::Windows::Devices::I2c::I2cTransferStatus>(arg);
             return 0;
         }
         catch (...)
@@ -1355,7 +1355,7 @@ namespace py::cpp::Windows::Devices::I2c
 
         try
         {
-            self->obj.BytesTransferred = py::converter<uint32_t>::convert_to(arg);
+            self->obj.BytesTransferred = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Devices::I2c
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::I2c::I2cTransferResult>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::I2c::I2cTransferResult>(other);
 
             if (op == Py_EQ)
             {

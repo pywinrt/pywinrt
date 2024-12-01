@@ -23091,7 +23091,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.M11 = py::converter<double>::convert_to(arg);
+            self->obj.M11 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23124,7 +23124,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.M12 = py::converter<double>::convert_to(arg);
+            self->obj.M12 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23157,7 +23157,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.M21 = py::converter<double>::convert_to(arg);
+            self->obj.M21 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23190,7 +23190,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.M22 = py::converter<double>::convert_to(arg);
+            self->obj.M22 = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23223,7 +23223,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.OffsetX = py::converter<double>::convert_to(arg);
+            self->obj.OffsetX = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23256,7 +23256,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj.OffsetY = py::converter<double>::convert_to(arg);
+            self->obj.OffsetY = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23280,7 +23280,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Media::Matrix>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Matrix>(other);
 
             if (op == Py_EQ)
             {

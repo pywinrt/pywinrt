@@ -13239,7 +13239,7 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            self->obj.Weight = py::converter<uint16_t>::convert_to(arg);
+            self->obj.Weight = py::convert_to<uint16_t>(arg);
             return 0;
         }
         catch (...)
@@ -13258,7 +13258,7 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Text::FontWeight>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Text::FontWeight>(other);
 
             if (op == Py_EQ)
             {

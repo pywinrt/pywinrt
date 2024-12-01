@@ -7365,7 +7365,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
-            self->obj.VerticalSyncRate = py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(_VerticalSyncRate);
+            self->obj.VerticalSyncRate = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(_VerticalSyncRate);
             self->obj.VerticalSyncsPerPresentation = _VerticalSyncsPerPresentation;
 
             return 0;
@@ -7423,7 +7423,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
-            self->obj.VerticalSyncRate = py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(arg);
+            self->obj.VerticalSyncRate = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(arg);
             return 0;
         }
         catch (...)
@@ -7456,7 +7456,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
-            self->obj.VerticalSyncsPerPresentation = py::converter<int32_t>::convert_to(arg);
+            self->obj.VerticalSyncsPerPresentation = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7476,7 +7476,7 @@ namespace py::cpp::Windows::Devices::Display::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>(other);
 
             if (op == Py_EQ)
             {

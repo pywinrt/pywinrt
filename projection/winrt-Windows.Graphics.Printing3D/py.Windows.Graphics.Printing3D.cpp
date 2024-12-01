@@ -6961,7 +6961,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
-            self->obj.Format = py::converter<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>::convert_to(arg);
+            self->obj.Format = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(arg);
             return 0;
         }
         catch (...)
@@ -6994,7 +6994,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
-            self->obj.Stride = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Stride = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -7014,7 +7014,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(other);
 
             if (op == Py_EQ)
             {

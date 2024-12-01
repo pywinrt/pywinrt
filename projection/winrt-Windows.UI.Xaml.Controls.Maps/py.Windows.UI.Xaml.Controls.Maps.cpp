@@ -23005,7 +23005,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            self->obj.Min = py::converter<double>::convert_to(arg);
+            self->obj.Min = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23038,7 +23038,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            self->obj.Max = py::converter<double>::convert_to(arg);
+            self->obj.Max = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23058,7 +23058,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(other);
 
             if (op == Py_EQ)
             {

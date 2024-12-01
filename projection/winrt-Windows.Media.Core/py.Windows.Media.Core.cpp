@@ -23591,8 +23591,8 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start);
-            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End);
+            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
+            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
 
             return 0;
         }
@@ -23649,7 +23649,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -23682,7 +23682,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -23702,7 +23702,7 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Core::MseTimeRange>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Core::MseTimeRange>(other);
 
             if (op == Py_EQ)
             {
@@ -23863,7 +23863,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Value = py::converter<double>::convert_to(arg);
+            self->obj.Value = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -23896,7 +23896,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Unit = py::converter<winrt::Windows::Media::Core::TimedTextUnit>::convert_to(arg);
+            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
             return 0;
         }
         catch (...)
@@ -23916,7 +23916,7 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextDouble>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Core::TimedTextDouble>(other);
 
             if (op == Py_EQ)
             {
@@ -24083,7 +24083,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Before = py::converter<double>::convert_to(arg);
+            self->obj.Before = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24116,7 +24116,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.After = py::converter<double>::convert_to(arg);
+            self->obj.After = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24149,7 +24149,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Start = py::converter<double>::convert_to(arg);
+            self->obj.Start = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24182,7 +24182,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.End = py::converter<double>::convert_to(arg);
+            self->obj.End = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24215,7 +24215,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Unit = py::converter<winrt::Windows::Media::Core::TimedTextUnit>::convert_to(arg);
+            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
             return 0;
         }
         catch (...)
@@ -24238,7 +24238,7 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextPadding>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Core::TimedTextPadding>(other);
 
             if (op == Py_EQ)
             {
@@ -24419,7 +24419,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.X = py::converter<double>::convert_to(arg);
+            self->obj.X = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24452,7 +24452,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Y = py::converter<double>::convert_to(arg);
+            self->obj.Y = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24485,7 +24485,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Unit = py::converter<winrt::Windows::Media::Core::TimedTextUnit>::convert_to(arg);
+            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
             return 0;
         }
         catch (...)
@@ -24506,7 +24506,7 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextPoint>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Core::TimedTextPoint>(other);
 
             if (op == Py_EQ)
             {
@@ -24675,7 +24675,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Height = py::converter<double>::convert_to(arg);
+            self->obj.Height = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24708,7 +24708,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Width = py::converter<double>::convert_to(arg);
+            self->obj.Width = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -24741,7 +24741,7 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj.Unit = py::converter<winrt::Windows::Media::Core::TimedTextUnit>::convert_to(arg);
+            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
             return 0;
         }
         catch (...)
@@ -24762,7 +24762,7 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextSize>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Media::Core::TimedTextSize>(other);
 
             if (op == Py_EQ)
             {

@@ -226,7 +226,7 @@ static class StructWriterExtensions
             () =>
             {
                 w.WriteLine(
-                    $"self->obj.{field.ToWinrtFieldName()} = py::converter<{field.FieldType.ToCppTypeName()}>::convert_to(arg);"
+                    $"self->obj.{field.ToWinrtFieldName()} = py::convert_to<{field.FieldType.ToCppTypeName()}>(arg);"
                 );
                 w.WriteLine("return 0;");
             },
@@ -247,7 +247,7 @@ static class StructWriterExtensions
         w.Indent++;
         w.WriteTryCatch(() =>
         {
-            w.WriteLine($"auto _other = py::converter<{type.CppWinrtType}>::convert_to(other);");
+            w.WriteLine($"auto _other = py::convert_to<{type.CppWinrtType}>(other);");
             w.WriteBlankLine();
             w.WriteLine("if (op == Py_EQ)");
             w.WriteLine("{");

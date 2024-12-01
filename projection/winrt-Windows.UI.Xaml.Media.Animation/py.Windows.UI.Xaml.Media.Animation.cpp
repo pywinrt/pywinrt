@@ -25702,7 +25702,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
-            self->obj.TimeSpan = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_TimeSpan);
+            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
 
             return 0;
         }
@@ -25759,7 +25759,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
-            self->obj.TimeSpan = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -25778,7 +25778,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>(other);
 
             if (op == Py_EQ)
             {
@@ -25877,7 +25877,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         try
         {
             self->obj.Count = _Count;
-            self->obj.Duration = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Duration);
+            self->obj.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Duration);
             self->obj.Type = static_cast<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(_Type);
 
             return 0;
@@ -25935,7 +25935,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
-            self->obj.Count = py::converter<double>::convert_to(arg);
+            self->obj.Count = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -25968,7 +25968,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
-            self->obj.Duration = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(arg);
+            self->obj.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
             return 0;
         }
         catch (...)
@@ -26001,7 +26001,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
-            self->obj.Type = py::converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>::convert_to(arg);
+            self->obj.Type = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(arg);
             return 0;
         }
         catch (...)
@@ -26022,7 +26022,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(other);
 
             if (op == Py_EQ)
             {

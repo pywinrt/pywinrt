@@ -5135,7 +5135,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Timestamp = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5168,7 +5168,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Buttons = py::converter<winrt::Windows::Gaming::Input::ArcadeStickButtons>::convert_to(arg);
+            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickButtons>(arg);
             return 0;
         }
         catch (...)
@@ -5188,7 +5188,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::ArcadeStickReading>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickReading>(other);
 
             if (op == Py_EQ)
             {
@@ -5359,7 +5359,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Timestamp = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5392,7 +5392,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Buttons = py::converter<winrt::Windows::Gaming::Input::FlightStickButtons>::convert_to(arg);
+            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::FlightStickButtons>(arg);
             return 0;
         }
         catch (...)
@@ -5425,7 +5425,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.HatSwitch = py::converter<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>::convert_to(arg);
+            self->obj.HatSwitch = py::convert_to<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(arg);
             return 0;
         }
         catch (...)
@@ -5458,7 +5458,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Roll = py::converter<double>::convert_to(arg);
+            self->obj.Roll = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5491,7 +5491,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Pitch = py::converter<double>::convert_to(arg);
+            self->obj.Pitch = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5524,7 +5524,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Yaw = py::converter<double>::convert_to(arg);
+            self->obj.Yaw = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5557,7 +5557,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Throttle = py::converter<double>::convert_to(arg);
+            self->obj.Throttle = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5582,7 +5582,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::FlightStickReading>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::FlightStickReading>(other);
 
             if (op == Py_EQ)
             {
@@ -5785,7 +5785,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Timestamp = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -5818,7 +5818,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Buttons = py::converter<winrt::Windows::Gaming::Input::GamepadButtons>::convert_to(arg);
+            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(arg);
             return 0;
         }
         catch (...)
@@ -5851,7 +5851,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.LeftTrigger = py::converter<double>::convert_to(arg);
+            self->obj.LeftTrigger = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5884,7 +5884,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RightTrigger = py::converter<double>::convert_to(arg);
+            self->obj.RightTrigger = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5917,7 +5917,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.LeftThumbstickX = py::converter<double>::convert_to(arg);
+            self->obj.LeftThumbstickX = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5950,7 +5950,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.LeftThumbstickY = py::converter<double>::convert_to(arg);
+            self->obj.LeftThumbstickY = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -5983,7 +5983,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RightThumbstickX = py::converter<double>::convert_to(arg);
+            self->obj.RightThumbstickX = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6016,7 +6016,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RightThumbstickY = py::converter<double>::convert_to(arg);
+            self->obj.RightThumbstickY = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6042,7 +6042,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::GamepadReading>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::GamepadReading>(other);
 
             if (op == Py_EQ)
             {
@@ -6243,7 +6243,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.LeftMotor = py::converter<double>::convert_to(arg);
+            self->obj.LeftMotor = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6276,7 +6276,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RightMotor = py::converter<double>::convert_to(arg);
+            self->obj.RightMotor = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6309,7 +6309,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.LeftTrigger = py::converter<double>::convert_to(arg);
+            self->obj.LeftTrigger = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6342,7 +6342,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RightTrigger = py::converter<double>::convert_to(arg);
+            self->obj.RightTrigger = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6364,7 +6364,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::GamepadVibration>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::GamepadVibration>(other);
 
             if (op == Py_EQ)
             {
@@ -6549,7 +6549,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Timestamp = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -6582,7 +6582,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Buttons = py::converter<winrt::Windows::Gaming::Input::RacingWheelButtons>::convert_to(arg);
+            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelButtons>(arg);
             return 0;
         }
         catch (...)
@@ -6615,7 +6615,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.PatternShifterGear = py::converter<int32_t>::convert_to(arg);
+            self->obj.PatternShifterGear = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -6648,7 +6648,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Wheel = py::converter<double>::convert_to(arg);
+            self->obj.Wheel = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6681,7 +6681,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Throttle = py::converter<double>::convert_to(arg);
+            self->obj.Throttle = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6714,7 +6714,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Brake = py::converter<double>::convert_to(arg);
+            self->obj.Brake = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6747,7 +6747,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Clutch = py::converter<double>::convert_to(arg);
+            self->obj.Clutch = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6780,7 +6780,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Handbrake = py::converter<double>::convert_to(arg);
+            self->obj.Handbrake = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -6806,7 +6806,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::RacingWheelReading>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelReading>(other);
 
             if (op == Py_EQ)
             {
@@ -7005,7 +7005,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.Timestamp = py::converter<uint64_t>::convert_to(arg);
+            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -7038,7 +7038,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.RequiredButtons = py::converter<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>::convert_to(arg);
+            self->obj.RequiredButtons = py::convert_to<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(arg);
             return 0;
         }
         catch (...)
@@ -7071,7 +7071,7 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj.OptionalButtons = py::converter<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>::convert_to(arg);
+            self->obj.OptionalButtons = py::convert_to<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(arg);
             return 0;
         }
         catch (...)
@@ -7092,7 +7092,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Gaming::Input::UINavigationReading>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Gaming::Input::UINavigationReading>(other);
 
             if (op == Py_EQ)
             {

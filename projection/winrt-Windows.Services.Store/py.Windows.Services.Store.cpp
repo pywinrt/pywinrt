@@ -8211,7 +8211,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageFamilyName = py::converter<winrt::hstring>::convert_to(_PackageFamilyName);
+            self->obj.PackageFamilyName = py::convert_to<winrt::hstring>(_PackageFamilyName);
             self->obj.PackageDownloadSizeInBytes = _PackageDownloadSizeInBytes;
             self->obj.PackageBytesDownloaded = _PackageBytesDownloaded;
             self->obj.PackageDownloadProgress = _PackageDownloadProgress;
@@ -8273,7 +8273,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageFamilyName = py::converter<winrt::hstring>::convert_to(arg);
+            self->obj.PackageFamilyName = py::convert_to<winrt::hstring>(arg);
             return 0;
         }
         catch (...)
@@ -8306,7 +8306,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageDownloadSizeInBytes = py::converter<uint64_t>::convert_to(arg);
+            self->obj.PackageDownloadSizeInBytes = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -8339,7 +8339,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageBytesDownloaded = py::converter<uint64_t>::convert_to(arg);
+            self->obj.PackageBytesDownloaded = py::convert_to<uint64_t>(arg);
             return 0;
         }
         catch (...)
@@ -8372,7 +8372,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageDownloadProgress = py::converter<double>::convert_to(arg);
+            self->obj.PackageDownloadProgress = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -8405,7 +8405,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.TotalDownloadProgress = py::converter<double>::convert_to(arg);
+            self->obj.TotalDownloadProgress = py::convert_to<double>(arg);
             return 0;
         }
         catch (...)
@@ -8438,7 +8438,7 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
-            self->obj.PackageUpdateState = py::converter<winrt::Windows::Services::Store::StorePackageUpdateState>::convert_to(arg);
+            self->obj.PackageUpdateState = py::convert_to<winrt::Windows::Services::Store::StorePackageUpdateState>(arg);
             return 0;
         }
         catch (...)
@@ -8462,7 +8462,7 @@ namespace py::cpp::Windows::Services::Store
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Services::Store::StorePackageUpdateStatus>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Services::Store::StorePackageUpdateStatus>(other);
 
             if (op == Py_EQ)
             {

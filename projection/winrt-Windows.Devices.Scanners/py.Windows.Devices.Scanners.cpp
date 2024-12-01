@@ -4827,7 +4827,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            self->obj.DpiX = py::converter<float>::convert_to(arg);
+            self->obj.DpiX = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4860,7 +4860,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            self->obj.DpiY = py::converter<float>::convert_to(arg);
+            self->obj.DpiY = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -4880,7 +4880,7 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Scanners::ImageScannerResolution>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(other);
 
             if (op == Py_EQ)
             {

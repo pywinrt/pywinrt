@@ -904,7 +904,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         try
         {
             self->obj.status = static_cast<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(_status);
-            self->obj.extendedError = py::converter<winrt::hresult>::convert_to(_extendedError);
+            self->obj.extendedError = py::convert_to<winrt::hresult>(_extendedError);
             self->obj.retryCount = _retryCount;
 
             return 0;
@@ -962,7 +962,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         try
         {
-            self->obj.status = py::converter<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>::convert_to(arg);
+            self->obj.status = py::convert_to<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(arg);
             return 0;
         }
         catch (...)
@@ -995,7 +995,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         try
         {
-            self->obj.extendedError = py::converter<winrt::hresult>::convert_to(arg);
+            self->obj.extendedError = py::convert_to<winrt::hresult>(arg);
             return 0;
         }
         catch (...)
@@ -1028,7 +1028,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         try
         {
-            self->obj.retryCount = py::converter<uint32_t>::convert_to(arg);
+            self->obj.retryCount = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -1049,7 +1049,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
     {
         try
         {
-            auto _other = py::converter<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>::convert_to(other);
+            auto _other = py::convert_to<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>(other);
 
             if (op == Py_EQ)
             {

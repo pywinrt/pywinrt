@@ -2472,7 +2472,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.X = py::converter<int32_t>::convert_to(arg);
+            self->obj.X = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2505,7 +2505,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.Y = py::converter<int32_t>::convert_to(arg);
+            self->obj.Y = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2525,7 +2525,7 @@ namespace py::cpp::Windows::Devices::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Input::MouseDelta>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Input::MouseDelta>(other);
 
             if (op == Py_EQ)
             {
@@ -2698,7 +2698,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.UsagePage = py::converter<uint32_t>::convert_to(arg);
+            self->obj.UsagePage = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2731,7 +2731,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.Usage = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Usage = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2764,7 +2764,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.MinLogical = py::converter<int32_t>::convert_to(arg);
+            self->obj.MinLogical = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2797,7 +2797,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.MaxLogical = py::converter<int32_t>::convert_to(arg);
+            self->obj.MaxLogical = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2830,7 +2830,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.MinPhysical = py::converter<int32_t>::convert_to(arg);
+            self->obj.MinPhysical = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.MaxPhysical = py::converter<int32_t>::convert_to(arg);
+            self->obj.MaxPhysical = py::convert_to<int32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2896,7 +2896,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.Unit = py::converter<uint32_t>::convert_to(arg);
+            self->obj.Unit = py::convert_to<uint32_t>(arg);
             return 0;
         }
         catch (...)
@@ -2929,7 +2929,7 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj.PhysicalMultiplier = py::converter<float>::convert_to(arg);
+            self->obj.PhysicalMultiplier = py::convert_to<float>(arg);
             return 0;
         }
         catch (...)
@@ -2955,7 +2955,7 @@ namespace py::cpp::Windows::Devices::Input
     {
         try
         {
-            auto _other = py::converter<winrt::Windows::Devices::Input::PointerDeviceUsage>::convert_to(other);
+            auto _other = py::convert_to<winrt::Windows::Devices::Input::PointerDeviceUsage>(other);
 
             if (op == Py_EQ)
             {
