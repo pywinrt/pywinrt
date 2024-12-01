@@ -50,7 +50,7 @@ namespace py::impl::Windows::Devices::Perception::Provider
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -87,7 +87,7 @@ namespace py::impl::Windows::Devices::Perception::Provider
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
             {
                 auto gil = py::ensure_gil();
 

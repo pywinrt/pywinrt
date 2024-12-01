@@ -50,7 +50,7 @@ namespace py::impl::Microsoft::UI::Xaml::Media::Imaging
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

@@ -65,7 +65,7 @@ namespace py::impl::Windows::UI::Xaml::Media
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -107,7 +107,7 @@ namespace py::impl::Windows::UI::Xaml::Media
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

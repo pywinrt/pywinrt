@@ -60,7 +60,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -102,7 +102,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -144,7 +144,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -186,7 +186,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -228,7 +228,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -270,7 +270,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -312,7 +312,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -354,7 +354,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -396,7 +396,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -438,7 +438,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -480,7 +480,7 @@ namespace py::impl::Windows::UI::Xaml::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

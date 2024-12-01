@@ -77,7 +77,7 @@ namespace py::impl::Windows::UI::Core
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Core::IdleDispatchedHandlerArgs const& param0)
             {
                 auto gil = py::ensure_gil();
 

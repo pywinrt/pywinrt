@@ -160,7 +160,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncAction const& param0, winrt::Windows::Foundation::AsyncStatus param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -203,7 +203,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> const& param0, winrt::impl::param_type<TProgress> const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -246,7 +246,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> const& param0, winrt::Windows::Foundation::AsyncStatus param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -289,7 +289,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncOperation<TResult> const& param0, winrt::Windows::Foundation::AsyncStatus param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -332,7 +332,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> const& param0, winrt::impl::param_type<TProgress> const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -375,7 +375,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> const& param0, winrt::Windows::Foundation::AsyncStatus param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -440,7 +440,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::impl::param_type<T> const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -483,7 +483,7 @@ namespace py::impl::Windows::Foundation
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::impl::param_type<TSender> const& param0, winrt::impl::param_type<TResult> const& param1)
             {
                 auto gil = py::ensure_gil();
 

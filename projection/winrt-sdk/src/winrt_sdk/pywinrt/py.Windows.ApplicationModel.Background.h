@@ -110,7 +110,7 @@ namespace py::impl::Windows::ApplicationModel::Background
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -152,7 +152,7 @@ namespace py::impl::Windows::ApplicationModel::Background
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -194,7 +194,7 @@ namespace py::impl::Windows::ApplicationModel::Background
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs const& param1)
             {
                 auto gil = py::ensure_gil();
 

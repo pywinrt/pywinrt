@@ -45,7 +45,7 @@ namespace py::impl::Windows::Graphics::Printing3D
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs const& param0)
             {
                 auto gil = py::ensure_gil();
 

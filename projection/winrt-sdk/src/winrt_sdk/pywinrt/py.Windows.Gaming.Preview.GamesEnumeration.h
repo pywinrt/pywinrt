@@ -40,7 +40,7 @@ namespace py::impl::Windows::Gaming::Preview::GamesEnumeration
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& param0)
             {
                 auto gil = py::ensure_gil();
 
@@ -75,7 +75,7 @@ namespace py::impl::Windows::Gaming::Preview::GamesEnumeration
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::hstring const& param0)
             {
                 auto gil = py::ensure_gil();
 
