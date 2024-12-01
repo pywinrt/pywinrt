@@ -531,15 +531,21 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static string ToDelegateParam(this ParameterDefinition param) =>
+    public static string ToDelegateParam(this ParameterDefinition param, bool useAuto = true) =>
         param.GetCategory() switch
         {
-            // REVISIT: would be nice to have real type here instead of auto
-            // but that means we would need to copy `consumes_type` writer
-            // handling from cppwinrt
-            // https://github.com/microsoft/cppwinrt/blob/9b453cfc518bdaa7e2ff590526c4883457fd6065/cppwinrt/code_writers.h#L896
+            // TODO: remove useAuto and always use full types
             ParamCategory.In
-                => $"auto {param.ToParamName()}",
+                => useAuto
+                    ? $"auto {param.ToParamName()}"
+                    : param.ParameterType switch
+                    {
+                        GenericParameter gen
+                            => $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}",
+                        { IsValueType: true }
+                            => $"{param.ParameterType.ToCppTypeName()} {param.ToParamName()}",
+                        _ => $"{param.ParameterType.ToCppTypeName()} const& {param.ToParamName()}"
+                    },
             ParamCategory.Out => $"{param.ParameterType.ToCppTypeName()}& {param.ToParamName()}",
             ParamCategory.PassArray
                 => $"winrt::array_view<{param.ParameterType.ToCppTypeName()} const> {param.ToParamName()}",

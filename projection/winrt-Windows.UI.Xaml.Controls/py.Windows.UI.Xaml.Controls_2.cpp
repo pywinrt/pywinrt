@@ -1964,6 +1964,72 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void OnDropDownClosed(winrt::Windows::Foundation::IInspectable const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_drop_down_closed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnDropDownOpened(winrt::Windows::Foundation::IInspectable const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_drop_down_opened")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_ComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept

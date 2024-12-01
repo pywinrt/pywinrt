@@ -1650,6 +1650,51 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void PopulatePropertyInfoOverride(winrt::hstring const& param0, winrt::Microsoft::UI::Composition::AnimationPropertyInfo const& param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_populate_property_info_override")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_Brush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5599,6 +5644,78 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         static void toggle_reference(PyWinrtGeneralTransform* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        winrt::Windows::Foundation::Rect TransformBoundsCore(winrt::Windows::Foundation::Rect param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_transform_bounds_core")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Rect>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        bool TryTransformCore(winrt::Windows::Foundation::Point param0, winrt::Windows::Foundation::Point& param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_try_transform_core")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                param1 = py::convert_to<winrt::Windows::Foundation::Point>(return_value.get(), 1);
+
+                return py::convert_to<bool>(return_value.get(), 0);
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 
@@ -19509,6 +19626,129 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void OnDefaultSystemBackdropConfigurationChanged(winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop const& param0, winrt::Microsoft::UI::Xaml::XamlRoot const& param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_default_system_backdrop_configuration_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnTargetConnected(winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop const& param0, winrt::Microsoft::UI::Xaml::XamlRoot const& param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_target_connected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnTargetDisconnected(winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_target_disconnected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_SystemBackdrop(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22065,6 +22305,60 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void OnConnected()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_connected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnDisconnected()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_disconnected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_XamlCompositionBrushBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22279,6 +22573,101 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         static void toggle_reference(PyWinrtXamlLight* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        winrt::hstring GetId()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_get_id")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnConnected(winrt::Microsoft::UI::Xaml::UIElement const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_connected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnDisconnected(winrt::Microsoft::UI::Xaml::UIElement const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_disconnected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 

@@ -1,4 +1,5 @@
 import gc
+import threading
 import unittest
 import weakref
 from uuid import UUID
@@ -45,14 +46,26 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
-    def test_overriding_method(self):
-        class C(tc.OverloadClass):
-            pass
-
-        c = C()
+    def test_calling_protected_method(self):
+        o = tc.Override()
 
         with self.assertRaisesRegex(RuntimeError, "cannot call protected method"):
-            c._overload_with_one(1)
+            o._on_protected()
+
+    def test_overriding_method(self):
+        event = threading.Event()
+        base_event = threading.Event()
+
+        class C(tc.Override):
+            def _on_overridable(self) -> None:
+                event.set()
+
+        c = C()
+        c.add_overridable_called(lambda s, e: base_event.set())
+
+        c.call_overridable()
+        self.assertTrue(event.is_set())
+        self.assertFalse(base_event.is_set())
 
     def test_object_round_trip(self):
         class C(tc.Composable):

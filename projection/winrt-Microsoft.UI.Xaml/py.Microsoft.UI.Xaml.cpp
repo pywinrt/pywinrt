@@ -358,6 +358,39 @@ namespace py::cpp::Microsoft::UI::Xaml
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
         }
+
+        void OnLaunched(winrt::Microsoft::UI::Xaml::LaunchActivatedEventArgs const& param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_launched")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
     };
 
     static PyObject* _new_Application(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11412,6 +11445,150 @@ namespace py::cpp::Microsoft::UI::Xaml
         static void toggle_reference(PyWinrtFrameworkElement* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        winrt::Windows::Foundation::Size ArrangeOverride(winrt::Windows::Foundation::Size param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_arrange_override")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Size>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        bool GoToElementStateCore(winrt::hstring const& param0, bool param1)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_go_to_element_state_core")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        winrt::Windows::Foundation::Size MeasureOverride(winrt::Windows::Foundation::Size param0)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_measure_override")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Size>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
+        }
+
+        void OnApplyTemplate()
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_on_apply_template")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 
@@ -33821,6 +33998,77 @@ namespace py::cpp::Microsoft::UI::Xaml
         static void toggle_reference(PyWinrtVisualStateManager* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        bool GoToStateCore(winrt::Microsoft::UI::Xaml::Controls::Control const& param0, winrt::Microsoft::UI::Xaml::FrameworkElement const& param1, winrt::hstring const& param2, winrt::Microsoft::UI::Xaml::VisualStateGroup const& param3, winrt::Microsoft::UI::Xaml::VisualState const& param4, bool param5)
+        {
+            auto gil = py::ensure_gil();
+
+            try
+            {
+                py::pyobj_handle self{get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "_go_to_state_core")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param4{py::convert(param4)};
+                if (!py_param4)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param5{py::convert(param5)};
+                if (!py_param5)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(6, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get(), py_param4.get(), py_param5.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                PyErr_WriteUnraisable(nullptr);
+                throw winrt::hresult_error();
+            }
         }
     };
 
