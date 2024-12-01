@@ -44,32 +44,35 @@ namespace py::impl::Microsoft::UI::Xaml::Navigation
             {
                 auto gil = py::ensure_gil();
 
-                py::pyobj_handle py_param0{ py::convert(param0) };
-
-                if (!py_param0) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param0");
-                }
-
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
-
-                if (!args) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw winrt::hresult_error();
-                }
-
-                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
-
-                if (!return_value)
+                try
                 {
-                    PyErr_WriteUnraisable(delegate.callable());
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    PyErr_WriteUnraisable(nullptr);
                     throw winrt::hresult_error();
                 }
             };
@@ -86,32 +89,35 @@ namespace py::impl::Microsoft::UI::Xaml::Navigation
             {
                 auto gil = py::ensure_gil();
 
-                py::pyobj_handle py_param0{ py::convert(param0) };
-
-                if (!py_param0) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param0");
-                }
-
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
-
-                if (!args) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw winrt::hresult_error();
-                }
-
-                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
-
-                if (!return_value)
+                try
                 {
-                    PyErr_WriteUnraisable(delegate.callable());
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    PyErr_WriteUnraisable(nullptr);
                     throw winrt::hresult_error();
                 }
             };
@@ -128,32 +134,35 @@ namespace py::impl::Microsoft::UI::Xaml::Navigation
             {
                 auto gil = py::ensure_gil();
 
-                py::pyobj_handle py_param0{ py::convert(param0) };
-
-                if (!py_param0) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param0");
-                }
-
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
-
-                if (!args) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw winrt::hresult_error();
-                }
-
-                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
-
-                if (!return_value)
+                try
                 {
-                    PyErr_WriteUnraisable(delegate.callable());
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    PyErr_WriteUnraisable(nullptr);
                     throw winrt::hresult_error();
                 }
             };
@@ -170,32 +179,35 @@ namespace py::impl::Microsoft::UI::Xaml::Navigation
             {
                 auto gil = py::ensure_gil();
 
-                py::pyobj_handle py_param0{ py::convert(param0) };
-
-                if (!py_param0) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param0");
-                }
-
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
-
-                if (!args) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw winrt::hresult_error();
-                }
-
-                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
-
-                if (!return_value)
+                try
                 {
-                    PyErr_WriteUnraisable(delegate.callable());
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    PyErr_WriteUnraisable(nullptr);
                     throw winrt::hresult_error();
                 }
             };

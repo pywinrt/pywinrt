@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using Mono.Cecil;
 
 static class DelegateWriterExtensions
 {
@@ -49,60 +50,86 @@ static class DelegateWriterExtensions
         );
         w.WriteLine("{");
         w.Indent++;
+        w.WriteDelegateInvoke(invoke, "delegate.callable()");
+        w.Indent--;
+        w.WriteLine("};");
+        w.Indent--;
+        w.WriteLine("};");
+        w.Indent--;
+        w.WriteLine("};");
+    }
 
+    public static void WriteDelegateInvoke(
+        this IndentedTextWriter w,
+        MethodDefinition method,
+        string callable,
+        Action? writeGetCallable = null
+    )
+    {
         w.WriteLine("auto gil = py::ensure_gil();");
         w.WriteBlankLine();
+        w.WriteLine("try");
+        w.WriteLine("{");
+        w.Indent++;
 
-        foreach (var param in invoke.Parameters.Where(p => p.IsPythonInParam()))
+        if (writeGetCallable is not null)
+        {
+            writeGetCallable();
+        }
+
+        var pythonInParams = method.Parameters.Where(p => p.IsPythonInParam()).ToList();
+
+        foreach (var param in pythonInParams)
         {
             w.WriteLine(
-                $"py::pyobj_handle py_{param.ToParamName()}{{ py::convert({param.ToParamName()}) }};"
+                $"py::pyobj_handle py_{param.ToParamName()}{{py::convert({param.ToParamName()})}};"
             );
-            w.WriteBlankLine();
-            w.WriteLine($"if (!py_{param.ToParamName()}) {{");
+            w.WriteLine($"if (!py_{param.ToParamName()})");
+            w.WriteLine("{");
             w.Indent++;
-            w.WriteLine("PyErr_WriteUnraisable(delegate.callable());");
-            w.WriteLine($"throw std::invalid_argument(\"{param.ToParamName()}\");");
+            w.WriteLine("throw python_exception();");
             w.Indent--;
             w.WriteLine("}");
             w.WriteBlankLine();
         }
 
-        if (invoke.Parameters.Any(p => p.IsPythonInParam()))
+        if (pythonInParams.Count > 1)
         {
             w.WriteLine(
-                $"py::pyobj_handle args{{ PyTuple_Pack({invoke.Parameters.Count(p => p.IsPythonInParam())}, {string.Join(", ", invoke.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"py_{p.ToParamName()}.get()"))}) }};"
+                $"py::pyobj_handle args{{PyTuple_Pack({pythonInParams.Count}, {string.Join(", ", pythonInParams.Select(p => $"py_{p.ToParamName()}.get()"))})}};"
             );
-            w.WriteBlankLine();
-            w.WriteLine("if (!args) {");
+            w.WriteLine("if (!args)");
+            w.WriteLine("{");
             w.Indent++;
-            w.WriteLine("PyErr_WriteUnraisable(delegate.callable());");
-            w.WriteLine("throw winrt::hresult_error();");
+            w.WriteLine("throw python_exception();");
             w.Indent--;
             w.WriteLine("}");
             w.WriteBlankLine();
+            w.WriteLine(
+                $"py::pyobj_handle return_value{{PyObject_CallObject({callable}, args.get())}};"
+            );
+        }
+        else if (pythonInParams.Count == 1)
+        {
+            w.WriteLine(
+                $"py::pyobj_handle return_value{{PyObject_CallOneArg({callable}, py_{pythonInParams[0].ToParamName()}.get())}};"
+            );
         }
         else
         {
-            w.WriteLine("py::pyobj_handle args{ nullptr };");
+            w.WriteLine($"py::pyobj_handle return_value{{PyObject_CallNoArgs({callable})}};");
         }
 
-        w.WriteLine(
-            "py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };"
-        );
-
-        w.WriteBlankLine();
         w.WriteLine("if (!return_value)");
         w.WriteLine("{");
         w.Indent++;
-        w.WriteLine("PyErr_WriteUnraisable(delegate.callable());");
-        w.WriteLine("throw winrt::hresult_error();");
+        w.WriteLine("throw python_exception();");
         w.Indent--;
         w.WriteLine("}");
 
-        var i = invoke.ReturnType.FullName == "System.Void" ? 0 : 1;
+        var i = method.ReturnType.FullName == "System.Void" ? 0 : 1;
 
-        foreach (var param in invoke.Parameters.Where(p => p.IsPythonOutParam()))
+        foreach (var param in method.Parameters.Where(p => p.IsPythonOutParam()))
         {
             switch (param.GetCategory())
             {
@@ -128,7 +155,7 @@ static class DelegateWriterExtensions
             i++;
         }
 
-        if (invoke.ReturnType.FullName != "System.Void")
+        if (method.ReturnType.FullName != "System.Void")
         {
             var index = "";
 
@@ -141,28 +168,31 @@ static class DelegateWriterExtensions
 
             w.WriteBlankLine();
 
-            if (invoke.ReturnType.IsArray)
+            if (method.ReturnType.IsArray)
             {
                 w.WriteLine(
-                    $"auto return_buf = py::convert_to<py::pybuf_view<{invoke.ReturnType.ToCppTypeName()}, false>>(return_value.get(){index});"
+                    $"auto return_buf = py::convert_to<py::pybuf_view<{method.ReturnType.ToCppTypeName()}, false>>(return_value.get(){index});"
                 );
                 w.WriteLine(
-                    $"return winrt::com_array<{invoke.ReturnType.ToCppTypeName()}>{{return_buf.begin(), return_buf.end()}};"
+                    $"return winrt::com_array<{method.ReturnType.ToCppTypeName()}>{{return_buf.begin(), return_buf.end()}};"
                 );
             }
             else
             {
                 w.WriteLine(
-                    $"return py::convert_to<{invoke.ReturnType.ToCppTypeName()}>(return_value.get(){index});"
+                    $"return py::convert_to<{method.ReturnType.ToCppTypeName()}>(return_value.get(){index});"
                 );
             }
         }
 
         w.Indent--;
-        w.WriteLine("};");
+        w.WriteLine("}");
+        w.WriteLine("catch (python_exception)");
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteLine("PyErr_WriteUnraisable(nullptr);");
+        w.WriteLine("throw winrt::hresult_error();");
         w.Indent--;
-        w.WriteLine("};");
-        w.Indent--;
-        w.WriteLine("};");
+        w.WriteLine("}");
     }
 }

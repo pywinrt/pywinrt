@@ -34,12 +34,17 @@ namespace py::impl::Microsoft::UI
             {
                 auto gil = py::ensure_gil();
 
-                py::pyobj_handle args{ nullptr };
-                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
-
-                if (!return_value)
+                try
                 {
-                    PyErr_WriteUnraisable(delegate.callable());
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    PyErr_WriteUnraisable(nullptr);
                     throw winrt::hresult_error();
                 }
             };
