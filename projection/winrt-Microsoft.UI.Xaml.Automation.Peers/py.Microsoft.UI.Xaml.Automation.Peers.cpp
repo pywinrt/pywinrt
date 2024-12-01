@@ -1355,8 +1355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1384,8 +1383,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1413,8 +1411,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1442,8 +1439,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1471,8 +1467,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1500,8 +1495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1529,8 +1523,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1558,8 +1551,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1587,8 +1579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1616,8 +1607,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1645,8 +1635,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1674,8 +1663,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1709,8 +1697,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1738,8 +1725,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1767,8 +1753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1796,8 +1781,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1825,8 +1809,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1854,8 +1837,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1883,8 +1865,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1912,8 +1893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1941,8 +1921,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1970,8 +1949,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -1999,8 +1977,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2028,8 +2005,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2057,8 +2033,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2086,8 +2061,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2115,8 +2089,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2144,8 +2117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2173,8 +2145,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2208,8 +2179,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2243,8 +2213,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2272,8 +2241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2301,8 +2269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2330,8 +2297,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2359,8 +2325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2388,8 +2353,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2417,8 +2381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2446,8 +2409,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2475,8 +2437,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2504,8 +2465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2533,8 +2493,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2562,8 +2521,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2591,8 +2549,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2620,8 +2577,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2655,8 +2611,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2682,8 +2637,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -2709,8 +2663,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
     };
@@ -11836,8 +11789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
     };

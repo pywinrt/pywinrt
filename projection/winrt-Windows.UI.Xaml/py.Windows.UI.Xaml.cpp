@@ -387,8 +387,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -420,8 +419,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -453,8 +451,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -486,8 +483,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -519,8 +515,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -552,8 +547,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -585,8 +579,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -618,8 +611,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -651,8 +643,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -684,8 +675,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
     };
@@ -11866,8 +11856,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -11913,8 +11902,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -11948,8 +11936,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
 
@@ -11975,8 +11962,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
     };
@@ -33419,8 +33405,7 @@ namespace py::cpp::Windows::UI::Xaml
             }
             catch (python_exception)
             {
-                PyErr_WriteUnraisable(nullptr);
-                throw winrt::hresult_error();
+                py::write_unraisable_and_throw();
             }
         }
     };

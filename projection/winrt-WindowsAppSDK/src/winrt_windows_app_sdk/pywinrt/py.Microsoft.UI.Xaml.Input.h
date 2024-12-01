@@ -87,8 +87,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -132,8 +131,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -177,8 +175,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -222,8 +219,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -267,8 +263,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -312,8 +307,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -357,8 +351,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -402,8 +395,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -447,8 +439,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -492,8 +483,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -537,8 +527,7 @@ namespace py::impl::Microsoft::UI::Xaml::Input
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };

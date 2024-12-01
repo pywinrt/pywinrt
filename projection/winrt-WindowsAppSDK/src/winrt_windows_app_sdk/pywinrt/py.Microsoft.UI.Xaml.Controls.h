@@ -187,8 +187,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -232,8 +231,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -277,8 +275,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -322,8 +319,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -367,8 +363,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -412,8 +407,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -447,8 +441,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -482,8 +475,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -527,8 +519,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -572,8 +563,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -617,8 +607,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -662,8 +651,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };
@@ -707,8 +695,7 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                 }
                 catch (python_exception)
                 {
-                    PyErr_WriteUnraisable(nullptr);
-                    throw winrt::hresult_error();
+                    py::write_unraisable_and_throw();
                 }
             };
         };

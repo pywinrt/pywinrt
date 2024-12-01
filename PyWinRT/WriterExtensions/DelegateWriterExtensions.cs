@@ -190,8 +190,7 @@ static class DelegateWriterExtensions
         w.WriteLine("catch (python_exception)");
         w.WriteLine("{");
         w.Indent++;
-        w.WriteLine("PyErr_WriteUnraisable(nullptr);");
-        w.WriteLine("throw winrt::hresult_error();");
+        w.WriteLine("py::write_unraisable_and_throw();");
         w.Indent--;
         w.WriteLine("}");
     }
