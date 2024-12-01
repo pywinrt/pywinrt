@@ -48,6 +48,7 @@ class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesCo
 class ImplementsILowLevelDevicesAggregateProvider():
     pass
 
+@typing.final
 class ILowLevelDevicesAggregateProvider(winrt.system.Object, ImplementsILowLevelDevicesAggregateProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILowLevelDevicesAggregateProvider: ...

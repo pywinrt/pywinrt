@@ -174,6 +174,7 @@ class FeedResourceResponse(winrt.system.Object):
 class ImplementsIFeedAnnouncementInvokedTarget():
     pass
 
+@typing.final
 class IFeedAnnouncementInvokedTarget(winrt.system.Object, ImplementsIFeedAnnouncementInvokedTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedAnnouncementInvokedTarget: ...
@@ -182,6 +183,7 @@ class IFeedAnnouncementInvokedTarget(winrt.system.Object, ImplementsIFeedAnnounc
 class ImplementsIFeedManager():
     pass
 
+@typing.final
 class IFeedManager(winrt.system.Object, ImplementsIFeedManager):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedManager: ...
@@ -191,6 +193,7 @@ class IFeedManager(winrt.system.Object, ImplementsIFeedManager):
 class ImplementsIFeedManager2():
     pass
 
+@typing.final
 class IFeedManager2(winrt.system.Object, ImplementsIFeedManager2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedManager2: ...
@@ -200,6 +203,7 @@ class IFeedManager2(winrt.system.Object, ImplementsIFeedManager2):
 class ImplementsIFeedProvider():
     pass
 
+@typing.final
 class IFeedProvider(winrt.system.Object, ImplementsIFeedProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProvider: ...
@@ -212,6 +216,7 @@ class IFeedProvider(winrt.system.Object, ImplementsIFeedProvider):
 class ImplementsIFeedProviderAnalytics():
     pass
 
+@typing.final
 class IFeedProviderAnalytics(winrt.system.Object, ImplementsIFeedProviderAnalytics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderAnalytics: ...
@@ -220,6 +225,7 @@ class IFeedProviderAnalytics(winrt.system.Object, ImplementsIFeedProviderAnalyti
 class ImplementsIFeedProviderErrors():
     pass
 
+@typing.final
 class IFeedProviderErrors(winrt.system.Object, ImplementsIFeedProviderErrors):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderErrors: ...
@@ -228,6 +234,7 @@ class IFeedProviderErrors(winrt.system.Object, ImplementsIFeedProviderErrors):
 class ImplementsIFeedProviderMessage():
     pass
 
+@typing.final
 class IFeedProviderMessage(winrt.system.Object, ImplementsIFeedProviderMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderMessage: ...
@@ -236,6 +243,7 @@ class IFeedProviderMessage(winrt.system.Object, ImplementsIFeedProviderMessage):
 class ImplementsIFeedResourceProvider():
     pass
 
+@typing.final
 class IFeedResourceProvider(winrt.system.Object, ImplementsIFeedResourceProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedResourceProvider: ...

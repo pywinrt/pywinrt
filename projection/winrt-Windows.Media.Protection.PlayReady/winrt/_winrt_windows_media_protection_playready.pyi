@@ -572,6 +572,7 @@ class PlayReadyStatics(winrt.system.Object, metaclass=PlayReadyStatics_Static):
 class ImplementsINDClosedCaptionDataReceivedEventArgs():
     pass
 
+@typing.final
 class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object, ImplementsINDClosedCaptionDataReceivedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDClosedCaptionDataReceivedEventArgs: ...
@@ -585,6 +586,7 @@ class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object, ImplementsINDCl
 class ImplementsINDCustomData():
     pass
 
+@typing.final
 class INDCustomData(winrt.system.Object, ImplementsINDCustomData):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDCustomData: ...
@@ -596,6 +598,7 @@ class INDCustomData(winrt.system.Object, ImplementsINDCustomData):
 class ImplementsINDDownloadEngine():
     pass
 
+@typing.final
 class INDDownloadEngine(winrt.system.Object, ImplementsINDDownloadEngine):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDDownloadEngine: ...
@@ -621,6 +624,7 @@ class INDDownloadEngine(winrt.system.Object, ImplementsINDDownloadEngine):
 class ImplementsINDDownloadEngineNotifier():
     pass
 
+@typing.final
 class INDDownloadEngineNotifier(winrt.system.Object, ImplementsINDDownloadEngineNotifier):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDDownloadEngineNotifier: ...
@@ -640,6 +644,7 @@ class INDDownloadEngineNotifier(winrt.system.Object, ImplementsINDDownloadEngine
 class ImplementsINDLicenseFetchCompletedEventArgs():
     pass
 
+@typing.final
 class INDLicenseFetchCompletedEventArgs(winrt.system.Object, ImplementsINDLicenseFetchCompletedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchCompletedEventArgs: ...
@@ -649,6 +654,7 @@ class INDLicenseFetchCompletedEventArgs(winrt.system.Object, ImplementsINDLicens
 class ImplementsINDLicenseFetchDescriptor():
     pass
 
+@typing.final
 class INDLicenseFetchDescriptor(winrt.system.Object, ImplementsINDLicenseFetchDescriptor):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchDescriptor: ...
@@ -664,6 +670,7 @@ class INDLicenseFetchDescriptor(winrt.system.Object, ImplementsINDLicenseFetchDe
 class ImplementsINDLicenseFetchResult():
     pass
 
+@typing.final
 class INDLicenseFetchResult(winrt.system.Object, ImplementsINDLicenseFetchResult):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchResult: ...
@@ -673,6 +680,7 @@ class INDLicenseFetchResult(winrt.system.Object, ImplementsINDLicenseFetchResult
 class ImplementsINDMessenger():
     pass
 
+@typing.final
 class INDMessenger(winrt.system.Object, ImplementsINDMessenger):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDMessenger: ...
@@ -688,6 +696,7 @@ class INDMessenger(winrt.system.Object, ImplementsINDMessenger):
 class ImplementsINDProximityDetectionCompletedEventArgs():
     pass
 
+@typing.final
 class INDProximityDetectionCompletedEventArgs(winrt.system.Object, ImplementsINDProximityDetectionCompletedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDProximityDetectionCompletedEventArgs: ...
@@ -697,6 +706,7 @@ class INDProximityDetectionCompletedEventArgs(winrt.system.Object, ImplementsIND
 class ImplementsINDRegistrationCompletedEventArgs():
     pass
 
+@typing.final
 class INDRegistrationCompletedEventArgs(winrt.system.Object, ImplementsINDRegistrationCompletedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDRegistrationCompletedEventArgs: ...
@@ -712,6 +722,7 @@ class INDRegistrationCompletedEventArgs(winrt.system.Object, ImplementsINDRegist
 class ImplementsINDSendResult():
     pass
 
+@typing.final
 class INDSendResult(winrt.system.Object, ImplementsINDSendResult):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDSendResult: ...
@@ -721,6 +732,7 @@ class INDSendResult(winrt.system.Object, ImplementsINDSendResult):
 class ImplementsINDStartResult():
     pass
 
+@typing.final
 class INDStartResult(winrt.system.Object, ImplementsINDStartResult):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStartResult: ...
@@ -730,6 +742,7 @@ class INDStartResult(winrt.system.Object, ImplementsINDStartResult):
 class ImplementsINDStorageFileHelper():
     pass
 
+@typing.final
 class INDStorageFileHelper(winrt.system.Object, ImplementsINDStorageFileHelper):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStorageFileHelper: ...
@@ -739,6 +752,7 @@ class INDStorageFileHelper(winrt.system.Object, ImplementsINDStorageFileHelper):
 class ImplementsINDStreamParser():
     pass
 
+@typing.final
 class INDStreamParser(winrt.system.Object, ImplementsINDStreamParser):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStreamParser: ...
@@ -756,6 +770,7 @@ class INDStreamParser(winrt.system.Object, ImplementsINDStreamParser):
 class ImplementsINDStreamParserNotifier():
     pass
 
+@typing.final
 class INDStreamParserNotifier(winrt.system.Object, ImplementsINDStreamParserNotifier):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStreamParserNotifier: ...
@@ -771,6 +786,7 @@ class INDStreamParserNotifier(winrt.system.Object, ImplementsINDStreamParserNoti
 class ImplementsINDTransmitterProperties():
     pass
 
+@typing.final
 class INDTransmitterProperties(winrt.system.Object, ImplementsINDTransmitterProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDTransmitterProperties: ...
@@ -800,6 +816,7 @@ class INDTransmitterProperties(winrt.system.Object, ImplementsINDTransmitterProp
 class ImplementsIPlayReadyDomain():
     pass
 
+@typing.final
 class IPlayReadyDomain(winrt.system.Object, ImplementsIPlayReadyDomain):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyDomain: ...
@@ -817,6 +834,7 @@ class IPlayReadyDomain(winrt.system.Object, ImplementsIPlayReadyDomain):
 class ImplementsIPlayReadyLicense():
     pass
 
+@typing.final
 class IPlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicense: ...
@@ -837,6 +855,7 @@ class IPlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
 class ImplementsIPlayReadyLicenseAcquisitionServiceRequest():
     pass
 
+@typing.final
 class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object, ImplementsIPlayReadyLicenseAcquisitionServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
@@ -870,6 +889,7 @@ class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object, Implements
 class ImplementsIPlayReadyLicenseSession():
     pass
 
+@typing.final
 class IPlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseSession):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseSession: ...
@@ -879,6 +899,7 @@ class IPlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseS
 class ImplementsIPlayReadyLicenseSession2():
     pass
 
+@typing.final
 class IPlayReadyLicenseSession2(winrt.system.Object, ImplementsIPlayReadyLicenseSession2, ImplementsIPlayReadyLicenseSession):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseSession2: ...
@@ -889,6 +910,7 @@ class IPlayReadyLicenseSession2(winrt.system.Object, ImplementsIPlayReadyLicense
 class ImplementsIPlayReadySecureStopServiceRequest():
     pass
 
+@typing.final
 class IPlayReadySecureStopServiceRequest(winrt.system.Object, ImplementsIPlayReadySecureStopServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadySecureStopServiceRequest: ...
@@ -924,6 +946,7 @@ class IPlayReadySecureStopServiceRequest(winrt.system.Object, ImplementsIPlayRea
 class ImplementsIPlayReadyServiceRequest():
     pass
 
+@typing.final
 class IPlayReadyServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyServiceRequest: ...

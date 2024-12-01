@@ -102,6 +102,7 @@ class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
 class ImplementsIComponentConnector():
     pass
 
+@typing.final
 class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IComponentConnector: ...
@@ -110,6 +111,7 @@ class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
 class ImplementsIComponentConnector2():
     pass
 
+@typing.final
 class IComponentConnector2(winrt.system.Object, ImplementsIComponentConnector2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IComponentConnector2: ...
@@ -118,6 +120,7 @@ class IComponentConnector2(winrt.system.Object, ImplementsIComponentConnector2):
 class ImplementsIDataTemplateComponent():
     pass
 
+@typing.final
 class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateComponent):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataTemplateComponent: ...
@@ -127,6 +130,7 @@ class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateCompone
 class ImplementsIXamlBindScopeDiagnostics():
     pass
 
+@typing.final
 class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDiagnostics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlBindScopeDiagnostics: ...
@@ -135,6 +139,7 @@ class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDia
 class ImplementsIXamlMember():
     pass
 
+@typing.final
 class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMember: ...
@@ -156,6 +161,7 @@ class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
 class ImplementsIXamlMetadataProvider():
     pass
 
+@typing.final
 class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMetadataProvider: ...
@@ -166,6 +172,7 @@ class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider
 class ImplementsIXamlType():
     pass
 
+@typing.final
 class IXamlType(winrt.system.Object, ImplementsIXamlType):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlType: ...
@@ -203,6 +210,7 @@ class IXamlType(winrt.system.Object, ImplementsIXamlType):
 class ImplementsIXamlType2():
     pass
 
+@typing.final
 class IXamlType2(winrt.system.Object, ImplementsIXamlType2, ImplementsIXamlType):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlType2: ...

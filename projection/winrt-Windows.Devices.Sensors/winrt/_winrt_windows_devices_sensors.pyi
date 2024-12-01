@@ -1137,6 +1137,7 @@ class WakeOnApproachOptions(winrt.system.Object):
 class ImplementsIHumanPresenceSensorExtension():
     pass
 
+@typing.final
 class IHumanPresenceSensorExtension(winrt.system.Object, ImplementsIHumanPresenceSensorExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IHumanPresenceSensorExtension: ...
@@ -1151,6 +1152,7 @@ class IHumanPresenceSensorExtension(winrt.system.Object, ImplementsIHumanPresenc
 class ImplementsISensorDataThreshold():
     pass
 
+@typing.final
 class ISensorDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISensorDataThreshold: ...

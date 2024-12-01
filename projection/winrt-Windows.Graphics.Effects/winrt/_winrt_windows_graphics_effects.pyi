@@ -15,6 +15,7 @@ Self = typing.TypeVar('Self')
 class ImplementsIGraphicsEffect():
     pass
 
+@typing.final
 class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, ImplementsIGraphicsEffectSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGraphicsEffect: ...
@@ -26,6 +27,7 @@ class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, Implements
 class ImplementsIGraphicsEffectSource():
     pass
 
+@typing.final
 class IGraphicsEffectSource(winrt.system.Object, ImplementsIGraphicsEffectSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGraphicsEffectSource: ...

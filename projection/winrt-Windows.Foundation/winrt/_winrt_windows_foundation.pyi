@@ -209,6 +209,7 @@ class WwwFormUrlDecoderEntry(winrt.system.Object, ImplementsIWwwFormUrlDecoderEn
 class ImplementsIAsyncAction():
     pass
 
+@typing.final
 class IAsyncAction(winrt.system.Object, ImplementsIAsyncAction, ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
@@ -230,6 +231,7 @@ class IAsyncAction(winrt.system.Object, ImplementsIAsyncAction, ImplementsIAsync
 class ImplementsIAsyncActionWithProgress(typing.Generic[TProgress]):
     pass
 
+@typing.final
 class IAsyncActionWithProgress(winrt.system.Object, ImplementsIAsyncActionWithProgress, ImplementsIAsyncInfo, typing.Generic[TProgress]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
@@ -254,6 +256,7 @@ class IAsyncActionWithProgress(winrt.system.Object, ImplementsIAsyncActionWithPr
 class ImplementsIAsyncInfo():
     pass
 
+@typing.final
 class IAsyncInfo(winrt.system.Object, ImplementsIAsyncInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAsyncInfo: ...
@@ -269,6 +272,7 @@ class IAsyncInfo(winrt.system.Object, ImplementsIAsyncInfo):
 class ImplementsIAsyncOperationWithProgress(typing.Generic[TResult, TProgress]):
     pass
 
+@typing.final
 class IAsyncOperationWithProgress(winrt.system.Object, ImplementsIAsyncOperationWithProgress, ImplementsIAsyncInfo, typing.Generic[TResult, TProgress]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __await__(self) -> typing.Generator[typing.Any, None, TResult]: ...
@@ -293,6 +297,7 @@ class IAsyncOperationWithProgress(winrt.system.Object, ImplementsIAsyncOperation
 class ImplementsIAsyncOperation(typing.Generic[TResult]):
     pass
 
+@typing.final
 class IAsyncOperation(winrt.system.Object, ImplementsIAsyncOperation, ImplementsIAsyncInfo, typing.Generic[TResult]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __await__(self) -> typing.Generator[typing.Any, None, TResult]: ...
@@ -313,6 +318,7 @@ class IAsyncOperation(winrt.system.Object, ImplementsIAsyncOperation, Implements
 class ImplementsIClosable():
     pass
 
+@typing.final
 class IClosable(winrt.system.Object, ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -323,6 +329,7 @@ class IClosable(winrt.system.Object, ImplementsIClosable):
 class ImplementsIGetActivationFactory():
     pass
 
+@typing.final
 class IGetActivationFactory(winrt.system.Object, ImplementsIGetActivationFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGetActivationFactory: ...
@@ -331,6 +338,7 @@ class IGetActivationFactory(winrt.system.Object, ImplementsIGetActivationFactory
 class ImplementsIMemoryBuffer():
     pass
 
+@typing.final
 class IMemoryBuffer(winrt.system.Object, ImplementsIMemoryBuffer, ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -342,6 +350,7 @@ class IMemoryBuffer(winrt.system.Object, ImplementsIMemoryBuffer, ImplementsIClo
 class ImplementsIMemoryBufferReference():
     pass
 
+@typing.final
 class IMemoryBufferReference(winrt.system.Object, ImplementsIMemoryBufferReference, ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -358,6 +367,7 @@ class IMemoryBufferReference(winrt.system.Object, ImplementsIMemoryBufferReferen
 class ImplementsIPropertyValue():
     pass
 
+@typing.final
 class IPropertyValue(winrt.system.Object, ImplementsIPropertyValue):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertyValue: ...
@@ -406,6 +416,7 @@ class IPropertyValue(winrt.system.Object, ImplementsIPropertyValue):
 class ImplementsIReferenceArray(typing.Generic[T]):
     pass
 
+@typing.final
 class IReferenceArray(winrt.system.Object, ImplementsIReferenceArray, ImplementsIPropertyValue, typing.Generic[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def get_boolean(self) -> bool: ...
@@ -455,6 +466,7 @@ class IReferenceArray(winrt.system.Object, ImplementsIReferenceArray, Implements
 class ImplementsIReference(typing.Generic[T]):
     pass
 
+@typing.final
 class IReference(winrt.system.Object, ImplementsIReference, ImplementsIPropertyValue, typing.Generic[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def get_boolean(self) -> bool: ...
@@ -504,6 +516,7 @@ class IReference(winrt.system.Object, ImplementsIReference, ImplementsIPropertyV
 class ImplementsIStringable():
     pass
 
+@typing.final
 class IStringable(winrt.system.Object, ImplementsIStringable):
     def __str__(self) -> str: ...
     @staticmethod
@@ -513,6 +526,7 @@ class IStringable(winrt.system.Object, ImplementsIStringable):
 class ImplementsIWwwFormUrlDecoderEntry():
     pass
 
+@typing.final
 class IWwwFormUrlDecoderEntry(winrt.system.Object, ImplementsIWwwFormUrlDecoderEntry):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWwwFormUrlDecoderEntry: ...

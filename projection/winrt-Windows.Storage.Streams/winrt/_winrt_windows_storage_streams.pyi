@@ -315,6 +315,7 @@ class RandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessSt
 class ImplementsIBuffer():
     pass
 
+@typing.final
 class IBuffer(winrt.system.Object, ImplementsIBuffer):
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
@@ -330,6 +331,7 @@ class IBuffer(winrt.system.Object, ImplementsIBuffer):
 class ImplementsIContentTypeProvider():
     pass
 
+@typing.final
 class IContentTypeProvider(winrt.system.Object, ImplementsIContentTypeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContentTypeProvider: ...
@@ -339,6 +341,7 @@ class IContentTypeProvider(winrt.system.Object, ImplementsIContentTypeProvider):
 class ImplementsIDataReader():
     pass
 
+@typing.final
 class IDataReader(winrt.system.Object, ImplementsIDataReader):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataReader: ...
@@ -379,6 +382,7 @@ class IDataReader(winrt.system.Object, ImplementsIDataReader):
 class ImplementsIDataWriter():
     pass
 
+@typing.final
 class IDataWriter(winrt.system.Object, ImplementsIDataWriter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataWriter: ...
@@ -418,6 +422,7 @@ class IDataWriter(winrt.system.Object, ImplementsIDataWriter):
 class ImplementsIInputStream():
     pass
 
+@typing.final
 class IInputStream(winrt.system.Object, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -429,6 +434,7 @@ class IInputStream(winrt.system.Object, ImplementsIInputStream, windows_foundati
 class ImplementsIInputStreamReference():
     pass
 
+@typing.final
 class IInputStreamReference(winrt.system.Object, ImplementsIInputStreamReference):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInputStreamReference: ...
@@ -437,6 +443,7 @@ class IInputStreamReference(winrt.system.Object, ImplementsIInputStreamReference
 class ImplementsIOutputStream():
     pass
 
+@typing.final
 class IOutputStream(winrt.system.Object, ImplementsIOutputStream, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -449,6 +456,7 @@ class IOutputStream(winrt.system.Object, ImplementsIOutputStream, windows_founda
 class ImplementsIPropertySetSerializer():
     pass
 
+@typing.final
 class IPropertySetSerializer(winrt.system.Object, ImplementsIPropertySetSerializer):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertySetSerializer: ...
@@ -458,6 +466,7 @@ class IPropertySetSerializer(winrt.system.Object, ImplementsIPropertySetSerializ
 class ImplementsIRandomAccessStream():
     pass
 
+@typing.final
 class IRandomAccessStream(winrt.system.Object, ImplementsIRandomAccessStream, ImplementsIOutputStream, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -485,6 +494,7 @@ class IRandomAccessStream(winrt.system.Object, ImplementsIRandomAccessStream, Im
 class ImplementsIRandomAccessStreamReference():
     pass
 
+@typing.final
 class IRandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessStreamReference):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRandomAccessStreamReference: ...
@@ -493,6 +503,7 @@ class IRandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessS
 class ImplementsIRandomAccessStreamWithContentType():
     pass
 
+@typing.final
 class IRandomAccessStreamWithContentType(winrt.system.Object, ImplementsIRandomAccessStreamWithContentType, ImplementsIContentTypeProvider, ImplementsIRandomAccessStream, ImplementsIOutputStream, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

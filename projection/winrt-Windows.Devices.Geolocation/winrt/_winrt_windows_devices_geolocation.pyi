@@ -296,6 +296,7 @@ class VenueData(winrt.system.Object):
 class ImplementsIGeoshape():
     pass
 
+@typing.final
 class IGeoshape(winrt.system.Object, ImplementsIGeoshape):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeoshape: ...

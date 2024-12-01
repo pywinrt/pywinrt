@@ -365,6 +365,7 @@ class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProvi
 class ImplementsIStorageProviderItemPropertySource():
     pass
 
+@typing.final
 class IStorageProviderItemPropertySource(winrt.system.Object, ImplementsIStorageProviderItemPropertySource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderItemPropertySource: ...
@@ -373,6 +374,7 @@ class IStorageProviderItemPropertySource(winrt.system.Object, ImplementsIStorage
 class ImplementsIStorageProviderKnownFolderSyncInfoSource():
     pass
 
+@typing.final
 class IStorageProviderKnownFolderSyncInfoSource(winrt.system.Object, ImplementsIStorageProviderKnownFolderSyncInfoSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderKnownFolderSyncInfoSource: ...
@@ -383,6 +385,7 @@ class IStorageProviderKnownFolderSyncInfoSource(winrt.system.Object, ImplementsI
 class ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory():
     pass
 
+@typing.final
 class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt.system.Object, ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderKnownFolderSyncInfoSourceFactory: ...
@@ -391,6 +394,7 @@ class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt.system.Object, Impl
 class ImplementsIStorageProviderPropertyCapabilities():
     pass
 
+@typing.final
 class IStorageProviderPropertyCapabilities(winrt.system.Object, ImplementsIStorageProviderPropertyCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderPropertyCapabilities: ...
@@ -399,6 +403,7 @@ class IStorageProviderPropertyCapabilities(winrt.system.Object, ImplementsIStora
 class ImplementsIStorageProviderShareLinkSource():
     pass
 
+@typing.final
 class IStorageProviderShareLinkSource(winrt.system.Object, ImplementsIStorageProviderShareLinkSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderShareLinkSource: ...
@@ -409,6 +414,7 @@ class IStorageProviderShareLinkSource(winrt.system.Object, ImplementsIStoragePro
 class ImplementsIStorageProviderStatusUISource():
     pass
 
+@typing.final
 class IStorageProviderStatusUISource(winrt.system.Object, ImplementsIStorageProviderStatusUISource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderStatusUISource: ...
@@ -419,6 +425,7 @@ class IStorageProviderStatusUISource(winrt.system.Object, ImplementsIStorageProv
 class ImplementsIStorageProviderStatusUISourceFactory():
     pass
 
+@typing.final
 class IStorageProviderStatusUISourceFactory(winrt.system.Object, ImplementsIStorageProviderStatusUISourceFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderStatusUISourceFactory: ...
@@ -427,6 +434,7 @@ class IStorageProviderStatusUISourceFactory(winrt.system.Object, ImplementsIStor
 class ImplementsIStorageProviderUICommand():
     pass
 
+@typing.final
 class IStorageProviderUICommand(winrt.system.Object, ImplementsIStorageProviderUICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderUICommand: ...
@@ -443,6 +451,7 @@ class IStorageProviderUICommand(winrt.system.Object, ImplementsIStorageProviderU
 class ImplementsIStorageProviderUriSource():
     pass
 
+@typing.final
 class IStorageProviderUriSource(winrt.system.Object, ImplementsIStorageProviderUriSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderUriSource: ...

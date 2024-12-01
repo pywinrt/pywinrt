@@ -523,6 +523,7 @@ class VideoFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation.
 class ImplementsIMediaExtension():
     pass
 
+@typing.final
 class IMediaExtension(winrt.system.Object, ImplementsIMediaExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaExtension: ...
@@ -531,6 +532,7 @@ class IMediaExtension(winrt.system.Object, ImplementsIMediaExtension):
 class ImplementsIMediaFrame():
     pass
 
+@typing.final
 class IMediaFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -563,6 +565,7 @@ class IMediaFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation
 class ImplementsIMediaMarker():
     pass
 
+@typing.final
 class IMediaMarker(winrt.system.Object, ImplementsIMediaMarker):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaMarker: ...
@@ -576,6 +579,7 @@ class IMediaMarker(winrt.system.Object, ImplementsIMediaMarker):
 class ImplementsIMediaMarkers():
     pass
 
+@typing.final
 class IMediaMarkers(winrt.system.Object, ImplementsIMediaMarkers):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaMarkers: ...

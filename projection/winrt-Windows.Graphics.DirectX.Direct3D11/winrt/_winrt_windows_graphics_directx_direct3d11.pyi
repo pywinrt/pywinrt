@@ -33,6 +33,7 @@ class Direct3DSurfaceDescription:
 class ImplementsIDirect3DDevice():
     pass
 
+@typing.final
 class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -44,6 +45,7 @@ class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_fo
 class ImplementsIDirect3DSurface():
     pass
 
+@typing.final
 class IDirect3DSurface(winrt.system.Object, ImplementsIDirect3DSurface, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

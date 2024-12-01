@@ -554,6 +554,7 @@ class TensorUInt8Bit(winrt.system.Object, windows_foundation.ImplementsIMemoryBu
 class ImplementsILearningModelFeatureDescriptor():
     pass
 
+@typing.final
 class ILearningModelFeatureDescriptor(winrt.system.Object, ImplementsILearningModelFeatureDescriptor):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelFeatureDescriptor: ...
@@ -569,6 +570,7 @@ class ILearningModelFeatureDescriptor(winrt.system.Object, ImplementsILearningMo
 class ImplementsILearningModelFeatureValue():
     pass
 
+@typing.final
 class ILearningModelFeatureValue(winrt.system.Object, ImplementsILearningModelFeatureValue):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelFeatureValue: ...
@@ -578,6 +580,7 @@ class ILearningModelFeatureValue(winrt.system.Object, ImplementsILearningModelFe
 class ImplementsILearningModelOperatorProvider():
     pass
 
+@typing.final
 class ILearningModelOperatorProvider(winrt.system.Object, ImplementsILearningModelOperatorProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelOperatorProvider: ...
@@ -585,6 +588,7 @@ class ILearningModelOperatorProvider(winrt.system.Object, ImplementsILearningMod
 class ImplementsITensor():
     pass
 
+@typing.final
 class ITensor(winrt.system.Object, ImplementsITensor, ImplementsILearningModelFeatureValue):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITensor: ...

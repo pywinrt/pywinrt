@@ -9665,6 +9665,7 @@ class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=Xaml
 class ImplementsIAnimatedVisual():
     pass
 
+@typing.final
 class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -9681,6 +9682,7 @@ class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_fo
 class ImplementsIAnimatedVisual2():
     pass
 
+@typing.final
 class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -9699,6 +9701,7 @@ class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, Implemen
 class ImplementsIAnimatedVisualSource():
     pass
 
+@typing.final
 class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource: ...
@@ -9707,6 +9710,7 @@ class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource
 class ImplementsIAnimatedVisualSource2():
     pass
 
+@typing.final
 class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSource2, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource2: ...
@@ -9718,6 +9722,7 @@ class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSourc
 class ImplementsIAnimatedVisualSource3():
     pass
 
+@typing.final
 class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSource3):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimatedVisualSource3: ...
@@ -9726,6 +9731,7 @@ class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSourc
 class ImplementsICommandBarElement():
     pass
 
+@typing.final
 class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement: ...
@@ -9743,6 +9749,7 @@ class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
 class ImplementsIDynamicAnimatedVisualSource():
     pass
 
+@typing.final
 class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimatedVisualSource, ImplementsIAnimatedVisualSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDynamicAnimatedVisualSource: ...
@@ -9753,6 +9760,7 @@ class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimat
 class ImplementsIInsertionPanel():
     pass
 
+@typing.final
 class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInsertionPanel: ...
@@ -9761,6 +9769,7 @@ class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
 class ImplementsIItemContainerMapping():
     pass
 
+@typing.final
 class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerMapping: ...
@@ -9772,6 +9781,7 @@ class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping
 class ImplementsIKeyIndexMapping():
     pass
 
+@typing.final
 class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IKeyIndexMapping: ...
@@ -9781,6 +9791,7 @@ class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
 class ImplementsINavigate():
     pass
 
+@typing.final
 class INavigate(winrt.system.Object, ImplementsINavigate):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INavigate: ...
@@ -9789,6 +9800,7 @@ class INavigate(winrt.system.Object, ImplementsINavigate):
 class ImplementsIScrollAnchorProvider():
     pass
 
+@typing.final
 class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollAnchorProvider: ...
@@ -9800,6 +9812,7 @@ class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider
 class ImplementsISemanticZoomInformation():
     pass
 
+@typing.final
 class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISemanticZoomInformation: ...

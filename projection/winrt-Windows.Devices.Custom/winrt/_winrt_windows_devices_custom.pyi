@@ -60,6 +60,7 @@ class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
 class ImplementsIIOControlCode():
     pass
 
+@typing.final
 class IIOControlCode(winrt.system.Object, ImplementsIIOControlCode):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIOControlCode: ...

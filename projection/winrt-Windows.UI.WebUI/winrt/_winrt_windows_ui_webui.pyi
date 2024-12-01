@@ -1171,6 +1171,7 @@ class WebUIWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, Imp
 class ImplementsIActivatedEventArgsDeferral():
     pass
 
+@typing.final
 class IActivatedEventArgsDeferral(winrt.system.Object, ImplementsIActivatedEventArgsDeferral):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgsDeferral: ...
@@ -1180,6 +1181,7 @@ class IActivatedEventArgsDeferral(winrt.system.Object, ImplementsIActivatedEvent
 class ImplementsIWebUIBackgroundTaskInstance():
     pass
 
+@typing.final
 class IWebUIBackgroundTaskInstance(winrt.system.Object, ImplementsIWebUIBackgroundTaskInstance):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUIBackgroundTaskInstance: ...
@@ -1191,6 +1193,7 @@ class IWebUIBackgroundTaskInstance(winrt.system.Object, ImplementsIWebUIBackgrou
 class ImplementsIWebUINavigatedEventArgs():
     pass
 
+@typing.final
 class IWebUINavigatedEventArgs(winrt.system.Object, ImplementsIWebUINavigatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUINavigatedEventArgs: ...

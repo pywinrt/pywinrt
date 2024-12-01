@@ -46,6 +46,7 @@ class SizeInt32:
 class ImplementsIGeometrySource2D():
     pass
 
+@typing.final
 class IGeometrySource2D(winrt.system.Object, ImplementsIGeometrySource2D):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeometrySource2D: ...

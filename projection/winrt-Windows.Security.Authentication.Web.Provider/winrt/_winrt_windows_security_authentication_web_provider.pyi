@@ -209,6 +209,7 @@ class WebProviderTokenResponse(winrt.system.Object):
 class ImplementsIWebAccountProviderBaseReportOperation():
     pass
 
+@typing.final
 class IWebAccountProviderBaseReportOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderBaseReportOperation: ...
@@ -218,6 +219,7 @@ class IWebAccountProviderBaseReportOperation(winrt.system.Object, ImplementsIWeb
 class ImplementsIWebAccountProviderOperation():
     pass
 
+@typing.final
 class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderOperation: ...
@@ -227,6 +229,7 @@ class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountPro
 class ImplementsIWebAccountProviderSilentReportOperation():
     pass
 
+@typing.final
 class IWebAccountProviderSilentReportOperation(winrt.system.Object, ImplementsIWebAccountProviderSilentReportOperation, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderSilentReportOperation: ...
@@ -238,6 +241,7 @@ class IWebAccountProviderSilentReportOperation(winrt.system.Object, ImplementsIW
 class ImplementsIWebAccountProviderTokenObjects():
     pass
 
+@typing.final
 class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects: ...
@@ -247,6 +251,7 @@ class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccount
 class ImplementsIWebAccountProviderTokenObjects2():
     pass
 
+@typing.final
 class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects2, ImplementsIWebAccountProviderTokenObjects):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects2: ...
@@ -258,6 +263,7 @@ class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccoun
 class ImplementsIWebAccountProviderTokenOperation():
     pass
 
+@typing.final
 class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccountProviderTokenOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenOperation: ...
@@ -275,6 +281,7 @@ class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccou
 class ImplementsIWebAccountProviderUIReportOperation():
     pass
 
+@typing.final
 class IWebAccountProviderUIReportOperation(winrt.system.Object, ImplementsIWebAccountProviderUIReportOperation, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderUIReportOperation: ...

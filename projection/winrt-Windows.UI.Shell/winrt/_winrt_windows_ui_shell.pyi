@@ -265,6 +265,7 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
 class ImplementsIAdaptiveCard():
     pass
 
+@typing.final
 class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCard: ...
@@ -273,6 +274,7 @@ class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
 class ImplementsIAdaptiveCardBuilderStatics():
     pass
 
+@typing.final
 class IAdaptiveCardBuilderStatics(winrt.system.Object, ImplementsIAdaptiveCardBuilderStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCardBuilderStatics: ...

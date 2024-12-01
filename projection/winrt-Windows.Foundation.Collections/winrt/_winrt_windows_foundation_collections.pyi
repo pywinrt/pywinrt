@@ -91,6 +91,7 @@ class ValueSet(winrt.system.Object, ImplementsIPropertySet, ImplementsIObservabl
 class ImplementsIIterable(typing.Generic[T]):
     pass
 
+@typing.final
 class IIterable(winrt.system.Object, ImplementsIIterable, typing.Generic[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __iter__(self) -> IIterator[T]: ...
@@ -99,6 +100,7 @@ class IIterable(winrt.system.Object, ImplementsIIterable, typing.Generic[T]):
 class ImplementsIIterator(typing.Generic[T]):
     pass
 
+@typing.final
 class IIterator(winrt.system.Object, ImplementsIIterator, typing.Generic[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __iter__(self: Self) -> Self: ...
@@ -113,6 +115,7 @@ class IIterator(winrt.system.Object, ImplementsIIterator, typing.Generic[T]):
 class ImplementsIKeyValuePair(typing.Generic[K, V]):
     pass
 
+@typing.final
 class IKeyValuePair(winrt.system.Object, ImplementsIKeyValuePair, typing.Generic[K, V]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     @_property
@@ -123,6 +126,7 @@ class IKeyValuePair(winrt.system.Object, ImplementsIKeyValuePair, typing.Generic
 class ImplementsIMapChangedEventArgs(typing.Generic[K]):
     pass
 
+@typing.final
 class IMapChangedEventArgs(winrt.system.Object, ImplementsIMapChangedEventArgs, typing.Generic[K]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     @_property
@@ -133,6 +137,7 @@ class IMapChangedEventArgs(winrt.system.Object, ImplementsIMapChangedEventArgs, 
 class ImplementsIMapView(typing.Generic[K, V]):
     pass
 
+@typing.final
 class IMapView(winrt.system.Object, ImplementsIMapView, winrt._winrt.Mapping[K, V]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...
@@ -149,6 +154,7 @@ class IMapView(winrt.system.Object, ImplementsIMapView, winrt._winrt.Mapping[K, 
 class ImplementsIMap(typing.Generic[K, V]):
     pass
 
+@typing.final
 class IMap(winrt.system.Object, ImplementsIMap, winrt._winrt.MutableMapping[K, V]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...
@@ -170,6 +176,7 @@ class IMap(winrt.system.Object, ImplementsIMap, winrt._winrt.MutableMapping[K, V
 class ImplementsIObservableMap(typing.Generic[K, V]):
     pass
 
+@typing.final
 class IObservableMap(winrt.system.Object, ImplementsIObservableMap, winrt._winrt.MutableMapping[K, V]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...
@@ -193,6 +200,7 @@ class IObservableMap(winrt.system.Object, ImplementsIObservableMap, winrt._winrt
 class ImplementsIObservableVector(typing.Generic[T]):
     pass
 
+@typing.final
 class IObservableVector(winrt.system.Object, ImplementsIObservableVector, winrt._winrt.MutableSequence[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...
@@ -229,6 +237,7 @@ class IObservableVector(winrt.system.Object, ImplementsIObservableVector, winrt.
 class ImplementsIPropertySet():
     pass
 
+@typing.final
 class IPropertySet(winrt.system.Object, ImplementsIPropertySet, ImplementsIObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -253,6 +262,7 @@ class IPropertySet(winrt.system.Object, ImplementsIPropertySet, ImplementsIObser
 class ImplementsIVectorChangedEventArgs():
     pass
 
+@typing.final
 class IVectorChangedEventArgs(winrt.system.Object, ImplementsIVectorChangedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVectorChangedEventArgs: ...
@@ -264,6 +274,7 @@ class IVectorChangedEventArgs(winrt.system.Object, ImplementsIVectorChangedEvent
 class ImplementsIVectorView(typing.Generic[T]):
     pass
 
+@typing.final
 class IVectorView(winrt.system.Object, ImplementsIVectorView, winrt._winrt.Sequence[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...
@@ -282,6 +293,7 @@ class IVectorView(winrt.system.Object, ImplementsIVectorView, winrt._winrt.Seque
 class ImplementsIVector(typing.Generic[T]):
     pass
 
+@typing.final
 class IVector(winrt.system.Object, ImplementsIVector, winrt._winrt.MutableSequence[T]):
     def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     def __len__(self) -> int: ...

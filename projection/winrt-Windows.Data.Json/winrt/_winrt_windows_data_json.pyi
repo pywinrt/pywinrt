@@ -154,6 +154,7 @@ class JsonValue(winrt.system.Object, windows_foundation.ImplementsIStringable, I
 class ImplementsIJsonValue():
     pass
 
+@typing.final
 class IJsonValue(winrt.system.Object, ImplementsIJsonValue):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IJsonValue: ...

@@ -2148,6 +2148,7 @@ class XamlRootChangedEventArgs(winrt.system.Object):
 class ImplementsIDataTemplateExtension():
     pass
 
+@typing.final
 class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataTemplateExtension: ...
@@ -2158,6 +2159,7 @@ class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtensi
 class ImplementsIElementFactory():
     pass
 
+@typing.final
 class IElementFactory(winrt.system.Object, ImplementsIElementFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IElementFactory: ...
@@ -2167,6 +2169,7 @@ class IElementFactory(winrt.system.Object, ImplementsIElementFactory):
 class ImplementsIXamlServiceProvider():
     pass
 
+@typing.final
 class IXamlServiceProvider(winrt.system.Object, ImplementsIXamlServiceProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlServiceProvider: ...

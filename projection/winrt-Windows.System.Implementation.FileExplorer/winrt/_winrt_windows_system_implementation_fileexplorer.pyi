@@ -25,6 +25,7 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
 class ImplementsISysStorageProviderEventSource():
     pass
 
+@typing.final
 class ISysStorageProviderEventSource(winrt.system.Object, ImplementsISysStorageProviderEventSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderEventSource: ...
@@ -34,6 +35,7 @@ class ISysStorageProviderEventSource(winrt.system.Object, ImplementsISysStorageP
 class ImplementsISysStorageProviderHandlerFactory():
     pass
 
+@typing.final
 class ISysStorageProviderHandlerFactory(winrt.system.Object, ImplementsISysStorageProviderHandlerFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHandlerFactory: ...
@@ -43,6 +45,7 @@ class ISysStorageProviderHandlerFactory(winrt.system.Object, ImplementsISysStora
 class ImplementsISysStorageProviderHttpRequestProvider():
     pass
 
+@typing.final
 class ISysStorageProviderHttpRequestProvider(winrt.system.Object, ImplementsISysStorageProviderHttpRequestProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHttpRequestProvider: ...

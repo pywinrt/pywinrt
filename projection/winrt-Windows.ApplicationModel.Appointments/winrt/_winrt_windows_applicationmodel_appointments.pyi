@@ -534,6 +534,7 @@ class FindAppointmentsOptions(winrt.system.Object):
 class ImplementsIAppointmentParticipant():
     pass
 
+@typing.final
 class IAppointmentParticipant(winrt.system.Object, ImplementsIAppointmentParticipant):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentParticipant: ...

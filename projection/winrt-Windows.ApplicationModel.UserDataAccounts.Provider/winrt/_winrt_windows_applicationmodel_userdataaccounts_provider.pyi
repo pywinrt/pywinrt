@@ -62,6 +62,7 @@ class UserDataAccountProviderSettingsOperation(winrt.system.Object, ImplementsIU
 class ImplementsIUserDataAccountProviderOperation():
     pass
 
+@typing.final
 class IUserDataAccountProviderOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderOperation: ...

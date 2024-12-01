@@ -636,6 +636,7 @@ class SmsWapMessage(winrt.system.Object, ImplementsISmsMessageBase):
 class ImplementsISmsBinaryMessage():
     pass
 
+@typing.final
 class ISmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsBinaryMessage: ...
@@ -655,6 +656,7 @@ class ISmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, Implem
 class ImplementsISmsDevice():
     pass
 
+@typing.final
 class ISmsDevice(winrt.system.Object, ImplementsISmsDevice):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsDevice: ...
@@ -682,6 +684,7 @@ class ISmsDevice(winrt.system.Object, ImplementsISmsDevice):
 class ImplementsISmsMessage():
     pass
 
+@typing.final
 class ISmsMessage(winrt.system.Object, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessage: ...
@@ -693,6 +696,7 @@ class ISmsMessage(winrt.system.Object, ImplementsISmsMessage):
 class ImplementsISmsMessageBase():
     pass
 
+@typing.final
 class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessageBase: ...
@@ -710,6 +714,7 @@ class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
 class ImplementsISmsTextMessage():
     pass
 
+@typing.final
 class ISmsTextMessage(winrt.system.Object, ImplementsISmsTextMessage, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsTextMessage: ...

@@ -705,6 +705,7 @@ class UserWatcher(winrt.system.Object):
 class ImplementsILauncherViewOptions():
     pass
 
+@typing.final
 class ILauncherViewOptions(winrt.system.Object, ImplementsILauncherViewOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILauncherViewOptions: ...

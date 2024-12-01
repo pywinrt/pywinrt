@@ -956,6 +956,7 @@ class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioForma
 class ImplementsIAudioInputNode():
     pass
 
+@typing.final
 class IAudioInputNode(winrt.system.Object, ImplementsIAudioInputNode, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -988,6 +989,7 @@ class IAudioInputNode(winrt.system.Object, ImplementsIAudioInputNode, Implements
 class ImplementsIAudioInputNode2():
     pass
 
+@typing.final
 class IAudioInputNode2(winrt.system.Object, ImplementsIAudioInputNode2, ImplementsIAudioInputNode, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1022,6 +1024,7 @@ class IAudioInputNode2(winrt.system.Object, ImplementsIAudioInputNode2, Implemen
 class ImplementsIAudioNode():
     pass
 
+@typing.final
 class IAudioNode(winrt.system.Object, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1049,6 +1052,7 @@ class IAudioNode(winrt.system.Object, ImplementsIAudioNode, windows_foundation.I
 class ImplementsIAudioNodeWithListener():
     pass
 
+@typing.final
 class IAudioNodeWithListener(winrt.system.Object, ImplementsIAudioNodeWithListener, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

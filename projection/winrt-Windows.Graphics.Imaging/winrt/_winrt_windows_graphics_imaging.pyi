@@ -361,6 +361,7 @@ class SoftwareBitmap(winrt.system.Object, windows_foundation.ImplementsIClosable
 class ImplementsIBitmapFrame():
     pass
 
+@typing.final
 class IBitmapFrame(winrt.system.Object, ImplementsIBitmapFrame):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapFrame: ...
@@ -389,6 +390,7 @@ class IBitmapFrame(winrt.system.Object, ImplementsIBitmapFrame):
 class ImplementsIBitmapFrameWithSoftwareBitmap():
     pass
 
+@typing.final
 class IBitmapFrameWithSoftwareBitmap(winrt.system.Object, ImplementsIBitmapFrameWithSoftwareBitmap, ImplementsIBitmapFrame):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapFrameWithSoftwareBitmap: ...
@@ -420,6 +422,7 @@ class IBitmapFrameWithSoftwareBitmap(winrt.system.Object, ImplementsIBitmapFrame
 class ImplementsIBitmapPropertiesView():
     pass
 
+@typing.final
 class IBitmapPropertiesView(winrt.system.Object, ImplementsIBitmapPropertiesView):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapPropertiesView: ...

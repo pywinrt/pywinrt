@@ -472,6 +472,7 @@ class RemoteSystemWebAccountFilter(winrt.system.Object, ImplementsIRemoteSystemF
 class ImplementsIRemoteSystemFilter():
     pass
 
+@typing.final
 class IRemoteSystemFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRemoteSystemFilter: ...

@@ -155,7 +155,7 @@ static class ObjectWriterExtensions
                 $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
         }
 
-        if (type.Category != Category.Interface && !type.IsComposable)
+        if (!type.IsComposable)
         {
             w.WriteLine("@typing.final");
         }

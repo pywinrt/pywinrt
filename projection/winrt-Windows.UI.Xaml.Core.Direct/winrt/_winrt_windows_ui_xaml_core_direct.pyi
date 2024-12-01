@@ -83,6 +83,7 @@ class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
 class ImplementsIXamlDirectObject():
     pass
 
+@typing.final
 class IXamlDirectObject(winrt.system.Object, ImplementsIXamlDirectObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlDirectObject: ...

@@ -191,6 +191,7 @@ class UserActivityVisualElements(winrt.system.Object):
 class ImplementsIUserActivityContentInfo():
     pass
 
+@typing.final
 class IUserActivityContentInfo(winrt.system.Object, ImplementsIUserActivityContentInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserActivityContentInfo: ...

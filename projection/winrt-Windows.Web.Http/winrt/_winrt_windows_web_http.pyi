@@ -467,6 +467,7 @@ class HttpTransportInformation(winrt.system.Object, windows_foundation.Implement
 class ImplementsIHttpContent():
     pass
 
+@typing.final
 class IHttpContent(winrt.system.Object, ImplementsIHttpContent, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

@@ -206,6 +206,7 @@ class TensorVariableDescriptorPreview(winrt.system.Object, ImplementsILearningMo
 class ImplementsILearningModelVariableDescriptorPreview():
     pass
 
+@typing.final
 class ILearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelVariableDescriptorPreview: ...

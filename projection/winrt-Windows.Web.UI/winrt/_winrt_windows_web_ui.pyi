@@ -185,6 +185,7 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
 class ImplementsIWebViewControl():
     pass
 
+@typing.final
 class IWebViewControl(winrt.system.Object, ImplementsIWebViewControl):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl: ...
@@ -259,6 +260,7 @@ class IWebViewControl(winrt.system.Object, ImplementsIWebViewControl):
 class ImplementsIWebViewControl2():
     pass
 
+@typing.final
 class IWebViewControl2(winrt.system.Object, ImplementsIWebViewControl2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl2: ...

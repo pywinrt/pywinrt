@@ -109,6 +109,7 @@ class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
 class ImplementsIPropertyAnimation():
     pass
 
+@typing.final
 class IPropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertyAnimation: ...

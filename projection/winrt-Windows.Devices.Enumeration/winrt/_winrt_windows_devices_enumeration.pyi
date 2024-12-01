@@ -367,6 +367,7 @@ class EnclosureLocation(winrt.system.Object):
 class ImplementsIDeviceEnumerationSettings():
     pass
 
+@typing.final
 class IDeviceEnumerationSettings(winrt.system.Object, ImplementsIDeviceEnumerationSettings):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDeviceEnumerationSettings: ...
@@ -374,6 +375,7 @@ class IDeviceEnumerationSettings(winrt.system.Object, ImplementsIDeviceEnumerati
 class ImplementsIDevicePairingSettings():
     pass
 
+@typing.final
 class IDevicePairingSettings(winrt.system.Object, ImplementsIDevicePairingSettings):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingSettings: ...

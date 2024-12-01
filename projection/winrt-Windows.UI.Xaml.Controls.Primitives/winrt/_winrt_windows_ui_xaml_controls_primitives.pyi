@@ -1736,6 +1736,7 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
 class ImplementsIScrollSnapPointsInfo():
     pass
 
+@typing.final
 class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollSnapPointsInfo: ...

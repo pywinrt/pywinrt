@@ -16,6 +16,7 @@ Self = typing.TypeVar('Self')
 class ImplementsIPwmControllerProvider():
     pass
 
+@typing.final
 class IPwmControllerProvider(winrt.system.Object, ImplementsIPwmControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPwmControllerProvider: ...
@@ -37,6 +38,7 @@ class IPwmControllerProvider(winrt.system.Object, ImplementsIPwmControllerProvid
 class ImplementsIPwmProvider():
     pass
 
+@typing.final
 class IPwmProvider(winrt.system.Object, ImplementsIPwmProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPwmProvider: ...

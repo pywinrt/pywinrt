@@ -263,6 +263,7 @@ class VideoProperties(winrt.system.Object, ImplementsIStorageItemExtraProperties
 class ImplementsIStorageItemExtraProperties():
     pass
 
+@typing.final
 class IStorageItemExtraProperties(winrt.system.Object, ImplementsIStorageItemExtraProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemExtraProperties: ...

@@ -117,6 +117,7 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
 class ImplementsIGameListEntry():
     pass
 
+@typing.final
 class IGameListEntry(winrt.system.Object, ImplementsIGameListEntry):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameListEntry: ...

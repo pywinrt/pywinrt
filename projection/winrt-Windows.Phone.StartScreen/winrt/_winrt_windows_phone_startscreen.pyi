@@ -43,6 +43,7 @@ class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
 class ImplementsIToastNotificationManagerStatics3():
     pass
 
+@typing.final
 class IToastNotificationManagerStatics3(winrt.system.Object, ImplementsIToastNotificationManagerStatics3):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationManagerStatics3: ...

@@ -580,6 +580,7 @@ class WindowSizeChangedEventArgs(winrt.system.Object, ImplementsICoreWindowEvent
 class ImplementsICoreAcceleratorKeys():
     pass
 
+@typing.final
 class ICoreAcceleratorKeys(winrt.system.Object, ImplementsICoreAcceleratorKeys):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAcceleratorKeys: ...
@@ -589,6 +590,7 @@ class ICoreAcceleratorKeys(winrt.system.Object, ImplementsICoreAcceleratorKeys):
 class ImplementsICoreInputSourceBase():
     pass
 
+@typing.final
 class ICoreInputSourceBase(winrt.system.Object, ImplementsICoreInputSourceBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreInputSourceBase: ...
@@ -604,6 +606,7 @@ class ICoreInputSourceBase(winrt.system.Object, ImplementsICoreInputSourceBase):
 class ImplementsICorePointerInputSource():
     pass
 
+@typing.final
 class ICorePointerInputSource(winrt.system.Object, ImplementsICorePointerInputSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerInputSource: ...
@@ -635,6 +638,7 @@ class ICorePointerInputSource(winrt.system.Object, ImplementsICorePointerInputSo
 class ImplementsICorePointerInputSource2():
     pass
 
+@typing.final
 class ICorePointerInputSource2(winrt.system.Object, ImplementsICorePointerInputSource2, ImplementsICorePointerInputSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerInputSource2: ...
@@ -668,6 +672,7 @@ class ICorePointerInputSource2(winrt.system.Object, ImplementsICorePointerInputS
 class ImplementsICorePointerRedirector():
     pass
 
+@typing.final
 class ICorePointerRedirector(winrt.system.Object, ImplementsICorePointerRedirector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerRedirector: ...
@@ -681,6 +686,7 @@ class ICorePointerRedirector(winrt.system.Object, ImplementsICorePointerRedirect
 class ImplementsICoreWindow():
     pass
 
+@typing.final
 class ICoreWindow(winrt.system.Object, ImplementsICoreWindow):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindow: ...
@@ -752,6 +758,7 @@ class ICoreWindow(winrt.system.Object, ImplementsICoreWindow):
 class ImplementsICoreWindowEventArgs():
     pass
 
+@typing.final
 class ICoreWindowEventArgs(winrt.system.Object, ImplementsICoreWindowEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindowEventArgs: ...
@@ -763,6 +770,7 @@ class ICoreWindowEventArgs(winrt.system.Object, ImplementsICoreWindowEventArgs):
 class ImplementsIInitializeWithCoreWindow():
     pass
 
+@typing.final
 class IInitializeWithCoreWindow(winrt.system.Object, ImplementsIInitializeWithCoreWindow):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInitializeWithCoreWindow: ...

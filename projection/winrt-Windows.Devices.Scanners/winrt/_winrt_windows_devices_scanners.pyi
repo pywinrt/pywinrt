@@ -249,6 +249,7 @@ class ImageScannerScanResult(winrt.system.Object):
 class ImplementsIImageScannerFormatConfiguration():
     pass
 
+@typing.final
 class IImageScannerFormatConfiguration(winrt.system.Object, ImplementsIImageScannerFormatConfiguration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IImageScannerFormatConfiguration: ...
@@ -263,6 +264,7 @@ class IImageScannerFormatConfiguration(winrt.system.Object, ImplementsIImageScan
 class ImplementsIImageScannerSourceConfiguration():
     pass
 
+@typing.final
 class IImageScannerSourceConfiguration(winrt.system.Object, ImplementsIImageScannerSourceConfiguration, ImplementsIImageScannerFormatConfiguration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IImageScannerSourceConfiguration: ...

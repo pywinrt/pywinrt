@@ -222,6 +222,7 @@ class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
 class ImplementsILampArrayEffect():
     pass
 
+@typing.final
 class ILampArrayEffect(winrt.system.Object, ImplementsILampArrayEffect):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILampArrayEffect: ...

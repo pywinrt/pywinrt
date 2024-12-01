@@ -145,6 +145,7 @@ class SystemBackdropConfiguration(winrt.system.Object):
 class ImplementsISystemBackdropController():
     pass
 
+@typing.final
 class ISystemBackdropController(winrt.system.Object, ImplementsISystemBackdropController, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -157,6 +158,7 @@ class ISystemBackdropController(winrt.system.Object, ImplementsISystemBackdropCo
 class ImplementsISystemBackdropControllerWithTargets():
     pass
 
+@typing.final
 class ISystemBackdropControllerWithTargets(winrt.system.Object, ImplementsISystemBackdropControllerWithTargets, ImplementsISystemBackdropController, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

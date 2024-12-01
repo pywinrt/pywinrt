@@ -365,6 +365,7 @@ class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windo
 class ImplementsIContentSiteBridge():
     pass
 
+@typing.final
 class IContentSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
