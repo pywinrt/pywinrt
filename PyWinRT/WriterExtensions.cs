@@ -1934,53 +1934,6 @@ static class WriterExtensions
         }
     }
 
-    private static bool IsProblematicOverride(ProjectedMethod method)
-    {
-        if (method.Method.Name == "SetValue")
-        {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
-            {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml"
-                        || baseType.Namespace == "Windows.UI.Xaml"
-                    )
-                    && baseType.Name == "DependencyObject"
-                )
-                {
-                    return true;
-                }
-            }
-        }
-
-        if (method.Method.Name == "ShowAt")
-        {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
-            {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
-                        || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
-                    )
-                    && baseType.Name == "FlyoutBase"
-                )
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
     public static void WritePythonMethodTyping(
         this IndentedTextWriter w,
         ProjectedMethod method,
@@ -1997,7 +1950,7 @@ static class WriterExtensions
         // HACK: There are a couple of problematic methods. Subclasses of
         // DependencyObject like to override SetValue with a different
         // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-        var typeIgnore = IsProblematicOverride(method) ? "  # type: ignore[override]" : "";
+        var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc,override]" : "";
 
         var paramList = "";
 

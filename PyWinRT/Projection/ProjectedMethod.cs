@@ -89,6 +89,22 @@ class ProjectedMethod(
     public bool IsStatic { get; } = method.IsStatic;
 
     /// <summary>
+    /// Gets a value indicating whether the method is public.
+    /// </summary>
+    public bool IsPublic { get; } = method.IsPublic;
+
+    /// <summary>
+    /// Gets a value indicating whether the method is implementing an exclusive interface.
+    /// </summary>
+    public bool IsExclusiveTo { get; } =
+        method.Overrides.Any(o =>
+            o.DeclaringType.Resolve()
+                .CustomAttributes.Any(a =>
+                    a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
+                )
+        );
+
+    /// <summary>
     /// Gets a value indicating if the method has WinRT protected semantics
     /// </summary>
     public bool IsProtected { get; } =
