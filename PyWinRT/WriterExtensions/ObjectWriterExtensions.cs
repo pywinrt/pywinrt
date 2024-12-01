@@ -55,7 +55,18 @@ static class ObjectWriterExtensions
 
             foreach (var evt in type.Events.Where(e => e.IsStatic))
             {
+                if (type.IsComposable)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WritePythonMethodTyping(evt.AddMethod, ns, "cls");
+
+                if (type.IsComposable)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WritePythonMethodTyping(evt.RemoveMethod, ns, "cls");
 
                 hasMembers = true;
@@ -404,7 +415,18 @@ static class ObjectWriterExtensions
 
         foreach (var evt in type.Events.Where(e => !e.IsStatic))
         {
+            if (type.IsComposable)
+            {
+                w.WriteLine("@typing.final");
+            }
+
             w.WritePythonMethodTyping(evt.AddMethod, ns);
+
+            if (type.IsComposable)
+            {
+                w.WriteLine("@typing.final");
+            }
+
             w.WritePythonMethodTyping(evt.RemoveMethod, ns);
         }
 
