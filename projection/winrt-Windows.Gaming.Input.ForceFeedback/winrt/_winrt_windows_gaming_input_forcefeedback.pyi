@@ -109,6 +109,7 @@ class RampForceEffect(winrt.system.Object, ImplementsIForceFeedbackEffect):
 class ImplementsIForceFeedbackEffect():
     pass
 
+@typing.final
 class IForceFeedbackEffect(winrt.system.Object, ImplementsIForceFeedbackEffect):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IForceFeedbackEffect: ...

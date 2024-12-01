@@ -112,6 +112,7 @@ class XusbGameControllerProvider(winrt.system.Object, ImplementsIGameControllerP
 class ImplementsICustomGameControllerFactory():
     pass
 
+@typing.final
 class ICustomGameControllerFactory(winrt.system.Object, ImplementsICustomGameControllerFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomGameControllerFactory: ...
@@ -122,6 +123,7 @@ class ICustomGameControllerFactory(winrt.system.Object, ImplementsICustomGameCon
 class ImplementsIGameControllerInputSink():
     pass
 
+@typing.final
 class IGameControllerInputSink(winrt.system.Object, ImplementsIGameControllerInputSink):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerInputSink: ...
@@ -131,6 +133,7 @@ class IGameControllerInputSink(winrt.system.Object, ImplementsIGameControllerInp
 class ImplementsIGameControllerProvider():
     pass
 
+@typing.final
 class IGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerProvider: ...
@@ -148,6 +151,7 @@ class IGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProv
 class ImplementsIGipGameControllerInputSink():
     pass
 
+@typing.final
 class IGipGameControllerInputSink(winrt.system.Object, ImplementsIGipGameControllerInputSink, ImplementsIGameControllerInputSink):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGipGameControllerInputSink: ...
@@ -159,6 +163,7 @@ class IGipGameControllerInputSink(winrt.system.Object, ImplementsIGipGameControl
 class ImplementsIHidGameControllerInputSink():
     pass
 
+@typing.final
 class IHidGameControllerInputSink(winrt.system.Object, ImplementsIHidGameControllerInputSink, ImplementsIGameControllerInputSink):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IHidGameControllerInputSink: ...
@@ -169,6 +174,7 @@ class IHidGameControllerInputSink(winrt.system.Object, ImplementsIHidGameControl
 class ImplementsIXusbGameControllerInputSink():
     pass
 
+@typing.final
 class IXusbGameControllerInputSink(winrt.system.Object, ImplementsIXusbGameControllerInputSink, ImplementsIGameControllerInputSink):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXusbGameControllerInputSink: ...

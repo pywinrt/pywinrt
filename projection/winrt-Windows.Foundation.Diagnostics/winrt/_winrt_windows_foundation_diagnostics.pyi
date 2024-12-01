@@ -342,6 +342,7 @@ class TracingStatusChangedEventArgs(winrt.system.Object):
 class ImplementsIErrorReportingSettings():
     pass
 
+@typing.final
 class IErrorReportingSettings(winrt.system.Object, ImplementsIErrorReportingSettings):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IErrorReportingSettings: ...
@@ -351,6 +352,7 @@ class IErrorReportingSettings(winrt.system.Object, ImplementsIErrorReportingSett
 class ImplementsIFileLoggingSession():
     pass
 
+@typing.final
 class IFileLoggingSession(winrt.system.Object, ImplementsIFileLoggingSession, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -369,6 +371,7 @@ class IFileLoggingSession(winrt.system.Object, ImplementsIFileLoggingSession, wi
 class ImplementsILoggingChannel():
     pass
 
+@typing.final
 class ILoggingChannel(winrt.system.Object, ImplementsILoggingChannel, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -391,6 +394,7 @@ class ILoggingChannel(winrt.system.Object, ImplementsILoggingChannel, windows_fo
 class ImplementsILoggingSession():
     pass
 
+@typing.final
 class ILoggingSession(winrt.system.Object, ImplementsILoggingSession, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -407,6 +411,7 @@ class ILoggingSession(winrt.system.Object, ImplementsILoggingSession, windows_fo
 class ImplementsILoggingTarget():
     pass
 
+@typing.final
 class ILoggingTarget(winrt.system.Object, ImplementsILoggingTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILoggingTarget: ...

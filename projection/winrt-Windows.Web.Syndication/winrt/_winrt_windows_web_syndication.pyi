@@ -607,6 +607,7 @@ class SyndicationText(winrt.system.Object, ImplementsISyndicationText, Implement
 class ImplementsISyndicationClient():
     pass
 
+@typing.final
 class ISyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationClient: ...
@@ -636,6 +637,7 @@ class ISyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
 class ImplementsISyndicationNode():
     pass
 
+@typing.final
 class ISyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationNode: ...
@@ -668,6 +670,7 @@ class ISyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
 class ImplementsISyndicationText():
     pass
 
+@typing.final
 class ISyndicationText(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationText: ...

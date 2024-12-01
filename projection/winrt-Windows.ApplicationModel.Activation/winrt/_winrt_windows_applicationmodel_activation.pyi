@@ -858,6 +858,7 @@ class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, Implemen
 class ImplementsIActivatedEventArgs():
     pass
 
+@typing.final
 class IActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgs: ...
@@ -871,6 +872,7 @@ class IActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
 class ImplementsIActivatedEventArgsWithUser():
     pass
 
+@typing.final
 class IActivatedEventArgsWithUser(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgsWithUser: ...
@@ -886,6 +888,7 @@ class IActivatedEventArgsWithUser(winrt.system.Object, ImplementsIActivatedEvent
 class ImplementsIApplicationViewActivatedEventArgs():
     pass
 
+@typing.final
 class IApplicationViewActivatedEventArgs(winrt.system.Object, ImplementsIApplicationViewActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IApplicationViewActivatedEventArgs: ...
@@ -901,6 +904,7 @@ class IApplicationViewActivatedEventArgs(winrt.system.Object, ImplementsIApplica
 class ImplementsIAppointmentsProviderActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderActivatedEventArgs: ...
@@ -916,6 +920,7 @@ class IAppointmentsProviderActivatedEventArgs(winrt.system.Object, ImplementsIAp
 class ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderAddAppointmentActivatedEventArgs: ...
@@ -933,6 +938,7 @@ class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object,
 class ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
@@ -950,6 +956,7 @@ class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Obje
 class ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
@@ -967,6 +974,7 @@ class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Obj
 class ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
@@ -988,6 +996,7 @@ class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system
 class ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs():
     pass
 
+@typing.final
 class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowTimeFrameActivatedEventArgs: ...
@@ -1007,6 +1016,7 @@ class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, 
 class ImplementsIBackgroundActivatedEventArgs():
     pass
 
+@typing.final
 class IBackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundActivatedEventArgs: ...
@@ -1016,6 +1026,7 @@ class IBackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundAc
 class ImplementsIBarcodeScannerPreviewActivatedEventArgs():
     pass
 
+@typing.final
 class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIBarcodeScannerPreviewActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBarcodeScannerPreviewActivatedEventArgs: ...
@@ -1031,6 +1042,7 @@ class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIB
 class ImplementsICachedFileUpdaterActivatedEventArgs():
     pass
 
+@typing.final
 class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsICachedFileUpdaterActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICachedFileUpdaterActivatedEventArgs: ...
@@ -1046,6 +1058,7 @@ class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsICache
 class ImplementsICameraSettingsActivatedEventArgs():
     pass
 
+@typing.final
 class ICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICameraSettingsActivatedEventArgs: ...
@@ -1063,6 +1076,7 @@ class ICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSe
 class ImplementsICommandLineActivatedEventArgs():
     pass
 
+@typing.final
 class ICommandLineActivatedEventArgs(winrt.system.Object, ImplementsICommandLineActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandLineActivatedEventArgs: ...
@@ -1078,6 +1092,7 @@ class ICommandLineActivatedEventArgs(winrt.system.Object, ImplementsICommandLine
 class ImplementsIContactActivatedEventArgs():
     pass
 
+@typing.final
 class IContactActivatedEventArgs(winrt.system.Object, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactActivatedEventArgs: ...
@@ -1093,6 +1108,7 @@ class IContactActivatedEventArgs(winrt.system.Object, ImplementsIContactActivate
 class ImplementsIContactCallActivatedEventArgs():
     pass
 
+@typing.final
 class IContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactCallActivatedEventArgs: ...
@@ -1114,6 +1130,7 @@ class IContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCall
 class ImplementsIContactMapActivatedEventArgs():
     pass
 
+@typing.final
 class IContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMapActivatedEventArgs: ...
@@ -1133,6 +1150,7 @@ class IContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapAc
 class ImplementsIContactMessageActivatedEventArgs():
     pass
 
+@typing.final
 class IContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactMessageActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMessageActivatedEventArgs: ...
@@ -1154,6 +1172,7 @@ class IContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactM
 class ImplementsIContactPanelActivatedEventArgs():
     pass
 
+@typing.final
 class IContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIContactPanelActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPanelActivatedEventArgs: ...
@@ -1165,6 +1184,7 @@ class IContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIContactPan
 class ImplementsIContactPickerActivatedEventArgs():
     pass
 
+@typing.final
 class IContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPickerActivatedEventArgs: ...
@@ -1180,6 +1200,7 @@ class IContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPi
 class ImplementsIContactPostActivatedEventArgs():
     pass
 
+@typing.final
 class IContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPostActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPostActivatedEventArgs: ...
@@ -1201,6 +1222,7 @@ class IContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPost
 class ImplementsIContactVideoCallActivatedEventArgs():
     pass
 
+@typing.final
 class IContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContactVideoCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactVideoCallActivatedEventArgs: ...
@@ -1222,6 +1244,7 @@ class IContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContac
 class ImplementsIContactsProviderActivatedEventArgs():
     pass
 
+@typing.final
 class IContactsProviderActivatedEventArgs(winrt.system.Object, ImplementsIContactsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactsProviderActivatedEventArgs: ...
@@ -1237,6 +1260,7 @@ class IContactsProviderActivatedEventArgs(winrt.system.Object, ImplementsIContac
 class ImplementsIContinuationActivatedEventArgs():
     pass
 
+@typing.final
 class IContinuationActivatedEventArgs(winrt.system.Object, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContinuationActivatedEventArgs: ...
@@ -1252,6 +1276,7 @@ class IContinuationActivatedEventArgs(winrt.system.Object, ImplementsIContinuati
 class ImplementsIDeviceActivatedEventArgs():
     pass
 
+@typing.final
 class IDeviceActivatedEventArgs(winrt.system.Object, ImplementsIDeviceActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDeviceActivatedEventArgs: ...
@@ -1269,6 +1294,7 @@ class IDeviceActivatedEventArgs(winrt.system.Object, ImplementsIDeviceActivatedE
 class ImplementsIDevicePairingActivatedEventArgs():
     pass
 
+@typing.final
 class IDevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIDevicePairingActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingActivatedEventArgs: ...
@@ -1284,6 +1310,7 @@ class IDevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIDevicePai
 class ImplementsIDialReceiverActivatedEventArgs():
     pass
 
+@typing.final
 class IDialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIDialReceiverActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDialReceiverActivatedEventArgs: ...
@@ -1303,6 +1330,7 @@ class IDialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIDialReceiv
 class ImplementsIFileActivatedEventArgs():
     pass
 
+@typing.final
 class IFileActivatedEventArgs(winrt.system.Object, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgs: ...
@@ -1320,6 +1348,7 @@ class IFileActivatedEventArgs(winrt.system.Object, ImplementsIFileActivatedEvent
 class ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName():
     pass
 
+@typing.final
 class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object, ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithCallerPackageFamilyName: ...
@@ -1335,6 +1364,7 @@ class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object, Im
 class ImplementsIFileActivatedEventArgsWithNeighboringFiles():
     pass
 
+@typing.final
 class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object, ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithNeighboringFiles: ...
@@ -1354,6 +1384,7 @@ class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object, Implement
 class ImplementsIFileOpenPickerActivatedEventArgs():
     pass
 
+@typing.final
 class IFileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs: ...
@@ -1369,6 +1400,7 @@ class IFileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIFileOpen
 class ImplementsIFileOpenPickerActivatedEventArgs2():
     pass
 
+@typing.final
 class IFileOpenPickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs2: ...
@@ -1378,6 +1410,7 @@ class IFileOpenPickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileOpe
 class ImplementsIFileOpenPickerContinuationEventArgs():
     pass
 
+@typing.final
 class IFileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIFileOpenPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerContinuationEventArgs: ...
@@ -1395,6 +1428,7 @@ class IFileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIFileO
 class ImplementsIFileSavePickerActivatedEventArgs():
     pass
 
+@typing.final
 class IFileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs: ...
@@ -1410,6 +1444,7 @@ class IFileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIFileSave
 class ImplementsIFileSavePickerActivatedEventArgs2():
     pass
 
+@typing.final
 class IFileSavePickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs2: ...
@@ -1421,6 +1456,7 @@ class IFileSavePickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileSav
 class ImplementsIFileSavePickerContinuationEventArgs():
     pass
 
+@typing.final
 class IFileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIFileSavePickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerContinuationEventArgs: ...
@@ -1438,6 +1474,7 @@ class IFileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIFileS
 class ImplementsIFolderPickerContinuationEventArgs():
     pass
 
+@typing.final
 class IFolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIFolderPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFolderPickerContinuationEventArgs: ...
@@ -1455,6 +1492,7 @@ class IFolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIFolderP
 class ImplementsILaunchActivatedEventArgs():
     pass
 
+@typing.final
 class ILaunchActivatedEventArgs(winrt.system.Object, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs: ...
@@ -1472,6 +1510,7 @@ class ILaunchActivatedEventArgs(winrt.system.Object, ImplementsILaunchActivatedE
 class ImplementsILaunchActivatedEventArgs2():
     pass
 
+@typing.final
 class ILaunchActivatedEventArgs2(winrt.system.Object, ImplementsILaunchActivatedEventArgs2, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs2: ...
@@ -1491,6 +1530,7 @@ class ILaunchActivatedEventArgs2(winrt.system.Object, ImplementsILaunchActivated
 class ImplementsILockScreenActivatedEventArgs():
     pass
 
+@typing.final
 class ILockScreenActivatedEventArgs(winrt.system.Object, ImplementsILockScreenActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenActivatedEventArgs: ...
@@ -1506,6 +1546,7 @@ class ILockScreenActivatedEventArgs(winrt.system.Object, ImplementsILockScreenAc
 class ImplementsILockScreenCallActivatedEventArgs():
     pass
 
+@typing.final
 class ILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsILockScreenCallActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenCallActivatedEventArgs: ...
@@ -1525,6 +1566,7 @@ class ILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsILockScre
 class ImplementsIPhoneCallActivatedEventArgs():
     pass
 
+@typing.final
 class IPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIPhoneCallActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPhoneCallActivatedEventArgs: ...
@@ -1540,6 +1582,7 @@ class IPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIPhoneCallActi
 class ImplementsIPickerReturnedActivatedEventArgs():
     pass
 
+@typing.final
 class IPickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerReturnedActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPickerReturnedActivatedEventArgs: ...
@@ -1555,6 +1598,7 @@ class IPickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerRe
 class ImplementsIPrelaunchActivatedEventArgs():
     pass
 
+@typing.final
 class IPrelaunchActivatedEventArgs(winrt.system.Object, ImplementsIPrelaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrelaunchActivatedEventArgs: ...
@@ -1570,6 +1614,7 @@ class IPrelaunchActivatedEventArgs(winrt.system.Object, ImplementsIPrelaunchActi
 class ImplementsIPrint3DWorkflowActivatedEventArgs():
     pass
 
+@typing.final
 class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3DWorkflowActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrint3DWorkflowActivatedEventArgs: ...
@@ -1585,6 +1630,7 @@ class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3D
 class ImplementsIPrintTaskSettingsActivatedEventArgs():
     pass
 
+@typing.final
 class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrintTaskSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskSettingsActivatedEventArgs: ...
@@ -1600,6 +1646,7 @@ class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrint
 class ImplementsIProtocolActivatedEventArgs():
     pass
 
+@typing.final
 class IProtocolActivatedEventArgs(winrt.system.Object, ImplementsIProtocolActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgs: ...
@@ -1615,6 +1662,7 @@ class IProtocolActivatedEventArgs(winrt.system.Object, ImplementsIProtocolActiva
 class ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData():
     pass
 
+@typing.final
 class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system.Object, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData: ...
@@ -1632,6 +1680,7 @@ class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system
 class ImplementsIProtocolForResultsActivatedEventArgs():
     pass
 
+@typing.final
 class IProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIProtocolForResultsActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolForResultsActivatedEventArgs: ...
@@ -1647,6 +1696,7 @@ class IProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIProt
 class ImplementsIRestrictedLaunchActivatedEventArgs():
     pass
 
+@typing.final
 class IRestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIRestrictedLaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRestrictedLaunchActivatedEventArgs: ...
@@ -1662,6 +1712,7 @@ class IRestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIRestri
 class ImplementsISearchActivatedEventArgs():
     pass
 
+@typing.final
 class ISearchActivatedEventArgs(winrt.system.Object, ImplementsISearchActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgs: ...
@@ -1679,6 +1730,7 @@ class ISearchActivatedEventArgs(winrt.system.Object, ImplementsISearchActivatedE
 class ImplementsISearchActivatedEventArgsWithLinguisticDetails():
     pass
 
+@typing.final
 class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object, ImplementsISearchActivatedEventArgsWithLinguisticDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgsWithLinguisticDetails: ...
@@ -1688,6 +1740,7 @@ class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object, Implem
 class ImplementsIShareTargetActivatedEventArgs():
     pass
 
+@typing.final
 class IShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIShareTargetActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IShareTargetActivatedEventArgs: ...
@@ -1703,6 +1756,7 @@ class IShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIShareTarget
 class ImplementsIStartupTaskActivatedEventArgs():
     pass
 
+@typing.final
 class IStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIStartupTaskActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStartupTaskActivatedEventArgs: ...
@@ -1718,6 +1772,7 @@ class IStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIStartupTask
 class ImplementsIToastNotificationActivatedEventArgs():
     pass
 
+@typing.final
 class IToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIToastNotificationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationActivatedEventArgs: ...
@@ -1735,6 +1790,7 @@ class IToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIToast
 class ImplementsIUserDataAccountProviderActivatedEventArgs():
     pass
 
+@typing.final
 class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIUserDataAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderActivatedEventArgs: ...
@@ -1750,6 +1806,7 @@ class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object, Implements
 class ImplementsIViewSwitcherProvider():
     pass
 
+@typing.final
 class IViewSwitcherProvider(winrt.system.Object, ImplementsIViewSwitcherProvider, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IViewSwitcherProvider: ...
@@ -1765,6 +1822,7 @@ class IViewSwitcherProvider(winrt.system.Object, ImplementsIViewSwitcherProvider
 class ImplementsIVoiceCommandActivatedEventArgs():
     pass
 
+@typing.final
 class IVoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIVoiceCommandActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVoiceCommandActivatedEventArgs: ...
@@ -1780,6 +1838,7 @@ class IVoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIVoiceComma
 class ImplementsIWalletActionActivatedEventArgs():
     pass
 
+@typing.final
 class IWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActionActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWalletActionActivatedEventArgs: ...
@@ -1799,6 +1858,7 @@ class IWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActi
 class ImplementsIWebAccountProviderActivatedEventArgs():
     pass
 
+@typing.final
 class IWebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIWebAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderActivatedEventArgs: ...
@@ -1814,6 +1874,7 @@ class IWebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIWebA
 class ImplementsIWebAuthenticationBrokerContinuationEventArgs():
     pass
 
+@typing.final
 class IWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIWebAuthenticationBrokerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAuthenticationBrokerContinuationEventArgs: ...

@@ -191,6 +191,7 @@ class FolderInformation(winrt.system.Object, windows_storage.ImplementsIStorageI
 class ImplementsIStorageItemInformation():
     pass
 
+@typing.final
 class IStorageItemInformation(winrt.system.Object, ImplementsIStorageItemInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemInformation: ...

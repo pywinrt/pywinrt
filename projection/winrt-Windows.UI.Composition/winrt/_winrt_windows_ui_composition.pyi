@@ -1974,6 +1974,7 @@ class VisualUnorderedCollection(CompositionObject):
 class ImplementsIAnimationObject():
     pass
 
+@typing.final
 class IAnimationObject(winrt.system.Object, ImplementsIAnimationObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimationObject: ...
@@ -1982,6 +1983,7 @@ class IAnimationObject(winrt.system.Object, ImplementsIAnimationObject):
 class ImplementsICompositionAnimationBase():
     pass
 
+@typing.final
 class ICompositionAnimationBase(winrt.system.Object, ImplementsICompositionAnimationBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionAnimationBase: ...
@@ -1989,6 +1991,7 @@ class ICompositionAnimationBase(winrt.system.Object, ImplementsICompositionAnima
 class ImplementsICompositionSupportsSystemBackdrop():
     pass
 
+@typing.final
 class ICompositionSupportsSystemBackdrop(winrt.system.Object, ImplementsICompositionSupportsSystemBackdrop):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSupportsSystemBackdrop: ...
@@ -2000,6 +2003,7 @@ class ICompositionSupportsSystemBackdrop(winrt.system.Object, ImplementsIComposi
 class ImplementsICompositionSurface():
     pass
 
+@typing.final
 class ICompositionSurface(winrt.system.Object, ImplementsICompositionSurface):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSurface: ...
@@ -2007,6 +2011,7 @@ class ICompositionSurface(winrt.system.Object, ImplementsICompositionSurface):
 class ImplementsICompositionSurfaceFacade():
     pass
 
+@typing.final
 class ICompositionSurfaceFacade(winrt.system.Object, ImplementsICompositionSurfaceFacade):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSurfaceFacade: ...
@@ -2015,6 +2020,7 @@ class ICompositionSurfaceFacade(winrt.system.Object, ImplementsICompositionSurfa
 class ImplementsIVisualElement():
     pass
 
+@typing.final
 class IVisualElement(winrt.system.Object, ImplementsIVisualElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVisualElement: ...
@@ -2022,6 +2028,7 @@ class IVisualElement(winrt.system.Object, ImplementsIVisualElement):
 class ImplementsIVisualElement2():
     pass
 
+@typing.final
 class IVisualElement2(winrt.system.Object, ImplementsIVisualElement2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVisualElement2: ...

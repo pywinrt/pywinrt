@@ -582,6 +582,7 @@ class SuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
 class ImplementsIEnteredBackgroundEventArgs():
     pass
 
+@typing.final
 class IEnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IEnteredBackgroundEventArgs: ...
@@ -590,6 +591,7 @@ class IEnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgro
 class ImplementsILeavingBackgroundEventArgs():
     pass
 
+@typing.final
 class ILeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgroundEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILeavingBackgroundEventArgs: ...
@@ -598,6 +600,7 @@ class ILeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgro
 class ImplementsIPackageCatalogStatics2():
     pass
 
+@typing.final
 class IPackageCatalogStatics2(winrt.system.Object, ImplementsIPackageCatalogStatics2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPackageCatalogStatics2: ...
@@ -606,6 +609,7 @@ class IPackageCatalogStatics2(winrt.system.Object, ImplementsIPackageCatalogStat
 class ImplementsISuspendingDeferral():
     pass
 
+@typing.final
 class ISuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingDeferral: ...
@@ -614,6 +618,7 @@ class ISuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
 class ImplementsISuspendingEventArgs():
     pass
 
+@typing.final
 class ISuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingEventArgs: ...
@@ -623,6 +628,7 @@ class ISuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
 class ImplementsISuspendingOperation():
     pass
 
+@typing.final
 class ISuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingOperation: ...

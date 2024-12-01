@@ -172,6 +172,7 @@ class WebAccountProvider(winrt.system.Object):
 class ImplementsIWebAccount():
     pass
 
+@typing.final
 class IWebAccount(winrt.system.Object, ImplementsIWebAccount):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccount: ...

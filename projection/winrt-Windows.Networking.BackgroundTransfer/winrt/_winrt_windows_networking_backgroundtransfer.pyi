@@ -367,6 +367,7 @@ class UploadOperation(winrt.system.Object, ImplementsIBackgroundTransferOperatio
 class ImplementsIBackgroundTransferBase():
     pass
 
+@typing.final
 class IBackgroundTransferBase(winrt.system.Object, ImplementsIBackgroundTransferBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferBase: ...
@@ -395,6 +396,7 @@ class IBackgroundTransferBase(winrt.system.Object, ImplementsIBackgroundTransfer
 class ImplementsIBackgroundTransferContentPartFactory():
     pass
 
+@typing.final
 class IBackgroundTransferContentPartFactory(winrt.system.Object, ImplementsIBackgroundTransferContentPartFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferContentPartFactory: ...
@@ -404,6 +406,7 @@ class IBackgroundTransferContentPartFactory(winrt.system.Object, ImplementsIBack
 class ImplementsIBackgroundTransferOperation():
     pass
 
+@typing.final
 class IBackgroundTransferOperation(winrt.system.Object, ImplementsIBackgroundTransferOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperation: ...
@@ -425,6 +428,7 @@ class IBackgroundTransferOperation(winrt.system.Object, ImplementsIBackgroundTra
 class ImplementsIBackgroundTransferOperationPriority():
     pass
 
+@typing.final
 class IBackgroundTransferOperationPriority(winrt.system.Object, ImplementsIBackgroundTransferOperationPriority):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperationPriority: ...

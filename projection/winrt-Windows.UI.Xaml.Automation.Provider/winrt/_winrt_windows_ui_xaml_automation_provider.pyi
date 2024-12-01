@@ -26,6 +26,7 @@ class IRawElementProviderSimple(windows_ui_xaml.DependencyObject):
 class ImplementsIAnnotationProvider():
     pass
 
+@typing.final
 class IAnnotationProvider(winrt.system.Object, ImplementsIAnnotationProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnnotationProvider: ...
@@ -43,6 +44,7 @@ class IAnnotationProvider(winrt.system.Object, ImplementsIAnnotationProvider):
 class ImplementsICustomNavigationProvider():
     pass
 
+@typing.final
 class ICustomNavigationProvider(winrt.system.Object, ImplementsICustomNavigationProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomNavigationProvider: ...
@@ -51,6 +53,7 @@ class ICustomNavigationProvider(winrt.system.Object, ImplementsICustomNavigation
 class ImplementsIDockProvider():
     pass
 
+@typing.final
 class IDockProvider(winrt.system.Object, ImplementsIDockProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDockProvider: ...
@@ -61,6 +64,7 @@ class IDockProvider(winrt.system.Object, ImplementsIDockProvider):
 class ImplementsIDragProvider():
     pass
 
+@typing.final
 class IDragProvider(winrt.system.Object, ImplementsIDragProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDragProvider: ...
@@ -75,6 +79,7 @@ class IDragProvider(winrt.system.Object, ImplementsIDragProvider):
 class ImplementsIDropTargetProvider():
     pass
 
+@typing.final
 class IDropTargetProvider(winrt.system.Object, ImplementsIDropTargetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDropTargetProvider: ...
@@ -86,6 +91,7 @@ class IDropTargetProvider(winrt.system.Object, ImplementsIDropTargetProvider):
 class ImplementsIExpandCollapseProvider():
     pass
 
+@typing.final
 class IExpandCollapseProvider(winrt.system.Object, ImplementsIExpandCollapseProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IExpandCollapseProvider: ...
@@ -97,6 +103,7 @@ class IExpandCollapseProvider(winrt.system.Object, ImplementsIExpandCollapseProv
 class ImplementsIGridItemProvider():
     pass
 
+@typing.final
 class IGridItemProvider(winrt.system.Object, ImplementsIGridItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridItemProvider: ...
@@ -114,6 +121,7 @@ class IGridItemProvider(winrt.system.Object, ImplementsIGridItemProvider):
 class ImplementsIGridProvider():
     pass
 
+@typing.final
 class IGridProvider(winrt.system.Object, ImplementsIGridProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridProvider: ...
@@ -126,6 +134,7 @@ class IGridProvider(winrt.system.Object, ImplementsIGridProvider):
 class ImplementsIInvokeProvider():
     pass
 
+@typing.final
 class IInvokeProvider(winrt.system.Object, ImplementsIInvokeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInvokeProvider: ...
@@ -134,6 +143,7 @@ class IInvokeProvider(winrt.system.Object, ImplementsIInvokeProvider):
 class ImplementsIItemContainerProvider():
     pass
 
+@typing.final
 class IItemContainerProvider(winrt.system.Object, ImplementsIItemContainerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerProvider: ...
@@ -142,6 +152,7 @@ class IItemContainerProvider(winrt.system.Object, ImplementsIItemContainerProvid
 class ImplementsIMultipleViewProvider():
     pass
 
+@typing.final
 class IMultipleViewProvider(winrt.system.Object, ImplementsIMultipleViewProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMultipleViewProvider: ...
@@ -154,6 +165,7 @@ class IMultipleViewProvider(winrt.system.Object, ImplementsIMultipleViewProvider
 class ImplementsIObjectModelProvider():
     pass
 
+@typing.final
 class IObjectModelProvider(winrt.system.Object, ImplementsIObjectModelProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IObjectModelProvider: ...
@@ -162,6 +174,7 @@ class IObjectModelProvider(winrt.system.Object, ImplementsIObjectModelProvider):
 class ImplementsIRangeValueProvider():
     pass
 
+@typing.final
 class IRangeValueProvider(winrt.system.Object, ImplementsIRangeValueProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRangeValueProvider: ...
@@ -182,6 +195,7 @@ class IRangeValueProvider(winrt.system.Object, ImplementsIRangeValueProvider):
 class ImplementsIScrollItemProvider():
     pass
 
+@typing.final
 class IScrollItemProvider(winrt.system.Object, ImplementsIScrollItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollItemProvider: ...
@@ -190,6 +204,7 @@ class IScrollItemProvider(winrt.system.Object, ImplementsIScrollItemProvider):
 class ImplementsIScrollProvider():
     pass
 
+@typing.final
 class IScrollProvider(winrt.system.Object, ImplementsIScrollProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollProvider: ...
@@ -211,6 +226,7 @@ class IScrollProvider(winrt.system.Object, ImplementsIScrollProvider):
 class ImplementsISelectionItemProvider():
     pass
 
+@typing.final
 class ISelectionItemProvider(winrt.system.Object, ImplementsISelectionItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionItemProvider: ...
@@ -225,6 +241,7 @@ class ISelectionItemProvider(winrt.system.Object, ImplementsISelectionItemProvid
 class ImplementsISelectionProvider():
     pass
 
+@typing.final
 class ISelectionProvider(winrt.system.Object, ImplementsISelectionProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionProvider: ...
@@ -237,6 +254,7 @@ class ISelectionProvider(winrt.system.Object, ImplementsISelectionProvider):
 class ImplementsISpreadsheetItemProvider():
     pass
 
+@typing.final
 class ISpreadsheetItemProvider(winrt.system.Object, ImplementsISpreadsheetItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetItemProvider: ...
@@ -248,6 +266,7 @@ class ISpreadsheetItemProvider(winrt.system.Object, ImplementsISpreadsheetItemPr
 class ImplementsISpreadsheetProvider():
     pass
 
+@typing.final
 class ISpreadsheetProvider(winrt.system.Object, ImplementsISpreadsheetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetProvider: ...
@@ -256,6 +275,7 @@ class ISpreadsheetProvider(winrt.system.Object, ImplementsISpreadsheetProvider):
 class ImplementsIStylesProvider():
     pass
 
+@typing.final
 class IStylesProvider(winrt.system.Object, ImplementsIStylesProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStylesProvider: ...
@@ -277,6 +297,7 @@ class IStylesProvider(winrt.system.Object, ImplementsIStylesProvider):
 class ImplementsISynchronizedInputProvider():
     pass
 
+@typing.final
 class ISynchronizedInputProvider(winrt.system.Object, ImplementsISynchronizedInputProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISynchronizedInputProvider: ...
@@ -286,6 +307,7 @@ class ISynchronizedInputProvider(winrt.system.Object, ImplementsISynchronizedInp
 class ImplementsITableItemProvider():
     pass
 
+@typing.final
 class ITableItemProvider(winrt.system.Object, ImplementsITableItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableItemProvider: ...
@@ -295,6 +317,7 @@ class ITableItemProvider(winrt.system.Object, ImplementsITableItemProvider):
 class ImplementsITableProvider():
     pass
 
+@typing.final
 class ITableProvider(winrt.system.Object, ImplementsITableProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableProvider: ...
@@ -306,6 +329,7 @@ class ITableProvider(winrt.system.Object, ImplementsITableProvider):
 class ImplementsITextChildProvider():
     pass
 
+@typing.final
 class ITextChildProvider(winrt.system.Object, ImplementsITextChildProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextChildProvider: ...
@@ -317,6 +341,7 @@ class ITextChildProvider(winrt.system.Object, ImplementsITextChildProvider):
 class ImplementsITextEditProvider():
     pass
 
+@typing.final
 class ITextEditProvider(winrt.system.Object, ImplementsITextEditProvider, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextEditProvider: ...
@@ -334,6 +359,7 @@ class ITextEditProvider(winrt.system.Object, ImplementsITextEditProvider, Implem
 class ImplementsITextProvider():
     pass
 
+@typing.final
 class ITextProvider(winrt.system.Object, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider: ...
@@ -349,6 +375,7 @@ class ITextProvider(winrt.system.Object, ImplementsITextProvider):
 class ImplementsITextProvider2():
     pass
 
+@typing.final
 class ITextProvider2(winrt.system.Object, ImplementsITextProvider2, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider2: ...
@@ -366,6 +393,7 @@ class ITextProvider2(winrt.system.Object, ImplementsITextProvider2, ImplementsIT
 class ImplementsITextRangeProvider():
     pass
 
+@typing.final
 class ITextRangeProvider(winrt.system.Object, ImplementsITextRangeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider: ...
@@ -391,6 +419,7 @@ class ITextRangeProvider(winrt.system.Object, ImplementsITextRangeProvider):
 class ImplementsITextRangeProvider2():
     pass
 
+@typing.final
 class ITextRangeProvider2(winrt.system.Object, ImplementsITextRangeProvider2, ImplementsITextRangeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider2: ...
@@ -417,6 +446,7 @@ class ITextRangeProvider2(winrt.system.Object, ImplementsITextRangeProvider2, Im
 class ImplementsIToggleProvider():
     pass
 
+@typing.final
 class IToggleProvider(winrt.system.Object, ImplementsIToggleProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToggleProvider: ...
@@ -427,6 +457,7 @@ class IToggleProvider(winrt.system.Object, ImplementsIToggleProvider):
 class ImplementsITransformProvider():
     pass
 
+@typing.final
 class ITransformProvider(winrt.system.Object, ImplementsITransformProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider: ...
@@ -443,6 +474,7 @@ class ITransformProvider(winrt.system.Object, ImplementsITransformProvider):
 class ImplementsITransformProvider2():
     pass
 
+@typing.final
 class ITransformProvider2(winrt.system.Object, ImplementsITransformProvider2, ImplementsITransformProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider2: ...
@@ -469,6 +501,7 @@ class ITransformProvider2(winrt.system.Object, ImplementsITransformProvider2, Im
 class ImplementsIValueProvider():
     pass
 
+@typing.final
 class IValueProvider(winrt.system.Object, ImplementsIValueProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IValueProvider: ...
@@ -481,6 +514,7 @@ class IValueProvider(winrt.system.Object, ImplementsIValueProvider):
 class ImplementsIVirtualizedItemProvider():
     pass
 
+@typing.final
 class IVirtualizedItemProvider(winrt.system.Object, ImplementsIVirtualizedItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVirtualizedItemProvider: ...
@@ -489,6 +523,7 @@ class IVirtualizedItemProvider(winrt.system.Object, ImplementsIVirtualizedItemPr
 class ImplementsIWindowProvider():
     pass
 
+@typing.final
 class IWindowProvider(winrt.system.Object, ImplementsIWindowProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWindowProvider: ...

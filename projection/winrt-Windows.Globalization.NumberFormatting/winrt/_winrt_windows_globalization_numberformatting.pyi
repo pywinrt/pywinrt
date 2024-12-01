@@ -306,6 +306,7 @@ class SignificantDigitsNumberRounder(winrt.system.Object, ImplementsINumberRound
 class ImplementsINumberFormatter():
     pass
 
+@typing.final
 class INumberFormatter(winrt.system.Object, ImplementsINumberFormatter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter: ...
@@ -316,6 +317,7 @@ class INumberFormatter(winrt.system.Object, ImplementsINumberFormatter):
 class ImplementsINumberFormatter2():
     pass
 
+@typing.final
 class INumberFormatter2(winrt.system.Object, ImplementsINumberFormatter2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter2: ...
@@ -326,6 +328,7 @@ class INumberFormatter2(winrt.system.Object, ImplementsINumberFormatter2):
 class ImplementsINumberFormatterOptions():
     pass
 
+@typing.final
 class INumberFormatterOptions(winrt.system.Object, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatterOptions: ...
@@ -361,6 +364,7 @@ class INumberFormatterOptions(winrt.system.Object, ImplementsINumberFormatterOpt
 class ImplementsINumberParser():
     pass
 
+@typing.final
 class INumberParser(winrt.system.Object, ImplementsINumberParser):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberParser: ...
@@ -371,6 +375,7 @@ class INumberParser(winrt.system.Object, ImplementsINumberParser):
 class ImplementsINumberRounder():
     pass
 
+@typing.final
 class INumberRounder(winrt.system.Object, ImplementsINumberRounder):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounder: ...
@@ -384,6 +389,7 @@ class INumberRounder(winrt.system.Object, ImplementsINumberRounder):
 class ImplementsINumberRounderOption():
     pass
 
+@typing.final
 class INumberRounderOption(winrt.system.Object, ImplementsINumberRounderOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounderOption: ...
@@ -395,6 +401,7 @@ class INumberRounderOption(winrt.system.Object, ImplementsINumberRounderOption):
 class ImplementsISignedZeroOption():
     pass
 
+@typing.final
 class ISignedZeroOption(winrt.system.Object, ImplementsISignedZeroOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignedZeroOption: ...
@@ -406,6 +413,7 @@ class ISignedZeroOption(winrt.system.Object, ImplementsISignedZeroOption):
 class ImplementsISignificantDigitsOption():
     pass
 
+@typing.final
 class ISignificantDigitsOption(winrt.system.Object, ImplementsISignificantDigitsOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignificantDigitsOption: ...

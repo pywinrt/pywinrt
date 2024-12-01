@@ -490,6 +490,7 @@ class VolumeInfo(winrt.system.Object):
 class ImplementsIAccessoryNotificationTriggerDetails():
     pass
 
+@typing.final
 class IAccessoryNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAccessoryNotificationTriggerDetails: ...

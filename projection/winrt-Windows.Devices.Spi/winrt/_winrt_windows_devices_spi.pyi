@@ -93,6 +93,7 @@ class SpiDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, met
 class ImplementsISpiDeviceStatics():
     pass
 
+@typing.final
 class ISpiDeviceStatics(winrt.system.Object, ImplementsISpiDeviceStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiDeviceStatics: ...

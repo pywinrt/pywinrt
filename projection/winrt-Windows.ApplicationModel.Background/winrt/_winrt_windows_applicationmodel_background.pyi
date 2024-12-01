@@ -734,6 +734,7 @@ class WiFiOnDemandHotspotUpdateMetadataTrigger(winrt.system.Object, ImplementsIB
 class ImplementsIBackgroundCondition():
     pass
 
+@typing.final
 class IBackgroundCondition(winrt.system.Object, ImplementsIBackgroundCondition):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundCondition: ...
@@ -741,6 +742,7 @@ class IBackgroundCondition(winrt.system.Object, ImplementsIBackgroundCondition):
 class ImplementsIBackgroundTask():
     pass
 
+@typing.final
 class IBackgroundTask(winrt.system.Object, ImplementsIBackgroundTask):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTask: ...
@@ -749,6 +751,7 @@ class IBackgroundTask(winrt.system.Object, ImplementsIBackgroundTask):
 class ImplementsIBackgroundTaskInstance():
     pass
 
+@typing.final
 class IBackgroundTaskInstance(winrt.system.Object, ImplementsIBackgroundTaskInstance):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance: ...
@@ -771,6 +774,7 @@ class IBackgroundTaskInstance(winrt.system.Object, ImplementsIBackgroundTaskInst
 class ImplementsIBackgroundTaskInstance2():
     pass
 
+@typing.final
 class IBackgroundTaskInstance2(winrt.system.Object, ImplementsIBackgroundTaskInstance2, ImplementsIBackgroundTaskInstance):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance2: ...
@@ -794,6 +798,7 @@ class IBackgroundTaskInstance2(winrt.system.Object, ImplementsIBackgroundTaskIns
 class ImplementsIBackgroundTaskInstance4():
     pass
 
+@typing.final
 class IBackgroundTaskInstance4(winrt.system.Object, ImplementsIBackgroundTaskInstance4, ImplementsIBackgroundTaskInstance):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance4: ...
@@ -818,6 +823,7 @@ class IBackgroundTaskInstance4(winrt.system.Object, ImplementsIBackgroundTaskIns
 class ImplementsIBackgroundTaskRegistration():
     pass
 
+@typing.final
 class IBackgroundTaskRegistration(winrt.system.Object, ImplementsIBackgroundTaskRegistration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration: ...
@@ -834,6 +840,7 @@ class IBackgroundTaskRegistration(winrt.system.Object, ImplementsIBackgroundTask
 class ImplementsIBackgroundTaskRegistration2():
     pass
 
+@typing.final
 class IBackgroundTaskRegistration2(winrt.system.Object, ImplementsIBackgroundTaskRegistration2, ImplementsIBackgroundTaskRegistration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration2: ...
@@ -852,6 +859,7 @@ class IBackgroundTaskRegistration2(winrt.system.Object, ImplementsIBackgroundTas
 class ImplementsIBackgroundTaskRegistration3():
     pass
 
+@typing.final
 class IBackgroundTaskRegistration3(winrt.system.Object, ImplementsIBackgroundTaskRegistration3, ImplementsIBackgroundTaskRegistration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration3: ...
@@ -870,6 +878,7 @@ class IBackgroundTaskRegistration3(winrt.system.Object, ImplementsIBackgroundTas
 class ImplementsIBackgroundTrigger():
     pass
 
+@typing.final
 class IBackgroundTrigger(winrt.system.Object, ImplementsIBackgroundTrigger):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTrigger: ...

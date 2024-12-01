@@ -146,6 +146,7 @@ class WebUICommandBarSymbolIcon(winrt.system.Object, ImplementsIWebUICommandBarI
 class ImplementsIWebUICommandBarElement():
     pass
 
+@typing.final
 class IWebUICommandBarElement(winrt.system.Object, ImplementsIWebUICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarElement: ...
@@ -153,6 +154,7 @@ class IWebUICommandBarElement(winrt.system.Object, ImplementsIWebUICommandBarEle
 class ImplementsIWebUICommandBarIcon():
     pass
 
+@typing.final
 class IWebUICommandBarIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarIcon: ...

@@ -8265,6 +8265,7 @@ class WebViewWebResourceRequestedEventArgs(winrt.system.Object):
 class ImplementsICommandBarElement():
     pass
 
+@typing.final
 class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement: ...
@@ -8276,6 +8277,7 @@ class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
 class ImplementsICommandBarElement2():
     pass
 
+@typing.final
 class ICommandBarElement2(winrt.system.Object, ImplementsICommandBarElement2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement2: ...
@@ -8289,6 +8291,7 @@ class ICommandBarElement2(winrt.system.Object, ImplementsICommandBarElement2):
 class ImplementsIInsertionPanel():
     pass
 
+@typing.final
 class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInsertionPanel: ...
@@ -8297,6 +8300,7 @@ class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
 class ImplementsIItemContainerMapping():
     pass
 
+@typing.final
 class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerMapping: ...
@@ -8308,6 +8312,7 @@ class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping
 class ImplementsINavigate():
     pass
 
+@typing.final
 class INavigate(winrt.system.Object, ImplementsINavigate):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INavigate: ...
@@ -8316,6 +8321,7 @@ class INavigate(winrt.system.Object, ImplementsINavigate):
 class ImplementsIScrollAnchorProvider():
     pass
 
+@typing.final
 class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollAnchorProvider: ...
@@ -8327,6 +8333,7 @@ class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider
 class ImplementsISemanticZoomInformation():
     pass
 
+@typing.final
 class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISemanticZoomInformation: ...

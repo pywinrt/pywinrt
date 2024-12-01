@@ -42,6 +42,7 @@ class ProviderI2cConnectionSettings(winrt.system.Object):
 class ImplementsII2cControllerProvider():
     pass
 
+@typing.final
 class II2cControllerProvider(winrt.system.Object, ImplementsII2cControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cControllerProvider: ...
@@ -50,6 +51,7 @@ class II2cControllerProvider(winrt.system.Object, ImplementsII2cControllerProvid
 class ImplementsII2cDeviceProvider():
     pass
 
+@typing.final
 class II2cDeviceProvider(winrt.system.Object, ImplementsII2cDeviceProvider, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -68,6 +70,7 @@ class II2cDeviceProvider(winrt.system.Object, ImplementsII2cDeviceProvider, wind
 class ImplementsII2cProvider():
     pass
 
+@typing.final
 class II2cProvider(winrt.system.Object, ImplementsII2cProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cProvider: ...

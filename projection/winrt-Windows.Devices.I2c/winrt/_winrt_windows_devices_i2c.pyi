@@ -79,6 +79,7 @@ class I2cDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, met
 class ImplementsII2cDeviceStatics():
     pass
 
+@typing.final
 class II2cDeviceStatics(winrt.system.Object, ImplementsII2cDeviceStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cDeviceStatics: ...

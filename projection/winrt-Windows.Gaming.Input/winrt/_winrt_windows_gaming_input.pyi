@@ -307,6 +307,7 @@ class UINavigationController(winrt.system.Object, ImplementsIGameControllerBatte
 class ImplementsIGameController():
     pass
 
+@typing.final
 class IGameController(winrt.system.Object, ImplementsIGameController):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameController: ...
@@ -326,6 +327,7 @@ class IGameController(winrt.system.Object, ImplementsIGameController):
 class ImplementsIGameControllerBatteryInfo():
     pass
 
+@typing.final
 class IGameControllerBatteryInfo(winrt.system.Object, ImplementsIGameControllerBatteryInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerBatteryInfo: ...

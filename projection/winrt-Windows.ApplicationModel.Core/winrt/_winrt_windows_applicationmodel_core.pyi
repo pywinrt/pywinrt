@@ -144,6 +144,7 @@ class UnhandledErrorDetectedEventArgs(winrt.system.Object):
 class ImplementsICoreApplicationUnhandledError():
     pass
 
+@typing.final
 class ICoreApplicationUnhandledError(winrt.system.Object, ImplementsICoreApplicationUnhandledError):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreApplicationUnhandledError: ...
@@ -153,6 +154,7 @@ class ICoreApplicationUnhandledError(winrt.system.Object, ImplementsICoreApplica
 class ImplementsIFrameworkView():
     pass
 
+@typing.final
 class IFrameworkView(winrt.system.Object, ImplementsIFrameworkView):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFrameworkView: ...
@@ -165,6 +167,7 @@ class IFrameworkView(winrt.system.Object, ImplementsIFrameworkView):
 class ImplementsIFrameworkViewSource():
     pass
 
+@typing.final
 class IFrameworkViewSource(winrt.system.Object, ImplementsIFrameworkViewSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFrameworkViewSource: ...

@@ -105,6 +105,7 @@ class DropOperationTargetRequestedEventArgs(winrt.system.Object):
 class ImplementsIDropOperationTarget():
     pass
 
+@typing.final
 class IDropOperationTarget(winrt.system.Object, ImplementsIDropOperationTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDropOperationTarget: ...

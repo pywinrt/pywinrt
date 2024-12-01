@@ -2193,6 +2193,7 @@ class ZoomSnapPointBase(SnapPointBase, metaclass=ZoomSnapPointBase_Static):
 class ImplementsIScrollController():
     pass
 
+@typing.final
 class IScrollController(winrt.system.Object, ImplementsIScrollController):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollController: ...
@@ -2220,6 +2221,7 @@ class IScrollController(winrt.system.Object, ImplementsIScrollController):
 class ImplementsIScrollControllerPanningInfo():
     pass
 
+@typing.final
 class IScrollControllerPanningInfo(winrt.system.Object, ImplementsIScrollControllerPanningInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollControllerPanningInfo: ...
@@ -2238,6 +2240,7 @@ class IScrollControllerPanningInfo(winrt.system.Object, ImplementsIScrollControl
 class ImplementsIScrollSnapPointsInfo():
     pass
 
+@typing.final
 class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollSnapPointsInfo: ...

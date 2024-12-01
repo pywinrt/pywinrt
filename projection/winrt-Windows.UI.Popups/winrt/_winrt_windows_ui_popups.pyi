@@ -106,6 +106,7 @@ class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
 class ImplementsIUICommand():
     pass
 
+@typing.final
 class IUICommand(winrt.system.Object, ImplementsIUICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUICommand: ...

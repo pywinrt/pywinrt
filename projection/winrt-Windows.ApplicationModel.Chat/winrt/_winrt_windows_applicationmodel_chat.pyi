@@ -613,6 +613,7 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
 class ImplementsIChatItem():
     pass
 
+@typing.final
 class IChatItem(winrt.system.Object, ImplementsIChatItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IChatItem: ...

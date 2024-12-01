@@ -556,6 +556,7 @@ class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.Impl
 class ImplementsIPrintCustomOptionDetails():
     pass
 
+@typing.final
 class IPrintCustomOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptionDetails, ImplementsIPrintOptionDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintCustomOptionDetails: ...
@@ -582,6 +583,7 @@ class IPrintCustomOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptio
 class ImplementsIPrintItemListOptionDetails():
     pass
 
+@typing.final
 class IPrintItemListOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintItemListOptionDetails: ...
@@ -606,6 +608,7 @@ class IPrintItemListOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
 class ImplementsIPrintNumberOptionDetails():
     pass
 
+@typing.final
 class IPrintNumberOptionDetails(winrt.system.Object, ImplementsIPrintNumberOptionDetails, ImplementsIPrintOptionDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintNumberOptionDetails: ...
@@ -632,6 +635,7 @@ class IPrintNumberOptionDetails(winrt.system.Object, ImplementsIPrintNumberOptio
 class ImplementsIPrintOptionDetails():
     pass
 
+@typing.final
 class IPrintOptionDetails(winrt.system.Object, ImplementsIPrintOptionDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintOptionDetails: ...
@@ -654,6 +658,7 @@ class IPrintOptionDetails(winrt.system.Object, ImplementsIPrintOptionDetails):
 class ImplementsIPrintTextOptionDetails():
     pass
 
+@typing.final
 class IPrintTextOptionDetails(winrt.system.Object, ImplementsIPrintTextOptionDetails, ImplementsIPrintOptionDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTextOptionDetails: ...

@@ -848,6 +848,7 @@ class XmlText(winrt.system.Object, ImplementsIXmlText, ImplementsIXmlCharacterDa
 class ImplementsIXmlCharacterData():
     pass
 
+@typing.final
 class IXmlCharacterData(winrt.system.Object, ImplementsIXmlCharacterData, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlCharacterData: ...
@@ -914,6 +915,7 @@ class IXmlCharacterData(winrt.system.Object, ImplementsIXmlCharacterData, Implem
 class ImplementsIXmlNode():
     pass
 
+@typing.final
 class IXmlNode(winrt.system.Object, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNode: ...
@@ -969,6 +971,7 @@ class IXmlNode(winrt.system.Object, ImplementsIXmlNode, ImplementsIXmlNodeSerial
 class ImplementsIXmlNodeSelector():
     pass
 
+@typing.final
 class IXmlNodeSelector(winrt.system.Object, ImplementsIXmlNodeSelector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNodeSelector: ...
@@ -980,6 +983,7 @@ class IXmlNodeSelector(winrt.system.Object, ImplementsIXmlNodeSelector):
 class ImplementsIXmlNodeSerializer():
     pass
 
+@typing.final
 class IXmlNodeSerializer(winrt.system.Object, ImplementsIXmlNodeSerializer):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNodeSerializer: ...
@@ -992,6 +996,7 @@ class IXmlNodeSerializer(winrt.system.Object, ImplementsIXmlNodeSerializer):
 class ImplementsIXmlText():
     pass
 
+@typing.final
 class IXmlText(winrt.system.Object, ImplementsIXmlText, ImplementsIXmlCharacterData, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlText: ...

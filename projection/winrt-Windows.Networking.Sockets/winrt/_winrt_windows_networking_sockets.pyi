@@ -664,6 +664,7 @@ class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
 class ImplementsIControlChannelTriggerEventDetails():
     pass
 
+@typing.final
 class IControlChannelTriggerEventDetails(winrt.system.Object, ImplementsIControlChannelTriggerEventDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerEventDetails: ...
@@ -673,6 +674,7 @@ class IControlChannelTriggerEventDetails(winrt.system.Object, ImplementsIControl
 class ImplementsIControlChannelTriggerResetEventDetails():
     pass
 
+@typing.final
 class IControlChannelTriggerResetEventDetails(winrt.system.Object, ImplementsIControlChannelTriggerResetEventDetails):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerResetEventDetails: ...
@@ -686,6 +688,7 @@ class IControlChannelTriggerResetEventDetails(winrt.system.Object, ImplementsICo
 class ImplementsIWebSocket():
     pass
 
+@typing.final
 class IWebSocket(winrt.system.Object, ImplementsIWebSocket, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -703,6 +706,7 @@ class IWebSocket(winrt.system.Object, ImplementsIWebSocket, windows_foundation.I
 class ImplementsIWebSocketControl():
     pass
 
+@typing.final
 class IWebSocketControl(winrt.system.Object, ImplementsIWebSocketControl):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketControl: ...
@@ -724,6 +728,7 @@ class IWebSocketControl(winrt.system.Object, ImplementsIWebSocketControl):
 class ImplementsIWebSocketControl2():
     pass
 
+@typing.final
 class IWebSocketControl2(winrt.system.Object, ImplementsIWebSocketControl2, ImplementsIWebSocketControl):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketControl2: ...
@@ -747,6 +752,7 @@ class IWebSocketControl2(winrt.system.Object, ImplementsIWebSocketControl2, Impl
 class ImplementsIWebSocketInformation():
     pass
 
+@typing.final
 class IWebSocketInformation(winrt.system.Object, ImplementsIWebSocketInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketInformation: ...
@@ -760,6 +766,7 @@ class IWebSocketInformation(winrt.system.Object, ImplementsIWebSocketInformation
 class ImplementsIWebSocketInformation2():
     pass
 
+@typing.final
 class IWebSocketInformation2(winrt.system.Object, ImplementsIWebSocketInformation2, ImplementsIWebSocketInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketInformation2: ...

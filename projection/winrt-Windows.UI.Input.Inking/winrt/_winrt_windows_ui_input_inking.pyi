@@ -508,6 +508,7 @@ class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static)
 class ImplementsIInkPointFactory():
     pass
 
+@typing.final
 class IInkPointFactory(winrt.system.Object, ImplementsIInkPointFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPointFactory: ...
@@ -516,6 +517,7 @@ class IInkPointFactory(winrt.system.Object, ImplementsIInkPointFactory):
 class ImplementsIInkPresenterRulerFactory():
     pass
 
+@typing.final
 class IInkPresenterRulerFactory(winrt.system.Object, ImplementsIInkPresenterRulerFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPresenterRulerFactory: ...
@@ -524,6 +526,7 @@ class IInkPresenterRulerFactory(winrt.system.Object, ImplementsIInkPresenterRule
 class ImplementsIInkPresenterStencil():
     pass
 
+@typing.final
 class IInkPresenterStencil(winrt.system.Object, ImplementsIInkPresenterStencil):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPresenterStencil: ...
@@ -549,6 +552,7 @@ class IInkPresenterStencil(winrt.system.Object, ImplementsIInkPresenterStencil):
 class ImplementsIInkRecognizerContainer():
     pass
 
+@typing.final
 class IInkRecognizerContainer(winrt.system.Object, ImplementsIInkRecognizerContainer):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkRecognizerContainer: ...
@@ -559,6 +563,7 @@ class IInkRecognizerContainer(winrt.system.Object, ImplementsIInkRecognizerConta
 class ImplementsIInkStrokeContainer():
     pass
 
+@typing.final
 class IInkStrokeContainer(winrt.system.Object, ImplementsIInkStrokeContainer):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkStrokeContainer: ...

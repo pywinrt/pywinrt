@@ -216,6 +216,7 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
 class ImplementsISearchPaneQueryChangedEventArgs():
     pass
 
+@typing.final
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchPaneQueryChangedEventArgs: ...

@@ -607,6 +607,7 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
 class ImplementsIAdaptiveNotificationContent():
     pass
 
+@typing.final
 class IAdaptiveNotificationContent(winrt.system.Object, ImplementsIAdaptiveNotificationContent):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveNotificationContent: ...

@@ -734,6 +734,7 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
 class ImplementsIStorageFile():
     pass
 
+@typing.final
 class IStorageFile(winrt.system.Object, ImplementsIStorageFile, windows_storage_streams.ImplementsIInputStreamReference, windows_storage_streams.ImplementsIRandomAccessStreamReference, ImplementsIStorageItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFile: ...
@@ -771,6 +772,7 @@ class IStorageFile(winrt.system.Object, ImplementsIStorageFile, windows_storage_
 class ImplementsIStorageFile2():
     pass
 
+@typing.final
 class IStorageFile2(winrt.system.Object, ImplementsIStorageFile2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFile2: ...
@@ -780,6 +782,7 @@ class IStorageFile2(winrt.system.Object, ImplementsIStorageFile2):
 class ImplementsIStorageFilePropertiesWithAvailability():
     pass
 
+@typing.final
 class IStorageFilePropertiesWithAvailability(winrt.system.Object, ImplementsIStorageFilePropertiesWithAvailability):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFilePropertiesWithAvailability: ...
@@ -789,6 +792,7 @@ class IStorageFilePropertiesWithAvailability(winrt.system.Object, ImplementsISto
 class ImplementsIStorageFolder():
     pass
 
+@typing.final
 class IStorageFolder(winrt.system.Object, ImplementsIStorageFolder, ImplementsIStorageItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolder: ...
@@ -820,6 +824,7 @@ class IStorageFolder(winrt.system.Object, ImplementsIStorageFolder, ImplementsIS
 class ImplementsIStorageFolder2():
     pass
 
+@typing.final
 class IStorageFolder2(winrt.system.Object, ImplementsIStorageFolder2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolder2: ...
@@ -828,6 +833,7 @@ class IStorageFolder2(winrt.system.Object, ImplementsIStorageFolder2):
 class ImplementsIStorageItem():
     pass
 
+@typing.final
 class IStorageItem(winrt.system.Object, ImplementsIStorageItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItem: ...
@@ -849,6 +855,7 @@ class IStorageItem(winrt.system.Object, ImplementsIStorageItem):
 class ImplementsIStorageItem2():
     pass
 
+@typing.final
 class IStorageItem2(winrt.system.Object, ImplementsIStorageItem2, ImplementsIStorageItem):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItem2: ...
@@ -872,6 +879,7 @@ class IStorageItem2(winrt.system.Object, ImplementsIStorageItem2, ImplementsISto
 class ImplementsIStorageItemProperties():
     pass
 
+@typing.final
 class IStorageItemProperties(winrt.system.Object, ImplementsIStorageItemProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemProperties: ...
@@ -890,6 +898,7 @@ class IStorageItemProperties(winrt.system.Object, ImplementsIStorageItemProperti
 class ImplementsIStorageItemProperties2():
     pass
 
+@typing.final
 class IStorageItemProperties2(winrt.system.Object, ImplementsIStorageItemProperties2, ImplementsIStorageItemProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemProperties2: ...
@@ -911,6 +920,7 @@ class IStorageItemProperties2(winrt.system.Object, ImplementsIStorageItemPropert
 class ImplementsIStorageItemPropertiesWithProvider():
     pass
 
+@typing.final
 class IStorageItemPropertiesWithProvider(winrt.system.Object, ImplementsIStorageItemPropertiesWithProvider, ImplementsIStorageItemProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemPropertiesWithProvider: ...
@@ -931,6 +941,7 @@ class IStorageItemPropertiesWithProvider(winrt.system.Object, ImplementsIStorage
 class ImplementsIStreamedFileDataRequest():
     pass
 
+@typing.final
 class IStreamedFileDataRequest(winrt.system.Object, ImplementsIStreamedFileDataRequest):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStreamedFileDataRequest: ...

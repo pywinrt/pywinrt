@@ -124,6 +124,7 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
 class ImplementsIResourceContext():
     pass
 
+@typing.final
 class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IResourceContext: ...
@@ -133,6 +134,7 @@ class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
 class ImplementsIResourceManager():
     pass
 
+@typing.final
 class IResourceManager(winrt.system.Object, ImplementsIResourceManager):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IResourceManager: ...

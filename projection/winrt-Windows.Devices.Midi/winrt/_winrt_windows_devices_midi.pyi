@@ -345,6 +345,7 @@ class MidiTuneRequestMessage(winrt.system.Object, ImplementsIMidiMessage):
 class ImplementsIMidiMessage():
     pass
 
+@typing.final
 class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMidiMessage: ...
@@ -358,6 +359,7 @@ class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
 class ImplementsIMidiOutPort():
     pass
 
+@typing.final
 class IMidiOutPort(winrt.system.Object, ImplementsIMidiOutPort, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

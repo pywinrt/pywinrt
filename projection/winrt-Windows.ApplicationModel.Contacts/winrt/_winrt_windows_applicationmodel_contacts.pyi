@@ -1065,6 +1065,7 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
 class ImplementsIContactField():
     pass
 
+@typing.final
 class IContactField(winrt.system.Object, ImplementsIContactField):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactField: ...
@@ -1080,6 +1081,7 @@ class IContactField(winrt.system.Object, ImplementsIContactField):
 class ImplementsIContactFieldFactory():
     pass
 
+@typing.final
 class IContactFieldFactory(winrt.system.Object, ImplementsIContactFieldFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactFieldFactory: ...
@@ -1090,6 +1092,7 @@ class IContactFieldFactory(winrt.system.Object, ImplementsIContactFieldFactory):
 class ImplementsIContactInstantMessageFieldFactory():
     pass
 
+@typing.final
 class IContactInstantMessageFieldFactory(winrt.system.Object, ImplementsIContactInstantMessageFieldFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInstantMessageFieldFactory: ...
@@ -1100,6 +1103,7 @@ class IContactInstantMessageFieldFactory(winrt.system.Object, ImplementsIContact
 class ImplementsIContactLocationFieldFactory():
     pass
 
+@typing.final
 class IContactLocationFieldFactory(winrt.system.Object, ImplementsIContactLocationFieldFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactLocationFieldFactory: ...

@@ -909,6 +909,7 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
 class ImplementsIMediaEnginePlaybackSource():
     pass
 
+@typing.final
 class IMediaEnginePlaybackSource(winrt.system.Object, ImplementsIMediaEnginePlaybackSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaEnginePlaybackSource: ...
@@ -920,6 +921,7 @@ class IMediaEnginePlaybackSource(winrt.system.Object, ImplementsIMediaEnginePlay
 class ImplementsIMediaPlaybackSource():
     pass
 
+@typing.final
 class IMediaPlaybackSource(winrt.system.Object, ImplementsIMediaPlaybackSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaPlaybackSource: ...

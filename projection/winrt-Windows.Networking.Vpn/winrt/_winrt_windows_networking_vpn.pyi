@@ -695,6 +695,7 @@ class VpnTrafficFilterAssignment(winrt.system.Object):
 class ImplementsIVpnChannelStatics():
     pass
 
+@typing.final
 class IVpnChannelStatics(winrt.system.Object, ImplementsIVpnChannelStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnChannelStatics: ...
@@ -703,6 +704,7 @@ class IVpnChannelStatics(winrt.system.Object, ImplementsIVpnChannelStatics):
 class ImplementsIVpnCredential():
     pass
 
+@typing.final
 class IVpnCredential(winrt.system.Object, ImplementsIVpnCredential):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCredential: ...
@@ -718,6 +720,7 @@ class IVpnCredential(winrt.system.Object, ImplementsIVpnCredential):
 class ImplementsIVpnCustomPrompt():
     pass
 
+@typing.final
 class IVpnCustomPrompt(winrt.system.Object, ImplementsIVpnCustomPrompt):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPrompt: ...
@@ -737,6 +740,7 @@ class IVpnCustomPrompt(winrt.system.Object, ImplementsIVpnCustomPrompt):
 class ImplementsIVpnCustomPromptElement():
     pass
 
+@typing.final
 class IVpnCustomPromptElement(winrt.system.Object, ImplementsIVpnCustomPromptElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPromptElement: ...
@@ -756,6 +760,7 @@ class IVpnCustomPromptElement(winrt.system.Object, ImplementsIVpnCustomPromptEle
 class ImplementsIVpnDomainNameInfoFactory():
     pass
 
+@typing.final
 class IVpnDomainNameInfoFactory(winrt.system.Object, ImplementsIVpnDomainNameInfoFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnDomainNameInfoFactory: ...
@@ -764,6 +769,7 @@ class IVpnDomainNameInfoFactory(winrt.system.Object, ImplementsIVpnDomainNameInf
 class ImplementsIVpnInterfaceIdFactory():
     pass
 
+@typing.final
 class IVpnInterfaceIdFactory(winrt.system.Object, ImplementsIVpnInterfaceIdFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnInterfaceIdFactory: ...
@@ -772,6 +778,7 @@ class IVpnInterfaceIdFactory(winrt.system.Object, ImplementsIVpnInterfaceIdFacto
 class ImplementsIVpnNamespaceInfoFactory():
     pass
 
+@typing.final
 class IVpnNamespaceInfoFactory(winrt.system.Object, ImplementsIVpnNamespaceInfoFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnNamespaceInfoFactory: ...
@@ -780,6 +787,7 @@ class IVpnNamespaceInfoFactory(winrt.system.Object, ImplementsIVpnNamespaceInfoF
 class ImplementsIVpnPacketBufferFactory():
     pass
 
+@typing.final
 class IVpnPacketBufferFactory(winrt.system.Object, ImplementsIVpnPacketBufferFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnPacketBufferFactory: ...
@@ -788,6 +796,7 @@ class IVpnPacketBufferFactory(winrt.system.Object, ImplementsIVpnPacketBufferFac
 class ImplementsIVpnPlugIn():
     pass
 
+@typing.final
 class IVpnPlugIn(winrt.system.Object, ImplementsIVpnPlugIn):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnPlugIn: ...
@@ -800,6 +809,7 @@ class IVpnPlugIn(winrt.system.Object, ImplementsIVpnPlugIn):
 class ImplementsIVpnPlugInReconnectTransport():
     pass
 
+@typing.final
 class IVpnPlugInReconnectTransport(winrt.system.Object, ImplementsIVpnPlugInReconnectTransport):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnPlugInReconnectTransport: ...
@@ -808,6 +818,7 @@ class IVpnPlugInReconnectTransport(winrt.system.Object, ImplementsIVpnPlugInReco
 class ImplementsIVpnProfile():
     pass
 
+@typing.final
 class IVpnProfile(winrt.system.Object, ImplementsIVpnProfile):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnProfile: ...
@@ -835,6 +846,7 @@ class IVpnProfile(winrt.system.Object, ImplementsIVpnProfile):
 class ImplementsIVpnRouteFactory():
     pass
 
+@typing.final
 class IVpnRouteFactory(winrt.system.Object, ImplementsIVpnRouteFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnRouteFactory: ...

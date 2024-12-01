@@ -184,6 +184,7 @@ class XamlUIPresenter(winrt.system.Object, metaclass=XamlUIPresenter_Static):
 class ImplementsIXamlUIPresenterHost():
     pass
 
+@typing.final
 class IXamlUIPresenterHost(winrt.system.Object, ImplementsIXamlUIPresenterHost):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlUIPresenterHost: ...
@@ -192,6 +193,7 @@ class IXamlUIPresenterHost(winrt.system.Object, ImplementsIXamlUIPresenterHost):
 class ImplementsIXamlUIPresenterHost2():
     pass
 
+@typing.final
 class IXamlUIPresenterHost2(winrt.system.Object, ImplementsIXamlUIPresenterHost2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlUIPresenterHost2: ...
@@ -200,6 +202,7 @@ class IXamlUIPresenterHost2(winrt.system.Object, ImplementsIXamlUIPresenterHost2
 class ImplementsIXamlUIPresenterHost3():
     pass
 
+@typing.final
 class IXamlUIPresenterHost3(winrt.system.Object, ImplementsIXamlUIPresenterHost3):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlUIPresenterHost3: ...

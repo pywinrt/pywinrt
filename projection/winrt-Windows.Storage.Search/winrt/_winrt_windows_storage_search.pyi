@@ -243,6 +243,7 @@ class ValueAndLanguage(winrt.system.Object):
 class ImplementsIIndexableContent():
     pass
 
+@typing.final
 class IIndexableContent(winrt.system.Object, ImplementsIIndexableContent):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIndexableContent: ...
@@ -264,6 +265,7 @@ class IIndexableContent(winrt.system.Object, ImplementsIIndexableContent):
 class ImplementsIStorageFolderQueryOperations():
     pass
 
+@typing.final
 class IStorageFolderQueryOperations(winrt.system.Object, ImplementsIStorageFolderQueryOperations):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolderQueryOperations: ...
@@ -288,6 +290,7 @@ class IStorageFolderQueryOperations(winrt.system.Object, ImplementsIStorageFolde
 class ImplementsIStorageQueryResultBase():
     pass
 
+@typing.final
 class IStorageQueryResultBase(winrt.system.Object, ImplementsIStorageQueryResultBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageQueryResultBase: ...

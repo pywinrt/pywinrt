@@ -851,6 +851,7 @@ class ZoomSettings(winrt.system.Object):
 class ImplementsIDefaultAudioDeviceChangedEventArgs():
     pass
 
+@typing.final
 class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object, ImplementsIDefaultAudioDeviceChangedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDefaultAudioDeviceChangedEventArgs: ...
@@ -862,6 +863,7 @@ class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object, ImplementsIDefaul
 class ImplementsIMediaDeviceController():
     pass
 
+@typing.final
 class IMediaDeviceController(winrt.system.Object, ImplementsIMediaDeviceController):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaDeviceController: ...

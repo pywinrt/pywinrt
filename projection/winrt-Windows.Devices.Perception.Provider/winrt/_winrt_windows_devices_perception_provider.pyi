@@ -166,6 +166,7 @@ class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.Impl
 class ImplementsIPerceptionFrameProvider():
     pass
 
+@typing.final
 class IPerceptionFrameProvider(winrt.system.Object, ImplementsIPerceptionFrameProvider, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -188,6 +189,7 @@ class IPerceptionFrameProvider(winrt.system.Object, ImplementsIPerceptionFramePr
 class ImplementsIPerceptionFrameProviderManager():
     pass
 
+@typing.final
 class IPerceptionFrameProviderManager(winrt.system.Object, ImplementsIPerceptionFrameProviderManager, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

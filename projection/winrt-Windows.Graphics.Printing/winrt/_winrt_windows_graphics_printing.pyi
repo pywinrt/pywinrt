@@ -283,6 +283,7 @@ class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskO
 class ImplementsIPrintDocumentSource():
     pass
 
+@typing.final
 class IPrintDocumentSource(winrt.system.Object, ImplementsIPrintDocumentSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintDocumentSource: ...
@@ -290,6 +291,7 @@ class IPrintDocumentSource(winrt.system.Object, ImplementsIPrintDocumentSource):
 class ImplementsIPrintTaskOptionsCore():
     pass
 
+@typing.final
 class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCore: ...
@@ -298,6 +300,7 @@ class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore
 class ImplementsIPrintTaskOptionsCoreProperties():
     pass
 
+@typing.final
 class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskOptionsCoreProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreProperties: ...
@@ -353,6 +356,7 @@ class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskO
 class ImplementsIPrintTaskOptionsCoreUIConfiguration():
     pass
 
+@typing.final
 class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...

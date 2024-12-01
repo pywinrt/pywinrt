@@ -119,6 +119,7 @@ class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
 class ImplementsIHttpFilter():
     pass
 
+@typing.final
 class IHttpFilter(winrt.system.Object, ImplementsIHttpFilter, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

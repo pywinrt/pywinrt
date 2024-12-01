@@ -121,6 +121,7 @@ class RemoteAutomationWindow(winrt.system.Object):
 class ImplementsICoreAutomationConnectionBoundObjectProvider():
     pass
 
+@typing.final
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, ImplementsICoreAutomationConnectionBoundObjectProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationConnectionBoundObjectProvider: ...
@@ -130,6 +131,7 @@ class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, Implemen
 class ImplementsICoreAutomationRemoteOperationExtensionProvider():
     pass
 
+@typing.final
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object, ImplementsICoreAutomationRemoteOperationExtensionProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationRemoteOperationExtensionProvider: ...

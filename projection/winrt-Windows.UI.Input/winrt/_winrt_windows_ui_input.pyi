@@ -840,6 +840,7 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
 class ImplementsIPointerPointTransform():
     pass
 
+@typing.final
 class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPointerPointTransform: ...

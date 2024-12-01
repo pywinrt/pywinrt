@@ -334,6 +334,7 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
 class ImplementsIClosableNotifier():
     pass
 
+@typing.final
 class IClosableNotifier(winrt.system.Object, ImplementsIClosableNotifier):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IClosableNotifier: ...

@@ -132,6 +132,7 @@ class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
 class ImplementsIRequiredFour():
     pass
 
+@typing.final
 class IRequiredFour(winrt.system.Object, ImplementsIRequiredFour, ImplementsIRequiredThree, ImplementsIRequiredTwo, ImplementsIRequiredOne):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRequiredFour: ...
@@ -143,6 +144,7 @@ class IRequiredFour(winrt.system.Object, ImplementsIRequiredFour, ImplementsIReq
 class ImplementsIRequiredOne():
     pass
 
+@typing.final
 class IRequiredOne(winrt.system.Object, ImplementsIRequiredOne):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRequiredOne: ...
@@ -151,6 +153,7 @@ class IRequiredOne(winrt.system.Object, ImplementsIRequiredOne):
 class ImplementsIRequiredThree():
     pass
 
+@typing.final
 class IRequiredThree(winrt.system.Object, ImplementsIRequiredThree, ImplementsIRequiredTwo, ImplementsIRequiredOne):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRequiredThree: ...
@@ -161,6 +164,7 @@ class IRequiredThree(winrt.system.Object, ImplementsIRequiredThree, ImplementsIR
 class ImplementsIRequiredTwo():
     pass
 
+@typing.final
 class IRequiredTwo(winrt.system.Object, ImplementsIRequiredTwo, ImplementsIRequiredOne):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRequiredTwo: ...
@@ -170,6 +174,7 @@ class IRequiredTwo(winrt.system.Object, ImplementsIRequiredTwo, ImplementsIRequi
 class ImplementsITests():
     pass
 
+@typing.final
 class ITests(winrt.system.Object, ImplementsITests):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITests: ...

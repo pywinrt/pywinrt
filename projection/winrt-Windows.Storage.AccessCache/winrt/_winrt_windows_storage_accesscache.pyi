@@ -114,6 +114,7 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object, ImplementsIStorageIte
 class ImplementsIStorageItemAccessList():
     pass
 
+@typing.final
 class IStorageItemAccessList(winrt.system.Object, ImplementsIStorageItemAccessList):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemAccessList: ...

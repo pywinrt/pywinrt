@@ -1749,6 +1749,7 @@ class UnifiedPosErrorData(winrt.system.Object):
 class ImplementsICashDrawerEventSourceEventArgs():
     pass
 
+@typing.final
 class ICashDrawerEventSourceEventArgs(winrt.system.Object, ImplementsICashDrawerEventSourceEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICashDrawerEventSourceEventArgs: ...
@@ -1758,6 +1759,7 @@ class ICashDrawerEventSourceEventArgs(winrt.system.Object, ImplementsICashDrawer
 class ImplementsICommonClaimedPosPrinterStation():
     pass
 
+@typing.final
 class ICommonClaimedPosPrinterStation(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonClaimedPosPrinterStation: ...
@@ -1802,6 +1804,7 @@ class ICommonClaimedPosPrinterStation(winrt.system.Object, ImplementsICommonClai
 class ImplementsICommonPosPrintStationCapabilities():
     pass
 
+@typing.final
 class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonPosPrintStationCapabilities: ...
@@ -1835,6 +1838,7 @@ class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonP
 class ImplementsICommonReceiptSlipCapabilities():
     pass
 
+@typing.final
 class ICommonReceiptSlipCapabilities(winrt.system.Object, ImplementsICommonReceiptSlipCapabilities, ImplementsICommonPosPrintStationCapabilities):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonReceiptSlipCapabilities: ...
@@ -1886,6 +1890,7 @@ class ICommonReceiptSlipCapabilities(winrt.system.Object, ImplementsICommonRecei
 class ImplementsIPosPrinterJob():
     pass
 
+@typing.final
 class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPosPrinterJob: ...
@@ -1897,6 +1902,7 @@ class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
 class ImplementsIReceiptOrSlipJob():
     pass
 
+@typing.final
 class IReceiptOrSlipJob(winrt.system.Object, ImplementsIReceiptOrSlipJob, ImplementsIPosPrinterJob):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IReceiptOrSlipJob: ...

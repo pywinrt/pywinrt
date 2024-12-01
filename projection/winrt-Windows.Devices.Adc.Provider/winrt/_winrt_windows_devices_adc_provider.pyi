@@ -18,6 +18,7 @@ Self = typing.TypeVar('Self')
 class ImplementsIAdcControllerProvider():
     pass
 
+@typing.final
 class IAdcControllerProvider(winrt.system.Object, ImplementsIAdcControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcControllerProvider: ...
@@ -41,6 +42,7 @@ class IAdcControllerProvider(winrt.system.Object, ImplementsIAdcControllerProvid
 class ImplementsIAdcProvider():
     pass
 
+@typing.final
 class IAdcProvider(winrt.system.Object, ImplementsIAdcProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcProvider: ...

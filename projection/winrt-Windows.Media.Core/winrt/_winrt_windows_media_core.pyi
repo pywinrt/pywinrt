@@ -1424,6 +1424,7 @@ class VideoTrackSupportInfo(winrt.system.Object):
 class ImplementsIMediaCue():
     pass
 
+@typing.final
 class IMediaCue(winrt.system.Object, ImplementsIMediaCue):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaCue: ...
@@ -1443,6 +1444,7 @@ class IMediaCue(winrt.system.Object, ImplementsIMediaCue):
 class ImplementsIMediaSource():
     pass
 
+@typing.final
 class IMediaSource(winrt.system.Object, ImplementsIMediaSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaSource: ...
@@ -1450,6 +1452,7 @@ class IMediaSource(winrt.system.Object, ImplementsIMediaSource):
 class ImplementsIMediaStreamDescriptor():
     pass
 
+@typing.final
 class IMediaStreamDescriptor(winrt.system.Object, ImplementsIMediaStreamDescriptor):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaStreamDescriptor: ...
@@ -1467,6 +1470,7 @@ class IMediaStreamDescriptor(winrt.system.Object, ImplementsIMediaStreamDescript
 class ImplementsIMediaStreamDescriptor2():
     pass
 
+@typing.final
 class IMediaStreamDescriptor2(winrt.system.Object, ImplementsIMediaStreamDescriptor2, ImplementsIMediaStreamDescriptor):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaStreamDescriptor2: ...
@@ -1488,6 +1492,7 @@ class IMediaStreamDescriptor2(winrt.system.Object, ImplementsIMediaStreamDescrip
 class ImplementsIMediaTrack():
     pass
 
+@typing.final
 class IMediaTrack(winrt.system.Object, ImplementsIMediaTrack):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaTrack: ...
@@ -1505,6 +1510,7 @@ class IMediaTrack(winrt.system.Object, ImplementsIMediaTrack):
 class ImplementsISingleSelectMediaTrackList():
     pass
 
+@typing.final
 class ISingleSelectMediaTrackList(winrt.system.Object, ImplementsISingleSelectMediaTrackList):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISingleSelectMediaTrackList: ...
@@ -1518,6 +1524,7 @@ class ISingleSelectMediaTrackList(winrt.system.Object, ImplementsISingleSelectMe
 class ImplementsITimedMetadataTrackProvider():
     pass
 
+@typing.final
 class ITimedMetadataTrackProvider(winrt.system.Object, ImplementsITimedMetadataTrackProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITimedMetadataTrackProvider: ...

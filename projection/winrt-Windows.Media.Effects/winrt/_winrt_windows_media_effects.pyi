@@ -227,6 +227,7 @@ class VideoTransformSphericalProjection(winrt.system.Object):
 class ImplementsIAudioEffectDefinition():
     pass
 
+@typing.final
 class IAudioEffectDefinition(winrt.system.Object, ImplementsIAudioEffectDefinition):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAudioEffectDefinition: ...
@@ -238,6 +239,7 @@ class IAudioEffectDefinition(winrt.system.Object, ImplementsIAudioEffectDefiniti
 class ImplementsIBasicAudioEffect():
     pass
 
+@typing.final
 class IBasicAudioEffect(winrt.system.Object, ImplementsIBasicAudioEffect, windows_media.ImplementsIMediaExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicAudioEffect: ...
@@ -254,6 +256,7 @@ class IBasicAudioEffect(winrt.system.Object, ImplementsIBasicAudioEffect, window
 class ImplementsIBasicVideoEffect():
     pass
 
+@typing.final
 class IBasicVideoEffect(winrt.system.Object, ImplementsIBasicVideoEffect, windows_media.ImplementsIMediaExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicVideoEffect: ...
@@ -274,6 +277,7 @@ class IBasicVideoEffect(winrt.system.Object, ImplementsIBasicVideoEffect, window
 class ImplementsIVideoCompositor():
     pass
 
+@typing.final
 class IVideoCompositor(winrt.system.Object, ImplementsIVideoCompositor, windows_media.ImplementsIMediaExtension):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositor: ...
@@ -288,6 +292,7 @@ class IVideoCompositor(winrt.system.Object, ImplementsIVideoCompositor, windows_
 class ImplementsIVideoCompositorDefinition():
     pass
 
+@typing.final
 class IVideoCompositorDefinition(winrt.system.Object, ImplementsIVideoCompositorDefinition):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositorDefinition: ...
@@ -299,6 +304,7 @@ class IVideoCompositorDefinition(winrt.system.Object, ImplementsIVideoCompositor
 class ImplementsIVideoEffectDefinition():
     pass
 
+@typing.final
 class IVideoEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinition):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoEffectDefinition: ...

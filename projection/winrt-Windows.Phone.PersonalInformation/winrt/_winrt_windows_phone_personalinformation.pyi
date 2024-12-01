@@ -267,6 +267,7 @@ class StoredContact(winrt.system.Object, ImplementsIContactInformation2, Impleme
 class ImplementsIContactInformation():
     pass
 
+@typing.final
 class IContactInformation(winrt.system.Object, ImplementsIContactInformation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation: ...
@@ -301,6 +302,7 @@ class IContactInformation(winrt.system.Object, ImplementsIContactInformation):
 class ImplementsIContactInformation2():
     pass
 
+@typing.final
 class IContactInformation2(winrt.system.Object, ImplementsIContactInformation2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation2: ...

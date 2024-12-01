@@ -27,6 +27,7 @@ class GpioPinProviderValueChangedEventArgs(winrt.system.Object):
 class ImplementsIGpioControllerProvider():
     pass
 
+@typing.final
 class IGpioControllerProvider(winrt.system.Object, ImplementsIGpioControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioControllerProvider: ...
@@ -37,6 +38,7 @@ class IGpioControllerProvider(winrt.system.Object, ImplementsIGpioControllerProv
 class ImplementsIGpioPinProvider():
     pass
 
+@typing.final
 class IGpioPinProvider(winrt.system.Object, ImplementsIGpioPinProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioPinProvider: ...
@@ -59,6 +61,7 @@ class IGpioPinProvider(winrt.system.Object, ImplementsIGpioPinProvider):
 class ImplementsIGpioProvider():
     pass
 
+@typing.final
 class IGpioProvider(winrt.system.Object, ImplementsIGpioProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioProvider: ...

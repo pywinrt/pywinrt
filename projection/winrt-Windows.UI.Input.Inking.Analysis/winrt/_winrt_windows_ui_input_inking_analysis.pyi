@@ -232,6 +232,7 @@ class InkAnalyzer(winrt.system.Object):
 class ImplementsIInkAnalysisNode():
     pass
 
+@typing.final
 class IInkAnalysisNode(winrt.system.Object, ImplementsIInkAnalysisNode):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkAnalysisNode: ...
@@ -252,6 +253,7 @@ class IInkAnalysisNode(winrt.system.Object, ImplementsIInkAnalysisNode):
 class ImplementsIInkAnalyzerFactory():
     pass
 
+@typing.final
 class IInkAnalyzerFactory(winrt.system.Object, ImplementsIInkAnalyzerFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkAnalyzerFactory: ...

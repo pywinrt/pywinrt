@@ -45,6 +45,7 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
 class ImplementsISpiControllerProvider():
     pass
 
+@typing.final
 class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiControllerProvider: ...
@@ -53,6 +54,7 @@ class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvid
 class ImplementsISpiDeviceProvider():
     pass
 
+@typing.final
 class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -71,6 +73,7 @@ class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, wind
 class ImplementsISpiProvider():
     pass
 
+@typing.final
 class ISpiProvider(winrt.system.Object, ImplementsISpiProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiProvider: ...

@@ -236,6 +236,7 @@ class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
 class ImplementsITextCharacterFormat():
     pass
 
+@typing.final
 class ITextCharacterFormat(winrt.system.Object, ImplementsITextCharacterFormat):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextCharacterFormat: ...
@@ -340,6 +341,7 @@ class ITextCharacterFormat(winrt.system.Object, ImplementsITextCharacterFormat):
 class ImplementsITextDocument():
     pass
 
+@typing.final
 class ITextDocument(winrt.system.Object, ImplementsITextDocument):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextDocument: ...
@@ -381,6 +383,7 @@ class ITextDocument(winrt.system.Object, ImplementsITextDocument):
 class ImplementsITextParagraphFormat():
     pass
 
+@typing.final
 class ITextParagraphFormat(winrt.system.Object, ImplementsITextParagraphFormat):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextParagraphFormat: ...
@@ -475,6 +478,7 @@ class ITextParagraphFormat(winrt.system.Object, ImplementsITextParagraphFormat):
 class ImplementsITextRange():
     pass
 
+@typing.final
 class ITextRange(winrt.system.Object, ImplementsITextRange):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRange: ...
@@ -554,6 +558,7 @@ class ITextRange(winrt.system.Object, ImplementsITextRange):
 class ImplementsITextSelection():
     pass
 
+@typing.final
 class ITextSelection(winrt.system.Object, ImplementsITextSelection, ImplementsITextRange):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextSelection: ...

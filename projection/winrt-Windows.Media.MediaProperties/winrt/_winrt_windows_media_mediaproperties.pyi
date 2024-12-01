@@ -515,6 +515,7 @@ class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
 class ImplementsIMediaEncodingProperties():
     pass
 
+@typing.final
 class IMediaEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaEncodingProperties: ...

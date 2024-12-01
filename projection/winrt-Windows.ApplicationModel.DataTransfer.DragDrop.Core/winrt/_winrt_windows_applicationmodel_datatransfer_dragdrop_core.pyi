@@ -99,6 +99,7 @@ class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
 class ImplementsICoreDropOperationTarget():
     pass
 
+@typing.final
 class ICoreDropOperationTarget(winrt.system.Object, ImplementsICoreDropOperationTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreDropOperationTarget: ...

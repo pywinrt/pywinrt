@@ -318,6 +318,7 @@ class VoiceCommandSet(winrt.system.Object):
 class ImplementsISpeechRecognitionConstraint():
     pass
 
+@typing.final
 class ISpeechRecognitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpeechRecognitionConstraint: ...

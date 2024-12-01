@@ -1665,6 +1665,7 @@ class CoreWebView2WindowFeatures(winrt.system.Object):
 class ImplementsICoreWebView2DispatchAdapter():
     pass
 
+@typing.final
 class ICoreWebView2DispatchAdapter(winrt.system.Object, ImplementsICoreWebView2DispatchAdapter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWebView2DispatchAdapter: ...

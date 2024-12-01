@@ -360,6 +360,7 @@ class VisualInteractionSource(microsoft_ui_composition.CompositionObject, Implem
 class ImplementsICompositionInteractionSource():
     pass
 
+@typing.final
 class ICompositionInteractionSource(winrt.system.Object, ImplementsICompositionInteractionSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionInteractionSource: ...
@@ -367,6 +368,7 @@ class ICompositionInteractionSource(winrt.system.Object, ImplementsICompositionI
 class ImplementsIInteractionTrackerOwner():
     pass
 
+@typing.final
 class IInteractionTrackerOwner(winrt.system.Object, ImplementsIInteractionTrackerOwner):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInteractionTrackerOwner: ...

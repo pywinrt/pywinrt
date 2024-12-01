@@ -683,6 +683,7 @@ class XamlUICommand(windows_ui_xaml.DependencyObject, ImplementsICommand, metacl
 class ImplementsICommand():
     pass
 
+@typing.final
 class ICommand(winrt.system.Object, ImplementsICommand):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommand: ...

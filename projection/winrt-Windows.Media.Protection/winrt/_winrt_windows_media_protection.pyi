@@ -120,6 +120,7 @@ class ServiceRequestedEventArgs(winrt.system.Object):
 class ImplementsIMediaProtectionServiceRequest():
     pass
 
+@typing.final
 class IMediaProtectionServiceRequest(winrt.system.Object, ImplementsIMediaProtectionServiceRequest):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...

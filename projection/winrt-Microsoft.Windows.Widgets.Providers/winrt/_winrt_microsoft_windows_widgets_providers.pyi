@@ -131,6 +131,7 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
 class ImplementsIWidgetManager():
     pass
 
+@typing.final
 class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetManager: ...
@@ -143,6 +144,7 @@ class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
 class ImplementsIWidgetProvider():
     pass
 
+@typing.final
 class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProvider: ...
@@ -156,6 +158,7 @@ class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
 class ImplementsIWidgetProvider2():
     pass
 
+@typing.final
 class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProvider2: ...
@@ -164,6 +167,7 @@ class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
 class ImplementsIWidgetProviderAnalytics():
     pass
 
+@typing.final
 class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAnalytics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProviderAnalytics: ...
@@ -172,6 +176,7 @@ class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAna
 class ImplementsIWidgetProviderErrors():
     pass
 
+@typing.final
 class IWidgetProviderErrors(winrt.system.Object, ImplementsIWidgetProviderErrors):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWidgetProviderErrors: ...
