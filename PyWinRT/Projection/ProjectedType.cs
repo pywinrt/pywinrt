@@ -337,7 +337,7 @@ class ProjectedType
     /// </summary>
     public bool HasComposableFactory { get; }
 
-    public string GetMethodInvokeContext(MethodDefinition method)
+    public string GetMethodInvokeContext(ProjectedMethod method)
     {
         if (IsGeneric)
         {
