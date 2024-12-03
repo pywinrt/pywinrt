@@ -959,7 +959,7 @@ static class WriterExtensions
             if (method.Method.ReturnType.FullName == "System.Void")
             {
                 var invoke =
-                    $"{type.GetMethodInvokeContext(method.Method)}{method.CppName}({method.Method.Parameters.ToParameterList()});";
+                    $"{type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});";
 
                 // HACK: WinRT APIs are generally non-blocking, but some are
                 // long-running and block other threads in the Python interpreter.
@@ -990,7 +990,7 @@ static class WriterExtensions
             }
             else
             {
-                var context = type.GetMethodInvokeContext(method.Method);
+                var context = type.GetMethodInvokeContext(method);
                 var cppMethod = method.CppName;
                 var paramList = method.Method.Parameters.ToParameterList();
 
@@ -1008,7 +1008,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"{type.GetMethodInvokeContext(method.Method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
+            $"{type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
         );
         w.WriteBlankLine();
 

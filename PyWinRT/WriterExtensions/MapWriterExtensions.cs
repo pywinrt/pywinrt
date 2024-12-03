@@ -11,7 +11,7 @@ static class MapWriterExtensions
         w.WriteTryCatch(() =>
         {
             var method = type.Methods.Single(m => m.Name == "First");
-            var self = type.GetMethodInvokeContext(method.Method);
+            var self = type.GetMethodInvokeContext(method);
 
             w.WriteLine($"py::pyobj_handle iter{{py::convert({self}First())}};");
             w.WriteBlankLine();
