@@ -55,8 +55,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush*>(self.get())->obj = winrt::make<PyWinrtAcrylicBrush>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAcrylicBrush>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_AcrylicBrush(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self) noexcept
+    static void _dealloc_AcrylicBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* AcrylicBrush_get_TintTransitionDuration(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_TintTransitionDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_TintTransitionDuration(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_TintTransitionDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* AcrylicBrush_get_TintOpacity(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_TintOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_TintOpacity(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_TintOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* AcrylicBrush_get_TintColor(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_TintColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -233,7 +233,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_TintColor(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_TintColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* AcrylicBrush_get_BackgroundSource(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_BackgroundSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_BackgroundSource(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_BackgroundSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* AcrylicBrush_get_AlwaysUseFallback(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_AlwaysUseFallback(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* AcrylicBrush_get_TintLuminosityOpacity(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    static PyObject* AcrylicBrush_get_TintLuminosityOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int AcrylicBrush_put_TintLuminosityOpacity(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AcrylicBrush_put_TintLuminosityOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -657,7 +657,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_AcrylicBrush = {
         "winrt._winrt_windows_ui_xaml_media.AcrylicBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AcrylicBrush};
@@ -1792,7 +1792,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_Brush(py::wrapper::Windows::UI::Xaml::Media::Brush* self) noexcept
+    static void _dealloc_Brush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1800,7 +1800,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* Brush_PopulatePropertyInfo(py::wrapper::Windows::UI::Xaml::Media::Brush* self, PyObject* args) noexcept
+    static PyObject* Brush_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1846,7 +1846,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static PyObject* Brush_get_Transform(py::wrapper::Windows::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
+    static PyObject* Brush_get_Transform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1872,7 +1872,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Brush_put_Transform(py::wrapper::Windows::UI::Xaml::Media::Brush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Brush_put_Transform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1907,7 +1907,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* Brush_get_RelativeTransform(py::wrapper::Windows::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
+    static PyObject* Brush_get_RelativeTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Brush_put_RelativeTransform(py::wrapper::Windows::UI::Xaml::Media::Brush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Brush_put_RelativeTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1968,7 +1968,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* Brush_get_Opacity(py::wrapper::Windows::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
+    static PyObject* Brush_get_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1994,7 +1994,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Brush_put_Opacity(py::wrapper::Windows::UI::Xaml::Media::Brush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Brush_put_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Brush = {
         "winrt._winrt_windows_ui_xaml_media.Brush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Brush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Brush};
@@ -2942,7 +2942,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_CacheMode(py::wrapper::Windows::UI::Xaml::Media::CacheMode* self) noexcept
+    static void _dealloc_CacheMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2994,7 +2994,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_CacheMode = {
         "winrt._winrt_windows_ui_xaml_media.CacheMode",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::CacheMode),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CacheMode};
@@ -5363,8 +5363,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::FontFamily*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::FontFamily*>(self.get())->obj = winrt::make<PyWinrtFontFamily>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFontFamily>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -5385,7 +5385,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_FontFamily(py::wrapper::Windows::UI::Xaml::Media::FontFamily* self) noexcept
+    static void _dealloc_FontFamily(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5393,7 +5393,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* FontFamily_get_Source(py::wrapper::Windows::UI::Xaml::Media::FontFamily* self, void* /*unused*/) noexcept
+    static PyObject* FontFamily_get_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5490,7 +5490,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_FontFamily = {
         "winrt._winrt_windows_ui_xaml_media.FontFamily",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::FontFamily),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FontFamily};
@@ -5620,7 +5620,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_GeneralTransform(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self) noexcept
+    static void _dealloc_GeneralTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5628,7 +5628,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* GeneralTransform_TransformBounds(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, PyObject* args) noexcept
+    static PyObject* GeneralTransform_TransformBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5672,7 +5672,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static PyObject* GeneralTransform_TransformPoint(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, PyObject* args) noexcept
+    static PyObject* GeneralTransform_TransformPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5710,7 +5710,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* GeneralTransform_TryTransform(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, PyObject* args) noexcept
+    static PyObject* GeneralTransform_TryTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5767,7 +5767,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static PyObject* GeneralTransform_get_Inverse(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform* self, void* /*unused*/) noexcept
+    static PyObject* GeneralTransform_get_Inverse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5843,7 +5843,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GeneralTransform = {
         "winrt._winrt_windows_ui_xaml_media.GeneralTransform",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GeneralTransform};
@@ -5882,7 +5882,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_Geometry(py::wrapper::Windows::UI::Xaml::Media::Geometry* self) noexcept
+    static void _dealloc_Geometry(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5890,7 +5890,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* Geometry_get_Transform(py::wrapper::Windows::UI::Xaml::Media::Geometry* self, void* /*unused*/) noexcept
+    static PyObject* Geometry_get_Transform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5916,7 +5916,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Geometry_put_Transform(py::wrapper::Windows::UI::Xaml::Media::Geometry* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Geometry_put_Transform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5951,7 +5951,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* Geometry_get_Bounds(py::wrapper::Windows::UI::Xaml::Media::Geometry* self, void* /*unused*/) noexcept
+    static PyObject* Geometry_get_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6101,7 +6101,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Geometry = {
         "winrt._winrt_windows_ui_xaml_media.Geometry",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Geometry),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Geometry};
@@ -7178,7 +7178,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_GradientBrush(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self) noexcept
+    static void _dealloc_GradientBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7186,7 +7186,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* GradientBrush_get_SpreadMethod(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* GradientBrush_get_SpreadMethod(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7212,7 +7212,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int GradientBrush_put_SpreadMethod(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GradientBrush_put_SpreadMethod(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7247,7 +7247,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* GradientBrush_get_MappingMode(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* GradientBrush_get_MappingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7273,7 +7273,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int GradientBrush_put_MappingMode(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GradientBrush_put_MappingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7308,7 +7308,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* GradientBrush_get_GradientStops(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* GradientBrush_get_GradientStops(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7334,7 +7334,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int GradientBrush_put_GradientStops(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GradientBrush_put_GradientStops(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7369,7 +7369,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* GradientBrush_get_ColorInterpolationMode(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* GradientBrush_get_ColorInterpolationMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7395,7 +7395,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int GradientBrush_put_ColorInterpolationMode(py::wrapper::Windows::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GradientBrush_put_ColorInterpolationMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7582,7 +7582,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientBrush = {
         "winrt._winrt_windows_ui_xaml_media.GradientBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::GradientBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GradientBrush};
@@ -8960,7 +8960,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_ImageSource(py::wrapper::Windows::UI::Xaml::Media::ImageSource* self) noexcept
+    static void _dealloc_ImageSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9012,7 +9012,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ImageSource = {
         "winrt._winrt_windows_ui_xaml_media.ImageSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::ImageSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ImageSource};
@@ -12806,7 +12806,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_PathSegment(py::wrapper::Windows::UI::Xaml::Media::PathSegment* self) noexcept
+    static void _dealloc_PathSegment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12858,7 +12858,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathSegment = {
         "winrt._winrt_windows_ui_xaml_media.PathSegment",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::PathSegment),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PathSegment};
@@ -16206,7 +16206,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_Projection(py::wrapper::Windows::UI::Xaml::Media::Projection* self) noexcept
+    static void _dealloc_Projection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16258,7 +16258,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Projection = {
         "winrt._winrt_windows_ui_xaml_media.Projection",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Projection),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Projection};
@@ -17106,8 +17106,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush*>(self.get())->obj = winrt::make<PyWinrtRevealBackgroundBrush>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRevealBackgroundBrush>(self.get());
 
                     return self.detach();
                 }
@@ -17128,7 +17128,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_RevealBackgroundBrush(py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush* self) noexcept
+    static void _dealloc_RevealBackgroundBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17180,7 +17180,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBackgroundBrush = {
         "winrt._winrt_windows_ui_xaml_media.RevealBackgroundBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RevealBackgroundBrush};
@@ -17261,8 +17261,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush*>(self.get())->obj = winrt::make<PyWinrtRevealBorderBrush>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRevealBorderBrush>(self.get());
 
                     return self.detach();
                 }
@@ -17283,7 +17283,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_RevealBorderBrush(py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush* self) noexcept
+    static void _dealloc_RevealBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17335,7 +17335,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBorderBrush = {
         "winrt._winrt_windows_ui_xaml_media.RevealBorderBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RevealBorderBrush};
@@ -17394,7 +17394,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_RevealBrush(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self) noexcept
+    static void _dealloc_RevealBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17480,7 +17480,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* RevealBrush_get_TargetTheme(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, void* /*unused*/) noexcept
+    static PyObject* RevealBrush_get_TargetTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17506,7 +17506,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int RevealBrush_put_TargetTheme(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RevealBrush_put_TargetTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17541,7 +17541,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* RevealBrush_get_Color(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, void* /*unused*/) noexcept
+    static PyObject* RevealBrush_get_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17567,7 +17567,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int RevealBrush_put_Color(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RevealBrush_put_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17602,7 +17602,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* RevealBrush_get_AlwaysUseFallback(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, void* /*unused*/) noexcept
+    static PyObject* RevealBrush_get_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17628,7 +17628,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int RevealBrush_put_AlwaysUseFallback(py::wrapper::Windows::UI::Xaml::Media::RevealBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RevealBrush_put_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17814,7 +17814,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBrush = {
         "winrt._winrt_windows_ui_xaml_media.RevealBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RevealBrush};
@@ -18708,7 +18708,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_Shadow(py::wrapper::Windows::UI::Xaml::Media::Shadow* self) noexcept
+    static void _dealloc_Shadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18760,7 +18760,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Shadow = {
         "winrt._winrt_windows_ui_xaml_media.Shadow",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Shadow),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Shadow};
@@ -19527,8 +19527,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::ThemeShadow*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::ThemeShadow*>(self.get())->obj = winrt::make<PyWinrtThemeShadow>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtThemeShadow>(self.get());
 
                     return self.detach();
                 }
@@ -19549,7 +19549,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_ThemeShadow(py::wrapper::Windows::UI::Xaml::Media::ThemeShadow* self) noexcept
+    static void _dealloc_ThemeShadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19557,7 +19557,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* ThemeShadow_get_Receivers(py::wrapper::Windows::UI::Xaml::Media::ThemeShadow* self, void* /*unused*/) noexcept
+    static PyObject* ThemeShadow_get_Receivers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19628,7 +19628,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ThemeShadow = {
         "winrt._winrt_windows_ui_xaml_media.ThemeShadow",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::ThemeShadow),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ThemeShadow};
@@ -19687,7 +19687,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_TileBrush(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self) noexcept
+    static void _dealloc_TileBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19695,7 +19695,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* TileBrush_get_Stretch(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    static PyObject* TileBrush_get_Stretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19721,7 +19721,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int TileBrush_put_Stretch(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TileBrush_put_Stretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19756,7 +19756,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* TileBrush_get_AlignmentY(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    static PyObject* TileBrush_get_AlignmentY(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19782,7 +19782,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int TileBrush_put_AlignmentY(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TileBrush_put_AlignmentY(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19817,7 +19817,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static PyObject* TileBrush_get_AlignmentX(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    static PyObject* TileBrush_get_AlignmentX(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19843,7 +19843,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int TileBrush_put_AlignmentX(py::wrapper::Windows::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TileBrush_put_AlignmentX(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20003,7 +20003,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TileBrush = {
         "winrt._winrt_windows_ui_xaml_media.TileBrush",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::TileBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TileBrush};
@@ -21299,7 +21299,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_Transform(py::wrapper::Windows::UI::Xaml::Media::Transform* self) noexcept
+    static void _dealloc_Transform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21351,7 +21351,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Transform = {
         "winrt._winrt_windows_ui_xaml_media.Transform",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Transform),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transform};
@@ -23195,7 +23195,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static void _dealloc_XamlCompositionBrushBase(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase* self) noexcept
+    static void _dealloc_XamlCompositionBrushBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23215,7 +23215,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         return nullptr;
     }
 
-    static PyObject* XamlCompositionBrushBase_get_FallbackColor(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    static PyObject* XamlCompositionBrushBase_get_FallbackColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23241,7 +23241,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int XamlCompositionBrushBase_put_FallbackColor(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlCompositionBrushBase_put_FallbackColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23349,7 +23349,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_XamlCompositionBrushBase = {
         "winrt._winrt_windows_ui_xaml_media.XamlCompositionBrushBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlCompositionBrushBase};
@@ -23523,8 +23523,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::XamlLight*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::XamlLight*>(self.get())->obj = winrt::make<PyWinrtXamlLight>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtXamlLight>(self.get());
 
                     return self.detach();
                 }
@@ -23545,7 +23545,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static void _dealloc_XamlLight(py::wrapper::Windows::UI::Xaml::Media::XamlLight* self) noexcept
+    static void _dealloc_XamlLight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23778,7 +23778,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_XamlLight = {
         "winrt._winrt_windows_ui_xaml_media.XamlLight",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::XamlLight),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlLight};

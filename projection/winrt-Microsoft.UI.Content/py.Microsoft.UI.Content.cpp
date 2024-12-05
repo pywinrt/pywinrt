@@ -13,7 +13,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentCoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self) noexcept
+    static void _dealloc_ContentCoordinateConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21,7 +21,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoint(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -59,7 +59,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoints(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -97,7 +97,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPointsAndRoundingMode(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPointsAndRoundingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -136,7 +136,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithRect(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -174,7 +174,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoint(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -212,7 +212,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoints(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -250,7 +250,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithRect(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -377,7 +377,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentCoordinateConverter = {
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentCoordinateConverter};
@@ -734,7 +734,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentIsland(py::wrapper::Microsoft::UI::Content::ContentIsland* self) noexcept
+    static void _dealloc_ContentIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -742,7 +742,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentIsland_Close(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* args) noexcept
+    static PyObject* ContentIsland_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -891,7 +891,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_GetAutomationHostProvider(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* args) noexcept
+    static PyObject* ContentIsland_GetAutomationHostProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1003,7 +1003,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_GetStateChangeDeferral(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* args) noexcept
+    static PyObject* ContentIsland_GetStateChangeDeferral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1039,7 +1039,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_RequestSize(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* args) noexcept
+    static PyObject* ContentIsland_RequestSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1078,7 +1078,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1104,7 +1104,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentIsland_put_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentIsland_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1139,7 +1139,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsIslandVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsIslandVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1165,7 +1165,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentIsland_put_IsIslandVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentIsland_put_IsIslandVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1200,7 +1200,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsIslandEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsIslandEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1226,7 +1226,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentIsland_put_IsIslandEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentIsland_put_IsIslandEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1261,7 +1261,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsHitTestVisibleWhenTransparent(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsHitTestVisibleWhenTransparent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1287,7 +1287,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentIsland_put_IsHitTestVisibleWhenTransparent(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentIsland_put_IsHitTestVisibleWhenTransparent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1322,7 +1322,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_AppData(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_AppData(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1348,7 +1348,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentIsland_put_AppData(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentIsland_put_AppData(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1383,7 +1383,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_CoordinateConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1435,7 +1435,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_CustomProperties(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_CustomProperties(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1461,7 +1461,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1487,7 +1487,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_Environment(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_Environment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1513,7 +1513,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_Id(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_Id(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1539,7 +1539,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1565,7 +1565,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsSiteEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1591,7 +1591,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsSiteVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1617,7 +1617,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_LayoutDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1643,7 +1643,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1669,7 +1669,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_get_IsClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
+    static PyObject* ContentIsland_get_IsClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1695,7 +1695,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_add_AutomationProviderRequested(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_add_AutomationProviderRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1723,7 +1723,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_remove_AutomationProviderRequested(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_remove_AutomationProviderRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1752,7 +1752,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_add_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_add_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1780,7 +1780,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_remove_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_remove_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1809,7 +1809,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_add_Closed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_add_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1837,7 +1837,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_remove_Closed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_remove_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1866,7 +1866,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_add_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1894,7 +1894,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIsland_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
+    static PyObject* ContentIsland_remove_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1947,16 +1947,16 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* _enter_ContentIsland(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_ContentIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ContentIsland(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_ContentIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2017,7 +2017,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentIsland = {
         "winrt._winrt_microsoft_ui_content.ContentIsland",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentIsland),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentIsland};
@@ -2251,7 +2251,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentIslandEnvironment(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self) noexcept
+    static void _dealloc_ContentIslandEnvironment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2259,7 +2259,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentIslandEnvironment_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, void* /*unused*/) noexcept
+    static PyObject* ContentIslandEnvironment_get_AppWindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2285,7 +2285,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIslandEnvironment_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, void* /*unused*/) noexcept
+    static PyObject* ContentIslandEnvironment_get_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2311,7 +2311,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIslandEnvironment_add_SettingChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
+    static PyObject* ContentIslandEnvironment_add_SettingChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2339,7 +2339,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIslandEnvironment_remove_SettingChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
+    static PyObject* ContentIslandEnvironment_remove_SettingChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2368,7 +2368,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIslandEnvironment_add_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
+    static PyObject* ContentIslandEnvironment_add_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2396,7 +2396,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentIslandEnvironment_remove_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
+    static PyObject* ContentIslandEnvironment_remove_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2475,7 +2475,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentIslandEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentIslandEnvironment};
@@ -2715,7 +2715,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentSite(py::wrapper::Microsoft::UI::Content::ContentSite* self) noexcept
+    static void _dealloc_ContentSite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2723,7 +2723,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentSite_Close(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* args) noexcept
+    static PyObject* ContentSite_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2760,7 +2760,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_GetIslandStateChangeDeferral(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* args) noexcept
+    static PyObject* ContentSite_GetIslandStateChangeDeferral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2796,7 +2796,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_ShouldApplyRasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2822,7 +2822,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_ShouldApplyRasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2857,7 +2857,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_ParentScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2883,7 +2883,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_ParentScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2918,7 +2918,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2944,7 +2944,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2979,7 +2979,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_LayoutDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3005,7 +3005,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_LayoutDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3040,7 +3040,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_IsSiteVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3066,7 +3066,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_IsSiteVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3101,7 +3101,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_IsSiteEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3127,7 +3127,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_IsSiteEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3162,7 +3162,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_ClientSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3188,7 +3188,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_ClientSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3223,7 +3223,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3249,7 +3249,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSite_put_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSite_put_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3284,7 +3284,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_CoordinateConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3310,7 +3310,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3336,7 +3336,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_Environment(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_Environment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3362,7 +3362,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_IsConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3388,7 +3388,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3414,7 +3414,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_RequestedSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_RequestedSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3440,7 +3440,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_View(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_View(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3466,7 +3466,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_get_IsClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
+    static PyObject* ContentSite_get_IsClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3492,7 +3492,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_add_RequestedStateChanged(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_add_RequestedStateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3520,7 +3520,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_remove_RequestedStateChanged(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_remove_RequestedStateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3549,7 +3549,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_add_Closed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_add_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3577,7 +3577,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_remove_Closed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_remove_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3606,7 +3606,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_add_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3634,7 +3634,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSite_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
+    static PyObject* ContentSite_remove_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3687,16 +3687,16 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* _enter_ContentSite(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_ContentSite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ContentSite(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_ContentSite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3752,7 +3752,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentSite = {
         "winrt._winrt_microsoft_ui_content.ContentSite",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentSite),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSite};
@@ -3791,7 +3791,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentSiteEnvironment(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self) noexcept
+    static void _dealloc_ContentSiteEnvironment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3799,7 +3799,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentSiteEnvironment_NotifySettingChanged(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, PyObject* args) noexcept
+    static PyObject* ContentSiteEnvironment_NotifySettingChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3838,7 +3838,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteEnvironment_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteEnvironment_get_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3864,7 +3864,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSiteEnvironment_put_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSiteEnvironment_put_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3899,7 +3899,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteEnvironment_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteEnvironment_get_AppWindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3925,7 +3925,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int ContentSiteEnvironment_put_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ContentSiteEnvironment_put_AppWindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3960,7 +3960,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteEnvironment_get_View(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteEnvironment_get_View(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4034,7 +4034,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentSiteEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteEnvironment};
@@ -4073,7 +4073,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentSiteEnvironmentView(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView* self) noexcept
+    static void _dealloc_ContentSiteEnvironmentView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4081,7 +4081,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentSiteEnvironmentView_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteEnvironmentView_get_AppWindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4107,7 +4107,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteEnvironmentView_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteEnvironmentView_get_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4179,7 +4179,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentSiteEnvironmentView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteEnvironmentView};
@@ -4311,7 +4311,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_ContentSiteView(py::wrapper::Microsoft::UI::Content::ContentSiteView* self) noexcept
+    static void _dealloc_ContentSiteView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4319,7 +4319,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentSiteView_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4345,7 +4345,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_ClientSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4371,7 +4371,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_CoordinateConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4397,7 +4397,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4423,7 +4423,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_EnvironmentView(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_EnvironmentView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4449,7 +4449,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_IsConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4475,7 +4475,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_IsSiteEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4501,7 +4501,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_IsSiteVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4527,7 +4527,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_LayoutDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4553,7 +4553,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4579,7 +4579,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_ParentScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4605,7 +4605,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4631,7 +4631,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_RequestedSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_RequestedSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4657,7 +4657,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentSiteView_get_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
+    static PyObject* ContentSiteView_get_ShouldApplyRasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4741,7 +4741,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_ContentSiteView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteView",
-        sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteView};
@@ -5000,7 +5000,7 @@ namespace py::cpp::Microsoft::UI::Content
         return nullptr;
     }
 
-    static void _dealloc_DesktopSiteBridge(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self) noexcept
+    static void _dealloc_DesktopSiteBridge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5008,7 +5008,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* DesktopSiteBridge_Close(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5045,7 +5045,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_Connect(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Connect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5084,7 +5084,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_Disable(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Disable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5121,7 +5121,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_Enable(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Enable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5158,7 +5158,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_Hide(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Hide(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5231,7 +5231,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_MoveAndResize(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_MoveAndResize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5270,7 +5270,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_MoveInZOrderAtBottom(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_MoveInZOrderAtBottom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5307,7 +5307,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_MoveInZOrderAtTop(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_MoveInZOrderAtTop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_MoveInZOrderBelow(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_MoveInZOrderBelow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5383,7 +5383,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_Show(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* args) noexcept
+    static PyObject* DesktopSiteBridge_Show(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5420,7 +5420,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5446,7 +5446,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int DesktopSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DesktopSiteBridge_put_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5481,7 +5481,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_LayoutDirectionOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5507,7 +5507,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static int DesktopSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DesktopSiteBridge_put_LayoutDirectionOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5542,7 +5542,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5568,7 +5568,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_IsEnabled(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5594,7 +5594,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_IsVisible(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5620,7 +5620,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_WindowId(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_WindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5646,7 +5646,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_get_IsClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
+    static PyObject* DesktopSiteBridge_get_IsClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5672,7 +5672,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_add_Closed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
+    static PyObject* DesktopSiteBridge_add_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5700,7 +5700,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_remove_Closed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
+    static PyObject* DesktopSiteBridge_remove_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5729,7 +5729,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
+    static PyObject* DesktopSiteBridge_add_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5757,7 +5757,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* DesktopSiteBridge_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
+    static PyObject* DesktopSiteBridge_remove_FrameworkClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5810,16 +5810,16 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* _enter_DesktopSiteBridge(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_DesktopSiteBridge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DesktopSiteBridge(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_DesktopSiteBridge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -5872,7 +5872,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyType_Spec type_spec_DesktopSiteBridge = {
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge",
-        sizeof(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DesktopSiteBridge};

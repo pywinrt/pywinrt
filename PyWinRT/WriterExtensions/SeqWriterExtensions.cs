@@ -72,20 +72,22 @@ static class SeqWriterExtensions
 
     public static void WriteSeqLengthBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(
+            type.Properties.Single(m => m.Name == "Size").GetMethod
+        );
 
         w.WriteTryCatch(
-            () => w.WriteLine($"return static_cast<Py_ssize_t>({self}.Size());"),
+            () => w.WriteLine($"return static_cast<Py_ssize_t>({self}Size());"),
             catchReturn: "-1"
         );
     }
 
     public static void WriteSeqItemBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(type.Methods.Single(m => m.Name == "GetAt"));
 
         w.WriteTryCatch(
-            () => w.WriteLine($"return py::convert({self}.GetAt(static_cast<uint32_t>(i)));")
+            () => w.WriteLine($"return py::convert({self}GetAt(static_cast<uint32_t>(i)));")
         );
     }
 
@@ -98,7 +100,7 @@ static class SeqWriterExtensions
             ? "seq_item(i)"
             : $"_seq_item_{type.Name.ToNonGeneric()}(self, i)";
 
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(method);
 
         w.WriteTryCatch(() =>
         {
@@ -139,7 +141,7 @@ static class SeqWriterExtensions
             w.WriteLine("Py_ssize_t start, stop, step, length;");
             w.WriteBlankLine();
             w.WriteLine(
-                $"if (PySlice_GetIndicesEx(slice, {self}.Size(), &start, &stop, &step, &length) < 0)"
+                $"if (PySlice_GetIndicesEx(slice, {self}Size(), &start, &stop, &step, &length) < 0)"
             );
             w.WriteLine("{");
             w.Indent++;
@@ -161,7 +163,7 @@ static class SeqWriterExtensions
                 $"winrt::com_array<{collectionType}> items(static_cast<uint32_t>(length), empty_instance<{collectionType}>::get());"
             );
             w.WriteBlankLine();
-            w.WriteLine($"auto count = {self}.GetMany(static_cast<uint32_t>(start), items);");
+            w.WriteLine($"auto count = {self}GetMany(static_cast<uint32_t>(start), items);");
             w.WriteBlankLine();
             w.WriteLine("if (count != static_cast<uint32_t>(length))");
             w.WriteLine("{");
@@ -184,7 +186,7 @@ static class SeqWriterExtensions
             .Method.Parameters[1]
             .ParameterType.ToCppTypeName(method.GenericArgMap);
 
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(method);
 
         w.WriteTryCatch(
             () =>
@@ -192,14 +194,14 @@ static class SeqWriterExtensions
                 w.WriteLine($"if (!value)");
                 w.WriteLine("{");
                 w.Indent++;
-                w.WriteLine($"{self}.RemoveAt(static_cast<uint32_t>(i));");
+                w.WriteLine($"{self}RemoveAt(static_cast<uint32_t>(i));");
                 w.Indent--;
                 w.WriteLine("}");
                 w.WriteLine("else");
                 w.WriteLine("{");
                 w.Indent++;
                 w.WriteLine(
-                    $"{self}.SetAt(static_cast<uint32_t>(i), py::convert_to<{collectionType}>(value));"
+                    $"{self}SetAt(static_cast<uint32_t>(i), py::convert_to<{collectionType}>(value));"
                 );
                 w.Indent--;
                 w.WriteLine("}");

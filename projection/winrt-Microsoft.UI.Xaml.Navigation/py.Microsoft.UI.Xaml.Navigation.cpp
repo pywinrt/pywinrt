@@ -55,8 +55,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions*>(self.get())->obj = winrt::make<PyWinrtFrameNavigationOptions>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFrameNavigationOptions>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         }
     }
 
-    static void _dealloc_FrameNavigationOptions(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions* self) noexcept
+    static void _dealloc_FrameNavigationOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         Py_DECREF(tp);
     }
 
-    static PyObject* FrameNavigationOptions_get_TransitionInfoOverride(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions* self, void* /*unused*/) noexcept
+    static PyObject* FrameNavigationOptions_get_TransitionInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         }
     }
 
-    static int FrameNavigationOptions_put_TransitionInfoOverride(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameNavigationOptions_put_TransitionInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         }
     }
 
-    static PyObject* FrameNavigationOptions_get_IsNavigationStackEnabled(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions* self, void* /*unused*/) noexcept
+    static PyObject* FrameNavigationOptions_get_IsNavigationStackEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         }
     }
 
-    static int FrameNavigationOptions_put_IsNavigationStackEnabled(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameNavigationOptions_put_IsNavigationStackEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -253,7 +253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_FrameNavigationOptions = {
         "winrt._winrt_microsoft_ui_xaml_navigation.FrameNavigationOptions",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameNavigationOptions};

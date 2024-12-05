@@ -427,8 +427,8 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Printing::PrintDocument*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Printing::PrintDocument*>(self.get())->obj = winrt::make<PyWinrtPrintDocument>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPrintDocument>(self.get());
 
                     return self.detach();
                 }
@@ -449,7 +449,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static void _dealloc_PrintDocument(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self) noexcept
+    static void _dealloc_PrintDocument(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -457,7 +457,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         Py_DECREF(tp);
     }
 
-    static PyObject* PrintDocument_AddPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
+    static PyObject* PrintDocument_AddPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -496,7 +496,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_AddPagesComplete(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
+    static PyObject* PrintDocument_AddPagesComplete(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_InvalidatePreview(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
+    static PyObject* PrintDocument_InvalidatePreview(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -570,7 +570,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_SetPreviewPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
+    static PyObject* PrintDocument_SetPreviewPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_SetPreviewPageCount(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
+    static PyObject* PrintDocument_SetPreviewPageCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -650,7 +650,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_get_DocumentSource(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
+    static PyObject* PrintDocument_get_DocumentSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -702,7 +702,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_add_AddPages(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_add_AddPages(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_remove_AddPages(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_remove_AddPages(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -759,7 +759,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_add_GetPreviewPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_add_GetPreviewPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -787,7 +787,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_remove_GetPreviewPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_remove_GetPreviewPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -816,7 +816,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_add_Paginate(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_add_Paginate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -844,7 +844,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_remove_Paginate(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
+    static PyObject* PrintDocument_remove_Paginate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -929,7 +929,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PrintDocument = {
         "winrt._winrt_windows_ui_xaml_printing.PrintDocument",
-        sizeof(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PrintDocument};

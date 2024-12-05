@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         return nullptr;
     }
 
-    static void _dealloc_AppWindowPresentationConfiguration(py::wrapper::Windows::UI::WindowManagement::AppWindowPresentationConfiguration* self) noexcept
+    static void _dealloc_AppWindowPresentationConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2029,7 +2029,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         Py_DECREF(tp);
     }
 
-    static PyObject* AppWindowPresentationConfiguration_get_Kind(py::wrapper::Windows::UI::WindowManagement::AppWindowPresentationConfiguration* self, void* /*unused*/) noexcept
+    static PyObject* AppWindowPresentationConfiguration_get_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2100,7 +2100,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowPresentationConfiguration = {
         "winrt._winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration",
-        sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowPresentationConfiguration),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppWindowPresentationConfiguration};

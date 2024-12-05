@@ -61,8 +61,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs*>(self.get())->obj = winrt::make<PyWinrtNotifyCollectionChangedEventArgs>(self.get(), param0, param1, param2, param3, param4);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNotifyCollectionChangedEventArgs>(self.get(), param0, param1, param2, param3, param4);
 
                     return self.detach();
                 }
@@ -83,7 +83,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
     }
 
-    static void _dealloc_NotifyCollectionChangedEventArgs(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self) noexcept
+    static void _dealloc_NotifyCollectionChangedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -91,7 +91,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         Py_DECREF(tp);
     }
 
-    static PyObject* NotifyCollectionChangedEventArgs_get_Action(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* NotifyCollectionChangedEventArgs_get_Action(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -117,7 +117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
     }
 
-    static PyObject* NotifyCollectionChangedEventArgs_get_NewItems(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* NotifyCollectionChangedEventArgs_get_NewItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
     }
 
-    static PyObject* NotifyCollectionChangedEventArgs_get_NewStartingIndex(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* NotifyCollectionChangedEventArgs_get_NewStartingIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -169,7 +169,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
     }
 
-    static PyObject* NotifyCollectionChangedEventArgs_get_OldItems(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* NotifyCollectionChangedEventArgs_get_OldItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -195,7 +195,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         }
     }
 
-    static PyObject* NotifyCollectionChangedEventArgs_get_OldStartingIndex(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* NotifyCollectionChangedEventArgs_get_OldStartingIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -270,7 +270,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
 
     static PyType_Spec type_spec_NotifyCollectionChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_interop.NotifyCollectionChangedEventArgs",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NotifyCollectionChangedEventArgs};

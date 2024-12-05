@@ -113,8 +113,8 @@ namespace py::cpp::Windows::UI::Xaml::Resources
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader*>(self.get())->obj = winrt::make<PyWinrtCustomXamlResourceLoader>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCustomXamlResourceLoader>(self.get());
 
                     return self.detach();
                 }
@@ -135,7 +135,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
         }
     }
 
-    static void _dealloc_CustomXamlResourceLoader(py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader* self) noexcept
+    static void _dealloc_CustomXamlResourceLoader(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyType_Spec type_spec_CustomXamlResourceLoader = {
         "winrt._winrt_windows_ui_xaml_resources.CustomXamlResourceLoader",
-        sizeof(py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CustomXamlResourceLoader};

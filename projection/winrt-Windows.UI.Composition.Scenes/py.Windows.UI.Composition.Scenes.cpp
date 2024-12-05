@@ -214,7 +214,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_SceneComponent(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self) noexcept
+    static void _dealloc_SceneComponent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -222,7 +222,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
-    static PyObject* SceneComponent_get_ComponentType(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, void* /*unused*/) noexcept
+    static PyObject* SceneComponent_get_ComponentType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -293,7 +293,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneComponent = {
         "winrt._winrt_windows_ui_composition_scenes.SceneComponent",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneComponent};
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_SceneMaterial(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self) noexcept
+    static void _dealloc_SceneMaterial(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1086,7 +1086,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMaterial = {
         "winrt._winrt_windows_ui_composition_scenes.SceneMaterial",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneMaterial};
@@ -1125,7 +1125,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_SceneMaterialInput(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self) noexcept
+    static void _dealloc_SceneMaterialInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1177,7 +1177,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMaterialInput = {
         "winrt._winrt_windows_ui_composition_scenes.SceneMaterialInput",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneMaterialInput};
@@ -4084,7 +4084,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_SceneObject(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self) noexcept
+    static void _dealloc_SceneObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4136,7 +4136,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneObject = {
         "winrt._winrt_windows_ui_composition_scenes.SceneObject",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneObject),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneObject};
@@ -4175,7 +4175,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_ScenePbrMaterial(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self) noexcept
+    static void _dealloc_ScenePbrMaterial(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4183,7 +4183,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
-    static PyObject* ScenePbrMaterial_get_OcclusionStrength(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_OcclusionStrength(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4209,7 +4209,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_OcclusionStrength(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_OcclusionStrength(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4244,7 +4244,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_OcclusionInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_OcclusionInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4270,7 +4270,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_OcclusionInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_OcclusionInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4305,7 +4305,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_NormalScale(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_NormalScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4331,7 +4331,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_NormalScale(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_NormalScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4366,7 +4366,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_NormalInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_NormalInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4392,7 +4392,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_NormalInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_NormalInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4427,7 +4427,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_IsDoubleSided(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_IsDoubleSided(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4453,7 +4453,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_IsDoubleSided(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_IsDoubleSided(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4488,7 +4488,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_EmissiveInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_EmissiveInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4514,7 +4514,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_EmissiveInput(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_EmissiveInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4549,7 +4549,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_EmissiveFactor(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_EmissiveFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4575,7 +4575,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_EmissiveFactor(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_EmissiveFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4610,7 +4610,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_AlphaMode(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4636,7 +4636,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_AlphaMode(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4671,7 +4671,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static PyObject* ScenePbrMaterial_get_AlphaCutoff(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
+    static PyObject* ScenePbrMaterial_get_AlphaCutoff(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4697,7 +4697,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
-    static int ScenePbrMaterial_put_AlphaCutoff(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScenePbrMaterial_put_AlphaCutoff(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4785,7 +4785,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_ScenePbrMaterial = {
         "winrt._winrt_windows_ui_composition_scenes.ScenePbrMaterial",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScenePbrMaterial};
@@ -4824,7 +4824,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         return nullptr;
     }
 
-    static void _dealloc_SceneRendererComponent(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self) noexcept
+    static void _dealloc_SceneRendererComponent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4876,7 +4876,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneRendererComponent = {
         "winrt._winrt_windows_ui_composition_scenes.SceneRendererComponent",
-        sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneRendererComponent};

@@ -1056,7 +1056,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         return nullptr;
     }
 
-    static void _dealloc_BitmapSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self) noexcept
+    static void _dealloc_BitmapSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
-    static PyObject* BitmapSource_SetSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, PyObject* args) noexcept
+    static PyObject* BitmapSource_SetSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1103,7 +1103,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* BitmapSource_SetSourceAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, PyObject* args) noexcept
+    static PyObject* BitmapSource_SetSourceAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1141,7 +1141,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* BitmapSource_get_PixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, void* /*unused*/) noexcept
+    static PyObject* BitmapSource_get_PixelHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* BitmapSource_get_PixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, void* /*unused*/) noexcept
+    static PyObject* BitmapSource_get_PixelWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1293,7 +1293,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_BitmapSource = {
         "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BitmapSource};
@@ -2032,8 +2032,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -2063,8 +2063,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1, param2);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1, param2);
 
                     return self.detach();
                 }
@@ -2085,7 +2085,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static void _dealloc_SurfaceImageSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource* self) noexcept
+    static void _dealloc_SurfaceImageSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2137,7 +2137,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SurfaceImageSource = {
         "winrt._winrt_windows_ui_xaml_media_imaging.SurfaceImageSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SurfaceImageSource};
@@ -2219,8 +2219,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get());
 
                     return self.detach();
                 }
@@ -2248,8 +2248,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -2270,7 +2270,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static void _dealloc_SvgImageSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self) noexcept
+    static void _dealloc_SvgImageSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
-    static PyObject* SvgImageSource_SetSourceAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* args) noexcept
+    static PyObject* SvgImageSource_SetSourceAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2316,7 +2316,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_get_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
+    static PyObject* SvgImageSource_get_UriSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2342,7 +2342,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static int SvgImageSource_put_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int SvgImageSource_put_UriSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2377,7 +2377,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_get_RasterizePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
+    static PyObject* SvgImageSource_get_RasterizePixelWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2403,7 +2403,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static int SvgImageSource_put_RasterizePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int SvgImageSource_put_RasterizePixelWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2438,7 +2438,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_get_RasterizePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
+    static PyObject* SvgImageSource_get_RasterizePixelHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2464,7 +2464,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static int SvgImageSource_put_RasterizePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int SvgImageSource_put_RasterizePixelHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2577,7 +2577,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_add_OpenFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
+    static PyObject* SvgImageSource_add_OpenFailed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2605,7 +2605,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_remove_OpenFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
+    static PyObject* SvgImageSource_remove_OpenFailed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2634,7 +2634,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_add_Opened(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
+    static PyObject* SvgImageSource_add_Opened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2662,7 +2662,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
-    static PyObject* SvgImageSource_remove_Opened(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
+    static PyObject* SvgImageSource_remove_Opened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2743,7 +2743,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SvgImageSource = {
         "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SvgImageSource};
@@ -3260,7 +3260,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         return nullptr;
     }
 
-    static void _dealloc_XamlRenderingBackgroundTask(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask* self) noexcept
+    static void _dealloc_XamlRenderingBackgroundTask(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3319,7 +3319,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_XamlRenderingBackgroundTask = {
         "winrt._winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
-        sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlRenderingBackgroundTask};

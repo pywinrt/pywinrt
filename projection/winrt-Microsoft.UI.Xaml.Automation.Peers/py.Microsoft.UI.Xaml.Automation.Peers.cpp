@@ -57,8 +57,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtAnimatedVisualPlayerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAnimatedVisualPlayerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -79,7 +79,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_AnimatedVisualPlayerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer* self) noexcept
+    static void _dealloc_AnimatedVisualPlayerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -131,7 +131,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_AnimatedVisualPlayerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AnimatedVisualPlayerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AnimatedVisualPlayerAutomationPeer};
@@ -214,8 +214,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtAppBarAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -236,7 +236,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_AppBarAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self) noexcept
+    static void _dealloc_AppBarAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -244,7 +244,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* AppBarAutomationPeer_Close(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -281,7 +281,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -318,7 +318,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -355,7 +355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_SetVisualState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_SetVisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -394,7 +394,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -431,7 +431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_WaitForInputIdle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarAutomationPeer_WaitForInputIdle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -469,7 +469,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -495,7 +495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -521,7 +521,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_InteractionState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_InteractionState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -547,7 +547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_IsModal(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_IsModal(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_IsTopmost(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_IsTopmost(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_Maximizable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_Maximizable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -625,7 +625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_Minimizable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_Minimizable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -651,7 +651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarAutomationPeer_get_VisualState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarAutomationPeer_get_VisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -735,7 +735,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_AppBarAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarAutomationPeer};
@@ -818,8 +818,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtAppBarButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -840,7 +840,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_AppBarButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer* self) noexcept
+    static void _dealloc_AppBarButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -848,7 +848,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* AppBarButtonAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -885,7 +885,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarButtonAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AppBarButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -922,7 +922,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AppBarButtonAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButtonAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -995,7 +995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_AppBarButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarButtonAutomationPeer};
@@ -1078,8 +1078,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtAppBarToggleButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarToggleButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -1100,7 +1100,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_AppBarToggleButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer* self) noexcept
+    static void _dealloc_AppBarToggleButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1152,7 +1152,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_AppBarToggleButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarToggleButtonAutomationPeer};
@@ -2675,7 +2675,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static void _dealloc_AutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self) noexcept
+    static void _dealloc_AutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2719,7 +2719,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_GetAcceleratorKey(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetAcceleratorKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2761,7 +2761,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetAccessKey(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetAccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2803,7 +2803,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetAnnotations(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetAnnotations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2845,7 +2845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetAutomationControlType(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetAutomationControlType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2887,7 +2887,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetAutomationId(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetAutomationId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2929,7 +2929,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetBoundingRectangle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetBoundingRectangle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2971,7 +2971,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetChildren(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3013,7 +3013,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetClassName(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetClassName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3055,7 +3055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetClickablePoint(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetClickablePoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3097,7 +3097,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetControlledPeers(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetControlledPeers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3139,7 +3139,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetCulture(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetCulture(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3187,7 +3187,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetElementFromPoint(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetElementFromPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3243,7 +3243,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetFocusedElement(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetFocusedElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3285,7 +3285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetFullDescription(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetFullDescription(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3327,7 +3327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetHeadingLevel(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetHeadingLevel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3369,7 +3369,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetHelpText(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetHelpText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3411,7 +3411,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetItemStatus(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetItemStatus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3453,7 +3453,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetItemType(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetItemType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3495,7 +3495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLabeledBy(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLabeledBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3537,7 +3537,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLandmarkType(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLandmarkType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3579,7 +3579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLevel(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLevel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3621,7 +3621,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLiveSetting(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLiveSetting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3663,7 +3663,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLocalizedControlType(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLocalizedControlType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3705,7 +3705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetLocalizedLandmarkType(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetLocalizedLandmarkType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3747,7 +3747,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetName(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3789,7 +3789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetOrientation(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3831,7 +3831,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetParent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetParent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3867,7 +3867,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_GetPattern(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetPattern(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3911,7 +3911,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetPeerFromPoint(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetPeerFromPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3955,7 +3955,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetPositionInSet(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetPositionInSet(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3997,7 +3997,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_GetSizeOfSet(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_GetSizeOfSet(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4039,7 +4039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_HasKeyboardFocus(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_HasKeyboardFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4081,7 +4081,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_InvalidatePeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_InvalidatePeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4118,7 +4118,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_IsContentElement(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsContentElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4160,7 +4160,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsControlElement(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsControlElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4202,7 +4202,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsDataValidForForm(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsDataValidForForm(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4244,7 +4244,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsDialog(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsDialog(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4286,7 +4286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsEnabled(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4328,7 +4328,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsKeyboardFocusable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsKeyboardFocusable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4370,7 +4370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsOffscreen(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsOffscreen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4412,7 +4412,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsPassword(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsPassword(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4454,7 +4454,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsPeripheral(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsPeripheral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4496,7 +4496,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_IsRequiredForForm(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_IsRequiredForForm(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4576,7 +4576,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_Navigate(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_Navigate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4632,7 +4632,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_RaiseAutomationEvent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_RaiseAutomationEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4671,7 +4671,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_RaiseNotificationEvent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_RaiseNotificationEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4713,7 +4713,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_RaisePropertyChangedEvent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_RaisePropertyChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4754,7 +4754,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_RaiseStructureChangedEvent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_RaiseStructureChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4794,7 +4794,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_RaiseTextEditTextChangedEvent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_RaiseTextEditTextChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4834,7 +4834,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_SetFocus(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_SetFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4877,7 +4877,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_SetParent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_SetParent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4916,7 +4916,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* AutomationPeer_ShowContextMenu(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* args) noexcept
+    static PyObject* AutomationPeer_ShowContextMenu(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4959,7 +4959,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static PyObject* AutomationPeer_get_EventsSource(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* AutomationPeer_get_EventsSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4985,7 +4985,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static int AutomationPeer_put_EventsSource(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AutomationPeer_put_EventsSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5166,7 +5166,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_AutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AutomationPeer};
@@ -5573,8 +5573,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtBreadcrumbBarItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBreadcrumbBarItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -5595,7 +5595,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_BreadcrumbBarItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer* self) noexcept
+    static void _dealloc_BreadcrumbBarItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5603,7 +5603,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* BreadcrumbBarItemAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* BreadcrumbBarItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5685,7 +5685,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_BreadcrumbBarItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.BreadcrumbBarItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BreadcrumbBarItemAutomationPeer};
@@ -5768,8 +5768,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -5790,7 +5790,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer* self) noexcept
+    static void _dealloc_ButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5798,7 +5798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ButtonAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5880,7 +5880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonAutomationPeer};
@@ -5939,7 +5939,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static void _dealloc_ButtonBaseAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer* self) noexcept
+    static void _dealloc_ButtonBaseAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5991,7 +5991,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ButtonBaseAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonBaseAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonBaseAutomationPeer};
@@ -6074,8 +6074,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtCalendarDatePickerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCalendarDatePickerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -6096,7 +6096,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_CalendarDatePickerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self) noexcept
+    static void _dealloc_CalendarDatePickerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6104,7 +6104,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* CalendarDatePickerAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* CalendarDatePickerAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6141,7 +6141,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* CalendarDatePickerAutomationPeer_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* CalendarDatePickerAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6180,7 +6180,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* CalendarDatePickerAutomationPeer_get_IsReadOnly(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* CalendarDatePickerAutomationPeer_get_IsReadOnly(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6206,7 +6206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* CalendarDatePickerAutomationPeer_get_Value(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* CalendarDatePickerAutomationPeer_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6280,7 +6280,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_CalendarDatePickerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CalendarDatePickerAutomationPeer};
@@ -6363,8 +6363,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtCheckBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCheckBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -6385,7 +6385,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_CheckBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer* self) noexcept
+    static void _dealloc_CheckBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6437,7 +6437,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_CheckBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CheckBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CheckBoxAutomationPeer};
@@ -6520,8 +6520,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtColorPickerSliderAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorPickerSliderAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -6542,7 +6542,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ColorPickerSliderAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer* self) noexcept
+    static void _dealloc_ColorPickerSliderAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6594,7 +6594,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ColorPickerSliderAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorPickerSliderAutomationPeer};
@@ -6677,8 +6677,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtColorSpectrumAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorSpectrumAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -6699,7 +6699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ColorSpectrumAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer* self) noexcept
+    static void _dealloc_ColorSpectrumAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6751,7 +6751,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ColorSpectrumAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorSpectrumAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorSpectrumAutomationPeer};
@@ -6834,8 +6834,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtComboBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -6856,7 +6856,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ComboBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self) noexcept
+    static void _dealloc_ComboBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6864,7 +6864,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ComboBoxAutomationPeer_Close(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6901,7 +6901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6938,7 +6938,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6975,7 +6975,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7014,7 +7014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_SetVisualState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_SetVisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7053,7 +7053,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_WaitForInputIdle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxAutomationPeer_WaitForInputIdle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7091,7 +7091,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7117,7 +7117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_IsReadOnly(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_IsReadOnly(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7143,7 +7143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_Value(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7169,7 +7169,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_InteractionState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_InteractionState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7195,7 +7195,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_IsModal(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_IsModal(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7221,7 +7221,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_IsTopmost(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_IsTopmost(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7247,7 +7247,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_Maximizable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_Maximizable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7273,7 +7273,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_Minimizable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_Minimizable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7299,7 +7299,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ComboBoxAutomationPeer_get_VisualState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ComboBoxAutomationPeer_get_VisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7384,7 +7384,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ComboBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxAutomationPeer};
@@ -7467,8 +7467,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtComboBoxItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBoxItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -7489,7 +7489,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ComboBoxItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer* self) noexcept
+    static void _dealloc_ComboBoxItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7541,7 +7541,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ComboBoxItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItemAutomationPeer};
@@ -7625,8 +7625,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtComboBoxItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBoxItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -7647,7 +7647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ComboBoxItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer* self) noexcept
+    static void _dealloc_ComboBoxItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7655,7 +7655,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ComboBoxItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ComboBoxItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7737,7 +7737,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ComboBoxItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItemDataAutomationPeer};
@@ -7820,8 +7820,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtDatePickerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDatePickerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -7842,7 +7842,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_DatePickerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer* self) noexcept
+    static void _dealloc_DatePickerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7894,7 +7894,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_DatePickerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DatePickerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DatePickerAutomationPeer};
@@ -8043,8 +8043,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtDropDownButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDropDownButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -8065,7 +8065,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_DropDownButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer* self) noexcept
+    static void _dealloc_DropDownButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8073,7 +8073,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* DropDownButtonAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* DropDownButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8110,7 +8110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* DropDownButtonAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* DropDownButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8147,7 +8147,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* DropDownButtonAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* DropDownButtonAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8220,7 +8220,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_DropDownButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DropDownButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DropDownButtonAutomationPeer};
@@ -8303,8 +8303,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtExpanderAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtExpanderAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -8325,7 +8325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ExpanderAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer* self) noexcept
+    static void _dealloc_ExpanderAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8333,7 +8333,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ExpanderAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ExpanderAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8370,7 +8370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ExpanderAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ExpanderAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8407,7 +8407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ExpanderAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ExpanderAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8480,7 +8480,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ExpanderAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ExpanderAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ExpanderAutomationPeer};
@@ -8563,8 +8563,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtFlipViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -8585,7 +8585,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_FlipViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer* self) noexcept
+    static void _dealloc_FlipViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8637,7 +8637,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_FlipViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewAutomationPeer};
@@ -8720,8 +8720,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtFlipViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -8742,7 +8742,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_FlipViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer* self) noexcept
+    static void _dealloc_FlipViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8794,7 +8794,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_FlipViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItemAutomationPeer};
@@ -8878,8 +8878,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtFlipViewItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipViewItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -8900,7 +8900,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_FlipViewItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer* self) noexcept
+    static void _dealloc_FlipViewItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8908,7 +8908,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* FlipViewItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* FlipViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8990,7 +8990,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_FlipViewItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItemDataAutomationPeer};
@@ -9073,8 +9073,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtFlyoutPresenterAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlyoutPresenterAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9095,7 +9095,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_FlyoutPresenterAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer* self) noexcept
+    static void _dealloc_FlyoutPresenterAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9147,7 +9147,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_FlyoutPresenterAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutPresenterAutomationPeer};
@@ -9230,8 +9230,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtFrameworkElementAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFrameworkElementAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9252,7 +9252,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_FrameworkElementAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer* self) noexcept
+    static void _dealloc_FrameworkElementAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9336,7 +9336,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* FrameworkElementAutomationPeer_get_Owner(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElementAutomationPeer_get_Owner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9407,7 +9407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_FrameworkElementAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameworkElementAutomationPeer};
@@ -9492,8 +9492,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtGridViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9514,7 +9514,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_GridViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer* self) noexcept
+    static void _dealloc_GridViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9566,7 +9566,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_GridViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewAutomationPeer};
@@ -9649,8 +9649,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtGridViewHeaderItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewHeaderItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9671,7 +9671,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_GridViewHeaderItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer* self) noexcept
+    static void _dealloc_GridViewHeaderItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9723,7 +9723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_GridViewHeaderItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewHeaderItemAutomationPeer};
@@ -9806,8 +9806,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtGridViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9828,7 +9828,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_GridViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer* self) noexcept
+    static void _dealloc_GridViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9880,7 +9880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_GridViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemAutomationPeer};
@@ -9964,8 +9964,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtGridViewItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -9986,7 +9986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_GridViewItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer* self) noexcept
+    static void _dealloc_GridViewItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9994,7 +9994,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* GridViewItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* GridViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10076,7 +10076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_GridViewItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemDataAutomationPeer};
@@ -10159,8 +10159,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtGroupItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGroupItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -10181,7 +10181,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_GroupItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer* self) noexcept
+    static void _dealloc_GroupItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10233,7 +10233,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_GroupItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GroupItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GroupItemAutomationPeer};
@@ -10316,8 +10316,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtHubAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHubAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -10338,7 +10338,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_HubAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer* self) noexcept
+    static void _dealloc_HubAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10390,7 +10390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_HubAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HubAutomationPeer};
@@ -10473,8 +10473,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtHubSectionAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHubSectionAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -10495,7 +10495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_HubSectionAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer* self) noexcept
+    static void _dealloc_HubSectionAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10503,7 +10503,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* HubSectionAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* HubSectionAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10585,7 +10585,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_HubSectionAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubSectionAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HubSectionAutomationPeer};
@@ -10668,8 +10668,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtHyperlinkButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHyperlinkButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -10690,7 +10690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_HyperlinkButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer* self) noexcept
+    static void _dealloc_HyperlinkButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10698,7 +10698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* HyperlinkButtonAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* HyperlinkButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10780,7 +10780,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_HyperlinkButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HyperlinkButtonAutomationPeer};
@@ -10863,8 +10863,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtImageAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtImageAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -10885,7 +10885,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ImageAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer* self) noexcept
+    static void _dealloc_ImageAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10937,7 +10937,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ImageAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ImageAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ImageAutomationPeer};
@@ -11020,8 +11020,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtInfoBarAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInfoBarAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -11042,7 +11042,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_InfoBarAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer* self) noexcept
+    static void _dealloc_InfoBarAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11094,7 +11094,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_InfoBarAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.InfoBarAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InfoBarAutomationPeer};
@@ -11178,8 +11178,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtItemAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtItemAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -11200,7 +11200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer* self) noexcept
+    static void _dealloc_ItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11208,7 +11208,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemAutomationPeer_Realize(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemAutomationPeer_Realize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11245,7 +11245,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemAutomationPeer_get_Item(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemAutomationPeer_get_Item(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11271,7 +11271,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemAutomationPeer_get_ItemsControlAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemAutomationPeer_get_ItemsControlAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11344,7 +11344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemAutomationPeer};
@@ -11427,8 +11427,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtItemContainerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtItemContainerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -11449,7 +11449,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ItemContainerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self) noexcept
+    static void _dealloc_ItemContainerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11457,7 +11457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemContainerAutomationPeer_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemContainerAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11494,7 +11494,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemContainerAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemContainerAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11531,7 +11531,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemContainerAutomationPeer_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemContainerAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11568,7 +11568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemContainerAutomationPeer_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemContainerAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11605,7 +11605,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemContainerAutomationPeer_get_IsSelected(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemContainerAutomationPeer_get_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11631,7 +11631,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemContainerAutomationPeer_get_SelectionContainer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemContainerAutomationPeer_get_SelectionContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11707,7 +11707,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ItemContainerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemContainerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemContainerAutomationPeer};
@@ -11824,8 +11824,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtItemsControlAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtItemsControlAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -11846,7 +11846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ItemsControlAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer* self) noexcept
+    static void _dealloc_ItemsControlAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11854,7 +11854,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemsControlAutomationPeer_CreateItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemsControlAutomationPeer_CreateItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11892,7 +11892,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemsControlAutomationPeer_FindItemByProperty(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemsControlAutomationPeer_FindItemByProperty(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -11985,7 +11985,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ItemsControlAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsControlAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemsControlAutomationPeer};
@@ -12068,8 +12068,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtItemsViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtItemsViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -12090,7 +12090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ItemsViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer* self) noexcept
+    static void _dealloc_ItemsViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12098,7 +12098,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemsViewAutomationPeer_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ItemsViewAutomationPeer_GetSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12134,7 +12134,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemsViewAutomationPeer_get_CanSelectMultiple(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemsViewAutomationPeer_get_CanSelectMultiple(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12160,7 +12160,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ItemsViewAutomationPeer_get_IsSelectionRequired(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ItemsViewAutomationPeer_get_IsSelectionRequired(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12233,7 +12233,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ItemsViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemsViewAutomationPeer};
@@ -12316,8 +12316,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -12338,7 +12338,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer* self) noexcept
+    static void _dealloc_ListBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12390,7 +12390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxAutomationPeer};
@@ -12473,8 +12473,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListBoxItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBoxItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -12495,7 +12495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListBoxItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer* self) noexcept
+    static void _dealloc_ListBoxItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12547,7 +12547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListBoxItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItemAutomationPeer};
@@ -12631,8 +12631,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListBoxItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBoxItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -12653,7 +12653,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListBoxItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer* self) noexcept
+    static void _dealloc_ListBoxItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12661,7 +12661,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ListBoxItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ListBoxItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12743,7 +12743,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListBoxItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItemDataAutomationPeer};
@@ -12892,8 +12892,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -12914,7 +12914,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer* self) noexcept
+    static void _dealloc_ListViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12966,7 +12966,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewAutomationPeer};
@@ -13049,8 +13049,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListViewBaseAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewBaseAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -13071,7 +13071,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListViewBaseAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer* self) noexcept
+    static void _dealloc_ListViewBaseAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -13079,7 +13079,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ListViewBaseAutomationPeer_get_DropEffect(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBaseAutomationPeer_get_DropEffect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13105,7 +13105,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ListViewBaseAutomationPeer_get_DropEffects(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBaseAutomationPeer_get_DropEffects(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13177,7 +13177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewBaseAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBaseAutomationPeer};
@@ -13236,7 +13236,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         return nullptr;
     }
 
-    static void _dealloc_ListViewBaseHeaderItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer* self) noexcept
+    static void _dealloc_ListViewBaseHeaderItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -13288,7 +13288,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewBaseHeaderItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBaseHeaderItemAutomationPeer};
@@ -13371,8 +13371,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListViewHeaderItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewHeaderItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -13393,7 +13393,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListViewHeaderItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer* self) noexcept
+    static void _dealloc_ListViewHeaderItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -13445,7 +13445,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewHeaderItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewHeaderItemAutomationPeer};
@@ -13528,8 +13528,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -13550,7 +13550,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer* self) noexcept
+    static void _dealloc_ListViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -13602,7 +13602,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemAutomationPeer};
@@ -13686,8 +13686,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtListViewItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -13708,7 +13708,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ListViewItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer* self) noexcept
+    static void _dealloc_ListViewItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -13716,7 +13716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ListViewItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ListViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -13798,7 +13798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ListViewItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemDataAutomationPeer};
@@ -14699,8 +14699,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMediaPlayerElementAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMediaPlayerElementAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -14721,7 +14721,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MediaPlayerElementAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer* self) noexcept
+    static void _dealloc_MediaPlayerElementAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14773,7 +14773,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MediaPlayerElementAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MediaPlayerElementAutomationPeer};
@@ -14856,8 +14856,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMediaTransportControlsAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMediaTransportControlsAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -14878,7 +14878,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MediaTransportControlsAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer* self) noexcept
+    static void _dealloc_MediaTransportControlsAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14930,7 +14930,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MediaTransportControlsAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MediaTransportControlsAutomationPeer};
@@ -15013,8 +15013,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMenuBarAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuBarAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15035,7 +15035,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MenuBarAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer* self) noexcept
+    static void _dealloc_MenuBarAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15087,7 +15087,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MenuBarAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarAutomationPeer};
@@ -15170,8 +15170,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMenuBarItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuBarItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15192,7 +15192,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MenuBarItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self) noexcept
+    static void _dealloc_MenuBarItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15200,7 +15200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* MenuBarItemAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* MenuBarItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -15237,7 +15237,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* MenuBarItemAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* MenuBarItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -15274,7 +15274,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* MenuBarItemAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* MenuBarItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -15311,7 +15311,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* MenuBarItemAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* MenuBarItemAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15385,7 +15385,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MenuBarItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarItemAutomationPeer};
@@ -15468,8 +15468,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMenuFlyoutItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuFlyoutItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15490,7 +15490,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MenuFlyoutItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer* self) noexcept
+    static void _dealloc_MenuFlyoutItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15498,7 +15498,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* MenuFlyoutItemAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* MenuFlyoutItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -15580,7 +15580,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MenuFlyoutItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyoutItemAutomationPeer};
@@ -15663,8 +15663,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtMenuFlyoutPresenterAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuFlyoutPresenterAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15685,7 +15685,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_MenuFlyoutPresenterAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer* self) noexcept
+    static void _dealloc_MenuFlyoutPresenterAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15737,7 +15737,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_MenuFlyoutPresenterAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyoutPresenterAutomationPeer};
@@ -15820,8 +15820,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtNavigationViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15842,7 +15842,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_NavigationViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer* self) noexcept
+    static void _dealloc_NavigationViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15894,7 +15894,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_NavigationViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewAutomationPeer};
@@ -15977,8 +15977,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -15999,7 +15999,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_NavigationViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer* self) noexcept
+    static void _dealloc_NavigationViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16007,7 +16007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationViewItemAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* NavigationViewItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -16044,7 +16044,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* NavigationViewItemAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* NavigationViewItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -16081,7 +16081,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* NavigationViewItemAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16154,7 +16154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_NavigationViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemAutomationPeer};
@@ -16237,8 +16237,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtNumberBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNumberBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16259,7 +16259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_NumberBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer* self) noexcept
+    static void _dealloc_NumberBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16311,7 +16311,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_NumberBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NumberBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NumberBoxAutomationPeer};
@@ -16394,8 +16394,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtPasswordBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPasswordBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16416,7 +16416,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_PasswordBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer* self) noexcept
+    static void _dealloc_PasswordBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16468,7 +16468,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_PasswordBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PasswordBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PasswordBoxAutomationPeer};
@@ -16551,8 +16551,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtPersonPictureAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPersonPictureAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16573,7 +16573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_PersonPictureAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer* self) noexcept
+    static void _dealloc_PersonPictureAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16625,7 +16625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_PersonPictureAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PersonPictureAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PersonPictureAutomationPeer};
@@ -16774,8 +16774,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtPipsPagerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPipsPagerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16796,7 +16796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_PipsPagerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer* self) noexcept
+    static void _dealloc_PipsPagerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16848,7 +16848,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_PipsPagerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PipsPagerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PipsPagerAutomationPeer};
@@ -17781,8 +17781,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtProgressBarAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtProgressBarAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -17803,7 +17803,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ProgressBarAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer* self) noexcept
+    static void _dealloc_ProgressBarAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17855,7 +17855,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ProgressBarAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressBarAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressBarAutomationPeer};
@@ -17938,8 +17938,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtProgressRingAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtProgressRingAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -17960,7 +17960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ProgressRingAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self) noexcept
+    static void _dealloc_ProgressRingAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17968,7 +17968,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ProgressRingAutomationPeer_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ProgressRingAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -18007,7 +18007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_IsReadOnly(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_IsReadOnly(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18033,7 +18033,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_LargeChange(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_LargeChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18059,7 +18059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_Maximum(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_Maximum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18085,7 +18085,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_Minimum(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_Minimum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18111,7 +18111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_SmallChange(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_SmallChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18137,7 +18137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ProgressRingAutomationPeer_get_Value(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ProgressRingAutomationPeer_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18214,7 +18214,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ProgressRingAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressRingAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressRingAutomationPeer};
@@ -18297,8 +18297,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRadioButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRadioButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -18319,7 +18319,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RadioButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self) noexcept
+    static void _dealloc_RadioButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18327,7 +18327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* RadioButtonAutomationPeer_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* RadioButtonAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -18364,7 +18364,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RadioButtonAutomationPeer_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* RadioButtonAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -18401,7 +18401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RadioButtonAutomationPeer_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* RadioButtonAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -18438,7 +18438,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RadioButtonAutomationPeer_get_IsSelected(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RadioButtonAutomationPeer_get_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18464,7 +18464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RadioButtonAutomationPeer_get_SelectionContainer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RadioButtonAutomationPeer_get_SelectionContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18539,7 +18539,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RadioButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButtonAutomationPeer};
@@ -18622,8 +18622,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRadioButtonsAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRadioButtonsAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -18644,7 +18644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RadioButtonsAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer* self) noexcept
+    static void _dealloc_RadioButtonsAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18696,7 +18696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RadioButtonsAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonsAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButtonsAutomationPeer};
@@ -18779,8 +18779,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRangeBaseAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRangeBaseAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -18801,7 +18801,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RangeBaseAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self) noexcept
+    static void _dealloc_RangeBaseAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18809,7 +18809,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* RangeBaseAutomationPeer_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* RangeBaseAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -18848,7 +18848,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_IsReadOnly(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_IsReadOnly(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18874,7 +18874,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_LargeChange(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_LargeChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18900,7 +18900,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_Maximum(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_Maximum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18926,7 +18926,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_Minimum(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_Minimum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18952,7 +18952,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_SmallChange(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_SmallChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18978,7 +18978,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* RangeBaseAutomationPeer_get_Value(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* RangeBaseAutomationPeer_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19055,7 +19055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RangeBaseAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RangeBaseAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RangeBaseAutomationPeer};
@@ -19138,8 +19138,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRatingControlAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRatingControlAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19160,7 +19160,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RatingControlAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer* self) noexcept
+    static void _dealloc_RatingControlAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19212,7 +19212,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RatingControlAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RatingControlAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RatingControlAutomationPeer};
@@ -19295,8 +19295,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRepeatButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRepeatButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19317,7 +19317,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RepeatButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer* self) noexcept
+    static void _dealloc_RepeatButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19325,7 +19325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* RepeatButtonAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* RepeatButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -19407,7 +19407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RepeatButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeatButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeatButtonAutomationPeer};
@@ -19490,8 +19490,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRepeaterAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRepeaterAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19512,7 +19512,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RepeaterAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer* self) noexcept
+    static void _dealloc_RepeaterAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19564,7 +19564,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RepeaterAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeaterAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeaterAutomationPeer};
@@ -19647,8 +19647,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRichEditBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRichEditBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19669,7 +19669,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RichEditBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer* self) noexcept
+    static void _dealloc_RichEditBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19721,7 +19721,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RichEditBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichEditBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichEditBoxAutomationPeer};
@@ -19804,8 +19804,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRichTextBlockAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRichTextBlockAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19826,7 +19826,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RichTextBlockAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer* self) noexcept
+    static void _dealloc_RichTextBlockAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19878,7 +19878,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RichTextBlockAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichTextBlockAutomationPeer};
@@ -19961,8 +19961,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtRichTextBlockOverflowAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRichTextBlockOverflowAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -19983,7 +19983,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_RichTextBlockOverflowAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer* self) noexcept
+    static void _dealloc_RichTextBlockOverflowAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20035,7 +20035,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_RichTextBlockOverflowAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichTextBlockOverflowAutomationPeer};
@@ -20118,8 +20118,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtScrollBarAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScrollBarAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -20140,7 +20140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ScrollBarAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer* self) noexcept
+    static void _dealloc_ScrollBarAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20192,7 +20192,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ScrollBarAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollBarAutomationPeer};
@@ -20275,8 +20275,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtScrollPresenterAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScrollPresenterAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -20297,7 +20297,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ScrollPresenterAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer* self) noexcept
+    static void _dealloc_ScrollPresenterAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20349,7 +20349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ScrollPresenterAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollPresenterAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollPresenterAutomationPeer};
@@ -20432,8 +20432,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtScrollViewerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScrollViewerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -20454,7 +20454,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ScrollViewerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self) noexcept
+    static void _dealloc_ScrollViewerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20462,7 +20462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ScrollViewerAutomationPeer_Scroll(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ScrollViewerAutomationPeer_Scroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20502,7 +20502,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_SetScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ScrollViewerAutomationPeer_SetScrollPercent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20542,7 +20542,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_HorizontalScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_HorizontalScrollPercent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20568,7 +20568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_HorizontalViewSize(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_HorizontalViewSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20594,7 +20594,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_HorizontallyScrollable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_HorizontallyScrollable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20620,7 +20620,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_VerticalScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_VerticalScrollPercent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20646,7 +20646,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_VerticalViewSize(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_VerticalViewSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20672,7 +20672,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ScrollViewerAutomationPeer_get_VerticallyScrollable(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ScrollViewerAutomationPeer_get_VerticallyScrollable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20750,7 +20750,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ScrollViewerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollViewerAutomationPeer};
@@ -20833,8 +20833,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSelectorAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSelectorAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -20855,7 +20855,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SelectorAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer* self) noexcept
+    static void _dealloc_SelectorAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20863,7 +20863,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* SelectorAutomationPeer_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SelectorAutomationPeer_GetSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20899,7 +20899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorAutomationPeer_get_CanSelectMultiple(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SelectorAutomationPeer_get_CanSelectMultiple(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20925,7 +20925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorAutomationPeer_get_IsSelectionRequired(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SelectorAutomationPeer_get_IsSelectionRequired(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20998,7 +20998,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SelectorAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorAutomationPeer};
@@ -21081,8 +21081,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSelectorBarItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSelectorBarItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -21103,7 +21103,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SelectorBarItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer* self) noexcept
+    static void _dealloc_SelectorBarItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21155,7 +21155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SelectorBarItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorBarItemAutomationPeer};
@@ -21239,8 +21239,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSelectorItemAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSelectorItemAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -21261,7 +21261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SelectorItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self) noexcept
+    static void _dealloc_SelectorItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21269,7 +21269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* SelectorItemAutomationPeer_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SelectorItemAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -21306,7 +21306,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorItemAutomationPeer_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SelectorItemAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -21343,7 +21343,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorItemAutomationPeer_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SelectorItemAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -21380,7 +21380,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorItemAutomationPeer_get_IsSelected(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SelectorItemAutomationPeer_get_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21406,7 +21406,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SelectorItemAutomationPeer_get_SelectionContainer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SelectorItemAutomationPeer_get_SelectionContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21481,7 +21481,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SelectorItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorItemAutomationPeer};
@@ -21564,8 +21564,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSemanticZoomAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSemanticZoomAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -21586,7 +21586,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SemanticZoomAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer* self) noexcept
+    static void _dealloc_SemanticZoomAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21594,7 +21594,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* SemanticZoomAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SemanticZoomAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -21631,7 +21631,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SemanticZoomAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SemanticZoomAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21703,7 +21703,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SemanticZoomAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SemanticZoomAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SemanticZoomAutomationPeer};
@@ -21786,8 +21786,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSliderAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSliderAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -21808,7 +21808,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SliderAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer* self) noexcept
+    static void _dealloc_SliderAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21860,7 +21860,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SliderAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SliderAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SliderAutomationPeer};
@@ -21943,8 +21943,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtSplitButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSplitButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -21965,7 +21965,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_SplitButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer* self) noexcept
+    static void _dealloc_SplitButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21973,7 +21973,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* SplitButtonAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SplitButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22010,7 +22010,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SplitButtonAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SplitButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22047,7 +22047,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SplitButtonAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* SplitButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22084,7 +22084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* SplitButtonAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* SplitButtonAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -22158,7 +22158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_SplitButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SplitButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SplitButtonAutomationPeer};
@@ -22241,8 +22241,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTabViewAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTabViewAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -22263,7 +22263,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TabViewAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer* self) noexcept
+    static void _dealloc_TabViewAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22315,7 +22315,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TabViewAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewAutomationPeer};
@@ -22398,8 +22398,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTabViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTabViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -22420,7 +22420,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TabViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer* self) noexcept
+    static void _dealloc_TabViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22472,7 +22472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TabViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewItemAutomationPeer};
@@ -22555,8 +22555,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTeachingTipAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTeachingTipAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -22577,7 +22577,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TeachingTipAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer* self) noexcept
+    static void _dealloc_TeachingTipAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22629,7 +22629,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TeachingTipAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TeachingTipAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TeachingTipAutomationPeer};
@@ -22712,8 +22712,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTextBlockAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTextBlockAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -22734,7 +22734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TextBlockAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer* self) noexcept
+    static void _dealloc_TextBlockAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22786,7 +22786,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TextBlockAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBlockAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextBlockAutomationPeer};
@@ -22869,8 +22869,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTextBoxAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTextBoxAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -22891,7 +22891,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TextBoxAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer* self) noexcept
+    static void _dealloc_TextBoxAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22943,7 +22943,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TextBoxAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBoxAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextBoxAutomationPeer};
@@ -23026,8 +23026,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtThumbAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtThumbAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -23048,7 +23048,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ThumbAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer* self) noexcept
+    static void _dealloc_ThumbAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23100,7 +23100,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ThumbAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ThumbAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ThumbAutomationPeer};
@@ -23183,8 +23183,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTimePickerAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTimePickerAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -23205,7 +23205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TimePickerAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer* self) noexcept
+    static void _dealloc_TimePickerAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23257,7 +23257,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TimePickerAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TimePickerAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TimePickerAutomationPeer};
@@ -23406,8 +23406,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtToggleButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -23428,7 +23428,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ToggleButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer* self) noexcept
+    static void _dealloc_ToggleButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23436,7 +23436,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleButtonAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleButtonAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23473,7 +23473,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleButtonAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ToggleButtonAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23545,7 +23545,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ToggleButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleButtonAutomationPeer};
@@ -23628,8 +23628,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtToggleMenuFlyoutItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleMenuFlyoutItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -23650,7 +23650,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ToggleMenuFlyoutItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer* self) noexcept
+    static void _dealloc_ToggleMenuFlyoutItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23658,7 +23658,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleMenuFlyoutItemAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleMenuFlyoutItemAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23695,7 +23695,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleMenuFlyoutItemAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ToggleMenuFlyoutItemAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23767,7 +23767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ToggleMenuFlyoutItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleMenuFlyoutItemAutomationPeer};
@@ -23850,8 +23850,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtToggleSplitButtonAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleSplitButtonAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -23872,7 +23872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ToggleSplitButtonAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self) noexcept
+    static void _dealloc_ToggleSplitButtonAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23880,7 +23880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleSplitButtonAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleSplitButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23917,7 +23917,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleSplitButtonAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleSplitButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23954,7 +23954,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleSplitButtonAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleSplitButtonAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23991,7 +23991,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleSplitButtonAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ToggleSplitButtonAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24017,7 +24017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleSplitButtonAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ToggleSplitButtonAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24092,7 +24092,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ToggleSplitButtonAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSplitButtonAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleSplitButtonAutomationPeer};
@@ -24175,8 +24175,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtToggleSwitchAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleSwitchAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -24197,7 +24197,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_ToggleSwitchAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer* self) noexcept
+    static void _dealloc_ToggleSwitchAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -24205,7 +24205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleSwitchAutomationPeer_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* ToggleSwitchAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24242,7 +24242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* ToggleSwitchAutomationPeer_get_ToggleState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* ToggleSwitchAutomationPeer_get_ToggleState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24314,7 +24314,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_ToggleSwitchAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSwitchAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleSwitchAutomationPeer};
@@ -24397,8 +24397,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTreeViewItemAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewItemAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -24419,7 +24419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TreeViewItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer* self) noexcept
+    static void _dealloc_TreeViewItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -24427,7 +24427,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* TreeViewItemAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* TreeViewItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24464,7 +24464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* TreeViewItemAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* TreeViewItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24501,7 +24501,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* TreeViewItemAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItemAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24574,7 +24574,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TreeViewItemAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItemAutomationPeer};
@@ -24658,8 +24658,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTreeViewItemDataAutomationPeer>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewItemDataAutomationPeer>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -24680,7 +24680,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TreeViewItemDataAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer* self) noexcept
+    static void _dealloc_TreeViewItemDataAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -24688,7 +24688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
-    static PyObject* TreeViewItemDataAutomationPeer_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* TreeViewItemDataAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24725,7 +24725,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* TreeViewItemDataAutomationPeer_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer* self, PyObject* args) noexcept
+    static PyObject* TreeViewItemDataAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24762,7 +24762,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static PyObject* TreeViewItemDataAutomationPeer_get_ExpandCollapseState(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItemDataAutomationPeer_get_ExpandCollapseState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24835,7 +24835,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TreeViewItemDataAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemDataAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItemDataAutomationPeer};
@@ -24918,8 +24918,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer*>(self.get())->obj = winrt::make<PyWinrtTreeViewListAutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewListAutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -24940,7 +24940,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_TreeViewListAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer* self) noexcept
+    static void _dealloc_TreeViewListAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -24992,7 +24992,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_TreeViewListAutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewListAutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewListAutomationPeer};
@@ -25075,8 +25075,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer*>(self.get())->obj = winrt::make<PyWinrtWebView2AutomationPeer>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtWebView2AutomationPeer>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -25097,7 +25097,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
-    static void _dealloc_WebView2AutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer* self) noexcept
+    static void _dealloc_WebView2AutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -25149,7 +25149,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyType_Spec type_spec_WebView2AutomationPeer = {
         "winrt._winrt_microsoft_ui_xaml_automation_peers.WebView2AutomationPeer",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_WebView2AutomationPeer};

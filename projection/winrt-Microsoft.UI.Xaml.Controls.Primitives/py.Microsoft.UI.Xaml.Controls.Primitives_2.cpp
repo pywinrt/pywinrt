@@ -55,8 +55,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider*>(self.get())->obj = winrt::make<PyWinrtColorPickerSlider>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorPickerSlider>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ColorPickerSlider(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider* self) noexcept
+    static void _dealloc_ColorPickerSlider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ColorPickerSlider_get_ColorChannel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider* self, void* /*unused*/) noexcept
+    static PyObject* ColorPickerSlider_get_ColorChannel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorPickerSlider_put_ColorChannel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPickerSlider_put_ColorChannel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -217,7 +217,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorPickerSlider = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives_2.ColorPickerSlider",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorPickerSlider};
@@ -299,8 +299,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView*>(self.get())->obj = winrt::make<PyWinrtTabViewListView>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTabViewListView>(self.get());
 
                     return self.detach();
                 }
@@ -321,7 +321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_TabViewListView(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView* self) noexcept
+    static void _dealloc_TabViewListView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -373,7 +373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_TabViewListView = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives_2.TabViewListView",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewListView};

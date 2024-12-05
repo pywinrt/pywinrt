@@ -50,7 +50,9 @@ class ProjectedType
             }
         }
 
-        CppPyWrapperType = $"py::wrapper::{CppNamespace}::{Name}";
+        CppPyWrapperType = IsComposable
+            ? "py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>"
+            : $"py::wrapper::{CppNamespace}::{Name}";
         CppPyWrapperTemplateType = IsGeneric ? $"py::proj::{CppNamespace}::{Name}" : CppWinrtType;
 
         PyRequiresMetaclass =

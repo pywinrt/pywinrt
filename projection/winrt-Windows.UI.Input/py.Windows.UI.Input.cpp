@@ -13,7 +13,7 @@ namespace py::cpp::Windows::UI::Input
         return nullptr;
     }
 
-    static void _dealloc_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept
+    static void _dealloc_AttachableInputObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21,7 +21,7 @@ namespace py::cpp::Windows::UI::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* AttachableInputObject_Close(py::wrapper::Windows::UI::Input::AttachableInputObject* self, PyObject* args) noexcept
+    static PyObject* AttachableInputObject_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -82,16 +82,16 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* _enter_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_AttachableInputObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_AttachableInputObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -124,7 +124,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_AttachableInputObject = {
         "winrt._winrt_windows_ui_input.AttachableInputObject",
-        sizeof(py::wrapper::Windows::UI::Input::AttachableInputObject),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AttachableInputObject};

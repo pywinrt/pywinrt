@@ -55,8 +55,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::Binding*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::Binding*>(self.get())->obj = winrt::make<PyWinrtBinding>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBinding>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_Binding(py::wrapper::Windows::UI::Xaml::Data::Binding* self) noexcept
+    static void _dealloc_Binding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* Binding_get_Source(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_Source(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_RelativeSource(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_RelativeSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_RelativeSource(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_RelativeSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_Path(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_Path(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -233,7 +233,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_Path(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_Path(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_Mode(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_Mode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_Mode(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_Mode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_ElementName(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_ElementName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_ElementName(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_ElementName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_ConverterParameter(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_ConverterParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_ConverterParameter(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_ConverterParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_ConverterLanguage(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_ConverterLanguage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -477,7 +477,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_ConverterLanguage(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_ConverterLanguage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -512,7 +512,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_Converter(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_Converter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -538,7 +538,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_Converter(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_Converter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_UpdateSourceTrigger(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_UpdateSourceTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_UpdateSourceTrigger(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_UpdateSourceTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_TargetNullValue(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_TargetNullValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -660,7 +660,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_TargetNullValue(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_TargetNullValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -695,7 +695,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* Binding_get_FallbackValue(py::wrapper::Windows::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    static PyObject* Binding_get_FallbackValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -721,7 +721,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int Binding_put_FallbackValue(py::wrapper::Windows::UI::Xaml::Data::Binding* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Binding_put_FallbackValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_Binding = {
         "winrt._winrt_windows_ui_xaml_data.Binding",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::Binding),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Binding};
@@ -892,8 +892,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::BindingBase*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::BindingBase*>(self.get())->obj = winrt::make<PyWinrtBindingBase>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBindingBase>(self.get());
 
                     return self.detach();
                 }
@@ -914,7 +914,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_BindingBase(py::wrapper::Windows::UI::Xaml::Data::BindingBase* self) noexcept
+    static void _dealloc_BindingBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -966,7 +966,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_BindingBase = {
         "winrt._winrt_windows_ui_xaml_data.BindingBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::BindingBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BindingBase};
@@ -1005,7 +1005,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         return nullptr;
     }
 
-    static void _dealloc_BindingExpression(py::wrapper::Windows::UI::Xaml::Data::BindingExpression* self) noexcept
+    static void _dealloc_BindingExpression(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* BindingExpression_UpdateSource(py::wrapper::Windows::UI::Xaml::Data::BindingExpression* self, PyObject* args) noexcept
+    static PyObject* BindingExpression_UpdateSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* BindingExpression_get_DataItem(py::wrapper::Windows::UI::Xaml::Data::BindingExpression* self, void* /*unused*/) noexcept
+    static PyObject* BindingExpression_get_DataItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1076,7 +1076,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* BindingExpression_get_ParentBinding(py::wrapper::Windows::UI::Xaml::Data::BindingExpression* self, void* /*unused*/) noexcept
+    static PyObject* BindingExpression_get_ParentBinding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1149,7 +1149,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_BindingExpression = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpression",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::BindingExpression),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BindingExpression};
@@ -1188,7 +1188,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         return nullptr;
     }
 
-    static void _dealloc_BindingExpressionBase(py::wrapper::Windows::UI::Xaml::Data::BindingExpressionBase* self) noexcept
+    static void _dealloc_BindingExpressionBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1240,7 +1240,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_BindingExpressionBase = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpressionBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::BindingExpressionBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BindingExpressionBase};
@@ -1889,8 +1889,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs*>(self.get())->obj = winrt::make<PyWinrtCurrentChangingEventArgs>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCurrentChangingEventArgs>(self.get());
 
                     return self.detach();
                 }
@@ -1918,8 +1918,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs*>(self.get())->obj = winrt::make<PyWinrtCurrentChangingEventArgs>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCurrentChangingEventArgs>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -1940,7 +1940,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_CurrentChangingEventArgs(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs* self) noexcept
+    static void _dealloc_CurrentChangingEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1948,7 +1948,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* CurrentChangingEventArgs_get_Cancel(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* CurrentChangingEventArgs_get_Cancel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1974,7 +1974,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int CurrentChangingEventArgs_put_Cancel(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CurrentChangingEventArgs_put_Cancel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2009,7 +2009,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* CurrentChangingEventArgs_get_IsCancelable(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* CurrentChangingEventArgs_get_IsCancelable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2081,7 +2081,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_CurrentChangingEventArgs = {
         "winrt._winrt_windows_ui_xaml_data.CurrentChangingEventArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CurrentChangingEventArgs};
@@ -2165,8 +2165,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange*>(self.get())->obj = winrt::make<PyWinrtItemIndexRange>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtItemIndexRange>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -2187,7 +2187,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_ItemIndexRange(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange* self) noexcept
+    static void _dealloc_ItemIndexRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2195,7 +2195,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemIndexRange_get_FirstIndex(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange* self, void* /*unused*/) noexcept
+    static PyObject* ItemIndexRange_get_FirstIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2221,7 +2221,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* ItemIndexRange_get_LastIndex(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange* self, void* /*unused*/) noexcept
+    static PyObject* ItemIndexRange_get_LastIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2247,7 +2247,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* ItemIndexRange_get_Length(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange* self, void* /*unused*/) noexcept
+    static PyObject* ItemIndexRange_get_Length(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2320,7 +2320,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_ItemIndexRange = {
         "winrt._winrt_windows_ui_xaml_data.ItemIndexRange",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemIndexRange};
@@ -2403,8 +2403,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs*>(self.get())->obj = winrt::make<PyWinrtPropertyChangedEventArgs>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPropertyChangedEventArgs>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -2425,7 +2425,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_PropertyChangedEventArgs(py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs* self) noexcept
+    static void _dealloc_PropertyChangedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2433,7 +2433,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* PropertyChangedEventArgs_get_PropertyName(py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* PropertyChangedEventArgs_get_PropertyName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2504,7 +2504,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_PropertyChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_data.PropertyChangedEventArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PropertyChangedEventArgs};
@@ -2585,8 +2585,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::RelativeSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Data::RelativeSource*>(self.get())->obj = winrt::make<PyWinrtRelativeSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRelativeSource>(self.get());
 
                     return self.detach();
                 }
@@ -2607,7 +2607,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static void _dealloc_RelativeSource(py::wrapper::Windows::UI::Xaml::Data::RelativeSource* self) noexcept
+    static void _dealloc_RelativeSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2615,7 +2615,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
-    static PyObject* RelativeSource_get_Mode(py::wrapper::Windows::UI::Xaml::Data::RelativeSource* self, void* /*unused*/) noexcept
+    static PyObject* RelativeSource_get_Mode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2641,7 +2641,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int RelativeSource_put_Mode(py::wrapper::Windows::UI::Xaml::Data::RelativeSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RelativeSource_put_Mode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2721,7 +2721,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyType_Spec type_spec_RelativeSource = {
         "winrt._winrt_windows_ui_xaml_data.RelativeSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Data::RelativeSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RelativeSource};

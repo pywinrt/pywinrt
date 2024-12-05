@@ -2622,7 +2622,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         return nullptr;
     }
 
-    static void _dealloc_InteractionTrackerInertiaModifier(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self) noexcept
+    static void _dealloc_InteractionTrackerInertiaModifier(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2674,7 +2674,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaModifier = {
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier",
-        sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InteractionTrackerInertiaModifier};
@@ -4144,7 +4144,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         return nullptr;
     }
 
-    static void _dealloc_InteractionTrackerVector2InertiaModifier(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self) noexcept
+    static void _dealloc_InteractionTrackerVector2InertiaModifier(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4196,7 +4196,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier = {
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier",
-        sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InteractionTrackerVector2InertiaModifier};
@@ -4489,7 +4489,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         return nullptr;
     }
 
-    static void _dealloc_VisualInteractionSource(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self) noexcept
+    static void _dealloc_VisualInteractionSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4497,7 +4497,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         Py_DECREF(tp);
     }
 
-    static PyObject* VisualInteractionSource_ConfigureCenterPointXModifiers(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_ConfigureCenterPointXModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4536,7 +4536,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_ConfigureCenterPointYModifiers(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_ConfigureCenterPointYModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4575,7 +4575,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_ConfigureDeltaPositionXModifiers(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_ConfigureDeltaPositionXModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4614,7 +4614,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_ConfigureDeltaPositionYModifiers(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_ConfigureDeltaPositionYModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4653,7 +4653,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_ConfigureDeltaScaleModifiers(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_ConfigureDeltaScaleModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4768,7 +4768,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_TryRedirectForManipulation(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* args) noexcept
+    static PyObject* VisualInteractionSource_TryRedirectForManipulation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4807,7 +4807,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_ScaleSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_ScaleSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4833,7 +4833,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_ScaleSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_ScaleSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4868,7 +4868,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_ScaleChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_ScaleChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4894,7 +4894,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_ScaleChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_ScaleChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4929,7 +4929,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PositionYSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PositionYSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4955,7 +4955,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_PositionYSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_PositionYSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4990,7 +4990,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PositionYChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PositionYChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5016,7 +5016,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_PositionYChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_PositionYChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5051,7 +5051,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PositionXSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PositionXSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5077,7 +5077,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_PositionXSourceMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_PositionXSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5112,7 +5112,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PositionXChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PositionXChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5138,7 +5138,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_PositionXChainingMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_PositionXChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5173,7 +5173,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_ManipulationRedirectionMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_ManipulationRedirectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5199,7 +5199,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_ManipulationRedirectionMode(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_ManipulationRedirectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5234,7 +5234,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_IsPositionYRailsEnabled(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_IsPositionYRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5260,7 +5260,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_IsPositionYRailsEnabled(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_IsPositionYRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5295,7 +5295,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_IsPositionXRailsEnabled(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_IsPositionXRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5321,7 +5321,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static int VisualInteractionSource_put_IsPositionXRailsEnabled(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualInteractionSource_put_IsPositionXRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5356,7 +5356,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_Source(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5382,7 +5382,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_DeltaPosition(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_DeltaPosition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5408,7 +5408,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_DeltaScale(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_DeltaScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5434,7 +5434,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_Position(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_Position(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5460,7 +5460,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PositionVelocity(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PositionVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5486,7 +5486,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_Scale(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5512,7 +5512,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_ScaleVelocity(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_ScaleVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5538,7 +5538,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* VisualInteractionSource_get_PointerWheelConfig(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    static PyObject* VisualInteractionSource_get_PointerWheelConfig(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5631,7 +5631,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_VisualInteractionSource = {
         "winrt._winrt_windows_ui_composition_interactions.VisualInteractionSource",
-        sizeof(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_VisualInteractionSource};

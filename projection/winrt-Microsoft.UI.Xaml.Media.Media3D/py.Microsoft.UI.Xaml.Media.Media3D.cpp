@@ -1923,7 +1923,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         return nullptr;
     }
 
-    static void _dealloc_Transform3D(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Transform3D* self) noexcept
+    static void _dealloc_Transform3D(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1975,7 +1975,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_Transform3D = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.Transform3D",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Transform3D),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transform3D};

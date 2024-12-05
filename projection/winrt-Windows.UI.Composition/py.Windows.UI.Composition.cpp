@@ -2060,7 +2060,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionAnimation(py::wrapper::Windows::UI::Composition::CompositionAnimation* self) noexcept
+    static void _dealloc_CompositionAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2068,7 +2068,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionAnimation_ClearAllParameters(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_ClearAllParameters(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2105,7 +2105,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_ClearParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_ClearParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2144,7 +2144,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetBooleanParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetBooleanParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2184,7 +2184,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetColorParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetColorParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2224,7 +2224,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetExpressionReferenceParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetExpressionReferenceParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2264,7 +2264,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetMatrix3x2Parameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetMatrix3x2Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2304,7 +2304,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetMatrix4x4Parameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetMatrix4x4Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2344,7 +2344,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetQuaternionParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetQuaternionParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetReferenceParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetReferenceParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2424,7 +2424,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetScalarParameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetScalarParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2464,7 +2464,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetVector2Parameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetVector2Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2504,7 +2504,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetVector3Parameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetVector3Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2544,7 +2544,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_SetVector4Parameter(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    static PyObject* CompositionAnimation_SetVector4Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_get_Target(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* CompositionAnimation_get_Target(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2610,7 +2610,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionAnimation_put_Target(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionAnimation_put_Target(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2645,7 +2645,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionAnimation_get_InitialValueExpressions(py::wrapper::Windows::UI::Composition::CompositionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* CompositionAnimation_get_InitialValueExpressions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2730,7 +2730,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionAnimation = {
         "winrt._winrt_windows_ui_composition.CompositionAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionAnimation};
@@ -3163,7 +3163,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionBrush(py::wrapper::Windows::UI::Composition::CompositionBrush* self) noexcept
+    static void _dealloc_CompositionBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3215,7 +3215,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionBrush = {
         "winrt._winrt_windows_ui_composition.CompositionBrush",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionBrush};
@@ -3515,7 +3515,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionClip(py::wrapper::Windows::UI::Composition::CompositionClip* self) noexcept
+    static void _dealloc_CompositionClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3523,7 +3523,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionClip_get_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3549,7 +3549,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3584,7 +3584,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_Scale(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3610,7 +3610,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_Scale(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3645,7 +3645,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3671,7 +3671,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3706,7 +3706,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3732,7 +3732,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3767,7 +3767,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_Offset(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3793,7 +3793,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_Offset(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3828,7 +3828,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3854,7 +3854,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3889,7 +3889,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionClip_get_AnchorPoint(py::wrapper::Windows::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
+    static PyObject* CompositionClip_get_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3915,7 +3915,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionClip_put_AnchorPoint(py::wrapper::Windows::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionClip_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4001,7 +4001,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionClip = {
         "winrt._winrt_windows_ui_composition.CompositionClip",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionClip),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionClip};
@@ -5332,7 +5332,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionDrawingSurface(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self) noexcept
+    static void _dealloc_CompositionDrawingSurface(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5340,7 +5340,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionDrawingSurface_Resize(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionDrawingSurface_Resize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5379,7 +5379,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_Scroll(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionDrawingSurface_Scroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5418,7 +5418,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_ScrollRect(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionDrawingSurface_ScrollRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5458,7 +5458,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_ScrollRectWithClip(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionDrawingSurface_ScrollRectWithClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5499,7 +5499,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_ScrollWithClip(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionDrawingSurface_ScrollWithClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5539,7 +5539,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_get_AlphaMode(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
+    static PyObject* CompositionDrawingSurface_get_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5565,7 +5565,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_get_PixelFormat(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
+    static PyObject* CompositionDrawingSurface_get_PixelFormat(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_get_Size(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
+    static PyObject* CompositionDrawingSurface_get_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5617,7 +5617,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionDrawingSurface_get_SizeInt32(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
+    static PyObject* CompositionDrawingSurface_get_SizeInt32(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5696,7 +5696,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionDrawingSurface = {
         "winrt._winrt_windows_ui_composition.CompositionDrawingSurface",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionDrawingSurface};
@@ -5735,7 +5735,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionEasingFunction(py::wrapper::Windows::UI::Composition::CompositionEasingFunction* self) noexcept
+    static void _dealloc_CompositionEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6222,7 +6222,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEasingFunction = {
         "winrt._winrt_windows_ui_composition.CompositionEasingFunction",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionEasingFunction),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionEasingFunction};
@@ -7072,7 +7072,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionGeometry(py::wrapper::Windows::UI::Composition::CompositionGeometry* self) noexcept
+    static void _dealloc_CompositionGeometry(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7080,7 +7080,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionGeometry_get_TrimStart(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGeometry_get_TrimStart(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7106,7 +7106,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGeometry_put_TrimStart(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGeometry_put_TrimStart(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7141,7 +7141,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGeometry_get_TrimOffset(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGeometry_get_TrimOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7167,7 +7167,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGeometry_put_TrimOffset(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGeometry_put_TrimOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7202,7 +7202,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGeometry_get_TrimEnd(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGeometry_get_TrimEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7228,7 +7228,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGeometry_put_TrimEnd(py::wrapper::Windows::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGeometry_put_TrimEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7310,7 +7310,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionGeometry",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionGeometry),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionGeometry};
@@ -7349,7 +7349,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionGradientBrush(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self) noexcept
+    static void _dealloc_CompositionGradientBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7357,7 +7357,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionGradientBrush_get_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7383,7 +7383,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7418,7 +7418,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_Scale(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7444,7 +7444,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_Scale(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7479,7 +7479,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7505,7 +7505,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7540,7 +7540,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7566,7 +7566,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7601,7 +7601,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_Offset(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7627,7 +7627,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_Offset(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7662,7 +7662,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_InterpolationSpace(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_InterpolationSpace(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7688,7 +7688,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_InterpolationSpace(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_InterpolationSpace(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7723,7 +7723,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_ExtendMode(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_ExtendMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7749,7 +7749,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_ExtendMode(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_ExtendMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7784,7 +7784,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7810,7 +7810,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7845,7 +7845,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_AnchorPoint(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7871,7 +7871,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_AnchorPoint(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7906,7 +7906,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_ColorStops(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_ColorStops(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7932,7 +7932,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionGradientBrush_get_MappingMode(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
+    static PyObject* CompositionGradientBrush_get_MappingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7958,7 +7958,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionGradientBrush_put_MappingMode(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionGradientBrush_put_MappingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8048,7 +8048,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGradientBrush = {
         "winrt._winrt_windows_ui_composition.CompositionGradientBrush",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionGradientBrush),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionGradientBrush};
@@ -8457,7 +8457,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionLight(py::wrapper::Windows::UI::Composition::CompositionLight* self) noexcept
+    static void _dealloc_CompositionLight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8465,7 +8465,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionLight_get_Targets(py::wrapper::Windows::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
+    static PyObject* CompositionLight_get_Targets(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8491,7 +8491,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionLight_get_ExclusionsFromTargets(py::wrapper::Windows::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
+    static PyObject* CompositionLight_get_ExclusionsFromTargets(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8517,7 +8517,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionLight_get_IsEnabled(py::wrapper::Windows::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
+    static PyObject* CompositionLight_get_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8543,7 +8543,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionLight_put_IsEnabled(py::wrapper::Windows::UI::Composition::CompositionLight* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionLight_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8625,7 +8625,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionLight = {
         "winrt._winrt_windows_ui_composition.CompositionLight",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionLight),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionLight};
@@ -10299,7 +10299,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
+    static void _dealloc_CompositionObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10307,7 +10307,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionObject_Close(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10344,7 +10344,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10384,7 +10384,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_StartAnimation(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_StartAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10424,7 +10424,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_StartAnimationGroup(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_StartAnimationGroup(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10503,7 +10503,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_StartAnimationWithController(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_StartAnimationWithController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10585,7 +10585,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_StopAnimation(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_StopAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10624,7 +10624,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_StopAnimationGroup(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_StopAnimationGroup(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10663,7 +10663,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_TryGetAnimationController(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    static PyObject* CompositionObject_TryGetAnimationController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10701,7 +10701,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_Compositor(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_Compositor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10727,7 +10727,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_Dispatcher(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_Dispatcher(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10753,7 +10753,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_Properties(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_Properties(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10779,7 +10779,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_ImplicitAnimations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10805,7 +10805,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionObject_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionObject_put_ImplicitAnimations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10840,7 +10840,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_Comment(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_Comment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10866,7 +10866,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionObject_put_Comment(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionObject_put_Comment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10901,7 +10901,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionObject_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
+    static PyObject* CompositionObject_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10951,16 +10951,16 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* _enter_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_CompositionObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_CompositionObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -11006,7 +11006,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionObject = {
         "winrt._winrt_windows_ui_composition.CompositionObject",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionObject),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionObject};
@@ -14539,7 +14539,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionShadow(py::wrapper::Windows::UI::Composition::CompositionShadow* self) noexcept
+    static void _dealloc_CompositionShadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14591,7 +14591,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionShadow = {
         "winrt._winrt_windows_ui_composition.CompositionShadow",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionShadow),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionShadow};
@@ -14630,7 +14630,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionShape(py::wrapper::Windows::UI::Composition::CompositionShape* self) noexcept
+    static void _dealloc_CompositionShape(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14638,7 +14638,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionShape_get_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14664,7 +14664,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_TransformMatrix(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14699,7 +14699,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionShape_get_Scale(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14725,7 +14725,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_Scale(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14760,7 +14760,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionShape_get_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14786,7 +14786,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14821,7 +14821,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionShape_get_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14847,7 +14847,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_RotationAngle(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14882,7 +14882,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionShape_get_Offset(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14908,7 +14908,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_Offset(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14943,7 +14943,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionShape_get_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
+    static PyObject* CompositionShape_get_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14969,7 +14969,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionShape_put_CenterPoint(py::wrapper::Windows::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionShape_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15054,7 +15054,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionShape = {
         "winrt._winrt_windows_ui_composition.CompositionShape",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionShape),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionShape};
@@ -18144,7 +18144,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionTarget(py::wrapper::Windows::UI::Composition::CompositionTarget* self) noexcept
+    static void _dealloc_CompositionTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18152,7 +18152,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionTarget_get_Root(py::wrapper::Windows::UI::Composition::CompositionTarget* self, void* /*unused*/) noexcept
+    static PyObject* CompositionTarget_get_Root(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18178,7 +18178,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionTarget_put_Root(py::wrapper::Windows::UI::Composition::CompositionTarget* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionTarget_put_Root(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18258,7 +18258,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionTarget = {
         "winrt._winrt_windows_ui_composition.CompositionTarget",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionTarget),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionTarget};
@@ -18297,7 +18297,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionTexture(py::wrapper::Windows::UI::Composition::CompositionTexture* self) noexcept
+    static void _dealloc_CompositionTexture(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18305,7 +18305,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionTexture_get_SourceRect(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    static PyObject* CompositionTexture_get_SourceRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18331,7 +18331,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionTexture_put_SourceRect(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionTexture_put_SourceRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18366,7 +18366,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionTexture_get_ColorSpace(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    static PyObject* CompositionTexture_get_ColorSpace(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18392,7 +18392,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionTexture_put_ColorSpace(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionTexture_put_ColorSpace(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18427,7 +18427,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* CompositionTexture_get_AlphaMode(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    static PyObject* CompositionTexture_get_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18453,7 +18453,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int CompositionTexture_put_AlphaMode(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CompositionTexture_put_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18535,7 +18535,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionTexture = {
         "winrt._winrt_windows_ui_composition.CompositionTexture",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionTexture),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionTexture};
@@ -18574,7 +18574,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionTransform(py::wrapper::Windows::UI::Composition::CompositionTransform* self) noexcept
+    static void _dealloc_CompositionTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18626,7 +18626,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionTransform = {
         "winrt._winrt_windows_ui_composition.CompositionTransform",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionTransform),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionTransform};
@@ -19041,7 +19041,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_CompositionVirtualDrawingSurface(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface* self) noexcept
+    static void _dealloc_CompositionVirtualDrawingSurface(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19049,7 +19049,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* CompositionVirtualDrawingSurface_Trim(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface* self, PyObject* args) noexcept
+    static PyObject* CompositionVirtualDrawingSurface_Trim(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -19133,7 +19133,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionVirtualDrawingSurface = {
         "winrt._winrt_windows_ui_composition.CompositionVirtualDrawingSurface",
-        sizeof(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionVirtualDrawingSurface};
@@ -22663,7 +22663,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_ContainerVisual(py::wrapper::Windows::UI::Composition::ContainerVisual* self) noexcept
+    static void _dealloc_ContainerVisual(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22671,7 +22671,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* ContainerVisual_get_Children(py::wrapper::Windows::UI::Composition::ContainerVisual* self, void* /*unused*/) noexcept
+    static PyObject* ContainerVisual_get_Children(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -22742,7 +22742,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ContainerVisual = {
         "winrt._winrt_windows_ui_composition.ContainerVisual",
-        sizeof(py::wrapper::Windows::UI::Composition::ContainerVisual),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContainerVisual};
@@ -25629,7 +25629,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_KeyFrameAnimation(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self) noexcept
+    static void _dealloc_KeyFrameAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -25637,7 +25637,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrame(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* args) noexcept
+    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -25677,7 +25677,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* args) noexcept
+    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -25718,7 +25718,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_StopBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25744,7 +25744,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_StopBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25779,7 +25779,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_IterationCount(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_IterationCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25805,7 +25805,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_IterationCount(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_IterationCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25840,7 +25840,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_IterationBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_IterationBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25866,7 +25866,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_IterationBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_IterationBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25901,7 +25901,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_Duration(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25927,7 +25927,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_Duration(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25962,7 +25962,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_DelayTime(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25988,7 +25988,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_DelayTime(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26023,7 +26023,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_KeyFrameCount(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_KeyFrameCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26049,7 +26049,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_Direction(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_Direction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26075,7 +26075,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_Direction(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_Direction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26110,7 +26110,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* KeyFrameAnimation_get_DelayBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
+    static PyObject* KeyFrameAnimation_get_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26136,7 +26136,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int KeyFrameAnimation_put_DelayBehavior(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyFrameAnimation_put_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26225,7 +26225,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_KeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.KeyFrameAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::KeyFrameAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_KeyFrameAnimation};
@@ -26520,7 +26520,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self) noexcept
+    static void _dealloc_NaturalMotionAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -26528,7 +26528,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* NaturalMotionAnimation_get_StopBehavior(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* NaturalMotionAnimation_get_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26554,7 +26554,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int NaturalMotionAnimation_put_StopBehavior(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NaturalMotionAnimation_put_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26589,7 +26589,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* NaturalMotionAnimation_get_DelayTime(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* NaturalMotionAnimation_get_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26615,7 +26615,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int NaturalMotionAnimation_put_DelayTime(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NaturalMotionAnimation_put_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26650,7 +26650,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* NaturalMotionAnimation_get_DelayBehavior(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* NaturalMotionAnimation_get_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26676,7 +26676,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int NaturalMotionAnimation_put_DelayBehavior(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NaturalMotionAnimation_put_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26758,7 +26758,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.NaturalMotionAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NaturalMotionAnimation};
@@ -28771,7 +28771,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_ScalarNaturalMotionAnimation(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self) noexcept
+    static void _dealloc_ScalarNaturalMotionAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -28779,7 +28779,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* ScalarNaturalMotionAnimation_get_InitialVelocity(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* ScalarNaturalMotionAnimation_get_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -28805,7 +28805,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int ScalarNaturalMotionAnimation_put_InitialVelocity(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScalarNaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -28840,7 +28840,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* ScalarNaturalMotionAnimation_get_InitialValue(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* ScalarNaturalMotionAnimation_get_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -28866,7 +28866,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int ScalarNaturalMotionAnimation_put_InitialValue(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScalarNaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -28901,7 +28901,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* ScalarNaturalMotionAnimation_get_FinalValue(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* ScalarNaturalMotionAnimation_get_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -28927,7 +28927,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int ScalarNaturalMotionAnimation_put_FinalValue(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScalarNaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29009,7 +29009,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ScalarNaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.ScalarNaturalMotionAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScalarNaturalMotionAnimation};
@@ -31639,7 +31639,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_Vector2NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self) noexcept
+    static void _dealloc_Vector2NaturalMotionAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -31647,7 +31647,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* Vector2NaturalMotionAnimation_get_InitialVelocity(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector2NaturalMotionAnimation_get_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -31673,7 +31673,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector2NaturalMotionAnimation_put_InitialVelocity(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector2NaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -31708,7 +31708,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Vector2NaturalMotionAnimation_get_InitialValue(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector2NaturalMotionAnimation_get_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -31734,7 +31734,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector2NaturalMotionAnimation_put_InitialValue(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector2NaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -31769,7 +31769,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Vector2NaturalMotionAnimation_get_FinalValue(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector2NaturalMotionAnimation_get_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -31795,7 +31795,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector2NaturalMotionAnimation_put_FinalValue(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector2NaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -31877,7 +31877,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector2NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.Vector2NaturalMotionAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Vector2NaturalMotionAnimation};
@@ -32065,7 +32065,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_Vector3NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self) noexcept
+    static void _dealloc_Vector3NaturalMotionAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32073,7 +32073,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* Vector3NaturalMotionAnimation_get_InitialVelocity(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector3NaturalMotionAnimation_get_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32099,7 +32099,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector3NaturalMotionAnimation_put_InitialVelocity(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector3NaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32134,7 +32134,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Vector3NaturalMotionAnimation_get_InitialValue(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector3NaturalMotionAnimation_get_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32160,7 +32160,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector3NaturalMotionAnimation_put_InitialValue(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector3NaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32195,7 +32195,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Vector3NaturalMotionAnimation_get_FinalValue(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
+    static PyObject* Vector3NaturalMotionAnimation_get_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32221,7 +32221,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Vector3NaturalMotionAnimation_put_FinalValue(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector3NaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32303,7 +32303,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector3NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.Vector3NaturalMotionAnimation",
-        sizeof(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Vector3NaturalMotionAnimation};
@@ -32491,7 +32491,7 @@ namespace py::cpp::Windows::UI::Composition
         return nullptr;
     }
 
-    static void _dealloc_Visual(py::wrapper::Windows::UI::Composition::Visual* self) noexcept
+    static void _dealloc_Visual(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32499,7 +32499,7 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* Visual_get_TransformMatrix(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32525,7 +32525,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_TransformMatrix(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32560,7 +32560,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Size(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32586,7 +32586,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Size(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32621,7 +32621,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Scale(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32647,7 +32647,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Scale(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32682,7 +32682,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_RotationAxis(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32708,7 +32708,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_RotationAxis(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32743,7 +32743,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32769,7 +32769,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32804,7 +32804,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_RotationAngle(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32830,7 +32830,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_RotationAngle(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32865,7 +32865,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Orientation(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Orientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32891,7 +32891,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Orientation(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Orientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32926,7 +32926,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Opacity(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32952,7 +32952,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Opacity(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32987,7 +32987,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Offset(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33013,7 +33013,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Offset(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33048,7 +33048,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_IsVisible(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33074,7 +33074,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_IsVisible(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33109,7 +33109,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_CompositeMode(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33135,7 +33135,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_CompositeMode(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33170,7 +33170,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Clip(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33196,7 +33196,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_Clip(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33231,7 +33231,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_CenterPoint(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33257,7 +33257,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_CenterPoint(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33292,7 +33292,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_BorderMode(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_BorderMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33318,7 +33318,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_BorderMode(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_BorderMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33353,7 +33353,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_BackfaceVisibility(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_BackfaceVisibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33379,7 +33379,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_BackfaceVisibility(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_BackfaceVisibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33414,7 +33414,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_AnchorPoint(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33440,7 +33440,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_AnchorPoint(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33475,7 +33475,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_Parent(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33501,7 +33501,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_RelativeSizeAdjustment(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_RelativeSizeAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33527,7 +33527,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_RelativeSizeAdjustment(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_RelativeSizeAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33562,7 +33562,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_RelativeOffsetAdjustment(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_RelativeOffsetAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33588,7 +33588,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_RelativeOffsetAdjustment(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_RelativeOffsetAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33623,7 +33623,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_ParentForTransform(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_ParentForTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33649,7 +33649,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_ParentForTransform(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_ParentForTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33684,7 +33684,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_IsHitTestVisible(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33710,7 +33710,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_IsHitTestVisible(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33745,7 +33745,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* Visual_get_IsPixelSnappingEnabled(py::wrapper::Windows::UI::Composition::Visual* self, void* /*unused*/) noexcept
+    static PyObject* Visual_get_IsPixelSnappingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33771,7 +33771,7 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int Visual_put_IsPixelSnappingEnabled(py::wrapper::Windows::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Visual_put_IsPixelSnappingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33872,7 +33872,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Visual = {
         "winrt._winrt_windows_ui_composition.Visual",
-        sizeof(py::wrapper::Windows::UI::Composition::Visual),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Visual};

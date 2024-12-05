@@ -55,8 +55,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::AdaptiveTrigger*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::AdaptiveTrigger*>(self.get())->obj = winrt::make<PyWinrtAdaptiveTrigger>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAdaptiveTrigger>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_AdaptiveTrigger(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger* self) noexcept
+    static void _dealloc_AdaptiveTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* AdaptiveTrigger_get_MinWindowWidth(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger* self, void* /*unused*/) noexcept
+    static PyObject* AdaptiveTrigger_get_MinWindowWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int AdaptiveTrigger_put_MinWindowWidth(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AdaptiveTrigger_put_MinWindowWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* AdaptiveTrigger_get_MinWindowHeight(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger* self, void* /*unused*/) noexcept
+    static PyObject* AdaptiveTrigger_get_MinWindowHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int AdaptiveTrigger_put_MinWindowHeight(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AdaptiveTrigger_put_MinWindowHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -305,7 +305,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_AdaptiveTrigger = {
         "winrt._winrt_windows_ui_xaml.AdaptiveTrigger",
-        sizeof(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AdaptiveTrigger};
@@ -708,8 +708,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Application*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Application*>(self.get())->obj = winrt::make<PyWinrtApplication>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtApplication>(self.get());
 
                     return self.detach();
                 }
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_Application(py::wrapper::Windows::UI::Xaml::Application* self) noexcept
+    static void _dealloc_Application(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -738,7 +738,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* Application_Exit(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* args) noexcept
+    static PyObject* Application_Exit(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -958,7 +958,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_Resources(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Application_put_Resources(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Application_put_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1019,7 +1019,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_RequestedTheme(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Application_put_RequestedTheme(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Application_put_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1080,7 +1080,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_DebugSettings(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_DebugSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_RequiresPointerMode(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_RequiresPointerMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1132,7 +1132,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Application_put_RequiresPointerMode(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Application_put_RequiresPointerMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_FocusVisualKind(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_FocusVisualKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1193,7 +1193,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Application_put_FocusVisualKind(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Application_put_FocusVisualKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1228,7 +1228,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_get_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    static PyObject* Application_get_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1254,7 +1254,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Application_put_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Application_put_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1315,7 +1315,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_add_Resuming(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_add_Resuming(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1343,7 +1343,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_remove_Resuming(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_remove_Resuming(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1372,7 +1372,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_add_Suspending(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_add_Suspending(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_remove_Suspending(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_remove_Suspending(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1429,7 +1429,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_add_UnhandledException(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_add_UnhandledException(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1457,7 +1457,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_remove_UnhandledException(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_remove_UnhandledException(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1486,7 +1486,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_add_EnteredBackground(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_add_EnteredBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1514,7 +1514,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_remove_EnteredBackground(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_remove_EnteredBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1543,7 +1543,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_add_LeavingBackground(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_add_LeavingBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1571,7 +1571,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_remove_LeavingBackground(py::wrapper::Windows::UI::Xaml::Application* self, PyObject* arg) noexcept
+    static PyObject* Application_remove_LeavingBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1671,7 +1671,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_Application = {
         "winrt._winrt_windows_ui_xaml.Application",
-        sizeof(py::wrapper::Windows::UI::Xaml::Application),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Application};
@@ -2867,8 +2867,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::BrushTransition*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::BrushTransition*>(self.get())->obj = winrt::make<PyWinrtBrushTransition>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBrushTransition>(self.get());
 
                     return self.detach();
                 }
@@ -2889,7 +2889,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_BrushTransition(py::wrapper::Windows::UI::Xaml::BrushTransition* self) noexcept
+    static void _dealloc_BrushTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2897,7 +2897,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* BrushTransition_get_Duration(py::wrapper::Windows::UI::Xaml::BrushTransition* self, void* /*unused*/) noexcept
+    static PyObject* BrushTransition_get_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2923,7 +2923,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int BrushTransition_put_Duration(py::wrapper::Windows::UI::Xaml::BrushTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int BrushTransition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3003,7 +3003,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_BrushTransition = {
         "winrt._winrt_windows_ui_xaml.BrushTransition",
-        sizeof(py::wrapper::Windows::UI::Xaml::BrushTransition),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BrushTransition};
@@ -3084,8 +3084,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::ColorPaletteResources*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::ColorPaletteResources*>(self.get())->obj = winrt::make<PyWinrtColorPaletteResources>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorPaletteResources>(self.get());
 
                     return self.detach();
                 }
@@ -3106,7 +3106,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_ColorPaletteResources(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self) noexcept
+    static void _dealloc_ColorPaletteResources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3114,7 +3114,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ColorPaletteResources_get_ListMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ListMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3140,7 +3140,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ListMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ListMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3175,7 +3175,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ListLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ListLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3201,7 +3201,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ListLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ListLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3236,7 +3236,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ErrorText(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ErrorText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ErrorText(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ErrorText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3297,7 +3297,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeWhite(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeWhite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3323,7 +3323,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeWhite(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeWhite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3358,7 +3358,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3384,7 +3384,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3419,7 +3419,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3480,7 +3480,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3506,7 +3506,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3541,7 +3541,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3567,7 +3567,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3602,7 +3602,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeGray(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeGray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeGray(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeGray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3663,7 +3663,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeDisabledLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeDisabledLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3689,7 +3689,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeDisabledLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeDisabledLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3724,7 +3724,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeDisabledHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeDisabledHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3750,7 +3750,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeDisabledHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeDisabledHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3785,7 +3785,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeBlackMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeBlackMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3811,7 +3811,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeBlackMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeBlackMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3846,7 +3846,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeBlackMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeBlackMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3872,7 +3872,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeBlackMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeBlackMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3907,7 +3907,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeBlackLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeBlackLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3933,7 +3933,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeBlackLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeBlackLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3968,7 +3968,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeBlackHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeBlackHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3994,7 +3994,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeBlackHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeBlackHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4029,7 +4029,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_ChromeAltLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_ChromeAltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4055,7 +4055,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_ChromeAltLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_ChromeAltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4090,7 +4090,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_BaseMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_BaseMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4116,7 +4116,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_BaseMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_BaseMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4151,7 +4151,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_BaseMediumHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_BaseMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4177,7 +4177,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_BaseMediumHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_BaseMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4212,7 +4212,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_BaseMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_BaseMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4238,7 +4238,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_BaseMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_BaseMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4273,7 +4273,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_BaseLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_BaseLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4299,7 +4299,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_BaseLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_BaseLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4334,7 +4334,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_BaseHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_BaseHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4360,7 +4360,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_BaseHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_BaseHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4395,7 +4395,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_AltMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_AltMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4421,7 +4421,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_AltMediumLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_AltMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4456,7 +4456,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_AltMediumHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_AltMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4482,7 +4482,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_AltMediumHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_AltMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4517,7 +4517,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_AltMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_AltMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4543,7 +4543,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_AltMedium(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_AltMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4578,7 +4578,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_AltLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_AltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4604,7 +4604,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_AltLow(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_AltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4639,7 +4639,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_AltHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_AltHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4665,7 +4665,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_AltHigh(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_AltHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4700,7 +4700,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ColorPaletteResources_get_Accent(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
+    static PyObject* ColorPaletteResources_get_Accent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4726,7 +4726,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ColorPaletteResources_put_Accent(py::wrapper::Windows::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorPaletteResources_put_Accent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4832,7 +4832,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ColorPaletteResources = {
         "winrt._winrt_windows_ui_xaml.ColorPaletteResources",
-        sizeof(py::wrapper::Windows::UI::Xaml::ColorPaletteResources),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorPaletteResources};
@@ -5240,8 +5240,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplate*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplate*>(self.get())->obj = winrt::make<PyWinrtDataTemplate>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDataTemplate>(self.get());
 
                     return self.detach();
                 }
@@ -5262,7 +5262,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_DataTemplate(py::wrapper::Windows::UI::Xaml::DataTemplate* self) noexcept
+    static void _dealloc_DataTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5270,7 +5270,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* DataTemplate_GetElement(py::wrapper::Windows::UI::Xaml::DataTemplate* self, PyObject* args) noexcept
+    static PyObject* DataTemplate_GetElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5346,7 +5346,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DataTemplate_LoadContent(py::wrapper::Windows::UI::Xaml::DataTemplate* self, PyObject* args) noexcept
+    static PyObject* DataTemplate_LoadContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5382,7 +5382,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DataTemplate_RecycleElement(py::wrapper::Windows::UI::Xaml::DataTemplate* self, PyObject* args) noexcept
+    static PyObject* DataTemplate_RecycleElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5534,7 +5534,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_DataTemplate = {
         "winrt._winrt_windows_ui_xaml.DataTemplate",
-        sizeof(py::wrapper::Windows::UI::Xaml::DataTemplate),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DataTemplate};
@@ -5619,8 +5619,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplateKey*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplateKey*>(self.get())->obj = winrt::make<PyWinrtDataTemplateKey>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDataTemplateKey>(self.get());
 
                     return self.detach();
                 }
@@ -5648,8 +5648,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplateKey*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::DataTemplateKey*>(self.get())->obj = winrt::make<PyWinrtDataTemplateKey>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDataTemplateKey>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -5670,7 +5670,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_DataTemplateKey(py::wrapper::Windows::UI::Xaml::DataTemplateKey* self) noexcept
+    static void _dealloc_DataTemplateKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5678,7 +5678,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* DataTemplateKey_get_DataType(py::wrapper::Windows::UI::Xaml::DataTemplateKey* self, void* /*unused*/) noexcept
+    static PyObject* DataTemplateKey_get_DataType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5704,7 +5704,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int DataTemplateKey_put_DataType(py::wrapper::Windows::UI::Xaml::DataTemplateKey* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DataTemplateKey_put_DataType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5784,7 +5784,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_DataTemplateKey = {
         "winrt._winrt_windows_ui_xaml.DataTemplateKey",
-        sizeof(py::wrapper::Windows::UI::Xaml::DataTemplateKey),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DataTemplateKey};
@@ -6340,7 +6340,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_DependencyObject(py::wrapper::Windows::UI::Xaml::DependencyObject* self) noexcept
+    static void _dealloc_DependencyObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6348,7 +6348,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* DependencyObject_ClearValue(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_ClearValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6387,7 +6387,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_GetAnimationBaseValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6425,7 +6425,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_GetValue(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_GetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6463,7 +6463,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_ReadLocalValue(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_ReadLocalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6501,7 +6501,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_RegisterPropertyChangedCallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6540,7 +6540,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_SetValue(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6580,7 +6580,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::DependencyObject* self, PyObject* args) noexcept
+    static PyObject* DependencyObject_UnregisterPropertyChangedCallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6620,7 +6620,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObject_get_Dispatcher(py::wrapper::Windows::UI::Xaml::DependencyObject* self, void* /*unused*/) noexcept
+    static PyObject* DependencyObject_get_Dispatcher(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6698,7 +6698,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_DependencyObject = {
         "winrt._winrt_windows_ui_xaml.DependencyObject",
-        sizeof(py::wrapper::Windows::UI::Xaml::DependencyObject),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DependencyObject};
@@ -6779,8 +6779,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::DependencyObjectCollection*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::DependencyObjectCollection*>(self.get())->obj = winrt::make<PyWinrtDependencyObjectCollection>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDependencyObjectCollection>(self.get());
 
                     return self.detach();
                 }
@@ -6801,7 +6801,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self) noexcept
+    static void _dealloc_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6809,7 +6809,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* DependencyObjectCollection_Append(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_Append(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6848,7 +6848,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_Clear(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_Clear(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6885,7 +6885,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_First(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_First(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6921,7 +6921,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_GetAt(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_GetAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6959,7 +6959,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_GetMany(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_GetMany(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6998,7 +6998,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_GetView(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_GetView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7034,7 +7034,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_IndexOf(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_IndexOf(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7085,7 +7085,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_InsertAt(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_InsertAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7125,7 +7125,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_RemoveAt(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_RemoveAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7164,7 +7164,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_RemoveAtEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7201,7 +7201,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_ReplaceAll(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_ReplaceAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7240,7 +7240,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_SetAt(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* args) noexcept
+    static PyObject* DependencyObjectCollection_SetAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7280,7 +7280,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_get_Size(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, void* /*unused*/) noexcept
+    static PyObject* DependencyObjectCollection_get_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7306,7 +7306,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_add_VectorChanged(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* arg) noexcept
+    static PyObject* DependencyObjectCollection_add_VectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7334,7 +7334,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DependencyObjectCollection_remove_VectorChanged(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* arg) noexcept
+    static PyObject* DependencyObjectCollection_remove_VectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7387,7 +7387,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _iterator_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self) noexcept
+    static PyObject* _iterator_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
@@ -7400,11 +7400,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static Py_ssize_t _seq_length_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self) noexcept
+    static Py_ssize_t _seq_length_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().Size());
         }
         catch (...)
         {
@@ -7413,11 +7413,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _seq_item_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, Py_ssize_t i) noexcept
+    static PyObject* _seq_item_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, Py_ssize_t i) noexcept
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().GetAt(static_cast<uint32_t>(i)));
         }
         catch (...)
         {
@@ -7426,7 +7426,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _seq_subscript_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, PyObject* slice) noexcept
+    static PyObject* _seq_subscript_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* slice) noexcept
     {
         try
         {
@@ -7456,7 +7456,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            if (PySlice_GetIndicesEx(slice, self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().Size(), &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -7469,7 +7469,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             winrt::com_array<winrt::Windows::UI::Xaml::DependencyObject> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::DependencyObject>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().GetMany(static_cast<uint32_t>(start), items);
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -7486,17 +7486,17 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int _seq_assign_DependencyObjectCollection(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection* self, Py_ssize_t i, PyObject* value) noexcept
+    static int _seq_assign_DependencyObjectCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, Py_ssize_t i, PyObject* value) noexcept
     {
         try
         {
             if (!value)
             {
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(value));
+                self->obj.try_as<winrt::Windows::UI::Xaml::DependencyObjectCollection>().SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(value));
             }
 
             return 0;
@@ -7548,7 +7548,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_DependencyObjectCollection = {
         "winrt._winrt_windows_ui_xaml.DependencyObjectCollection",
-        sizeof(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DependencyObjectCollection};
@@ -8017,8 +8017,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::DispatcherTimer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::DispatcherTimer*>(self.get())->obj = winrt::make<PyWinrtDispatcherTimer>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDispatcherTimer>(self.get());
 
                     return self.detach();
                 }
@@ -8039,7 +8039,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_DispatcherTimer(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self) noexcept
+    static void _dealloc_DispatcherTimer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8047,7 +8047,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* DispatcherTimer_Start(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, PyObject* args) noexcept
+    static PyObject* DispatcherTimer_Start(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8084,7 +8084,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DispatcherTimer_Stop(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, PyObject* args) noexcept
+    static PyObject* DispatcherTimer_Stop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8121,7 +8121,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DispatcherTimer_get_Interval(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, void* /*unused*/) noexcept
+    static PyObject* DispatcherTimer_get_Interval(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8147,7 +8147,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int DispatcherTimer_put_Interval(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DispatcherTimer_put_Interval(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8182,7 +8182,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DispatcherTimer_get_IsEnabled(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, void* /*unused*/) noexcept
+    static PyObject* DispatcherTimer_get_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8208,7 +8208,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DispatcherTimer_add_Tick(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, PyObject* arg) noexcept
+    static PyObject* DispatcherTimer_add_Tick(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -8236,7 +8236,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* DispatcherTimer_remove_Tick(py::wrapper::Windows::UI::Xaml::DispatcherTimer* self, PyObject* arg) noexcept
+    static PyObject* DispatcherTimer_remove_Tick(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -8315,7 +8315,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_DispatcherTimer = {
         "winrt._winrt_windows_ui_xaml.DispatcherTimer",
-        sizeof(py::wrapper::Windows::UI::Xaml::DispatcherTimer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DispatcherTimer};
@@ -10686,8 +10686,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs*>(self.get())->obj = winrt::make<PyWinrtElementFactoryGetArgs>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtElementFactoryGetArgs>(self.get());
 
                     return self.detach();
                 }
@@ -10708,7 +10708,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_ElementFactoryGetArgs(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs* self) noexcept
+    static void _dealloc_ElementFactoryGetArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10716,7 +10716,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ElementFactoryGetArgs_get_Parent(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs* self, void* /*unused*/) noexcept
+    static PyObject* ElementFactoryGetArgs_get_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10742,7 +10742,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ElementFactoryGetArgs_put_Parent(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementFactoryGetArgs_put_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10777,7 +10777,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ElementFactoryGetArgs_get_Data(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs* self, void* /*unused*/) noexcept
+    static PyObject* ElementFactoryGetArgs_get_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10803,7 +10803,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ElementFactoryGetArgs_put_Data(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementFactoryGetArgs_put_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10884,7 +10884,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ElementFactoryGetArgs = {
         "winrt._winrt_windows_ui_xaml.ElementFactoryGetArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ElementFactoryGetArgs};
@@ -10965,8 +10965,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs*>(self.get())->obj = winrt::make<PyWinrtElementFactoryRecycleArgs>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtElementFactoryRecycleArgs>(self.get());
 
                     return self.detach();
                 }
@@ -10987,7 +10987,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_ElementFactoryRecycleArgs(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs* self) noexcept
+    static void _dealloc_ElementFactoryRecycleArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10995,7 +10995,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ElementFactoryRecycleArgs_get_Parent(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs* self, void* /*unused*/) noexcept
+    static PyObject* ElementFactoryRecycleArgs_get_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11021,7 +11021,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ElementFactoryRecycleArgs_put_Parent(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementFactoryRecycleArgs_put_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11056,7 +11056,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ElementFactoryRecycleArgs_get_Element(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs* self, void* /*unused*/) noexcept
+    static PyObject* ElementFactoryRecycleArgs_get_Element(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11082,7 +11082,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ElementFactoryRecycleArgs_put_Element(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementFactoryRecycleArgs_put_Element(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11163,7 +11163,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ElementFactoryRecycleArgs = {
         "winrt._winrt_windows_ui_xaml.ElementFactoryRecycleArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ElementFactoryRecycleArgs};
@@ -11696,7 +11696,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_ExceptionRoutedEventArgs(py::wrapper::Windows::UI::Xaml::ExceptionRoutedEventArgs* self) noexcept
+    static void _dealloc_ExceptionRoutedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11704,7 +11704,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ExceptionRoutedEventArgs_get_ErrorMessage(py::wrapper::Windows::UI::Xaml::ExceptionRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ExceptionRoutedEventArgs_get_ErrorMessage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11775,7 +11775,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ExceptionRoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml.ExceptionRoutedEventArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::ExceptionRoutedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ExceptionRoutedEventArgs};
@@ -11974,7 +11974,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_FrameworkElement(py::wrapper::Windows::UI::Xaml::FrameworkElement* self) noexcept
+    static void _dealloc_FrameworkElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12027,7 +12027,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_FindName(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
+    static PyObject* FrameworkElement_FindName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12065,7 +12065,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_GetBindingExpression(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
+    static PyObject* FrameworkElement_GetBindingExpression(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12127,7 +12127,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static PyObject* FrameworkElement_SetBinding(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
+    static PyObject* FrameworkElement_SetBinding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12167,7 +12167,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Width(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Width(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12193,7 +12193,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Width(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Width(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12228,7 +12228,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_VerticalAlignment(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_VerticalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12254,7 +12254,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_VerticalAlignment(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_VerticalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12289,7 +12289,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Tag(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12315,7 +12315,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Tag(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12350,7 +12350,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Style(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Style(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12376,7 +12376,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Style(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Style(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12411,7 +12411,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Resources(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12437,7 +12437,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Resources(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12472,7 +12472,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Name(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Name(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12498,7 +12498,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Name(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Name(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12533,7 +12533,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_MinWidth(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_MinWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12559,7 +12559,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_MinWidth(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_MinWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12594,7 +12594,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_MinHeight(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_MinHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12620,7 +12620,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_MinHeight(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_MinHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12655,7 +12655,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_MaxWidth(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_MaxWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12681,7 +12681,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_MaxWidth(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_MaxWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12716,7 +12716,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_MaxHeight(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_MaxHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12742,7 +12742,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_MaxHeight(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_MaxHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12777,7 +12777,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Margin(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Margin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12803,7 +12803,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Margin(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Margin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12838,7 +12838,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Language(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Language(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12864,7 +12864,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Language(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Language(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12899,7 +12899,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_HorizontalAlignment(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_HorizontalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12925,7 +12925,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_HorizontalAlignment(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_HorizontalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12960,7 +12960,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Height(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Height(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12986,7 +12986,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_Height(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_Height(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13021,7 +13021,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FlowDirection(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FlowDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13047,7 +13047,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FlowDirection(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FlowDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13082,7 +13082,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_DataContext(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_DataContext(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13108,7 +13108,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_DataContext(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_DataContext(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13143,7 +13143,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_ActualHeight(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_ActualHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13169,7 +13169,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_ActualWidth(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_ActualWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13195,7 +13195,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_BaseUri(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_BaseUri(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13221,7 +13221,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Parent(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13247,7 +13247,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_Triggers(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_Triggers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13273,7 +13273,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_RequestedTheme(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13299,7 +13299,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_RequestedTheme(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13334,7 +13334,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FocusVisualSecondaryThickness(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FocusVisualSecondaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13360,7 +13360,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FocusVisualSecondaryThickness(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FocusVisualSecondaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13395,7 +13395,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FocusVisualSecondaryBrush(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FocusVisualSecondaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13421,7 +13421,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FocusVisualSecondaryBrush(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FocusVisualSecondaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13456,7 +13456,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FocusVisualPrimaryThickness(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FocusVisualPrimaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13482,7 +13482,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FocusVisualPrimaryThickness(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FocusVisualPrimaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13517,7 +13517,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FocusVisualPrimaryBrush(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FocusVisualPrimaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13543,7 +13543,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FocusVisualPrimaryBrush(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FocusVisualPrimaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13578,7 +13578,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_FocusVisualMargin(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_FocusVisualMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13604,7 +13604,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_FocusVisualMargin(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_FocusVisualMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13639,7 +13639,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13665,7 +13665,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13700,7 +13700,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13726,7 +13726,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int FrameworkElement_put_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FrameworkElement_put_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13761,7 +13761,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_ActualTheme(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_ActualTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13787,7 +13787,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_get_IsLoaded(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
+    static PyObject* FrameworkElement_get_IsLoaded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14489,7 +14489,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_LayoutUpdated(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_LayoutUpdated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14517,7 +14517,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_LayoutUpdated(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_LayoutUpdated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14546,7 +14546,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_Loaded(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_Loaded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14574,7 +14574,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_Loaded(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_Loaded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14603,7 +14603,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_SizeChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_SizeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14631,7 +14631,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_SizeChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_SizeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14660,7 +14660,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_Unloaded(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_Unloaded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14688,7 +14688,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_Unloaded(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_Unloaded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14717,7 +14717,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_DataContextChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_DataContextChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14745,7 +14745,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_DataContextChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_DataContextChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14774,7 +14774,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_Loading(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_Loading(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14802,7 +14802,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_Loading(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_Loading(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14831,7 +14831,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_ActualThemeChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_ActualThemeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14859,7 +14859,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_ActualThemeChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_ActualThemeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14888,7 +14888,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_add_EffectiveViewportChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_add_EffectiveViewportChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14916,7 +14916,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_remove_EffectiveViewportChanged(py::wrapper::Windows::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
+    static PyObject* FrameworkElement_remove_EffectiveViewportChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -15044,7 +15044,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_FrameworkElement = {
         "winrt._winrt_windows_ui_xaml.FrameworkElement",
-        sizeof(py::wrapper::Windows::UI::Xaml::FrameworkElement),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameworkElement};
@@ -15130,7 +15130,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_FrameworkTemplate(py::wrapper::Windows::UI::Xaml::FrameworkTemplate* self) noexcept
+    static void _dealloc_FrameworkTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15182,7 +15182,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_FrameworkTemplate = {
         "winrt._winrt_windows_ui_xaml.FrameworkTemplate",
-        sizeof(py::wrapper::Windows::UI::Xaml::FrameworkTemplate),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameworkTemplate};
@@ -16253,8 +16253,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::PropertyMetadata*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::PropertyMetadata*>(self.get())->obj = winrt::make<PyWinrtPropertyMetadata>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPropertyMetadata>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16283,8 +16283,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::PropertyMetadata*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::PropertyMetadata*>(self.get())->obj = winrt::make<PyWinrtPropertyMetadata>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPropertyMetadata>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -16305,7 +16305,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_PropertyMetadata(py::wrapper::Windows::UI::Xaml::PropertyMetadata* self) noexcept
+    static void _dealloc_PropertyMetadata(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16467,7 +16467,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* PropertyMetadata_get_CreateDefaultValueCallback(py::wrapper::Windows::UI::Xaml::PropertyMetadata* self, void* /*unused*/) noexcept
+    static PyObject* PropertyMetadata_get_CreateDefaultValueCallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16493,7 +16493,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* PropertyMetadata_get_DefaultValue(py::wrapper::Windows::UI::Xaml::PropertyMetadata* self, void* /*unused*/) noexcept
+    static PyObject* PropertyMetadata_get_DefaultValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16565,7 +16565,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_PropertyMetadata = {
         "winrt._winrt_windows_ui_xaml.PropertyMetadata",
-        sizeof(py::wrapper::Windows::UI::Xaml::PropertyMetadata),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PropertyMetadata};
@@ -17402,8 +17402,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::ResourceDictionary*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::ResourceDictionary*>(self.get())->obj = winrt::make<PyWinrtResourceDictionary>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtResourceDictionary>(self.get());
 
                     return self.detach();
                 }
@@ -17424,7 +17424,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self) noexcept
+    static void _dealloc_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17432,7 +17432,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ResourceDictionary_Clear(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_Clear(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17469,7 +17469,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_First(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_First(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17505,7 +17505,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_GetView(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_GetView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17541,7 +17541,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_HasKey(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_HasKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17579,7 +17579,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_Insert(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_Insert(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17618,7 +17618,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_Lookup(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_Lookup(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17656,7 +17656,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_Remove(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* args) noexcept
+    static PyObject* ResourceDictionary_Remove(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -17695,7 +17695,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_get_Size(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
+    static PyObject* ResourceDictionary_get_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17721,7 +17721,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_get_Source(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
+    static PyObject* ResourceDictionary_get_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17747,7 +17747,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ResourceDictionary_put_Source(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ResourceDictionary_put_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17782,7 +17782,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_get_MergedDictionaries(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
+    static PyObject* ResourceDictionary_get_MergedDictionaries(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17808,7 +17808,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ResourceDictionary_get_ThemeDictionaries(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
+    static PyObject* ResourceDictionary_get_ThemeDictionaries(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17858,7 +17858,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _iterator_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self) noexcept
+    static PyObject* _iterator_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
@@ -17878,11 +17878,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int _map_contains_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* key) noexcept
+    static int _map_contains_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* key) noexcept
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::Windows::Foundation::IInspectable>(key)));
+            return static_cast<int>(self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().HasKey(py::convert_to<winrt::Windows::Foundation::IInspectable>(key)));
         }
         catch (...)
         {
@@ -17891,11 +17891,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static Py_ssize_t _map_length_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self) noexcept
+    static Py_ssize_t _map_length_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().Size());
         }
         catch (...)
         {
@@ -17904,17 +17904,17 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _map_subscript_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* key) noexcept
+    static PyObject* _map_subscript_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* key) noexcept
     {
         try
         {
             auto _key = py::convert_to<winrt::Windows::Foundation::IInspectable>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().TryLookup(_key);
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    if (self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().HasKey(_key))
                     {
                         Py_RETURN_NONE;
                     }
@@ -17933,14 +17933,14 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int _map_assign_ResourceDictionary(py::wrapper::Windows::UI::Xaml::ResourceDictionary* self, PyObject* key, PyObject* value) noexcept
+    static int _map_assign_ResourceDictionary(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* key, PyObject* value) noexcept
     {
         try
         {
             auto _key = py::convert_to<winrt::Windows::Foundation::IInspectable>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                if (!self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().TryRemove(_key)) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -17948,7 +17948,7 @@ namespace py::cpp::Windows::UI::Xaml
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            self->obj.try_as<winrt::Windows::UI::Xaml::ResourceDictionary>().Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
 
             return 0;
         }
@@ -17995,7 +17995,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ResourceDictionary = {
         "winrt._winrt_windows_ui_xaml.ResourceDictionary",
-        sizeof(py::wrapper::Windows::UI::Xaml::ResourceDictionary),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ResourceDictionary};
@@ -18142,8 +18142,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::RoutedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::RoutedEventArgs*>(self.get())->obj = winrt::make<PyWinrtRoutedEventArgs>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRoutedEventArgs>(self.get());
 
                     return self.detach();
                 }
@@ -18164,7 +18164,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_RoutedEventArgs(py::wrapper::Windows::UI::Xaml::RoutedEventArgs* self) noexcept
+    static void _dealloc_RoutedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18172,7 +18172,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* RoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::RoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* RoutedEventArgs_get_OriginalSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18243,7 +18243,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_RoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml.RoutedEventArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::RoutedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RoutedEventArgs};
@@ -18324,8 +18324,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::ScalarTransition*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::ScalarTransition*>(self.get())->obj = winrt::make<PyWinrtScalarTransition>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScalarTransition>(self.get());
 
                     return self.detach();
                 }
@@ -18346,7 +18346,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_ScalarTransition(py::wrapper::Windows::UI::Xaml::ScalarTransition* self) noexcept
+    static void _dealloc_ScalarTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18354,7 +18354,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* ScalarTransition_get_Duration(py::wrapper::Windows::UI::Xaml::ScalarTransition* self, void* /*unused*/) noexcept
+    static PyObject* ScalarTransition_get_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18380,7 +18380,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int ScalarTransition_put_Duration(py::wrapper::Windows::UI::Xaml::ScalarTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScalarTransition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18460,7 +18460,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_ScalarTransition = {
         "winrt._winrt_windows_ui_xaml.ScalarTransition",
-        sizeof(py::wrapper::Windows::UI::Xaml::ScalarTransition),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScalarTransition};
@@ -18789,7 +18789,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_SetterBase(py::wrapper::Windows::UI::Xaml::SetterBase* self) noexcept
+    static void _dealloc_SetterBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18797,7 +18797,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* SetterBase_get_IsSealed(py::wrapper::Windows::UI::Xaml::SetterBase* self, void* /*unused*/) noexcept
+    static PyObject* SetterBase_get_IsSealed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18868,7 +18868,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_SetterBase = {
         "winrt._winrt_windows_ui_xaml.SetterBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::SetterBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SetterBase};
@@ -20237,7 +20237,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_StateTriggerBase(py::wrapper::Windows::UI::Xaml::StateTriggerBase* self) noexcept
+    static void _dealloc_StateTriggerBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20296,7 +20296,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_StateTriggerBase = {
         "winrt._winrt_windows_ui_xaml.StateTriggerBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::StateTriggerBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_StateTriggerBase};
@@ -21053,7 +21053,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_TriggerAction(py::wrapper::Windows::UI::Xaml::TriggerAction* self) noexcept
+    static void _dealloc_TriggerAction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21105,7 +21105,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_TriggerAction = {
         "winrt._winrt_windows_ui_xaml.TriggerAction",
-        sizeof(py::wrapper::Windows::UI::Xaml::TriggerAction),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TriggerAction};
@@ -21868,7 +21868,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_TriggerBase(py::wrapper::Windows::UI::Xaml::TriggerBase* self) noexcept
+    static void _dealloc_TriggerBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21920,7 +21920,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_TriggerBase = {
         "winrt._winrt_windows_ui_xaml.TriggerBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::TriggerBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TriggerBase};
@@ -22661,7 +22661,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static void _dealloc_UIElement(py::wrapper::Windows::UI::Xaml::UIElement* self) noexcept
+    static void _dealloc_UIElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22669,7 +22669,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* UIElement_AddHandler(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_AddHandler(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22710,7 +22710,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_Arrange(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_Arrange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22749,7 +22749,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_CancelDirectManipulations(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_CancelDirectManipulations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22785,7 +22785,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_CapturePointer(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_CapturePointer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22835,7 +22835,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static PyObject* UIElement_InvalidateArrange(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_InvalidateArrange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22872,7 +22872,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_InvalidateMeasure(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_InvalidateMeasure(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22909,7 +22909,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_Measure(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_Measure(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22978,7 +22978,7 @@ namespace py::cpp::Windows::UI::Xaml
         return nullptr;
     }
 
-    static PyObject* UIElement_PopulatePropertyInfo(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23063,7 +23063,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_ReleasePointerCapture(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_ReleasePointerCapture(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23102,7 +23102,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_ReleasePointerCaptures(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_ReleasePointerCaptures(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23139,7 +23139,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_RemoveHandler(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_RemoveHandler(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23179,7 +23179,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_StartAnimation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_StartAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23218,7 +23218,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_StartBringIntoView(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_StartBringIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23255,7 +23255,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_StartBringIntoViewWithOptions(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_StartBringIntoViewWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23294,7 +23294,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_StartDragAsync(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_StartDragAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23332,7 +23332,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_StopAnimation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_StopAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23371,7 +23371,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_TransformToVisual(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_TransformToVisual(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23409,7 +23409,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_TryInvokeKeyboardAccelerator(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_TryInvokeKeyboardAccelerator(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23486,7 +23486,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_UpdateLayout(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    static PyObject* UIElement_UpdateLayout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -23523,7 +23523,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Transitions(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Transitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23549,7 +23549,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Transitions(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Transitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23584,7 +23584,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Projection(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Projection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23610,7 +23610,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Projection(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Projection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23645,7 +23645,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_RenderTransformOrigin(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_RenderTransformOrigin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23671,7 +23671,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_RenderTransformOrigin(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_RenderTransformOrigin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23706,7 +23706,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Opacity(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23732,7 +23732,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Opacity(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23767,7 +23767,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ManipulationMode(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ManipulationMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23793,7 +23793,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_ManipulationMode(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_ManipulationMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23828,7 +23828,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23854,7 +23854,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23889,7 +23889,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsRightTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsRightTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23915,7 +23915,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsRightTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsRightTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23950,7 +23950,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsHoldingEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsHoldingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23976,7 +23976,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsHoldingEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsHoldingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24011,7 +24011,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsHitTestVisible(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24037,7 +24037,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsHitTestVisible(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24072,7 +24072,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsDoubleTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsDoubleTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24098,7 +24098,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsDoubleTapEnabled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsDoubleTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24133,7 +24133,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_AllowDrop(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_AllowDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24159,7 +24159,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_AllowDrop(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_AllowDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24194,7 +24194,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Clip(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24220,7 +24220,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Clip(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24255,7 +24255,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_CacheMode(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_CacheMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24281,7 +24281,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_CacheMode(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_CacheMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24316,7 +24316,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_UseLayoutRounding(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_UseLayoutRounding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24342,7 +24342,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_UseLayoutRounding(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_UseLayoutRounding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24377,7 +24377,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_RenderTransform(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_RenderTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24403,7 +24403,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_RenderTransform(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_RenderTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24438,7 +24438,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Visibility(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Visibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24464,7 +24464,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Visibility(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Visibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24499,7 +24499,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_DesiredSize(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_DesiredSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24525,7 +24525,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_PointerCaptures(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_PointerCaptures(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24551,7 +24551,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_RenderSize(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_RenderSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24577,7 +24577,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XamlRoot(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24603,7 +24603,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XamlRoot(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24638,7 +24638,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Shadow(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Shadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24664,7 +24664,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Shadow(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Shadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24699,7 +24699,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ActualOffset(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ActualOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24725,7 +24725,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ActualSize(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24751,7 +24751,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_UIContext(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_UIContext(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24777,7 +24777,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_CompositeMode(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24803,7 +24803,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_CompositeMode(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24838,7 +24838,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Transform3D(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Transform3D(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24864,7 +24864,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Transform3D(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Transform3D(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24899,7 +24899,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_CanDrag(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_CanDrag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24925,7 +24925,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_CanDrag(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_CanDrag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -24960,7 +24960,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_IsAccessKeyScope(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_IsAccessKeyScope(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -24986,7 +24986,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_IsAccessKeyScope(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_IsAccessKeyScope(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25021,7 +25021,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ExitDisplayModeOnAccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25047,7 +25047,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_ExitDisplayModeOnAccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25082,7 +25082,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ContextFlyout(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ContextFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25108,7 +25108,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_ContextFlyout(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_ContextFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25143,7 +25143,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_AccessKeyScopeOwner(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_AccessKeyScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25169,7 +25169,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_AccessKeyScopeOwner(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_AccessKeyScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25204,7 +25204,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_AccessKey(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25230,7 +25230,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_AccessKey(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25265,7 +25265,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyTipHorizontalOffset(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyTipHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25291,7 +25291,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyTipHorizontalOffset(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyTipHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25326,7 +25326,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25352,7 +25352,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25387,7 +25387,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XYFocusRightNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XYFocusRightNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25413,7 +25413,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XYFocusRightNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XYFocusRightNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25448,7 +25448,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XYFocusKeyboardNavigation(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XYFocusKeyboardNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25474,7 +25474,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XYFocusKeyboardNavigation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XYFocusKeyboardNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25509,7 +25509,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XYFocusDownNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XYFocusDownNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25535,7 +25535,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XYFocusDownNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XYFocusDownNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25570,7 +25570,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_TabFocusNavigation(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_TabFocusNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25596,7 +25596,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_TabFocusNavigation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_TabFocusNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25631,7 +25631,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyTipVerticalOffset(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyTipVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25657,7 +25657,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyTipVerticalOffset(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyTipVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25692,7 +25692,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XYFocusUpNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XYFocusUpNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25718,7 +25718,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XYFocusUpNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XYFocusUpNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25753,7 +25753,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyTipPlacementMode(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyTipPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25779,7 +25779,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyTipPlacementMode(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyTipPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25814,7 +25814,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_XYFocusLeftNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_XYFocusLeftNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25840,7 +25840,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_XYFocusLeftNavigationStrategy(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_XYFocusLeftNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25875,7 +25875,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Lights(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Lights(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25901,7 +25901,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyboardAccelerators(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25927,7 +25927,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyboardAcceleratorPlacementTarget(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyboardAcceleratorPlacementTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25953,7 +25953,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyboardAcceleratorPlacementTarget(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyboardAcceleratorPlacementTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -25988,7 +25988,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyboardAcceleratorPlacementMode(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyboardAcceleratorPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26014,7 +26014,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyboardAcceleratorPlacementMode(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyboardAcceleratorPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26049,7 +26049,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_KeyTipTarget(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_KeyTipTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26075,7 +26075,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_KeyTipTarget(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_KeyTipTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26110,7 +26110,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_TranslationTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_TranslationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26136,7 +26136,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_TranslationTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_TranslationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26171,7 +26171,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_OpacityTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_OpacityTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26197,7 +26197,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_OpacityTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_OpacityTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26232,7 +26232,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_TransformMatrix(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26258,7 +26258,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_TransformMatrix(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26293,7 +26293,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ScaleTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_ScaleTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26319,7 +26319,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_ScaleTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_ScaleTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26354,7 +26354,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Scale(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26380,7 +26380,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Scale(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26415,7 +26415,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_RotationTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_RotationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26441,7 +26441,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_RotationTransition(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_RotationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26476,7 +26476,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_RotationAxis(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26502,7 +26502,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_RotationAxis(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26537,7 +26537,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Rotation(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Rotation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26563,7 +26563,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Rotation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Rotation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26598,7 +26598,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_Translation(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_Translation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26624,7 +26624,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_Translation(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_Translation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26659,7 +26659,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_CenterPoint(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26685,7 +26685,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_CenterPoint(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26720,7 +26720,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_CanBeScrollAnchor(py::wrapper::Windows::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
+    static PyObject* UIElement_get_CanBeScrollAnchor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26746,7 +26746,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int UIElement_put_CanBeScrollAnchor(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int UIElement_put_CanBeScrollAnchor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -28653,7 +28653,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DoubleTapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DoubleTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28681,7 +28681,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DoubleTapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DoubleTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28710,7 +28710,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DragEnter(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DragEnter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28738,7 +28738,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DragEnter(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DragEnter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28767,7 +28767,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DragLeave(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DragLeave(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28795,7 +28795,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DragLeave(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DragLeave(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28824,7 +28824,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DragOver(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DragOver(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28852,7 +28852,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DragOver(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DragOver(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28881,7 +28881,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_Drop(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_Drop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28909,7 +28909,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_Drop(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_Drop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28938,7 +28938,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_GotFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28966,7 +28966,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_GotFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -28995,7 +28995,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_Holding(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_Holding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29023,7 +29023,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_Holding(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_Holding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29052,7 +29052,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_KeyDown(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_KeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29080,7 +29080,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_KeyDown(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_KeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29109,7 +29109,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_KeyUp(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_KeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29137,7 +29137,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_KeyUp(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_KeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29166,7 +29166,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_LostFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_LostFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29194,7 +29194,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_LostFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_LostFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29223,7 +29223,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ManipulationCompleted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ManipulationCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29251,7 +29251,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ManipulationCompleted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ManipulationCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29280,7 +29280,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ManipulationDelta(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ManipulationDelta(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29308,7 +29308,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ManipulationDelta(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ManipulationDelta(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29337,7 +29337,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ManipulationInertiaStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ManipulationInertiaStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29365,7 +29365,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ManipulationInertiaStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ManipulationInertiaStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29394,7 +29394,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ManipulationStarted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ManipulationStarted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29422,7 +29422,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ManipulationStarted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ManipulationStarted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29451,7 +29451,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ManipulationStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ManipulationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29479,7 +29479,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ManipulationStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ManipulationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29508,7 +29508,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerCanceled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerCanceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29536,7 +29536,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerCanceled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerCanceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29565,7 +29565,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerCaptureLost(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerCaptureLost(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29593,7 +29593,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerCaptureLost(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerCaptureLost(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29622,7 +29622,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerEntered(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerEntered(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29650,7 +29650,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerEntered(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerEntered(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29679,7 +29679,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerExited(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerExited(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29707,7 +29707,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerExited(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerExited(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29736,7 +29736,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerMoved(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerMoved(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29764,7 +29764,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerMoved(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerMoved(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29793,7 +29793,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerPressed(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29821,7 +29821,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerPressed(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29850,7 +29850,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerReleased(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerReleased(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29878,7 +29878,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerReleased(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerReleased(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29907,7 +29907,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PointerWheelChanged(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PointerWheelChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29935,7 +29935,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PointerWheelChanged(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PointerWheelChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29964,7 +29964,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_RightTapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_RightTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -29992,7 +29992,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_RightTapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_RightTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30021,7 +30021,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_Tapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_Tapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30049,7 +30049,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_Tapped(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_Tapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30078,7 +30078,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DragStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DragStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30106,7 +30106,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DragStarting(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DragStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30135,7 +30135,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_DropCompleted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_DropCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30163,7 +30163,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_DropCompleted(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_DropCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30192,7 +30192,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_AccessKeyDisplayDismissed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30220,7 +30220,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_AccessKeyDisplayDismissed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30249,7 +30249,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_AccessKeyDisplayRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30277,7 +30277,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_AccessKeyDisplayRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30306,7 +30306,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_AccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30334,7 +30334,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_AccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30363,7 +30363,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ContextCanceled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ContextCanceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30391,7 +30391,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ContextCanceled(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ContextCanceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30420,7 +30420,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ContextRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ContextRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30448,7 +30448,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ContextRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ContextRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30477,7 +30477,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_GettingFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_GettingFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30505,7 +30505,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_GettingFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_GettingFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30534,7 +30534,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_LosingFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_LosingFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30562,7 +30562,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_LosingFocus(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_LosingFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30591,7 +30591,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_NoFocusCandidateFound(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_NoFocusCandidateFound(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30619,7 +30619,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_NoFocusCandidateFound(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_NoFocusCandidateFound(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30648,7 +30648,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_CharacterReceived(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_CharacterReceived(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30676,7 +30676,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_CharacterReceived(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_CharacterReceived(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30705,7 +30705,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PreviewKeyDown(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PreviewKeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30733,7 +30733,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PreviewKeyDown(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PreviewKeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30762,7 +30762,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_PreviewKeyUp(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_PreviewKeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30790,7 +30790,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_PreviewKeyUp(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_PreviewKeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30819,7 +30819,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_ProcessKeyboardAccelerators(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_ProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30847,7 +30847,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_ProcessKeyboardAccelerators(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_ProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30876,7 +30876,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_add_BringIntoViewRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_add_BringIntoViewRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -30904,7 +30904,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_remove_BringIntoViewRequested(py::wrapper::Windows::UI::Xaml::UIElement* self, PyObject* arg) noexcept
+    static PyObject* UIElement_remove_BringIntoViewRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31142,7 +31142,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_UIElement = {
         "winrt._winrt_windows_ui_xaml.UIElement",
-        sizeof(py::wrapper::Windows::UI::Xaml::UIElement),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_UIElement};
@@ -31297,8 +31297,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::UIElementWeakCollection*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::UIElementWeakCollection*>(self.get())->obj = winrt::make<PyWinrtUIElementWeakCollection>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtUIElementWeakCollection>(self.get());
 
                     return self.detach();
                 }
@@ -31319,7 +31319,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self) noexcept
+    static void _dealloc_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -31327,7 +31327,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* UIElementWeakCollection_Append(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_Append(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31366,7 +31366,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_Clear(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_Clear(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31403,7 +31403,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_First(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_First(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31439,7 +31439,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_GetAt(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_GetAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31477,7 +31477,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_GetMany(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_GetMany(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31516,7 +31516,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_GetView(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_GetView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31552,7 +31552,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_IndexOf(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_IndexOf(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31603,7 +31603,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_InsertAt(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_InsertAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31643,7 +31643,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_RemoveAt(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_RemoveAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31682,7 +31682,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_RemoveAtEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31719,7 +31719,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_ReplaceAll(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_ReplaceAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31758,7 +31758,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_SetAt(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* args) noexcept
+    static PyObject* UIElementWeakCollection_SetAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -31798,7 +31798,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElementWeakCollection_get_Size(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, void* /*unused*/) noexcept
+    static PyObject* UIElementWeakCollection_get_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -31848,7 +31848,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _iterator_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self) noexcept
+    static PyObject* _iterator_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
@@ -31861,11 +31861,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static Py_ssize_t _seq_length_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self) noexcept
+    static Py_ssize_t _seq_length_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         try
         {
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().Size());
         }
         catch (...)
         {
@@ -31874,11 +31874,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _seq_item_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, Py_ssize_t i) noexcept
+    static PyObject* _seq_item_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, Py_ssize_t i) noexcept
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().GetAt(static_cast<uint32_t>(i)));
         }
         catch (...)
         {
@@ -31887,7 +31887,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _seq_subscript_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, PyObject* slice) noexcept
+    static PyObject* _seq_subscript_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* slice) noexcept
     {
         try
         {
@@ -31917,7 +31917,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            if (PySlice_GetIndicesEx(slice, self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().Size(), &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -31930,7 +31930,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             winrt::com_array<winrt::Windows::UI::Xaml::UIElement> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::UIElement>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().GetMany(static_cast<uint32_t>(start), items);
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -31947,17 +31947,17 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int _seq_assign_UIElementWeakCollection(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection* self, Py_ssize_t i, PyObject* value) noexcept
+    static int _seq_assign_UIElementWeakCollection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, Py_ssize_t i, PyObject* value) noexcept
     {
         try
         {
             if (!value)
             {
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::UIElement>(value));
+                self->obj.try_as<winrt::Windows::UI::Xaml::UIElementWeakCollection>().SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::UIElement>(value));
             }
 
             return 0;
@@ -32007,7 +32007,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_UIElementWeakCollection = {
         "winrt._winrt_windows_ui_xaml.UIElementWeakCollection",
-        sizeof(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_UIElementWeakCollection};
@@ -32270,8 +32270,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Vector3Transition*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Vector3Transition*>(self.get())->obj = winrt::make<PyWinrtVector3Transition>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtVector3Transition>(self.get());
 
                     return self.detach();
                 }
@@ -32292,7 +32292,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_Vector3Transition(py::wrapper::Windows::UI::Xaml::Vector3Transition* self) noexcept
+    static void _dealloc_Vector3Transition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32300,7 +32300,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* Vector3Transition_get_Duration(py::wrapper::Windows::UI::Xaml::Vector3Transition* self, void* /*unused*/) noexcept
+    static PyObject* Vector3Transition_get_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32326,7 +32326,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Vector3Transition_put_Duration(py::wrapper::Windows::UI::Xaml::Vector3Transition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector3Transition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32361,7 +32361,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Vector3Transition_get_Components(py::wrapper::Windows::UI::Xaml::Vector3Transition* self, void* /*unused*/) noexcept
+    static PyObject* Vector3Transition_get_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32387,7 +32387,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Vector3Transition_put_Components(py::wrapper::Windows::UI::Xaml::Vector3Transition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Vector3Transition_put_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32468,7 +32468,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_Vector3Transition = {
         "winrt._winrt_windows_ui_xaml.Vector3Transition",
-        sizeof(py::wrapper::Windows::UI::Xaml::Vector3Transition),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Vector3Transition};
@@ -33438,8 +33438,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::VisualStateManager*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::VisualStateManager*>(self.get())->obj = winrt::make<PyWinrtVisualStateManager>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtVisualStateManager>(self.get());
 
                     return self.detach();
                 }
@@ -33460,7 +33460,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_VisualStateManager(py::wrapper::Windows::UI::Xaml::VisualStateManager* self) noexcept
+    static void _dealloc_VisualStateManager(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -33715,7 +33715,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_VisualStateManager = {
         "winrt._winrt_windows_ui_xaml.VisualStateManager",
-        sizeof(py::wrapper::Windows::UI::Xaml::VisualStateManager),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_VisualStateManager};
@@ -33801,8 +33801,8 @@ namespace py::cpp::Windows::UI::Xaml
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::VisualTransition*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::VisualTransition*>(self.get())->obj = winrt::make<PyWinrtVisualTransition>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtVisualTransition>(self.get());
 
                     return self.detach();
                 }
@@ -33823,7 +33823,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static void _dealloc_VisualTransition(py::wrapper::Windows::UI::Xaml::VisualTransition* self) noexcept
+    static void _dealloc_VisualTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -33831,7 +33831,7 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* VisualTransition_get_To(py::wrapper::Windows::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
+    static PyObject* VisualTransition_get_To(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33857,7 +33857,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int VisualTransition_put_To(py::wrapper::Windows::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualTransition_put_To(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33892,7 +33892,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* VisualTransition_get_Storyboard(py::wrapper::Windows::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
+    static PyObject* VisualTransition_get_Storyboard(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33918,7 +33918,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int VisualTransition_put_Storyboard(py::wrapper::Windows::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualTransition_put_Storyboard(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33953,7 +33953,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* VisualTransition_get_GeneratedEasingFunction(py::wrapper::Windows::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
+    static PyObject* VisualTransition_get_GeneratedEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33979,7 +33979,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int VisualTransition_put_GeneratedEasingFunction(py::wrapper::Windows::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualTransition_put_GeneratedEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -34014,7 +34014,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* VisualTransition_get_GeneratedDuration(py::wrapper::Windows::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
+    static PyObject* VisualTransition_get_GeneratedDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -34040,7 +34040,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int VisualTransition_put_GeneratedDuration(py::wrapper::Windows::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualTransition_put_GeneratedDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -34075,7 +34075,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* VisualTransition_get_From(py::wrapper::Windows::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
+    static PyObject* VisualTransition_get_From(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -34101,7 +34101,7 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int VisualTransition_put_From(py::wrapper::Windows::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
+    static int VisualTransition_put_From(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -34185,7 +34185,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyType_Spec type_spec_VisualTransition = {
         "winrt._winrt_windows_ui_xaml.VisualTransition",
-        sizeof(py::wrapper::Windows::UI::Xaml::VisualTransition),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_VisualTransition};

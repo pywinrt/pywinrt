@@ -55,8 +55,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarButton*>(self.get())->obj = winrt::make<PyWinrtAppBarButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarButton>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_AppBarButton(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self) noexcept
+    static void _dealloc_AppBarButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* AppBarButton_get_Label(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -111,7 +111,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_Label(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_Icon(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_Icon(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_LabelPosition(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_LabelPosition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -233,7 +233,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_LabelPosition(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_LabelPosition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_KeyboardAcceleratorTextOverride(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_KeyboardAcceleratorTextOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_KeyboardAcceleratorTextOverride(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_KeyboardAcceleratorTextOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_IsCompact(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_IsCompact(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -381,7 +381,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_IsCompact(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_IsCompact(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_DynamicOverflowOrder(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_DynamicOverflowOrder(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarButton_put_DynamicOverflowOrder(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarButton_put_DynamicOverflowOrder(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -477,7 +477,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarButton_get_IsInOverflow(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarButton_get_IsInOverflow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_AppBarButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.AppBarButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::AppBarButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarButton};
@@ -825,8 +825,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton*>(self.get())->obj = winrt::make<PyWinrtAppBarToggleButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarToggleButton>(self.get());
 
                     return self.detach();
                 }
@@ -847,7 +847,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_AppBarToggleButton(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self) noexcept
+    static void _dealloc_AppBarToggleButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -855,7 +855,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* AppBarToggleButton_get_Label(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -881,7 +881,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_Label(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -916,7 +916,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_Icon(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -942,7 +942,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_Icon(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -977,7 +977,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_LabelPosition(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_LabelPosition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_LabelPosition(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_LabelPosition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_KeyboardAcceleratorTextOverride(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_KeyboardAcceleratorTextOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_KeyboardAcceleratorTextOverride(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_KeyboardAcceleratorTextOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1099,7 +1099,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1125,7 +1125,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_IsCompact(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_IsCompact(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1151,7 +1151,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_IsCompact(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_IsCompact(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1186,7 +1186,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_DynamicOverflowOrder(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_DynamicOverflowOrder(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int AppBarToggleButton_put_DynamicOverflowOrder(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int AppBarToggleButton_put_DynamicOverflowOrder(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1247,7 +1247,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBarToggleButton_get_IsInOverflow(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* AppBarToggleButton_get_IsInOverflow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1507,7 +1507,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_AppBarToggleButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.AppBarToggleButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::AppBarToggleButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarToggleButton};
@@ -1595,8 +1595,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Button*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Button*>(self.get())->obj = winrt::make<PyWinrtButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtButton>(self.get());
 
                     return self.detach();
                 }
@@ -1617,7 +1617,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_Button(py::wrapper::Windows::UI::Xaml::Controls::Button* self) noexcept
+    static void _dealloc_Button(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* Button_get_Flyout(py::wrapper::Windows::UI::Xaml::Controls::Button* self, void* /*unused*/) noexcept
+    static PyObject* Button_get_Flyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1651,7 +1651,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Button_put_Flyout(py::wrapper::Windows::UI::Xaml::Controls::Button* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Button_put_Flyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1757,7 +1757,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_Button = {
         "winrt._winrt_windows_ui_xaml_controls_2.Button",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Button),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Button};
@@ -1839,8 +1839,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CheckBox*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CheckBox*>(self.get())->obj = winrt::make<PyWinrtCheckBox>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCheckBox>(self.get());
 
                     return self.detach();
                 }
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_CheckBox(py::wrapper::Windows::UI::Xaml::Controls::CheckBox* self) noexcept
+    static void _dealloc_CheckBox(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1913,7 +1913,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_CheckBox = {
         "winrt._winrt_windows_ui_xaml_controls_2.CheckBox",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::CheckBox),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CheckBox};
@@ -2058,8 +2058,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBox*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBox*>(self.get())->obj = winrt::make<PyWinrtComboBox>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBox>(self.get());
 
                     return self.detach();
                 }
@@ -2080,7 +2080,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ComboBox(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self) noexcept
+    static void _dealloc_ComboBox(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -2100,7 +2100,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static PyObject* ComboBox_get_MaxDropDownHeight(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_MaxDropDownHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_MaxDropDownHeight(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_MaxDropDownHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2161,7 +2161,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_IsEditable(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_IsEditable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2187,7 +2187,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_IsEditable(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_IsEditable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2222,7 +2222,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_IsDropDownOpen(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_IsDropDownOpen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_IsDropDownOpen(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_IsDropDownOpen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2283,7 +2283,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_IsSelectionBoxHighlighted(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_IsSelectionBoxHighlighted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2309,7 +2309,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_SelectionBoxItem(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_SelectionBoxItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2335,7 +2335,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_SelectionBoxItemTemplate(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_SelectionBoxItemTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2361,7 +2361,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2387,7 +2387,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_PlaceholderText(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_PlaceholderText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2413,7 +2413,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_PlaceholderText(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_PlaceholderText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2448,7 +2448,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2474,7 +2474,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2509,7 +2509,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_Header(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2535,7 +2535,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_Header(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2570,7 +2570,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_LightDismissOverlayMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2596,7 +2596,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_LightDismissOverlayMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2631,7 +2631,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_IsTextSearchEnabled(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_IsTextSearchEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2657,7 +2657,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_IsTextSearchEnabled(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_IsTextSearchEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2692,7 +2692,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_SelectionChangedTrigger(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_SelectionChangedTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2718,7 +2718,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_SelectionChangedTrigger(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_SelectionChangedTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2753,7 +2753,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_PlaceholderForeground(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_PlaceholderForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2779,7 +2779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_PlaceholderForeground(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_PlaceholderForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2814,7 +2814,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_TextBoxStyle(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_TextBoxStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2840,7 +2840,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_TextBoxStyle(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_TextBoxStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2875,7 +2875,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_Text(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_Text(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2901,7 +2901,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_Text(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_Text(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2936,7 +2936,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_get_Description(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, void* /*unused*/) noexcept
+    static PyObject* ComboBox_get_Description(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2962,7 +2962,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ComboBox_put_Description(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ComboBox_put_Description(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3335,7 +3335,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_add_DropDownClosed(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_add_DropDownClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3363,7 +3363,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_remove_DropDownClosed(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_remove_DropDownClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3392,7 +3392,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_add_DropDownOpened(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_add_DropDownOpened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3420,7 +3420,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_remove_DropDownOpened(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_remove_DropDownOpened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3449,7 +3449,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_add_TextSubmitted(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_add_TextSubmitted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3477,7 +3477,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_remove_TextSubmitted(py::wrapper::Windows::UI::Xaml::Controls::ComboBox* self, PyObject* arg) noexcept
+    static PyObject* ComboBox_remove_TextSubmitted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3575,7 +3575,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ComboBox = {
         "winrt._winrt_windows_ui_xaml_controls_2.ComboBox",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ComboBox),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBox};
@@ -3669,8 +3669,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBoxItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ComboBoxItem*>(self.get())->obj = winrt::make<PyWinrtComboBoxItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBoxItem>(self.get());
 
                     return self.detach();
                 }
@@ -3691,7 +3691,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ComboBoxItem(py::wrapper::Windows::UI::Xaml::Controls::ComboBoxItem* self) noexcept
+    static void _dealloc_ComboBoxItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3743,7 +3743,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ComboBoxItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.ComboBoxItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ComboBoxItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItem};
@@ -3824,8 +3824,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyout>(self.get());
 
                     return self.detach();
                 }
@@ -3846,7 +3846,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_CommandBarFlyout(py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout* self) noexcept
+    static void _dealloc_CommandBarFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3854,7 +3854,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* CommandBarFlyout_get_PrimaryCommands(py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout* self, void* /*unused*/) noexcept
+    static PyObject* CommandBarFlyout_get_PrimaryCommands(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3880,7 +3880,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* CommandBarFlyout_get_SecondaryCommands(py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout* self, void* /*unused*/) noexcept
+    static PyObject* CommandBarFlyout_get_SecondaryCommands(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3952,7 +3952,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_CommandBarFlyout = {
         "winrt._winrt_windows_ui_xaml_controls_2.CommandBarFlyout",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::CommandBarFlyout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CommandBarFlyout};
@@ -5134,8 +5134,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::DropDownButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::DropDownButton*>(self.get())->obj = winrt::make<PyWinrtDropDownButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDropDownButton>(self.get());
 
                     return self.detach();
                 }
@@ -5156,7 +5156,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_DropDownButton(py::wrapper::Windows::UI::Xaml::Controls::DropDownButton* self) noexcept
+    static void _dealloc_DropDownButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5208,7 +5208,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_DropDownButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.DropDownButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::DropDownButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DropDownButton};
@@ -5289,8 +5289,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipView*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipView*>(self.get())->obj = winrt::make<PyWinrtFlipView>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipView>(self.get());
 
                     return self.detach();
                 }
@@ -5311,7 +5311,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_FlipView(py::wrapper::Windows::UI::Xaml::Controls::FlipView* self) noexcept
+    static void _dealloc_FlipView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5319,7 +5319,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* FlipView_get_UseTouchAnimationsForAllNavigation(py::wrapper::Windows::UI::Xaml::Controls::FlipView* self, void* /*unused*/) noexcept
+    static PyObject* FlipView_get_UseTouchAnimationsForAllNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5345,7 +5345,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int FlipView_put_UseTouchAnimationsForAllNavigation(py::wrapper::Windows::UI::Xaml::Controls::FlipView* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlipView_put_UseTouchAnimationsForAllNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5451,7 +5451,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_FlipView = {
         "winrt._winrt_windows_ui_xaml_controls_2.FlipView",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::FlipView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipView};
@@ -5533,8 +5533,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipViewItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::FlipViewItem*>(self.get())->obj = winrt::make<PyWinrtFlipViewItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipViewItem>(self.get());
 
                     return self.detach();
                 }
@@ -5555,7 +5555,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_FlipViewItem(py::wrapper::Windows::UI::Xaml::Controls::FlipViewItem* self) noexcept
+    static void _dealloc_FlipViewItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5607,7 +5607,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_FlipViewItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.FlipViewItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::FlipViewItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItem};
@@ -5688,8 +5688,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Flyout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Flyout*>(self.get())->obj = winrt::make<PyWinrtFlyout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlyout>(self.get());
 
                     return self.detach();
                 }
@@ -5710,7 +5710,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_Flyout(py::wrapper::Windows::UI::Xaml::Controls::Flyout* self) noexcept
+    static void _dealloc_Flyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5718,7 +5718,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* Flyout_get_FlyoutPresenterStyle(py::wrapper::Windows::UI::Xaml::Controls::Flyout* self, void* /*unused*/) noexcept
+    static PyObject* Flyout_get_FlyoutPresenterStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5744,7 +5744,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Flyout_put_FlyoutPresenterStyle(py::wrapper::Windows::UI::Xaml::Controls::Flyout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Flyout_put_FlyoutPresenterStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5779,7 +5779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Flyout_get_Content(py::wrapper::Windows::UI::Xaml::Controls::Flyout* self, void* /*unused*/) noexcept
+    static PyObject* Flyout_get_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5805,7 +5805,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Flyout_put_Content(py::wrapper::Windows::UI::Xaml::Controls::Flyout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Flyout_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5938,7 +5938,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_Flyout = {
         "winrt._winrt_windows_ui_xaml_controls_2.Flyout",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Flyout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Flyout};
@@ -6021,8 +6021,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridView*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridView*>(self.get())->obj = winrt::make<PyWinrtGridView>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridView>(self.get());
 
                     return self.detach();
                 }
@@ -6043,7 +6043,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_GridView(py::wrapper::Windows::UI::Xaml::Controls::GridView* self) noexcept
+    static void _dealloc_GridView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6095,7 +6095,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_GridView = {
         "winrt._winrt_windows_ui_xaml_controls_2.GridView",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::GridView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridView};
@@ -6176,8 +6176,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridViewItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::GridViewItem*>(self.get())->obj = winrt::make<PyWinrtGridViewItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItem>(self.get());
 
                     return self.detach();
                 }
@@ -6198,7 +6198,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_GridViewItem(py::wrapper::Windows::UI::Xaml::Controls::GridViewItem* self) noexcept
+    static void _dealloc_GridViewItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6206,7 +6206,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* GridViewItem_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::GridViewItem* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItem_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6277,7 +6277,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_GridViewItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.GridViewItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::GridViewItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItem};
@@ -6358,8 +6358,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton*>(self.get())->obj = winrt::make<PyWinrtHyperlinkButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHyperlinkButton>(self.get());
 
                     return self.detach();
                 }
@@ -6380,7 +6380,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_HyperlinkButton(py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton* self) noexcept
+    static void _dealloc_HyperlinkButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6388,7 +6388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* HyperlinkButton_get_NavigateUri(py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton* self, void* /*unused*/) noexcept
+    static PyObject* HyperlinkButton_get_NavigateUri(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6414,7 +6414,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int HyperlinkButton_put_NavigateUri(py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int HyperlinkButton_put_NavigateUri(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6520,7 +6520,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_HyperlinkButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.HyperlinkButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::HyperlinkButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HyperlinkButton};
@@ -6602,8 +6602,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarBallpointPenButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarBallpointPenButton>(self.get());
 
                     return self.detach();
                 }
@@ -6624,7 +6624,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarBallpointPenButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton* self) noexcept
+    static void _dealloc_InkToolbarBallpointPenButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6676,7 +6676,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarBallpointPenButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarBallpointPenButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarBallpointPenButton};
@@ -6757,8 +6757,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomPenButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomPenButton>(self.get());
 
                     return self.detach();
                 }
@@ -6779,7 +6779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarCustomPenButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton* self) noexcept
+    static void _dealloc_InkToolbarCustomPenButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6787,7 +6787,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarCustomPenButton_get_CustomPen(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarCustomPenButton_get_CustomPen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6813,7 +6813,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarCustomPenButton_put_CustomPen(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarCustomPenButton_put_CustomPen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6848,7 +6848,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarCustomPenButton_get_ConfigurationContent(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarCustomPenButton_get_ConfigurationContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6874,7 +6874,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarCustomPenButton_put_ConfigurationContent(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarCustomPenButton_put_ConfigurationContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7007,7 +7007,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarCustomPenButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarCustomPenButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarCustomPenButton};
@@ -7090,8 +7090,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomToggleButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomToggleButton>(self.get());
 
                     return self.detach();
                 }
@@ -7112,7 +7112,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarCustomToggleButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton* self) noexcept
+    static void _dealloc_InkToolbarCustomToggleButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7164,7 +7164,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarCustomToggleButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarCustomToggleButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarCustomToggleButton};
@@ -7245,8 +7245,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomToolButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarCustomToolButton>(self.get());
 
                     return self.detach();
                 }
@@ -7267,7 +7267,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarCustomToolButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton* self) noexcept
+    static void _dealloc_InkToolbarCustomToolButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7275,7 +7275,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarCustomToolButton_get_ConfigurationContent(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarCustomToolButton_get_ConfigurationContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7301,7 +7301,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarCustomToolButton_put_ConfigurationContent(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarCustomToolButton_put_ConfigurationContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7407,7 +7407,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarCustomToolButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarCustomToolButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarCustomToolButton};
@@ -7489,8 +7489,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarEraserButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarEraserButton>(self.get());
 
                     return self.detach();
                 }
@@ -7511,7 +7511,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarEraserButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton* self) noexcept
+    static void _dealloc_InkToolbarEraserButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7519,7 +7519,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarEraserButton_get_IsClearAllVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarEraserButton_get_IsClearAllVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7545,7 +7545,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarEraserButton_put_IsClearAllVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarEraserButton_put_IsClearAllVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7651,7 +7651,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarEraserButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarEraserButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarEraserButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarEraserButton};
@@ -7733,8 +7733,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem*>(self.get())->obj = winrt::make<PyWinrtInkToolbarFlyoutItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarFlyoutItem>(self.get());
 
                     return self.detach();
                 }
@@ -7755,7 +7755,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarFlyoutItem(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self) noexcept
+    static void _dealloc_InkToolbarFlyoutItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7763,7 +7763,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarFlyoutItem_get_Kind(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarFlyoutItem_get_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7789,7 +7789,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarFlyoutItem_put_Kind(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarFlyoutItem_put_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7824,7 +7824,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarFlyoutItem_get_IsChecked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarFlyoutItem_get_IsChecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7850,7 +7850,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarFlyoutItem_put_IsChecked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarFlyoutItem_put_IsChecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7937,7 +7937,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarFlyoutItem_add_Checked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg) noexcept
+    static PyObject* InkToolbarFlyoutItem_add_Checked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7965,7 +7965,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarFlyoutItem_remove_Checked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg) noexcept
+    static PyObject* InkToolbarFlyoutItem_remove_Checked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7994,7 +7994,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarFlyoutItem_add_Unchecked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg) noexcept
+    static PyObject* InkToolbarFlyoutItem_add_Unchecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -8022,7 +8022,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarFlyoutItem_remove_Unchecked(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem* self, PyObject* arg) noexcept
+    static PyObject* InkToolbarFlyoutItem_remove_Unchecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -8101,7 +8101,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarFlyoutItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarFlyoutItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarFlyoutItem};
@@ -8184,8 +8184,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarHighlighterButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarHighlighterButton>(self.get());
 
                     return self.detach();
                 }
@@ -8206,7 +8206,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarHighlighterButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton* self) noexcept
+    static void _dealloc_InkToolbarHighlighterButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8258,7 +8258,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarHighlighterButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarHighlighterButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarHighlighterButton};
@@ -8297,7 +8297,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_InkToolbarMenuButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarMenuButton* self) noexcept
+    static void _dealloc_InkToolbarMenuButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8305,7 +8305,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarMenuButton_get_IsExtensionGlyphShown(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarMenuButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarMenuButton_get_IsExtensionGlyphShown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8331,7 +8331,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarMenuButton_put_IsExtensionGlyphShown(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarMenuButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarMenuButton_put_IsExtensionGlyphShown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8366,7 +8366,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarMenuButton_get_MenuKind(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarMenuButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarMenuButton_get_MenuKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8464,7 +8464,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarMenuButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarMenuButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarMenuButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarMenuButton};
@@ -8504,7 +8504,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_InkToolbarPenButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self) noexcept
+    static void _dealloc_InkToolbarPenButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8512,7 +8512,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarPenButton_get_SelectedStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_SelectedStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8538,7 +8538,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarPenButton_put_SelectedStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarPenButton_put_SelectedStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8573,7 +8573,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarPenButton_get_SelectedBrushIndex(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_SelectedBrushIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8599,7 +8599,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarPenButton_put_SelectedBrushIndex(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarPenButton_put_SelectedBrushIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8634,7 +8634,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarPenButton_get_Palette(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_Palette(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8660,7 +8660,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarPenButton_put_Palette(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarPenButton_put_Palette(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8695,7 +8695,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarPenButton_get_MinStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_MinStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8721,7 +8721,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarPenButton_put_MinStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarPenButton_put_MinStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8756,7 +8756,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarPenButton_get_MaxStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_MaxStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8782,7 +8782,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarPenButton_put_MaxStrokeWidth(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarPenButton_put_MaxStrokeWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8817,7 +8817,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarPenButton_get_SelectedBrush(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarPenButton_get_SelectedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9049,7 +9049,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarPenButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarPenButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPenButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarPenButton};
@@ -9136,8 +9136,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPencilButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPencilButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarPencilButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarPencilButton>(self.get());
 
                     return self.detach();
                 }
@@ -9158,7 +9158,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarPencilButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPencilButton* self) noexcept
+    static void _dealloc_InkToolbarPencilButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9210,7 +9210,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarPencilButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarPencilButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarPencilButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarPencilButton};
@@ -9291,8 +9291,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarRulerButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarRulerButton>(self.get());
 
                     return self.detach();
                 }
@@ -9313,7 +9313,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarRulerButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton* self) noexcept
+    static void _dealloc_InkToolbarRulerButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9321,7 +9321,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarRulerButton_get_Ruler(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarRulerButton_get_Ruler(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9418,7 +9418,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarRulerButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarRulerButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarRulerButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarRulerButton};
@@ -9500,8 +9500,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton*>(self.get())->obj = winrt::make<PyWinrtInkToolbarStencilButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInkToolbarStencilButton>(self.get());
 
                     return self.detach();
                 }
@@ -9522,7 +9522,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_InkToolbarStencilButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self) noexcept
+    static void _dealloc_InkToolbarStencilButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9530,7 +9530,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarStencilButton_get_SelectedStencil(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarStencilButton_get_SelectedStencil(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9556,7 +9556,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarStencilButton_put_SelectedStencil(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarStencilButton_put_SelectedStencil(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9591,7 +9591,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarStencilButton_get_IsRulerItemVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarStencilButton_get_IsRulerItemVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9617,7 +9617,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarStencilButton_put_IsRulerItemVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarStencilButton_put_IsRulerItemVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9652,7 +9652,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarStencilButton_get_IsProtractorItemVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarStencilButton_get_IsProtractorItemVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9678,7 +9678,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarStencilButton_put_IsProtractorItemVisible(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarStencilButton_put_IsProtractorItemVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9713,7 +9713,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarStencilButton_get_Protractor(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarStencilButton_get_Protractor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9739,7 +9739,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarStencilButton_get_Ruler(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarStencilButton_get_Ruler(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9944,7 +9944,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarStencilButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarStencilButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarStencilButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarStencilButton};
@@ -9988,7 +9988,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_InkToolbarToggleButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToggleButton* self) noexcept
+    static void _dealloc_InkToolbarToggleButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9996,7 +9996,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarToggleButton_get_ToggleKind(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarToggleButton_get_ToggleKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10067,7 +10067,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarToggleButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarToggleButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToggleButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarToggleButton};
@@ -10106,7 +10106,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_InkToolbarToolButton(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToolButton* self) noexcept
+    static void _dealloc_InkToolbarToolButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10114,7 +10114,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* InkToolbarToolButton_get_IsExtensionGlyphShown(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToolButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarToolButton_get_IsExtensionGlyphShown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10140,7 +10140,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int InkToolbarToolButton_put_IsExtensionGlyphShown(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToolButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InkToolbarToolButton_put_IsExtensionGlyphShown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10175,7 +10175,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarToolButton_get_ToolKind(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToolButton* self, void* /*unused*/) noexcept
+    static PyObject* InkToolbarToolButton_get_ToolKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10273,7 +10273,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_InkToolbarToolButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarToolButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::InkToolbarToolButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InkToolbarToolButton};
@@ -10355,8 +10355,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBox*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBox*>(self.get())->obj = winrt::make<PyWinrtListBox>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBox>(self.get());
 
                     return self.detach();
                 }
@@ -10377,7 +10377,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ListBox(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self) noexcept
+    static void _dealloc_ListBox(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10385,7 +10385,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ListBox_ScrollIntoView(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, PyObject* args) noexcept
+    static PyObject* ListBox_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10424,7 +10424,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListBox_SelectAll(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, PyObject* args) noexcept
+    static PyObject* ListBox_SelectAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10461,7 +10461,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListBox_get_SelectionMode(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, void* /*unused*/) noexcept
+    static PyObject* ListBox_get_SelectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10487,7 +10487,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListBox_put_SelectionMode(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListBox_put_SelectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10522,7 +10522,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListBox_get_SelectedItems(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, void* /*unused*/) noexcept
+    static PyObject* ListBox_get_SelectedItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10548,7 +10548,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListBox_get_SingleSelectionFollowsFocus(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, void* /*unused*/) noexcept
+    static PyObject* ListBox_get_SingleSelectionFollowsFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10574,7 +10574,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListBox_put_SingleSelectionFollowsFocus(py::wrapper::Windows::UI::Xaml::Controls::ListBox* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListBox_put_SingleSelectionFollowsFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10710,7 +10710,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ListBox = {
         "winrt._winrt_windows_ui_xaml_controls_2.ListBox",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ListBox),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBox};
@@ -10793,8 +10793,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBoxItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListBoxItem*>(self.get())->obj = winrt::make<PyWinrtListBoxItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBoxItem>(self.get());
 
                     return self.detach();
                 }
@@ -10815,7 +10815,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ListBoxItem(py::wrapper::Windows::UI::Xaml::Controls::ListBoxItem* self) noexcept
+    static void _dealloc_ListBoxItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10867,7 +10867,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ListBoxItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.ListBoxItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ListBoxItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItem};
@@ -11898,8 +11898,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListView*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListView*>(self.get())->obj = winrt::make<PyWinrtListView>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListView>(self.get());
 
                     return self.detach();
                 }
@@ -11920,7 +11920,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ListView(py::wrapper::Windows::UI::Xaml::Controls::ListView* self) noexcept
+    static void _dealloc_ListView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11972,7 +11972,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ListView = {
         "winrt._winrt_windows_ui_xaml_controls_2.ListView",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ListView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListView};
@@ -12031,7 +12031,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_ListViewBase(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self) noexcept
+    static void _dealloc_ListViewBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12039,7 +12039,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ListViewBase_CompleteViewChange(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_CompleteViewChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12076,7 +12076,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_CompleteViewChangeFrom(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_CompleteViewChangeFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12116,7 +12116,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_CompleteViewChangeTo(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_CompleteViewChangeTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12156,7 +12156,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_DeselectRange(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_DeselectRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12195,7 +12195,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_InitializeViewChange(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_InitializeViewChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12232,7 +12232,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_IsDragSource(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_IsDragSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12268,7 +12268,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_LoadMoreItemsAsync(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_LoadMoreItemsAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12304,7 +12304,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_MakeVisible(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12343,7 +12343,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_PrepareConnectedAnimation(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_PrepareConnectedAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12383,7 +12383,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_ScrollIntoView(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12422,7 +12422,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_ScrollIntoViewWithAlignment(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_ScrollIntoViewWithAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12462,7 +12462,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_SelectAll(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_SelectAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12499,7 +12499,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_SelectRange(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_SelectRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12538,7 +12538,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_SetDesiredContainerUpdateDuration(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_SetDesiredContainerUpdateDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12577,7 +12577,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_StartViewChangeFrom(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_StartViewChangeFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12617,7 +12617,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_StartViewChangeTo(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_StartViewChangeTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12657,7 +12657,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_TryStartConnectedAnimationAsync(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* args) noexcept
+    static PyObject* ListViewBase_TryStartConnectedAnimationAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -12697,7 +12697,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_SelectionMode(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_SelectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12723,7 +12723,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_SelectionMode(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_SelectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12758,7 +12758,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IsSwipeEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IsSwipeEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12784,7 +12784,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IsSwipeEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IsSwipeEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12819,7 +12819,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IsItemClickEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IsItemClickEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12845,7 +12845,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IsItemClickEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IsItemClickEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12880,7 +12880,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IncrementalLoadingTrigger(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IncrementalLoadingTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12906,7 +12906,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IncrementalLoadingTrigger(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IncrementalLoadingTrigger(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12941,7 +12941,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IncrementalLoadingThreshold(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IncrementalLoadingThreshold(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12967,7 +12967,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IncrementalLoadingThreshold(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IncrementalLoadingThreshold(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13002,7 +13002,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_HeaderTransitions(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_HeaderTransitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13028,7 +13028,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_HeaderTransitions(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_HeaderTransitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13063,7 +13063,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13089,7 +13089,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13124,7 +13124,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_Header(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13150,7 +13150,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_Header(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13185,7 +13185,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_DataFetchSize(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_DataFetchSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13211,7 +13211,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_DataFetchSize(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_DataFetchSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13246,7 +13246,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_CanReorderItems(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_CanReorderItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13272,7 +13272,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_CanReorderItems(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_CanReorderItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13307,7 +13307,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_CanDragItems(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_CanDragItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13333,7 +13333,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_CanDragItems(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_CanDragItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13368,7 +13368,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_SelectedItems(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_SelectedItems(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13394,7 +13394,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_ShowsScrollingPlaceholders(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_ShowsScrollingPlaceholders(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13420,7 +13420,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_ShowsScrollingPlaceholders(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_ShowsScrollingPlaceholders(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13455,7 +13455,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_FooterTransitions(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_FooterTransitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13481,7 +13481,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_FooterTransitions(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_FooterTransitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13516,7 +13516,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_FooterTemplate(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_FooterTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13542,7 +13542,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_FooterTemplate(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_FooterTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13577,7 +13577,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_Footer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_Footer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13603,7 +13603,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_Footer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_Footer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13638,7 +13638,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_ReorderMode(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_ReorderMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13664,7 +13664,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_ReorderMode(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_ReorderMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13699,7 +13699,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IsMultiSelectCheckBoxEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IsMultiSelectCheckBoxEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13725,7 +13725,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IsMultiSelectCheckBoxEnabled(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IsMultiSelectCheckBoxEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13760,7 +13760,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_SelectedRanges(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_SelectedRanges(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13786,7 +13786,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_SingleSelectionFollowsFocus(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_SingleSelectionFollowsFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13812,7 +13812,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_SingleSelectionFollowsFocus(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_SingleSelectionFollowsFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13847,7 +13847,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_SemanticZoomOwner(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_SemanticZoomOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13873,7 +13873,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_SemanticZoomOwner(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_SemanticZoomOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13908,7 +13908,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IsZoomedInView(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IsZoomedInView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13934,7 +13934,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IsZoomedInView(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IsZoomedInView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13969,7 +13969,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_get_IsActiveView(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, void* /*unused*/) noexcept
+    static PyObject* ListViewBase_get_IsActiveView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13995,7 +13995,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ListViewBase_put_IsActiveView(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewBase_put_IsActiveView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14576,7 +14576,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_DragItemsStarting(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_DragItemsStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14604,7 +14604,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_DragItemsStarting(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_DragItemsStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14633,7 +14633,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_ItemClick(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_ItemClick(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14661,7 +14661,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_ItemClick(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_ItemClick(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14690,7 +14690,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_ContainerContentChanging(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_ContainerContentChanging(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14718,7 +14718,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_ContainerContentChanging(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_ContainerContentChanging(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14747,7 +14747,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_ChoosingGroupHeaderContainer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_ChoosingGroupHeaderContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14775,7 +14775,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_ChoosingGroupHeaderContainer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_ChoosingGroupHeaderContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14804,7 +14804,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_ChoosingItemContainer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_ChoosingItemContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14832,7 +14832,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_ChoosingItemContainer(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_ChoosingItemContainer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14861,7 +14861,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_add_DragItemsCompleted(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_add_DragItemsCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -14889,7 +14889,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ListViewBase_remove_DragItemsCompleted(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase* self, PyObject* arg) noexcept
+    static PyObject* ListViewBase_remove_DragItemsCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -15014,7 +15014,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ListViewBase = {
         "winrt._winrt_windows_ui_xaml_controls_2.ListViewBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ListViewBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBase};
@@ -15116,8 +15116,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListViewItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ListViewItem*>(self.get())->obj = winrt::make<PyWinrtListViewItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItem>(self.get());
 
                     return self.detach();
                 }
@@ -15138,7 +15138,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ListViewItem(py::wrapper::Windows::UI::Xaml::Controls::ListViewItem* self) noexcept
+    static void _dealloc_ListViewItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15146,7 +15146,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ListViewItem_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::ListViewItem* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItem_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15217,7 +15217,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ListViewItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.ListViewItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ListViewItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItem};
@@ -15298,8 +15298,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuBarItemFlyout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuBarItemFlyout*>(self.get())->obj = winrt::make<PyWinrtMenuBarItemFlyout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuBarItemFlyout>(self.get());
 
                     return self.detach();
                 }
@@ -15320,7 +15320,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_MenuBarItemFlyout(py::wrapper::Windows::UI::Xaml::Controls::MenuBarItemFlyout* self) noexcept
+    static void _dealloc_MenuBarItemFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15372,7 +15372,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_MenuBarItemFlyout = {
         "winrt._winrt_windows_ui_xaml_controls_2.MenuBarItemFlyout",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::MenuBarItemFlyout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarItemFlyout};
@@ -15453,8 +15453,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout*>(self.get())->obj = winrt::make<PyWinrtMenuFlyout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuFlyout>(self.get());
 
                     return self.detach();
                 }
@@ -15475,7 +15475,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_MenuFlyout(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout* self) noexcept
+    static void _dealloc_MenuFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15483,7 +15483,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* MenuFlyout_ShowAt(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout* self, PyObject* args) noexcept
+    static PyObject* MenuFlyout_ShowAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -15523,7 +15523,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* MenuFlyout_get_MenuFlyoutPresenterStyle(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout* self, void* /*unused*/) noexcept
+    static PyObject* MenuFlyout_get_MenuFlyoutPresenterStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15549,7 +15549,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int MenuFlyout_put_MenuFlyoutPresenterStyle(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MenuFlyout_put_MenuFlyoutPresenterStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15584,7 +15584,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* MenuFlyout_get_Items(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout* self, void* /*unused*/) noexcept
+    static PyObject* MenuFlyout_get_Items(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15683,7 +15683,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_MenuFlyout = {
         "winrt._winrt_windows_ui_xaml_controls_2.MenuFlyout",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::MenuFlyout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyout};
@@ -15765,8 +15765,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItem>(self.get());
 
                     return self.detach();
                 }
@@ -15787,7 +15787,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_NavigationViewItem(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self) noexcept
+    static void _dealloc_NavigationViewItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -15795,7 +15795,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationViewItem_get_Icon(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItem_get_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15821,7 +15821,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int NavigationViewItem_put_Icon(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NavigationViewItem_put_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15856,7 +15856,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* NavigationViewItem_get_CompactPaneLength(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItem_get_CompactPaneLength(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15882,7 +15882,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* NavigationViewItem_get_SelectsOnInvoked(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItem_get_SelectsOnInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15908,7 +15908,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int NavigationViewItem_put_SelectsOnInvoked(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NavigationViewItem_put_SelectsOnInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16068,7 +16068,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_NavigationViewItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItem};
@@ -16110,7 +16110,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         return nullptr;
     }
 
-    static void _dealloc_NavigationViewItemBase(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemBase* self) noexcept
+    static void _dealloc_NavigationViewItemBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16162,7 +16162,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_NavigationViewItemBase = {
         "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemBase",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemBase};
@@ -16243,8 +16243,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemHeader*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemHeader*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemHeader>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemHeader>(self.get());
 
                     return self.detach();
                 }
@@ -16265,7 +16265,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_NavigationViewItemHeader(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemHeader* self) noexcept
+    static void _dealloc_NavigationViewItemHeader(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16317,7 +16317,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_NavigationViewItemHeader = {
         "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemHeader",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemHeader),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemHeader};
@@ -16398,8 +16398,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemSeparator*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemSeparator*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemSeparator>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemSeparator>(self.get());
 
                     return self.detach();
                 }
@@ -16420,7 +16420,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_NavigationViewItemSeparator(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemSeparator* self) noexcept
+    static void _dealloc_NavigationViewItemSeparator(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16472,7 +16472,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_NavigationViewItemSeparator = {
         "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemSeparator",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewItemSeparator),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemSeparator};
@@ -16553,8 +16553,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewList*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::NavigationViewList*>(self.get())->obj = winrt::make<PyWinrtNavigationViewList>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewList>(self.get());
 
                     return self.detach();
                 }
@@ -16575,7 +16575,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_NavigationViewList(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewList* self) noexcept
+    static void _dealloc_NavigationViewList(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16627,7 +16627,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_NavigationViewList = {
         "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewList",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::NavigationViewList),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewList};
@@ -17097,8 +17097,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ProgressBar*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::ProgressBar*>(self.get())->obj = winrt::make<PyWinrtProgressBar>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtProgressBar>(self.get());
 
                     return self.detach();
                 }
@@ -17119,7 +17119,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_ProgressBar(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self) noexcept
+    static void _dealloc_ProgressBar(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17127,7 +17127,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ProgressBar_get_ShowPaused(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, void* /*unused*/) noexcept
+    static PyObject* ProgressBar_get_ShowPaused(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17153,7 +17153,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ProgressBar_put_ShowPaused(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ProgressBar_put_ShowPaused(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17188,7 +17188,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ProgressBar_get_ShowError(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, void* /*unused*/) noexcept
+    static PyObject* ProgressBar_get_ShowError(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17214,7 +17214,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ProgressBar_put_ShowError(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ProgressBar_put_ShowError(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17249,7 +17249,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ProgressBar_get_IsIndeterminate(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, void* /*unused*/) noexcept
+    static PyObject* ProgressBar_get_IsIndeterminate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17275,7 +17275,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int ProgressBar_put_IsIndeterminate(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ProgressBar_put_IsIndeterminate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17310,7 +17310,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ProgressBar_get_TemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar* self, void* /*unused*/) noexcept
+    static PyObject* ProgressBar_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17462,7 +17462,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_ProgressBar = {
         "winrt._winrt_windows_ui_xaml_controls_2.ProgressBar",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::ProgressBar),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressBar};
@@ -17546,8 +17546,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::RadioButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::RadioButton*>(self.get())->obj = winrt::make<PyWinrtRadioButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRadioButton>(self.get());
 
                     return self.detach();
                 }
@@ -17568,7 +17568,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_RadioButton(py::wrapper::Windows::UI::Xaml::Controls::RadioButton* self) noexcept
+    static void _dealloc_RadioButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17576,7 +17576,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* RadioButton_get_GroupName(py::wrapper::Windows::UI::Xaml::Controls::RadioButton* self, void* /*unused*/) noexcept
+    static PyObject* RadioButton_get_GroupName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17602,7 +17602,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int RadioButton_put_GroupName(py::wrapper::Windows::UI::Xaml::Controls::RadioButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RadioButton_put_GroupName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17708,7 +17708,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_RadioButton = {
         "winrt._winrt_windows_ui_xaml_controls_2.RadioButton",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::RadioButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButton};
@@ -17790,8 +17790,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Slider*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Slider*>(self.get())->obj = winrt::make<PyWinrtSlider>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSlider>(self.get());
 
                     return self.detach();
                 }
@@ -17812,7 +17812,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_Slider(py::wrapper::Windows::UI::Xaml::Controls::Slider* self) noexcept
+    static void _dealloc_Slider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -17820,7 +17820,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* Slider_get_TickPlacement(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_TickPlacement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17846,7 +17846,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_TickPlacement(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_TickPlacement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17881,7 +17881,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_TickFrequency(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_TickFrequency(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17907,7 +17907,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_TickFrequency(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_TickFrequency(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17942,7 +17942,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_ThumbToolTipValueConverter(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_ThumbToolTipValueConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17968,7 +17968,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_ThumbToolTipValueConverter(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_ThumbToolTipValueConverter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18003,7 +18003,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_StepFrequency(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_StepFrequency(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18029,7 +18029,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_StepFrequency(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_StepFrequency(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18064,7 +18064,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_SnapsTo(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_SnapsTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18090,7 +18090,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_SnapsTo(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_SnapsTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18125,7 +18125,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_Orientation(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_Orientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18151,7 +18151,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_Orientation(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_Orientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18186,7 +18186,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_IsThumbToolTipEnabled(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_IsThumbToolTipEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18212,7 +18212,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_IsThumbToolTipEnabled(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_IsThumbToolTipEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18247,7 +18247,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_IsDirectionReversed(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_IsDirectionReversed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18273,7 +18273,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_IsDirectionReversed(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_IsDirectionReversed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18308,7 +18308,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_IntermediateValue(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_IntermediateValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18334,7 +18334,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_IntermediateValue(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_IntermediateValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18369,7 +18369,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18395,7 +18395,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_HeaderTemplate(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_HeaderTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18430,7 +18430,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Slider_get_Header(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, void* /*unused*/) noexcept
+    static PyObject* Slider_get_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18456,7 +18456,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int Slider_put_Header(py::wrapper::Windows::UI::Xaml::Controls::Slider* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Slider_put_Header(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18832,7 +18832,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_Slider = {
         "winrt._winrt_windows_ui_xaml_controls_2.Slider",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Slider),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Slider};
@@ -18924,8 +18924,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TextCommandBarFlyout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TextCommandBarFlyout*>(self.get())->obj = winrt::make<PyWinrtTextCommandBarFlyout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTextCommandBarFlyout>(self.get());
 
                     return self.detach();
                 }
@@ -18946,7 +18946,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_TextCommandBarFlyout(py::wrapper::Windows::UI::Xaml::Controls::TextCommandBarFlyout* self) noexcept
+    static void _dealloc_TextCommandBarFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -18998,7 +18998,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_TextCommandBarFlyout = {
         "winrt._winrt_windows_ui_xaml_controls_2.TextCommandBarFlyout",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::TextCommandBarFlyout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextCommandBarFlyout};
@@ -19557,8 +19557,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem*>(self.get())->obj = winrt::make<PyWinrtTreeViewItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewItem>(self.get());
 
                     return self.detach();
                 }
@@ -19579,7 +19579,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_TreeViewItem(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self) noexcept
+    static void _dealloc_TreeViewItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19587,7 +19587,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* TreeViewItem_get_IsExpanded(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_IsExpanded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19613,7 +19613,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_IsExpanded(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_IsExpanded(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19648,7 +19648,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_GlyphSize(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_GlyphSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19674,7 +19674,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_GlyphSize(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_GlyphSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19709,7 +19709,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_GlyphOpacity(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_GlyphOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19735,7 +19735,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_GlyphOpacity(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_GlyphOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19770,7 +19770,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_GlyphBrush(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_GlyphBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19796,7 +19796,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_GlyphBrush(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_GlyphBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19831,7 +19831,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_ExpandedGlyph(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_ExpandedGlyph(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19857,7 +19857,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_ExpandedGlyph(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_ExpandedGlyph(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19892,7 +19892,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_CollapsedGlyph(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_CollapsedGlyph(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19918,7 +19918,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_CollapsedGlyph(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_CollapsedGlyph(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19953,7 +19953,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_TreeViewItemTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_TreeViewItemTemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -19979,7 +19979,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_ItemsSource(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_ItemsSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20005,7 +20005,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_ItemsSource(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_ItemsSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20040,7 +20040,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* TreeViewItem_get_HasUnrealizedChildren(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, void* /*unused*/) noexcept
+    static PyObject* TreeViewItem_get_HasUnrealizedChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20066,7 +20066,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static int TreeViewItem_put_HasUnrealizedChildren(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TreeViewItem_put_HasUnrealizedChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20388,7 +20388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_TreeViewItem = {
         "winrt._winrt_windows_ui_xaml_controls_2.TreeViewItem",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::TreeViewItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItem};
@@ -20478,8 +20478,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewList*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::TreeViewList*>(self.get())->obj = winrt::make<PyWinrtTreeViewList>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewList>(self.get());
 
                     return self.detach();
                 }
@@ -20500,7 +20500,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static void _dealloc_TreeViewList(py::wrapper::Windows::UI::Xaml::Controls::TreeViewList* self) noexcept
+    static void _dealloc_TreeViewList(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20552,7 +20552,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyType_Spec type_spec_TreeViewList = {
         "winrt._winrt_windows_ui_xaml_controls_2.TreeViewList",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::TreeViewList),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewList};

@@ -55,8 +55,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtCustomMapTileDataSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCustomMapTileDataSource>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_CustomMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self) noexcept
+    static void _dealloc_CustomMapTileDataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* CustomMapTileDataSource_add_BitmapRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* CustomMapTileDataSource_add_BitmapRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -113,7 +113,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* CustomMapTileDataSource_remove_BitmapRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* CustomMapTileDataSource_remove_BitmapRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_CustomMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CustomMapTileDataSource};
@@ -270,8 +270,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get());
 
                     return self.detach();
                 }
@@ -299,8 +299,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -321,7 +321,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_HttpMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self) noexcept
+    static void _dealloc_HttpMapTileDataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* HttpMapTileDataSource_get_UriFormatString(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, void* /*unused*/) noexcept
+    static PyObject* HttpMapTileDataSource_get_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int HttpMapTileDataSource_put_UriFormatString(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int HttpMapTileDataSource_put_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* HttpMapTileDataSource_get_AllowCaching(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, void* /*unused*/) noexcept
+    static PyObject* HttpMapTileDataSource_get_AllowCaching(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int HttpMapTileDataSource_put_AllowCaching(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int HttpMapTileDataSource_put_AllowCaching(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* HttpMapTileDataSource_get_AdditionalRequestHeaders(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, void* /*unused*/) noexcept
+    static PyObject* HttpMapTileDataSource_get_AdditionalRequestHeaders(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -477,7 +477,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* HttpMapTileDataSource_add_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* HttpMapTileDataSource_add_UriRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -505,7 +505,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* HttpMapTileDataSource_remove_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* HttpMapTileDataSource_remove_UriRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -583,7 +583,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_HttpMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HttpMapTileDataSource};
@@ -665,8 +665,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get());
 
                     return self.detach();
                 }
@@ -694,8 +694,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -716,7 +716,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_LocalMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self) noexcept
+    static void _dealloc_LocalMapTileDataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -724,7 +724,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* LocalMapTileDataSource_get_UriFormatString(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, void* /*unused*/) noexcept
+    static PyObject* LocalMapTileDataSource_get_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -750,7 +750,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int LocalMapTileDataSource_put_UriFormatString(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int LocalMapTileDataSource_put_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* LocalMapTileDataSource_add_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* LocalMapTileDataSource_add_UriRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -813,7 +813,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* LocalMapTileDataSource_remove_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, PyObject* arg) noexcept
+    static PyObject* LocalMapTileDataSource_remove_UriRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_LocalMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_LocalMapTileDataSource};
@@ -9986,8 +9986,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience*>(self.get())->obj = winrt::make<PyWinrtMapCustomExperience>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapCustomExperience>(self.get());
 
                     return self.detach();
                 }
@@ -10008,7 +10008,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapCustomExperience(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience* self) noexcept
+    static void _dealloc_MapCustomExperience(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10060,7 +10060,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapCustomExperience = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapCustomExperience};
@@ -10229,8 +10229,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement*>(self.get())->obj = winrt::make<PyWinrtMapElement>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapElement>(self.get());
 
                     return self.detach();
                 }
@@ -10251,7 +10251,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapElement(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self) noexcept
+    static void _dealloc_MapElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10259,7 +10259,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* MapElement_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10285,7 +10285,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10320,7 +10320,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10346,7 +10346,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10381,7 +10381,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10407,7 +10407,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10442,7 +10442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10468,7 +10468,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10503,7 +10503,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_MapStyleSheetEntryState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10529,7 +10529,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_MapStyleSheetEntryState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10564,7 +10564,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_MapStyleSheetEntry(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10590,7 +10590,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_MapStyleSheetEntry(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10625,7 +10625,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapElement_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    static PyObject* MapElement_get_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10651,7 +10651,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapElement_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapElement_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10919,7 +10919,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElement = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapElement};
@@ -14266,8 +14266,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer*>(self.get())->obj = winrt::make<PyWinrtMapLayer>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapLayer>(self.get());
 
                     return self.detach();
                 }
@@ -14288,7 +14288,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapLayer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self) noexcept
+    static void _dealloc_MapLayer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14296,7 +14296,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* MapLayer_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, void* /*unused*/) noexcept
+    static PyObject* MapLayer_get_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14322,7 +14322,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapLayer_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapLayer_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14357,7 +14357,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapLayer_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, void* /*unused*/) noexcept
+    static PyObject* MapLayer_get_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14383,7 +14383,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapLayer_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapLayer_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14418,7 +14418,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapLayer_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, void* /*unused*/) noexcept
+    static PyObject* MapLayer_get_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14444,7 +14444,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapLayer_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapLayer_put_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14604,7 +14604,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapLayer = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapLayer",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapLayer};
@@ -14688,8 +14688,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D*>(self.get())->obj = winrt::make<PyWinrtMapModel3D>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapModel3D>(self.get());
 
                     return self.detach();
                 }
@@ -14710,7 +14710,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapModel3D(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D* self) noexcept
+    static void _dealloc_MapModel3D(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14839,7 +14839,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapModel3D = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapModel3D",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapModel3D};
@@ -16012,8 +16012,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView*>(self.get())->obj = winrt::make<PyWinrtMapRouteView>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapRouteView>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -16034,7 +16034,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapRouteView(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self) noexcept
+    static void _dealloc_MapRouteView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -16042,7 +16042,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* MapRouteView_get_RouteColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, void* /*unused*/) noexcept
+    static PyObject* MapRouteView_get_RouteColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16068,7 +16068,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapRouteView_put_RouteColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapRouteView_put_RouteColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16103,7 +16103,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapRouteView_get_OutlineColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, void* /*unused*/) noexcept
+    static PyObject* MapRouteView_get_OutlineColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16129,7 +16129,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapRouteView_put_OutlineColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapRouteView_put_OutlineColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16164,7 +16164,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapRouteView_get_Route(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, void* /*unused*/) noexcept
+    static PyObject* MapRouteView_get_Route(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16237,7 +16237,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapRouteView = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapRouteView};
@@ -19898,8 +19898,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource*>(self.get())->obj = winrt::make<PyWinrtMapTileDataSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileDataSource>(self.get());
 
                     return self.detach();
                 }
@@ -19920,7 +19920,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource* self) noexcept
+    static void _dealloc_MapTileDataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -19972,7 +19972,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapTileDataSource};
@@ -20057,8 +20057,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get());
 
                     return self.detach();
                 }
@@ -20086,8 +20086,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -20116,8 +20116,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -20147,8 +20147,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2);
 
                     return self.detach();
                 }
@@ -20179,8 +20179,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2, param3);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2, param3);
 
                     return self.detach();
                 }
@@ -20201,7 +20201,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static void _dealloc_MapTileSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self) noexcept
+    static void _dealloc_MapTileSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -20209,7 +20209,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_DECREF(tp);
     }
 
-    static PyObject* MapTileSource_Pause(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* args) noexcept
+    static PyObject* MapTileSource_Pause(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20246,7 +20246,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_Play(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* args) noexcept
+    static PyObject* MapTileSource_Play(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20283,7 +20283,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_Stop(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* args) noexcept
+    static PyObject* MapTileSource_Stop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -20320,7 +20320,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_ZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_ZoomLevelRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20346,7 +20346,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_ZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_ZoomLevelRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20381,7 +20381,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20407,7 +20407,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20442,7 +20442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20468,7 +20468,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20503,7 +20503,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_TilePixelSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_TilePixelSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20529,7 +20529,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_TilePixelSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_TilePixelSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20564,7 +20564,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_Layer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_Layer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20590,7 +20590,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_Layer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_Layer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20625,7 +20625,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_IsTransparencyEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_IsTransparencyEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20651,7 +20651,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_IsTransparencyEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_IsTransparencyEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20686,7 +20686,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_IsRetryEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_IsRetryEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20712,7 +20712,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_IsRetryEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_IsRetryEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20747,7 +20747,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_IsFadingEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_IsFadingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20773,7 +20773,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_IsFadingEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_IsFadingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20808,7 +20808,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_DataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_DataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20834,7 +20834,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_DataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_DataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20869,7 +20869,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_Bounds(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20895,7 +20895,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_Bounds(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20930,7 +20930,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_AllowOverstretch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_AllowOverstretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -20956,7 +20956,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_AllowOverstretch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_AllowOverstretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -20991,7 +20991,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_FrameDuration(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_FrameDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21017,7 +21017,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_FrameDuration(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_FrameDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21052,7 +21052,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_FrameCount(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_FrameCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21078,7 +21078,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_FrameCount(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_FrameCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21113,7 +21113,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_AutoPlay(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_AutoPlay(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21139,7 +21139,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapTileSource_put_AutoPlay(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MapTileSource_put_AutoPlay(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21174,7 +21174,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* MapTileSource_get_AnimationState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    static PyObject* MapTileSource_get_AnimationState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21652,7 +21652,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileSource",
-        sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapTileSource};

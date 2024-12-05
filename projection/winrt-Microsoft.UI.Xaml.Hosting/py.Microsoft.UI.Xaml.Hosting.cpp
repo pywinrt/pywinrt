@@ -55,8 +55,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource*>(self.get())->obj = winrt::make<PyWinrtDesktopWindowXamlSource>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDesktopWindowXamlSource>(self.get());
 
                     return self.detach();
                 }
@@ -77,7 +77,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static void _dealloc_DesktopWindowXamlSource(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
+    static void _dealloc_DesktopWindowXamlSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -85,7 +85,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         Py_DECREF(tp);
     }
 
-    static PyObject* DesktopWindowXamlSource_Close(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* args) noexcept
+    static PyObject* DesktopWindowXamlSource_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -122,7 +122,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_Initialize(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* args) noexcept
+    static PyObject* DesktopWindowXamlSource_Initialize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -161,7 +161,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_NavigateFocus(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* args) noexcept
+    static PyObject* DesktopWindowXamlSource_NavigateFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -199,7 +199,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_get_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    static PyObject* DesktopWindowXamlSource_get_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -225,7 +225,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static int DesktopWindowXamlSource_put_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DesktopWindowXamlSource_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -260,7 +260,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_get_Content(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    static PyObject* DesktopWindowXamlSource_get_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -286,7 +286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static int DesktopWindowXamlSource_put_Content(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DesktopWindowXamlSource_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -321,7 +321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_get_HasFocus(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    static PyObject* DesktopWindowXamlSource_get_HasFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -347,7 +347,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_get_SiteBridge(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    static PyObject* DesktopWindowXamlSource_get_SiteBridge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -373,7 +373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_get_ShouldConstrainPopupsToWorkArea(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    static PyObject* DesktopWindowXamlSource_get_ShouldConstrainPopupsToWorkArea(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static int DesktopWindowXamlSource_put_ShouldConstrainPopupsToWorkArea(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DesktopWindowXamlSource_put_ShouldConstrainPopupsToWorkArea(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -434,7 +434,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_add_GotFocus(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg) noexcept
+    static PyObject* DesktopWindowXamlSource_add_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -462,7 +462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_remove_GotFocus(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg) noexcept
+    static PyObject* DesktopWindowXamlSource_remove_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -491,7 +491,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_add_TakeFocusRequested(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg) noexcept
+    static PyObject* DesktopWindowXamlSource_add_TakeFocusRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -519,7 +519,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* DesktopWindowXamlSource_remove_TakeFocusRequested(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg) noexcept
+    static PyObject* DesktopWindowXamlSource_remove_TakeFocusRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -572,16 +572,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* _enter_DesktopWindowXamlSource(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_DesktopWindowXamlSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DesktopWindowXamlSource(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_DesktopWindowXamlSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -625,7 +625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesktopWindowXamlSource = {
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DesktopWindowXamlSource};
