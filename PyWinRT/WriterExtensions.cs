@@ -550,7 +550,8 @@ static class WriterExtensions
             w.Indent++;
             w.WriteTryCatch(() =>
             {
-                w.WriteLine("self->obj.Close();");
+                var closeMethod = type.Methods.Single(m => m.Name == "Close");
+                w.WriteLine($"{type.GetMethodInvokeContext(closeMethod)}Close();");
                 w.WriteLine("Py_RETURN_FALSE;");
             });
             w.Indent--;

@@ -753,7 +753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_ButtonBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self) noexcept
+    static void _dealloc_ButtonBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -761,7 +761,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ButtonBase_get_CommandParameter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
+    static PyObject* ButtonBase_get_CommandParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -787,7 +787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ButtonBase_put_CommandParameter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ButtonBase_put_CommandParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -822,7 +822,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_get_Command(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
+    static PyObject* ButtonBase_get_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -848,7 +848,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ButtonBase_put_Command(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ButtonBase_put_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -883,7 +883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_get_ClickMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
+    static PyObject* ButtonBase_get_ClickMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -909,7 +909,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ButtonBase_put_ClickMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ButtonBase_put_ClickMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -944,7 +944,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_get_IsPointerOver(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
+    static PyObject* ButtonBase_get_IsPointerOver(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -970,7 +970,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_get_IsPressed(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
+    static PyObject* ButtonBase_get_IsPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1126,7 +1126,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_add_Click(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg) noexcept
+    static PyObject* ButtonBase_add_Click(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1154,7 +1154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ButtonBase_remove_Click(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg) noexcept
+    static PyObject* ButtonBase_remove_Click(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ButtonBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ButtonBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonBase};
@@ -1879,8 +1879,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel*>(self.get())->obj = winrt::make<PyWinrtCarouselPanel>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCarouselPanel>(self.get());
 
                     return self.detach();
                 }
@@ -1901,7 +1901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_CarouselPanel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self) noexcept
+    static void _dealloc_CarouselPanel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1909,7 +1909,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* CarouselPanel_GetIrregularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_GetIrregularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1948,7 +1948,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_GetRegularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_GetRegularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2000,7 +2000,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_LineDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_LineDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2037,7 +2037,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_LineLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_LineLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2074,7 +2074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_LineRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_LineRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2111,7 +2111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_LineUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_LineUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2148,7 +2148,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_MakeVisible(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2187,7 +2187,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_MouseWheelDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_MouseWheelDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2224,7 +2224,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_MouseWheelLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_MouseWheelLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2261,7 +2261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_MouseWheelRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_MouseWheelRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2298,7 +2298,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_MouseWheelUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_MouseWheelUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2335,7 +2335,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_PageDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_PageDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2372,7 +2372,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_PageLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_PageLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2409,7 +2409,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_PageRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_PageRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2446,7 +2446,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_PageUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_PageUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2483,7 +2483,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_SetHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_SetHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2522,7 +2522,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_SetVerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* args) noexcept
+    static PyObject* CarouselPanel_SetVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2561,7 +2561,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_ScrollOwner(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2587,7 +2587,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int CarouselPanel_put_ScrollOwner(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CarouselPanel_put_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2622,7 +2622,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_CanVerticallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2648,7 +2648,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int CarouselPanel_put_CanVerticallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CarouselPanel_put_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2683,7 +2683,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_CanHorizontallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2709,7 +2709,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int CarouselPanel_put_CanHorizontallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CarouselPanel_put_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2744,7 +2744,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_ExtentHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_ExtentHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2770,7 +2770,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_ExtentWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_ExtentWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2796,7 +2796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_HorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2822,7 +2822,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_VerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2848,7 +2848,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_ViewportHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_ViewportHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2874,7 +2874,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_ViewportWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_ViewportWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2900,7 +2900,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_AreHorizontalSnapPointsRegular(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2926,7 +2926,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
+    static PyObject* CarouselPanel_get_AreVerticalSnapPointsRegular(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2952,7 +2952,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_add_HorizontalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
+    static PyObject* CarouselPanel_add_HorizontalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -2980,7 +2980,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
+    static PyObject* CarouselPanel_remove_HorizontalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3009,7 +3009,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_add_VerticalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
+    static PyObject* CarouselPanel_add_VerticalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3037,7 +3037,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CarouselPanel_remove_VerticalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
+    static PyObject* CarouselPanel_remove_VerticalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -3142,7 +3142,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CarouselPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CarouselPanel",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CarouselPanel};
@@ -3223,8 +3223,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum*>(self.get())->obj = winrt::make<PyWinrtColorSpectrum>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorSpectrum>(self.get());
 
                     return self.detach();
                 }
@@ -3245,7 +3245,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ColorSpectrum(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self) noexcept
+    static void _dealloc_ColorSpectrum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3253,7 +3253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ColorSpectrum_get_Shape(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_Shape(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3279,7 +3279,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_Shape(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_Shape(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3314,7 +3314,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MinValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MinValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3340,7 +3340,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MinValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MinValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3375,7 +3375,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MinSaturation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MinSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3401,7 +3401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MinSaturation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MinSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3436,7 +3436,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MinHue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MinHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3462,7 +3462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MinHue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MinHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3497,7 +3497,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MaxValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MaxValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3523,7 +3523,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MaxValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MaxValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3558,7 +3558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MaxSaturation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MaxSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3584,7 +3584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MaxSaturation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MaxSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3619,7 +3619,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_MaxHue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_MaxHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3645,7 +3645,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_MaxHue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_MaxHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3680,7 +3680,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_HsvColor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_HsvColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3706,7 +3706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_HsvColor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_HsvColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3741,7 +3741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_Components(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3767,7 +3767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_Components(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -3802,7 +3802,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_get_Color(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
+    static PyObject* ColorSpectrum_get_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -3828,7 +3828,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColorSpectrum_put_Color(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorSpectrum_put_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4123,7 +4123,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_add_ColorChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg) noexcept
+    static PyObject* ColorSpectrum_add_ColorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -4151,7 +4151,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColorSpectrum_remove_ColorChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg) noexcept
+    static PyObject* ColorSpectrum_remove_ColorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -4236,7 +4236,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorSpectrum = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ColorSpectrum",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorSpectrum};
@@ -4327,8 +4327,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout*>(self.get())->obj = winrt::make<PyWinrtColumnMajorUniformToLargestGridLayout>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColumnMajorUniformToLargestGridLayout>(self.get());
 
                     return self.detach();
                 }
@@ -4349,7 +4349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ColumnMajorUniformToLargestGridLayout(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self) noexcept
+    static void _dealloc_ColumnMajorUniformToLargestGridLayout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4357,7 +4357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ColumnMajorUniformToLargestGridLayout_get_RowSpacing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, void* /*unused*/) noexcept
+    static PyObject* ColumnMajorUniformToLargestGridLayout_get_RowSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4383,7 +4383,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColumnMajorUniformToLargestGridLayout_put_RowSpacing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColumnMajorUniformToLargestGridLayout_put_RowSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4418,7 +4418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColumnMajorUniformToLargestGridLayout_get_MaxColumns(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, void* /*unused*/) noexcept
+    static PyObject* ColumnMajorUniformToLargestGridLayout_get_MaxColumns(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4444,7 +4444,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColumnMajorUniformToLargestGridLayout_put_MaxColumns(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColumnMajorUniformToLargestGridLayout_put_MaxColumns(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4479,7 +4479,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ColumnMajorUniformToLargestGridLayout_get_ColumnSpacing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, void* /*unused*/) noexcept
+    static PyObject* ColumnMajorUniformToLargestGridLayout_get_ColumnSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4505,7 +4505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ColumnMajorUniformToLargestGridLayout_put_ColumnSpacing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColumnMajorUniformToLargestGridLayout_put_ColumnSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4665,7 +4665,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColumnMajorUniformToLargestGridLayout = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ColumnMajorUniformToLargestGridLayout",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColumnMajorUniformToLargestGridLayout};
@@ -5148,8 +5148,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyoutCommandBar>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyoutCommandBar>(self.get());
 
                     return self.detach();
                 }
@@ -5170,7 +5170,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_CommandBarFlyoutCommandBar(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self) noexcept
+    static void _dealloc_CommandBarFlyoutCommandBar(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5178,7 +5178,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* CommandBarFlyoutCommandBar_get_FlyoutTemplateSettings(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self, void* /*unused*/) noexcept
+    static PyObject* CommandBarFlyoutCommandBar_get_FlyoutTemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5204,7 +5204,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* CommandBarFlyoutCommandBar_get_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self, void* /*unused*/) noexcept
+    static PyObject* CommandBarFlyoutCommandBar_get_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5230,7 +5230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int CommandBarFlyoutCommandBar_put_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CommandBarFlyoutCommandBar_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5337,7 +5337,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CommandBarFlyoutCommandBar = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CommandBarFlyoutCommandBar};
@@ -7332,8 +7332,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs*>(self.get())->obj = winrt::make<PyWinrtDragCompletedEventArgs>(self.get(), param0, param1, param2);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragCompletedEventArgs>(self.get(), param0, param1, param2);
 
                     return self.detach();
                 }
@@ -7354,7 +7354,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_DragCompletedEventArgs(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self) noexcept
+    static void _dealloc_DragCompletedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7362,7 +7362,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* DragCompletedEventArgs_get_Canceled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragCompletedEventArgs_get_Canceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7388,7 +7388,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* DragCompletedEventArgs_get_HorizontalChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragCompletedEventArgs_get_HorizontalChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7414,7 +7414,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* DragCompletedEventArgs_get_VerticalChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragCompletedEventArgs_get_VerticalChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7487,7 +7487,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragCompletedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragCompletedEventArgs",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragCompletedEventArgs};
@@ -7571,8 +7571,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs*>(self.get())->obj = winrt::make<PyWinrtDragDeltaEventArgs>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragDeltaEventArgs>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -7593,7 +7593,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_DragDeltaEventArgs(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self) noexcept
+    static void _dealloc_DragDeltaEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7601,7 +7601,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* DragDeltaEventArgs_get_HorizontalChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragDeltaEventArgs_get_HorizontalChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7627,7 +7627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* DragDeltaEventArgs_get_VerticalChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragDeltaEventArgs_get_VerticalChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7699,7 +7699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragDeltaEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragDeltaEventArgs",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragDeltaEventArgs};
@@ -7783,8 +7783,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs*>(self.get())->obj = winrt::make<PyWinrtDragStartedEventArgs>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragStartedEventArgs>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -7805,7 +7805,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_DragStartedEventArgs(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self) noexcept
+    static void _dealloc_DragStartedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7813,7 +7813,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* DragStartedEventArgs_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragStartedEventArgs_get_HorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7839,7 +7839,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* DragStartedEventArgs_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* DragStartedEventArgs_get_VerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7911,7 +7911,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragStartedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragStartedEventArgs",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragStartedEventArgs};
@@ -8030,7 +8030,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_FlyoutBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self) noexcept
+    static void _dealloc_FlyoutBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8082,7 +8082,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_Hide(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_Hide(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8165,7 +8165,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_ShowAt(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_ShowAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8204,7 +8204,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_ShowAtWithOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_ShowAtWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8283,7 +8283,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_TryInvokeKeyboardAccelerator(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -8322,7 +8322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8348,7 +8348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8383,7 +8383,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_ShowMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8409,7 +8409,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_ShowMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8444,7 +8444,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_ShouldConstrainToRootBounds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_ShouldConstrainToRootBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8470,7 +8470,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_ShouldConstrainToRootBounds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_ShouldConstrainToRootBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8505,7 +8505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_Placement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8531,7 +8531,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_Placement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8566,7 +8566,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_OverlayInputPassThroughElement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_OverlayInputPassThroughElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8592,7 +8592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_OverlayInputPassThroughElement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_OverlayInputPassThroughElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8627,7 +8627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_LightDismissOverlayMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_LightDismissOverlayMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8653,7 +8653,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_LightDismissOverlayMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_LightDismissOverlayMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8688,7 +8688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_ElementSoundMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_ElementSoundMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8714,7 +8714,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_ElementSoundMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_ElementSoundMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8749,7 +8749,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_AreOpenCloseAnimationsEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_AreOpenCloseAnimationsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8775,7 +8775,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_AreOpenCloseAnimationsEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_AreOpenCloseAnimationsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8810,7 +8810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_AllowFocusWhenDisabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8836,7 +8836,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_AllowFocusWhenDisabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8871,7 +8871,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8897,7 +8897,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8932,7 +8932,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_InputDevicePrefersPrimaryCommands(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_InputDevicePrefersPrimaryCommands(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8958,7 +8958,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_IsConstrainedToRootBounds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_IsConstrainedToRootBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8984,7 +8984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_IsOpen(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_IsOpen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9010,7 +9010,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_Target(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_Target(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9036,7 +9036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_get_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutBase_get_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9062,7 +9062,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutBase_put_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutBase_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9461,7 +9461,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_add_Closed(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_add_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9489,7 +9489,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_remove_Closed(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_remove_Closed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9518,7 +9518,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_add_Closing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_add_Closing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9546,7 +9546,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_remove_Closing(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_remove_Closing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9575,7 +9575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_add_Opened(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_add_Opened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9603,7 +9603,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_remove_Opened(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_remove_Opened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9632,7 +9632,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_add_Opening(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_add_Opening(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9660,7 +9660,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_remove_Opening(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
+    static PyObject* FlyoutBase_remove_Opening(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -9762,7 +9762,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutBase};
@@ -9988,8 +9988,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions*>(self.get())->obj = winrt::make<PyWinrtFlyoutShowOptions>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlyoutShowOptions>(self.get());
 
                     return self.detach();
                 }
@@ -10010,7 +10010,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_FlyoutShowOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self) noexcept
+    static void _dealloc_FlyoutShowOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10018,7 +10018,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* FlyoutShowOptions_get_ShowMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutShowOptions_get_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10044,7 +10044,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutShowOptions_put_ShowMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutShowOptions_put_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10079,7 +10079,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutShowOptions_get_Position(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutShowOptions_get_Position(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10105,7 +10105,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutShowOptions_put_Position(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutShowOptions_put_Position(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10140,7 +10140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutShowOptions_get_Placement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutShowOptions_get_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10166,7 +10166,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutShowOptions_put_Placement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutShowOptions_put_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10201,7 +10201,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutShowOptions_get_ExclusionRect(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
+    static PyObject* FlyoutShowOptions_get_ExclusionRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10227,7 +10227,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int FlyoutShowOptions_put_ExclusionRect(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    static int FlyoutShowOptions_put_ExclusionRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10310,7 +10310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutShowOptions = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutShowOptions",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutShowOptions};
@@ -10522,8 +10522,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter*>(self.get())->obj = winrt::make<PyWinrtGridViewItemPresenter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItemPresenter>(self.get());
 
                     return self.detach();
                 }
@@ -10544,7 +10544,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_GridViewItemPresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self) noexcept
+    static void _dealloc_GridViewItemPresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -10552,7 +10552,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10578,7 +10578,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10613,7 +10613,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectedPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10639,7 +10639,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectedPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10674,7 +10674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectedPointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10700,7 +10700,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectedPointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10735,7 +10735,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectedForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10761,7 +10761,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectedForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10796,7 +10796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectedBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10822,7 +10822,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectedBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10857,7 +10857,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_SelectedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10883,7 +10883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_SelectedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10918,7 +10918,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_ReorderHintOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10944,7 +10944,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_ReorderHintOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10979,7 +10979,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_PointerOverBackgroundMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11005,7 +11005,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_PointerOverBackgroundMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11040,7 +11040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_PointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11066,7 +11066,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_PointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11101,7 +11101,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_PlaceholderBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11127,7 +11127,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_PlaceholderBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11162,7 +11162,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterVerticalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11188,7 +11188,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_GridViewItemPresenterVerticalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_GridViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11223,7 +11223,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11249,7 +11249,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_GridViewItemPresenterPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_GridViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11284,7 +11284,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterHorizontalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_GridViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11310,7 +11310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_GridViewItemPresenterHorizontalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_GridViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11345,7 +11345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_FocusBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11371,7 +11371,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_FocusBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11406,7 +11406,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_DragOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11432,7 +11432,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_DragOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11467,7 +11467,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_DragForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11493,7 +11493,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_DragForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11528,7 +11528,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_DragBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11554,7 +11554,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_DragBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11589,7 +11589,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_DisabledOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11615,7 +11615,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_DisabledOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11650,7 +11650,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_ContentMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11676,7 +11676,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_ContentMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11711,7 +11711,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_CheckSelectingBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11737,7 +11737,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_CheckSelectingBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11772,7 +11772,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_CheckHintBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11798,7 +11798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_CheckHintBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11833,7 +11833,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* GridViewItemPresenter_get_CheckBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* GridViewItemPresenter_get_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11859,7 +11859,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GridViewItemPresenter_put_CheckBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GridViewItemPresenter_put_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12532,7 +12532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GridViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.GridViewItemPresenter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemPresenter};
@@ -12728,8 +12728,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel*>(self.get())->obj = winrt::make<PyWinrtInfoBarPanel>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtInfoBarPanel>(self.get());
 
                     return self.detach();
                 }
@@ -12750,7 +12750,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_InfoBarPanel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel* self) noexcept
+    static void _dealloc_InfoBarPanel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12914,7 +12914,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* InfoBarPanel_get_VerticalOrientationPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel* self, void* /*unused*/) noexcept
+    static PyObject* InfoBarPanel_get_VerticalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -12940,7 +12940,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int InfoBarPanel_put_VerticalOrientationPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InfoBarPanel_put_VerticalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -12975,7 +12975,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* InfoBarPanel_get_HorizontalOrientationPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel* self, void* /*unused*/) noexcept
+    static PyObject* InfoBarPanel_get_HorizontalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13001,7 +13001,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int InfoBarPanel_put_HorizontalOrientationPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int InfoBarPanel_put_HorizontalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13186,7 +13186,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_InfoBarPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.InfoBarPanel",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InfoBarPanel};
@@ -14434,8 +14434,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter*>(self.get())->obj = winrt::make<PyWinrtListViewItemPresenter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItemPresenter>(self.get());
 
                     return self.detach();
                 }
@@ -14456,7 +14456,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ListViewItemPresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self) noexcept
+    static void _dealloc_ListViewItemPresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14464,7 +14464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterVerticalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14490,7 +14490,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_ListViewItemPresenterVerticalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_ListViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14525,7 +14525,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14551,7 +14551,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_ListViewItemPresenterPadding(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_ListViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14586,7 +14586,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterHorizontalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_ListViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14612,7 +14612,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_ListViewItemPresenterHorizontalContentAlignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_ListViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14647,7 +14647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_FocusSecondaryBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_FocusSecondaryBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14673,7 +14673,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_FocusSecondaryBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_FocusSecondaryBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14708,7 +14708,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_FocusBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14734,7 +14734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_FocusBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14769,7 +14769,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_DragOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14795,7 +14795,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_DragOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14830,7 +14830,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_RevealBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_RevealBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14856,7 +14856,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_RevealBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_RevealBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14891,7 +14891,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_DragBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14917,7 +14917,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_DragBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -14952,7 +14952,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_DisabledOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -14978,7 +14978,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_DisabledOpacity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15013,7 +15013,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_ContentMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15039,7 +15039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_ContentMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15074,7 +15074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckSelectingBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15100,7 +15100,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckSelectingBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15135,7 +15135,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15161,7 +15161,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15196,7 +15196,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15222,7 +15222,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15257,7 +15257,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckHintBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15283,7 +15283,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckHintBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15318,7 +15318,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15344,7 +15344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15379,7 +15379,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15405,7 +15405,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15440,7 +15440,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15466,7 +15466,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxSelectedPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxSelectedPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15501,7 +15501,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15527,7 +15527,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxSelectedPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxSelectedPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15562,7 +15562,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15588,7 +15588,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxSelectedDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxSelectedDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15623,7 +15623,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxSelectedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15649,7 +15649,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxSelectedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxSelectedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15684,7 +15684,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15710,7 +15710,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15745,7 +15745,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15771,7 +15771,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15806,7 +15806,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15832,7 +15832,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15867,7 +15867,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15893,7 +15893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15928,7 +15928,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15954,7 +15954,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15989,7 +15989,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16015,7 +16015,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxDisabledBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16050,7 +16050,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxCornerRadius(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16076,7 +16076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxCornerRadius(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16111,7 +16111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16137,7 +16137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16172,7 +16172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16198,7 +16198,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16233,7 +16233,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PlaceholderBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16259,7 +16259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PlaceholderBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16294,7 +16294,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedDisabledBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16320,7 +16320,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedDisabledBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16355,7 +16355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16381,7 +16381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorPressedBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16416,7 +16416,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16442,7 +16442,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorPointerOverBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16477,7 +16477,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16503,7 +16503,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16538,7 +16538,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16564,7 +16564,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorDisabledBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16599,7 +16599,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorCornerRadius(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16625,7 +16625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorCornerRadius(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16660,7 +16660,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16686,7 +16686,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16721,7 +16721,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_CheckBoxPressedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_CheckBoxPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16747,7 +16747,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_CheckBoxPressedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_CheckBoxPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16782,7 +16782,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedPressedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16808,7 +16808,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedPressedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16843,7 +16843,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedPressedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedPressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16869,7 +16869,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedPressedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedPressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16904,7 +16904,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16930,7 +16930,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedPointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -16965,7 +16965,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedPointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -16991,7 +16991,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedPointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17026,7 +17026,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedInnerBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedInnerBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17052,7 +17052,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedInnerBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedInnerBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17087,7 +17087,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17113,7 +17113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17148,7 +17148,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectionIndicatorVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectionIndicatorVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17174,7 +17174,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectionIndicatorVisualEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectionIndicatorVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17209,7 +17209,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedDisabledBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedDisabledBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17235,7 +17235,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedDisabledBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedDisabledBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17270,7 +17270,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17296,7 +17296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17331,7 +17331,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17357,7 +17357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17392,7 +17392,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_SelectedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17418,7 +17418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_SelectedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17453,7 +17453,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_RevealBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_RevealBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17479,7 +17479,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_RevealBorderThickness(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_RevealBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17514,7 +17514,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_RevealBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_RevealBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17540,7 +17540,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_RevealBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_RevealBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17575,7 +17575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_RevealBackgroundShowsAboveContent(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_RevealBackgroundShowsAboveContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17601,7 +17601,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_RevealBackgroundShowsAboveContent(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_RevealBackgroundShowsAboveContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17636,7 +17636,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_DragForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17662,7 +17662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_DragForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17697,7 +17697,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_ReorderHintOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17723,7 +17723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_ReorderHintOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17758,7 +17758,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PressedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17784,7 +17784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PressedBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17819,7 +17819,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PointerOverForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PointerOverForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17845,7 +17845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PointerOverForeground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PointerOverForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17880,7 +17880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17906,7 +17906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PointerOverBorderBrush(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -17941,7 +17941,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PointerOverBackgroundMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -17967,7 +17967,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PointerOverBackgroundMargin(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -18002,7 +18002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ListViewItemPresenter_get_PointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ListViewItemPresenter_get_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -18028,7 +18028,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ListViewItemPresenter_put_PointerOverBackground(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ListViewItemPresenter_put_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -19700,7 +19700,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ListViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ListViewItemPresenter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemPresenter};
@@ -21289,8 +21289,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter*>(self.get())->obj = winrt::make<PyWinrtMonochromaticOverlayPresenter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMonochromaticOverlayPresenter>(self.get());
 
                     return self.detach();
                 }
@@ -21311,7 +21311,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_MonochromaticOverlayPresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter* self) noexcept
+    static void _dealloc_MonochromaticOverlayPresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21319,7 +21319,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* MonochromaticOverlayPresenter_get_SourceElement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter* self, void* /*unused*/) noexcept
+    static PyObject* MonochromaticOverlayPresenter_get_SourceElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21345,7 +21345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int MonochromaticOverlayPresenter_put_SourceElement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MonochromaticOverlayPresenter_put_SourceElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21380,7 +21380,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* MonochromaticOverlayPresenter_get_ReplacementColor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter* self, void* /*unused*/) noexcept
+    static PyObject* MonochromaticOverlayPresenter_get_ReplacementColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21406,7 +21406,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int MonochromaticOverlayPresenter_put_ReplacementColor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int MonochromaticOverlayPresenter_put_ReplacementColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21539,7 +21539,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_MonochromaticOverlayPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.MonochromaticOverlayPresenter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MonochromaticOverlayPresenter};
@@ -21622,8 +21622,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemPresenter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemPresenter>(self.get());
 
                     return self.detach();
                 }
@@ -21644,7 +21644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_NavigationViewItemPresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self) noexcept
+    static void _dealloc_NavigationViewItemPresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -21652,7 +21652,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationViewItemPresenter_get_Icon(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemPresenter_get_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21678,7 +21678,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int NavigationViewItemPresenter_put_Icon(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NavigationViewItemPresenter_put_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21713,7 +21713,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* NavigationViewItemPresenter_get_TemplateSettings(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemPresenter_get_TemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21739,7 +21739,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* NavigationViewItemPresenter_get_InfoBadge(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemPresenter_get_InfoBadge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -21765,7 +21765,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int NavigationViewItemPresenter_put_InfoBadge(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int NavigationViewItemPresenter_put_InfoBadge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -21925,7 +21925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_NavigationViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemPresenter};
@@ -22009,8 +22009,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemPresenterTemplateSettings>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemPresenterTemplateSettings>(self.get());
 
                     return self.detach();
                 }
@@ -22031,7 +22031,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_NavigationViewItemPresenterTemplateSettings(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings* self) noexcept
+    static void _dealloc_NavigationViewItemPresenterTemplateSettings(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22039,7 +22039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationViewItemPresenterTemplateSettings_get_IconWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemPresenterTemplateSettings_get_IconWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -22065,7 +22065,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* NavigationViewItemPresenterTemplateSettings_get_SmallerIconWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings* self, void* /*unused*/) noexcept
+    static PyObject* NavigationViewItemPresenterTemplateSettings_get_SmallerIconWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -22189,7 +22189,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_NavigationViewItemPresenterTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenterTemplateSettings",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemPresenterTemplateSettings};
@@ -22230,7 +22230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_OrientedVirtualizingPanel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self) noexcept
+    static void _dealloc_OrientedVirtualizingPanel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -22238,7 +22238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* OrientedVirtualizingPanel_GetInsertionIndexes(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_GetInsertionIndexes(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22290,7 +22290,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_GetIrregularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_GetIrregularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22329,7 +22329,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_GetRegularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_GetRegularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22381,7 +22381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_LineDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_LineDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22418,7 +22418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_LineLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_LineLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22455,7 +22455,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_LineRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_LineRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22492,7 +22492,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_LineUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_LineUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22529,7 +22529,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_MakeVisible(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22568,7 +22568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_MouseWheelDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_MouseWheelDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22605,7 +22605,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_MouseWheelLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_MouseWheelLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22642,7 +22642,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_MouseWheelRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_MouseWheelRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22679,7 +22679,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_MouseWheelUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_MouseWheelUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22716,7 +22716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_PageDown(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_PageDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22753,7 +22753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_PageLeft(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_PageLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22790,7 +22790,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_PageRight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_PageRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22827,7 +22827,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_PageUp(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_PageUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22864,7 +22864,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_SetHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_SetHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22903,7 +22903,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_SetVerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* args) noexcept
+    static PyObject* OrientedVirtualizingPanel_SetVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -22942,7 +22942,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_ScrollOwner(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -22968,7 +22968,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int OrientedVirtualizingPanel_put_ScrollOwner(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int OrientedVirtualizingPanel_put_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23003,7 +23003,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_CanVerticallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23029,7 +23029,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int OrientedVirtualizingPanel_put_CanVerticallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int OrientedVirtualizingPanel_put_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23064,7 +23064,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_CanHorizontallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23090,7 +23090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int OrientedVirtualizingPanel_put_CanHorizontallyScroll(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
+    static int OrientedVirtualizingPanel_put_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23125,7 +23125,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_ExtentHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_ExtentHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23151,7 +23151,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_ExtentWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_ExtentWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23177,7 +23177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_HorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23203,7 +23203,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_VerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23229,7 +23229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_ViewportHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_ViewportHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23255,7 +23255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_ViewportWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_ViewportWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23281,7 +23281,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_AreHorizontalSnapPointsRegular(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23307,7 +23307,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
+    static PyObject* OrientedVirtualizingPanel_get_AreVerticalSnapPointsRegular(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23333,7 +23333,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_add_HorizontalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
+    static PyObject* OrientedVirtualizingPanel_add_HorizontalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -23361,7 +23361,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
+    static PyObject* OrientedVirtualizingPanel_remove_HorizontalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -23390,7 +23390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_add_VerticalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
+    static PyObject* OrientedVirtualizingPanel_add_VerticalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -23418,7 +23418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* OrientedVirtualizingPanel_remove_VerticalSnapPointsChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
+    static PyObject* OrientedVirtualizingPanel_remove_VerticalSnapPointsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -23524,7 +23524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_OrientedVirtualizingPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_OrientedVirtualizingPanel};
@@ -23637,7 +23637,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_PickerFlyoutBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase* self) noexcept
+    static void _dealloc_PickerFlyoutBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23807,7 +23807,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PickerFlyoutBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PickerFlyoutBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PickerFlyoutBase};
@@ -23891,8 +23891,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem*>(self.get())->obj = winrt::make<PyWinrtPivotHeaderItem>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPivotHeaderItem>(self.get());
 
                     return self.detach();
                 }
@@ -23913,7 +23913,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_PivotHeaderItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem* self) noexcept
+    static void _dealloc_PivotHeaderItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23965,7 +23965,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PivotHeaderItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderItem",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PivotHeaderItem};
@@ -25920,7 +25920,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_RangeBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self) noexcept
+    static void _dealloc_RangeBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -25946,7 +25946,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static PyObject* RangeBase_get_Value(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
+    static PyObject* RangeBase_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -25972,7 +25972,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int RangeBase_put_Value(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RangeBase_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26007,7 +26007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_get_SmallChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
+    static PyObject* RangeBase_get_SmallChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26033,7 +26033,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int RangeBase_put_SmallChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RangeBase_put_SmallChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26068,7 +26068,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_get_Minimum(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
+    static PyObject* RangeBase_get_Minimum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26094,7 +26094,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int RangeBase_put_Minimum(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RangeBase_put_Minimum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26129,7 +26129,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_get_Maximum(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
+    static PyObject* RangeBase_get_Maximum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26155,7 +26155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int RangeBase_put_Maximum(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RangeBase_put_Maximum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26190,7 +26190,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_get_LargeChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
+    static PyObject* RangeBase_get_LargeChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -26216,7 +26216,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int RangeBase_put_LargeChange(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int RangeBase_put_LargeChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -26381,7 +26381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_add_ValueChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg) noexcept
+    static PyObject* RangeBase_add_ValueChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -26409,7 +26409,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_remove_ValueChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg) noexcept
+    static PyObject* RangeBase_remove_ValueChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -26492,7 +26492,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RangeBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RangeBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RangeBase};
@@ -26995,8 +26995,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint*>(self.get())->obj = winrt::make<PyWinrtRepeatedScrollSnapPoint>(self.get(), param0, param1, param2, param3, param4);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRepeatedScrollSnapPoint>(self.get(), param0, param1, param2, param3, param4);
 
                     return self.detach();
                 }
@@ -27017,7 +27017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_RepeatedScrollSnapPoint(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint* self) noexcept
+    static void _dealloc_RepeatedScrollSnapPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -27025,7 +27025,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* RepeatedScrollSnapPoint_get_End(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedScrollSnapPoint_get_End(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27051,7 +27051,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedScrollSnapPoint_get_Interval(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedScrollSnapPoint_get_Interval(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27077,7 +27077,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedScrollSnapPoint_get_Offset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedScrollSnapPoint_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27103,7 +27103,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedScrollSnapPoint_get_Start(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedScrollSnapPoint_get_Start(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27177,7 +27177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RepeatedScrollSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedScrollSnapPoint",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeatedScrollSnapPoint};
@@ -27263,8 +27263,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint*>(self.get())->obj = winrt::make<PyWinrtRepeatedZoomSnapPoint>(self.get(), param0, param1, param2, param3);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRepeatedZoomSnapPoint>(self.get(), param0, param1, param2, param3);
 
                     return self.detach();
                 }
@@ -27285,7 +27285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_RepeatedZoomSnapPoint(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint* self) noexcept
+    static void _dealloc_RepeatedZoomSnapPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -27293,7 +27293,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* RepeatedZoomSnapPoint_get_End(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedZoomSnapPoint_get_End(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27319,7 +27319,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedZoomSnapPoint_get_Interval(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedZoomSnapPoint_get_Interval(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27345,7 +27345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedZoomSnapPoint_get_Offset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedZoomSnapPoint_get_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27371,7 +27371,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RepeatedZoomSnapPoint_get_Start(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* RepeatedZoomSnapPoint_get_Start(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -27445,7 +27445,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RepeatedZoomSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedZoomSnapPoint",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeatedZoomSnapPoint};
@@ -28907,8 +28907,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter*>(self.get())->obj = winrt::make<PyWinrtScrollPresenter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScrollPresenter>(self.get());
 
                     return self.detach();
                 }
@@ -28929,7 +28929,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ScrollPresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self) noexcept
+    static void _dealloc_ScrollPresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -28937,7 +28937,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ScrollPresenter_AddScrollVelocity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_AddScrollVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -28976,7 +28976,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_AddZoomVelocity(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_AddZoomVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29016,7 +29016,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_RegisterAnchorCandidate(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_RegisterAnchorCandidate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29055,7 +29055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ScrollBy(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ScrollBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29094,7 +29094,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ScrollByWithOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ScrollByWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29134,7 +29134,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ScrollTo(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ScrollTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29173,7 +29173,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ScrollToWithOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ScrollToWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29213,7 +29213,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_UnregisterAnchorCandidate(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_UnregisterAnchorCandidate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29252,7 +29252,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ZoomBy(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ZoomBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29291,7 +29291,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ZoomByWithOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ZoomByWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29331,7 +29331,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ZoomTo(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ZoomTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29370,7 +29370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_ZoomToWithOptions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* args) noexcept
+    static PyObject* ScrollPresenter_ZoomToWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -29410,7 +29410,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_CurrentAnchor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_CurrentAnchor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29436,7 +29436,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_IgnoredInputKinds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_IgnoredInputKinds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29462,7 +29462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_IgnoredInputKinds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_IgnoredInputKinds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29497,7 +29497,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalAnchorRatio(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29523,7 +29523,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_HorizontalAnchorRatio(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_HorizontalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29558,7 +29558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_MaxZoomFactor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_MaxZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29584,7 +29584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_MaxZoomFactor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_MaxZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29619,7 +29619,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalScrollRailMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29645,7 +29645,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_HorizontalScrollRailMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_HorizontalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29680,7 +29680,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29706,7 +29706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_HorizontalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_HorizontalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29741,7 +29741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ContentOrientation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ContentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29767,7 +29767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_ContentOrientation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_ContentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29802,7 +29802,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_Content(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29828,7 +29828,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_Content(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29863,7 +29863,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalScrollController(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29889,7 +29889,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_HorizontalScrollController(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_HorizontalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29924,7 +29924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalScrollChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -29950,7 +29950,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_HorizontalScrollChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_HorizontalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -29985,7 +29985,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_MinZoomFactor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_MinZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30011,7 +30011,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_MinZoomFactor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_MinZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30046,7 +30046,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_Background(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_Background(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30072,7 +30072,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_Background(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_Background(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30107,7 +30107,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ZoomMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ZoomMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30133,7 +30133,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_ZoomMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_ZoomMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30168,7 +30168,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ZoomChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ZoomChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30194,7 +30194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_ZoomChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_ZoomChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30229,7 +30229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalScrollRailMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30255,7 +30255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_VerticalScrollRailMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_VerticalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30290,7 +30290,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30316,7 +30316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_VerticalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_VerticalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30351,7 +30351,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalScrollController(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30377,7 +30377,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_VerticalScrollController(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_VerticalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30412,7 +30412,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalScrollChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30438,7 +30438,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_VerticalScrollChainMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_VerticalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30473,7 +30473,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalAnchorRatio(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30499,7 +30499,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ScrollPresenter_put_VerticalAnchorRatio(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ScrollPresenter_put_VerticalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -30534,7 +30534,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ComputedHorizontalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ComputedHorizontalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30560,7 +30560,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ComputedVerticalScrollMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ComputedVerticalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30586,7 +30586,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ExpressionAnimationSources(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ExpressionAnimationSources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30612,7 +30612,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ExtentHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ExtentHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30638,7 +30638,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ExtentWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ExtentWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30664,7 +30664,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30690,7 +30690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_HorizontalSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_HorizontalSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30716,7 +30716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ScrollableHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ScrollableHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30742,7 +30742,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ScrollableWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ScrollableWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30768,7 +30768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_State(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_State(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30794,7 +30794,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30820,7 +30820,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_VerticalSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_VerticalSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30846,7 +30846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ViewportHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ViewportHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30872,7 +30872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ViewportWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ViewportWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30898,7 +30898,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ZoomFactor(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -30924,7 +30924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_get_ZoomSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, void* /*unused*/) noexcept
+    static PyObject* ScrollPresenter_get_ZoomSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -31418,7 +31418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_AnchorRequested(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_AnchorRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31446,7 +31446,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_AnchorRequested(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_AnchorRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31475,7 +31475,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_BringingIntoView(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_BringingIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31503,7 +31503,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_BringingIntoView(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_BringingIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31532,7 +31532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ExtentChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ExtentChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31560,7 +31560,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ExtentChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ExtentChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31589,7 +31589,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ScrollAnimationStarting(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ScrollAnimationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31617,7 +31617,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ScrollAnimationStarting(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ScrollAnimationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31646,7 +31646,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ScrollCompleted(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ScrollCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31674,7 +31674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ScrollCompleted(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ScrollCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31703,7 +31703,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_StateChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31731,7 +31731,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_StateChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_StateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31760,7 +31760,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ViewChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ViewChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31788,7 +31788,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ViewChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ViewChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31817,7 +31817,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ZoomAnimationStarting(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ZoomAnimationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31845,7 +31845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ZoomAnimationStarting(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ZoomAnimationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31874,7 +31874,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_add_ZoomCompleted(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_add_ZoomCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -31902,7 +31902,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ScrollPresenter_remove_ZoomCompleted(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter* self, PyObject* arg) noexcept
+    static PyObject* ScrollPresenter_remove_ZoomCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -32040,7 +32040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollPresenter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollPresenter};
@@ -32142,8 +32142,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint*>(self.get())->obj = winrt::make<PyWinrtScrollSnapPoint>(self.get(), param0, param1);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtScrollSnapPoint>(self.get(), param0, param1);
 
                     return self.detach();
                 }
@@ -32164,7 +32164,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ScrollSnapPoint(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint* self) noexcept
+    static void _dealloc_ScrollSnapPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32172,7 +32172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ScrollSnapPoint_get_Value(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* ScrollSnapPoint_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32243,7 +32243,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPoint",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollSnapPoint};
@@ -32282,7 +32282,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_ScrollSnapPointBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointBase* self) noexcept
+    static void _dealloc_ScrollSnapPointBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32290,7 +32290,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ScrollSnapPointBase_get_Alignment(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointBase* self, void* /*unused*/) noexcept
+    static PyObject* ScrollSnapPointBase_get_Alignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32361,7 +32361,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollSnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPointBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollSnapPointBase};
@@ -32400,7 +32400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_Selector(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self) noexcept
+    static void _dealloc_Selector(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -32446,7 +32446,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_get_SelectedValuePath(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
+    static PyObject* Selector_get_SelectedValuePath(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32472,7 +32472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int Selector_put_SelectedValuePath(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Selector_put_SelectedValuePath(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32507,7 +32507,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_get_SelectedValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
+    static PyObject* Selector_get_SelectedValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32533,7 +32533,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int Selector_put_SelectedValue(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Selector_put_SelectedValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32568,7 +32568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_get_SelectedItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
+    static PyObject* Selector_get_SelectedItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32594,7 +32594,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int Selector_put_SelectedItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Selector_put_SelectedItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32629,7 +32629,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_get_SelectedIndex(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
+    static PyObject* Selector_get_SelectedIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32655,7 +32655,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int Selector_put_SelectedIndex(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Selector_put_SelectedIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32690,7 +32690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_get_IsSynchronizedWithCurrentItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
+    static PyObject* Selector_get_IsSynchronizedWithCurrentItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -32716,7 +32716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int Selector_put_IsSynchronizedWithCurrentItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Selector_put_IsSynchronizedWithCurrentItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -32881,7 +32881,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_add_SelectionChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg) noexcept
+    static PyObject* Selector_add_SelectionChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -32909,7 +32909,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* Selector_remove_SelectionChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg) noexcept
+    static PyObject* Selector_remove_SelectionChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -32989,7 +32989,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Selector = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.Selector",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Selector};
@@ -33054,7 +33054,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_SelectorItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem* self) noexcept
+    static void _dealloc_SelectorItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -33062,7 +33062,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* SelectorItem_get_IsSelected(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem* self, void* /*unused*/) noexcept
+    static PyObject* SelectorItem_get_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -33088,7 +33088,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int SelectorItem_put_IsSelected(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem* self, PyObject* arg, void* /*unused*/) noexcept
+    static int SelectorItem_put_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -33194,7 +33194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SelectorItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.SelectorItem",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorItem};
@@ -33234,7 +33234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_SnapPointBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SnapPointBase* self) noexcept
+    static void _dealloc_SnapPointBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -33286,7 +33286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.SnapPointBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SnapPointBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SnapPointBase};
@@ -34205,8 +34205,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton*>(self.get())->obj = winrt::make<PyWinrtToggleButton>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleButton>(self.get());
 
                     return self.detach();
                 }
@@ -34227,7 +34227,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ToggleButton(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self) noexcept
+    static void _dealloc_ToggleButton(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -34241,7 +34241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static PyObject* ToggleButton_get_IsThreeState(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* ToggleButton_get_IsThreeState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -34267,7 +34267,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ToggleButton_put_IsThreeState(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ToggleButton_put_IsThreeState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -34302,7 +34302,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_get_IsChecked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
+    static PyObject* ToggleButton_get_IsChecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -34328,7 +34328,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int ToggleButton_put_IsChecked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ToggleButton_put_IsChecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -34415,7 +34415,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_add_Checked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_add_Checked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34443,7 +34443,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_remove_Checked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_remove_Checked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34472,7 +34472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_add_Indeterminate(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_add_Indeterminate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34500,7 +34500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_remove_Indeterminate(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_remove_Indeterminate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34529,7 +34529,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_add_Unchecked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_add_Unchecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34557,7 +34557,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* ToggleButton_remove_Unchecked(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
+    static PyObject* ToggleButton_remove_Unchecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -34639,7 +34639,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ToggleButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ToggleButton",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleButton};
@@ -35126,8 +35126,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint*>(self.get())->obj = winrt::make<PyWinrtZoomSnapPoint>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtZoomSnapPoint>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -35148,7 +35148,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static void _dealloc_ZoomSnapPoint(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint* self) noexcept
+    static void _dealloc_ZoomSnapPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -35156,7 +35156,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ZoomSnapPoint_get_Value(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint* self, void* /*unused*/) noexcept
+    static PyObject* ZoomSnapPoint_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -35227,7 +35227,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ZoomSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPoint",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ZoomSnapPoint};
@@ -35266,7 +35266,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         return nullptr;
     }
 
-    static void _dealloc_ZoomSnapPointBase(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPointBase* self) noexcept
+    static void _dealloc_ZoomSnapPointBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -35318,7 +35318,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ZoomSnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPointBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPointBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ZoomSnapPointBase};

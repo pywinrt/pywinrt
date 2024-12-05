@@ -110,13 +110,13 @@ static class MapWriterExtensions
     {
         var method = type.Methods.Single(m => m.Name == "HasKey");
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(method);
 
         w.WriteTryCatch(
             () =>
             {
                 w.WriteLine(
-                    $"return static_cast<int>({self}.HasKey(py::convert_to<{keyType}>(key)));"
+                    $"return static_cast<int>({self}HasKey(py::convert_to<{keyType}>(key)));"
                 );
             },
             catchReturn: "-1"
@@ -125,12 +125,14 @@ static class MapWriterExtensions
 
     private static void WriteMapLengthBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(
+            type.Properties.Single(m => m.Name == "Size").GetMethod
+        );
 
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine($"return static_cast<Py_ssize_t>({self}.Size());");
+                w.WriteLine($"return static_cast<Py_ssize_t>({self}Size());");
             },
             catchReturn: "-1"
         );
@@ -143,14 +145,14 @@ static class MapWriterExtensions
     {
         var method = type.Methods.Single(m => m.Name == "Lookup");
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
-        var self = type.IsGeneric ? "_obj" : "self->obj";
+        var self = type.GetMethodInvokeContext(method);
 
         w.WriteTryCatch(() =>
         {
             w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
             // we use the CppWinRT extension TryLookup so we can raise
             // KeyError on failure.
-            w.WriteLine($"auto value = {self}.TryLookup(_key);");
+            w.WriteLine($"auto value = {self}TryLookup(_key);");
             w.WriteBlankLine();
             w.WriteLine("if (!value) {");
             w.Indent++;
@@ -163,7 +165,7 @@ static class MapWriterExtensions
             );
             w.WriteLine("{");
             w.Indent++;
-            w.WriteLine($"if ({self}.HasKey(_key))");
+            w.WriteLine($"if ({self}HasKey(_key))");
             w.WriteLine("{");
             w.Indent++;
             w.WriteLine("Py_RETURN_NONE;");
@@ -190,7 +192,7 @@ static class MapWriterExtensions
         var method = type.Methods.Single(m => m.Name == "Lookup");
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
         var valueType = method.Method.ReturnType.ToCppTypeName(method.GenericArgMap);
-        var self = type.IsGeneric ? "_obj." : "self->obj.";
+        var self = type.GetMethodInvokeContext(method);
 
         w.WriteTryCatch(
             () =>

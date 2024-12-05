@@ -5196,7 +5196,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         return nullptr;
     }
 
-    static void _dealloc_CoreWebView2Controller(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self) noexcept
+    static void _dealloc_CoreWebView2Controller(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5204,7 +5204,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_DECREF(tp);
     }
 
-    static PyObject* CoreWebView2Controller_Close(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* args) noexcept
+    static PyObject* CoreWebView2Controller_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5228,7 +5228,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_MoveFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* args) noexcept
+    static PyObject* CoreWebView2Controller_MoveFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5254,7 +5254,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_NotifyParentWindowPositionChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* args) noexcept
+    static PyObject* CoreWebView2Controller_NotifyParentWindowPositionChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5278,7 +5278,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_SetBoundsAndZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* args) noexcept
+    static PyObject* CoreWebView2Controller_SetBoundsAndZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5305,7 +5305,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_ZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5318,7 +5318,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_ZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5340,7 +5340,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_ParentWindow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5353,7 +5353,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_ParentWindow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5375,7 +5375,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5388,7 +5388,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5410,7 +5410,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5423,7 +5423,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5445,7 +5445,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_CoreWebView2(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_CoreWebView2(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5458,7 +5458,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_DefaultBackgroundColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5471,7 +5471,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_DefaultBackgroundColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5493,7 +5493,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_ShouldDetectMonitorScaleChanges(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5506,7 +5506,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_ShouldDetectMonitorScaleChanges(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5528,7 +5528,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5541,7 +5541,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5563,7 +5563,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_BoundsMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5576,7 +5576,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_BoundsMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5598,7 +5598,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_AllowExternalDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5611,7 +5611,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2Controller_put_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
+    static int CoreWebView2Controller_put_AllowExternalDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5633,7 +5633,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_get_IsBrowserHitTransparent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
+    static PyObject* CoreWebView2Controller_get_IsBrowserHitTransparent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5646,7 +5646,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_RasterizationScaleChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5661,7 +5661,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_RasterizationScaleChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5677,7 +5677,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_AcceleratorKeyPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5692,7 +5692,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_AcceleratorKeyPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5708,7 +5708,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5723,7 +5723,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_GotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5739,7 +5739,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_LostFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5754,7 +5754,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_LostFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5770,7 +5770,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_MoveFocusRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5785,7 +5785,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_MoveFocusRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5801,7 +5801,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_add_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_add_ZoomFactorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5816,7 +5816,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* CoreWebView2Controller_remove_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
+    static PyObject* CoreWebView2Controller_remove_ZoomFactorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5903,7 +5903,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyType_Spec type_spec_CoreWebView2Controller = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller",
-        sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CoreWebView2Controller};

@@ -117,8 +117,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension*>(self.get())->obj = winrt::make<PyWinrtMarkupExtension>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMarkupExtension>(self.get());
 
                     return self.detach();
                 }
@@ -139,7 +139,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static void _dealloc_MarkupExtension(py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension* self) noexcept
+    static void _dealloc_MarkupExtension(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -205,7 +205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyType_Spec type_spec_MarkupExtension = {
         "winrt._winrt_microsoft_ui_xaml_markup.MarkupExtension",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MarkupExtension};

@@ -3989,7 +3989,7 @@ namespace py::cpp::Microsoft::UI::Input
         return nullptr;
     }
 
-    static void _dealloc_InputCursor(py::wrapper::Microsoft::UI::Input::InputCursor* self) noexcept
+    static void _dealloc_InputCursor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3997,7 +3997,7 @@ namespace py::cpp::Microsoft::UI::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* InputCursor_Close(py::wrapper::Microsoft::UI::Input::InputCursor* self, PyObject* args) noexcept
+    static PyObject* InputCursor_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4096,16 +4096,16 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static PyObject* _enter_InputCursor(py::wrapper::Microsoft::UI::Input::InputCursor* self, PyObject* /*unused*/) noexcept
+    static PyObject* _enter_InputCursor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_InputCursor(py::wrapper::Microsoft::UI::Input::InputCursor* self, PyObject* /*unused*/) noexcept
+    static PyObject* _exit_InputCursor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
     {
         try
         {
-            self->obj.Close();
+            self->obj.try_as<winrt::Microsoft::UI::Input::InputCursor>().Close();
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4138,7 +4138,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyType_Spec type_spec_InputCursor = {
         "winrt._winrt_microsoft_ui_input.InputCursor",
-        sizeof(py::wrapper::Microsoft::UI::Input::InputCursor),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputCursor};
@@ -4178,7 +4178,7 @@ namespace py::cpp::Microsoft::UI::Input
         return nullptr;
     }
 
-    static void _dealloc_InputCustomCursor(py::wrapper::Microsoft::UI::Input::InputCustomCursor* self) noexcept
+    static void _dealloc_InputCustomCursor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4230,7 +4230,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyType_Spec type_spec_InputCustomCursor = {
         "winrt._winrt_microsoft_ui_input.InputCustomCursor",
-        sizeof(py::wrapper::Microsoft::UI::Input::InputCustomCursor),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputCustomCursor};
@@ -7261,7 +7261,7 @@ namespace py::cpp::Microsoft::UI::Input
         return nullptr;
     }
 
-    static void _dealloc_InputObject(py::wrapper::Microsoft::UI::Input::InputObject* self) noexcept
+    static void _dealloc_InputObject(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7269,7 +7269,7 @@ namespace py::cpp::Microsoft::UI::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* InputObject_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputObject* self, void* /*unused*/) noexcept
+    static PyObject* InputObject_get_DispatcherQueue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7340,7 +7340,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyType_Spec type_spec_InputObject = {
         "winrt._winrt_microsoft_ui_input.InputObject",
-        sizeof(py::wrapper::Microsoft::UI::Input::InputObject),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputObject};

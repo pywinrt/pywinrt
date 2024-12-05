@@ -612,8 +612,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Shapes::Path*>(self.get())->obj = winrt::make<PyWinrtPath>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPath>(self.get());
 
                     return self.detach();
                 }
@@ -634,7 +634,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static void _dealloc_Path(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self) noexcept
+    static void _dealloc_Path(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -642,7 +642,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         Py_DECREF(tp);
     }
 
-    static PyObject* Path_get_Data(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, void* /*unused*/) noexcept
+    static PyObject* Path_get_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -668,7 +668,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Path_put_Data(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Path_put_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -774,7 +774,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Path = {
         "winrt._winrt_microsoft_ui_xaml_shapes.Path",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Shapes::Path),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Path};
@@ -1707,7 +1707,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         return nullptr;
     }
 
-    static void _dealloc_Shape(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self) noexcept
+    static void _dealloc_Shape(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1715,7 +1715,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         Py_DECREF(tp);
     }
 
-    static PyObject* Shape_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    static PyObject* Shape_GetAlphaMask(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1751,7 +1751,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeThickness(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1777,7 +1777,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeThickness(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1812,7 +1812,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeStartLineCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeStartLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1838,7 +1838,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeStartLineCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeStartLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1873,7 +1873,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeMiterLimit(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeMiterLimit(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1899,7 +1899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeMiterLimit(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeMiterLimit(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1934,7 +1934,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeLineJoin(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeLineJoin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1960,7 +1960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeLineJoin(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeLineJoin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1995,7 +1995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeEndLineCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeEndLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2021,7 +2021,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeEndLineCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeEndLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2056,7 +2056,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeDashOffset(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeDashOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2082,7 +2082,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeDashOffset(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeDashOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2117,7 +2117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeDashCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeDashCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2143,7 +2143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeDashCap(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeDashCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2178,7 +2178,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_StrokeDashArray(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_StrokeDashArray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2204,7 +2204,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_StrokeDashArray(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_StrokeDashArray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2239,7 +2239,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_Stroke(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_Stroke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2265,7 +2265,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_Stroke(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_Stroke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2300,7 +2300,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_Stretch(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_Stretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2326,7 +2326,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_Stretch(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_Stretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2361,7 +2361,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_Fill(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_Fill(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2387,7 +2387,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static int Shape_put_Fill(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Shape_put_Fill(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2422,7 +2422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         }
     }
 
-    static PyObject* Shape_get_GeometryTransform(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, void* /*unused*/) noexcept
+    static PyObject* Shape_get_GeometryTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -2791,7 +2791,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Shape = {
         "winrt._winrt_microsoft_ui_xaml_shapes.Shape",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Shape};

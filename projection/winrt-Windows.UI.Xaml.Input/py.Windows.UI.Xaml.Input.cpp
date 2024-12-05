@@ -4819,8 +4819,8 @@ namespace py::cpp::Windows::UI::Xaml::Input
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator*>(self.get())->obj = winrt::make<PyWinrtKeyboardAccelerator>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtKeyboardAccelerator>(self.get());
 
                     return self.detach();
                 }
@@ -4841,7 +4841,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static void _dealloc_KeyboardAccelerator(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self) noexcept
+    static void _dealloc_KeyboardAccelerator(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4849,7 +4849,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* KeyboardAccelerator_get_ScopeOwner(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, void* /*unused*/) noexcept
+    static PyObject* KeyboardAccelerator_get_ScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4875,7 +4875,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int KeyboardAccelerator_put_ScopeOwner(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyboardAccelerator_put_ScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4910,7 +4910,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* KeyboardAccelerator_get_Modifiers(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, void* /*unused*/) noexcept
+    static PyObject* KeyboardAccelerator_get_Modifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4936,7 +4936,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int KeyboardAccelerator_put_Modifiers(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyboardAccelerator_put_Modifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* KeyboardAccelerator_get_Key(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, void* /*unused*/) noexcept
+    static PyObject* KeyboardAccelerator_get_Key(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -4997,7 +4997,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int KeyboardAccelerator_put_Key(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyboardAccelerator_put_Key(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5032,7 +5032,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* KeyboardAccelerator_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, void* /*unused*/) noexcept
+    static PyObject* KeyboardAccelerator_get_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5058,7 +5058,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int KeyboardAccelerator_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg, void* /*unused*/) noexcept
+    static int KeyboardAccelerator_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5197,7 +5197,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* KeyboardAccelerator_add_Invoked(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg) noexcept
+    static PyObject* KeyboardAccelerator_add_Invoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5225,7 +5225,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* KeyboardAccelerator_remove_Invoked(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg) noexcept
+    static PyObject* KeyboardAccelerator_remove_Invoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -5304,7 +5304,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_KeyboardAccelerator = {
         "winrt._winrt_windows_ui_xaml_input.KeyboardAccelerator",
-        sizeof(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_KeyboardAccelerator};
@@ -7422,8 +7422,8 @@ namespace py::cpp::Windows::UI::Xaml::Input
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs*>(self.get())->obj = winrt::make<PyWinrtManipulationStartedRoutedEventArgs>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtManipulationStartedRoutedEventArgs>(self.get());
 
                     return self.detach();
                 }
@@ -7444,7 +7444,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static void _dealloc_ManipulationStartedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self) noexcept
+    static void _dealloc_ManipulationStartedRoutedEventArgs(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -7452,7 +7452,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_Complete(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, PyObject* args) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_Complete(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7489,7 +7489,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_get_Handled(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_get_Handled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7515,7 +7515,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int ManipulationStartedRoutedEventArgs_put_Handled(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ManipulationStartedRoutedEventArgs_put_Handled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7550,7 +7550,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_get_Container(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_get_Container(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7576,7 +7576,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_get_Cumulative(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_get_Cumulative(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7602,7 +7602,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_get_PointerDeviceType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7628,7 +7628,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* ManipulationStartedRoutedEventArgs_get_Position(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    static PyObject* ManipulationStartedRoutedEventArgs_get_Position(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7704,7 +7704,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationStartedRoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml_input.ManipulationStartedRoutedEventArgs",
-        sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ManipulationStartedRoutedEventArgs};
@@ -9163,8 +9163,8 @@ namespace py::cpp::Windows::UI::Xaml::Input
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get());
 
                     return self.detach();
                 }
@@ -9192,8 +9192,8 @@ namespace py::cpp::Windows::UI::Xaml::Input
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::StandardUICommand*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtStandardUICommand>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -9214,7 +9214,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static void _dealloc_StandardUICommand(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self) noexcept
+    static void _dealloc_StandardUICommand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9222,7 +9222,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* StandardUICommand_get_Kind(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    static PyObject* StandardUICommand_get_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9248,7 +9248,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int StandardUICommand_put_Kind(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int StandardUICommand_put_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9354,7 +9354,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_StandardUICommand = {
         "winrt._winrt_windows_ui_xaml_input.StandardUICommand",
-        sizeof(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_StandardUICommand};
@@ -9652,8 +9652,8 @@ namespace py::cpp::Windows::UI::Xaml::Input
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::XamlUICommand*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Windows::UI::Xaml::Input::XamlUICommand*>(self.get())->obj = winrt::make<PyWinrtXamlUICommand>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtXamlUICommand>(self.get());
 
                     return self.detach();
                 }
@@ -9674,7 +9674,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static void _dealloc_XamlUICommand(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self) noexcept
+    static void _dealloc_XamlUICommand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9682,7 +9682,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         Py_DECREF(tp);
     }
 
-    static PyObject* XamlUICommand_CanExecute(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* args) noexcept
+    static PyObject* XamlUICommand_CanExecute(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -9720,7 +9720,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_Execute(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* args) noexcept
+    static PyObject* XamlUICommand_Execute(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -9759,7 +9759,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_NotifyCanExecuteChanged(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* args) noexcept
+    static PyObject* XamlUICommand_NotifyCanExecuteChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -9796,7 +9796,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_Label(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9822,7 +9822,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int XamlUICommand_put_Label(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUICommand_put_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9857,7 +9857,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_IconSource(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_IconSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9883,7 +9883,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int XamlUICommand_put_IconSource(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUICommand_put_IconSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9918,7 +9918,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_Description(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_Description(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9944,7 +9944,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int XamlUICommand_put_Description(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUICommand_put_Description(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9979,7 +9979,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_Command(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10005,7 +10005,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int XamlUICommand_put_Command(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUICommand_put_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10040,7 +10040,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_AccessKey(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10066,7 +10066,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static int XamlUICommand_put_AccessKey(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUICommand_put_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -10101,7 +10101,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_get_KeyboardAccelerators(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    static PyObject* XamlUICommand_get_KeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -10283,7 +10283,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_add_CanExecuteRequested(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_add_CanExecuteRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10311,7 +10311,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_remove_CanExecuteRequested(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_remove_CanExecuteRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10340,7 +10340,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_add_ExecuteRequested(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_add_ExecuteRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10368,7 +10368,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_remove_ExecuteRequested(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_remove_ExecuteRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10397,7 +10397,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_add_CanExecuteChanged(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_add_CanExecuteChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10425,7 +10425,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* XamlUICommand_remove_CanExecuteChanged(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
+    static PyObject* XamlUICommand_remove_CanExecuteChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -10513,7 +10513,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_XamlUICommand = {
         "winrt._winrt_windows_ui_xaml_input.XamlUICommand",
-        sizeof(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlUICommand};

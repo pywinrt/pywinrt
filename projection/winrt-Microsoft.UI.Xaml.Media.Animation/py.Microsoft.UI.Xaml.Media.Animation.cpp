@@ -345,8 +345,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration*>(self.get())->obj = winrt::make<PyWinrtBasicConnectedAnimationConfiguration>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBasicConnectedAnimationConfiguration>(self.get());
 
                     return self.detach();
                 }
@@ -367,7 +367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static void _dealloc_BasicConnectedAnimationConfiguration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration* self) noexcept
+    static void _dealloc_BasicConnectedAnimationConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -419,7 +419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BasicConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BasicConnectedAnimationConfiguration};
@@ -1846,7 +1846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_ColorKeyFrame(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame* self) noexcept
+    static void _dealloc_ColorKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1854,7 +1854,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* ColorKeyFrame_get_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* ColorKeyFrame_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1880,7 +1880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int ColorKeyFrame_put_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -1915,7 +1915,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* ColorKeyFrame_get_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* ColorKeyFrame_get_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -1941,7 +1941,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int ColorKeyFrame_put_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ColorKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -2074,7 +2074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorKeyFrame};
@@ -3555,7 +3555,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_ConnectedAnimationConfiguration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration* self) noexcept
+    static void _dealloc_ConnectedAnimationConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -3607,7 +3607,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ConnectedAnimationConfiguration};
@@ -4921,8 +4921,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration*>(self.get())->obj = winrt::make<PyWinrtDirectConnectedAnimationConfiguration>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDirectConnectedAnimationConfiguration>(self.get());
 
                     return self.detach();
                 }
@@ -4943,7 +4943,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static void _dealloc_DirectConnectedAnimationConfiguration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration* self) noexcept
+    static void _dealloc_DirectConnectedAnimationConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4995,7 +4995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DirectConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DirectConnectedAnimationConfiguration};
@@ -6193,7 +6193,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_DoubleKeyFrame(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame* self) noexcept
+    static void _dealloc_DoubleKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -6201,7 +6201,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* DoubleKeyFrame_get_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* DoubleKeyFrame_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6227,7 +6227,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int DoubleKeyFrame_put_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DoubleKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6262,7 +6262,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* DoubleKeyFrame_get_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* DoubleKeyFrame_get_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6288,7 +6288,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int DoubleKeyFrame_put_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int DoubleKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6421,7 +6421,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DoubleKeyFrame};
@@ -9400,7 +9400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_EasingFunctionBase(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase* self) noexcept
+    static void _dealloc_EasingFunctionBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -9408,7 +9408,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* EasingFunctionBase_Ease(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    static PyObject* EasingFunctionBase_Ease(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -9446,7 +9446,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* EasingFunctionBase_get_EasingMode(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase* self, void* /*unused*/) noexcept
+    static PyObject* EasingFunctionBase_get_EasingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -9472,7 +9472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int EasingFunctionBase_put_EasingMode(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* arg, void* /*unused*/) noexcept
+    static int EasingFunctionBase_put_EasingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -9579,7 +9579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingFunctionBase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_EasingFunctionBase};
@@ -11562,8 +11562,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration*>(self.get())->obj = winrt::make<PyWinrtGravityConnectedAnimationConfiguration>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGravityConnectedAnimationConfiguration>(self.get());
 
                     return self.detach();
                 }
@@ -11584,7 +11584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static void _dealloc_GravityConnectedAnimationConfiguration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self) noexcept
+    static void _dealloc_GravityConnectedAnimationConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -11592,7 +11592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* GravityConnectedAnimationConfiguration_get_IsShadowEnabled(py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self, void* /*unused*/) noexcept
+    static PyObject* GravityConnectedAnimationConfiguration_get_IsShadowEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -11618,7 +11618,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int GravityConnectedAnimationConfiguration_put_IsShadowEnabled(py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    static int GravityConnectedAnimationConfiguration_put_IsShadowEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -11698,7 +11698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_GravityConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GravityConnectedAnimationConfiguration};
@@ -12625,7 +12625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_NavigationTransitionInfo(py::wrapper::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo* self) noexcept
+    static void _dealloc_NavigationTransitionInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12691,7 +12691,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_NavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationTransitionInfo};
@@ -12979,7 +12979,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_ObjectKeyFrame(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame* self) noexcept
+    static void _dealloc_ObjectKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -12987,7 +12987,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* ObjectKeyFrame_get_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* ObjectKeyFrame_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13013,7 +13013,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int ObjectKeyFrame_put_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ObjectKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13048,7 +13048,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* ObjectKeyFrame_get_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* ObjectKeyFrame_get_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13074,7 +13074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int ObjectKeyFrame_put_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int ObjectKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -13207,7 +13207,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ObjectKeyFrame};
@@ -14981,7 +14981,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_PointKeyFrame(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame* self) noexcept
+    static void _dealloc_PointKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -14989,7 +14989,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* PointKeyFrame_get_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* PointKeyFrame_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15015,7 +15015,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int PointKeyFrame_put_Value(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int PointKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15050,7 +15050,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* PointKeyFrame_get_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame* self, void* /*unused*/) noexcept
+    static PyObject* PointKeyFrame_get_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -15076,7 +15076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int PointKeyFrame_put_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
+    static int PointKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -15209,7 +15209,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrame",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PointKeyFrame};
@@ -23388,7 +23388,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_Timeline(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self) noexcept
+    static void _dealloc_Timeline(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -23396,7 +23396,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* Timeline_get_SpeedRatio(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_SpeedRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23422,7 +23422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_SpeedRatio(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_SpeedRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23457,7 +23457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_get_RepeatBehavior(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_RepeatBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23483,7 +23483,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_RepeatBehavior(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_RepeatBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23518,7 +23518,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_get_FillBehavior(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_FillBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23544,7 +23544,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_FillBehavior(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_FillBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23579,7 +23579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_get_Duration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23605,7 +23605,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_Duration(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23640,7 +23640,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_get_BeginTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_BeginTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23666,7 +23666,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_BeginTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_BeginTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23701,7 +23701,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_get_AutoReverse(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
+    static PyObject* Timeline_get_AutoReverse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -23727,7 +23727,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static int Timeline_put_AutoReverse(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Timeline_put_AutoReverse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -23979,7 +23979,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg) noexcept
+    static PyObject* Timeline_add_Completed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -24007,7 +24007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* Timeline_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg) noexcept
+    static PyObject* Timeline_remove_Completed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -24088,7 +24088,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Timeline = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Timeline",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Timeline};
@@ -24858,7 +24858,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         return nullptr;
     }
 
-    static void _dealloc_Transition(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Transition* self) noexcept
+    static void _dealloc_Transition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -24910,7 +24910,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Transition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Transition",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Transition),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transition};

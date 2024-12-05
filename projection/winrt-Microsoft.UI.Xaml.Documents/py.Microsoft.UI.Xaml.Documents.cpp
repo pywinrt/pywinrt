@@ -33,7 +33,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         return nullptr;
     }
 
-    static void _dealloc_Block(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self) noexcept
+    static void _dealloc_Block(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -41,7 +41,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         Py_DECREF(tp);
     }
 
-    static PyObject* Block_get_TextAlignment(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, void* /*unused*/) noexcept
+    static PyObject* Block_get_TextAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -67,7 +67,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Block_put_TextAlignment(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Block_put_TextAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -102,7 +102,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* Block_get_Margin(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, void* /*unused*/) noexcept
+    static PyObject* Block_get_Margin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -128,7 +128,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Block_put_Margin(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Block_put_Margin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -163,7 +163,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* Block_get_LineStackingStrategy(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, void* /*unused*/) noexcept
+    static PyObject* Block_get_LineStackingStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Block_put_LineStackingStrategy(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Block_put_LineStackingStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -224,7 +224,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* Block_get_LineHeight(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, void* /*unused*/) noexcept
+    static PyObject* Block_get_LineHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -250,7 +250,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Block_put_LineHeight(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Block_put_LineHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -285,7 +285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* Block_get_HorizontalTextAlignment(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, void* /*unused*/) noexcept
+    static PyObject* Block_get_HorizontalTextAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Block_put_HorizontalTextAlignment(py::wrapper::Microsoft::UI::Xaml::Documents::Block* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Block_put_HorizontalTextAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -525,7 +525,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Block = {
         "winrt._winrt_microsoft_ui_xaml_documents.Block",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Block),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Block};
@@ -3988,7 +3988,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         return nullptr;
     }
 
-    static void _dealloc_Inline(py::wrapper::Microsoft::UI::Xaml::Documents::Inline* self) noexcept
+    static void _dealloc_Inline(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -4040,7 +4040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Inline = {
         "winrt._winrt_microsoft_ui_xaml_documents.Inline",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Inline),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Inline};
@@ -5642,8 +5642,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::Span*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::Span*>(self.get())->obj = winrt::make<PyWinrtSpan>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSpan>(self.get());
 
                     return self.detach();
                 }
@@ -5664,7 +5664,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static void _dealloc_Span(py::wrapper::Microsoft::UI::Xaml::Documents::Span* self) noexcept
+    static void _dealloc_Span(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5672,7 +5672,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         Py_DECREF(tp);
     }
 
-    static PyObject* Span_get_Inlines(py::wrapper::Microsoft::UI::Xaml::Documents::Span* self, void* /*unused*/) noexcept
+    static PyObject* Span_get_Inlines(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5698,7 +5698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int Span_put_Inlines(py::wrapper::Microsoft::UI::Xaml::Documents::Span* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Span_put_Inlines(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5778,7 +5778,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Span = {
         "winrt._winrt_microsoft_ui_xaml_documents.Span",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Span),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Span};
@@ -5817,7 +5817,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         return nullptr;
     }
 
-    static void _dealloc_TextElement(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self) noexcept
+    static void _dealloc_TextElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -5825,7 +5825,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         Py_DECREF(tp);
     }
 
-    static PyObject* TextElement_FindName(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* args) noexcept
+    static PyObject* TextElement_FindName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5869,7 +5869,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         return nullptr;
     }
 
-    static PyObject* TextElement_get_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5895,7 +5895,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5930,7 +5930,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_TextDecorations(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_TextDecorations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -5956,7 +5956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_TextDecorations(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_TextDecorations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -5991,7 +5991,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_Language(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_Language(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6017,7 +6017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_Language(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_Language(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6052,7 +6052,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_KeyTipVerticalOffset(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_KeyTipVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6078,7 +6078,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_KeyTipVerticalOffset(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_KeyTipVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6113,7 +6113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_KeyTipPlacementMode(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_KeyTipPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6139,7 +6139,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_KeyTipPlacementMode(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_KeyTipPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6174,7 +6174,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_KeyTipHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_KeyTipHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6200,7 +6200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_KeyTipHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_KeyTipHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6235,7 +6235,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_IsTextScaleFactorEnabled(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_IsTextScaleFactorEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6261,7 +6261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_IsTextScaleFactorEnabled(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_IsTextScaleFactorEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6296,7 +6296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_IsAccessKeyScope(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_IsAccessKeyScope(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6322,7 +6322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_IsAccessKeyScope(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_IsAccessKeyScope(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6357,7 +6357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_Foreground(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_Foreground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6383,7 +6383,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_Foreground(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_Foreground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6418,7 +6418,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_FontWeight(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_FontWeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6444,7 +6444,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_FontWeight(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_FontWeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6479,7 +6479,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_FontStyle(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_FontStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6505,7 +6505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_FontStyle(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_FontStyle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6540,7 +6540,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_FontStretch(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_FontStretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6566,7 +6566,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_FontStretch(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_FontStretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6601,7 +6601,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_FontSize(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_FontSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6627,7 +6627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_FontSize(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_FontSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6662,7 +6662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_FontFamily(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_FontFamily(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6688,7 +6688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_FontFamily(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_FontFamily(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6723,7 +6723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_ExitDisplayModeOnAccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6749,7 +6749,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_ExitDisplayModeOnAccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6784,7 +6784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_CharacterSpacing(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_CharacterSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6810,7 +6810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_CharacterSpacing(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_CharacterSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6845,7 +6845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6871,7 +6871,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6906,7 +6906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_AccessKeyScopeOwner(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_AccessKeyScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6932,7 +6932,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_AccessKeyScopeOwner(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_AccessKeyScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -6967,7 +6967,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_AccessKey(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -6993,7 +6993,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextElement_put_AccessKey(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextElement_put_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -7028,7 +7028,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_ContentEnd(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_ContentEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7054,7 +7054,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_ContentStart(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_ContentStart(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7080,7 +7080,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_ElementEnd(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_ElementEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7106,7 +7106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_ElementStart(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_ElementStart(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7132,7 +7132,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_get_Name(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
+    static PyObject* TextElement_get_Name(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -7626,7 +7626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_add_AccessKeyDisplayDismissed(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_add_AccessKeyDisplayDismissed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7654,7 +7654,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_remove_AccessKeyDisplayDismissed(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_remove_AccessKeyDisplayDismissed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7683,7 +7683,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_add_AccessKeyDisplayRequested(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_add_AccessKeyDisplayRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7711,7 +7711,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_remove_AccessKeyDisplayRequested(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_remove_AccessKeyDisplayRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7740,7 +7740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_add_AccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_add_AccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7768,7 +7768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_remove_AccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* arg) noexcept
+    static PyObject* TextElement_remove_AccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -7873,7 +7873,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextElement = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextElement",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextElement};
@@ -7972,8 +7972,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter*>(self.get())->obj = winrt::make<PyWinrtTextHighlighter>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTextHighlighter>(self.get());
 
                     return self.detach();
                 }
@@ -7994,7 +7994,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static void _dealloc_TextHighlighter(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self) noexcept
+    static void _dealloc_TextHighlighter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8002,7 +8002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         Py_DECREF(tp);
     }
 
-    static PyObject* TextHighlighter_get_Foreground(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self, void* /*unused*/) noexcept
+    static PyObject* TextHighlighter_get_Foreground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8028,7 +8028,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextHighlighter_put_Foreground(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextHighlighter_put_Foreground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8063,7 +8063,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextHighlighter_get_Background(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self, void* /*unused*/) noexcept
+    static PyObject* TextHighlighter_get_Background(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8089,7 +8089,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextHighlighter_put_Background(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TextHighlighter_put_Background(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -8124,7 +8124,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextHighlighter_get_Ranges(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter* self, void* /*unused*/) noexcept
+    static PyObject* TextHighlighter_get_Ranges(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -8249,7 +8249,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextHighlighter = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextHighlighter",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextHighlighter};
@@ -8290,7 +8290,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         return nullptr;
     }
 
-    static void _dealloc_TextHighlighterBase(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighterBase* self) noexcept
+    static void _dealloc_TextHighlighterBase(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -8342,7 +8342,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextHighlighterBase = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextHighlighterBase",
-        sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighterBase),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextHighlighterBase};

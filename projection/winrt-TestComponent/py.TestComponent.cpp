@@ -168,8 +168,8 @@ namespace py::cpp::TestComponent
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get());
 
                     return self.detach();
                 }
@@ -197,8 +197,8 @@ namespace py::cpp::TestComponent
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::TestComponent::Composable*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get(), param0);
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComposable>(self.get(), param0);
 
                     return self.detach();
                 }
@@ -219,7 +219,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static void _dealloc_Composable(py::wrapper::TestComponent::Composable* self) noexcept
+    static void _dealloc_Composable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -352,7 +352,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Composable_Four(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    static PyObject* Composable_Four(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -375,7 +375,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Composable_One(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    static PyObject* Composable_One(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -398,7 +398,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Composable_Three(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    static PyObject* Composable_Three(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -421,7 +421,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Composable_Two(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    static PyObject* Composable_Two(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -444,7 +444,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Composable_get_Value(py::wrapper::TestComponent::Composable* self, void* /*unused*/) noexcept
+    static PyObject* Composable_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -457,7 +457,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Composable_put_Value(py::wrapper::TestComponent::Composable* self, PyObject* arg, void* /*unused*/) noexcept
+    static int Composable_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (arg == nullptr)
         {
@@ -528,7 +528,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Composable = {
         "winrt._winrt_testcomponent.Composable",
-        sizeof(py::wrapper::TestComponent::Composable),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Composable};
@@ -614,8 +614,8 @@ namespace py::cpp::TestComponent
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Derived*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::TestComponent::Derived*>(self.get())->obj = winrt::make<PyWinrtDerived>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDerived>(self.get());
 
                     return self.detach();
                 }
@@ -636,7 +636,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static void _dealloc_Derived(py::wrapper::TestComponent::Derived* self) noexcept
+    static void _dealloc_Derived(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -688,7 +688,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Derived = {
         "winrt._winrt_testcomponent.Derived",
-        sizeof(py::wrapper::TestComponent::Derived),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Derived};
@@ -845,8 +845,8 @@ namespace py::cpp::TestComponent
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::OverloadClass*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::TestComponent::OverloadClass*>(self.get())->obj = winrt::make<PyWinrtOverloadClass>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtOverloadClass>(self.get());
 
                     return self.detach();
                 }
@@ -867,7 +867,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static void _dealloc_OverloadClass(py::wrapper::TestComponent::OverloadClass* self) noexcept
+    static void _dealloc_OverloadClass(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -875,7 +875,7 @@ namespace py::cpp::TestComponent
         Py_DECREF(tp);
     }
 
-    static PyObject* OverloadClass_Overload(py::wrapper::TestComponent::OverloadClass* self, PyObject* args) noexcept
+    static PyObject* OverloadClass_Overload(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -965,7 +965,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_OverloadClass = {
         "winrt._winrt_testcomponent.OverloadClass",
-        sizeof(py::wrapper::TestComponent::OverloadClass),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_OverloadClass};
@@ -1072,8 +1072,8 @@ namespace py::cpp::TestComponent
                         return nullptr;
                     }
 
-                    std::construct_at(&reinterpret_cast<py::wrapper::TestComponent::Override*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::wrapper::TestComponent::Override*>(self.get())->obj = winrt::make<PyWinrtOverride>(self.get());
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtOverride>(self.get());
 
                     return self.detach();
                 }
@@ -1094,7 +1094,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static void _dealloc_Override(py::wrapper::TestComponent::Override* self) noexcept
+    static void _dealloc_Override(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
         std::destroy_at(&self->obj);
@@ -1102,7 +1102,7 @@ namespace py::cpp::TestComponent
         Py_DECREF(tp);
     }
 
-    static PyObject* Override_CallOverridable(py::wrapper::TestComponent::Override* self, PyObject* args) noexcept
+    static PyObject* Override_CallOverridable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1126,7 +1126,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_CallProtected(py::wrapper::TestComponent::Override* self, PyObject* args) noexcept
+    static PyObject* Override_CallProtected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1162,7 +1162,7 @@ namespace py::cpp::TestComponent
         return nullptr;
     }
 
-    static PyObject* Override_add_OverridableCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    static PyObject* Override_add_OverridableCalled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1177,7 +1177,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_remove_OverridableCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    static PyObject* Override_remove_OverridableCalled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1193,7 +1193,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_add_ProtectedCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    static PyObject* Override_add_ProtectedCalled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1208,7 +1208,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_remove_ProtectedCalled(py::wrapper::TestComponent::Override* self, PyObject* arg) noexcept
+    static PyObject* Override_remove_ProtectedCalled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
         {
@@ -1276,7 +1276,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Override = {
         "winrt._winrt_testcomponent.Override",
-        sizeof(py::wrapper::TestComponent::Override),
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Override};
