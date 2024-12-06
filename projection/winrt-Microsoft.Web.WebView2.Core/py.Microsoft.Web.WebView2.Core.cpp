@@ -18510,6 +18510,17 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreWebView2DispatchAdapter};
 
+    static PyType_Slot type_slots_ImplementsICoreWebView2DispatchAdapter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreWebView2DispatchAdapter = {
+        "winrt._winrt_microsoft_web_webview2_core.ImplementsICoreWebView2DispatchAdapter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreWebView2DispatchAdapter};
+
     // ----- CoreWebView2PhysicalKeyStatus struct --------------------
 
     winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>* _new_CoreWebView2PhysicalKeyStatus(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19359,6 +19370,17 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
 
     py::pytype_handle ICoreWebView2DispatchAdapter_type{py::register_python_type(module.get(), &type_spec_ICoreWebView2DispatchAdapter, object_bases.get(), nullptr)};
     if (!ICoreWebView2DispatchAdapter_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICoreWebView2DispatchAdapter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreWebView2DispatchAdapter, nullptr))};
+    if (!ImplementsICoreWebView2DispatchAdapter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreWebView2DispatchAdapter_type.get()) == -1)
     {
         return nullptr;
     }

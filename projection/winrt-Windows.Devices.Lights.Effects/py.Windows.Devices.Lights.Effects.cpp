@@ -3644,6 +3644,17 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILampArrayEffect};
 
+    static PyType_Slot type_slots_ImplementsILampArrayEffect[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILampArrayEffect = {
+        "winrt._winrt_windows_devices_lights_effects.ImplementsILampArrayEffect",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILampArrayEffect};
+
     // ----- Windows.Devices.Lights.Effects Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Lights.Effects");
@@ -3745,6 +3756,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
 
     py::pytype_handle ILampArrayEffect_type{py::register_python_type(module.get(), &type_spec_ILampArrayEffect, object_bases.get(), nullptr)};
     if (!ILampArrayEffect_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILampArrayEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILampArrayEffect, nullptr))};
+    if (!ImplementsILampArrayEffect_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILampArrayEffect_type.get()) == -1)
     {
         return nullptr;
     }

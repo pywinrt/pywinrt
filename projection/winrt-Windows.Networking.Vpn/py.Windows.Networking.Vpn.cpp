@@ -11259,6 +11259,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnChannelStatics};
 
+    static PyType_Slot type_slots_ImplementsIVpnChannelStatics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnChannelStatics = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnChannelStatics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnChannelStatics};
+
     // ----- IVpnCredential interface --------------------
 
     static PyObject* _new_IVpnCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11432,6 +11443,17 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCredential};
+
+    static PyType_Slot type_slots_ImplementsIVpnCredential[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnCredential = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnCredential",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnCredential};
 
     // ----- IVpnCustomPrompt interface --------------------
 
@@ -11685,6 +11707,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCustomPrompt};
 
+    static PyType_Slot type_slots_ImplementsIVpnCustomPrompt[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnCustomPrompt = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnCustomPrompt",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnCustomPrompt};
+
     // ----- IVpnCustomPromptElement interface --------------------
 
     static PyObject* _new_IVpnCustomPromptElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11937,6 +11970,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCustomPromptElement};
 
+    static PyType_Slot type_slots_ImplementsIVpnCustomPromptElement[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnCustomPromptElement = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnCustomPromptElement",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnCustomPromptElement};
+
     // ----- IVpnDomainNameInfoFactory interface --------------------
 
     static PyObject* _new_IVpnDomainNameInfoFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12045,6 +12089,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnDomainNameInfoFactory};
 
+    static PyType_Slot type_slots_ImplementsIVpnDomainNameInfoFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnDomainNameInfoFactory = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnDomainNameInfoFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnDomainNameInfoFactory};
+
     // ----- IVpnInterfaceIdFactory interface --------------------
 
     static PyObject* _new_IVpnInterfaceIdFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12149,6 +12204,17 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnInterfaceIdFactory};
+
+    static PyType_Slot type_slots_ImplementsIVpnInterfaceIdFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnInterfaceIdFactory = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnInterfaceIdFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnInterfaceIdFactory};
 
     // ----- IVpnNamespaceInfoFactory interface --------------------
 
@@ -12257,6 +12323,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnNamespaceInfoFactory};
 
+    static PyType_Slot type_slots_ImplementsIVpnNamespaceInfoFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnNamespaceInfoFactory = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnNamespaceInfoFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnNamespaceInfoFactory};
+
     // ----- IVpnPacketBufferFactory interface --------------------
 
     static PyObject* _new_IVpnPacketBufferFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12363,6 +12440,17 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPacketBufferFactory};
+
+    static PyType_Slot type_slots_ImplementsIVpnPacketBufferFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnPacketBufferFactory = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnPacketBufferFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnPacketBufferFactory};
 
     // ----- IVpnPlugIn interface --------------------
 
@@ -12642,6 +12730,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPlugIn};
 
+    static PyType_Slot type_slots_ImplementsIVpnPlugIn[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnPlugIn = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnPlugIn",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnPlugIn};
+
     // ----- IVpnPlugInReconnectTransport interface --------------------
 
     static PyObject* _new_IVpnPlugInReconnectTransport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12748,6 +12847,17 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPlugInReconnectTransport};
+
+    static PyType_Slot type_slots_ImplementsIVpnPlugInReconnectTransport[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnPlugInReconnectTransport = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnPlugInReconnectTransport",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnPlugInReconnectTransport};
 
     // ----- IVpnProfile interface --------------------
 
@@ -13109,6 +13219,17 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnProfile};
 
+    static PyType_Slot type_slots_ImplementsIVpnProfile[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnProfile = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnProfile",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnProfile};
+
     // ----- IVpnRouteFactory interface --------------------
 
     static PyObject* _new_IVpnRouteFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13214,6 +13335,17 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnRouteFactory};
+
+    static PyType_Slot type_slots_ImplementsIVpnRouteFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVpnRouteFactory = {
+        "winrt._winrt_windows_networking_vpn.ImplementsIVpnRouteFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVpnRouteFactory};
 
     // ----- Windows.Networking.Vpn Initialization --------------------
 
@@ -13470,8 +13602,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnChannelStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnChannelStatics, nullptr))};
+    if (!ImplementsIVpnChannelStatics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnChannelStatics_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnCredential_type{py::register_python_type(module.get(), &type_spec_IVpnCredential, object_bases.get(), nullptr)};
     if (!IVpnCredential_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnCredential_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnCredential, nullptr))};
+    if (!ImplementsIVpnCredential_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnCredential_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13482,8 +13636,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnCustomPrompt_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnCustomPrompt, nullptr))};
+    if (!ImplementsIVpnCustomPrompt_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnCustomPrompt_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnCustomPromptElement_type{py::register_python_type(module.get(), &type_spec_IVpnCustomPromptElement, object_bases.get(), nullptr)};
     if (!IVpnCustomPromptElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnCustomPromptElement_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnCustomPromptElement, nullptr))};
+    if (!ImplementsIVpnCustomPromptElement_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnCustomPromptElement_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13494,8 +13670,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnDomainNameInfoFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnDomainNameInfoFactory, nullptr))};
+    if (!ImplementsIVpnDomainNameInfoFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnDomainNameInfoFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnInterfaceIdFactory_type{py::register_python_type(module.get(), &type_spec_IVpnInterfaceIdFactory, object_bases.get(), nullptr)};
     if (!IVpnInterfaceIdFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnInterfaceIdFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnInterfaceIdFactory, nullptr))};
+    if (!ImplementsIVpnInterfaceIdFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnInterfaceIdFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13506,8 +13704,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnNamespaceInfoFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnNamespaceInfoFactory, nullptr))};
+    if (!ImplementsIVpnNamespaceInfoFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnNamespaceInfoFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnPacketBufferFactory_type{py::register_python_type(module.get(), &type_spec_IVpnPacketBufferFactory, object_bases.get(), nullptr)};
     if (!IVpnPacketBufferFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnPacketBufferFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnPacketBufferFactory, nullptr))};
+    if (!ImplementsIVpnPacketBufferFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnPacketBufferFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13518,8 +13738,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnPlugIn_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnPlugIn, nullptr))};
+    if (!ImplementsIVpnPlugIn_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnPlugIn_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnPlugInReconnectTransport_type{py::register_python_type(module.get(), &type_spec_IVpnPlugInReconnectTransport, object_bases.get(), nullptr)};
     if (!IVpnPlugInReconnectTransport_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnPlugInReconnectTransport_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnPlugInReconnectTransport, nullptr))};
+    if (!ImplementsIVpnPlugInReconnectTransport_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnPlugInReconnectTransport_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13530,8 +13772,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVpnProfile_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnProfile, nullptr))};
+    if (!ImplementsIVpnProfile_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnProfile_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVpnRouteFactory_type{py::register_python_type(module.get(), &type_spec_IVpnRouteFactory, object_bases.get(), nullptr)};
     if (!IVpnRouteFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVpnRouteFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVpnRouteFactory, nullptr))};
+    if (!ImplementsIVpnRouteFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVpnRouteFactory_type.get()) == -1)
     {
         return nullptr;
     }

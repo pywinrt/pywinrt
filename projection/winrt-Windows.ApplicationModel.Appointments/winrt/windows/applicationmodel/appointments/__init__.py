@@ -24,12 +24,8 @@ from winrt._winrt_windows_applicationmodel_appointments import (
     AppointmentStoreNotificationTriggerDetails,
     FindAppointmentsOptions,
     IAppointmentParticipant,
+    ImplementsIAppointmentParticipant,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_appointments import (
-        ImplementsIAppointmentParticipant,
-    )
 
 __all__ = [
     "AppointmentBusyStatus",
@@ -69,6 +65,7 @@ __all__ = [
     "AppointmentStoreNotificationTriggerDetails",
     "FindAppointmentsOptions",
     "IAppointmentParticipant",
+    "ImplementsIAppointmentParticipant",
 ]
 
 class AppointmentBusyStatus(enum.IntEnum):

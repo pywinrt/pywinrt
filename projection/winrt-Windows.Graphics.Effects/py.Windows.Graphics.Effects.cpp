@@ -132,6 +132,17 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGraphicsEffect};
 
+    static PyType_Slot type_slots_ImplementsIGraphicsEffect[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGraphicsEffect = {
+        "winrt._winrt_windows_graphics_effects.ImplementsIGraphicsEffect",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGraphicsEffect};
+
     // ----- IGraphicsEffectSource interface --------------------
 
     static PyObject* _new_IGraphicsEffectSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -198,6 +209,17 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGraphicsEffectSource};
 
+    static PyType_Slot type_slots_ImplementsIGraphicsEffectSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGraphicsEffectSource = {
+        "winrt._winrt_windows_graphics_effects.ImplementsIGraphicsEffectSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGraphicsEffectSource};
+
     // ----- Windows.Graphics.Effects Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Graphics.Effects");
@@ -249,8 +271,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGraphicsEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGraphicsEffect, nullptr))};
+    if (!ImplementsIGraphicsEffect_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGraphicsEffect_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGraphicsEffectSource_type{py::register_python_type(module.get(), &type_spec_IGraphicsEffectSource, object_bases.get(), nullptr)};
     if (!IGraphicsEffectSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGraphicsEffectSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGraphicsEffectSource, nullptr))};
+    if (!ImplementsIGraphicsEffectSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGraphicsEffectSource_type.get()) == -1)
     {
         return nullptr;
     }

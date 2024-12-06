@@ -1670,6 +1670,17 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDropOperationTarget};
 
+    static PyType_Slot type_slots_ImplementsIDropOperationTarget[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDropOperationTarget = {
+        "winrt._winrt_microsoft_ui_input_dragdrop.ImplementsIDropOperationTarget",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDropOperationTarget};
+
     // ----- Microsoft.UI.Input.DragDrop Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Input.DragDrop");
@@ -1753,6 +1764,17 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input_dragdrop(void) noexcept
 
     py::pytype_handle IDropOperationTarget_type{py::register_python_type(module.get(), &type_spec_IDropOperationTarget, object_bases.get(), nullptr)};
     if (!IDropOperationTarget_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDropOperationTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDropOperationTarget, nullptr))};
+    if (!ImplementsIDropOperationTarget_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDropOperationTarget_type.get()) == -1)
     {
         return nullptr;
     }

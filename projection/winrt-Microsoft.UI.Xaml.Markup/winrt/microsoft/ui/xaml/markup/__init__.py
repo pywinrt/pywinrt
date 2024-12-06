@@ -11,34 +11,30 @@ from winrt._winrt_microsoft_ui_xaml_markup import (
     XamlMarkupHelper,
     XamlReader,
     IComponentConnector,
+    ImplementsIComponentConnector,
     IDataTemplateComponent,
+    ImplementsIDataTemplateComponent,
     IProvideValueTarget,
+    ImplementsIProvideValueTarget,
     IRootObjectProvider,
+    ImplementsIRootObjectProvider,
     IUriContext,
+    ImplementsIUriContext,
     IXamlBindScopeDiagnostics,
+    ImplementsIXamlBindScopeDiagnostics,
     IXamlMember,
+    ImplementsIXamlMember,
     IXamlMetadataProvider,
+    ImplementsIXamlMetadataProvider,
     IXamlType,
+    ImplementsIXamlType,
     IXamlTypeResolver,
+    ImplementsIXamlTypeResolver,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_microsoft_ui_xaml_markup import (
         MarkupExtension_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_xaml_markup import (
-        ImplementsIComponentConnector,
-        ImplementsIDataTemplateComponent,
-        ImplementsIProvideValueTarget,
-        ImplementsIRootObjectProvider,
-        ImplementsIUriContext,
-        ImplementsIXamlBindScopeDiagnostics,
-        ImplementsIXamlMember,
-        ImplementsIXamlMetadataProvider,
-        ImplementsIXamlType,
-        ImplementsIXamlTypeResolver,
     )
 
 __all__ = [
@@ -51,14 +47,24 @@ __all__ = [
     "XamlMarkupHelper",
     "XamlReader",
     "IComponentConnector",
+    "ImplementsIComponentConnector",
     "IDataTemplateComponent",
+    "ImplementsIDataTemplateComponent",
     "IProvideValueTarget",
+    "ImplementsIProvideValueTarget",
     "IRootObjectProvider",
+    "ImplementsIRootObjectProvider",
     "IUriContext",
+    "ImplementsIUriContext",
     "IXamlBindScopeDiagnostics",
+    "ImplementsIXamlBindScopeDiagnostics",
     "IXamlMember",
+    "ImplementsIXamlMember",
     "IXamlMetadataProvider",
+    "ImplementsIXamlMetadataProvider",
     "IXamlType",
+    "ImplementsIXamlType",
     "IXamlTypeResolver",
+    "ImplementsIXamlTypeResolver",
 ]
 

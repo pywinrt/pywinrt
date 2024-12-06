@@ -9,12 +9,8 @@ from winrt._winrt_windows_data_json import (
     JsonObject,
     JsonValue,
     IJsonValue,
+    ImplementsIJsonValue,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_data_json import (
-        ImplementsIJsonValue,
-    )
 
 __all__ = [
     "JsonErrorStatus",
@@ -24,6 +20,7 @@ __all__ = [
     "JsonObject",
     "JsonValue",
     "IJsonValue",
+    "ImplementsIJsonValue",
 ]
 
 class JsonErrorStatus(enum.IntEnum):

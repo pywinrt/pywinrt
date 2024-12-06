@@ -9196,6 +9196,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDClosedCaptionDataReceivedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsINDClosedCaptionDataReceivedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDClosedCaptionDataReceivedEventArgs = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDClosedCaptionDataReceivedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDClosedCaptionDataReceivedEventArgs};
+
     // ----- INDCustomData interface --------------------
 
     static PyObject* _new_INDCustomData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9315,6 +9326,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDCustomData};
+
+    static PyType_Slot type_slots_ImplementsINDCustomData[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDCustomData = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDCustomData",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDCustomData};
 
     // ----- INDDownloadEngine interface --------------------
 
@@ -9685,6 +9707,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDDownloadEngine};
 
+    static PyType_Slot type_slots_ImplementsINDDownloadEngine[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDDownloadEngine = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDDownloadEngine",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDDownloadEngine};
+
     // ----- INDDownloadEngineNotifier interface --------------------
 
     static PyObject* _new_INDDownloadEngineNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9986,6 +10019,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDDownloadEngineNotifier};
 
+    static PyType_Slot type_slots_ImplementsINDDownloadEngineNotifier[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDDownloadEngineNotifier = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDDownloadEngineNotifier",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDDownloadEngineNotifier};
+
     // ----- INDLicenseFetchCompletedEventArgs interface --------------------
 
     static PyObject* _new_INDLicenseFetchCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10078,6 +10122,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDLicenseFetchCompletedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsINDLicenseFetchCompletedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDLicenseFetchCompletedEventArgs = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchCompletedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDLicenseFetchCompletedEventArgs};
 
     // ----- INDLicenseFetchDescriptor interface --------------------
 
@@ -10261,6 +10316,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDLicenseFetchDescriptor};
 
+    static PyType_Slot type_slots_ImplementsINDLicenseFetchDescriptor[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDLicenseFetchDescriptor = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchDescriptor",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDLicenseFetchDescriptor};
+
     // ----- INDLicenseFetchResult interface --------------------
 
     static PyObject* _new_INDLicenseFetchResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10353,6 +10419,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDLicenseFetchResult};
+
+    static PyType_Slot type_slots_ImplementsINDLicenseFetchResult[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDLicenseFetchResult = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchResult",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDLicenseFetchResult};
 
     // ----- INDMessenger interface --------------------
 
@@ -10584,6 +10661,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDMessenger};
 
+    static PyType_Slot type_slots_ImplementsINDMessenger[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDMessenger = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDMessenger",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDMessenger};
+
     // ----- INDProximityDetectionCompletedEventArgs interface --------------------
 
     static PyObject* _new_INDProximityDetectionCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10676,6 +10764,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDProximityDetectionCompletedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsINDProximityDetectionCompletedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDProximityDetectionCompletedEventArgs = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDProximityDetectionCompletedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDProximityDetectionCompletedEventArgs};
 
     // ----- INDRegistrationCompletedEventArgs interface --------------------
 
@@ -10859,6 +10958,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDRegistrationCompletedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsINDRegistrationCompletedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDRegistrationCompletedEventArgs = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDRegistrationCompletedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDRegistrationCompletedEventArgs};
+
     // ----- INDSendResult interface --------------------
 
     static PyObject* _new_INDSendResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10952,6 +11062,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDSendResult};
 
+    static PyType_Slot type_slots_ImplementsINDSendResult[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDSendResult = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDSendResult",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDSendResult};
+
     // ----- INDStartResult interface --------------------
 
     static PyObject* _new_INDStartResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11044,6 +11165,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDStartResult};
+
+    static PyType_Slot type_slots_ImplementsINDStartResult[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDStartResult = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDStartResult",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDStartResult};
 
     // ----- INDStorageFileHelper interface --------------------
 
@@ -11149,6 +11281,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDStorageFileHelper};
+
+    static PyType_Slot type_slots_ImplementsINDStorageFileHelper[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDStorageFileHelper = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDStorageFileHelper",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDStorageFileHelper};
 
     // ----- INDStreamParser interface --------------------
 
@@ -11411,6 +11554,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDStreamParser};
 
+    static PyType_Slot type_slots_ImplementsINDStreamParser[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDStreamParser = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDStreamParser",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDStreamParser};
+
     // ----- INDStreamParserNotifier interface --------------------
 
     static PyObject* _new_INDStreamParserNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11644,6 +11798,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDStreamParserNotifier};
+
+    static PyType_Slot type_slots_ImplementsINDStreamParserNotifier[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDStreamParserNotifier = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDStreamParserNotifier",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDStreamParserNotifier};
 
     // ----- INDTransmitterProperties interface --------------------
 
@@ -12008,6 +12173,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_INDTransmitterProperties};
 
+    static PyType_Slot type_slots_ImplementsINDTransmitterProperties[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINDTransmitterProperties = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsINDTransmitterProperties",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINDTransmitterProperties};
+
     // ----- IPlayReadyDomain interface --------------------
 
     static PyObject* _new_IPlayReadyDomain(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12208,6 +12384,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyDomain};
+
+    static PyType_Slot type_slots_ImplementsIPlayReadyDomain[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyDomain = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyDomain",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyDomain};
 
     // ----- IPlayReadyLicense interface --------------------
 
@@ -12475,6 +12662,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyLicense};
+
+    static PyType_Slot type_slots_ImplementsIPlayReadyLicense[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyLicense = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicense",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyLicense};
 
     // ----- IPlayReadyLicenseAcquisitionServiceRequest interface --------------------
 
@@ -13021,6 +13219,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyLicenseAcquisitionServiceRequest};
 
+    static PyType_Slot type_slots_ImplementsIPlayReadyLicenseAcquisitionServiceRequest[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyLicenseAcquisitionServiceRequest = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseAcquisitionServiceRequest",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyLicenseAcquisitionServiceRequest};
+
     // ----- IPlayReadyLicenseSession interface --------------------
 
     static PyObject* _new_IPlayReadyLicenseSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13163,6 +13372,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyLicenseSession};
+
+    static PyType_Slot type_slots_ImplementsIPlayReadyLicenseSession[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyLicenseSession = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseSession",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyLicenseSession};
 
     // ----- IPlayReadyLicenseSession2 interface --------------------
 
@@ -13346,6 +13566,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyLicenseSession2};
+
+    static PyType_Slot type_slots_ImplementsIPlayReadyLicenseSession2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyLicenseSession2 = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseSession2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyLicenseSession2};
 
     // ----- IPlayReadySecureStopServiceRequest interface --------------------
 
@@ -13903,6 +14134,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadySecureStopServiceRequest};
 
+    static PyType_Slot type_slots_ImplementsIPlayReadySecureStopServiceRequest[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadySecureStopServiceRequest = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadySecureStopServiceRequest",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadySecureStopServiceRequest};
+
     // ----- IPlayReadyServiceRequest interface --------------------
 
     static PyObject* _new_IPlayReadyServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14324,6 +14566,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPlayReadyServiceRequest};
 
+    static PyType_Slot type_slots_ImplementsIPlayReadyServiceRequest[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPlayReadyServiceRequest = {
+        "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyServiceRequest",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPlayReadyServiceRequest};
+
     // ----- Windows.Media.Protection.PlayReady Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Media.Protection.PlayReady");
@@ -14567,8 +14820,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDClosedCaptionDataReceivedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDClosedCaptionDataReceivedEventArgs, nullptr))};
+    if (!ImplementsINDClosedCaptionDataReceivedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDClosedCaptionDataReceivedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDCustomData_type{py::register_python_type(module.get(), &type_spec_INDCustomData, object_bases.get(), nullptr)};
     if (!INDCustomData_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDCustomData_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDCustomData, nullptr))};
+    if (!ImplementsINDCustomData_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDCustomData_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14579,8 +14854,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDDownloadEngine_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDDownloadEngine, nullptr))};
+    if (!ImplementsINDDownloadEngine_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDDownloadEngine_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDDownloadEngineNotifier_type{py::register_python_type(module.get(), &type_spec_INDDownloadEngineNotifier, object_bases.get(), nullptr)};
     if (!INDDownloadEngineNotifier_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDDownloadEngineNotifier_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDDownloadEngineNotifier, nullptr))};
+    if (!ImplementsINDDownloadEngineNotifier_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDDownloadEngineNotifier_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14591,8 +14888,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDLicenseFetchCompletedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDLicenseFetchCompletedEventArgs, nullptr))};
+    if (!ImplementsINDLicenseFetchCompletedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDLicenseFetchCompletedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDLicenseFetchDescriptor_type{py::register_python_type(module.get(), &type_spec_INDLicenseFetchDescriptor, object_bases.get(), nullptr)};
     if (!INDLicenseFetchDescriptor_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDLicenseFetchDescriptor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDLicenseFetchDescriptor, nullptr))};
+    if (!ImplementsINDLicenseFetchDescriptor_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDLicenseFetchDescriptor_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14603,8 +14922,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDLicenseFetchResult_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDLicenseFetchResult, nullptr))};
+    if (!ImplementsINDLicenseFetchResult_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDLicenseFetchResult_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDMessenger_type{py::register_python_type(module.get(), &type_spec_INDMessenger, object_bases.get(), nullptr)};
     if (!INDMessenger_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDMessenger_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDMessenger, nullptr))};
+    if (!ImplementsINDMessenger_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDMessenger_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14615,8 +14956,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDProximityDetectionCompletedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDProximityDetectionCompletedEventArgs, nullptr))};
+    if (!ImplementsINDProximityDetectionCompletedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDProximityDetectionCompletedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDRegistrationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_INDRegistrationCompletedEventArgs, object_bases.get(), nullptr)};
     if (!INDRegistrationCompletedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDRegistrationCompletedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDRegistrationCompletedEventArgs, nullptr))};
+    if (!ImplementsINDRegistrationCompletedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDRegistrationCompletedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14627,8 +14990,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDSendResult_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDSendResult, nullptr))};
+    if (!ImplementsINDSendResult_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDSendResult_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDStartResult_type{py::register_python_type(module.get(), &type_spec_INDStartResult, object_bases.get(), nullptr)};
     if (!INDStartResult_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDStartResult_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDStartResult, nullptr))};
+    if (!ImplementsINDStartResult_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDStartResult_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14639,8 +15024,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDStorageFileHelper_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDStorageFileHelper, nullptr))};
+    if (!ImplementsINDStorageFileHelper_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDStorageFileHelper_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDStreamParser_type{py::register_python_type(module.get(), &type_spec_INDStreamParser, object_bases.get(), nullptr)};
     if (!INDStreamParser_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDStreamParser_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDStreamParser, nullptr))};
+    if (!ImplementsINDStreamParser_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDStreamParser_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14651,8 +15058,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINDStreamParserNotifier_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDStreamParserNotifier, nullptr))};
+    if (!ImplementsINDStreamParserNotifier_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDStreamParserNotifier_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INDTransmitterProperties_type{py::register_python_type(module.get(), &type_spec_INDTransmitterProperties, object_bases.get(), nullptr)};
     if (!INDTransmitterProperties_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINDTransmitterProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINDTransmitterProperties, nullptr))};
+    if (!ImplementsINDTransmitterProperties_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINDTransmitterProperties_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14663,8 +15092,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPlayReadyDomain_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyDomain, nullptr))};
+    if (!ImplementsIPlayReadyDomain_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyDomain_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPlayReadyLicense_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicense, object_bases.get(), nullptr)};
     if (!IPlayReadyLicense_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPlayReadyLicense_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyLicense, nullptr))};
+    if (!ImplementsIPlayReadyLicense_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyLicense_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14675,8 +15126,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPlayReadyLicenseAcquisitionServiceRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyLicenseAcquisitionServiceRequest, nullptr))};
+    if (!ImplementsIPlayReadyLicenseAcquisitionServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyLicenseAcquisitionServiceRequest_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPlayReadyLicenseSession_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseSession, object_bases.get(), nullptr)};
     if (!IPlayReadyLicenseSession_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPlayReadyLicenseSession_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyLicenseSession, nullptr))};
+    if (!ImplementsIPlayReadyLicenseSession_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyLicenseSession_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14687,14 +15160,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPlayReadyLicenseSession2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyLicenseSession2, nullptr))};
+    if (!ImplementsIPlayReadyLicenseSession2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyLicenseSession2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPlayReadySecureStopServiceRequest_type{py::register_python_type(module.get(), &type_spec_IPlayReadySecureStopServiceRequest, object_bases.get(), nullptr)};
     if (!IPlayReadySecureStopServiceRequest_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPlayReadySecureStopServiceRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadySecureStopServiceRequest, nullptr))};
+    if (!ImplementsIPlayReadySecureStopServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadySecureStopServiceRequest_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPlayReadyServiceRequest_type{py::register_python_type(module.get(), &type_spec_IPlayReadyServiceRequest, object_bases.get(), nullptr)};
     if (!IPlayReadyServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPlayReadyServiceRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPlayReadyServiceRequest, nullptr))};
+    if (!ImplementsIPlayReadyServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPlayReadyServiceRequest_type.get()) == -1)
     {
         return nullptr;
     }

@@ -10709,6 +10709,17 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_TPFLAGS_DEFAULT,
         _type_slots_IControlChannelTriggerEventDetails};
 
+    static PyType_Slot type_slots_ImplementsIControlChannelTriggerEventDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIControlChannelTriggerEventDetails = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIControlChannelTriggerEventDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIControlChannelTriggerEventDetails};
+
     // ----- IControlChannelTriggerResetEventDetails interface --------------------
 
     static PyObject* _new_IControlChannelTriggerResetEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10855,6 +10866,17 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IControlChannelTriggerResetEventDetails};
+
+    static PyType_Slot type_slots_ImplementsIControlChannelTriggerResetEventDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIControlChannelTriggerResetEventDetails = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIControlChannelTriggerResetEventDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIControlChannelTriggerResetEventDetails};
 
     // ----- IWebSocket interface --------------------
 
@@ -11188,6 +11210,17 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebSocket};
 
+    static PyType_Slot type_slots_ImplementsIWebSocket[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebSocket = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocket",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebSocket};
+
     // ----- IWebSocketControl interface --------------------
 
     static PyObject* _new_IWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11466,6 +11499,17 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebSocketControl};
+
+    static PyType_Slot type_slots_ImplementsIWebSocketControl[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebSocketControl = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketControl",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebSocketControl};
 
     // ----- IWebSocketControl2 interface --------------------
 
@@ -11773,6 +11817,17 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebSocketControl2};
 
+    static PyType_Slot type_slots_ImplementsIWebSocketControl2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebSocketControl2 = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketControl2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebSocketControl2};
+
     // ----- IWebSocketInformation interface --------------------
 
     static PyObject* _new_IWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11919,6 +11974,17 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebSocketInformation};
+
+    static PyType_Slot type_slots_ImplementsIWebSocketInformation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebSocketInformation = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketInformation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebSocketInformation};
 
     // ----- IWebSocketInformation2 interface --------------------
 
@@ -12174,6 +12240,17 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebSocketInformation2};
+
+    static PyType_Slot type_slots_ImplementsIWebSocketInformation2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebSocketInformation2 = {
+        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketInformation2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebSocketInformation2};
 
     // ----- BandwidthStatistics struct --------------------
 
@@ -13128,8 +13205,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIControlChannelTriggerEventDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIControlChannelTriggerEventDetails, nullptr))};
+    if (!ImplementsIControlChannelTriggerEventDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIControlChannelTriggerEventDetails_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IControlChannelTriggerResetEventDetails_type{py::register_python_type(module.get(), &type_spec_IControlChannelTriggerResetEventDetails, object_bases.get(), nullptr)};
     if (!IControlChannelTriggerResetEventDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIControlChannelTriggerResetEventDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIControlChannelTriggerResetEventDetails, nullptr))};
+    if (!ImplementsIControlChannelTriggerResetEventDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIControlChannelTriggerResetEventDetails_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13140,8 +13239,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebSocket_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocket, nullptr))};
+    if (!ImplementsIWebSocket_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebSocket_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebSocketControl_type{py::register_python_type(module.get(), &type_spec_IWebSocketControl, object_bases.get(), nullptr)};
     if (!IWebSocketControl_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebSocketControl_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketControl, nullptr))};
+    if (!ImplementsIWebSocketControl_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebSocketControl_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13152,14 +13273,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebSocketControl2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketControl2, nullptr))};
+    if (!ImplementsIWebSocketControl2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebSocketControl2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_IWebSocketInformation, object_bases.get(), nullptr)};
     if (!IWebSocketInformation_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebSocketInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketInformation, nullptr))};
+    if (!ImplementsIWebSocketInformation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebSocketInformation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebSocketInformation2_type{py::register_python_type(module.get(), &type_spec_IWebSocketInformation2, object_bases.get(), nullptr)};
     if (!IWebSocketInformation2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebSocketInformation2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketInformation2, nullptr))};
+    if (!ImplementsIWebSocketInformation2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebSocketInformation2_type.get()) == -1)
     {
         return nullptr;
     }

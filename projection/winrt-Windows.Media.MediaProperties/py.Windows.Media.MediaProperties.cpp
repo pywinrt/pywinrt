@@ -8321,6 +8321,17 @@ namespace py::cpp::Windows::Media::MediaProperties
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaEncodingProperties};
 
+    static PyType_Slot type_slots_ImplementsIMediaEncodingProperties[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaEncodingProperties = {
+        "winrt._winrt_windows_media_mediaproperties.ImplementsIMediaEncodingProperties",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaEncodingProperties};
+
     // ----- Windows.Media.MediaProperties Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Media.MediaProperties");
@@ -8518,6 +8529,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
 
     py::pytype_handle IMediaEncodingProperties_type{py::register_python_type(module.get(), &type_spec_IMediaEncodingProperties, object_bases.get(), nullptr)};
     if (!IMediaEncodingProperties_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaEncodingProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaEncodingProperties, nullptr))};
+    if (!ImplementsIMediaEncodingProperties_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaEncodingProperties_type.get()) == -1)
     {
         return nullptr;
     }

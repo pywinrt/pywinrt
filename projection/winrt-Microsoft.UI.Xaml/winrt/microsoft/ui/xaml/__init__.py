@@ -89,8 +89,11 @@ from winrt._winrt_microsoft_ui_xaml import (
     XamlRoot,
     XamlRootChangedEventArgs,
     IDataTemplateExtension,
+    ImplementsIDataTemplateExtension,
     IElementFactory,
+    ImplementsIElementFactory,
     IXamlServiceProvider,
+    ImplementsIXamlServiceProvider,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -123,13 +126,6 @@ if TYPE_CHECKING:
         VisualStateManager_Static,
         VisualTransition_Static,
         Window_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_xaml import (
-        ImplementsIDataTemplateExtension,
-        ImplementsIElementFactory,
-        ImplementsIXamlServiceProvider,
     )
 
 if typing.TYPE_CHECKING:
@@ -256,8 +252,11 @@ __all__ = [
     "XamlRoot",
     "XamlRootChangedEventArgs",
     "IDataTemplateExtension",
+    "ImplementsIDataTemplateExtension",
     "IElementFactory",
+    "ImplementsIElementFactory",
     "IXamlServiceProvider",
+    "ImplementsIXamlServiceProvider",
     "ApplicationInitializationCallback",
     "BindingFailedEventHandler",
     "CreateDefaultValueCallback",

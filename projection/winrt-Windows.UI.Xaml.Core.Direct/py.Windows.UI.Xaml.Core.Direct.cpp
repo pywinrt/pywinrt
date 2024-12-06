@@ -2324,6 +2324,17 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlDirectObject};
 
+    static PyType_Slot type_slots_ImplementsIXamlDirectObject[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlDirectObject = {
+        "winrt._winrt_windows_ui_xaml_core_direct.ImplementsIXamlDirectObject",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlDirectObject};
+
     // ----- Windows.UI.Xaml.Core.Direct Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Core.Direct");
@@ -2383,6 +2394,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
 
     py::pytype_handle IXamlDirectObject_type{py::register_python_type(module.get(), &type_spec_IXamlDirectObject, object_bases.get(), nullptr)};
     if (!IXamlDirectObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlDirectObject_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlDirectObject, nullptr))};
+    if (!ImplementsIXamlDirectObject_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlDirectObject_type.get()) == -1)
     {
         return nullptr;
     }

@@ -27,14 +27,10 @@ from winrt._winrt_windows_devices_midi import (
     MidiTimingClockMessage,
     MidiTuneRequestMessage,
     IMidiMessage,
+    ImplementsIMidiMessage,
     IMidiOutPort,
+    ImplementsIMidiOutPort,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_midi import (
-        ImplementsIMidiMessage,
-        ImplementsIMidiOutPort,
-    )
 
 __all__ = [
     "MidiMessageType",
@@ -61,7 +57,9 @@ __all__ = [
     "MidiTimingClockMessage",
     "MidiTuneRequestMessage",
     "IMidiMessage",
+    "ImplementsIMidiMessage",
     "IMidiOutPort",
+    "ImplementsIMidiOutPort",
 ]
 
 class MidiMessageType(enum.IntEnum):

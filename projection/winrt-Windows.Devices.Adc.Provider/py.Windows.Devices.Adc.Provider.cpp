@@ -398,6 +398,17 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdcControllerProvider};
 
+    static PyType_Slot type_slots_ImplementsIAdcControllerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAdcControllerProvider = {
+        "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcControllerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAdcControllerProvider};
+
     // ----- IAdcProvider interface --------------------
 
     static PyObject* _new_IAdcProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -501,6 +512,17 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdcProvider};
 
+    static PyType_Slot type_slots_ImplementsIAdcProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAdcProvider = {
+        "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAdcProvider};
+
     // ----- Windows.Devices.Adc.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Adc.Provider");
@@ -552,8 +574,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_adc_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAdcControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdcControllerProvider, nullptr))};
+    if (!ImplementsIAdcControllerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAdcControllerProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAdcProvider_type{py::register_python_type(module.get(), &type_spec_IAdcProvider, object_bases.get(), nullptr)};
     if (!IAdcProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAdcProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdcProvider, nullptr))};
+    if (!ImplementsIAdcProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAdcProvider_type.get()) == -1)
     {
         return nullptr;
     }

@@ -2476,6 +2476,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreApplicationUnhandledError};
 
+    static PyType_Slot type_slots_ImplementsICoreApplicationUnhandledError[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreApplicationUnhandledError = {
+        "winrt._winrt_windows_applicationmodel_core.ImplementsICoreApplicationUnhandledError",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreApplicationUnhandledError};
+
     // ----- IFrameworkView interface --------------------
 
     static PyObject* _new_IFrameworkView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2738,6 +2749,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFrameworkView};
 
+    static PyType_Slot type_slots_ImplementsIFrameworkView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFrameworkView = {
+        "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFrameworkView};
+
     // ----- IFrameworkViewSource interface --------------------
 
     static PyObject* _new_IFrameworkViewSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2841,6 +2863,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFrameworkViewSource};
 
+    static PyType_Slot type_slots_ImplementsIFrameworkViewSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFrameworkViewSource = {
+        "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkViewSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFrameworkViewSource};
+
     // ----- Windows.ApplicationModel.Core Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Core");
@@ -2940,14 +2973,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICoreApplicationUnhandledError_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreApplicationUnhandledError, nullptr))};
+    if (!ImplementsICoreApplicationUnhandledError_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreApplicationUnhandledError_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFrameworkView_type{py::register_python_type(module.get(), &type_spec_IFrameworkView, object_bases.get(), nullptr)};
     if (!IFrameworkView_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFrameworkView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFrameworkView, nullptr))};
+    if (!ImplementsIFrameworkView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFrameworkView_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFrameworkViewSource_type{py::register_python_type(module.get(), &type_spec_IFrameworkViewSource, object_bases.get(), nullptr)};
     if (!IFrameworkViewSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFrameworkViewSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFrameworkViewSource, nullptr))};
+    if (!ImplementsIFrameworkViewSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFrameworkViewSource_type.get()) == -1)
     {
         return nullptr;
     }

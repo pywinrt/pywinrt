@@ -5729,6 +5729,17 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionInteractionSource};
 
+    static PyType_Slot type_slots_ImplementsICompositionInteractionSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICompositionInteractionSource = {
+        "winrt._winrt_windows_ui_composition_interactions.ImplementsICompositionInteractionSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICompositionInteractionSource};
+
     // ----- IInteractionTrackerOwner interface --------------------
 
     static PyObject* _new_IInteractionTrackerOwner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6040,6 +6051,17 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInteractionTrackerOwner};
+
+    static PyType_Slot type_slots_ImplementsIInteractionTrackerOwner[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInteractionTrackerOwner = {
+        "winrt._winrt_windows_ui_composition_interactions.ImplementsIInteractionTrackerOwner",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInteractionTrackerOwner};
 
     // ----- Windows.UI.Composition.Interactions Initialization --------------------
 
@@ -6380,8 +6402,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICompositionInteractionSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionInteractionSource, nullptr))};
+    if (!ImplementsICompositionInteractionSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICompositionInteractionSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInteractionTrackerOwner_type{py::register_python_type(module.get(), &type_spec_IInteractionTrackerOwner, object_bases.get(), nullptr)};
     if (!IInteractionTrackerOwner_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInteractionTrackerOwner_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInteractionTrackerOwner, nullptr))};
+    if (!ImplementsIInteractionTrackerOwner_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInteractionTrackerOwner_type.get()) == -1)
     {
         return nullptr;
     }

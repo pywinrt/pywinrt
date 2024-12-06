@@ -1565,6 +1565,17 @@ namespace py::cpp::Windows::UI::Popups
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUICommand};
 
+    static PyType_Slot type_slots_ImplementsIUICommand[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIUICommand = {
+        "winrt._winrt_windows_ui_popups.ImplementsIUICommand",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIUICommand};
+
     // ----- Windows.UI.Popups Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Popups");
@@ -1636,6 +1647,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
 
     py::pytype_handle IUICommand_type{py::register_python_type(module.get(), &type_spec_IUICommand, object_bases.get(), nullptr)};
     if (!IUICommand_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIUICommand_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUICommand, nullptr))};
+    if (!ImplementsIUICommand_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIUICommand_type.get()) == -1)
     {
         return nullptr;
     }

@@ -12,14 +12,10 @@ from winrt._winrt_windows_devices_scanners import (
     ImageScannerPreviewResult,
     ImageScannerScanResult,
     IImageScannerFormatConfiguration,
+    ImplementsIImageScannerFormatConfiguration,
     IImageScannerSourceConfiguration,
+    ImplementsIImageScannerSourceConfiguration,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_scanners import (
-        ImplementsIImageScannerFormatConfiguration,
-        ImplementsIImageScannerSourceConfiguration,
-    )
 
 __all__ = [
     "ImageScannerAutoCroppingMode",
@@ -34,7 +30,9 @@ __all__ = [
     "ImageScannerPreviewResult",
     "ImageScannerScanResult",
     "IImageScannerFormatConfiguration",
+    "ImplementsIImageScannerFormatConfiguration",
     "IImageScannerSourceConfiguration",
+    "ImplementsIImageScannerSourceConfiguration",
 ]
 
 class ImageScannerAutoCroppingMode(enum.IntEnum):

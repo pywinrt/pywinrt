@@ -2883,6 +2883,17 @@ namespace py::cpp::Windows::Security::Credentials
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccount};
 
+    static PyType_Slot type_slots_ImplementsIWebAccount[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccount = {
+        "winrt._winrt_windows_security_credentials.ImplementsIWebAccount",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccount};
+
     // ----- Windows.Security.Credentials Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Security.Credentials");
@@ -2996,6 +3007,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
 
     py::pytype_handle IWebAccount_type{py::register_python_type(module.get(), &type_spec_IWebAccount, object_bases.get(), nullptr)};
     if (!IWebAccount_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebAccount_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccount, nullptr))};
+    if (!ImplementsIWebAccount_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccount_type.get()) == -1)
     {
         return nullptr;
     }

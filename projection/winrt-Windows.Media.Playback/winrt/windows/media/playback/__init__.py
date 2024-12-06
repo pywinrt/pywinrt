@@ -48,14 +48,10 @@ from winrt._winrt_windows_media_playback import (
     PlaybackMediaMarkerSequence,
     TimedMetadataPresentationModeChangedEventArgs,
     IMediaEnginePlaybackSource,
+    ImplementsIMediaEnginePlaybackSource,
     IMediaPlaybackSource,
+    ImplementsIMediaPlaybackSource,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_playback import (
-        ImplementsIMediaEnginePlaybackSource,
-        ImplementsIMediaPlaybackSource,
-    )
 
 __all__ = [
     "AutoLoadedDisplayPropertyKind",
@@ -117,7 +113,9 @@ __all__ = [
     "PlaybackMediaMarkerSequence",
     "TimedMetadataPresentationModeChangedEventArgs",
     "IMediaEnginePlaybackSource",
+    "ImplementsIMediaEnginePlaybackSource",
     "IMediaPlaybackSource",
+    "ImplementsIMediaPlaybackSource",
 ]
 
 class AutoLoadedDisplayPropertyKind(enum.IntEnum):

@@ -1744,6 +1744,17 @@ namespace py::cpp::Windows::Media::Protection
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaProtectionServiceRequest};
 
+    static PyType_Slot type_slots_ImplementsIMediaProtectionServiceRequest[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaProtectionServiceRequest = {
+        "winrt._winrt_windows_media_protection.ImplementsIMediaProtectionServiceRequest",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaProtectionServiceRequest};
+
     // ----- Windows.Media.Protection Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Media.Protection");
@@ -1857,6 +1868,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
 
     py::pytype_handle IMediaProtectionServiceRequest_type{py::register_python_type(module.get(), &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr)};
     if (!IMediaProtectionServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaProtectionServiceRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaProtectionServiceRequest, nullptr))};
+    if (!ImplementsIMediaProtectionServiceRequest_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaProtectionServiceRequest_type.get()) == -1)
     {
         return nullptr;
     }

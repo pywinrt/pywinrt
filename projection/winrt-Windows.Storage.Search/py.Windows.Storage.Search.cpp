@@ -4670,6 +4670,17 @@ namespace py::cpp::Windows::Storage::Search
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIndexableContent};
 
+    static PyType_Slot type_slots_ImplementsIIndexableContent[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIIndexableContent = {
+        "winrt._winrt_windows_storage_search.ImplementsIIndexableContent",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIIndexableContent};
+
     // ----- IStorageFolderQueryOperations interface --------------------
 
     static PyObject* _new_IStorageFolderQueryOperations(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5396,6 +5407,17 @@ namespace py::cpp::Windows::Storage::Search
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFolderQueryOperations};
 
+    static PyType_Slot type_slots_ImplementsIStorageFolderQueryOperations[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFolderQueryOperations = {
+        "winrt._winrt_windows_storage_search.ImplementsIStorageFolderQueryOperations",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFolderQueryOperations};
+
     // ----- IStorageQueryResultBase interface --------------------
 
     static PyObject* _new_IStorageQueryResultBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5760,6 +5782,17 @@ namespace py::cpp::Windows::Storage::Search
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageQueryResultBase};
 
+    static PyType_Slot type_slots_ImplementsIStorageQueryResultBase[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageQueryResultBase = {
+        "winrt._winrt_windows_storage_search.ImplementsIStorageQueryResultBase",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageQueryResultBase};
+
     // ----- SortEntry struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Storage::Search::SortEntry>* _new_SortEntry(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6097,14 +6130,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIIndexableContent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIndexableContent, nullptr))};
+    if (!ImplementsIIndexableContent_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIIndexableContent_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageFolderQueryOperations_type{py::register_python_type(module.get(), &type_spec_IStorageFolderQueryOperations, object_bases.get(), nullptr)};
     if (!IStorageFolderQueryOperations_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageFolderQueryOperations_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolderQueryOperations, nullptr))};
+    if (!ImplementsIStorageFolderQueryOperations_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFolderQueryOperations_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageQueryResultBase_type{py::register_python_type(module.get(), &type_spec_IStorageQueryResultBase, object_bases.get(), nullptr)};
     if (!IStorageQueryResultBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageQueryResultBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageQueryResultBase, nullptr))};
+    if (!ImplementsIStorageQueryResultBase_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageQueryResultBase_type.get()) == -1)
     {
         return nullptr;
     }

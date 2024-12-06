@@ -2010,6 +2010,17 @@ namespace py::cpp::Windows::UI::WebUI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUICommandBarElement};
 
+    static PyType_Slot type_slots_ImplementsIWebUICommandBarElement[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebUICommandBarElement = {
+        "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarElement",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebUICommandBarElement};
+
     // ----- IWebUICommandBarIcon interface --------------------
 
     static PyObject* _new_IWebUICommandBarIcon(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2075,6 +2086,17 @@ namespace py::cpp::Windows::UI::WebUI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUICommandBarIcon};
+
+    static PyType_Slot type_slots_ImplementsIWebUICommandBarIcon[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebUICommandBarIcon = {
+        "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarIcon",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebUICommandBarIcon};
 
     // ----- Windows.UI.WebUI.Core Initialization --------------------
 
@@ -2175,8 +2197,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebUICommandBarElement_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUICommandBarElement, nullptr))};
+    if (!ImplementsIWebUICommandBarElement_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebUICommandBarElement_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebUICommandBarIcon_type{py::register_python_type(module.get(), &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr)};
     if (!IWebUICommandBarIcon_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebUICommandBarIcon_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUICommandBarIcon, nullptr))};
+    if (!ImplementsIWebUICommandBarIcon_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebUICommandBarIcon_type.get()) == -1)
     {
         return nullptr;
     }

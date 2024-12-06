@@ -2384,6 +2384,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedAnnouncementInvokedTarget};
 
+    static PyType_Slot type_slots_ImplementsIFeedAnnouncementInvokedTarget[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedAnnouncementInvokedTarget = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedAnnouncementInvokedTarget",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedAnnouncementInvokedTarget};
+
     // ----- IFeedManager interface --------------------
 
     static PyObject* _new_IFeedManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2526,6 +2537,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedManager};
+
+    static PyType_Slot type_slots_ImplementsIFeedManager[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedManager = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedManager};
 
     // ----- IFeedManager2 interface --------------------
 
@@ -2676,6 +2698,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedManager2};
+
+    static PyType_Slot type_slots_ImplementsIFeedManager2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedManager2 = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedManager2};
 
     // ----- IFeedProvider interface --------------------
 
@@ -2943,6 +2976,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedProvider};
 
+    static PyType_Slot type_slots_ImplementsIFeedProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedProvider = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedProvider};
+
     // ----- IFeedProviderAnalytics interface --------------------
 
     static PyObject* _new_IFeedProviderAnalytics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3048,6 +3092,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedProviderAnalytics};
+
+    static PyType_Slot type_slots_ImplementsIFeedProviderAnalytics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedProviderAnalytics = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderAnalytics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedProviderAnalytics};
 
     // ----- IFeedProviderErrors interface --------------------
 
@@ -3155,6 +3210,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedProviderErrors};
 
+    static PyType_Slot type_slots_ImplementsIFeedProviderErrors[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedProviderErrors = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderErrors",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedProviderErrors};
+
     // ----- IFeedProviderMessage interface --------------------
 
     static PyObject* _new_IFeedProviderMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3261,6 +3327,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedProviderMessage};
 
+    static PyType_Slot type_slots_ImplementsIFeedProviderMessage[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedProviderMessage = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedProviderMessage};
+
     // ----- IFeedResourceProvider interface --------------------
 
     static PyObject* _new_IFeedResourceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3366,6 +3443,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedResourceProvider};
+
+    static PyType_Slot type_slots_ImplementsIFeedResourceProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFeedResourceProvider = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedResourceProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFeedResourceProvider};
 
     // ----- Microsoft.Windows.Widgets.Feeds.Providers Initialization --------------------
 
@@ -3508,8 +3596,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFeedAnnouncementInvokedTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedAnnouncementInvokedTarget, nullptr))};
+    if (!ImplementsIFeedAnnouncementInvokedTarget_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedAnnouncementInvokedTarget_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedManager_type{py::register_python_type(module.get(), &type_spec_IFeedManager, object_bases.get(), nullptr)};
     if (!IFeedManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFeedManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedManager, nullptr))};
+    if (!ImplementsIFeedManager_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedManager_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3520,8 +3630,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFeedManager2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedManager2, nullptr))};
+    if (!ImplementsIFeedManager2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedManager2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedProvider_type{py::register_python_type(module.get(), &type_spec_IFeedProvider, object_bases.get(), nullptr)};
     if (!IFeedProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFeedProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProvider, nullptr))};
+    if (!ImplementsIFeedProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3532,8 +3664,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFeedProviderAnalytics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderAnalytics, nullptr))};
+    if (!ImplementsIFeedProviderAnalytics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedProviderAnalytics_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedProviderErrors_type{py::register_python_type(module.get(), &type_spec_IFeedProviderErrors, object_bases.get(), nullptr)};
     if (!IFeedProviderErrors_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFeedProviderErrors_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderErrors, nullptr))};
+    if (!ImplementsIFeedProviderErrors_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedProviderErrors_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3544,8 +3698,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFeedProviderMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderMessage, nullptr))};
+    if (!ImplementsIFeedProviderMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedProviderMessage_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedResourceProvider_type{py::register_python_type(module.get(), &type_spec_IFeedResourceProvider, object_bases.get(), nullptr)};
     if (!IFeedResourceProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFeedResourceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedResourceProvider, nullptr))};
+    if (!ImplementsIFeedResourceProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedResourceProvider_type.get()) == -1)
     {
         return nullptr;
     }

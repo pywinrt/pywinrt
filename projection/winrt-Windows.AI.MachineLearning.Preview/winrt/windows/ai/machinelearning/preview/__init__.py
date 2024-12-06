@@ -15,12 +15,8 @@ from winrt._winrt_windows_ai_machinelearning_preview import (
     SequenceVariableDescriptorPreview,
     TensorVariableDescriptorPreview,
     ILearningModelVariableDescriptorPreview,
+    ImplementsILearningModelVariableDescriptorPreview,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ai_machinelearning_preview import (
-        ImplementsILearningModelVariableDescriptorPreview,
-    )
 
 __all__ = [
     "FeatureElementKindPreview",
@@ -37,6 +33,7 @@ __all__ = [
     "SequenceVariableDescriptorPreview",
     "TensorVariableDescriptorPreview",
     "ILearningModelVariableDescriptorPreview",
+    "ImplementsILearningModelVariableDescriptorPreview",
 ]
 
 class FeatureElementKindPreview(enum.IntEnum):

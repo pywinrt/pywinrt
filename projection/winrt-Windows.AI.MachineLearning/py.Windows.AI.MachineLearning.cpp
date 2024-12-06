@@ -10545,6 +10545,17 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelFeatureDescriptor};
 
+    static PyType_Slot type_slots_ImplementsILearningModelFeatureDescriptor[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILearningModelFeatureDescriptor = {
+        "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelFeatureDescriptor",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILearningModelFeatureDescriptor};
+
     // ----- ILearningModelFeatureValue interface --------------------
 
     static PyObject* _new_ILearningModelFeatureValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10638,6 +10649,17 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelFeatureValue};
 
+    static PyType_Slot type_slots_ImplementsILearningModelFeatureValue[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILearningModelFeatureValue = {
+        "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelFeatureValue",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILearningModelFeatureValue};
+
     // ----- ILearningModelOperatorProvider interface --------------------
 
     static PyObject* _new_ILearningModelOperatorProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10703,6 +10725,17 @@ namespace py::cpp::Windows::AI::MachineLearning
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelOperatorProvider};
+
+    static PyType_Slot type_slots_ImplementsILearningModelOperatorProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILearningModelOperatorProvider = {
+        "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelOperatorProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILearningModelOperatorProvider};
 
     // ----- ITensor interface --------------------
 
@@ -10850,6 +10883,17 @@ namespace py::cpp::Windows::AI::MachineLearning
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITensor};
+
+    static PyType_Slot type_slots_ImplementsITensor[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITensor = {
+        "winrt._winrt_windows_ai_machinelearning.ImplementsITensor",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITensor};
 
     // ----- Windows.AI.MachineLearning Initialization --------------------
 
@@ -11142,8 +11186,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILearningModelFeatureDescriptor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelFeatureDescriptor, nullptr))};
+    if (!ImplementsILearningModelFeatureDescriptor_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILearningModelFeatureDescriptor_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILearningModelFeatureValue_type{py::register_python_type(module.get(), &type_spec_ILearningModelFeatureValue, object_bases.get(), nullptr)};
     if (!ILearningModelFeatureValue_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILearningModelFeatureValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelFeatureValue, nullptr))};
+    if (!ImplementsILearningModelFeatureValue_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILearningModelFeatureValue_type.get()) == -1)
     {
         return nullptr;
     }
@@ -11154,8 +11220,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILearningModelOperatorProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelOperatorProvider, nullptr))};
+    if (!ImplementsILearningModelOperatorProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILearningModelOperatorProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITensor_type{py::register_python_type(module.get(), &type_spec_ITensor, object_bases.get(), nullptr)};
     if (!ITensor_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITensor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITensor, nullptr))};
+    if (!ImplementsITensor_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITensor_type.get()) == -1)
     {
         return nullptr;
     }

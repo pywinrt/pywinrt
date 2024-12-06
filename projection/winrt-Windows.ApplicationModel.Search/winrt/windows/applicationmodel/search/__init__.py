@@ -17,12 +17,8 @@ from winrt._winrt_windows_applicationmodel_search import (
     SearchSuggestionsRequest,
     SearchSuggestionsRequestDeferral,
     ISearchPaneQueryChangedEventArgs,
+    ImplementsISearchPaneQueryChangedEventArgs,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_search import (
-        ImplementsISearchPaneQueryChangedEventArgs,
-    )
 
 __all__ = [
     "LocalContentSuggestionSettings",
@@ -40,5 +36,6 @@ __all__ = [
     "SearchSuggestionsRequest",
     "SearchSuggestionsRequestDeferral",
     "ISearchPaneQueryChangedEventArgs",
+    "ImplementsISearchPaneQueryChangedEventArgs",
 ]
 

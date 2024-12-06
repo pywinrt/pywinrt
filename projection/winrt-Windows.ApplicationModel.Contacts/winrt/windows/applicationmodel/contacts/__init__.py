@@ -53,18 +53,14 @@ from winrt._winrt_windows_applicationmodel_contacts import (
     PinnedContactIdsQueryResult,
     PinnedContactManager,
     IContactField,
+    ImplementsIContactField,
     IContactFieldFactory,
+    ImplementsIContactFieldFactory,
     IContactInstantMessageFieldFactory,
+    ImplementsIContactInstantMessageFieldFactory,
     IContactLocationFieldFactory,
+    ImplementsIContactLocationFieldFactory,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_contacts import (
-        ImplementsIContactField,
-        ImplementsIContactFieldFactory,
-        ImplementsIContactInstantMessageFieldFactory,
-        ImplementsIContactLocationFieldFactory,
-    )
 
 __all__ = [
     "ContactAddressKind",
@@ -140,9 +136,13 @@ __all__ = [
     "PinnedContactIdsQueryResult",
     "PinnedContactManager",
     "IContactField",
+    "ImplementsIContactField",
     "IContactFieldFactory",
+    "ImplementsIContactFieldFactory",
     "IContactInstantMessageFieldFactory",
+    "ImplementsIContactInstantMessageFieldFactory",
     "IContactLocationFieldFactory",
+    "ImplementsIContactLocationFieldFactory",
 ]
 
 class ContactAddressKind(enum.IntEnum):

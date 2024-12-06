@@ -15,12 +15,8 @@ from winrt._winrt_windows_security_credentials import (
     WebAccount,
     WebAccountProvider,
     IWebAccount,
+    ImplementsIWebAccount,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_security_credentials import (
-        ImplementsIWebAccount,
-    )
 
 __all__ = [
     "KeyCredentialAttestationStatus",
@@ -39,6 +35,7 @@ __all__ = [
     "WebAccount",
     "WebAccountProvider",
     "IWebAccount",
+    "ImplementsIWebAccount",
 ]
 
 class KeyCredentialAttestationStatus(enum.IntEnum):

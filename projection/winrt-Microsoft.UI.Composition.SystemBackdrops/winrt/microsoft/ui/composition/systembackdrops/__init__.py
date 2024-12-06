@@ -8,14 +8,10 @@ from winrt._winrt_microsoft_ui_composition_systembackdrops import (
     MicaController,
     SystemBackdropConfiguration,
     ISystemBackdropController,
+    ImplementsISystemBackdropController,
     ISystemBackdropControllerWithTargets,
+    ImplementsISystemBackdropControllerWithTargets,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_composition_systembackdrops import (
-        ImplementsISystemBackdropController,
-        ImplementsISystemBackdropControllerWithTargets,
-    )
 
 __all__ = [
     "DesktopAcrylicKind",
@@ -26,7 +22,9 @@ __all__ = [
     "MicaController",
     "SystemBackdropConfiguration",
     "ISystemBackdropController",
+    "ImplementsISystemBackdropController",
     "ISystemBackdropControllerWithTargets",
+    "ImplementsISystemBackdropControllerWithTargets",
 ]
 
 class DesktopAcrylicKind(enum.IntEnum):

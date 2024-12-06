@@ -509,6 +509,17 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpiControllerProvider};
 
+    static PyType_Slot type_slots_ImplementsISpiControllerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpiControllerProvider = {
+        "winrt._winrt_windows_devices_spi_provider.ImplementsISpiControllerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpiControllerProvider};
+
     // ----- ISpiDeviceProvider interface --------------------
 
     static PyObject* _new_ISpiDeviceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -850,6 +861,17 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpiDeviceProvider};
 
+    static PyType_Slot type_slots_ImplementsISpiDeviceProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpiDeviceProvider = {
+        "winrt._winrt_windows_devices_spi_provider.ImplementsISpiDeviceProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpiDeviceProvider};
+
     // ----- ISpiProvider interface --------------------
 
     static PyObject* _new_ISpiProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -953,6 +975,17 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpiProvider};
 
+    static PyType_Slot type_slots_ImplementsISpiProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpiProvider = {
+        "winrt._winrt_windows_devices_spi_provider.ImplementsISpiProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpiProvider};
+
     // ----- Windows.Devices.Spi.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Spi.Provider");
@@ -1010,14 +1043,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISpiControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiControllerProvider, nullptr))};
+    if (!ImplementsISpiControllerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpiControllerProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISpiDeviceProvider_type{py::register_python_type(module.get(), &type_spec_ISpiDeviceProvider, object_bases.get(), nullptr)};
     if (!ISpiDeviceProvider_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISpiDeviceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiDeviceProvider, nullptr))};
+    if (!ImplementsISpiDeviceProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpiDeviceProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISpiProvider_type{py::register_python_type(module.get(), &type_spec_ISpiProvider, object_bases.get(), nullptr)};
     if (!ISpiProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISpiProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiProvider, nullptr))};
+    if (!ImplementsISpiProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpiProvider_type.get()) == -1)
     {
         return nullptr;
     }

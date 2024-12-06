@@ -1709,6 +1709,17 @@ namespace py::cpp::Windows::Web::Http::Filters
         Py_TPFLAGS_DEFAULT,
         _type_slots_IHttpFilter};
 
+    static PyType_Slot type_slots_ImplementsIHttpFilter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIHttpFilter = {
+        "winrt._winrt_windows_web_http_filters.ImplementsIHttpFilter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIHttpFilter};
+
     // ----- Windows.Web.Http.Filters Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Web.Http.Filters");
@@ -1780,6 +1791,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
 
     py::pytype_handle IHttpFilter_type{py::register_python_type(module.get(), &type_spec_IHttpFilter, object_bases.get(), nullptr)};
     if (!IHttpFilter_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIHttpFilter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHttpFilter, nullptr))};
+    if (!ImplementsIHttpFilter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIHttpFilter_type.get()) == -1)
     {
         return nullptr;
     }

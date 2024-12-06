@@ -3568,6 +3568,17 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkAnalysisNode};
 
+    static PyType_Slot type_slots_ImplementsIInkAnalysisNode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkAnalysisNode = {
+        "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalysisNode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkAnalysisNode};
+
     // ----- IInkAnalyzerFactory interface --------------------
 
     static PyObject* _new_IInkAnalyzerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3670,6 +3681,17 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkAnalyzerFactory};
+
+    static PyType_Slot type_slots_ImplementsIInkAnalyzerFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkAnalyzerFactory = {
+        "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalyzerFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkAnalyzerFactory};
 
     // ----- Windows.UI.Input.Inking.Analysis Initialization --------------------
 
@@ -3788,8 +3810,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_analysis(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInkAnalysisNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkAnalysisNode, nullptr))};
+    if (!ImplementsIInkAnalysisNode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkAnalysisNode_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInkAnalyzerFactory_type{py::register_python_type(module.get(), &type_spec_IInkAnalyzerFactory, object_bases.get(), nullptr)};
     if (!IInkAnalyzerFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInkAnalyzerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkAnalyzerFactory, nullptr))};
+    if (!ImplementsIInkAnalyzerFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkAnalyzerFactory_type.get()) == -1)
     {
         return nullptr;
     }

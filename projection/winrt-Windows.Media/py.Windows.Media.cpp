@@ -8220,6 +8220,17 @@ namespace py::cpp::Windows::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaExtension};
 
+    static PyType_Slot type_slots_ImplementsIMediaExtension[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaExtension = {
+        "winrt._winrt_windows_media.ImplementsIMediaExtension",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaExtension};
+
     // ----- IMediaFrame interface --------------------
 
     static PyObject* _new_IMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8674,6 +8685,17 @@ namespace py::cpp::Windows::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaFrame};
 
+    static PyType_Slot type_slots_ImplementsIMediaFrame[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaFrame = {
+        "winrt._winrt_windows_media.ImplementsIMediaFrame",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaFrame};
+
     // ----- IMediaMarker interface --------------------
 
     static PyObject* _new_IMediaMarker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8821,6 +8843,17 @@ namespace py::cpp::Windows::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaMarker};
 
+    static PyType_Slot type_slots_ImplementsIMediaMarker[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaMarker = {
+        "winrt._winrt_windows_media.ImplementsIMediaMarker",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaMarker};
+
     // ----- IMediaMarkers interface --------------------
 
     static PyObject* _new_IMediaMarkers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8913,6 +8946,17 @@ namespace py::cpp::Windows::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaMarkers};
+
+    static PyType_Slot type_slots_ImplementsIMediaMarkers[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaMarkers = {
+        "winrt._winrt_windows_media.ImplementsIMediaMarkers",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaMarkers};
 
     // ----- MediaTimeRange struct --------------------
 
@@ -9341,8 +9385,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaExtension_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaExtension, nullptr))};
+    if (!ImplementsIMediaExtension_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaExtension_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaFrame_type{py::register_python_type(module.get(), &type_spec_IMediaFrame, object_bases.get(), nullptr)};
     if (!IMediaFrame_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaFrame_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaFrame, nullptr))};
+    if (!ImplementsIMediaFrame_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaFrame_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9353,8 +9419,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaMarker_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaMarker, nullptr))};
+    if (!ImplementsIMediaMarker_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaMarker_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaMarkers_type{py::register_python_type(module.get(), &type_spec_IMediaMarkers, object_bases.get(), nullptr)};
     if (!IMediaMarkers_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaMarkers_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaMarkers, nullptr))};
+    if (!ImplementsIMediaMarkers_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaMarkers_type.get()) == -1)
     {
         return nullptr;
     }

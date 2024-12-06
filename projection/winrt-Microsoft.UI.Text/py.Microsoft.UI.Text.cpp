@@ -5511,6 +5511,17 @@ namespace py::cpp::Microsoft::UI::Text
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextCharacterFormat};
 
+    static PyType_Slot type_slots_ImplementsITextCharacterFormat[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextCharacterFormat = {
+        "winrt._winrt_microsoft_ui_text.ImplementsITextCharacterFormat",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextCharacterFormat};
+
     // ----- ITextParagraphFormat interface --------------------
 
     static PyObject* _new_ITextParagraphFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7143,6 +7154,17 @@ namespace py::cpp::Microsoft::UI::Text
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextParagraphFormat};
+
+    static PyType_Slot type_slots_ImplementsITextParagraphFormat[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextParagraphFormat = {
+        "winrt._winrt_microsoft_ui_text.ImplementsITextParagraphFormat",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextParagraphFormat};
 
     // ----- ITextRange interface --------------------
 
@@ -9136,6 +9158,17 @@ namespace py::cpp::Microsoft::UI::Text
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextRange};
+
+    static PyType_Slot type_slots_ImplementsITextRange[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextRange = {
+        "winrt._winrt_microsoft_ui_text.ImplementsITextRange",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextRange};
 
     // ----- ITextSelection interface --------------------
 
@@ -11503,6 +11536,17 @@ namespace py::cpp::Microsoft::UI::Text
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextSelection};
 
+    static PyType_Slot type_slots_ImplementsITextSelection[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextSelection = {
+        "winrt._winrt_microsoft_ui_text.ImplementsITextSelection",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextSelection};
+
     // ----- Microsoft.UI.Text Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Text");
@@ -11590,8 +11634,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_text(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITextCharacterFormat_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextCharacterFormat, nullptr))};
+    if (!ImplementsITextCharacterFormat_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextCharacterFormat_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITextParagraphFormat_type{py::register_python_type(module.get(), &type_spec_ITextParagraphFormat, object_bases.get(), nullptr)};
     if (!ITextParagraphFormat_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITextParagraphFormat_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextParagraphFormat, nullptr))};
+    if (!ImplementsITextParagraphFormat_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextParagraphFormat_type.get()) == -1)
     {
         return nullptr;
     }
@@ -11602,8 +11668,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_text(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITextRange_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRange, nullptr))};
+    if (!ImplementsITextRange_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextRange_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITextSelection_type{py::register_python_type(module.get(), &type_spec_ITextSelection, object_bases.get(), nullptr)};
     if (!ITextSelection_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITextSelection_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextSelection, nullptr))};
+    if (!ImplementsITextSelection_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextSelection_type.get()) == -1)
     {
         return nullptr;
     }

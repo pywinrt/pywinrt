@@ -41,12 +41,8 @@ from winrt._winrt_windows_applicationmodel_chat import (
     RcsTransportConfiguration,
     RemoteParticipantComposingChangedEventArgs,
     IChatItem,
+    ImplementsIChatItem,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_chat import (
-        ImplementsIChatItem,
-    )
 
 __all__ = [
     "ChatConversationThreadingKind",
@@ -99,6 +95,7 @@ __all__ = [
     "RcsTransportConfiguration",
     "RemoteParticipantComposingChangedEventArgs",
     "IChatItem",
+    "ImplementsIChatItem",
 ]
 
 class ChatConversationThreadingKind(enum.IntEnum):

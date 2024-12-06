@@ -53,12 +53,8 @@ from winrt._winrt_windows_system import (
     UserPicker,
     UserWatcher,
     ILauncherViewOptions,
+    ImplementsILauncherViewOptions,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_system import (
-        ImplementsILauncherViewOptions,
-    )
 
 __all__ = [
     "AppDiagnosticInfoWatcherStatus",
@@ -133,6 +129,7 @@ __all__ = [
     "UserPicker",
     "UserWatcher",
     "ILauncherViewOptions",
+    "ImplementsILauncherViewOptions",
     "DispatcherQueueHandler",
 ]
 

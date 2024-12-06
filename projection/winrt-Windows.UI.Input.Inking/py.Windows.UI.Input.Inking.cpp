@@ -8937,6 +8937,17 @@ namespace py::cpp::Windows::UI::Input::Inking
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkPointFactory};
 
+    static PyType_Slot type_slots_ImplementsIInkPointFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkPointFactory = {
+        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPointFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkPointFactory};
+
     // ----- IInkPresenterRulerFactory interface --------------------
 
     static PyObject* _new_IInkPresenterRulerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9041,6 +9052,17 @@ namespace py::cpp::Windows::UI::Input::Inking
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkPresenterRulerFactory};
+
+    static PyType_Slot type_slots_ImplementsIInkPresenterRulerFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkPresenterRulerFactory = {
+        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPresenterRulerFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkPresenterRulerFactory};
 
     // ----- IInkPresenterStencil interface --------------------
 
@@ -9383,6 +9405,17 @@ namespace py::cpp::Windows::UI::Input::Inking
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkPresenterStencil};
 
+    static PyType_Slot type_slots_ImplementsIInkPresenterStencil[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkPresenterStencil = {
+        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPresenterStencil",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkPresenterStencil};
+
     // ----- IInkRecognizerContainer interface --------------------
 
     static PyObject* _new_IInkRecognizerContainer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9565,6 +9598,17 @@ namespace py::cpp::Windows::UI::Input::Inking
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkRecognizerContainer};
+
+    static PyType_Slot type_slots_ImplementsIInkRecognizerContainer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkRecognizerContainer = {
+        "winrt._winrt_windows_ui_input_inking.ImplementsIInkRecognizerContainer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkRecognizerContainer};
 
     // ----- IInkStrokeContainer interface --------------------
 
@@ -10160,6 +10204,17 @@ namespace py::cpp::Windows::UI::Input::Inking
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInkStrokeContainer};
 
+    static PyType_Slot type_slots_ImplementsIInkStrokeContainer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInkStrokeContainer = {
+        "winrt._winrt_windows_ui_input_inking.ImplementsIInkStrokeContainer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInkStrokeContainer};
+
     // ----- Windows.UI.Input.Inking Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Input.Inking");
@@ -10361,8 +10416,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInkPointFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkPointFactory, nullptr))};
+    if (!ImplementsIInkPointFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkPointFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInkPresenterRulerFactory_type{py::register_python_type(module.get(), &type_spec_IInkPresenterRulerFactory, object_bases.get(), nullptr)};
     if (!IInkPresenterRulerFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInkPresenterRulerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkPresenterRulerFactory, nullptr))};
+    if (!ImplementsIInkPresenterRulerFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkPresenterRulerFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10373,14 +10450,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInkPresenterStencil_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkPresenterStencil, nullptr))};
+    if (!ImplementsIInkPresenterStencil_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkPresenterStencil_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInkRecognizerContainer_type{py::register_python_type(module.get(), &type_spec_IInkRecognizerContainer, object_bases.get(), nullptr)};
     if (!IInkRecognizerContainer_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInkRecognizerContainer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkRecognizerContainer, nullptr))};
+    if (!ImplementsIInkRecognizerContainer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkRecognizerContainer_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInkStrokeContainer_type{py::register_python_type(module.get(), &type_spec_IInkStrokeContainer, object_bases.get(), nullptr)};
     if (!IInkStrokeContainer_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInkStrokeContainer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkStrokeContainer, nullptr))};
+    if (!ImplementsIInkStrokeContainer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInkStrokeContainer_type.get()) == -1)
     {
         return nullptr;
     }

@@ -8727,6 +8727,17 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintCustomOptionDetails};
 
+    static PyType_Slot type_slots_ImplementsIPrintCustomOptionDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintCustomOptionDetails = {
+        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintCustomOptionDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintCustomOptionDetails};
+
     // ----- IPrintItemListOptionDetails interface --------------------
 
     static PyObject* _new_IPrintItemListOptionDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9063,6 +9074,17 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintItemListOptionDetails};
+
+    static PyType_Slot type_slots_ImplementsIPrintItemListOptionDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintItemListOptionDetails = {
+        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintItemListOptionDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintItemListOptionDetails};
 
     // ----- IPrintNumberOptionDetails interface --------------------
 
@@ -9428,6 +9450,17 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintNumberOptionDetails};
 
+    static PyType_Slot type_slots_ImplementsIPrintNumberOptionDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintNumberOptionDetails = {
+        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintNumberOptionDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintNumberOptionDetails};
+
     // ----- IPrintOptionDetails interface --------------------
 
     static PyObject* _new_IPrintOptionDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9737,6 +9770,17 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintOptionDetails};
+
+    static PyType_Slot type_slots_ImplementsIPrintOptionDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintOptionDetails = {
+        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintOptionDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintOptionDetails};
 
     // ----- IPrintTextOptionDetails interface --------------------
 
@@ -10075,6 +10119,17 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTextOptionDetails};
 
+    static PyType_Slot type_slots_ImplementsIPrintTextOptionDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintTextOptionDetails = {
+        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintTextOptionDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintTextOptionDetails};
+
     // ----- Windows.Graphics.Printing.OptionDetails Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Graphics.Printing.OptionDetails");
@@ -10246,8 +10301,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrintCustomOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintCustomOptionDetails, nullptr))};
+    if (!ImplementsIPrintCustomOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintCustomOptionDetails_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintItemListOptionDetails_type{py::register_python_type(module.get(), &type_spec_IPrintItemListOptionDetails, object_bases.get(), nullptr)};
     if (!IPrintItemListOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrintItemListOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintItemListOptionDetails, nullptr))};
+    if (!ImplementsIPrintItemListOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintItemListOptionDetails_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10258,14 +10335,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrintNumberOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintNumberOptionDetails, nullptr))};
+    if (!ImplementsIPrintNumberOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintNumberOptionDetails_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintOptionDetails_type{py::register_python_type(module.get(), &type_spec_IPrintOptionDetails, object_bases.get(), nullptr)};
     if (!IPrintOptionDetails_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrintOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintOptionDetails, nullptr))};
+    if (!ImplementsIPrintOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintOptionDetails_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintTextOptionDetails_type{py::register_python_type(module.get(), &type_spec_IPrintTextOptionDetails, object_bases.get(), nullptr)};
     if (!IPrintTextOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrintTextOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTextOptionDetails, nullptr))};
+    if (!ImplementsIPrintTextOptionDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintTextOptionDetails_type.get()) == -1)
     {
         return nullptr;
     }

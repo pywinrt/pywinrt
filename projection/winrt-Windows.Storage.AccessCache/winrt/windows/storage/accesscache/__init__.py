@@ -11,12 +11,8 @@ from winrt._winrt_windows_storage_accesscache import (
     StorageItemAccessList,
     StorageItemMostRecentlyUsedList,
     IStorageItemAccessList,
+    ImplementsIStorageItemAccessList,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_storage_accesscache import (
-        ImplementsIStorageItemAccessList,
-    )
 
 __all__ = [
     "AccessCacheOptions",
@@ -28,6 +24,7 @@ __all__ = [
     "StorageItemAccessList",
     "StorageItemMostRecentlyUsedList",
     "IStorageItemAccessList",
+    "ImplementsIStorageItemAccessList",
 ]
 
 class AccessCacheOptions(enum.IntFlag):

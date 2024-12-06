@@ -18,14 +18,10 @@ from winrt._winrt_windows_gaming_input import (
     RawGameController,
     UINavigationController,
     IGameController,
+    ImplementsIGameController,
     IGameControllerBatteryInfo,
+    ImplementsIGameControllerBatteryInfo,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_gaming_input import (
-        ImplementsIGameController,
-        ImplementsIGameControllerBatteryInfo,
-    )
 
 __all__ = [
     "ArcadeStickButtons",
@@ -51,7 +47,9 @@ __all__ = [
     "RawGameController",
     "UINavigationController",
     "IGameController",
+    "ImplementsIGameController",
     "IGameControllerBatteryInfo",
+    "ImplementsIGameControllerBatteryInfo",
 ]
 
 class ArcadeStickButtons(enum.IntFlag):

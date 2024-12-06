@@ -7299,6 +7299,17 @@ namespace py::cpp::Windows::System::RemoteSystems
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRemoteSystemFilter};
 
+    static PyType_Slot type_slots_ImplementsIRemoteSystemFilter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRemoteSystemFilter = {
+        "winrt._winrt_windows_system_remotesystems.ImplementsIRemoteSystemFilter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRemoteSystemFilter};
+
     // ----- Windows.System.RemoteSystems Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.System.RemoteSystems");
@@ -7628,6 +7639,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
 
     py::pytype_handle IRemoteSystemFilter_type{py::register_python_type(module.get(), &type_spec_IRemoteSystemFilter, object_bases.get(), nullptr)};
     if (!IRemoteSystemFilter_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIRemoteSystemFilter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRemoteSystemFilter, nullptr))};
+    if (!ImplementsIRemoteSystemFilter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRemoteSystemFilter_type.get()) == -1)
     {
         return nullptr;
     }

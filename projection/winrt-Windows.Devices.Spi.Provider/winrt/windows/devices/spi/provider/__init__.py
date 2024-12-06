@@ -6,24 +6,23 @@ import winrt.system
 from winrt._winrt_windows_devices_spi_provider import (
     ProviderSpiConnectionSettings,
     ISpiControllerProvider,
+    ImplementsISpiControllerProvider,
     ISpiDeviceProvider,
+    ImplementsISpiDeviceProvider,
     ISpiProvider,
+    ImplementsISpiProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_spi_provider import (
-        ImplementsISpiControllerProvider,
-        ImplementsISpiDeviceProvider,
-        ImplementsISpiProvider,
-    )
 
 __all__ = [
     "ProviderSpiMode",
     "ProviderSpiSharingMode",
     "ProviderSpiConnectionSettings",
     "ISpiControllerProvider",
+    "ImplementsISpiControllerProvider",
     "ISpiDeviceProvider",
+    "ImplementsISpiDeviceProvider",
     "ISpiProvider",
+    "ImplementsISpiProvider",
 ]
 
 class ProviderSpiMode(enum.IntEnum):

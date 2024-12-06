@@ -22,18 +22,14 @@ from winrt._winrt_windows_graphics_printing import (
     PrintTaskSourceRequestedDeferral,
     StandardPrintTaskOptions,
     IPrintDocumentSource,
+    ImplementsIPrintDocumentSource,
     IPrintTaskOptionsCore,
+    ImplementsIPrintTaskOptionsCore,
     IPrintTaskOptionsCoreProperties,
+    ImplementsIPrintTaskOptionsCoreProperties,
     IPrintTaskOptionsCoreUIConfiguration,
+    ImplementsIPrintTaskOptionsCoreUIConfiguration,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_graphics_printing import (
-        ImplementsIPrintDocumentSource,
-        ImplementsIPrintTaskOptionsCore,
-        ImplementsIPrintTaskOptionsCoreProperties,
-        ImplementsIPrintTaskOptionsCoreUIConfiguration,
-    )
 
 __all__ = [
     "PrintBinding",
@@ -64,9 +60,13 @@ __all__ = [
     "PrintTaskSourceRequestedDeferral",
     "StandardPrintTaskOptions",
     "IPrintDocumentSource",
+    "ImplementsIPrintDocumentSource",
     "IPrintTaskOptionsCore",
+    "ImplementsIPrintTaskOptionsCore",
     "IPrintTaskOptionsCoreProperties",
+    "ImplementsIPrintTaskOptionsCoreProperties",
     "IPrintTaskOptionsCoreUIConfiguration",
+    "ImplementsIPrintTaskOptionsCoreUIConfiguration",
     "PrintTaskSourceRequestedHandler",
 ]
 

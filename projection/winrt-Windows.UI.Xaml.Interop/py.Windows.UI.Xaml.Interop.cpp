@@ -409,6 +409,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBindableIterable};
 
+    static PyType_Slot type_slots_ImplementsIBindableIterable[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBindableIterable = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsIBindableIterable",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBindableIterable};
+
     // ----- IBindableIterator interface --------------------
 
     static PyObject* _new_IBindableIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -565,6 +576,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBindableIterator};
+
+    static PyType_Slot type_slots_ImplementsIBindableIterator[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBindableIterator = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsIBindableIterator",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBindableIterator};
 
     // ----- IBindableObservableVector interface --------------------
 
@@ -1121,6 +1143,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBindableObservableVector};
 
+    static PyType_Slot type_slots_ImplementsIBindableObservableVector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBindableObservableVector = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsIBindableObservableVector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBindableObservableVector};
+
     // ----- IBindableVector interface --------------------
 
     static PyObject* _new_IBindableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1617,6 +1650,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBindableVector};
 
+    static PyType_Slot type_slots_ImplementsIBindableVector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBindableVector = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsIBindableVector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBindableVector};
+
     // ----- IBindableVectorView interface --------------------
 
     static PyObject* _new_IBindableVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1838,6 +1882,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBindableVectorView};
 
+    static PyType_Slot type_slots_ImplementsIBindableVectorView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBindableVectorView = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsIBindableVectorView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBindableVectorView};
+
     // ----- INotifyCollectionChanged interface --------------------
 
     static PyObject* _new_INotifyCollectionChanged(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1962,6 +2017,17 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INotifyCollectionChanged};
+
+    static PyType_Slot type_slots_ImplementsINotifyCollectionChanged[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINotifyCollectionChanged = {
+        "winrt._winrt_windows_ui_xaml_interop.ImplementsINotifyCollectionChanged",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINotifyCollectionChanged};
 
     // ----- TypeName struct --------------------
 
@@ -2240,8 +2306,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBindableIterable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableIterable, nullptr))};
+    if (!ImplementsIBindableIterable_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBindableIterable_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBindableIterator_type{py::register_python_type(module.get(), &type_spec_IBindableIterator, object_bases.get(), nullptr)};
     if (!IBindableIterator_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBindableIterator_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableIterator, nullptr))};
+    if (!ImplementsIBindableIterator_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBindableIterator_type.get()) == -1)
     {
         return nullptr;
     }
@@ -2252,8 +2340,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBindableObservableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableObservableVector, nullptr))};
+    if (!ImplementsIBindableObservableVector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBindableObservableVector_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBindableVector_type{py::register_python_type(module.get(), &type_spec_IBindableVector, object_bases.get(), nullptr)};
     if (!IBindableVector_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBindableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableVector, nullptr))};
+    if (!ImplementsIBindableVector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBindableVector_type.get()) == -1)
     {
         return nullptr;
     }
@@ -2264,8 +2374,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBindableVectorView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableVectorView, nullptr))};
+    if (!ImplementsIBindableVectorView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBindableVectorView_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INotifyCollectionChanged_type{py::register_python_type(module.get(), &type_spec_INotifyCollectionChanged, object_bases.get(), nullptr)};
     if (!INotifyCollectionChanged_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINotifyCollectionChanged_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINotifyCollectionChanged, nullptr))};
+    if (!ImplementsINotifyCollectionChanged_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINotifyCollectionChanged_type.get()) == -1)
     {
         return nullptr;
     }

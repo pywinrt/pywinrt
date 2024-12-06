@@ -254,6 +254,17 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGpioControllerProvider};
 
+    static PyType_Slot type_slots_ImplementsIGpioControllerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGpioControllerProvider = {
+        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioControllerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGpioControllerProvider};
+
     // ----- IGpioPinProvider interface --------------------
 
     static PyObject* _new_IGpioPinProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -688,6 +699,17 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGpioPinProvider};
 
+    static PyType_Slot type_slots_ImplementsIGpioPinProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGpioPinProvider = {
+        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioPinProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGpioPinProvider};
+
     // ----- IGpioProvider interface --------------------
 
     static PyObject* _new_IGpioProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -791,6 +813,17 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGpioProvider};
 
+    static PyType_Slot type_slots_ImplementsIGpioProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGpioProvider = {
+        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGpioProvider};
+
     // ----- Windows.Devices.Gpio.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Gpio.Provider");
@@ -848,14 +881,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGpioControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioControllerProvider, nullptr))};
+    if (!ImplementsIGpioControllerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGpioControllerProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGpioPinProvider_type{py::register_python_type(module.get(), &type_spec_IGpioPinProvider, object_bases.get(), nullptr)};
     if (!IGpioPinProvider_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGpioPinProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioPinProvider, nullptr))};
+    if (!ImplementsIGpioPinProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGpioPinProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGpioProvider_type{py::register_python_type(module.get(), &type_spec_IGpioProvider, object_bases.get(), nullptr)};
     if (!IGpioProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGpioProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioProvider, nullptr))};
+    if (!ImplementsIGpioProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGpioProvider_type.get()) == -1)
     {
         return nullptr;
     }

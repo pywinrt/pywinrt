@@ -4021,6 +4021,17 @@ namespace py::cpp::Windows::Graphics::Printing
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintDocumentSource};
 
+    static PyType_Slot type_slots_ImplementsIPrintDocumentSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintDocumentSource = {
+        "winrt._winrt_windows_graphics_printing.ImplementsIPrintDocumentSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintDocumentSource};
+
     // ----- IPrintTaskOptionsCore interface --------------------
 
     static PyObject* _new_IPrintTaskOptionsCore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4125,6 +4136,17 @@ namespace py::cpp::Windows::Graphics::Printing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTaskOptionsCore};
+
+    static PyType_Slot type_slots_ImplementsIPrintTaskOptionsCore[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCore = {
+        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCore",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintTaskOptionsCore};
 
     // ----- IPrintTaskOptionsCoreProperties interface --------------------
 
@@ -4928,6 +4950,17 @@ namespace py::cpp::Windows::Graphics::Printing
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTaskOptionsCoreProperties};
 
+    static PyType_Slot type_slots_ImplementsIPrintTaskOptionsCoreProperties[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCoreProperties = {
+        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCoreProperties",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintTaskOptionsCoreProperties};
+
     // ----- IPrintTaskOptionsCoreUIConfiguration interface --------------------
 
     static PyObject* _new_IPrintTaskOptionsCoreUIConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5020,6 +5053,17 @@ namespace py::cpp::Windows::Graphics::Printing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTaskOptionsCoreUIConfiguration};
+
+    static PyType_Slot type_slots_ImplementsIPrintTaskOptionsCoreUIConfiguration[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCoreUIConfiguration = {
+        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCoreUIConfiguration",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintTaskOptionsCoreUIConfiguration};
 
     // ----- PrintPageDescription struct --------------------
 
@@ -5466,8 +5510,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrintDocumentSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintDocumentSource, nullptr))};
+    if (!ImplementsIPrintDocumentSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintDocumentSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintTaskOptionsCore_type{py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCore, object_bases.get(), nullptr)};
     if (!IPrintTaskOptionsCore_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrintTaskOptionsCore_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTaskOptionsCore, nullptr))};
+    if (!ImplementsIPrintTaskOptionsCore_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintTaskOptionsCore_type.get()) == -1)
     {
         return nullptr;
     }
@@ -5478,8 +5544,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrintTaskOptionsCoreProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTaskOptionsCoreProperties, nullptr))};
+    if (!ImplementsIPrintTaskOptionsCoreProperties_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintTaskOptionsCoreProperties_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintTaskOptionsCoreUIConfiguration_type{py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCoreUIConfiguration, object_bases.get(), nullptr)};
     if (!IPrintTaskOptionsCoreUIConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrintTaskOptionsCoreUIConfiguration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTaskOptionsCoreUIConfiguration, nullptr))};
+    if (!ImplementsIPrintTaskOptionsCoreUIConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintTaskOptionsCoreUIConfiguration_type.get()) == -1)
     {
         return nullptr;
     }

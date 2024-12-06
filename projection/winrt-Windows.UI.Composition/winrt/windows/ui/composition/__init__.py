@@ -111,12 +111,19 @@ from winrt._winrt_windows_ui_composition import (
     VisualCollection,
     VisualUnorderedCollection,
     IAnimationObject,
+    ImplementsIAnimationObject,
     ICompositionAnimationBase,
+    ImplementsICompositionAnimationBase,
     ICompositionSupportsSystemBackdrop,
+    ImplementsICompositionSupportsSystemBackdrop,
     ICompositionSurface,
+    ImplementsICompositionSurface,
     ICompositionSurfaceFacade,
+    ImplementsICompositionSurfaceFacade,
     IVisualElement,
+    ImplementsIVisualElement,
     IVisualElement2,
+    ImplementsIVisualElement2,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -143,17 +150,6 @@ if TYPE_CHECKING:
         Vector2NaturalMotionAnimation_Static,
         Vector3NaturalMotionAnimation_Static,
         Visual_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_composition import (
-        ImplementsIAnimationObject,
-        ImplementsICompositionAnimationBase,
-        ImplementsICompositionSupportsSystemBackdrop,
-        ImplementsICompositionSurface,
-        ImplementsICompositionSurfaceFacade,
-        ImplementsIVisualElement,
-        ImplementsIVisualElement2,
     )
 
 __all__ = [
@@ -285,12 +281,19 @@ __all__ = [
     "VisualCollection",
     "VisualUnorderedCollection",
     "IAnimationObject",
+    "ImplementsIAnimationObject",
     "ICompositionAnimationBase",
+    "ImplementsICompositionAnimationBase",
     "ICompositionSupportsSystemBackdrop",
+    "ImplementsICompositionSupportsSystemBackdrop",
     "ICompositionSurface",
+    "ImplementsICompositionSurface",
     "ICompositionSurfaceFacade",
+    "ImplementsICompositionSurfaceFacade",
     "IVisualElement",
+    "ImplementsIVisualElement",
     "IVisualElement2",
+    "ImplementsIVisualElement2",
 ]
 
 class AnimationControllerProgressBehavior(enum.IntEnum):

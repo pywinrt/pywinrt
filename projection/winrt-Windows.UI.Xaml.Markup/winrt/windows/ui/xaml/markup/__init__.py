@@ -10,30 +10,26 @@ from winrt._winrt_windows_ui_xaml_markup import (
     XamlMarkupHelper,
     XamlReader,
     IComponentConnector,
+    ImplementsIComponentConnector,
     IComponentConnector2,
+    ImplementsIComponentConnector2,
     IDataTemplateComponent,
+    ImplementsIDataTemplateComponent,
     IXamlBindScopeDiagnostics,
+    ImplementsIXamlBindScopeDiagnostics,
     IXamlMember,
+    ImplementsIXamlMember,
     IXamlMetadataProvider,
+    ImplementsIXamlMetadataProvider,
     IXamlType,
+    ImplementsIXamlType,
     IXamlType2,
+    ImplementsIXamlType2,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_windows_ui_xaml_markup import (
         MarkupExtension_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_markup import (
-        ImplementsIComponentConnector,
-        ImplementsIComponentConnector2,
-        ImplementsIDataTemplateComponent,
-        ImplementsIXamlBindScopeDiagnostics,
-        ImplementsIXamlMember,
-        ImplementsIXamlMetadataProvider,
-        ImplementsIXamlType,
-        ImplementsIXamlType2,
     )
 
 __all__ = [
@@ -45,12 +41,20 @@ __all__ = [
     "XamlMarkupHelper",
     "XamlReader",
     "IComponentConnector",
+    "ImplementsIComponentConnector",
     "IComponentConnector2",
+    "ImplementsIComponentConnector2",
     "IDataTemplateComponent",
+    "ImplementsIDataTemplateComponent",
     "IXamlBindScopeDiagnostics",
+    "ImplementsIXamlBindScopeDiagnostics",
     "IXamlMember",
+    "ImplementsIXamlMember",
     "IXamlMetadataProvider",
+    "ImplementsIXamlMetadataProvider",
     "IXamlType",
+    "ImplementsIXamlType",
     "IXamlType2",
+    "ImplementsIXamlType2",
 ]
 

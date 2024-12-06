@@ -4582,6 +4582,17 @@ namespace py::cpp::Windows::Storage::BulkAccess
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemInformation};
 
+    static PyType_Slot type_slots_ImplementsIStorageItemInformation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemInformation = {
+        "winrt._winrt_windows_storage_bulkaccess.ImplementsIStorageItemInformation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemInformation};
+
     // ----- Windows.Storage.BulkAccess Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Storage.BulkAccess");
@@ -4647,6 +4658,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
 
     py::pytype_handle IStorageItemInformation_type{py::register_python_type(module.get(), &type_spec_IStorageItemInformation, object_bases.get(), nullptr)};
     if (!IStorageItemInformation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageItemInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemInformation, nullptr))};
+    if (!ImplementsIStorageItemInformation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemInformation_type.get()) == -1)
     {
         return nullptr;
     }

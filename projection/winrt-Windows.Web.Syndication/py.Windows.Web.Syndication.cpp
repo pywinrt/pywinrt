@@ -9048,6 +9048,17 @@ namespace py::cpp::Windows::Web::Syndication
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISyndicationClient};
 
+    static PyType_Slot type_slots_ImplementsISyndicationClient[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISyndicationClient = {
+        "winrt._winrt_windows_web_syndication.ImplementsISyndicationClient",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISyndicationClient};
+
     // ----- ISyndicationNode interface --------------------
 
     static PyObject* _new_ISyndicationNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9516,6 +9527,17 @@ namespace py::cpp::Windows::Web::Syndication
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISyndicationNode};
+
+    static PyType_Slot type_slots_ImplementsISyndicationNode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISyndicationNode = {
+        "winrt._winrt_windows_web_syndication.ImplementsISyndicationNode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISyndicationNode};
 
     // ----- ISyndicationText interface --------------------
 
@@ -10172,6 +10194,17 @@ namespace py::cpp::Windows::Web::Syndication
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISyndicationText};
 
+    static PyType_Slot type_slots_ImplementsISyndicationText[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISyndicationText = {
+        "winrt._winrt_windows_web_syndication.ImplementsISyndicationText",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISyndicationText};
+
     // ----- RetrievalProgress struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>* _new_RetrievalProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10813,14 +10846,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISyndicationClient_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationClient, nullptr))};
+    if (!ImplementsISyndicationClient_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISyndicationClient_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISyndicationNode_type{py::register_python_type(module.get(), &type_spec_ISyndicationNode, object_bases.get(), nullptr)};
     if (!ISyndicationNode_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISyndicationNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationNode, nullptr))};
+    if (!ImplementsISyndicationNode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISyndicationNode_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISyndicationText_type{py::register_python_type(module.get(), &type_spec_ISyndicationText, object_bases.get(), nullptr)};
     if (!ISyndicationText_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISyndicationText_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationText, nullptr))};
+    if (!ImplementsISyndicationText_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISyndicationText_type.get()) == -1)
     {
         return nullptr;
     }

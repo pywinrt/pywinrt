@@ -9533,6 +9533,17 @@ namespace py::cpp::Windows::Devices::Sms
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISmsBinaryMessage};
 
+    static PyType_Slot type_slots_ImplementsISmsBinaryMessage[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISmsBinaryMessage = {
+        "winrt._winrt_windows_devices_sms.ImplementsISmsBinaryMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISmsBinaryMessage};
+
     // ----- ISmsDevice interface --------------------
 
     static PyObject* _new_ISmsDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9903,6 +9914,17 @@ namespace py::cpp::Windows::Devices::Sms
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISmsDevice};
 
+    static PyType_Slot type_slots_ImplementsISmsDevice[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISmsDevice = {
+        "winrt._winrt_windows_devices_sms.ImplementsISmsDevice",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISmsDevice};
+
     // ----- ISmsMessage interface --------------------
 
     static PyObject* _new_ISmsMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10022,6 +10044,17 @@ namespace py::cpp::Windows::Devices::Sms
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISmsMessage};
+
+    static PyType_Slot type_slots_ImplementsISmsMessage[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISmsMessage = {
+        "winrt._winrt_windows_devices_sms.ImplementsISmsMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISmsMessage};
 
     // ----- ISmsMessageBase interface --------------------
 
@@ -10223,6 +10256,17 @@ namespace py::cpp::Windows::Devices::Sms
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISmsMessageBase};
+
+    static PyType_Slot type_slots_ImplementsISmsMessageBase[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISmsMessageBase = {
+        "winrt._winrt_windows_devices_sms.ImplementsISmsMessageBase",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISmsMessageBase};
 
     // ----- ISmsTextMessage interface --------------------
 
@@ -10738,6 +10782,17 @@ namespace py::cpp::Windows::Devices::Sms
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISmsTextMessage};
+
+    static PyType_Slot type_slots_ImplementsISmsTextMessage[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISmsTextMessage = {
+        "winrt._winrt_windows_devices_sms.ImplementsISmsTextMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISmsTextMessage};
 
     // ----- SmsEncodedLength struct --------------------
 
@@ -11298,8 +11353,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISmsBinaryMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsBinaryMessage, nullptr))};
+    if (!ImplementsISmsBinaryMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISmsBinaryMessage_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISmsDevice_type{py::register_python_type(module.get(), &type_spec_ISmsDevice, object_bases.get(), nullptr)};
     if (!ISmsDevice_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISmsDevice_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsDevice, nullptr))};
+    if (!ImplementsISmsDevice_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISmsDevice_type.get()) == -1)
     {
         return nullptr;
     }
@@ -11310,14 +11387,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISmsMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsMessage, nullptr))};
+    if (!ImplementsISmsMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISmsMessage_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISmsMessageBase_type{py::register_python_type(module.get(), &type_spec_ISmsMessageBase, object_bases.get(), nullptr)};
     if (!ISmsMessageBase_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISmsMessageBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsMessageBase, nullptr))};
+    if (!ImplementsISmsMessageBase_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISmsMessageBase_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISmsTextMessage_type{py::register_python_type(module.get(), &type_spec_ISmsTextMessage, object_bases.get(), nullptr)};
     if (!ISmsTextMessage_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISmsTextMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsTextMessage, nullptr))};
+    if (!ImplementsISmsTextMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISmsTextMessage_type.get()) == -1)
     {
         return nullptr;
     }

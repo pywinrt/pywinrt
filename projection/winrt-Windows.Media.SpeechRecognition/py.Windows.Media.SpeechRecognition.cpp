@@ -4834,6 +4834,17 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpeechRecognitionConstraint};
 
+    static PyType_Slot type_slots_ImplementsISpeechRecognitionConstraint[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpeechRecognitionConstraint = {
+        "winrt._winrt_windows_media_speechrecognition.ImplementsISpeechRecognitionConstraint",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpeechRecognitionConstraint};
+
     // ----- Windows.Media.SpeechRecognition Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Media.SpeechRecognition");
@@ -5007,6 +5018,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
 
     py::pytype_handle ISpeechRecognitionConstraint_type{py::register_python_type(module.get(), &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr)};
     if (!ISpeechRecognitionConstraint_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISpeechRecognitionConstraint_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpeechRecognitionConstraint, nullptr))};
+    if (!ImplementsISpeechRecognitionConstraint_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpeechRecognitionConstraint_type.get()) == -1)
     {
         return nullptr;
     }

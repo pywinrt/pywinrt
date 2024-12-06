@@ -45,12 +45,8 @@ from winrt._winrt_windows_system_remotesystems import (
     RemoteSystemWatcherErrorOccurredEventArgs,
     RemoteSystemWebAccountFilter,
     IRemoteSystemFilter,
+    ImplementsIRemoteSystemFilter,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_system_remotesystems import (
-        ImplementsIRemoteSystemFilter,
-    )
 
 __all__ = [
     "RemoteSystemAccessStatus",
@@ -107,6 +103,7 @@ __all__ = [
     "RemoteSystemWatcherErrorOccurredEventArgs",
     "RemoteSystemWebAccountFilter",
     "IRemoteSystemFilter",
+    "ImplementsIRemoteSystemFilter",
 ]
 
 class RemoteSystemAccessStatus(enum.IntEnum):

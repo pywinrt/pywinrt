@@ -4381,6 +4381,17 @@ namespace py::cpp::Windows::Storage::FileProperties
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemExtraProperties};
 
+    static PyType_Slot type_slots_ImplementsIStorageItemExtraProperties[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemExtraProperties = {
+        "winrt._winrt_windows_storage_fileproperties.ImplementsIStorageItemExtraProperties",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemExtraProperties};
+
     // ----- Windows.Storage.FileProperties Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Storage.FileProperties");
@@ -4482,6 +4493,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
 
     py::pytype_handle IStorageItemExtraProperties_type{py::register_python_type(module.get(), &type_spec_IStorageItemExtraProperties, object_bases.get(), nullptr)};
     if (!IStorageItemExtraProperties_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageItemExtraProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemExtraProperties, nullptr))};
+    if (!ImplementsIStorageItemExtraProperties_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemExtraProperties_type.get()) == -1)
     {
         return nullptr;
     }

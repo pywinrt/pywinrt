@@ -3785,6 +3785,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncAction};
 
+    static PyType_Slot type_slots_ImplementsIAsyncAction[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAsyncAction = {
+        "winrt._winrt_windows_foundation.ImplementsIAsyncAction",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAsyncAction};
+
     // ----- IAsyncActionWithProgress interface --------------------
 
     static PyObject* _new_IAsyncActionWithProgress(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4050,6 +4061,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncActionWithProgress};
 
+    static PyType_Slot type_slots_ImplementsIAsyncActionWithProgress[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAsyncActionWithProgress = {
+        "winrt._winrt_windows_foundation.ImplementsIAsyncActionWithProgress",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAsyncActionWithProgress};
+
     // ----- IAsyncInfo interface --------------------
 
     static PyObject* _new_IAsyncInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4272,6 +4294,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncInfo};
+
+    static PyType_Slot type_slots_ImplementsIAsyncInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAsyncInfo = {
+        "winrt._winrt_windows_foundation.ImplementsIAsyncInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAsyncInfo};
 
     // ----- IAsyncOperationWithProgress interface --------------------
 
@@ -4538,6 +4571,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncOperationWithProgress};
 
+    static PyType_Slot type_slots_ImplementsIAsyncOperationWithProgress[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAsyncOperationWithProgress = {
+        "winrt._winrt_windows_foundation.ImplementsIAsyncOperationWithProgress",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAsyncOperationWithProgress};
+
     // ----- IAsyncOperation interface --------------------
 
     static PyObject* _new_IAsyncOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4744,6 +4788,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncOperation};
 
+    static PyType_Slot type_slots_ImplementsIAsyncOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAsyncOperation = {
+        "winrt._winrt_windows_foundation.ImplementsIAsyncOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAsyncOperation};
+
     // ----- IClosable interface --------------------
 
     static PyObject* _new_IClosable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4869,6 +4924,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IClosable};
 
+    static PyType_Slot type_slots_ImplementsIClosable[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIClosable = {
+        "winrt._winrt_windows_foundation.ImplementsIClosable",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIClosable};
+
     // ----- IGetActivationFactory interface --------------------
 
     static PyObject* _new_IGetActivationFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4973,6 +5039,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGetActivationFactory};
+
+    static PyType_Slot type_slots_ImplementsIGetActivationFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGetActivationFactory = {
+        "winrt._winrt_windows_foundation.ImplementsIGetActivationFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGetActivationFactory};
 
     // ----- IMemoryBuffer interface --------------------
 
@@ -5135,6 +5212,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMemoryBuffer};
+
+    static PyType_Slot type_slots_ImplementsIMemoryBuffer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMemoryBuffer = {
+        "winrt._winrt_windows_foundation.ImplementsIMemoryBuffer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMemoryBuffer};
 
     // ----- IMemoryBufferReference interface --------------------
 
@@ -5361,6 +5449,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMemoryBufferReference};
+
+    static PyType_Slot type_slots_ImplementsIMemoryBufferReference[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMemoryBufferReference = {
+        "winrt._winrt_windows_foundation.ImplementsIMemoryBufferReference",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMemoryBufferReference};
 
     // ----- IPropertyValue interface --------------------
 
@@ -7022,6 +7121,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertyValue};
 
+    static PyType_Slot type_slots_ImplementsIPropertyValue[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPropertyValue = {
+        "winrt._winrt_windows_foundation.ImplementsIPropertyValue",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPropertyValue};
+
     // ----- IReferenceArray interface --------------------
 
     static PyObject* _new_IReferenceArray(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7366,6 +7476,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IReferenceArray};
+
+    static PyType_Slot type_slots_ImplementsIReferenceArray[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIReferenceArray = {
+        "winrt._winrt_windows_foundation.ImplementsIReferenceArray",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIReferenceArray};
 
     // ----- IReference interface --------------------
 
@@ -7712,6 +7833,17 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IReference};
 
+    static PyType_Slot type_slots_ImplementsIReference[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIReference = {
+        "winrt._winrt_windows_foundation.ImplementsIReference",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIReference};
+
     // ----- IStringable interface --------------------
 
     static PyObject* _new_IStringable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7828,6 +7960,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStringable};
+
+    static PyType_Slot type_slots_ImplementsIStringable[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStringable = {
+        "winrt._winrt_windows_foundation.ImplementsIStringable",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStringable};
 
     // ----- IWwwFormUrlDecoderEntry interface --------------------
 
@@ -7948,6 +8091,17 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWwwFormUrlDecoderEntry};
+
+    static PyType_Slot type_slots_ImplementsIWwwFormUrlDecoderEntry[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWwwFormUrlDecoderEntry = {
+        "winrt._winrt_windows_foundation.ImplementsIWwwFormUrlDecoderEntry",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWwwFormUrlDecoderEntry};
 
     // ----- EventRegistrationToken struct --------------------
 
@@ -9130,8 +9284,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAsyncAction_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncAction, nullptr))};
+    if (!ImplementsIAsyncAction_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAsyncAction_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAsyncActionWithProgress_type{py::register_python_type(module.get(), &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr)};
     if (!IAsyncActionWithProgress_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAsyncActionWithProgress_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncActionWithProgress, nullptr))};
+    if (!ImplementsIAsyncActionWithProgress_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAsyncActionWithProgress_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9142,8 +9318,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAsyncInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncInfo, nullptr))};
+    if (!ImplementsIAsyncInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAsyncInfo_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAsyncOperationWithProgress_type{py::register_python_type(module.get(), &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr)};
     if (!IAsyncOperationWithProgress_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAsyncOperationWithProgress_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncOperationWithProgress, nullptr))};
+    if (!ImplementsIAsyncOperationWithProgress_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAsyncOperationWithProgress_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9154,8 +9352,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAsyncOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncOperation, nullptr))};
+    if (!ImplementsIAsyncOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAsyncOperation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IClosable_type{py::register_python_type(module.get(), &type_spec_IClosable, object_bases.get(), nullptr)};
     if (!IClosable_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIClosable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIClosable, nullptr))};
+    if (!ImplementsIClosable_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIClosable_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9166,8 +9386,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGetActivationFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGetActivationFactory, nullptr))};
+    if (!ImplementsIGetActivationFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGetActivationFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMemoryBuffer_type{py::register_python_type(module.get(), &type_spec_IMemoryBuffer, object_bases.get(), nullptr)};
     if (!IMemoryBuffer_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMemoryBuffer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMemoryBuffer, nullptr))};
+    if (!ImplementsIMemoryBuffer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMemoryBuffer_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9178,8 +9420,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMemoryBufferReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMemoryBufferReference, nullptr))};
+    if (!ImplementsIMemoryBufferReference_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMemoryBufferReference_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPropertyValue_type{py::register_python_type(module.get(), &type_spec_IPropertyValue, object_bases.get(), nullptr)};
     if (!IPropertyValue_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPropertyValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertyValue, nullptr))};
+    if (!ImplementsIPropertyValue_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPropertyValue_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9190,8 +9454,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIReferenceArray_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReferenceArray, nullptr))};
+    if (!ImplementsIReferenceArray_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIReferenceArray_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IReference_type{py::register_python_type(module.get(), &type_spec_IReference, object_bases.get(), nullptr)};
     if (!IReference_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReference, nullptr))};
+    if (!ImplementsIReference_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIReference_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9202,8 +9488,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStringable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStringable, nullptr))};
+    if (!ImplementsIStringable_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStringable_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr)};
     if (!IWwwFormUrlDecoderEntry_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWwwFormUrlDecoderEntry_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWwwFormUrlDecoderEntry, nullptr))};
+    if (!ImplementsIWwwFormUrlDecoderEntry_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWwwFormUrlDecoderEntry_type.get()) == -1)
     {
         return nullptr;
     }

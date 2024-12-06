@@ -16,20 +16,16 @@ from winrt._winrt_windows_ui_xaml_hosting import (
     XamlSourceFocusNavigationResult,
     XamlUIPresenter,
     IXamlUIPresenterHost,
+    ImplementsIXamlUIPresenterHost,
     IXamlUIPresenterHost2,
+    ImplementsIXamlUIPresenterHost2,
     IXamlUIPresenterHost3,
+    ImplementsIXamlUIPresenterHost3,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_windows_ui_xaml_hosting import (
         DesktopWindowXamlSource_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_hosting import (
-        ImplementsIXamlUIPresenterHost,
-        ImplementsIXamlUIPresenterHost2,
-        ImplementsIXamlUIPresenterHost3,
     )
 
 __all__ = [
@@ -47,8 +43,11 @@ __all__ = [
     "XamlSourceFocusNavigationResult",
     "XamlUIPresenter",
     "IXamlUIPresenterHost",
+    "ImplementsIXamlUIPresenterHost",
     "IXamlUIPresenterHost2",
+    "ImplementsIXamlUIPresenterHost2",
     "IXamlUIPresenterHost3",
+    "ImplementsIXamlUIPresenterHost3",
 ]
 
 class DesignerAppViewState(enum.IntEnum):

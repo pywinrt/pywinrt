@@ -36368,6 +36368,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollController};
 
+    static PyType_Slot type_slots_ImplementsIScrollController[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollController = {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ImplementsIScrollController",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollController};
+
     // ----- IScrollControllerPanningInfo interface --------------------
 
     static PyObject* _new_IScrollControllerPanningInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -36676,6 +36687,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollControllerPanningInfo};
+
+    static PyType_Slot type_slots_ImplementsIScrollControllerPanningInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollControllerPanningInfo = {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ImplementsIScrollControllerPanningInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollControllerPanningInfo};
 
     // ----- IScrollSnapPointsInfo interface --------------------
 
@@ -37007,6 +37029,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollSnapPointsInfo};
+
+    static PyType_Slot type_slots_ImplementsIScrollSnapPointsInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollSnapPointsInfo = {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollSnapPointsInfo};
 
     // ----- GeneratorPosition struct --------------------
 
@@ -38671,14 +38704,47 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIScrollController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollController, nullptr))};
+    if (!ImplementsIScrollController_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollController_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IScrollControllerPanningInfo_type{py::register_python_type(module.get(), &type_spec_IScrollControllerPanningInfo, object_bases.get(), nullptr)};
     if (!IScrollControllerPanningInfo_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIScrollControllerPanningInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollControllerPanningInfo, nullptr))};
+    if (!ImplementsIScrollControllerPanningInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollControllerPanningInfo_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IScrollSnapPointsInfo_type{py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr)};
     if (!IScrollSnapPointsInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIScrollSnapPointsInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollSnapPointsInfo, nullptr))};
+    if (!ImplementsIScrollSnapPointsInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollSnapPointsInfo_type.get()) == -1)
     {
         return nullptr;
     }

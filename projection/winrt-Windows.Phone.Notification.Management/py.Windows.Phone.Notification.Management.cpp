@@ -7891,6 +7891,17 @@ namespace py::cpp::Windows::Phone::Notification::Management
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAccessoryNotificationTriggerDetails};
 
+    static PyType_Slot type_slots_ImplementsIAccessoryNotificationTriggerDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAccessoryNotificationTriggerDetails = {
+        "winrt._winrt_windows_phone_notification_management.ImplementsIAccessoryNotificationTriggerDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAccessoryNotificationTriggerDetails};
+
     // ----- Windows.Phone.Notification.Management Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Phone.Notification.Management");
@@ -8064,6 +8075,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
 
     py::pytype_handle IAccessoryNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_IAccessoryNotificationTriggerDetails, object_bases.get(), nullptr)};
     if (!IAccessoryNotificationTriggerDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAccessoryNotificationTriggerDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAccessoryNotificationTriggerDetails, nullptr))};
+    if (!ImplementsIAccessoryNotificationTriggerDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAccessoryNotificationTriggerDetails_type.get()) == -1)
     {
         return nullptr;
     }

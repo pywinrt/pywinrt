@@ -7,16 +7,12 @@ from winrt._winrt_windows_devices_i2c_provider import (
     ProviderI2cTransferResult,
     ProviderI2cConnectionSettings,
     II2cControllerProvider,
+    ImplementsII2cControllerProvider,
     II2cDeviceProvider,
+    ImplementsII2cDeviceProvider,
     II2cProvider,
+    ImplementsII2cProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_i2c_provider import (
-        ImplementsII2cControllerProvider,
-        ImplementsII2cDeviceProvider,
-        ImplementsII2cProvider,
-    )
 
 __all__ = [
     "ProviderI2cBusSpeed",
@@ -25,8 +21,11 @@ __all__ = [
     "ProviderI2cTransferResult",
     "ProviderI2cConnectionSettings",
     "II2cControllerProvider",
+    "ImplementsII2cControllerProvider",
     "II2cDeviceProvider",
+    "ImplementsII2cDeviceProvider",
     "II2cProvider",
+    "ImplementsII2cProvider",
 ]
 
 class ProviderI2cBusSpeed(enum.IntEnum):

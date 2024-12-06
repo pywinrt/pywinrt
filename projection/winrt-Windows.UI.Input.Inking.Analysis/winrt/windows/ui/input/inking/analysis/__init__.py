@@ -16,14 +16,10 @@ from winrt._winrt_windows_ui_input_inking_analysis import (
     InkAnalysisWritingRegion,
     InkAnalyzer,
     IInkAnalysisNode,
+    ImplementsIInkAnalysisNode,
     IInkAnalyzerFactory,
+    ImplementsIInkAnalyzerFactory,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_input_inking_analysis import (
-        ImplementsIInkAnalysisNode,
-        ImplementsIInkAnalyzerFactory,
-    )
 
 __all__ = [
     "InkAnalysisDrawingKind",
@@ -42,7 +38,9 @@ __all__ = [
     "InkAnalysisWritingRegion",
     "InkAnalyzer",
     "IInkAnalysisNode",
+    "ImplementsIInkAnalysisNode",
     "IInkAnalyzerFactory",
+    "ImplementsIInkAnalyzerFactory",
 ]
 
 class InkAnalysisDrawingKind(enum.IntEnum):

@@ -271,6 +271,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAnnotationProvider};
 
+    static PyType_Slot type_slots_ImplementsIAnnotationProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAnnotationProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIAnnotationProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAnnotationProvider};
+
     // ----- ICustomNavigationProvider interface --------------------
 
     static PyObject* _new_ICustomNavigationProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -375,6 +386,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICustomNavigationProvider};
+
+    static PyType_Slot type_slots_ImplementsICustomNavigationProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICustomNavigationProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsICustomNavigationProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICustomNavigationProvider};
 
     // ----- IDockProvider interface --------------------
 
@@ -508,6 +530,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDockProvider};
+
+    static PyType_Slot type_slots_ImplementsIDockProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDockProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDockProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDockProvider};
 
     // ----- IDragProvider interface --------------------
 
@@ -693,6 +726,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDragProvider};
 
+    static PyType_Slot type_slots_ImplementsIDragProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDragProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDragProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDragProvider};
+
     // ----- IDropTargetProvider interface --------------------
 
     static PyObject* _new_IDropTargetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -812,6 +856,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDropTargetProvider};
+
+    static PyType_Slot type_slots_ImplementsIDropTargetProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDropTargetProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDropTargetProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDropTargetProvider};
 
     // ----- IExpandCollapseProvider interface --------------------
 
@@ -981,6 +1036,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IExpandCollapseProvider};
+
+    static PyType_Slot type_slots_ImplementsIExpandCollapseProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIExpandCollapseProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIExpandCollapseProvider};
 
     // ----- IGridItemProvider interface --------------------
 
@@ -1183,6 +1249,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGridItemProvider};
 
+    static PyType_Slot type_slots_ImplementsIGridItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGridItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIGridItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGridItemProvider};
+
     // ----- IGridProvider interface --------------------
 
     static PyObject* _new_IGridProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1343,6 +1420,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGridProvider};
 
+    static PyType_Slot type_slots_ImplementsIGridProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGridProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIGridProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGridProvider};
+
     // ----- IInvokeProvider interface --------------------
 
     static PyObject* _new_IInvokeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1446,6 +1534,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInvokeProvider};
+
+    static PyType_Slot type_slots_ImplementsIInvokeProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInvokeProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInvokeProvider};
 
     // ----- IItemContainerProvider interface --------------------
 
@@ -1553,6 +1652,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IItemContainerProvider};
+
+    static PyType_Slot type_slots_ImplementsIItemContainerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIItemContainerProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIItemContainerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIItemContainerProvider};
 
     // ----- IMultipleViewProvider interface --------------------
 
@@ -1763,6 +1873,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMultipleViewProvider};
 
+    static PyType_Slot type_slots_ImplementsIMultipleViewProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMultipleViewProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIMultipleViewProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMultipleViewProvider};
+
     // ----- IObjectModelProvider interface --------------------
 
     static PyObject* _new_IObjectModelProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1865,6 +1986,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IObjectModelProvider};
+
+    static PyType_Slot type_slots_ImplementsIObjectModelProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIObjectModelProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIObjectModelProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIObjectModelProvider};
 
     // ----- IRangeValueProvider interface --------------------
 
@@ -2134,6 +2266,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRangeValueProvider};
 
+    static PyType_Slot type_slots_ImplementsIRangeValueProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRangeValueProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIRangeValueProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRangeValueProvider};
+
     // ----- IScrollItemProvider interface --------------------
 
     static PyObject* _new_IScrollItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2237,6 +2380,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollItemProvider};
+
+    static PyType_Slot type_slots_ImplementsIScrollItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollItemProvider};
 
     // ----- IScrollProvider interface --------------------
 
@@ -2548,6 +2702,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollProvider};
 
+    static PyType_Slot type_slots_ImplementsIScrollProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIScrollProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollProvider};
+
     // ----- ISelectionItemProvider interface --------------------
 
     static PyObject* _new_ISelectionItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2782,6 +2947,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISelectionItemProvider};
 
+    static PyType_Slot type_slots_ImplementsISelectionItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISelectionItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISelectionItemProvider};
+
     // ----- ISelectionProvider interface --------------------
 
     static PyObject* _new_ISelectionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2938,6 +3114,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISelectionProvider};
+
+    static PyType_Slot type_slots_ImplementsISelectionProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISelectionProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISelectionProvider};
 
     // ----- ISpreadsheetItemProvider interface --------------------
 
@@ -3106,6 +3293,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpreadsheetItemProvider};
 
+    static PyType_Slot type_slots_ImplementsISpreadsheetItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpreadsheetItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISpreadsheetItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpreadsheetItemProvider};
+
     // ----- ISpreadsheetProvider interface --------------------
 
     static PyObject* _new_ISpreadsheetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3210,6 +3408,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpreadsheetProvider};
+
+    static PyType_Slot type_slots_ImplementsISpreadsheetProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpreadsheetProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISpreadsheetProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpreadsheetProvider};
 
     // ----- IStylesProvider interface --------------------
 
@@ -3466,6 +3675,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStylesProvider};
 
+    static PyType_Slot type_slots_ImplementsIStylesProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStylesProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIStylesProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStylesProvider};
+
     // ----- ISynchronizedInputProvider interface --------------------
 
     static PyObject* _new_ISynchronizedInputProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3610,6 +3830,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISynchronizedInputProvider};
 
+    static PyType_Slot type_slots_ImplementsISynchronizedInputProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISynchronizedInputProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISynchronizedInputProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISynchronizedInputProvider};
+
     // ----- ITableItemProvider interface --------------------
 
     static PyObject* _new_ITableItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3749,6 +3980,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITableItemProvider};
+
+    static PyType_Slot type_slots_ImplementsITableItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITableItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITableItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITableItemProvider};
 
     // ----- ITableProvider interface --------------------
 
@@ -3917,6 +4159,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITableProvider};
 
+    static PyType_Slot type_slots_ImplementsITableProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITableProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITableProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITableProvider};
+
     // ----- ITextChildProvider interface --------------------
 
     static PyObject* _new_ITextChildProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4036,6 +4289,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextChildProvider};
+
+    static PyType_Slot type_slots_ImplementsITextChildProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextChildProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextChildProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextChildProvider};
 
     // ----- ITextEditProvider interface --------------------
 
@@ -4383,6 +4647,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextEditProvider};
 
+    static PyType_Slot type_slots_ImplementsITextEditProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextEditProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextEditProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextEditProvider};
+
     // ----- ITextProvider interface --------------------
 
     static PyObject* _new_ITextProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4654,6 +4929,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextProvider};
+
+    static PyType_Slot type_slots_ImplementsITextProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextProvider};
 
     // ----- ITextProvider2 interface --------------------
 
@@ -5016,6 +5302,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextProvider2};
+
+    static PyType_Slot type_slots_ImplementsITextProvider2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextProvider2 = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextProvider2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextProvider2};
 
     // ----- ITextRangeProvider interface --------------------
 
@@ -5796,6 +6093,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextRangeProvider};
+
+    static PyType_Slot type_slots_ImplementsITextRangeProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextRangeProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextRangeProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextRangeProvider};
 
     // ----- ITextRangeProvider2 interface --------------------
 
@@ -6615,6 +6923,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITextRangeProvider2};
 
+    static PyType_Slot type_slots_ImplementsITextRangeProvider2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITextRangeProvider2 = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextRangeProvider2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITextRangeProvider2};
+
     // ----- IToggleProvider interface --------------------
 
     static PyObject* _new_IToggleProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6745,6 +7064,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IToggleProvider};
+
+    static PyType_Slot type_slots_ImplementsIToggleProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIToggleProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIToggleProvider};
 
     // ----- ITransformProvider interface --------------------
 
@@ -7014,6 +7344,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITransformProvider};
+
+    static PyType_Slot type_slots_ImplementsITransformProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITransformProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITransformProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITransformProvider};
 
     // ----- ITransformProvider2 interface --------------------
 
@@ -7472,6 +7813,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITransformProvider2};
 
+    static PyType_Slot type_slots_ImplementsITransformProvider2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITransformProvider2 = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITransformProvider2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITransformProvider2};
+
     // ----- IValueProvider interface --------------------
 
     static PyObject* _new_IValueProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7632,6 +7984,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IValueProvider};
 
+    static PyType_Slot type_slots_ImplementsIValueProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIValueProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIValueProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIValueProvider};
+
     // ----- IVirtualizedItemProvider interface --------------------
 
     static PyObject* _new_IVirtualizedItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7735,6 +8098,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVirtualizedItemProvider};
+
+    static PyType_Slot type_slots_ImplementsIVirtualizedItemProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVirtualizedItemProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVirtualizedItemProvider};
 
     // ----- IWindowProvider interface --------------------
 
@@ -8081,6 +8455,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWindowProvider};
 
+    static PyType_Slot type_slots_ImplementsIWindowProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWindowProvider = {
+        "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIWindowProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWindowProvider};
+
     // ----- Microsoft.UI.Xaml.Automation.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Automation.Provider");
@@ -8156,8 +8541,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAnnotationProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAnnotationProvider, nullptr))};
+    if (!ImplementsIAnnotationProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAnnotationProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICustomNavigationProvider_type{py::register_python_type(module.get(), &type_spec_ICustomNavigationProvider, object_bases.get(), nullptr)};
     if (!ICustomNavigationProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICustomNavigationProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomNavigationProvider, nullptr))};
+    if (!ImplementsICustomNavigationProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICustomNavigationProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8168,8 +8575,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDockProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDockProvider, nullptr))};
+    if (!ImplementsIDockProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDockProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IDragProvider_type{py::register_python_type(module.get(), &type_spec_IDragProvider, object_bases.get(), nullptr)};
     if (!IDragProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDragProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDragProvider, nullptr))};
+    if (!ImplementsIDragProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDragProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8180,8 +8609,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDropTargetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDropTargetProvider, nullptr))};
+    if (!ImplementsIDropTargetProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDropTargetProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IExpandCollapseProvider_type{py::register_python_type(module.get(), &type_spec_IExpandCollapseProvider, object_bases.get(), nullptr)};
     if (!IExpandCollapseProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIExpandCollapseProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIExpandCollapseProvider, nullptr))};
+    if (!ImplementsIExpandCollapseProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIExpandCollapseProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8192,8 +8643,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGridItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGridItemProvider, nullptr))};
+    if (!ImplementsIGridItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGridItemProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGridProvider_type{py::register_python_type(module.get(), &type_spec_IGridProvider, object_bases.get(), nullptr)};
     if (!IGridProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGridProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGridProvider, nullptr))};
+    if (!ImplementsIGridProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGridProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8204,8 +8677,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInvokeProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInvokeProvider, nullptr))};
+    if (!ImplementsIInvokeProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInvokeProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IItemContainerProvider_type{py::register_python_type(module.get(), &type_spec_IItemContainerProvider, object_bases.get(), nullptr)};
     if (!IItemContainerProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIItemContainerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIItemContainerProvider, nullptr))};
+    if (!ImplementsIItemContainerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIItemContainerProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8216,8 +8711,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMultipleViewProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMultipleViewProvider, nullptr))};
+    if (!ImplementsIMultipleViewProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMultipleViewProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IObjectModelProvider_type{py::register_python_type(module.get(), &type_spec_IObjectModelProvider, object_bases.get(), nullptr)};
     if (!IObjectModelProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIObjectModelProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObjectModelProvider, nullptr))};
+    if (!ImplementsIObjectModelProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIObjectModelProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8228,8 +8745,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRangeValueProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRangeValueProvider, nullptr))};
+    if (!ImplementsIRangeValueProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRangeValueProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IScrollItemProvider_type{py::register_python_type(module.get(), &type_spec_IScrollItemProvider, object_bases.get(), nullptr)};
     if (!IScrollItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIScrollItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollItemProvider, nullptr))};
+    if (!ImplementsIScrollItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollItemProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8240,8 +8779,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIScrollProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollProvider, nullptr))};
+    if (!ImplementsIScrollProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISelectionItemProvider_type{py::register_python_type(module.get(), &type_spec_ISelectionItemProvider, object_bases.get(), nullptr)};
     if (!ISelectionItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISelectionItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionItemProvider, nullptr))};
+    if (!ImplementsISelectionItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISelectionItemProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8252,8 +8813,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISelectionProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionProvider, nullptr))};
+    if (!ImplementsISelectionProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISelectionProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISpreadsheetItemProvider_type{py::register_python_type(module.get(), &type_spec_ISpreadsheetItemProvider, object_bases.get(), nullptr)};
     if (!ISpreadsheetItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISpreadsheetItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpreadsheetItemProvider, nullptr))};
+    if (!ImplementsISpreadsheetItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpreadsheetItemProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8264,8 +8847,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISpreadsheetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpreadsheetProvider, nullptr))};
+    if (!ImplementsISpreadsheetProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpreadsheetProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStylesProvider_type{py::register_python_type(module.get(), &type_spec_IStylesProvider, object_bases.get(), nullptr)};
     if (!IStylesProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStylesProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStylesProvider, nullptr))};
+    if (!ImplementsIStylesProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStylesProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8276,8 +8881,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISynchronizedInputProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISynchronizedInputProvider, nullptr))};
+    if (!ImplementsISynchronizedInputProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISynchronizedInputProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITableItemProvider_type{py::register_python_type(module.get(), &type_spec_ITableItemProvider, object_bases.get(), nullptr)};
     if (!ITableItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITableItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITableItemProvider, nullptr))};
+    if (!ImplementsITableItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITableItemProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8288,8 +8915,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITableProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITableProvider, nullptr))};
+    if (!ImplementsITableProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITableProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITextChildProvider_type{py::register_python_type(module.get(), &type_spec_ITextChildProvider, object_bases.get(), nullptr)};
     if (!ITextChildProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITextChildProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextChildProvider, nullptr))};
+    if (!ImplementsITextChildProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextChildProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8300,8 +8949,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITextEditProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextEditProvider, nullptr))};
+    if (!ImplementsITextEditProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextEditProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITextProvider_type{py::register_python_type(module.get(), &type_spec_ITextProvider, object_bases.get(), nullptr)};
     if (!ITextProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITextProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextProvider, nullptr))};
+    if (!ImplementsITextProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8312,8 +8983,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITextProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextProvider2, nullptr))};
+    if (!ImplementsITextProvider2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextProvider2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITextRangeProvider_type{py::register_python_type(module.get(), &type_spec_ITextRangeProvider, object_bases.get(), nullptr)};
     if (!ITextRangeProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITextRangeProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRangeProvider, nullptr))};
+    if (!ImplementsITextRangeProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextRangeProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8324,8 +9017,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITextRangeProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRangeProvider2, nullptr))};
+    if (!ImplementsITextRangeProvider2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITextRangeProvider2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IToggleProvider_type{py::register_python_type(module.get(), &type_spec_IToggleProvider, object_bases.get(), nullptr)};
     if (!IToggleProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIToggleProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIToggleProvider, nullptr))};
+    if (!ImplementsIToggleProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIToggleProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8336,8 +9051,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsITransformProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITransformProvider, nullptr))};
+    if (!ImplementsITransformProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITransformProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITransformProvider2_type{py::register_python_type(module.get(), &type_spec_ITransformProvider2, object_bases.get(), nullptr)};
     if (!ITransformProvider2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITransformProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITransformProvider2, nullptr))};
+    if (!ImplementsITransformProvider2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITransformProvider2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -8348,14 +9085,47 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIValueProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIValueProvider, nullptr))};
+    if (!ImplementsIValueProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIValueProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVirtualizedItemProvider_type{py::register_python_type(module.get(), &type_spec_IVirtualizedItemProvider, object_bases.get(), nullptr)};
     if (!IVirtualizedItemProvider_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVirtualizedItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVirtualizedItemProvider, nullptr))};
+    if (!ImplementsIVirtualizedItemProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVirtualizedItemProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWindowProvider_type{py::register_python_type(module.get(), &type_spec_IWindowProvider, object_bases.get(), nullptr)};
     if (!IWindowProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWindowProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWindowProvider, nullptr))};
+    if (!ImplementsIWindowProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWindowProvider_type.get()) == -1)
     {
         return nullptr;
     }

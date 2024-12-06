@@ -2138,6 +2138,17 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         Py_TPFLAGS_DEFAULT,
         _type_slots_IForceFeedbackEffect};
 
+    static PyType_Slot type_slots_ImplementsIForceFeedbackEffect[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIForceFeedbackEffect = {
+        "winrt._winrt_windows_gaming_input_forcefeedback.ImplementsIForceFeedbackEffect",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIForceFeedbackEffect};
+
     // ----- Windows.Gaming.Input.ForceFeedback Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Gaming.Input.ForceFeedback");
@@ -2215,6 +2226,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_forcefeedback(void) noexcept
 
     py::pytype_handle IForceFeedbackEffect_type{py::register_python_type(module.get(), &type_spec_IForceFeedbackEffect, object_bases.get(), nullptr)};
     if (!IForceFeedbackEffect_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIForceFeedbackEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIForceFeedbackEffect, nullptr))};
+    if (!ImplementsIForceFeedbackEffect_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIForceFeedbackEffect_type.get()) == -1)
     {
         return nullptr;
     }

@@ -10200,6 +10200,17 @@ namespace py::cpp::Windows::UI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreAcceleratorKeys};
 
+    static PyType_Slot type_slots_ImplementsICoreAcceleratorKeys[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreAcceleratorKeys = {
+        "winrt._winrt_windows_ui_core.ImplementsICoreAcceleratorKeys",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreAcceleratorKeys};
+
     // ----- ICoreInputSourceBase interface --------------------
 
     static PyObject* _new_ICoreInputSourceBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10413,6 +10424,17 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreInputSourceBase};
+
+    static PyType_Slot type_slots_ImplementsICoreInputSourceBase[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreInputSourceBase = {
+        "winrt._winrt_windows_ui_core.ImplementsICoreInputSourceBase",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreInputSourceBase};
 
     // ----- ICorePointerInputSource interface --------------------
 
@@ -11084,6 +11106,17 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICorePointerInputSource};
+
+    static PyType_Slot type_slots_ImplementsICorePointerInputSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICorePointerInputSource = {
+        "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICorePointerInputSource};
 
     // ----- ICorePointerInputSource2 interface --------------------
 
@@ -11783,6 +11816,17 @@ namespace py::cpp::Windows::UI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICorePointerInputSource2};
 
+    static PyType_Slot type_slots_ImplementsICorePointerInputSource2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICorePointerInputSource2 = {
+        "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICorePointerInputSource2};
+
     // ----- ICorePointerRedirector interface --------------------
 
     static PyObject* _new_ICorePointerRedirector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12025,6 +12069,17 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICorePointerRedirector};
+
+    static PyType_Slot type_slots_ImplementsICorePointerRedirector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICorePointerRedirector = {
+        "winrt._winrt_windows_ui_core.ImplementsICorePointerRedirector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICorePointerRedirector};
 
     // ----- ICoreWindow interface --------------------
 
@@ -13673,6 +13728,17 @@ namespace py::cpp::Windows::UI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreWindow};
 
+    static PyType_Slot type_slots_ImplementsICoreWindow[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreWindow = {
+        "winrt._winrt_windows_ui_core.ImplementsICoreWindow",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreWindow};
+
     // ----- ICoreWindowEventArgs interface --------------------
 
     static PyObject* _new_ICoreWindowEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13801,6 +13867,17 @@ namespace py::cpp::Windows::UI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreWindowEventArgs};
 
+    static PyType_Slot type_slots_ImplementsICoreWindowEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreWindowEventArgs = {
+        "winrt._winrt_windows_ui_core.ImplementsICoreWindowEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreWindowEventArgs};
+
     // ----- IInitializeWithCoreWindow interface --------------------
 
     static PyObject* _new_IInitializeWithCoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13906,6 +13983,17 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInitializeWithCoreWindow};
+
+    static PyType_Slot type_slots_ImplementsIInitializeWithCoreWindow[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInitializeWithCoreWindow = {
+        "winrt._winrt_windows_ui_core.ImplementsIInitializeWithCoreWindow",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInitializeWithCoreWindow};
 
     // ----- CorePhysicalKeyStatus struct --------------------
 
@@ -14734,8 +14822,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICoreAcceleratorKeys_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAcceleratorKeys, nullptr))};
+    if (!ImplementsICoreAcceleratorKeys_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreAcceleratorKeys_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICoreInputSourceBase_type{py::register_python_type(module.get(), &type_spec_ICoreInputSourceBase, object_bases.get(), nullptr)};
     if (!ICoreInputSourceBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICoreInputSourceBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreInputSourceBase, nullptr))};
+    if (!ImplementsICoreInputSourceBase_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreInputSourceBase_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14746,8 +14856,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICorePointerInputSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerInputSource, nullptr))};
+    if (!ImplementsICorePointerInputSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICorePointerInputSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICorePointerInputSource2_type{py::register_python_type(module.get(), &type_spec_ICorePointerInputSource2, object_bases.get(), nullptr)};
     if (!ICorePointerInputSource2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICorePointerInputSource2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerInputSource2, nullptr))};
+    if (!ImplementsICorePointerInputSource2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICorePointerInputSource2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14758,8 +14890,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICorePointerRedirector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerRedirector, nullptr))};
+    if (!ImplementsICorePointerRedirector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICorePointerRedirector_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICoreWindow_type{py::register_python_type(module.get(), &type_spec_ICoreWindow, object_bases.get(), nullptr)};
     if (!ICoreWindow_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICoreWindow_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreWindow, nullptr))};
+    if (!ImplementsICoreWindow_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreWindow_type.get()) == -1)
     {
         return nullptr;
     }
@@ -14770,8 +14924,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICoreWindowEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreWindowEventArgs, nullptr))};
+    if (!ImplementsICoreWindowEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreWindowEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInitializeWithCoreWindow_type{py::register_python_type(module.get(), &type_spec_IInitializeWithCoreWindow, object_bases.get(), nullptr)};
     if (!IInitializeWithCoreWindow_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInitializeWithCoreWindow_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInitializeWithCoreWindow, nullptr))};
+    if (!ImplementsIInitializeWithCoreWindow_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInitializeWithCoreWindow_type.get()) == -1)
     {
         return nullptr;
     }

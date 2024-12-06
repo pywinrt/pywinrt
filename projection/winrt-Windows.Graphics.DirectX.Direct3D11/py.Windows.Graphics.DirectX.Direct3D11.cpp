@@ -167,6 +167,17 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDirect3DDevice};
 
+    static PyType_Slot type_slots_ImplementsIDirect3DDevice[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDirect3DDevice = {
+        "winrt._winrt_windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDirect3DDevice};
+
     // ----- IDirect3DSurface interface --------------------
 
     static PyObject* _new_IDirect3DSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -318,6 +329,17 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDirect3DSurface};
+
+    static PyType_Slot type_slots_ImplementsIDirect3DSurface[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDirect3DSurface = {
+        "winrt._winrt_windows_graphics_directx_direct3d11.ImplementsIDirect3DSurface",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDirect3DSurface};
 
     // ----- Direct3DMultisampleDescription struct --------------------
 
@@ -882,8 +904,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDirect3DDevice_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDirect3DDevice, nullptr))};
+    if (!ImplementsIDirect3DDevice_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDirect3DDevice_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IDirect3DSurface_type{py::register_python_type(module.get(), &type_spec_IDirect3DSurface, object_bases.get(), nullptr)};
     if (!IDirect3DSurface_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDirect3DSurface_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDirect3DSurface, nullptr))};
+    if (!ImplementsIDirect3DSurface_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDirect3DSurface_type.get()) == -1)
     {
         return nullptr;
     }

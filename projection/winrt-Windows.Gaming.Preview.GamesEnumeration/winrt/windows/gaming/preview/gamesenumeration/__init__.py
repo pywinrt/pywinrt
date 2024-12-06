@@ -11,12 +11,8 @@ from winrt._winrt_windows_gaming_preview_gamesenumeration import (
     GameModeConfiguration,
     GameModeUserConfiguration,
     IGameListEntry,
+    ImplementsIGameListEntry,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_gaming_preview_gamesenumeration import (
-        ImplementsIGameListEntry,
-    )
 
 __all__ = [
     "GameListCategory",
@@ -26,6 +22,7 @@ __all__ = [
     "GameModeConfiguration",
     "GameModeUserConfiguration",
     "IGameListEntry",
+    "ImplementsIGameListEntry",
     "GameListChangedEventHandler",
     "GameListRemovedEventHandler",
 ]

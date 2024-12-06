@@ -18135,6 +18135,17 @@ namespace py::cpp::Windows::Devices::Sensors
         Py_TPFLAGS_DEFAULT,
         _type_slots_IHumanPresenceSensorExtension};
 
+    static PyType_Slot type_slots_ImplementsIHumanPresenceSensorExtension[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIHumanPresenceSensorExtension = {
+        "winrt._winrt_windows_devices_sensors.ImplementsIHumanPresenceSensorExtension",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIHumanPresenceSensorExtension};
+
     // ----- ISensorDataThreshold interface --------------------
 
     static PyObject* _new_ISensorDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18200,6 +18211,17 @@ namespace py::cpp::Windows::Devices::Sensors
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISensorDataThreshold};
+
+    static PyType_Slot type_slots_ImplementsISensorDataThreshold[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISensorDataThreshold = {
+        "winrt._winrt_windows_devices_sensors.ImplementsISensorDataThreshold",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISensorDataThreshold};
 
     // ----- Windows.Devices.Sensors Initialization --------------------
 
@@ -18762,8 +18784,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIHumanPresenceSensorExtension_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHumanPresenceSensorExtension, nullptr))};
+    if (!ImplementsIHumanPresenceSensorExtension_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIHumanPresenceSensorExtension_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISensorDataThreshold_type{py::register_python_type(module.get(), &type_spec_ISensorDataThreshold, object_bases.get(), nullptr)};
     if (!ISensorDataThreshold_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISensorDataThreshold_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISensorDataThreshold, nullptr))};
+    if (!ImplementsISensorDataThreshold_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISensorDataThreshold_type.get()) == -1)
     {
         return nullptr;
     }

@@ -24,12 +24,8 @@ from winrt._winrt_windows_media_speechrecognition import (
     VoiceCommandManager,
     VoiceCommandSet,
     ISpeechRecognitionConstraint,
+    ImplementsISpeechRecognitionConstraint,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_speechrecognition import (
-        ImplementsISpeechRecognitionConstraint,
-    )
 
 __all__ = [
     "SpeechContinuousRecognitionMode",
@@ -60,6 +56,7 @@ __all__ = [
     "VoiceCommandManager",
     "VoiceCommandSet",
     "ISpeechRecognitionConstraint",
+    "ImplementsISpeechRecognitionConstraint",
 ]
 
 class SpeechContinuousRecognitionMode(enum.IntEnum):

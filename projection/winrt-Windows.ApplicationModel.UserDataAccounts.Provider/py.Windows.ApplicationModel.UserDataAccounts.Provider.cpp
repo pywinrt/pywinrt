@@ -747,6 +747,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUserDataAccountProviderOperation};
 
+    static PyType_Slot type_slots_ImplementsIUserDataAccountProviderOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIUserDataAccountProviderOperation = {
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.ImplementsIUserDataAccountProviderOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIUserDataAccountProviderOperation};
+
     // ----- Windows.ApplicationModel.UserDataAccounts.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.UserDataAccounts.Provider");
@@ -818,6 +829,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
 
     py::pytype_handle IUserDataAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr)};
     if (!IUserDataAccountProviderOperation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIUserDataAccountProviderOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUserDataAccountProviderOperation, nullptr))};
+    if (!ImplementsIUserDataAccountProviderOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIUserDataAccountProviderOperation_type.get()) == -1)
     {
         return nullptr;
     }

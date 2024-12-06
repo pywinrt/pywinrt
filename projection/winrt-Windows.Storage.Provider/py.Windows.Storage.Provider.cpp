@@ -5429,6 +5429,17 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderItemPropertySource};
 
+    static PyType_Slot type_slots_ImplementsIStorageProviderItemPropertySource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderItemPropertySource = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderItemPropertySource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderItemPropertySource};
+
     // ----- IStorageProviderKnownFolderSyncInfoSource interface --------------------
 
     static PyObject* _new_IStorageProviderKnownFolderSyncInfoSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5591,6 +5602,17 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderKnownFolderSyncInfoSource};
 
+    static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSource = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSource};
+
     // ----- IStorageProviderKnownFolderSyncInfoSourceFactory interface --------------------
 
     static PyObject* _new_IStorageProviderKnownFolderSyncInfoSourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5693,6 +5715,17 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory};
 
     // ----- IStorageProviderPropertyCapabilities interface --------------------
 
@@ -5798,6 +5831,17 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderPropertyCapabilities};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderPropertyCapabilities[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderPropertyCapabilities = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderPropertyCapabilities",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderPropertyCapabilities};
 
     // ----- IStorageProviderShareLinkSource interface --------------------
 
@@ -5982,6 +6026,17 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderShareLinkSource};
 
+    static PyType_Slot type_slots_ImplementsIStorageProviderShareLinkSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderShareLinkSource = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderShareLinkSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderShareLinkSource};
+
     // ----- IStorageProviderStatusUISource interface --------------------
 
     static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6144,6 +6199,17 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderStatusUISource};
 
+    static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISource = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderStatusUISource};
+
     // ----- IStorageProviderStatusUISourceFactory interface --------------------
 
     static PyObject* _new_IStorageProviderStatusUISourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6248,6 +6314,17 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderStatusUISourceFactory};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISourceFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISourceFactory = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISourceFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderStatusUISourceFactory};
 
     // ----- IStorageProviderUICommand interface --------------------
 
@@ -6461,6 +6538,17 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderUICommand};
 
+    static PyType_Slot type_slots_ImplementsIStorageProviderUICommand[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderUICommand = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUICommand",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderUICommand};
+
     // ----- IStorageProviderUriSource interface --------------------
 
     static PyObject* _new_IStorageProviderUriSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6608,6 +6696,17 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderUriSource};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderUriSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderUriSource = {
+        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUriSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageProviderUriSource};
 
     // ----- Windows.Storage.Provider Initialization --------------------
 
@@ -6792,8 +6891,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageProviderItemPropertySource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderItemPropertySource, nullptr))};
+    if (!ImplementsIStorageProviderItemPropertySource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderItemPropertySource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageProviderKnownFolderSyncInfoSource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSource, object_bases.get(), nullptr)};
     if (!IStorageProviderKnownFolderSyncInfoSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderKnownFolderSyncInfoSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSource, nullptr))};
+    if (!ImplementsIStorageProviderKnownFolderSyncInfoSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderKnownFolderSyncInfoSource_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6804,8 +6925,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory, nullptr))};
+    if (!ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageProviderPropertyCapabilities_type{py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr)};
     if (!IStorageProviderPropertyCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderPropertyCapabilities_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderPropertyCapabilities, nullptr))};
+    if (!ImplementsIStorageProviderPropertyCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderPropertyCapabilities_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6816,8 +6959,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageProviderShareLinkSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderShareLinkSource, nullptr))};
+    if (!ImplementsIStorageProviderShareLinkSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderShareLinkSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageProviderStatusUISource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr)};
     if (!IStorageProviderStatusUISource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderStatusUISource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderStatusUISource, nullptr))};
+    if (!ImplementsIStorageProviderStatusUISource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderStatusUISource_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6828,14 +6993,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageProviderStatusUISourceFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderStatusUISourceFactory, nullptr))};
+    if (!ImplementsIStorageProviderStatusUISourceFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderStatusUISourceFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageProviderUICommand_type{py::register_python_type(module.get(), &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr)};
     if (!IStorageProviderUICommand_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageProviderUICommand_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderUICommand, nullptr))};
+    if (!ImplementsIStorageProviderUICommand_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderUICommand_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageProviderUriSource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr)};
     if (!IStorageProviderUriSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderUriSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageProviderUriSource, nullptr))};
+    if (!ImplementsIStorageProviderUriSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderUriSource_type.get()) == -1)
     {
         return nullptr;
     }

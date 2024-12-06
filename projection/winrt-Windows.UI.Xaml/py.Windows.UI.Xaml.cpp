@@ -36530,6 +36530,17 @@ namespace py::cpp::Windows::UI::Xaml
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDataTemplateExtension};
 
+    static PyType_Slot type_slots_ImplementsIDataTemplateExtension[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDataTemplateExtension = {
+        "winrt._winrt_windows_ui_xaml.ImplementsIDataTemplateExtension",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDataTemplateExtension};
+
     // ----- IElementFactory interface --------------------
 
     static PyObject* _new_IElementFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -36674,6 +36685,17 @@ namespace py::cpp::Windows::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IElementFactory};
+
+    static PyType_Slot type_slots_ImplementsIElementFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIElementFactory = {
+        "winrt._winrt_windows_ui_xaml.ImplementsIElementFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIElementFactory};
 
     // ----- CornerRadius struct --------------------
 
@@ -38674,8 +38696,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDataTemplateExtension_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDataTemplateExtension, nullptr))};
+    if (!ImplementsIDataTemplateExtension_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDataTemplateExtension_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IElementFactory_type{py::register_python_type(module.get(), &type_spec_IElementFactory, object_bases.get(), nullptr)};
     if (!IElementFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIElementFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIElementFactory, nullptr))};
+    if (!ImplementsIElementFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIElementFactory_type.get()) == -1)
     {
         return nullptr;
     }

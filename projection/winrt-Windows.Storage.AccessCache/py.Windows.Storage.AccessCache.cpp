@@ -2817,6 +2817,17 @@ namespace py::cpp::Windows::Storage::AccessCache
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemAccessList};
 
+    static PyType_Slot type_slots_ImplementsIStorageItemAccessList[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemAccessList = {
+        "winrt._winrt_windows_storage_accesscache.ImplementsIStorageItemAccessList",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemAccessList};
+
     // ----- AccessListEntry struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>* _new_AccessListEntry(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3114,6 +3125,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
 
     py::pytype_handle IStorageItemAccessList_type{py::register_python_type(module.get(), &type_spec_IStorageItemAccessList, object_bases.get(), nullptr)};
     if (!IStorageItemAccessList_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageItemAccessList_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemAccessList, nullptr))};
+    if (!ImplementsIStorageItemAccessList_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemAccessList_type.get()) == -1)
     {
         return nullptr;
     }

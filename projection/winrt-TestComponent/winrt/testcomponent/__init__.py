@@ -15,10 +15,15 @@ from winrt._winrt_testcomponent import (
     Override,
     TestRunner,
     IRequiredFour,
+    ImplementsIRequiredFour,
     IRequiredOne,
+    ImplementsIRequiredOne,
     IRequiredThree,
+    ImplementsIRequiredThree,
     IRequiredTwo,
+    ImplementsIRequiredTwo,
     ITests,
+    ImplementsITests,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -27,15 +32,6 @@ if TYPE_CHECKING:
         Derived_Static,
         OverloadClass_Static,
         Override_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_testcomponent import (
-        ImplementsIRequiredFour,
-        ImplementsIRequiredOne,
-        ImplementsIRequiredThree,
-        ImplementsIRequiredTwo,
-        ImplementsITests,
     )
 
 if typing.TYPE_CHECKING:
@@ -55,10 +51,15 @@ __all__ = [
     "Override",
     "TestRunner",
     "IRequiredFour",
+    "ImplementsIRequiredFour",
     "IRequiredOne",
+    "ImplementsIRequiredOne",
     "IRequiredThree",
+    "ImplementsIRequiredThree",
     "IRequiredTwo",
+    "ImplementsIRequiredTwo",
     "ITests",
+    "ImplementsITests",
     "Array10Handler",
     "Array11Handler",
     "Array12Handler",

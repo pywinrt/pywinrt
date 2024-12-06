@@ -4937,6 +4937,17 @@ namespace py::cpp::Windows::Gaming::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGameController};
 
+    static PyType_Slot type_slots_ImplementsIGameController[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGameController = {
+        "winrt._winrt_windows_gaming_input.ImplementsIGameController",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGameController};
+
     // ----- IGameControllerBatteryInfo interface --------------------
 
     static PyObject* _new_IGameControllerBatteryInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5039,6 +5050,17 @@ namespace py::cpp::Windows::Gaming::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGameControllerBatteryInfo};
+
+    static PyType_Slot type_slots_ImplementsIGameControllerBatteryInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGameControllerBatteryInfo = {
+        "winrt._winrt_windows_gaming_input.ImplementsIGameControllerBatteryInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGameControllerBatteryInfo};
 
     // ----- ArcadeStickReading struct --------------------
 
@@ -7293,8 +7315,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGameController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameController, nullptr))};
+    if (!ImplementsIGameController_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGameController_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGameControllerBatteryInfo_type{py::register_python_type(module.get(), &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr)};
     if (!IGameControllerBatteryInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGameControllerBatteryInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerBatteryInfo, nullptr))};
+    if (!ImplementsIGameControllerBatteryInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGameControllerBatteryInfo_type.get()) == -1)
     {
         return nullptr;
     }

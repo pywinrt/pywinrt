@@ -46,6 +46,7 @@ from winrt._winrt_windows_ui_xaml_input import (
     TappedRoutedEventArgs,
     XamlUICommand,
     ICommand,
+    ImplementsICommand,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -54,11 +55,6 @@ if TYPE_CHECKING:
         ManipulationStartedRoutedEventArgs_Static,
         StandardUICommand_Static,
         XamlUICommand_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_input import (
-        ImplementsICommand,
     )
 
 __all__ = [
@@ -113,6 +109,7 @@ __all__ = [
     "TappedRoutedEventArgs",
     "XamlUICommand",
     "ICommand",
+    "ImplementsICommand",
     "DoubleTappedEventHandler",
     "HoldingEventHandler",
     "KeyEventHandler",

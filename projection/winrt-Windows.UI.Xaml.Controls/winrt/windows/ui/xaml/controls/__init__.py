@@ -243,12 +243,19 @@ from winrt._winrt_windows_ui_xaml_controls import (
     WebViewUnviewableContentIdentifiedEventArgs,
     WebViewWebResourceRequestedEventArgs,
     ICommandBarElement,
+    ImplementsICommandBarElement,
     ICommandBarElement2,
+    ImplementsICommandBarElement2,
     IInsertionPanel,
+    ImplementsIInsertionPanel,
     IItemContainerMapping,
+    ImplementsIItemContainerMapping,
     INavigate,
+    ImplementsINavigate,
     IScrollAnchorProvider,
+    ImplementsIScrollAnchorProvider,
     ISemanticZoomInformation,
+    ImplementsISemanticZoomInformation,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -452,17 +459,6 @@ if TYPE_CHECKING:
         TextCommandBarFlyout_Static,
         TreeViewItem_Static,
         TreeViewList_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_controls import (
-        ImplementsICommandBarElement,
-        ImplementsICommandBarElement2,
-        ImplementsIInsertionPanel,
-        ImplementsIItemContainerMapping,
-        ImplementsINavigate,
-        ImplementsIScrollAnchorProvider,
-        ImplementsISemanticZoomInformation,
     )
 
 if typing.TYPE_CHECKING:
@@ -831,12 +827,19 @@ __all__ = [
     "WebViewWebResourceRequestedEventArgs",
     "WrapGrid",
     "ICommandBarElement",
+    "ImplementsICommandBarElement",
     "ICommandBarElement2",
+    "ImplementsICommandBarElement2",
     "IInsertionPanel",
+    "ImplementsIInsertionPanel",
     "IItemContainerMapping",
+    "ImplementsIItemContainerMapping",
     "INavigate",
+    "ImplementsINavigate",
     "IScrollAnchorProvider",
+    "ImplementsIScrollAnchorProvider",
     "ISemanticZoomInformation",
+    "ImplementsISemanticZoomInformation",
     "BackClickEventHandler",
     "CalendarViewDayItemChangingEventHandler",
     "CleanUpVirtualizedItemEventHandler",

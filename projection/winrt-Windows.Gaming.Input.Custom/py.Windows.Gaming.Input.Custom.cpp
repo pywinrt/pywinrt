@@ -1502,6 +1502,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICustomGameControllerFactory};
 
+    static PyType_Slot type_slots_ImplementsICustomGameControllerFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICustomGameControllerFactory = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsICustomGameControllerFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICustomGameControllerFactory};
+
     // ----- IGameControllerInputSink interface --------------------
 
     static PyObject* _new_IGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1647,6 +1658,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGameControllerInputSink};
+
+    static PyType_Slot type_slots_ImplementsIGameControllerInputSink[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGameControllerInputSink = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsIGameControllerInputSink",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGameControllerInputSink};
 
     // ----- IGameControllerProvider interface --------------------
 
@@ -1848,6 +1870,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGameControllerProvider};
+
+    static PyType_Slot type_slots_ImplementsIGameControllerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGameControllerProvider = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsIGameControllerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGameControllerProvider};
 
     // ----- IGipGameControllerInputSink interface --------------------
 
@@ -2081,6 +2114,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGipGameControllerInputSink};
 
+    static PyType_Slot type_slots_ImplementsIGipGameControllerInputSink[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGipGameControllerInputSink = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsIGipGameControllerInputSink",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGipGameControllerInputSink};
+
     // ----- IHidGameControllerInputSink interface --------------------
 
     static PyObject* _new_IHidGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2269,6 +2313,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IHidGameControllerInputSink};
 
+    static PyType_Slot type_slots_ImplementsIHidGameControllerInputSink[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIHidGameControllerInputSink = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsIHidGameControllerInputSink",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIHidGameControllerInputSink};
+
     // ----- IXusbGameControllerInputSink interface --------------------
 
     static PyObject* _new_IXusbGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2456,6 +2511,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXusbGameControllerInputSink};
+
+    static PyType_Slot type_slots_ImplementsIXusbGameControllerInputSink[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXusbGameControllerInputSink = {
+        "winrt._winrt_windows_gaming_input_custom.ImplementsIXusbGameControllerInputSink",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXusbGameControllerInputSink};
 
     // ----- GameControllerVersionInfo struct --------------------
 
@@ -3056,8 +3122,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICustomGameControllerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomGameControllerFactory, nullptr))};
+    if (!ImplementsICustomGameControllerFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICustomGameControllerFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_IGameControllerInputSink, object_bases.get(), nullptr)};
     if (!IGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerInputSink, nullptr))};
+    if (!ImplementsIGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGameControllerInputSink_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3068,8 +3156,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIGameControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerProvider, nullptr))};
+    if (!ImplementsIGameControllerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGameControllerProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IGipGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_IGipGameControllerInputSink, object_bases.get(), nullptr)};
     if (!IGipGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGipGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGipGameControllerInputSink, nullptr))};
+    if (!ImplementsIGipGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGipGameControllerInputSink_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3080,8 +3190,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIHidGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHidGameControllerInputSink, nullptr))};
+    if (!ImplementsIHidGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIHidGameControllerInputSink_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXusbGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_IXusbGameControllerInputSink, object_bases.get(), nullptr)};
     if (!IXusbGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXusbGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXusbGameControllerInputSink, nullptr))};
+    if (!ImplementsIXusbGameControllerInputSink_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXusbGameControllerInputSink_type.get()) == -1)
     {
         return nullptr;
     }

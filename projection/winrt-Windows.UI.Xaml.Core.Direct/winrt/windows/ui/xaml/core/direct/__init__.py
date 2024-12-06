@@ -6,12 +6,8 @@ import winrt.system
 from winrt._winrt_windows_ui_xaml_core_direct import (
     XamlDirect,
     IXamlDirectObject,
+    ImplementsIXamlDirectObject,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_core_direct import (
-        ImplementsIXamlDirectObject,
-    )
 
 __all__ = [
     "XamlEventIndex",
@@ -19,6 +15,7 @@ __all__ = [
     "XamlTypeIndex",
     "XamlDirect",
     "IXamlDirectObject",
+    "ImplementsIXamlDirectObject",
 ]
 
 class XamlEventIndex(enum.IntEnum):

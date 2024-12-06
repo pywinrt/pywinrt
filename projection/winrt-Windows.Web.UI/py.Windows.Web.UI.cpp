@@ -4269,6 +4269,17 @@ namespace py::cpp::Windows::Web::UI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebViewControl};
 
+    static PyType_Slot type_slots_ImplementsIWebViewControl[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebViewControl = {
+        "winrt._winrt_windows_web_ui.ImplementsIWebViewControl",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebViewControl};
+
     // ----- IWebViewControl2 interface --------------------
 
     static PyObject* _new_IWebViewControl2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4374,6 +4385,17 @@ namespace py::cpp::Windows::Web::UI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebViewControl2};
+
+    static PyType_Slot type_slots_ImplementsIWebViewControl2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebViewControl2 = {
+        "winrt._winrt_windows_web_ui.ImplementsIWebViewControl2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebViewControl2};
 
     // ----- Windows.Web.UI Initialization --------------------
 
@@ -4510,8 +4532,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_ui(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebViewControl_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebViewControl, nullptr))};
+    if (!ImplementsIWebViewControl_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebViewControl_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebViewControl2_type{py::register_python_type(module.get(), &type_spec_IWebViewControl2, object_bases.get(), nullptr)};
     if (!IWebViewControl2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebViewControl2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebViewControl2, nullptr))};
+    if (!ImplementsIWebViewControl2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebViewControl2_type.get()) == -1)
     {
         return nullptr;
     }

@@ -587,6 +587,17 @@ namespace py::cpp::Windows::Devices
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILowLevelDevicesAggregateProvider};
 
+    static PyType_Slot type_slots_ImplementsILowLevelDevicesAggregateProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILowLevelDevicesAggregateProvider = {
+        "winrt._winrt_windows_devices.ImplementsILowLevelDevicesAggregateProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILowLevelDevicesAggregateProvider};
+
     // ----- Windows.Devices Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices");
@@ -652,6 +663,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
 
     py::pytype_handle ILowLevelDevicesAggregateProvider_type{py::register_python_type(module.get(), &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr)};
     if (!ILowLevelDevicesAggregateProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILowLevelDevicesAggregateProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILowLevelDevicesAggregateProvider, nullptr))};
+    if (!ImplementsILowLevelDevicesAggregateProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILowLevelDevicesAggregateProvider_type.get()) == -1)
     {
         return nullptr;
     }

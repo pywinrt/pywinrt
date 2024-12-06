@@ -6,16 +6,12 @@ import winrt.system
 from winrt._winrt_windows_devices_gpio_provider import (
     GpioPinProviderValueChangedEventArgs,
     IGpioControllerProvider,
+    ImplementsIGpioControllerProvider,
     IGpioPinProvider,
+    ImplementsIGpioPinProvider,
     IGpioProvider,
+    ImplementsIGpioProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_gpio_provider import (
-        ImplementsIGpioControllerProvider,
-        ImplementsIGpioPinProvider,
-        ImplementsIGpioProvider,
-    )
 
 __all__ = [
     "ProviderGpioPinDriveMode",
@@ -24,8 +20,11 @@ __all__ = [
     "ProviderGpioSharingMode",
     "GpioPinProviderValueChangedEventArgs",
     "IGpioControllerProvider",
+    "ImplementsIGpioControllerProvider",
     "IGpioPinProvider",
+    "ImplementsIGpioPinProvider",
     "IGpioProvider",
+    "ImplementsIGpioProvider",
 ]
 
 class ProviderGpioPinDriveMode(enum.IntEnum):

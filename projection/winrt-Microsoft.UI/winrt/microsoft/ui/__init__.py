@@ -11,12 +11,8 @@ from winrt._winrt_microsoft_ui import (
     ColorHelper,
     Colors,
     IClosableNotifier,
+    ImplementsIClosableNotifier,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui import (
-        ImplementsIClosableNotifier,
-    )
 
 __all__ = [
     "DisplayId",
@@ -25,6 +21,7 @@ __all__ = [
     "ColorHelper",
     "Colors",
     "IClosableNotifier",
+    "ImplementsIClosableNotifier",
     "ClosableNotifierHandler",
 ]
 

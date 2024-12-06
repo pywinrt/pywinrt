@@ -8,12 +8,8 @@ from winrt._winrt_windows_graphics import (
     RectInt32,
     SizeInt32,
     IGeometrySource2D,
+    ImplementsIGeometrySource2D,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_graphics import (
-        ImplementsIGeometrySource2D,
-    )
 
 __all__ = [
     "DisplayAdapterId",
@@ -22,5 +18,6 @@ __all__ = [
     "RectInt32",
     "SizeInt32",
     "IGeometrySource2D",
+    "ImplementsIGeometrySource2D",
 ]
 

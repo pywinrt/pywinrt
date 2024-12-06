@@ -6,17 +6,14 @@ import winrt.system
 from winrt._winrt_windows_web import (
     WebError,
     IUriToStreamResolver,
+    ImplementsIUriToStreamResolver,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_web import (
-        ImplementsIUriToStreamResolver,
-    )
 
 __all__ = [
     "WebErrorStatus",
     "WebError",
     "IUriToStreamResolver",
+    "ImplementsIUriToStreamResolver",
 ]
 
 class WebErrorStatus(enum.IntEnum):

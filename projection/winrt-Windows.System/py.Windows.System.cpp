@@ -12249,6 +12249,17 @@ namespace py::cpp::Windows::System
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILauncherViewOptions};
 
+    static PyType_Slot type_slots_ImplementsILauncherViewOptions[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILauncherViewOptions = {
+        "winrt._winrt_windows_system.ImplementsILauncherViewOptions",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILauncherViewOptions};
+
     // ----- Windows.System Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.System");
@@ -12662,6 +12673,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system(void) noexcept
 
     py::pytype_handle ILauncherViewOptions_type{py::register_python_type(module.get(), &type_spec_ILauncherViewOptions, object_bases.get(), nullptr)};
     if (!ILauncherViewOptions_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILauncherViewOptions_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILauncherViewOptions, nullptr))};
+    if (!ImplementsILauncherViewOptions_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILauncherViewOptions_type.get()) == -1)
     {
         return nullptr;
     }

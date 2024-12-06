@@ -720,6 +720,17 @@ namespace py::cpp::Windows::Phone::StartScreen
         Py_TPFLAGS_DEFAULT,
         _type_slots_IToastNotificationManagerStatics3};
 
+    static PyType_Slot type_slots_ImplementsIToastNotificationManagerStatics3[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIToastNotificationManagerStatics3 = {
+        "winrt._winrt_windows_phone_startscreen.ImplementsIToastNotificationManagerStatics3",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIToastNotificationManagerStatics3};
+
     // ----- Windows.Phone.StartScreen Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Phone.StartScreen");
@@ -779,6 +790,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_startscreen(void) noexcept
 
     py::pytype_handle IToastNotificationManagerStatics3_type{py::register_python_type(module.get(), &type_spec_IToastNotificationManagerStatics3, object_bases.get(), nullptr)};
     if (!IToastNotificationManagerStatics3_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIToastNotificationManagerStatics3_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIToastNotificationManagerStatics3, nullptr))};
+    if (!ImplementsIToastNotificationManagerStatics3_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIToastNotificationManagerStatics3_type.get()) == -1)
     {
         return nullptr;
     }

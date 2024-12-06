@@ -1909,6 +1909,17 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGameListEntry};
 
+    static PyType_Slot type_slots_ImplementsIGameListEntry[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIGameListEntry = {
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.ImplementsIGameListEntry",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIGameListEntry};
+
     // ----- Windows.Gaming.Preview.GamesEnumeration Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Gaming.Preview.GamesEnumeration");
@@ -1992,6 +2003,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
 
     py::pytype_handle IGameListEntry_type{py::register_python_type(module.get(), &type_spec_IGameListEntry, object_bases.get(), nullptr)};
     if (!IGameListEntry_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIGameListEntry_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameListEntry, nullptr))};
+    if (!ImplementsIGameListEntry_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIGameListEntry_type.get()) == -1)
     {
         return nullptr;
     }

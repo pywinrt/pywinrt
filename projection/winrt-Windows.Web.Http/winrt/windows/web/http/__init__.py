@@ -24,12 +24,8 @@ from winrt._winrt_windows_web_http import (
     HttpStringContent,
     HttpTransportInformation,
     IHttpContent,
+    ImplementsIHttpContent,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_web_http import (
-        ImplementsIHttpContent,
-    )
 
 __all__ = [
     "HttpCompletionOption",
@@ -57,6 +53,7 @@ __all__ = [
     "HttpStringContent",
     "HttpTransportInformation",
     "IHttpContent",
+    "ImplementsIHttpContent",
 ]
 
 class HttpCompletionOption(enum.IntEnum):

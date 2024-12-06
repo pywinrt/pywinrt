@@ -9,18 +9,14 @@ from winrt._winrt_microsoft_ui_text import (
     RichEditTextRange,
     TextConstants,
     ITextCharacterFormat,
+    ImplementsITextCharacterFormat,
     ITextParagraphFormat,
+    ImplementsITextParagraphFormat,
     ITextRange,
+    ImplementsITextRange,
     ITextSelection,
+    ImplementsITextSelection,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_text import (
-        ImplementsITextCharacterFormat,
-        ImplementsITextParagraphFormat,
-        ImplementsITextRange,
-        ImplementsITextSelection,
-    )
 
 __all__ = [
     "CaretType",
@@ -53,9 +49,13 @@ __all__ = [
     "RichEditTextRange",
     "TextConstants",
     "ITextCharacterFormat",
+    "ImplementsITextCharacterFormat",
     "ITextParagraphFormat",
+    "ImplementsITextParagraphFormat",
     "ITextRange",
+    "ImplementsITextRange",
     "ITextSelection",
+    "ImplementsITextSelection",
 ]
 
 class CaretType(enum.IntEnum):

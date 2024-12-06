@@ -72,16 +72,12 @@ from winrt._winrt_microsoft_web_webview2_core import (
     CoreWebView2WebResourceResponseView,
     CoreWebView2WindowFeatures,
     ICoreWebView2DispatchAdapter,
+    ImplementsICoreWebView2DispatchAdapter,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_microsoft_web_webview2_core import (
         CoreWebView2Controller_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_web_webview2_core import (
-        ImplementsICoreWebView2DispatchAdapter,
     )
 
 _dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)
@@ -206,6 +202,7 @@ __all__ = [
     "CoreWebView2WebResourceResponseView",
     "CoreWebView2WindowFeatures",
     "ICoreWebView2DispatchAdapter",
+    "ImplementsICoreWebView2DispatchAdapter",
 ]
 
 class CoreWebView2BoundsMode(enum.IntEnum):
