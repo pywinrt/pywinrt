@@ -4837,6 +4837,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtKeyboardAccelerator* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -7440,6 +7446,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtManipulationStartedRoutedEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -9181,6 +9193,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtStandardUICommand* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -9668,6 +9686,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtXamlUICommand* instance, bool is_last_reference)

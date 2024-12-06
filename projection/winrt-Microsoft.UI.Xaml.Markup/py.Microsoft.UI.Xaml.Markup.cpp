@@ -21,6 +21,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtMarkupExtension* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -147,16 +153,78 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
-    static PyObject* MarkupExtension_ProvideValue(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* MarkupExtension_ProvideValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Markup::IMarkupExtensionOverrides>().ProvideValue());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* MarkupExtension_ProvideValueWithIXamlServiceProvider(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* MarkupExtension_ProvideValueWithIXamlServiceProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::IXamlServiceProvider>(args, 0);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Markup::IMarkupExtensionOverrides>().ProvideValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* _assign_array_MarkupExtension(PyObject* /*unused*/, PyObject* arg) noexcept

@@ -21,6 +21,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtCustomMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -234,6 +240,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtHttpMapTileDataSource* instance, bool is_last_reference)
@@ -629,6 +641,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtLocalMapTileDataSource* instance, bool is_last_reference)
@@ -9952,6 +9970,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtMapCustomExperience* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -10193,6 +10217,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtMapElement* instance, bool is_last_reference)
@@ -14232,6 +14262,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtMapLayer* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -14652,6 +14688,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtMapModel3D* instance, bool is_last_reference)
@@ -15974,6 +16016,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtMapRouteView* instance, bool is_last_reference)
@@ -19864,6 +19912,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -20021,6 +20075,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtMapTileSource* instance, bool is_last_reference)

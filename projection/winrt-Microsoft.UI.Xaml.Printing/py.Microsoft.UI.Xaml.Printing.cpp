@@ -393,6 +393,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtPrintDocument* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);

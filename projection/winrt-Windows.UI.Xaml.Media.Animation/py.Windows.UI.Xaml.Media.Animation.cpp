@@ -311,6 +311,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtBasicConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -1831,6 +1837,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtColorKeyFrame* instance, bool is_last_reference)
@@ -4887,6 +4899,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDirectConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -6178,6 +6196,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtDoubleKeyFrame* instance, bool is_last_reference)
@@ -11528,6 +11552,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtGravityConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -12552,6 +12582,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtNavigationTransitionInfo* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -12633,16 +12669,79 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationTransitionInfo_GetNavigationStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* NavigationTransitionInfo_GetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo", L"GetNavigationStateCore", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfoOverrides>().GetNavigationStateCore());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* NavigationTransitionInfo_SetNavigationStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* NavigationTransitionInfo_SetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo", L"SetNavigationStateCore", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfoOverrides>().SetNavigationStateCore(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* _assign_array_NavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
@@ -12964,6 +13063,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtObjectKeyFrame* instance, bool is_last_reference)
@@ -14966,6 +15071,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtPointKeyFrame* instance, bool is_last_reference)
@@ -23373,6 +23484,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtTimeline* instance, bool is_last_reference)

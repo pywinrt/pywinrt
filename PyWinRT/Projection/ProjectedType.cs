@@ -351,6 +351,16 @@ class ProjectedType
             return $"{CppWinrtType}::";
         }
 
+        if (method.IsOverridable)
+        {
+            return $"py::get_inner_or_self(self->obj).try_as<{method.Method.Overrides[0].DeclaringType.ToCppTypeName()}>().";
+        }
+
+        if (method.IsProtected)
+        {
+            return $"self->obj.try_as<{method.Method.Overrides[0].DeclaringType.ToCppTypeName()}>().";
+        }
+
         if (IsComposable)
         {
             return $"self->obj.try_as<{CppWinrtType}>().";
