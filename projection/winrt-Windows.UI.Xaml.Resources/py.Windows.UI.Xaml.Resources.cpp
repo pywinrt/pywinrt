@@ -21,6 +21,12 @@ namespace py::cpp::Windows::UI::Xaml::Resources
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtCustomXamlResourceLoader* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -143,10 +149,45 @@ namespace py::cpp::Windows::UI::Xaml::Resources
         Py_DECREF(tp);
     }
 
-    static PyObject* CustomXamlResourceLoader_GetResource(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* CustomXamlResourceLoader_GetResource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Resources.CustomXamlResourceLoader", L"GetResource", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides>().GetResource(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* CustomXamlResourceLoader_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept

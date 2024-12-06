@@ -511,6 +511,22 @@ static class ObjectWriterExtensions
         w.WriteLine("}");
 
         w.WriteBlankLine();
+        w.WriteLine("int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)");
+        w.WriteLine("{");
+        w.Indent++;
+        if (type.IsComposable)
+        {
+            w.WriteLine("inner = m_inner;");
+            w.WriteLine("return winrt::impl::error_ok;");
+        }
+        else
+        {
+            w.WriteLine("return winrt::impl::error_not_implemented;");
+        }
+        w.Indent--;
+        w.WriteLine("}");
+
+        w.WriteBlankLine();
         w.WriteLine(
             $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
         );

@@ -134,6 +134,12 @@ namespace py::cpp::TestComponent
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtComposable* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -580,6 +586,12 @@ namespace py::cpp::TestComponent
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDerived* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -733,6 +745,12 @@ namespace py::cpp::TestComponent
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtOverloadClass* instance, bool is_last_reference)
@@ -899,22 +917,85 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* OverloadClass_OverloadWithOne(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* OverloadClass_OverloadWithOne(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* OverloadClass_OverloadWithThree(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* OverloadClass_OverloadWithThree(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                self->obj.try_as<winrt::TestComponent::IOverloadClassProtected>().Overload(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* OverloadClass_OverloadWithTwo(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* OverloadClass_OverloadWithTwo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides2>().Overload(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* _assign_array_OverloadClass(PyObject* /*unused*/, PyObject* arg) noexcept
@@ -1010,6 +1091,12 @@ namespace py::cpp::TestComponent
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtOverride* instance, bool is_last_reference)
@@ -1150,16 +1237,52 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_OnOverridable(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Override_OnOverridable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverrideOverrides>().OnOverridable();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Override_OnProtected(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Override_OnProtected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                self->obj.try_as<winrt::TestComponent::IOverrideProtected>().OnProtected();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Override_add_OverridableCalled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept

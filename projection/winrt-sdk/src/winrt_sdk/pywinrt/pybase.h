@@ -334,7 +334,36 @@ namespace py
         IPywinrtObject : ::IUnknown
     {
         virtual int32_t __stdcall GetPyObject(PyObject*&) = 0;
+        virtual int32_t __stdcall GetComposableInner(
+            winrt::Windows::Foundation::IInspectable&)
+            = 0;
     };
+
+    /**
+     * Get the inner object if the object is a subclass of a composable type,
+     * otherwise return the object itself.
+     *
+     * This is only used for calling overridable methods. When we have a Python
+     * subclass of a composable type and we call super().overridable_method(),
+     * we would get infinite recursion if we didn't get the inner object and use
+     * that to call the method.
+     */
+    static inline winrt::Windows::Foundation::IInspectable get_inner_or_self(
+        winrt::Windows::Foundation::IInspectable const& self) noexcept
+    {
+        if (auto pyobj = self.try_as<IPywinrtObject>())
+        {
+            winrt::Windows::Foundation::IInspectable inner{};
+            if (auto ret = pyobj->GetComposableInner(inner))
+            {
+                winrt::throw_hresult(ret);
+            }
+
+            return inner;
+        }
+
+        return self;
+    }
 
     /**
      * Base class for WinRT type wrapping Python subclass of composable type.

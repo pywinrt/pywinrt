@@ -21,6 +21,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtAdaptiveTrigger* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -352,6 +358,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtApplication* instance, bool is_last_reference)
@@ -856,64 +868,394 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* Application_OnActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnBackgroundActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnBackgroundActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnBackgroundActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides2>().OnBackgroundActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnCachedFileUpdaterActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnCachedFileUpdaterActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnCachedFileUpdaterActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnCachedFileUpdaterActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnFileActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnFileActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnFileActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnFileActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnFileOpenPickerActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnFileOpenPickerActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnFileOpenPickerActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnFileOpenPickerActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnFileSavePickerActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnFileSavePickerActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnFileSavePickerActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnFileSavePickerActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnLaunched(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnLaunched(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnLaunched", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnLaunched(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnSearchActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnSearchActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnSearchActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnSearchActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnShareTargetActivated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnShareTargetActivated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnShareTargetActivated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnShareTargetActivated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* Application_OnWindowCreated(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* Application_OnWindowCreated(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Application", L"OnWindowCreated", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IApplicationOverrides>().OnWindowCreated(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Application_Start(PyObject* /*unused*/, PyObject* args) noexcept
@@ -2833,6 +3175,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtBrushTransition* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -3048,6 +3396,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtColorPaletteResources* instance, bool is_last_reference)
@@ -5206,6 +5560,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDataTemplate* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -5583,6 +5943,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtDataTemplateKey* instance, bool is_last_reference)
@@ -6327,6 +6693,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDependencyObject* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -6743,6 +7115,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtDependencyObjectCollection* instance, bool is_last_reference)
@@ -7981,6 +8359,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtDispatcherTimer* instance, bool is_last_reference)
@@ -10652,6 +11036,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtElementFactoryGetArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -10929,6 +11319,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtElementFactoryRecycleArgs* instance, bool is_last_reference)
@@ -11821,6 +12217,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtFrameworkElement* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -11982,10 +12384,42 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* FrameworkElement_ArrangeOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FrameworkElement_ArrangeOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.FrameworkElement", L"ArrangeOverride", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IFrameworkElementOverrides>().ArrangeOverride(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FrameworkElement_DeferTree(PyObject* /*unused*/, PyObject* args) noexcept
@@ -12103,28 +12537,155 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* FrameworkElement_GoToElementStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FrameworkElement_GoToElementStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.FrameworkElement", L"GoToElementStateCore", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<bool>(args, 1);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IFrameworkElementOverrides2>().GoToElementStateCore(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* FrameworkElement_InvalidateViewport(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FrameworkElement_InvalidateViewport(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.FrameworkElement", L"InvalidateViewport", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.try_as<winrt::Windows::UI::Xaml::IFrameworkElementProtected7>().InvalidateViewport();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* FrameworkElement_MeasureOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FrameworkElement_MeasureOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.FrameworkElement", L"MeasureOverride", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IFrameworkElementOverrides>().MeasureOverride(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* FrameworkElement_OnApplyTemplate(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FrameworkElement_OnApplyTemplate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.FrameworkElement", L"OnApplyTemplate", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IFrameworkElementOverrides>().OnApplyTemplate();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FrameworkElement_SetBinding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
@@ -15117,6 +15678,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtFrameworkTemplate* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -16215,6 +16782,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtPropertyMetadata* instance, bool is_last_reference)
@@ -17368,6 +17941,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtResourceDictionary* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -18108,6 +18687,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtRoutedEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -18288,6 +18873,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtScalarTransition* instance, bool is_last_reference)
@@ -20224,6 +20815,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtStateTriggerBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -20245,10 +20842,43 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* StateTriggerBase_SetActive(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* StateTriggerBase_SetActive(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.StateTriggerBase", L"SetActive", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<bool>(args, 0);
+
+                self->obj.try_as<winrt::Windows::UI::Xaml::IStateTriggerBaseProtected>().SetActive(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* _assign_array_StateTriggerBase(PyObject* /*unused*/, PyObject* arg) noexcept
@@ -22823,16 +23453,79 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_FindSubElementsForTouchTargeting(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_FindSubElementsForTouchTargeting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"FindSubElementsForTouchTargeting", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides>().FindSubElementsForTouchTargeting(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* UIElement_GetChildrenInTabFocusOrder(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_GetChildrenInTabFocusOrder(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"GetChildrenInTabFocusOrder", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides7>().GetChildrenInTabFocusOrder());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* UIElement_InvalidateArrange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
@@ -22948,34 +23641,194 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_OnBringIntoViewRequested(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_OnBringIntoViewRequested(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"OnBringIntoViewRequested", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides8>().OnBringIntoViewRequested(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* UIElement_OnCreateAutomationPeer(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_OnCreateAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"OnCreateAutomationPeer", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides>().OnCreateAutomationPeer());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* UIElement_OnDisconnectVisualChildren(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_OnDisconnectVisualChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"OnDisconnectVisualChildren", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides>().OnDisconnectVisualChildren();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* UIElement_OnKeyboardAcceleratorInvoked(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_OnKeyboardAcceleratorInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"OnKeyboardAcceleratorInvoked", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides8>().OnKeyboardAcceleratorInvoked(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* UIElement_OnProcessKeyboardAccelerators(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_OnProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"OnProcessKeyboardAccelerators", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides7>().OnProcessKeyboardAccelerators(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* UIElement_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
@@ -23018,10 +23871,44 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_PopulatePropertyInfoOverride(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* UIElement_PopulatePropertyInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.UIElement", L"PopulatePropertyInfoOverride", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IUIElementOverrides9>().PopulatePropertyInfoOverride(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* UIElement_RegisterAsScrollPort(PyObject* /*unused*/, PyObject* args) noexcept
@@ -31263,6 +32150,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtUIElementWeakCollection* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -32234,6 +33127,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtVector3Transition* instance, bool is_last_reference)
@@ -33334,6 +34233,12 @@ namespace py::cpp::Windows::UI::Xaml
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtVisualStateManager* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -33584,22 +34489,131 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* VisualStateManager_GoToStateCore(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* VisualStateManager_GoToStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.VisualStateManager", L"GoToStateCore", 6);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Control>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::UI::Xaml::VisualStateGroup>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::UI::Xaml::VisualState>(args, 4);
+                auto param5 = py::convert_to<bool>(args, 5);
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::IVisualStateManagerOverrides>().GoToStateCore(param0, param1, param2, param3, param4, param5));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* VisualStateManager_RaiseCurrentStateChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* VisualStateManager_RaiseCurrentStateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.VisualStateManager", L"RaiseCurrentStateChanged", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VisualStateGroup>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::VisualState>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Xaml::VisualState>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Control>(args, 3);
+
+                self->obj.try_as<winrt::Windows::UI::Xaml::IVisualStateManagerProtected>().RaiseCurrentStateChanged(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* VisualStateManager_RaiseCurrentStateChanging(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* VisualStateManager_RaiseCurrentStateChanging(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.VisualStateManager", L"RaiseCurrentStateChanging", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VisualStateGroup>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::VisualState>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Xaml::VisualState>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Control>(args, 3);
+
+                self->obj.try_as<winrt::Windows::UI::Xaml::IVisualStateManagerProtected>().RaiseCurrentStateChanging(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* VisualStateManager_SetCustomVisualStateManager(PyObject* /*unused*/, PyObject* args) noexcept
@@ -33765,6 +34779,12 @@ namespace py::cpp::Windows::UI::Xaml
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtVisualTransition* instance, bool is_last_reference)

@@ -542,6 +542,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtButtonBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -1645,6 +1651,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtCarouselPanel* instance, bool is_last_reference)
@@ -2991,6 +3003,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtColorSpectrum* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -4296,6 +4314,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtCommandBarFlyoutCommandBar* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -5474,6 +5498,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDragCompletedEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -5714,6 +5744,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtDragDeltaEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -5924,6 +5960,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtDragStartedEventArgs* instance, bool is_last_reference)
@@ -6137,6 +6179,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtFlyoutBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -6218,10 +6266,40 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* FlyoutBase_CreatePresenter(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FlyoutBase_CreatePresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"CreatePresenter", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>().CreatePresenter());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FlyoutBase_GetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
@@ -6299,10 +6377,43 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OnProcessKeyboardAccelerators", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4>().OnProcessKeyboardAccelerators(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FlyoutBase_SetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
@@ -8033,6 +8144,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtFlyoutShowOptions* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -8565,6 +8682,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtGridViewItemPresenter* instance, bool is_last_reference)
@@ -11930,6 +12053,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtListViewItemPresenter* instance, bool is_last_reference)
@@ -18787,6 +18916,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtNavigationViewItemPresenter* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -20363,6 +20498,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtPickerFlyoutBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -20476,10 +20617,41 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* PickerFlyoutBase_OnConfirmed(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* PickerFlyoutBase_OnConfirmed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"OnConfirmed", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>().OnConfirmed();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PickerFlyoutBase_SetTitle(PyObject* /*unused*/, PyObject* args) noexcept
@@ -20522,10 +20694,40 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"ShouldShowConfirmationButtons", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>().ShouldShowConfirmationButtons());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PickerFlyoutBase_get_TitleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
@@ -20648,6 +20850,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtPivotHeaderItem* instance, bool is_last_reference)
@@ -22881,6 +23089,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtRangeBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -23034,22 +23248,124 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* RangeBase_OnMaximumChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* RangeBase_OnMaximumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"OnMaximumChanged", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnMaximumChanged(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* RangeBase_OnMinimumChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* RangeBase_OnMinimumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"OnMinimumChanged", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnMinimumChanged(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
-    static PyObject* RangeBase_OnValueChanged(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* RangeBase_OnValueChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"OnValueChanged", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnValueChanged(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* RangeBase_get_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
@@ -25275,6 +25591,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtSelectorItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -26516,6 +26838,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtToggleButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -26606,10 +26934,41 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleButton_OnToggle(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* ToggleButton_OnToggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"OnToggle", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides>().OnToggle();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ToggleButton_get_IsThreeState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept

@@ -460,21 +460,16 @@ static class WriterExtensions
                 .Distinct()
         )
         {
-            var selfParam = type.GetMethodSelfParam(isStatic || isProtected);
-            var argsName = isProtected ? "/* unused */" : "args";
+            var selfParam = type.GetMethodSelfParam(isStatic);
 
             w.WriteBlankLine();
             w.WriteLine(
-                $"static PyObject* {type.Name}_{methodName}({selfParam}, PyObject* {argsName}) noexcept"
+                $"static PyObject* {type.Name}_{methodName}({selfParam}, PyObject* args) noexcept"
             );
             w.WriteLine("{");
             w.Indent++;
 
-            if (isProtected)
-            {
-                w.WriteProtectedMethod();
-            }
-            else if (type.IsGeneric)
+            if (type.IsGeneric)
             {
                 w.WriteLine($"return self->impl->{methodName}(args);");
             }
@@ -851,12 +846,6 @@ static class WriterExtensions
         w.WriteLine("Py_RETURN_NONE;");
         w.Indent--;
         w.WriteLine("}");
-    }
-
-    private static void WriteProtectedMethod(this IndentedTextWriter w)
-    {
-        w.WriteLine("PyErr_SetString(PyExc_RuntimeError, \"cannot call protected method\");");
-        w.WriteLine("return nullptr;");
     }
 
     static void WriteMethodOverloads(

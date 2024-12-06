@@ -46,12 +46,6 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
-    def test_calling_protected_method(self):
-        o = tc.Override()
-
-        with self.assertRaisesRegex(RuntimeError, "cannot call protected method"):
-            o._on_protected()
-
     def test_overriding_method(self):
         event = threading.Event()
         base_event = threading.Event()
@@ -66,6 +60,22 @@ class TestTestComponent(unittest.TestCase):
         c.call_overridable()
         self.assertTrue(event.is_set())
         self.assertFalse(base_event.is_set())
+
+    def test_overriding_and_calling_super(self):
+        event = threading.Event()
+        base_event = threading.Event()
+
+        class C(tc.Override):
+            def _on_overridable(self) -> None:
+                super()._on_overridable()
+                event.set()
+
+        c = C()
+        c.add_overridable_called(lambda s, e: base_event.set())
+
+        c.call_overridable()
+        self.assertTrue(event.is_set())
+        self.assertTrue(base_event.is_set())
 
     def test_unhandled_exception_in_override(self) -> None:
         class C(tc.Override):

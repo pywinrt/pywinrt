@@ -1043,6 +1043,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtBitmapSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -1995,6 +2001,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtSurfaceImageSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -2183,6 +2195,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             obj = get_py_obj();
             return 0;
+        }
+
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
         }
 
         static void toggle_reference(PyWinrtSvgImageSource* instance, bool is_last_reference)
@@ -3215,6 +3233,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
             return 0;
         }
 
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
         static void toggle_reference(PyWinrtXamlRenderingBackgroundTask* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
@@ -3268,10 +3292,43 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
-    static PyObject* XamlRenderingBackgroundTask_OnRun(PyObject* /*unused*/, PyObject* /* unused */) noexcept
+    static PyObject* XamlRenderingBackgroundTask_OnRun(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        PyErr_SetString(PyExc_RuntimeError, "cannot call protected method");
-        return nullptr;
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask", L"OnRun", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
+
+                py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides>().OnRun(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* _assign_array_XamlRenderingBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
