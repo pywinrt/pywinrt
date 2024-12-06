@@ -14835,6 +14835,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFile};
 
+    static PyType_Slot type_slots_ImplementsIStorageFile[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFile = {
+        "winrt._winrt_windows_storage.ImplementsIStorageFile",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFile};
+
     // ----- IStorageFile2 interface --------------------
 
     static PyObject* _new_IStorageFile2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14980,6 +14991,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFile2};
 
+    static PyType_Slot type_slots_ImplementsIStorageFile2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFile2 = {
+        "winrt._winrt_windows_storage.ImplementsIStorageFile2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFile2};
+
     // ----- IStorageFilePropertiesWithAvailability interface --------------------
 
     static PyObject* _new_IStorageFilePropertiesWithAvailability(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15072,6 +15094,17 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFilePropertiesWithAvailability};
+
+    static PyType_Slot type_slots_ImplementsIStorageFilePropertiesWithAvailability[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFilePropertiesWithAvailability = {
+        "winrt._winrt_windows_storage.ImplementsIStorageFilePropertiesWithAvailability",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFilePropertiesWithAvailability};
 
     // ----- IStorageFolder interface --------------------
 
@@ -15864,6 +15897,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFolder};
 
+    static PyType_Slot type_slots_ImplementsIStorageFolder[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFolder = {
+        "winrt._winrt_windows_storage.ImplementsIStorageFolder",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFolder};
+
     // ----- IStorageFolder2 interface --------------------
 
     static PyObject* _new_IStorageFolder2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15968,6 +16012,17 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageFolder2};
+
+    static PyType_Slot type_slots_ImplementsIStorageFolder2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageFolder2 = {
+        "winrt._winrt_windows_storage.ImplementsIStorageFolder2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageFolder2};
 
     // ----- IStorageItem interface --------------------
 
@@ -16373,6 +16428,17 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItem};
+
+    static PyType_Slot type_slots_ImplementsIStorageItem[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItem = {
+        "winrt._winrt_windows_storage.ImplementsIStorageItem",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItem};
 
     // ----- IStorageItem2 interface --------------------
 
@@ -16855,6 +16921,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItem2};
 
+    static PyType_Slot type_slots_ImplementsIStorageItem2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItem2 = {
+        "winrt._winrt_windows_storage.ImplementsIStorageItem2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItem2};
+
     // ----- IStorageItemProperties interface --------------------
 
     static PyObject* _new_IStorageItemProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17148,6 +17225,17 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemProperties};
+
+    static PyType_Slot type_slots_ImplementsIStorageItemProperties[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemProperties = {
+        "winrt._winrt_windows_storage.ImplementsIStorageItemProperties",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemProperties};
 
     // ----- IStorageItemProperties2 interface --------------------
 
@@ -17563,6 +17651,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemProperties2};
 
+    static PyType_Slot type_slots_ImplementsIStorageItemProperties2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemProperties2 = {
+        "winrt._winrt_windows_storage.ImplementsIStorageItemProperties2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemProperties2};
+
     // ----- IStorageItemPropertiesWithProvider interface --------------------
 
     static PyObject* _new_IStorageItemPropertiesWithProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17884,6 +17983,17 @@ namespace py::cpp::Windows::Storage
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageItemPropertiesWithProvider};
 
+    static PyType_Slot type_slots_ImplementsIStorageItemPropertiesWithProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStorageItemPropertiesWithProvider = {
+        "winrt._winrt_windows_storage.ImplementsIStorageItemPropertiesWithProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStorageItemPropertiesWithProvider};
+
     // ----- IStreamedFileDataRequest interface --------------------
 
     static PyObject* _new_IStreamedFileDataRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17989,6 +18099,17 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStreamedFileDataRequest};
+
+    static PyType_Slot type_slots_ImplementsIStreamedFileDataRequest[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStreamedFileDataRequest = {
+        "winrt._winrt_windows_storage.ImplementsIStreamedFileDataRequest",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStreamedFileDataRequest};
 
     // ----- Windows.Storage Initialization --------------------
 
@@ -18323,8 +18444,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageFile_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFile, nullptr))};
+    if (!ImplementsIStorageFile_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFile_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageFile2_type{py::register_python_type(module.get(), &type_spec_IStorageFile2, object_bases.get(), nullptr)};
     if (!IStorageFile2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageFile2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFile2, nullptr))};
+    if (!ImplementsIStorageFile2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFile2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -18335,8 +18478,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageFilePropertiesWithAvailability_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFilePropertiesWithAvailability, nullptr))};
+    if (!ImplementsIStorageFilePropertiesWithAvailability_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFilePropertiesWithAvailability_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageFolder_type{py::register_python_type(module.get(), &type_spec_IStorageFolder, object_bases.get(), nullptr)};
     if (!IStorageFolder_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageFolder_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolder, nullptr))};
+    if (!ImplementsIStorageFolder_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFolder_type.get()) == -1)
     {
         return nullptr;
     }
@@ -18347,8 +18512,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageFolder2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolder2, nullptr))};
+    if (!ImplementsIStorageFolder2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageFolder2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageItem_type{py::register_python_type(module.get(), &type_spec_IStorageItem, object_bases.get(), nullptr)};
     if (!IStorageItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageItem_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItem, nullptr))};
+    if (!ImplementsIStorageItem_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItem_type.get()) == -1)
     {
         return nullptr;
     }
@@ -18359,8 +18546,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageItem2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItem2, nullptr))};
+    if (!ImplementsIStorageItem2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItem2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageItemProperties_type{py::register_python_type(module.get(), &type_spec_IStorageItemProperties, object_bases.get(), nullptr)};
     if (!IStorageItemProperties_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageItemProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemProperties, nullptr))};
+    if (!ImplementsIStorageItemProperties_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemProperties_type.get()) == -1)
     {
         return nullptr;
     }
@@ -18371,14 +18580,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageItemProperties2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemProperties2, nullptr))};
+    if (!ImplementsIStorageItemProperties2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemProperties2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStorageItemPropertiesWithProvider_type{py::register_python_type(module.get(), &type_spec_IStorageItemPropertiesWithProvider, object_bases.get(), nullptr)};
     if (!IStorageItemPropertiesWithProvider_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIStorageItemPropertiesWithProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemPropertiesWithProvider, nullptr))};
+    if (!ImplementsIStorageItemPropertiesWithProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageItemPropertiesWithProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStreamedFileDataRequest_type{py::register_python_type(module.get(), &type_spec_IStreamedFileDataRequest, object_bases.get(), nullptr)};
     if (!IStreamedFileDataRequest_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStreamedFileDataRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStreamedFileDataRequest, nullptr))};
+    if (!ImplementsIStreamedFileDataRequest_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStreamedFileDataRequest_type.get()) == -1)
     {
         return nullptr;
     }

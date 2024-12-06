@@ -17,12 +17,8 @@ from winrt._winrt_windows_media_protection import (
     RevocationAndRenewalItem,
     ServiceRequestedEventArgs,
     IMediaProtectionServiceRequest,
+    ImplementsIMediaProtectionServiceRequest,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_protection import (
-        ImplementsIMediaProtectionServiceRequest,
-    )
 
 __all__ = [
     "GraphicsTrustStatus",
@@ -42,6 +38,7 @@ __all__ = [
     "RevocationAndRenewalItem",
     "ServiceRequestedEventArgs",
     "IMediaProtectionServiceRequest",
+    "ImplementsIMediaProtectionServiceRequest",
     "ComponentLoadFailedEventHandler",
     "RebootNeededEventHandler",
     "ServiceRequestedEventHandler",

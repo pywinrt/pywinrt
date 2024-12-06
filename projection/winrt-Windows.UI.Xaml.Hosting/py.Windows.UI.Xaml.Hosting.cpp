@@ -3092,6 +3092,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlUIPresenterHost};
 
+    static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost = {
+        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlUIPresenterHost};
+
     // ----- IXamlUIPresenterHost2 interface --------------------
 
     static PyObject* _new_IXamlUIPresenterHost2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3194,6 +3205,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlUIPresenterHost2};
+
+    static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost2 = {
+        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlUIPresenterHost2};
 
     // ----- IXamlUIPresenterHost3 interface --------------------
 
@@ -3301,6 +3323,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlUIPresenterHost3};
+
+    static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost3[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost3 = {
+        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost3",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlUIPresenterHost3};
 
     // ----- Windows.UI.Xaml.Hosting Initialization --------------------
 
@@ -3443,14 +3476,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXamlUIPresenterHost_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlUIPresenterHost, nullptr))};
+    if (!ImplementsIXamlUIPresenterHost_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlUIPresenterHost_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlUIPresenterHost2_type{py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr)};
     if (!IXamlUIPresenterHost2_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXamlUIPresenterHost2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlUIPresenterHost2, nullptr))};
+    if (!ImplementsIXamlUIPresenterHost2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlUIPresenterHost2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlUIPresenterHost3_type{py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr)};
     if (!IXamlUIPresenterHost3_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlUIPresenterHost3_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlUIPresenterHost3, nullptr))};
+    if (!ImplementsIXamlUIPresenterHost3_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlUIPresenterHost3_type.get()) == -1)
     {
         return nullptr;
     }

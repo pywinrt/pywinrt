@@ -1899,6 +1899,17 @@ namespace py::cpp::TestComponent
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRequiredFour};
 
+    static PyType_Slot type_slots_ImplementsIRequiredFour[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRequiredFour = {
+        "winrt._winrt_testcomponent.ImplementsIRequiredFour",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRequiredFour};
+
     // ----- IRequiredOne interface --------------------
 
     static PyObject* _new_IRequiredOne(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1988,6 +1999,17 @@ namespace py::cpp::TestComponent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRequiredOne};
+
+    static PyType_Slot type_slots_ImplementsIRequiredOne[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRequiredOne = {
+        "winrt._winrt_testcomponent.ImplementsIRequiredOne",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRequiredOne};
 
     // ----- IRequiredThree interface --------------------
 
@@ -2127,6 +2149,17 @@ namespace py::cpp::TestComponent
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRequiredThree};
 
+    static PyType_Slot type_slots_ImplementsIRequiredThree[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRequiredThree = {
+        "winrt._winrt_testcomponent.ImplementsIRequiredThree",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRequiredThree};
+
     // ----- IRequiredTwo interface --------------------
 
     static PyObject* _new_IRequiredTwo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2240,6 +2273,17 @@ namespace py::cpp::TestComponent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRequiredTwo};
+
+    static PyType_Slot type_slots_ImplementsIRequiredTwo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRequiredTwo = {
+        "winrt._winrt_testcomponent.ImplementsIRequiredTwo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRequiredTwo};
 
     // ----- ITests interface --------------------
 
@@ -5930,6 +5974,17 @@ namespace py::cpp::TestComponent
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITests};
 
+    static PyType_Slot type_slots_ImplementsITests[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITests = {
+        "winrt._winrt_testcomponent.ImplementsITests",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITests};
+
     // ----- Blittable struct --------------------
 
     winrt_struct_wrapper<winrt::TestComponent::Blittable>* _new_Blittable(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7121,8 +7176,30 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRequiredFour_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredFour, nullptr))};
+    if (!ImplementsIRequiredFour_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRequiredFour_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IRequiredOne_type{py::register_python_type(module.get(), &type_spec_IRequiredOne, object_bases.get(), nullptr)};
     if (!IRequiredOne_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIRequiredOne_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredOne, nullptr))};
+    if (!ImplementsIRequiredOne_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRequiredOne_type.get()) == -1)
     {
         return nullptr;
     }
@@ -7133,14 +7210,47 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRequiredThree_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredThree, nullptr))};
+    if (!ImplementsIRequiredThree_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRequiredThree_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IRequiredTwo_type{py::register_python_type(module.get(), &type_spec_IRequiredTwo, object_bases.get(), nullptr)};
     if (!IRequiredTwo_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRequiredTwo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredTwo, nullptr))};
+    if (!ImplementsIRequiredTwo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRequiredTwo_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITests_type{py::register_python_type(module.get(), &type_spec_ITests, object_bases.get(), nullptr)};
     if (!ITests_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITests_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITests, nullptr))};
+    if (!ImplementsITests_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITests_type.get()) == -1)
     {
         return nullptr;
     }

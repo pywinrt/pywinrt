@@ -204,6 +204,17 @@ namespace py::cpp::Windows::Web
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUriToStreamResolver};
 
+    static PyType_Slot type_slots_ImplementsIUriToStreamResolver[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIUriToStreamResolver = {
+        "winrt._winrt_windows_web.ImplementsIUriToStreamResolver",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIUriToStreamResolver};
+
     // ----- Windows.Web Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Web");
@@ -263,6 +274,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_web(void) noexcept
 
     py::pytype_handle IUriToStreamResolver_type{py::register_python_type(module.get(), &type_spec_IUriToStreamResolver, object_bases.get(), nullptr)};
     if (!IUriToStreamResolver_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIUriToStreamResolver_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUriToStreamResolver, nullptr))};
+    if (!ImplementsIUriToStreamResolver_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIUriToStreamResolver_type.get()) == -1)
     {
         return nullptr;
     }

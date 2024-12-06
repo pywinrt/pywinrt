@@ -18362,6 +18362,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXmlCharacterData};
 
+    static PyType_Slot type_slots_ImplementsIXmlCharacterData[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXmlCharacterData = {
+        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlCharacterData",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXmlCharacterData};
+
     // ----- IXmlNode interface --------------------
 
     static PyObject* _new_IXmlNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19405,6 +19416,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXmlNode};
 
+    static PyType_Slot type_slots_ImplementsIXmlNode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXmlNode = {
+        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXmlNode};
+
     // ----- IXmlNodeSelector interface --------------------
 
     static PyObject* _new_IXmlNodeSelector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19629,6 +19651,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXmlNodeSelector};
 
+    static PyType_Slot type_slots_ImplementsIXmlNodeSelector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXmlNodeSelector = {
+        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSelector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXmlNodeSelector};
+
     // ----- IXmlNodeSerializer interface --------------------
 
     static PyObject* _new_IXmlNodeSerializer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19793,6 +19826,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXmlNodeSerializer};
+
+    static PyType_Slot type_slots_ImplementsIXmlNodeSerializer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXmlNodeSerializer = {
+        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSerializer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXmlNodeSerializer};
 
     // ----- IXmlText interface --------------------
 
@@ -21169,6 +21213,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXmlText};
 
+    static PyType_Slot type_slots_ImplementsIXmlText[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXmlText = {
+        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlText",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXmlText};
+
     // ----- Windows.Data.Xml.Dom Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Data.Xml.Dom");
@@ -21322,8 +21377,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXmlCharacterData_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlCharacterData, nullptr))};
+    if (!ImplementsIXmlCharacterData_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXmlCharacterData_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXmlNode_type{py::register_python_type(module.get(), &type_spec_IXmlNode, object_bases.get(), nullptr)};
     if (!IXmlNode_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXmlNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNode, nullptr))};
+    if (!ImplementsIXmlNode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXmlNode_type.get()) == -1)
     {
         return nullptr;
     }
@@ -21334,14 +21411,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXmlNodeSelector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNodeSelector, nullptr))};
+    if (!ImplementsIXmlNodeSelector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXmlNodeSelector_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXmlNodeSerializer_type{py::register_python_type(module.get(), &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr)};
     if (!IXmlNodeSerializer_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXmlNodeSerializer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNodeSerializer, nullptr))};
+    if (!ImplementsIXmlNodeSerializer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXmlNodeSerializer_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXmlText_type{py::register_python_type(module.get(), &type_spec_IXmlText, object_bases.get(), nullptr)};
     if (!IXmlText_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXmlText_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlText, nullptr))};
+    if (!ImplementsIXmlText_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXmlText_type.get()) == -1)
     {
         return nullptr;
     }

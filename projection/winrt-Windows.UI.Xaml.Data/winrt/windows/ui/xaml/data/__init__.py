@@ -18,15 +18,25 @@ from winrt._winrt_windows_ui_xaml_data import (
     PropertyChangedEventArgs,
     RelativeSource,
     ICollectionView,
+    ImplementsICollectionView,
     ICollectionViewFactory,
+    ImplementsICollectionViewFactory,
     ICollectionViewGroup,
+    ImplementsICollectionViewGroup,
     ICustomProperty,
+    ImplementsICustomProperty,
     ICustomPropertyProvider,
+    ImplementsICustomPropertyProvider,
     IItemsRangeInfo,
+    ImplementsIItemsRangeInfo,
     INotifyPropertyChanged,
+    ImplementsINotifyPropertyChanged,
     ISelectionInfo,
+    ImplementsISelectionInfo,
     ISupportIncrementalLoading,
+    ImplementsISupportIncrementalLoading,
     IValueConverter,
+    ImplementsIValueConverter,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -39,20 +49,6 @@ if TYPE_CHECKING:
         ItemIndexRange_Static,
         PropertyChangedEventArgs_Static,
         RelativeSource_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_data import (
-        ImplementsICollectionView,
-        ImplementsICollectionViewFactory,
-        ImplementsICollectionViewGroup,
-        ImplementsICustomProperty,
-        ImplementsICustomPropertyProvider,
-        ImplementsIItemsRangeInfo,
-        ImplementsINotifyPropertyChanged,
-        ImplementsISelectionInfo,
-        ImplementsISupportIncrementalLoading,
-        ImplementsIValueConverter,
     )
 
 __all__ = [
@@ -71,15 +67,25 @@ __all__ = [
     "PropertyChangedEventArgs",
     "RelativeSource",
     "ICollectionView",
+    "ImplementsICollectionView",
     "ICollectionViewFactory",
+    "ImplementsICollectionViewFactory",
     "ICollectionViewGroup",
+    "ImplementsICollectionViewGroup",
     "ICustomProperty",
+    "ImplementsICustomProperty",
     "ICustomPropertyProvider",
+    "ImplementsICustomPropertyProvider",
     "IItemsRangeInfo",
+    "ImplementsIItemsRangeInfo",
     "INotifyPropertyChanged",
+    "ImplementsINotifyPropertyChanged",
     "ISelectionInfo",
+    "ImplementsISelectionInfo",
     "ISupportIncrementalLoading",
+    "ImplementsISupportIncrementalLoading",
     "IValueConverter",
+    "ImplementsIValueConverter",
     "CurrentChangingEventHandler",
     "PropertyChangedEventHandler",
 ]

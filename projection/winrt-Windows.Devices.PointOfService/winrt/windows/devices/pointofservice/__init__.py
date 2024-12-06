@@ -73,22 +73,18 @@ from winrt._winrt_windows_devices_pointofservice import (
     SlipPrinterCapabilities,
     UnifiedPosErrorData,
     ICashDrawerEventSourceEventArgs,
+    ImplementsICashDrawerEventSourceEventArgs,
     ICommonClaimedPosPrinterStation,
+    ImplementsICommonClaimedPosPrinterStation,
     ICommonPosPrintStationCapabilities,
+    ImplementsICommonPosPrintStationCapabilities,
     ICommonReceiptSlipCapabilities,
+    ImplementsICommonReceiptSlipCapabilities,
     IPosPrinterJob,
+    ImplementsIPosPrinterJob,
     IReceiptOrSlipJob,
+    ImplementsIReceiptOrSlipJob,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_pointofservice import (
-        ImplementsICashDrawerEventSourceEventArgs,
-        ImplementsICommonClaimedPosPrinterStation,
-        ImplementsICommonPosPrintStationCapabilities,
-        ImplementsICommonReceiptSlipCapabilities,
-        ImplementsIPosPrinterJob,
-        ImplementsIReceiptOrSlipJob,
-    )
 
 __all__ = [
     "BarcodeScannerStatus",
@@ -197,11 +193,17 @@ __all__ = [
     "SlipPrinterCapabilities",
     "UnifiedPosErrorData",
     "ICashDrawerEventSourceEventArgs",
+    "ImplementsICashDrawerEventSourceEventArgs",
     "ICommonClaimedPosPrinterStation",
+    "ImplementsICommonClaimedPosPrinterStation",
     "ICommonPosPrintStationCapabilities",
+    "ImplementsICommonPosPrintStationCapabilities",
     "ICommonReceiptSlipCapabilities",
+    "ImplementsICommonReceiptSlipCapabilities",
     "IPosPrinterJob",
+    "ImplementsIPosPrinterJob",
     "IReceiptOrSlipJob",
+    "ImplementsIReceiptOrSlipJob",
 ]
 
 class BarcodeScannerStatus(enum.IntEnum):

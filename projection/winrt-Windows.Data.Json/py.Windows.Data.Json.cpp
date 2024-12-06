@@ -3807,6 +3807,17 @@ namespace py::cpp::Windows::Data::Json
         Py_TPFLAGS_DEFAULT,
         _type_slots_IJsonValue};
 
+    static PyType_Slot type_slots_ImplementsIJsonValue[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIJsonValue = {
+        "winrt._winrt_windows_data_json.ImplementsIJsonValue",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIJsonValue};
+
     // ----- Windows.Data.Json Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Data.Json");
@@ -3902,6 +3913,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
 
     py::pytype_handle IJsonValue_type{py::register_python_type(module.get(), &type_spec_IJsonValue, object_bases.get(), nullptr)};
     if (!IJsonValue_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIJsonValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIJsonValue, nullptr))};
+    if (!ImplementsIJsonValue_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIJsonValue_type.get()) == -1)
     {
         return nullptr;
     }

@@ -17824,6 +17824,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactField};
 
+    static PyType_Slot type_slots_ImplementsIContactField[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactField = {
+        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactField",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactField};
+
     // ----- IContactFieldFactory interface --------------------
 
     static PyObject* _new_IContactFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18013,6 +18024,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactFieldFactory};
 
+    static PyType_Slot type_slots_ImplementsIContactFieldFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactFieldFactory = {
+        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactFieldFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactFieldFactory};
+
     // ----- IContactInstantMessageFieldFactory interface --------------------
 
     static PyObject* _new_IContactInstantMessageFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18200,6 +18222,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactInstantMessageFieldFactory};
+
+    static PyType_Slot type_slots_ImplementsIContactInstantMessageFieldFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactInstantMessageFieldFactory = {
+        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactInstantMessageFieldFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactInstantMessageFieldFactory};
 
     // ----- IContactLocationFieldFactory interface --------------------
 
@@ -18390,6 +18423,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactLocationFieldFactory};
+
+    static PyType_Slot type_slots_ImplementsIContactLocationFieldFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactLocationFieldFactory = {
+        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactLocationFieldFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactLocationFieldFactory};
 
     // ----- Windows.ApplicationModel.Contacts Initialization --------------------
 
@@ -18760,8 +18804,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactField_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactField, nullptr))};
+    if (!ImplementsIContactField_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactField_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactFieldFactory_type{py::register_python_type(module.get(), &type_spec_IContactFieldFactory, object_bases.get(), nullptr)};
     if (!IContactFieldFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactFieldFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactFieldFactory, nullptr))};
+    if (!ImplementsIContactFieldFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactFieldFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -18772,8 +18838,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactInstantMessageFieldFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactInstantMessageFieldFactory, nullptr))};
+    if (!ImplementsIContactInstantMessageFieldFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactInstantMessageFieldFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactLocationFieldFactory_type{py::register_python_type(module.get(), &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr)};
     if (!IContactLocationFieldFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactLocationFieldFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactLocationFieldFactory, nullptr))};
+    if (!ImplementsIContactLocationFieldFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactLocationFieldFactory_type.get()) == -1)
     {
         return nullptr;
     }

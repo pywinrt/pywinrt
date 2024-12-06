@@ -8544,6 +8544,17 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_IEnteredBackgroundEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIEnteredBackgroundEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIEnteredBackgroundEventArgs = {
+        "winrt._winrt_windows_applicationmodel.ImplementsIEnteredBackgroundEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIEnteredBackgroundEventArgs};
+
     // ----- ILeavingBackgroundEventArgs interface --------------------
 
     static PyObject* _new_ILeavingBackgroundEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8646,6 +8657,17 @@ namespace py::cpp::Windows::ApplicationModel
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILeavingBackgroundEventArgs};
+
+    static PyType_Slot type_slots_ImplementsILeavingBackgroundEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILeavingBackgroundEventArgs = {
+        "winrt._winrt_windows_applicationmodel.ImplementsILeavingBackgroundEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILeavingBackgroundEventArgs};
 
     // ----- IPackageCatalogStatics2 interface --------------------
 
@@ -8752,6 +8774,17 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPackageCatalogStatics2};
 
+    static PyType_Slot type_slots_ImplementsIPackageCatalogStatics2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPackageCatalogStatics2 = {
+        "winrt._winrt_windows_applicationmodel.ImplementsIPackageCatalogStatics2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPackageCatalogStatics2};
+
     // ----- ISuspendingDeferral interface --------------------
 
     static PyObject* _new_ISuspendingDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8856,6 +8889,17 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingDeferral};
 
+    static PyType_Slot type_slots_ImplementsISuspendingDeferral[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISuspendingDeferral = {
+        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingDeferral",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISuspendingDeferral};
+
     // ----- ISuspendingEventArgs interface --------------------
 
     static PyObject* _new_ISuspendingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8948,6 +8992,17 @@ namespace py::cpp::Windows::ApplicationModel
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingEventArgs};
+
+    static PyType_Slot type_slots_ImplementsISuspendingEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISuspendingEventArgs = {
+        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISuspendingEventArgs};
 
     // ----- ISuspendingOperation interface --------------------
 
@@ -9078,6 +9133,17 @@ namespace py::cpp::Windows::ApplicationModel
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingOperation};
+
+    static PyType_Slot type_slots_ImplementsISuspendingOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISuspendingOperation = {
+        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISuspendingOperation};
 
     // ----- PackageInstallProgress struct --------------------
 
@@ -9858,8 +9924,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIEnteredBackgroundEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIEnteredBackgroundEventArgs, nullptr))};
+    if (!ImplementsIEnteredBackgroundEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIEnteredBackgroundEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_ILeavingBackgroundEventArgs, object_bases.get(), nullptr)};
     if (!ILeavingBackgroundEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILeavingBackgroundEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILeavingBackgroundEventArgs, nullptr))};
+    if (!ImplementsILeavingBackgroundEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILeavingBackgroundEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9870,8 +9958,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPackageCatalogStatics2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPackageCatalogStatics2, nullptr))};
+    if (!ImplementsIPackageCatalogStatics2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPackageCatalogStatics2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_ISuspendingDeferral, object_bases.get(), nullptr)};
     if (!ISuspendingDeferral_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISuspendingDeferral_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingDeferral, nullptr))};
+    if (!ImplementsISuspendingDeferral_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISuspendingDeferral_type.get()) == -1)
     {
         return nullptr;
     }
@@ -9882,8 +9992,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISuspendingEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingEventArgs, nullptr))};
+    if (!ImplementsISuspendingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISuspendingEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISuspendingOperation_type{py::register_python_type(module.get(), &type_spec_ISuspendingOperation, object_bases.get(), nullptr)};
     if (!ISuspendingOperation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISuspendingOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingOperation, nullptr))};
+    if (!ImplementsISuspendingOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISuspendingOperation_type.get()) == -1)
     {
         return nullptr;
     }

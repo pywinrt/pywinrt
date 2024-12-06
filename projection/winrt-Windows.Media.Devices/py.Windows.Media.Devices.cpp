@@ -13617,6 +13617,17 @@ namespace py::cpp::Windows::Media::Devices
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDefaultAudioDeviceChangedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs = {
+        "winrt._winrt_windows_media_devices.ImplementsIDefaultAudioDeviceChangedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDefaultAudioDeviceChangedEventArgs};
+
     // ----- IMediaDeviceController interface --------------------
 
     static PyObject* _new_IMediaDeviceController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13800,6 +13811,17 @@ namespace py::cpp::Windows::Media::Devices
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaDeviceController};
+
+    static PyType_Slot type_slots_ImplementsIMediaDeviceController[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaDeviceController = {
+        "winrt._winrt_windows_media_devices.ImplementsIMediaDeviceController",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaDeviceController};
 
     // ----- Windows.Media.Devices Initialization --------------------
 
@@ -14140,8 +14162,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDefaultAudioDeviceChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs, nullptr))};
+    if (!ImplementsIDefaultAudioDeviceChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDefaultAudioDeviceChangedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaDeviceController_type{py::register_python_type(module.get(), &type_spec_IMediaDeviceController, object_bases.get(), nullptr)};
     if (!IMediaDeviceController_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaDeviceController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaDeviceController, nullptr))};
+    if (!ImplementsIMediaDeviceController_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaDeviceController_type.get()) == -1)
     {
         return nullptr;
     }

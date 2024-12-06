@@ -21,14 +21,10 @@ from winrt._winrt_windows_ui_shell import (
     WindowTabTearOutRequestedEventArgs,
     WindowTabThumbnailRequestedEventArgs,
     IAdaptiveCard,
+    ImplementsIAdaptiveCard,
     IAdaptiveCardBuilderStatics,
+    ImplementsIAdaptiveCardBuilderStatics,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_shell import (
-        ImplementsIAdaptiveCard,
-        ImplementsIAdaptiveCardBuilderStatics,
-    )
 
 __all__ = [
     "SecurityAppKind",
@@ -52,7 +48,9 @@ __all__ = [
     "WindowTabTearOutRequestedEventArgs",
     "WindowTabThumbnailRequestedEventArgs",
     "IAdaptiveCard",
+    "ImplementsIAdaptiveCard",
     "IAdaptiveCardBuilderStatics",
+    "ImplementsIAdaptiveCardBuilderStatics",
 ]
 
 class SecurityAppKind(enum.IntEnum):

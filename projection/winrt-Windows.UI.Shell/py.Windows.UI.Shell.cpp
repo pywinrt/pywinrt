@@ -4641,6 +4641,17 @@ namespace py::cpp::Windows::UI::Shell
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdaptiveCard};
 
+    static PyType_Slot type_slots_ImplementsIAdaptiveCard[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAdaptiveCard = {
+        "winrt._winrt_windows_ui_shell.ImplementsIAdaptiveCard",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAdaptiveCard};
+
     // ----- IAdaptiveCardBuilderStatics interface --------------------
 
     static PyObject* _new_IAdaptiveCardBuilderStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4745,6 +4756,17 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdaptiveCardBuilderStatics};
+
+    static PyType_Slot type_slots_ImplementsIAdaptiveCardBuilderStatics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAdaptiveCardBuilderStatics = {
+        "winrt._winrt_windows_ui_shell.ImplementsIAdaptiveCardBuilderStatics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAdaptiveCardBuilderStatics};
 
     // ----- Windows.UI.Shell Initialization --------------------
 
@@ -4929,8 +4951,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAdaptiveCard_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdaptiveCard, nullptr))};
+    if (!ImplementsIAdaptiveCard_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAdaptiveCard_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAdaptiveCardBuilderStatics_type{py::register_python_type(module.get(), &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr)};
     if (!IAdaptiveCardBuilderStatics_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAdaptiveCardBuilderStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdaptiveCardBuilderStatics, nullptr))};
+    if (!ImplementsIAdaptiveCardBuilderStatics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAdaptiveCardBuilderStatics_type.get()) == -1)
     {
         return nullptr;
     }

@@ -3117,6 +3117,17 @@ namespace py::cpp::Windows::ApplicationModel::Search
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchPaneQueryChangedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsISearchPaneQueryChangedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISearchPaneQueryChangedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_search.ImplementsISearchPaneQueryChangedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISearchPaneQueryChangedEventArgs};
+
     // ----- Windows.ApplicationModel.Search Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Search");
@@ -3254,6 +3265,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
 
     py::pytype_handle ISearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr)};
     if (!ISearchPaneQueryChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISearchPaneQueryChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISearchPaneQueryChangedEventArgs, nullptr))};
+    if (!ImplementsISearchPaneQueryChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISearchPaneQueryChangedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }

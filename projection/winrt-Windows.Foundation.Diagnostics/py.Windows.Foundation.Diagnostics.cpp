@@ -9116,6 +9116,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IErrorReportingSettings};
 
+    static PyType_Slot type_slots_ImplementsIErrorReportingSettings[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIErrorReportingSettings = {
+        "winrt._winrt_windows_foundation_diagnostics.ImplementsIErrorReportingSettings",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIErrorReportingSettings};
+
     // ----- IFileLoggingSession interface --------------------
 
     static PyObject* _new_IFileLoggingSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9484,6 +9495,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileLoggingSession};
+
+    static PyType_Slot type_slots_ImplementsIFileLoggingSession[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileLoggingSession = {
+        "winrt._winrt_windows_foundation_diagnostics.ImplementsIFileLoggingSession",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileLoggingSession};
 
     // ----- ILoggingChannel interface --------------------
 
@@ -9914,6 +9936,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingChannel};
 
+    static PyType_Slot type_slots_ImplementsILoggingChannel[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILoggingChannel = {
+        "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingChannel",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILoggingChannel};
+
     // ----- ILoggingSession interface --------------------
 
     static PyObject* _new_ILoggingSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10226,6 +10259,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingSession};
+
+    static PyType_Slot type_slots_ImplementsILoggingSession[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILoggingSession = {
+        "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingSession",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILoggingSession};
 
     // ----- ILoggingTarget interface --------------------
 
@@ -10737,6 +10781,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingTarget};
 
+    static PyType_Slot type_slots_ImplementsILoggingTarget[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILoggingTarget = {
+        "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingTarget",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILoggingTarget};
+
     // ----- Windows.Foundation.Diagnostics Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Foundation.Diagnostics");
@@ -10872,8 +10927,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIErrorReportingSettings_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIErrorReportingSettings, nullptr))};
+    if (!ImplementsIErrorReportingSettings_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIErrorReportingSettings_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileLoggingSession_type{py::register_python_type(module.get(), &type_spec_IFileLoggingSession, object_bases.get(), nullptr)};
     if (!IFileLoggingSession_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileLoggingSession_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileLoggingSession, nullptr))};
+    if (!ImplementsIFileLoggingSession_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileLoggingSession_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10884,14 +10961,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILoggingChannel_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILoggingChannel, nullptr))};
+    if (!ImplementsILoggingChannel_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILoggingChannel_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILoggingSession_type{py::register_python_type(module.get(), &type_spec_ILoggingSession, object_bases.get(), nullptr)};
     if (!ILoggingSession_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILoggingSession_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILoggingSession, nullptr))};
+    if (!ImplementsILoggingSession_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILoggingSession_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILoggingTarget_type{py::register_python_type(module.get(), &type_spec_ILoggingTarget, object_bases.get(), nullptr)};
     if (!ILoggingTarget_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILoggingTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILoggingTarget, nullptr))};
+    if (!ImplementsILoggingTarget_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILoggingTarget_type.get()) == -1)
     {
         return nullptr;
     }

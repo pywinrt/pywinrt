@@ -6597,6 +6597,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBuffer};
 
+    static PyType_Slot type_slots_ImplementsIBuffer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBuffer = {
+        "winrt._winrt_windows_storage_streams.ImplementsIBuffer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBuffer};
+
     // ----- IContentTypeProvider interface --------------------
 
     static PyObject* _new_IContentTypeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6689,6 +6700,17 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContentTypeProvider};
+
+    static PyType_Slot type_slots_ImplementsIContentTypeProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContentTypeProvider = {
+        "winrt._winrt_windows_storage_streams.ImplementsIContentTypeProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContentTypeProvider};
 
     // ----- IDataReader interface --------------------
 
@@ -7680,6 +7702,17 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDataReader};
+
+    static PyType_Slot type_slots_ImplementsIDataReader[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDataReader = {
+        "winrt._winrt_windows_storage_streams.ImplementsIDataReader",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDataReader};
 
     // ----- IDataWriter interface --------------------
 
@@ -8766,6 +8799,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDataWriter};
 
+    static PyType_Slot type_slots_ImplementsIDataWriter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDataWriter = {
+        "winrt._winrt_windows_storage_streams.ImplementsIDataWriter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDataWriter};
+
     // ----- IInputStream interface --------------------
 
     static PyObject* _new_IInputStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8932,6 +8976,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInputStream};
 
+    static PyType_Slot type_slots_ImplementsIInputStream[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInputStream = {
+        "winrt._winrt_windows_storage_streams.ImplementsIInputStream",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInputStream};
+
     // ----- IInputStreamReference interface --------------------
 
     static PyObject* _new_IInputStreamReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9034,6 +9089,17 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IInputStreamReference};
+
+    static PyType_Slot type_slots_ImplementsIInputStreamReference[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIInputStreamReference = {
+        "winrt._winrt_windows_storage_streams.ImplementsIInputStreamReference",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIInputStreamReference};
 
     // ----- IOutputStream interface --------------------
 
@@ -9236,6 +9302,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IOutputStream};
 
+    static PyType_Slot type_slots_ImplementsIOutputStream[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIOutputStream = {
+        "winrt._winrt_windows_storage_streams.ImplementsIOutputStream",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIOutputStream};
+
     // ----- IPropertySetSerializer interface --------------------
 
     static PyObject* _new_IPropertySetSerializer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9381,6 +9458,17 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertySetSerializer};
+
+    static PyType_Slot type_slots_ImplementsIPropertySetSerializer[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPropertySetSerializer = {
+        "winrt._winrt_windows_storage_streams.ImplementsIPropertySetSerializer",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPropertySetSerializer};
 
     // ----- IRandomAccessStream interface --------------------
 
@@ -9922,6 +10010,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRandomAccessStream};
 
+    static PyType_Slot type_slots_ImplementsIRandomAccessStream[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRandomAccessStream = {
+        "winrt._winrt_windows_storage_streams.ImplementsIRandomAccessStream",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRandomAccessStream};
+
     // ----- IRandomAccessStreamReference interface --------------------
 
     static PyObject* _new_IRandomAccessStreamReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10024,6 +10123,17 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRandomAccessStreamReference};
+
+    static PyType_Slot type_slots_ImplementsIRandomAccessStreamReference[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRandomAccessStreamReference = {
+        "winrt._winrt_windows_storage_streams.ImplementsIRandomAccessStreamReference",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRandomAccessStreamReference};
 
     // ----- IRandomAccessStreamWithContentType interface --------------------
 
@@ -10592,6 +10702,17 @@ namespace py::cpp::Windows::Storage::Streams
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRandomAccessStreamWithContentType};
 
+    static PyType_Slot type_slots_ImplementsIRandomAccessStreamWithContentType[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRandomAccessStreamWithContentType = {
+        "winrt._winrt_windows_storage_streams.ImplementsIRandomAccessStreamWithContentType",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRandomAccessStreamWithContentType};
+
     // ----- Windows.Storage.Streams Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Storage.Streams");
@@ -10757,8 +10878,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBuffer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBuffer, nullptr))};
+    if (!ImplementsIBuffer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBuffer_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContentTypeProvider_type{py::register_python_type(module.get(), &type_spec_IContentTypeProvider, object_bases.get(), nullptr)};
     if (!IContentTypeProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContentTypeProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContentTypeProvider, nullptr))};
+    if (!ImplementsIContentTypeProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContentTypeProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10769,8 +10912,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDataReader_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDataReader, nullptr))};
+    if (!ImplementsIDataReader_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDataReader_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IDataWriter_type{py::register_python_type(module.get(), &type_spec_IDataWriter, object_bases.get(), nullptr)};
     if (!IDataWriter_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDataWriter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDataWriter, nullptr))};
+    if (!ImplementsIDataWriter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDataWriter_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10781,8 +10946,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIInputStream_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInputStream, nullptr))};
+    if (!ImplementsIInputStream_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInputStream_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IInputStreamReference_type{py::register_python_type(module.get(), &type_spec_IInputStreamReference, object_bases.get(), nullptr)};
     if (!IInputStreamReference_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIInputStreamReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInputStreamReference, nullptr))};
+    if (!ImplementsIInputStreamReference_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIInputStreamReference_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10793,8 +10980,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIOutputStream_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIOutputStream, nullptr))};
+    if (!ImplementsIOutputStream_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIOutputStream_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPropertySetSerializer_type{py::register_python_type(module.get(), &type_spec_IPropertySetSerializer, object_bases.get(), nullptr)};
     if (!IPropertySetSerializer_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPropertySetSerializer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertySetSerializer, nullptr))};
+    if (!ImplementsIPropertySetSerializer_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPropertySetSerializer_type.get()) == -1)
     {
         return nullptr;
     }
@@ -10805,14 +11014,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRandomAccessStream_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRandomAccessStream, nullptr))};
+    if (!ImplementsIRandomAccessStream_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRandomAccessStream_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IRandomAccessStreamReference_type{py::register_python_type(module.get(), &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr)};
     if (!IRandomAccessStreamReference_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIRandomAccessStreamReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRandomAccessStreamReference, nullptr))};
+    if (!ImplementsIRandomAccessStreamReference_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRandomAccessStreamReference_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IRandomAccessStreamWithContentType_type{py::register_python_type(module.get(), &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr)};
     if (!IRandomAccessStreamWithContentType_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIRandomAccessStreamWithContentType_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRandomAccessStreamWithContentType, nullptr))};
+    if (!ImplementsIRandomAccessStreamWithContentType_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRandomAccessStreamWithContentType_type.get()) == -1)
     {
         return nullptr;
     }

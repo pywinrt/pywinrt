@@ -3683,6 +3683,17 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_TPFLAGS_DEFAULT,
         _type_slots_IImageScannerFormatConfiguration};
 
+    static PyType_Slot type_slots_ImplementsIImageScannerFormatConfiguration[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIImageScannerFormatConfiguration = {
+        "winrt._winrt_windows_devices_scanners.ImplementsIImageScannerFormatConfiguration",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIImageScannerFormatConfiguration};
+
     // ----- IImageScannerSourceConfiguration interface --------------------
 
     static PyObject* _new_IImageScannerSourceConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4732,6 +4743,17 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_TPFLAGS_DEFAULT,
         _type_slots_IImageScannerSourceConfiguration};
 
+    static PyType_Slot type_slots_ImplementsIImageScannerSourceConfiguration[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIImageScannerSourceConfiguration = {
+        "winrt._winrt_windows_devices_scanners.ImplementsIImageScannerSourceConfiguration",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIImageScannerSourceConfiguration};
+
     // ----- ImageScannerResolution struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>* _new_ImageScannerResolution(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5039,8 +5061,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIImageScannerFormatConfiguration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIImageScannerFormatConfiguration, nullptr))};
+    if (!ImplementsIImageScannerFormatConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIImageScannerFormatConfiguration_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IImageScannerSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_IImageScannerSourceConfiguration, object_bases.get(), nullptr)};
     if (!IImageScannerSourceConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIImageScannerSourceConfiguration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIImageScannerSourceConfiguration, nullptr))};
+    if (!ImplementsIImageScannerSourceConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIImageScannerSourceConfiguration_type.get()) == -1)
     {
         return nullptr;
     }

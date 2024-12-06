@@ -2482,6 +2482,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPerceptionFrameProvider};
 
+    static PyType_Slot type_slots_ImplementsIPerceptionFrameProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPerceptionFrameProvider = {
+        "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPerceptionFrameProvider};
+
     // ----- IPerceptionFrameProviderManager interface --------------------
 
     static PyObject* _new_IPerceptionFrameProviderManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2646,6 +2657,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPerceptionFrameProviderManager};
 
+    static PyType_Slot type_slots_ImplementsIPerceptionFrameProviderManager[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPerceptionFrameProviderManager = {
+        "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProviderManager",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPerceptionFrameProviderManager};
+
     // ----- Windows.Devices.Perception.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Perception.Provider");
@@ -2769,8 +2791,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPerceptionFrameProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPerceptionFrameProvider, nullptr))};
+    if (!ImplementsIPerceptionFrameProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPerceptionFrameProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPerceptionFrameProviderManager_type{py::register_python_type(module.get(), &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr)};
     if (!IPerceptionFrameProviderManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPerceptionFrameProviderManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPerceptionFrameProviderManager, nullptr))};
+    if (!ImplementsIPerceptionFrameProviderManager_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPerceptionFrameProviderManager_type.get()) == -1)
     {
         return nullptr;
     }

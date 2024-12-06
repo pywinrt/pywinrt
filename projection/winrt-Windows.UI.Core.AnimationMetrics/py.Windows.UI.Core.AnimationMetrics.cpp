@@ -1424,6 +1424,17 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertyAnimation};
 
+    static PyType_Slot type_slots_ImplementsIPropertyAnimation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPropertyAnimation = {
+        "winrt._winrt_windows_ui_core_animationmetrics.ImplementsIPropertyAnimation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPropertyAnimation};
+
     // ----- Windows.UI.Core.AnimationMetrics Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Core.AnimationMetrics");
@@ -1501,6 +1512,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept
 
     py::pytype_handle IPropertyAnimation_type{py::register_python_type(module.get(), &type_spec_IPropertyAnimation, object_bases.get(), nullptr)};
     if (!IPropertyAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPropertyAnimation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertyAnimation, nullptr))};
+    if (!ImplementsIPropertyAnimation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPropertyAnimation_type.get()) == -1)
     {
         return nullptr;
     }

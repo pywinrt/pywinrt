@@ -28989,6 +28989,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICashDrawerEventSourceEventArgs};
 
+    static PyType_Slot type_slots_ImplementsICashDrawerEventSourceEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICashDrawerEventSourceEventArgs = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsICashDrawerEventSourceEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICashDrawerEventSourceEventArgs};
+
     // ----- ICommonClaimedPosPrinterStation interface --------------------
 
     static PyObject* _new_ICommonClaimedPosPrinterStation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -29620,6 +29631,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommonClaimedPosPrinterStation};
 
+    static PyType_Slot type_slots_ImplementsICommonClaimedPosPrinterStation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICommonClaimedPosPrinterStation = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonClaimedPosPrinterStation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICommonClaimedPosPrinterStation};
+
     // ----- ICommonPosPrintStationCapabilities interface --------------------
 
     static PyObject* _new_ICommonPosPrintStationCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -30036,6 +30058,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommonPosPrintStationCapabilities};
+
+    static PyType_Slot type_slots_ImplementsICommonPosPrintStationCapabilities[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICommonPosPrintStationCapabilities = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonPosPrintStationCapabilities",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICommonPosPrintStationCapabilities};
 
     // ----- ICommonReceiptSlipCapabilities interface --------------------
 
@@ -30697,6 +30730,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommonReceiptSlipCapabilities};
 
+    static PyType_Slot type_slots_ImplementsICommonReceiptSlipCapabilities[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICommonReceiptSlipCapabilities = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonReceiptSlipCapabilities",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICommonReceiptSlipCapabilities};
+
     // ----- IPosPrinterJob interface --------------------
 
     static PyObject* _new_IPosPrinterJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -30917,6 +30961,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPosPrinterJob};
+
+    static PyType_Slot type_slots_ImplementsIPosPrinterJob[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPosPrinterJob = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsIPosPrinterJob",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPosPrinterJob};
 
     // ----- IReceiptOrSlipJob interface --------------------
 
@@ -31770,6 +31825,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         Py_TPFLAGS_DEFAULT,
         _type_slots_IReceiptOrSlipJob};
 
+    static PyType_Slot type_slots_ImplementsIReceiptOrSlipJob[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIReceiptOrSlipJob = {
+        "winrt._winrt_windows_devices_pointofservice.ImplementsIReceiptOrSlipJob",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIReceiptOrSlipJob};
+
     // ----- SizeUInt32 struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>* _new_SizeUInt32(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -32497,8 +32563,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICashDrawerEventSourceEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICashDrawerEventSourceEventArgs, nullptr))};
+    if (!ImplementsICashDrawerEventSourceEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICashDrawerEventSourceEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICommonClaimedPosPrinterStation_type{py::register_python_type(module.get(), &type_spec_ICommonClaimedPosPrinterStation, object_bases.get(), nullptr)};
     if (!ICommonClaimedPosPrinterStation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICommonClaimedPosPrinterStation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonClaimedPosPrinterStation, nullptr))};
+    if (!ImplementsICommonClaimedPosPrinterStation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICommonClaimedPosPrinterStation_type.get()) == -1)
     {
         return nullptr;
     }
@@ -32509,8 +32597,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICommonPosPrintStationCapabilities_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonPosPrintStationCapabilities, nullptr))};
+    if (!ImplementsICommonPosPrintStationCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICommonPosPrintStationCapabilities_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICommonReceiptSlipCapabilities_type{py::register_python_type(module.get(), &type_spec_ICommonReceiptSlipCapabilities, object_bases.get(), nullptr)};
     if (!ICommonReceiptSlipCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICommonReceiptSlipCapabilities_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonReceiptSlipCapabilities, nullptr))};
+    if (!ImplementsICommonReceiptSlipCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICommonReceiptSlipCapabilities_type.get()) == -1)
     {
         return nullptr;
     }
@@ -32521,8 +32631,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPosPrinterJob_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPosPrinterJob, nullptr))};
+    if (!ImplementsIPosPrinterJob_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPosPrinterJob_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IReceiptOrSlipJob_type{py::register_python_type(module.get(), &type_spec_IReceiptOrSlipJob, object_bases.get(), nullptr)};
     if (!IReceiptOrSlipJob_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIReceiptOrSlipJob_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReceiptOrSlipJob, nullptr))};
+    if (!ImplementsIReceiptOrSlipJob_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIReceiptOrSlipJob_type.get()) == -1)
     {
         return nullptr;
     }

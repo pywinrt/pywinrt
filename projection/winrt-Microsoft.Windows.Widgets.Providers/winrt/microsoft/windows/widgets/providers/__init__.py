@@ -12,20 +12,16 @@ from winrt._winrt_microsoft_windows_widgets_providers import (
     WidgetManager,
     WidgetUpdateRequestOptions,
     IWidgetManager,
+    ImplementsIWidgetManager,
     IWidgetProvider,
+    ImplementsIWidgetProvider,
     IWidgetProvider2,
+    ImplementsIWidgetProvider2,
     IWidgetProviderAnalytics,
+    ImplementsIWidgetProviderAnalytics,
     IWidgetProviderErrors,
+    ImplementsIWidgetProviderErrors,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_windows_widgets_providers import (
-        ImplementsIWidgetManager,
-        ImplementsIWidgetProvider,
-        ImplementsIWidgetProvider2,
-        ImplementsIWidgetProviderAnalytics,
-        ImplementsIWidgetProviderErrors,
-    )
 
 __all__ = [
     "WidgetActionInvokedArgs",
@@ -38,9 +34,14 @@ __all__ = [
     "WidgetManager",
     "WidgetUpdateRequestOptions",
     "IWidgetManager",
+    "ImplementsIWidgetManager",
     "IWidgetProvider",
+    "ImplementsIWidgetProvider",
     "IWidgetProvider2",
+    "ImplementsIWidgetProvider2",
     "IWidgetProviderAnalytics",
+    "ImplementsIWidgetProviderAnalytics",
     "IWidgetProviderErrors",
+    "ImplementsIWidgetProviderErrors",
 ]
 

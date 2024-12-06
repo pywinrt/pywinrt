@@ -12,16 +12,12 @@ from winrt._winrt_windows_applicationmodel_core import (
     UnhandledError,
     UnhandledErrorDetectedEventArgs,
     ICoreApplicationUnhandledError,
+    ImplementsICoreApplicationUnhandledError,
     IFrameworkView,
+    ImplementsIFrameworkView,
     IFrameworkViewSource,
+    ImplementsIFrameworkViewSource,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_core import (
-        ImplementsICoreApplicationUnhandledError,
-        ImplementsIFrameworkView,
-        ImplementsIFrameworkViewSource,
-    )
 
 __all__ = [
     "AppRestartFailureReason",
@@ -33,8 +29,11 @@ __all__ = [
     "UnhandledError",
     "UnhandledErrorDetectedEventArgs",
     "ICoreApplicationUnhandledError",
+    "ImplementsICoreApplicationUnhandledError",
     "IFrameworkView",
+    "ImplementsIFrameworkView",
     "IFrameworkViewSource",
+    "ImplementsIFrameworkViewSource",
 ]
 
 class AppRestartFailureReason(enum.IntEnum):

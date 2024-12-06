@@ -1227,6 +1227,17 @@ namespace py::cpp::Windows::Devices::I2c
         Py_TPFLAGS_DEFAULT,
         _type_slots_II2cDeviceStatics};
 
+    static PyType_Slot type_slots_ImplementsII2cDeviceStatics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsII2cDeviceStatics = {
+        "winrt._winrt_windows_devices_i2c.ImplementsII2cDeviceStatics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsII2cDeviceStatics};
+
     // ----- I2cTransferResult struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Devices::I2c::I2cTransferResult>* _new_I2cTransferResult(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1518,6 +1529,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
 
     py::pytype_handle II2cDeviceStatics_type{py::register_python_type(module.get(), &type_spec_II2cDeviceStatics, object_bases.get(), nullptr)};
     if (!II2cDeviceStatics_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsII2cDeviceStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsII2cDeviceStatics, nullptr))};
+    if (!ImplementsII2cDeviceStatics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsII2cDeviceStatics_type.get()) == -1)
     {
         return nullptr;
     }

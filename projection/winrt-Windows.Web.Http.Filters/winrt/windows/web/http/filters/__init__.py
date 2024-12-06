@@ -8,12 +8,8 @@ from winrt._winrt_windows_web_http_filters import (
     HttpCacheControl,
     HttpServerCustomValidationRequestedEventArgs,
     IHttpFilter,
+    ImplementsIHttpFilter,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_web_http_filters import (
-        ImplementsIHttpFilter,
-    )
 
 __all__ = [
     "HttpCacheReadBehavior",
@@ -23,6 +19,7 @@ __all__ = [
     "HttpCacheControl",
     "HttpServerCustomValidationRequestedEventArgs",
     "IHttpFilter",
+    "ImplementsIHttpFilter",
 ]
 
 class HttpCacheReadBehavior(enum.IntEnum):

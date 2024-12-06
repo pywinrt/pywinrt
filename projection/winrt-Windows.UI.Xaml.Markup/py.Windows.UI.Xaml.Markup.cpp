@@ -1801,6 +1801,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_TPFLAGS_DEFAULT,
         _type_slots_IComponentConnector};
 
+    static PyType_Slot type_slots_ImplementsIComponentConnector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIComponentConnector = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIComponentConnector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIComponentConnector};
+
     // ----- IComponentConnector2 interface --------------------
 
     static PyObject* _new_IComponentConnector2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1906,6 +1917,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IComponentConnector2};
+
+    static PyType_Slot type_slots_ImplementsIComponentConnector2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIComponentConnector2 = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIComponentConnector2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIComponentConnector2};
 
     // ----- IDataTemplateComponent interface --------------------
 
@@ -2060,6 +2082,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDataTemplateComponent};
 
+    static PyType_Slot type_slots_ImplementsIDataTemplateComponent[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDataTemplateComponent = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIDataTemplateComponent",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDataTemplateComponent};
+
     // ----- IXamlBindScopeDiagnostics interface --------------------
 
     static PyObject* _new_IXamlBindScopeDiagnostics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2166,6 +2199,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlBindScopeDiagnostics};
+
+    static PyType_Slot type_slots_ImplementsIXamlBindScopeDiagnostics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlBindScopeDiagnostics = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlBindScopeDiagnostics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlBindScopeDiagnostics};
 
     // ----- IXamlMember interface --------------------
 
@@ -2475,6 +2519,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlMember};
 
+    static PyType_Slot type_slots_ImplementsIXamlMember[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlMember = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlMember",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlMember};
+
     // ----- IXamlMetadataProvider interface --------------------
 
     static PyObject* _new_IXamlMetadataProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2655,6 +2710,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlMetadataProvider};
+
+    static PyType_Slot type_slots_ImplementsIXamlMetadataProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlMetadataProvider = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlMetadataProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlMetadataProvider};
 
     // ----- IXamlType interface --------------------
 
@@ -3281,6 +3347,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlType};
+
+    static PyType_Slot type_slots_ImplementsIXamlType[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlType = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlType",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlType};
 
     // ----- IXamlType2 interface --------------------
 
@@ -3935,6 +4012,17 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlType2};
 
+    static PyType_Slot type_slots_ImplementsIXamlType2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlType2 = {
+        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlType2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlType2};
+
     // ----- XamlBinaryWriterErrorInformation struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>* _new_XamlBinaryWriterErrorInformation(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4516,8 +4604,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIComponentConnector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIComponentConnector, nullptr))};
+    if (!ImplementsIComponentConnector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIComponentConnector_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IComponentConnector2_type{py::register_python_type(module.get(), &type_spec_IComponentConnector2, object_bases.get(), nullptr)};
     if (!IComponentConnector2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIComponentConnector2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIComponentConnector2, nullptr))};
+    if (!ImplementsIComponentConnector2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIComponentConnector2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4528,8 +4638,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDataTemplateComponent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDataTemplateComponent, nullptr))};
+    if (!ImplementsIDataTemplateComponent_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDataTemplateComponent_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlBindScopeDiagnostics_type{py::register_python_type(module.get(), &type_spec_IXamlBindScopeDiagnostics, object_bases.get(), nullptr)};
     if (!IXamlBindScopeDiagnostics_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlBindScopeDiagnostics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlBindScopeDiagnostics, nullptr))};
+    if (!ImplementsIXamlBindScopeDiagnostics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlBindScopeDiagnostics_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4540,8 +4672,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXamlMember_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlMember, nullptr))};
+    if (!ImplementsIXamlMember_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlMember_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlMetadataProvider_type{py::register_python_type(module.get(), &type_spec_IXamlMetadataProvider, object_bases.get(), nullptr)};
     if (!IXamlMetadataProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlMetadataProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlMetadataProvider, nullptr))};
+    if (!ImplementsIXamlMetadataProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlMetadataProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4552,8 +4706,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIXamlType_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlType, nullptr))};
+    if (!ImplementsIXamlType_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlType_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlType2_type{py::register_python_type(module.get(), &type_spec_IXamlType2, object_bases.get(), nullptr)};
     if (!IXamlType2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlType2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlType2, nullptr))};
+    if (!ImplementsIXamlType2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlType2_type.get()) == -1)
     {
         return nullptr;
     }

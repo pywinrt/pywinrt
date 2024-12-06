@@ -24,20 +24,16 @@ from winrt._winrt_windows_graphics_printing_optiondetails import (
     PrintTaskOptionChangedEventArgs,
     PrintTaskOptionDetails,
     IPrintCustomOptionDetails,
+    ImplementsIPrintCustomOptionDetails,
     IPrintItemListOptionDetails,
+    ImplementsIPrintItemListOptionDetails,
     IPrintNumberOptionDetails,
+    ImplementsIPrintNumberOptionDetails,
     IPrintOptionDetails,
+    ImplementsIPrintOptionDetails,
     IPrintTextOptionDetails,
+    ImplementsIPrintTextOptionDetails,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_graphics_printing_optiondetails import (
-        ImplementsIPrintCustomOptionDetails,
-        ImplementsIPrintItemListOptionDetails,
-        ImplementsIPrintNumberOptionDetails,
-        ImplementsIPrintOptionDetails,
-        ImplementsIPrintTextOptionDetails,
-    )
 
 __all__ = [
     "PrintOptionStates",
@@ -62,10 +58,15 @@ __all__ = [
     "PrintTaskOptionChangedEventArgs",
     "PrintTaskOptionDetails",
     "IPrintCustomOptionDetails",
+    "ImplementsIPrintCustomOptionDetails",
     "IPrintItemListOptionDetails",
+    "ImplementsIPrintItemListOptionDetails",
     "IPrintNumberOptionDetails",
+    "ImplementsIPrintNumberOptionDetails",
     "IPrintOptionDetails",
+    "ImplementsIPrintOptionDetails",
     "IPrintTextOptionDetails",
+    "ImplementsIPrintTextOptionDetails",
 ]
 
 class PrintOptionStates(enum.IntFlag):

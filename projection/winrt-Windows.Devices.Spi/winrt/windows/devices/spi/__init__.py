@@ -9,12 +9,8 @@ from winrt._winrt_windows_devices_spi import (
     SpiController,
     SpiDevice,
     ISpiDeviceStatics,
+    ImplementsISpiDeviceStatics,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_spi import (
-        ImplementsISpiDeviceStatics,
-    )
 
 __all__ = [
     "SpiMode",
@@ -24,6 +20,7 @@ __all__ = [
     "SpiController",
     "SpiDevice",
     "ISpiDeviceStatics",
+    "ImplementsISpiDeviceStatics",
 ]
 
 class SpiMode(enum.IntEnum):

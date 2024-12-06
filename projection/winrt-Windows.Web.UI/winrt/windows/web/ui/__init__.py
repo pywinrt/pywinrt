@@ -19,14 +19,10 @@ from winrt._winrt_windows_web_ui import (
     WebViewControlUnviewableContentIdentifiedEventArgs,
     WebViewControlWebResourceRequestedEventArgs,
     IWebViewControl,
+    ImplementsIWebViewControl,
     IWebViewControl2,
+    ImplementsIWebViewControl2,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_web_ui import (
-        ImplementsIWebViewControl,
-        ImplementsIWebViewControl2,
-    )
 
 __all__ = [
     "WebViewControlPermissionState",
@@ -46,7 +42,9 @@ __all__ = [
     "WebViewControlUnviewableContentIdentifiedEventArgs",
     "WebViewControlWebResourceRequestedEventArgs",
     "IWebViewControl",
+    "ImplementsIWebViewControl",
     "IWebViewControl2",
+    "ImplementsIWebViewControl2",
 ]
 
 class WebViewControlPermissionState(enum.IntEnum):

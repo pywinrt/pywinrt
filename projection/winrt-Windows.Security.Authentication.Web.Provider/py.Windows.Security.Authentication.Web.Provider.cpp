@@ -3682,6 +3682,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderBaseReportOperation};
 
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderBaseReportOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderBaseReportOperation = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderBaseReportOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderBaseReportOperation};
+
     // ----- IWebAccountProviderOperation interface --------------------
 
     static PyObject* _new_IWebAccountProviderOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3774,6 +3785,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderOperation};
+
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderOperation = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderOperation};
 
     // ----- IWebAccountProviderSilentReportOperation interface --------------------
 
@@ -3997,6 +4019,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderSilentReportOperation};
 
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderSilentReportOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderSilentReportOperation = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderSilentReportOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderSilentReportOperation};
+
     // ----- IWebAccountProviderTokenObjects interface --------------------
 
     static PyObject* _new_IWebAccountProviderTokenObjects(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4089,6 +4122,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenObjects};
+
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderTokenObjects};
 
     // ----- IWebAccountProviderTokenObjects2 interface --------------------
 
@@ -4209,6 +4253,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenObjects2};
+
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects2 = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderTokenObjects2};
 
     // ----- IWebAccountProviderTokenOperation interface --------------------
 
@@ -4419,6 +4474,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenOperation};
 
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenOperation = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderTokenOperation};
+
     // ----- IWebAccountProviderUIReportOperation interface --------------------
 
     static PyObject* _new_IWebAccountProviderUIReportOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4601,6 +4667,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderUIReportOperation};
 
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderUIReportOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderUIReportOperation = {
+        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderUIReportOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderUIReportOperation};
+
     // ----- Windows.Security.Authentication.Web.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Security.Authentication.Web.Provider");
@@ -4730,8 +4807,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebAccountProviderBaseReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderBaseReportOperation, nullptr))};
+    if (!ImplementsIWebAccountProviderBaseReportOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderBaseReportOperation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr)};
     if (!IWebAccountProviderOperation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebAccountProviderOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderOperation, nullptr))};
+    if (!ImplementsIWebAccountProviderOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderOperation_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4742,8 +4841,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebAccountProviderSilentReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderSilentReportOperation, nullptr))};
+    if (!ImplementsIWebAccountProviderSilentReportOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderSilentReportOperation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAccountProviderTokenObjects_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr)};
     if (!IWebAccountProviderTokenObjects_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebAccountProviderTokenObjects_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects, nullptr))};
+    if (!ImplementsIWebAccountProviderTokenObjects_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderTokenObjects_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4754,14 +4875,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebAccountProviderTokenObjects2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects2, nullptr))};
+    if (!ImplementsIWebAccountProviderTokenObjects2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderTokenObjects2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAccountProviderTokenOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr)};
     if (!IWebAccountProviderTokenOperation_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebAccountProviderTokenOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenOperation, nullptr))};
+    if (!ImplementsIWebAccountProviderTokenOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderTokenOperation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAccountProviderUIReportOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr)};
     if (!IWebAccountProviderUIReportOperation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebAccountProviderUIReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderUIReportOperation, nullptr))};
+    if (!ImplementsIWebAccountProviderUIReportOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderUIReportOperation_type.get()) == -1)
     {
         return nullptr;
     }

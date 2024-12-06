@@ -12,14 +12,10 @@ from winrt._winrt_microsoft_windows_applicationmodel_resources import (
     ResourceMap,
     ResourceNotFoundEventArgs,
     IResourceContext,
+    ImplementsIResourceContext,
     IResourceManager,
+    ImplementsIResourceManager,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_windows_applicationmodel_resources import (
-        ImplementsIResourceContext,
-        ImplementsIResourceManager,
-    )
 
 __all__ = [
     "ResourceCandidateKind",
@@ -31,7 +27,9 @@ __all__ = [
     "ResourceMap",
     "ResourceNotFoundEventArgs",
     "IResourceContext",
+    "ImplementsIResourceContext",
     "IResourceManager",
+    "ImplementsIResourceManager",
 ]
 
 class ResourceCandidateKind(enum.IntEnum):

@@ -300,6 +300,11 @@ static class FileWriters
                 foreach (var type in dependencyModuleTypes)
                 {
                     w.WriteLine($"{type.Name},");
+
+                    if (type.Category == Category.Interface)
+                    {
+                        w.WriteLine($"Implements{type.Name},");
+                    }
                 }
 
                 w.Indent--;
@@ -329,24 +334,6 @@ static class FileWriters
                 w.WriteLine(")");
                 w.Indent--;
             }
-        }
-
-        if (members.Interfaces.Count != 0)
-        {
-            w.WriteLine("from typing import TYPE_CHECKING");
-            w.WriteLine("if TYPE_CHECKING:");
-            w.Indent++;
-            w.WriteLine($"from winrt.{ns.ToNsModuleName()} import (");
-            w.Indent++;
-
-            foreach (var type in members.Interfaces)
-            {
-                w.WriteLine($"Implements{type.Name},");
-            }
-
-            w.Indent--;
-            w.WriteLine(")");
-            w.Indent--;
         }
 
         // Since not all packages may be installed, delegates can't safely
@@ -403,6 +390,11 @@ static class FileWriters
         foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
         {
             w.WriteLine($"\"{type.Name}\",");
+
+            if (type.Category == Category.Interface)
+            {
+                w.WriteLine($"\"Implements{type.Name}\",");
+            }
         }
 
         w.Indent--;
@@ -667,6 +659,13 @@ static class FileWriters
             }
 
             w.WriteInspectableType(t, componentDlls, moduleSuffix);
+
+            if (t.Category == Category.Interface)
+            {
+                w.WriteBlankLine();
+                w.WriteImplementsInterfaceImpl(t, moduleSuffix);
+            }
+
             didWriteClass = true;
         }
 

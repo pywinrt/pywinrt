@@ -3,17 +3,15 @@
 import winrt.system
 from winrt._winrt_windows_graphics_effects import (
     IGraphicsEffect,
+    ImplementsIGraphicsEffect,
     IGraphicsEffectSource,
+    ImplementsIGraphicsEffectSource,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_graphics_effects import (
-        ImplementsIGraphicsEffect,
-        ImplementsIGraphicsEffectSource,
-    )
 
 __all__ = [
     "IGraphicsEffect",
+    "ImplementsIGraphicsEffect",
     "IGraphicsEffectSource",
+    "ImplementsIGraphicsEffectSource",
 ]
 

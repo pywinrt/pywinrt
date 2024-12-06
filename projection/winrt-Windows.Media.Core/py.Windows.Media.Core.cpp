@@ -22503,6 +22503,17 @@ namespace py::cpp::Windows::Media::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaCue};
 
+    static PyType_Slot type_slots_ImplementsIMediaCue[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaCue = {
+        "winrt._winrt_windows_media_core.ImplementsIMediaCue",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaCue};
+
     // ----- IMediaSource interface --------------------
 
     static PyObject* _new_IMediaSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22568,6 +22579,17 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaSource};
+
+    static PyType_Slot type_slots_ImplementsIMediaSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaSource = {
+        "winrt._winrt_windows_media_core.ImplementsIMediaSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaSource};
 
     // ----- IMediaStreamDescriptor interface --------------------
 
@@ -22785,6 +22807,17 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaStreamDescriptor};
+
+    static PyType_Slot type_slots_ImplementsIMediaStreamDescriptor[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor = {
+        "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaStreamDescriptor};
 
     // ----- IMediaStreamDescriptor2 interface --------------------
 
@@ -23065,6 +23098,17 @@ namespace py::cpp::Windows::Media::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaStreamDescriptor2};
 
+    static PyType_Slot type_slots_ImplementsIMediaStreamDescriptor2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor2 = {
+        "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaStreamDescriptor2};
+
     // ----- IMediaTrack interface --------------------
 
     static PyObject* _new_IMediaTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -23274,6 +23318,17 @@ namespace py::cpp::Windows::Media::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaTrack};
 
+    static PyType_Slot type_slots_ImplementsIMediaTrack[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaTrack = {
+        "winrt._winrt_windows_media_core.ImplementsIMediaTrack",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaTrack};
+
     // ----- ISingleSelectMediaTrackList interface --------------------
 
     static PyObject* _new_ISingleSelectMediaTrackList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -23461,6 +23516,17 @@ namespace py::cpp::Windows::Media::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISingleSelectMediaTrackList};
 
+    static PyType_Slot type_slots_ImplementsISingleSelectMediaTrackList[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISingleSelectMediaTrackList = {
+        "winrt._winrt_windows_media_core.ImplementsISingleSelectMediaTrackList",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISingleSelectMediaTrackList};
+
     // ----- ITimedMetadataTrackProvider interface --------------------
 
     static PyObject* _new_ITimedMetadataTrackProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -23553,6 +23619,17 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITimedMetadataTrackProvider};
+
+    static PyType_Slot type_slots_ImplementsITimedMetadataTrackProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsITimedMetadataTrackProvider = {
+        "winrt._winrt_windows_media_core.ImplementsITimedMetadataTrackProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsITimedMetadataTrackProvider};
 
     // ----- MseTimeRange struct --------------------
 
@@ -25347,8 +25424,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaCue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaCue, nullptr))};
+    if (!ImplementsIMediaCue_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaCue_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaSource_type{py::register_python_type(module.get(), &type_spec_IMediaSource, object_bases.get(), nullptr)};
     if (!IMediaSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaSource, nullptr))};
+    if (!ImplementsIMediaSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaSource_type.get()) == -1)
     {
         return nullptr;
     }
@@ -25359,8 +25458,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaStreamDescriptor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaStreamDescriptor, nullptr))};
+    if (!ImplementsIMediaStreamDescriptor_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaStreamDescriptor_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaStreamDescriptor2_type{py::register_python_type(module.get(), &type_spec_IMediaStreamDescriptor2, object_bases.get(), nullptr)};
     if (!IMediaStreamDescriptor2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaStreamDescriptor2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaStreamDescriptor2, nullptr))};
+    if (!ImplementsIMediaStreamDescriptor2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaStreamDescriptor2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -25371,14 +25492,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaTrack_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaTrack, nullptr))};
+    if (!ImplementsIMediaTrack_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaTrack_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISingleSelectMediaTrackList_type{py::register_python_type(module.get(), &type_spec_ISingleSelectMediaTrackList, object_bases.get(), nullptr)};
     if (!ISingleSelectMediaTrackList_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISingleSelectMediaTrackList_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISingleSelectMediaTrackList, nullptr))};
+    if (!ImplementsISingleSelectMediaTrackList_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISingleSelectMediaTrackList_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ITimedMetadataTrackProvider_type{py::register_python_type(module.get(), &type_spec_ITimedMetadataTrackProvider, object_bases.get(), nullptr)};
     if (!ITimedMetadataTrackProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsITimedMetadataTrackProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITimedMetadataTrackProvider, nullptr))};
+    if (!ImplementsITimedMetadataTrackProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsITimedMetadataTrackProvider_type.get()) == -1)
     {
         return nullptr;
     }

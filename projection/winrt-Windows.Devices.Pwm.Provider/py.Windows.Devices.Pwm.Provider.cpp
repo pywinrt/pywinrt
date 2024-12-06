@@ -419,6 +419,17 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPwmControllerProvider};
 
+    static PyType_Slot type_slots_ImplementsIPwmControllerProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPwmControllerProvider = {
+        "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmControllerProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPwmControllerProvider};
+
     // ----- IPwmProvider interface --------------------
 
     static PyObject* _new_IPwmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -522,6 +533,17 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPwmProvider};
 
+    static PyType_Slot type_slots_ImplementsIPwmProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPwmProvider = {
+        "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPwmProvider};
+
     // ----- Windows.Devices.Pwm.Provider Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Pwm.Provider");
@@ -573,8 +595,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPwmControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPwmControllerProvider, nullptr))};
+    if (!ImplementsIPwmControllerProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPwmControllerProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPwmProvider_type{py::register_python_type(module.get(), &type_spec_IPwmProvider, object_bases.get(), nullptr)};
     if (!IPwmProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPwmProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPwmProvider, nullptr))};
+    if (!ImplementsIPwmProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPwmProvider_type.get()) == -1)
     {
         return nullptr;
     }

@@ -16,14 +16,10 @@ from winrt._winrt_windows_devices_perception_provider import (
     PerceptionPropertyChangeRequest,
     PerceptionVideoFrameAllocator,
     IPerceptionFrameProvider,
+    ImplementsIPerceptionFrameProvider,
     IPerceptionFrameProviderManager,
+    ImplementsIPerceptionFrameProviderManager,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_perception_provider import (
-        ImplementsIPerceptionFrameProvider,
-        ImplementsIPerceptionFrameProviderManager,
-    )
 
 __all__ = [
     "KnownPerceptionFrameKind",
@@ -37,7 +33,9 @@ __all__ = [
     "PerceptionPropertyChangeRequest",
     "PerceptionVideoFrameAllocator",
     "IPerceptionFrameProvider",
+    "ImplementsIPerceptionFrameProvider",
     "IPerceptionFrameProviderManager",
+    "ImplementsIPerceptionFrameProviderManager",
     "PerceptionStartFaceAuthenticationHandler",
     "PerceptionStopFaceAuthenticationHandler",
 ]

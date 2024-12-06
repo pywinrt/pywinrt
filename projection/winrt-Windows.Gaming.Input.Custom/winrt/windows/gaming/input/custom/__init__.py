@@ -12,22 +12,18 @@ from winrt._winrt_windows_gaming_input_custom import (
     HidGameControllerProvider,
     XusbGameControllerProvider,
     ICustomGameControllerFactory,
+    ImplementsICustomGameControllerFactory,
     IGameControllerInputSink,
+    ImplementsIGameControllerInputSink,
     IGameControllerProvider,
+    ImplementsIGameControllerProvider,
     IGipGameControllerInputSink,
+    ImplementsIGipGameControllerInputSink,
     IHidGameControllerInputSink,
+    ImplementsIHidGameControllerInputSink,
     IXusbGameControllerInputSink,
+    ImplementsIXusbGameControllerInputSink,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_gaming_input_custom import (
-        ImplementsICustomGameControllerFactory,
-        ImplementsIGameControllerInputSink,
-        ImplementsIGameControllerProvider,
-        ImplementsIGipGameControllerInputSink,
-        ImplementsIHidGameControllerInputSink,
-        ImplementsIXusbGameControllerInputSink,
-    )
 
 __all__ = [
     "GipFirmwareUpdateStatus",
@@ -42,11 +38,17 @@ __all__ = [
     "HidGameControllerProvider",
     "XusbGameControllerProvider",
     "ICustomGameControllerFactory",
+    "ImplementsICustomGameControllerFactory",
     "IGameControllerInputSink",
+    "ImplementsIGameControllerInputSink",
     "IGameControllerProvider",
+    "ImplementsIGameControllerProvider",
     "IGipGameControllerInputSink",
+    "ImplementsIGipGameControllerInputSink",
     "IHidGameControllerInputSink",
+    "ImplementsIHidGameControllerInputSink",
     "IXusbGameControllerInputSink",
+    "ImplementsIXusbGameControllerInputSink",
 ]
 
 class GipFirmwareUpdateStatus(enum.IntEnum):

@@ -19,16 +19,12 @@ from winrt._winrt_windows_web_syndication import (
     SyndicationPerson,
     SyndicationText,
     ISyndicationClient,
+    ImplementsISyndicationClient,
     ISyndicationNode,
+    ImplementsISyndicationNode,
     ISyndicationText,
+    ImplementsISyndicationText,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_web_syndication import (
-        ImplementsISyndicationClient,
-        ImplementsISyndicationNode,
-        ImplementsISyndicationText,
-    )
 
 __all__ = [
     "SyndicationErrorStatus",
@@ -49,8 +45,11 @@ __all__ = [
     "SyndicationPerson",
     "SyndicationText",
     "ISyndicationClient",
+    "ImplementsISyndicationClient",
     "ISyndicationNode",
+    "ImplementsISyndicationNode",
     "ISyndicationText",
+    "ImplementsISyndicationText",
 ]
 
 class SyndicationErrorStatus(enum.IntEnum):

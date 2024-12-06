@@ -3,17 +3,15 @@
 import winrt.system
 from winrt._winrt_windows_devices_pwm_provider import (
     IPwmControllerProvider,
+    ImplementsIPwmControllerProvider,
     IPwmProvider,
+    ImplementsIPwmProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_pwm_provider import (
-        ImplementsIPwmControllerProvider,
-        ImplementsIPwmProvider,
-    )
 
 __all__ = [
     "IPwmControllerProvider",
+    "ImplementsIPwmControllerProvider",
     "IPwmProvider",
+    "ImplementsIPwmProvider",
 ]
 

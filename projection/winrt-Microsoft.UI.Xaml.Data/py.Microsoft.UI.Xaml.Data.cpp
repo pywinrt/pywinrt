@@ -4245,6 +4245,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICollectionView};
 
+    static PyType_Slot type_slots_ImplementsICollectionView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICollectionView = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsICollectionView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICollectionView};
+
     // ----- ICollectionViewFactory interface --------------------
 
     static PyObject* _new_ICollectionViewFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4347,6 +4358,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICollectionViewFactory};
+
+    static PyType_Slot type_slots_ImplementsICollectionViewFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICollectionViewFactory = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsICollectionViewFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICollectionViewFactory};
 
     // ----- ICollectionViewGroup interface --------------------
 
@@ -4467,6 +4489,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICollectionViewGroup};
+
+    static PyType_Slot type_slots_ImplementsICollectionViewGroup[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICollectionViewGroup = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsICollectionViewGroup",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICollectionViewGroup};
 
     // ----- ICustomProperty interface --------------------
 
@@ -4804,6 +4837,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICustomProperty};
 
+    static PyType_Slot type_slots_ImplementsICustomProperty[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICustomProperty = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsICustomProperty",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICustomProperty};
+
     // ----- ICustomPropertyProvider interface --------------------
 
     static PyObject* _new_ICustomPropertyProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5013,6 +5057,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICustomPropertyProvider};
 
+    static PyType_Slot type_slots_ImplementsICustomPropertyProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICustomPropertyProvider = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsICustomPropertyProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICustomPropertyProvider};
+
     // ----- IItemsRangeInfo interface --------------------
 
     static PyObject* _new_IItemsRangeInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5178,6 +5233,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IItemsRangeInfo};
+
+    static PyType_Slot type_slots_ImplementsIItemsRangeInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIItemsRangeInfo = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsIItemsRangeInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIItemsRangeInfo};
 
     // ----- INotifyDataErrorInfo interface --------------------
 
@@ -5370,6 +5436,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         Py_TPFLAGS_DEFAULT,
         _type_slots_INotifyDataErrorInfo};
 
+    static PyType_Slot type_slots_ImplementsINotifyDataErrorInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINotifyDataErrorInfo = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsINotifyDataErrorInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINotifyDataErrorInfo};
+
     // ----- INotifyPropertyChanged interface --------------------
 
     static PyObject* _new_INotifyPropertyChanged(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5494,6 +5571,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INotifyPropertyChanged};
+
+    static PyType_Slot type_slots_ImplementsINotifyPropertyChanged[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINotifyPropertyChanged = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsINotifyPropertyChanged",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINotifyPropertyChanged};
 
     // ----- ISelectionInfo interface --------------------
 
@@ -5717,6 +5805,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISelectionInfo};
 
+    static PyType_Slot type_slots_ImplementsISelectionInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISelectionInfo = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsISelectionInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISelectionInfo};
+
     // ----- ISupportIncrementalLoading interface --------------------
 
     static PyObject* _new_ISupportIncrementalLoading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5848,6 +5947,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISupportIncrementalLoading};
+
+    static PyType_Slot type_slots_ImplementsISupportIncrementalLoading[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISupportIncrementalLoading = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsISupportIncrementalLoading",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISupportIncrementalLoading};
 
     // ----- IValueConverter interface --------------------
 
@@ -5998,6 +6108,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IValueConverter};
+
+    static PyType_Slot type_slots_ImplementsIValueConverter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIValueConverter = {
+        "winrt._winrt_microsoft_ui_xaml_data.ImplementsIValueConverter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIValueConverter};
 
     // ----- LoadMoreItemsResult struct --------------------
 
@@ -6420,8 +6541,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICollectionView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionView, nullptr))};
+    if (!ImplementsICollectionView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICollectionView_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICollectionViewFactory_type{py::register_python_type(module.get(), &type_spec_ICollectionViewFactory, object_bases.get(), nullptr)};
     if (!ICollectionViewFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICollectionViewFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionViewFactory, nullptr))};
+    if (!ImplementsICollectionViewFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICollectionViewFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6432,8 +6575,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICollectionViewGroup_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionViewGroup, nullptr))};
+    if (!ImplementsICollectionViewGroup_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICollectionViewGroup_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICustomProperty_type{py::register_python_type(module.get(), &type_spec_ICustomProperty, object_bases.get(), nullptr)};
     if (!ICustomProperty_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICustomProperty_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomProperty, nullptr))};
+    if (!ImplementsICustomProperty_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICustomProperty_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6444,8 +6609,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICustomPropertyProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomPropertyProvider, nullptr))};
+    if (!ImplementsICustomPropertyProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICustomPropertyProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IItemsRangeInfo_type{py::register_python_type(module.get(), &type_spec_IItemsRangeInfo, object_bases.get(), nullptr)};
     if (!IItemsRangeInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIItemsRangeInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIItemsRangeInfo, nullptr))};
+    if (!ImplementsIItemsRangeInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIItemsRangeInfo_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6456,8 +6643,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINotifyDataErrorInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINotifyDataErrorInfo, nullptr))};
+    if (!ImplementsINotifyDataErrorInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINotifyDataErrorInfo_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INotifyPropertyChanged_type{py::register_python_type(module.get(), &type_spec_INotifyPropertyChanged, object_bases.get(), nullptr)};
     if (!INotifyPropertyChanged_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINotifyPropertyChanged_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINotifyPropertyChanged, nullptr))};
+    if (!ImplementsINotifyPropertyChanged_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINotifyPropertyChanged_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6468,14 +6677,47 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISelectionInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionInfo, nullptr))};
+    if (!ImplementsISelectionInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISelectionInfo_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISupportIncrementalLoading_type{py::register_python_type(module.get(), &type_spec_ISupportIncrementalLoading, object_bases.get(), nullptr)};
     if (!ISupportIncrementalLoading_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISupportIncrementalLoading_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISupportIncrementalLoading, nullptr))};
+    if (!ImplementsISupportIncrementalLoading_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISupportIncrementalLoading_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IValueConverter_type{py::register_python_type(module.get(), &type_spec_IValueConverter, object_bases.get(), nullptr)};
     if (!IValueConverter_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIValueConverter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIValueConverter, nullptr))};
+    if (!ImplementsIValueConverter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIValueConverter_type.get()) == -1)
     {
         return nullptr;
     }

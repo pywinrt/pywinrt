@@ -28134,6 +28134,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollSnapPointsInfo};
 
+    static PyType_Slot type_slots_ImplementsIScrollSnapPointsInfo[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIScrollSnapPointsInfo = {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIScrollSnapPointsInfo};
+
     // ----- GeneratorPosition struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>* _new_GeneratorPosition(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -29433,6 +29444,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
 
     py::pytype_handle IScrollSnapPointsInfo_type{py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr)};
     if (!IScrollSnapPointsInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIScrollSnapPointsInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollSnapPointsInfo, nullptr))};
+    if (!ImplementsIScrollSnapPointsInfo_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIScrollSnapPointsInfo_type.get()) == -1)
     {
         return nullptr;
     }

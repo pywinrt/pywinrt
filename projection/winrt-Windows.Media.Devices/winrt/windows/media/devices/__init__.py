@@ -53,14 +53,10 @@ from winrt._winrt_windows_media_devices import (
     ZoomControl,
     ZoomSettings,
     IDefaultAudioDeviceChangedEventArgs,
+    ImplementsIDefaultAudioDeviceChangedEventArgs,
     IMediaDeviceController,
+    ImplementsIMediaDeviceController,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_devices import (
-        ImplementsIDefaultAudioDeviceChangedEventArgs,
-        ImplementsIMediaDeviceController,
-    )
 
 __all__ = [
     "AdvancedPhotoMode",
@@ -136,7 +132,9 @@ __all__ = [
     "ZoomControl",
     "ZoomSettings",
     "IDefaultAudioDeviceChangedEventArgs",
+    "ImplementsIDefaultAudioDeviceChangedEventArgs",
     "IMediaDeviceController",
+    "ImplementsIMediaDeviceController",
     "CallControlEventHandler",
     "DialRequestedEventHandler",
     "KeypadPressedEventHandler",

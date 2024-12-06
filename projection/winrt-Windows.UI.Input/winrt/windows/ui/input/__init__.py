@@ -49,16 +49,12 @@ from winrt._winrt_windows_ui_input import (
     TouchpadGesturesController,
     TouchpadGlobalActionEventArgs,
     IPointerPointTransform,
+    ImplementsIPointerPointTransform,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_windows_ui_input import (
         AttachableInputObject_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_input import (
-        ImplementsIPointerPointTransform,
     )
 
 __all__ = [
@@ -119,6 +115,7 @@ __all__ = [
     "TouchpadGesturesController",
     "TouchpadGlobalActionEventArgs",
     "IPointerPointTransform",
+    "ImplementsIPointerPointTransform",
 ]
 
 class CrossSlidingState(enum.IntEnum):

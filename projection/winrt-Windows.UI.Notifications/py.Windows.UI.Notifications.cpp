@@ -10240,6 +10240,17 @@ namespace py::cpp::Windows::UI::Notifications
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdaptiveNotificationContent};
 
+    static PyType_Slot type_slots_ImplementsIAdaptiveNotificationContent[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAdaptiveNotificationContent = {
+        "winrt._winrt_windows_ui_notifications.ImplementsIAdaptiveNotificationContent",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAdaptiveNotificationContent};
+
     // ----- Windows.UI.Notifications Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Notifications");
@@ -10551,6 +10562,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
 
     py::pytype_handle IAdaptiveNotificationContent_type{py::register_python_type(module.get(), &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr)};
     if (!IAdaptiveNotificationContent_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAdaptiveNotificationContent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdaptiveNotificationContent, nullptr))};
+    if (!ImplementsIAdaptiveNotificationContent_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAdaptiveNotificationContent_type.get()) == -1)
     {
         return nullptr;
     }

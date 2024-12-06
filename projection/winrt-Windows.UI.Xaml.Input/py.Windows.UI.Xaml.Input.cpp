@@ -10777,6 +10777,17 @@ namespace py::cpp::Windows::UI::Xaml::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommand};
 
+    static PyType_Slot type_slots_ImplementsICommand[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICommand = {
+        "winrt._winrt_windows_ui_xaml_input.ImplementsICommand",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICommand};
+
     // ----- Windows.UI.Xaml.Input Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Input");
@@ -11262,6 +11273,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
 
     py::pytype_handle ICommand_type{py::register_python_type(module.get(), &type_spec_ICommand, object_bases.get(), nullptr)};
     if (!ICommand_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICommand_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommand, nullptr))};
+    if (!ImplementsICommand_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICommand_type.get()) == -1)
     {
         return nullptr;
     }

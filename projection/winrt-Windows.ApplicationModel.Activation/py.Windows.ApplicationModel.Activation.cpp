@@ -11184,6 +11184,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIActivatedEventArgs};
+
     // ----- IActivatedEventArgsWithUser interface --------------------
 
     static PyObject* _new_IActivatedEventArgsWithUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11357,6 +11368,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgsWithUser};
+
+    static PyType_Slot type_slots_ImplementsIActivatedEventArgsWithUser[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIActivatedEventArgsWithUser = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIActivatedEventArgsWithUser};
 
     // ----- IApplicationViewActivatedEventArgs interface --------------------
 
@@ -11532,6 +11554,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IApplicationViewActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIApplicationViewActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIApplicationViewActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIApplicationViewActivatedEventArgs};
+
     // ----- IAppointmentsProviderActivatedEventArgs interface --------------------
 
     static PyObject* _new_IAppointmentsProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11705,6 +11738,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderActivatedEventArgs};
 
     // ----- IAppointmentsProviderAddAppointmentActivatedEventArgs interface --------------------
 
@@ -11907,6 +11951,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs};
+
     // ----- IAppointmentsProviderRemoveAppointmentActivatedEventArgs interface --------------------
 
     static PyObject* _new_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12108,6 +12163,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs};
+
     // ----- IAppointmentsProviderReplaceAppointmentActivatedEventArgs interface --------------------
 
     static PyObject* _new_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12308,6 +12374,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs interface --------------------
 
@@ -12564,6 +12641,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
+
     // ----- IAppointmentsProviderShowTimeFrameActivatedEventArgs interface --------------------
 
     static PyObject* _new_IAppointmentsProviderShowTimeFrameActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12792,6 +12880,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs};
+
     // ----- IBackgroundActivatedEventArgs interface --------------------
 
     static PyObject* _new_IBackgroundActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12884,6 +12983,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIBackgroundActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundActivatedEventArgs};
 
     // ----- IBarcodeScannerPreviewActivatedEventArgs interface --------------------
 
@@ -13059,6 +13169,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBarcodeScannerPreviewActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBarcodeScannerPreviewActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIBarcodeScannerPreviewActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBarcodeScannerPreviewActivatedEventArgs};
+
     // ----- ICachedFileUpdaterActivatedEventArgs interface --------------------
 
     static PyObject* _new_ICachedFileUpdaterActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13232,6 +13353,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICachedFileUpdaterActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICachedFileUpdaterActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsICachedFileUpdaterActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICachedFileUpdaterActivatedEventArgs};
 
     // ----- ICameraSettingsActivatedEventArgs interface --------------------
 
@@ -13434,6 +13566,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICameraSettingsActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsICameraSettingsActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICameraSettingsActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsICameraSettingsActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICameraSettingsActivatedEventArgs};
+
     // ----- ICommandLineActivatedEventArgs interface --------------------
 
     static PyObject* _new_ICommandLineActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13608,6 +13751,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommandLineActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsICommandLineActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICommandLineActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsICommandLineActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICommandLineActivatedEventArgs};
+
     // ----- IContactActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContactActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13781,6 +13935,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIContactActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactActivatedEventArgs};
 
     // ----- IContactCallActivatedEventArgs interface --------------------
 
@@ -14037,6 +14202,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactCallActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIContactCallActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactCallActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactCallActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactCallActivatedEventArgs};
+
     // ----- IContactMapActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContactMapActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14264,6 +14440,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactMapActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIContactMapActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactMapActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactMapActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactMapActivatedEventArgs};
 
     // ----- IContactMessageActivatedEventArgs interface --------------------
 
@@ -14520,6 +14707,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactMessageActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIContactMessageActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactMessageActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactMessageActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactMessageActivatedEventArgs};
+
     // ----- IContactPanelActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContactPanelActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14639,6 +14837,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPanelActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIContactPanelActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactPanelActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPanelActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactPanelActivatedEventArgs};
 
     // ----- IContactPickerActivatedEventArgs interface --------------------
 
@@ -14813,6 +15022,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPickerActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIContactPickerActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactPickerActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPickerActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactPickerActivatedEventArgs};
 
     // ----- IContactPostActivatedEventArgs interface --------------------
 
@@ -15069,6 +15289,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPostActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIContactPostActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactPostActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPostActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactPostActivatedEventArgs};
+
     // ----- IContactVideoCallActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContactVideoCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15324,6 +15555,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactVideoCallActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIContactVideoCallActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactVideoCallActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactVideoCallActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactVideoCallActivatedEventArgs};
+
     // ----- IContactsProviderActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContactsProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15498,6 +15740,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactsProviderActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIContactsProviderActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactsProviderActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactsProviderActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactsProviderActivatedEventArgs};
+
     // ----- IContinuationActivatedEventArgs interface --------------------
 
     static PyObject* _new_IContinuationActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15671,6 +15924,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContinuationActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIContinuationActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContinuationActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContinuationActivatedEventArgs};
 
     // ----- IDeviceActivatedEventArgs interface --------------------
 
@@ -15873,6 +16137,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDeviceActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIDeviceActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDeviceActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIDeviceActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDeviceActivatedEventArgs};
+
     // ----- IDevicePairingActivatedEventArgs interface --------------------
 
     static PyObject* _new_IDevicePairingActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16046,6 +16321,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDevicePairingActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIDevicePairingActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDevicePairingActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIDevicePairingActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDevicePairingActivatedEventArgs};
 
     // ----- IDialReceiverActivatedEventArgs interface --------------------
 
@@ -16275,6 +16561,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDialReceiverActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIDialReceiverActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDialReceiverActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIDialReceiverActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDialReceiverActivatedEventArgs};
+
     // ----- IFileActivatedEventArgs interface --------------------
 
     static PyObject* _new_IFileActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16476,6 +16773,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFileActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileActivatedEventArgs};
+
     // ----- IFileActivatedEventArgsWithCallerPackageFamilyName interface --------------------
 
     static PyObject* _new_IFileActivatedEventArgsWithCallerPackageFamilyName(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16649,6 +16957,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName};
+
+    static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName};
 
     // ----- IFileActivatedEventArgsWithNeighboringFiles interface --------------------
 
@@ -16878,6 +17197,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgsWithNeighboringFiles};
 
+    static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileActivatedEventArgsWithNeighboringFiles = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgsWithNeighboringFiles",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileActivatedEventArgsWithNeighboringFiles};
+
     // ----- IFileOpenPickerActivatedEventArgs interface --------------------
 
     static PyObject* _new_IFileOpenPickerActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17052,6 +17382,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileOpenPickerActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileOpenPickerActivatedEventArgs};
+
     // ----- IFileOpenPickerActivatedEventArgs2 interface --------------------
 
     static PyObject* _new_IFileOpenPickerActivatedEventArgs2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17144,6 +17485,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerActivatedEventArgs2};
+
+    static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileOpenPickerActivatedEventArgs2 = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileOpenPickerActivatedEventArgs2};
 
     // ----- IFileOpenPickerContinuationEventArgs interface --------------------
 
@@ -17346,6 +17698,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerContinuationEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFileOpenPickerContinuationEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileOpenPickerContinuationEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerContinuationEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileOpenPickerContinuationEventArgs};
+
     // ----- IFileSavePickerActivatedEventArgs interface --------------------
 
     static PyObject* _new_IFileSavePickerActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17520,6 +17883,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileSavePickerActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileSavePickerActivatedEventArgs};
+
     // ----- IFileSavePickerActivatedEventArgs2 interface --------------------
 
     static PyObject* _new_IFileSavePickerActivatedEventArgs2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17639,6 +18013,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerActivatedEventArgs2};
+
+    static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileSavePickerActivatedEventArgs2 = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileSavePickerActivatedEventArgs2};
 
     // ----- IFileSavePickerContinuationEventArgs interface --------------------
 
@@ -17841,6 +18226,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerContinuationEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFileSavePickerContinuationEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFileSavePickerContinuationEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerContinuationEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFileSavePickerContinuationEventArgs};
+
     // ----- IFolderPickerContinuationEventArgs interface --------------------
 
     static PyObject* _new_IFolderPickerContinuationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18042,6 +18438,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFolderPickerContinuationEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIFolderPickerContinuationEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIFolderPickerContinuationEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIFolderPickerContinuationEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIFolderPickerContinuationEventArgs};
+
     // ----- ILaunchActivatedEventArgs interface --------------------
 
     static PyObject* _new_ILaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18242,6 +18649,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILaunchActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILaunchActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILaunchActivatedEventArgs};
 
     // ----- ILaunchActivatedEventArgs2 interface --------------------
 
@@ -18471,6 +18889,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILaunchActivatedEventArgs2};
 
+    static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILaunchActivatedEventArgs2 = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILaunchActivatedEventArgs2};
+
     // ----- ILockScreenActivatedEventArgs interface --------------------
 
     static PyObject* _new_ILockScreenActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18644,6 +19073,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILockScreenActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsILockScreenActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILockScreenActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsILockScreenActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILockScreenActivatedEventArgs};
 
     // ----- ILockScreenCallActivatedEventArgs interface --------------------
 
@@ -18873,6 +19313,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILockScreenCallActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsILockScreenCallActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsILockScreenCallActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsILockScreenCallActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsILockScreenCallActivatedEventArgs};
+
     // ----- IPhoneCallActivatedEventArgs interface --------------------
 
     static PyObject* _new_IPhoneCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19046,6 +19497,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPhoneCallActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIPhoneCallActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPhoneCallActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIPhoneCallActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPhoneCallActivatedEventArgs};
 
     // ----- IPickerReturnedActivatedEventArgs interface --------------------
 
@@ -19221,6 +19683,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPickerReturnedActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIPickerReturnedActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPickerReturnedActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIPickerReturnedActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPickerReturnedActivatedEventArgs};
+
     // ----- IPrelaunchActivatedEventArgs interface --------------------
 
     static PyObject* _new_IPrelaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19394,6 +19867,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrelaunchActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIPrelaunchActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrelaunchActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrelaunchActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrelaunchActivatedEventArgs};
 
     // ----- IPrint3DWorkflowActivatedEventArgs interface --------------------
 
@@ -19569,6 +20053,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrint3DWorkflowActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrint3DWorkflowActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrint3DWorkflowActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrint3DWorkflowActivatedEventArgs};
+
     // ----- IPrintTaskSettingsActivatedEventArgs interface --------------------
 
     static PyObject* _new_IPrintTaskSettingsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19743,6 +20238,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTaskSettingsActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPrintTaskSettingsActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrintTaskSettingsActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPrintTaskSettingsActivatedEventArgs};
+
     // ----- IProtocolActivatedEventArgs interface --------------------
 
     static PyObject* _new_IProtocolActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19916,6 +20422,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIProtocolActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIProtocolActivatedEventArgs};
 
     // ----- IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData interface --------------------
 
@@ -20118,6 +20635,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
 
+    static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
+
     // ----- IProtocolForResultsActivatedEventArgs interface --------------------
 
     static PyObject* _new_IProtocolForResultsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -20292,6 +20820,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolForResultsActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIProtocolForResultsActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIProtocolForResultsActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolForResultsActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIProtocolForResultsActivatedEventArgs};
+
     // ----- IRestrictedLaunchActivatedEventArgs interface --------------------
 
     static PyObject* _new_IRestrictedLaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -20465,6 +21004,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRestrictedLaunchActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIRestrictedLaunchActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIRestrictedLaunchActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIRestrictedLaunchActivatedEventArgs};
 
     // ----- ISearchActivatedEventArgs interface --------------------
 
@@ -20667,6 +21217,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsISearchActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISearchActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsISearchActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISearchActivatedEventArgs};
+
     // ----- ISearchActivatedEventArgsWithLinguisticDetails interface --------------------
 
     static PyObject* _new_ISearchActivatedEventArgsWithLinguisticDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -20759,6 +21320,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchActivatedEventArgsWithLinguisticDetails};
+
+    static PyType_Slot type_slots_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISearchActivatedEventArgsWithLinguisticDetails = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsISearchActivatedEventArgsWithLinguisticDetails",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISearchActivatedEventArgsWithLinguisticDetails};
 
     // ----- IShareTargetActivatedEventArgs interface --------------------
 
@@ -20934,6 +21506,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IShareTargetActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIShareTargetActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIShareTargetActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIShareTargetActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIShareTargetActivatedEventArgs};
+
     // ----- IStartupTaskActivatedEventArgs interface --------------------
 
     static PyObject* _new_IStartupTaskActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -21107,6 +21690,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStartupTaskActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIStartupTaskActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIStartupTaskActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIStartupTaskActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIStartupTaskActivatedEventArgs};
 
     // ----- IToastNotificationActivatedEventArgs interface --------------------
 
@@ -21309,6 +21903,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IToastNotificationActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIToastNotificationActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIToastNotificationActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIToastNotificationActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIToastNotificationActivatedEventArgs};
+
     // ----- IUserDataAccountProviderActivatedEventArgs interface --------------------
 
     static PyObject* _new_IUserDataAccountProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -21482,6 +22087,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUserDataAccountProviderActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIUserDataAccountProviderActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIUserDataAccountProviderActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIUserDataAccountProviderActivatedEventArgs};
 
     // ----- IViewSwitcherProvider interface --------------------
 
@@ -21657,6 +22273,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IViewSwitcherProvider};
 
+    static PyType_Slot type_slots_ImplementsIViewSwitcherProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIViewSwitcherProvider = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIViewSwitcherProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIViewSwitcherProvider};
+
     // ----- IVoiceCommandActivatedEventArgs interface --------------------
 
     static PyObject* _new_IVoiceCommandActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -21830,6 +22457,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVoiceCommandActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIVoiceCommandActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVoiceCommandActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIVoiceCommandActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVoiceCommandActivatedEventArgs};
 
     // ----- IWalletActionActivatedEventArgs interface --------------------
 
@@ -22059,6 +22697,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWalletActionActivatedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIWalletActionActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWalletActionActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIWalletActionActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWalletActionActivatedEventArgs};
+
     // ----- IWebAccountProviderActivatedEventArgs interface --------------------
 
     static PyObject* _new_IWebAccountProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22232,6 +22881,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderActivatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIWebAccountProviderActivatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAccountProviderActivatedEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIWebAccountProviderActivatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAccountProviderActivatedEventArgs};
 
     // ----- IWebAuthenticationBrokerContinuationEventArgs interface --------------------
 
@@ -22433,6 +23093,17 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAuthenticationBrokerContinuationEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebAuthenticationBrokerContinuationEventArgs = {
+        "winrt._winrt_windows_applicationmodel_activation.ImplementsIWebAuthenticationBrokerContinuationEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebAuthenticationBrokerContinuationEventArgs};
 
     // ----- Windows.ApplicationModel.Activation Initialization --------------------
 
@@ -22779,8 +23450,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIActivatedEventArgs, nullptr))};
+    if (!ImplementsIActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IActivatedEventArgsWithUser_type{py::register_python_type(module.get(), &type_spec_IActivatedEventArgsWithUser, object_bases.get(), nullptr)};
     if (!IActivatedEventArgsWithUser_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIActivatedEventArgsWithUser_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIActivatedEventArgsWithUser, nullptr))};
+    if (!ImplementsIActivatedEventArgsWithUser_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIActivatedEventArgsWithUser_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22791,8 +23484,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIApplicationViewActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIApplicationViewActivatedEventArgs, nullptr))};
+    if (!ImplementsIApplicationViewActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIApplicationViewActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAppointmentsProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IAppointmentsProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAppointmentsProviderActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22803,8 +23518,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAppointmentsProviderRemoveAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IAppointmentsProviderRemoveAppointmentActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22815,8 +23552,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22827,8 +23586,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, nullptr))};
+    if (!ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IBackgroundActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IBackgroundActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundActivatedEventArgs, nullptr))};
+    if (!ImplementsIBackgroundActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22839,8 +23620,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBarcodeScannerPreviewActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBarcodeScannerPreviewActivatedEventArgs, nullptr))};
+    if (!ImplementsIBarcodeScannerPreviewActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBarcodeScannerPreviewActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICachedFileUpdaterActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr)};
     if (!ICachedFileUpdaterActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICachedFileUpdaterActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICachedFileUpdaterActivatedEventArgs, nullptr))};
+    if (!ImplementsICachedFileUpdaterActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICachedFileUpdaterActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22851,8 +23654,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICameraSettingsActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICameraSettingsActivatedEventArgs, nullptr))};
+    if (!ImplementsICameraSettingsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICameraSettingsActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICommandLineActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ICommandLineActivatedEventArgs, object_bases.get(), nullptr)};
     if (!ICommandLineActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICommandLineActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommandLineActivatedEventArgs, nullptr))};
+    if (!ImplementsICommandLineActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICommandLineActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22863,8 +23688,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactCallActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IContactCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactCallActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactCallActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactCallActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22875,8 +23722,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactMapActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactMapActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactMapActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactMapActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactMessageActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactMessageActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IContactMessageActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactMessageActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactMessageActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactMessageActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactMessageActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22887,8 +23756,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactPanelActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactPanelActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactPanelActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactPanelActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactPickerActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IContactPickerActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactPickerActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactPickerActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactPickerActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactPickerActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22899,8 +23790,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactPostActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactPostActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactPostActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactPostActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactVideoCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactVideoCallActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IContactVideoCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactVideoCallActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactVideoCallActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactVideoCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactVideoCallActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22911,8 +23824,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactsProviderActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactsProviderActivatedEventArgs, nullptr))};
+    if (!ImplementsIContactsProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactsProviderActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContinuationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContinuationActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IContinuationActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContinuationActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContinuationActivatedEventArgs, nullptr))};
+    if (!ImplementsIContinuationActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContinuationActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22923,8 +23858,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDeviceActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDeviceActivatedEventArgs, nullptr))};
+    if (!ImplementsIDeviceActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDeviceActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IDevicePairingActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IDevicePairingActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IDevicePairingActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDevicePairingActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDevicePairingActivatedEventArgs, nullptr))};
+    if (!ImplementsIDevicePairingActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDevicePairingActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22935,8 +23892,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDialReceiverActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDialReceiverActivatedEventArgs, nullptr))};
+    if (!ImplementsIDialReceiverActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDialReceiverActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IFileActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileActivatedEventArgs, nullptr))};
+    if (!ImplementsIFileActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22947,8 +23926,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, nullptr))};
+    if (!ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileActivatedEventArgsWithNeighboringFiles_type{py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgsWithNeighboringFiles, object_bases.get(), nullptr)};
     if (!IFileActivatedEventArgsWithNeighboringFiles_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileActivatedEventArgsWithNeighboringFiles_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileActivatedEventArgsWithNeighboringFiles, nullptr))};
+    if (!ImplementsIFileActivatedEventArgsWithNeighboringFiles_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileActivatedEventArgsWithNeighboringFiles_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22959,8 +23960,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFileOpenPickerActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileOpenPickerActivatedEventArgs, nullptr))};
+    if (!ImplementsIFileOpenPickerActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileOpenPickerActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileOpenPickerActivatedEventArgs2_type{py::register_python_type(module.get(), &type_spec_IFileOpenPickerActivatedEventArgs2, object_bases.get(), nullptr)};
     if (!IFileOpenPickerActivatedEventArgs2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileOpenPickerActivatedEventArgs2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileOpenPickerActivatedEventArgs2, nullptr))};
+    if (!ImplementsIFileOpenPickerActivatedEventArgs2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileOpenPickerActivatedEventArgs2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22971,8 +23994,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFileOpenPickerContinuationEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileOpenPickerContinuationEventArgs, nullptr))};
+    if (!ImplementsIFileOpenPickerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileOpenPickerContinuationEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileSavePickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileSavePickerActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IFileSavePickerActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileSavePickerActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileSavePickerActivatedEventArgs, nullptr))};
+    if (!ImplementsIFileSavePickerActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileSavePickerActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22983,8 +24028,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFileSavePickerActivatedEventArgs2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileSavePickerActivatedEventArgs2, nullptr))};
+    if (!ImplementsIFileSavePickerActivatedEventArgs2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileSavePickerActivatedEventArgs2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFileSavePickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileSavePickerContinuationEventArgs, object_bases.get(), nullptr)};
     if (!IFileSavePickerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFileSavePickerContinuationEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFileSavePickerContinuationEventArgs, nullptr))};
+    if (!ImplementsIFileSavePickerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFileSavePickerContinuationEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -22995,8 +24062,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIFolderPickerContinuationEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFolderPickerContinuationEventArgs, nullptr))};
+    if (!ImplementsIFolderPickerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFolderPickerContinuationEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ILaunchActivatedEventArgs, object_bases.get(), nullptr)};
     if (!ILaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILaunchActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILaunchActivatedEventArgs, nullptr))};
+    if (!ImplementsILaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILaunchActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23007,8 +24096,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILaunchActivatedEventArgs2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILaunchActivatedEventArgs2, nullptr))};
+    if (!ImplementsILaunchActivatedEventArgs2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILaunchActivatedEventArgs2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ILockScreenActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ILockScreenActivatedEventArgs, object_bases.get(), nullptr)};
     if (!ILockScreenActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsILockScreenActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILockScreenActivatedEventArgs, nullptr))};
+    if (!ImplementsILockScreenActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILockScreenActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23019,8 +24130,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsILockScreenCallActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILockScreenCallActivatedEventArgs, nullptr))};
+    if (!ImplementsILockScreenCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsILockScreenCallActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPhoneCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPhoneCallActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IPhoneCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPhoneCallActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPhoneCallActivatedEventArgs, nullptr))};
+    if (!ImplementsIPhoneCallActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPhoneCallActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23031,8 +24164,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPickerReturnedActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPickerReturnedActivatedEventArgs, nullptr))};
+    if (!ImplementsIPickerReturnedActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPickerReturnedActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrelaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPrelaunchActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IPrelaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrelaunchActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrelaunchActivatedEventArgs, nullptr))};
+    if (!ImplementsIPrelaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrelaunchActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23043,8 +24198,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPrint3DWorkflowActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrint3DWorkflowActivatedEventArgs, nullptr))};
+    if (!ImplementsIPrint3DWorkflowActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrint3DWorkflowActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IPrintTaskSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IPrintTaskSettingsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPrintTaskSettingsActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTaskSettingsActivatedEventArgs, nullptr))};
+    if (!ImplementsIPrintTaskSettingsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPrintTaskSettingsActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23055,8 +24232,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIProtocolActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIProtocolActivatedEventArgs, nullptr))};
+    if (!ImplementsIProtocolActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIProtocolActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type{py::register_python_type(module.get(), &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, object_bases.get(), nullptr)};
     if (!IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, nullptr))};
+    if (!ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23067,8 +24266,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIProtocolForResultsActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIProtocolForResultsActivatedEventArgs, nullptr))};
+    if (!ImplementsIProtocolForResultsActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIProtocolForResultsActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IRestrictedLaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IRestrictedLaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIRestrictedLaunchActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRestrictedLaunchActivatedEventArgs, nullptr))};
+    if (!ImplementsIRestrictedLaunchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIRestrictedLaunchActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23079,8 +24300,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISearchActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISearchActivatedEventArgs, nullptr))};
+    if (!ImplementsISearchActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISearchActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISearchActivatedEventArgsWithLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, object_bases.get(), nullptr)};
     if (!ISearchActivatedEventArgsWithLinguisticDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISearchActivatedEventArgsWithLinguisticDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISearchActivatedEventArgsWithLinguisticDetails, nullptr))};
+    if (!ImplementsISearchActivatedEventArgsWithLinguisticDetails_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISearchActivatedEventArgsWithLinguisticDetails_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23091,8 +24334,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIShareTargetActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIShareTargetActivatedEventArgs, nullptr))};
+    if (!ImplementsIShareTargetActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIShareTargetActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IStartupTaskActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IStartupTaskActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IStartupTaskActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStartupTaskActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStartupTaskActivatedEventArgs, nullptr))};
+    if (!ImplementsIStartupTaskActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStartupTaskActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23103,8 +24368,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIToastNotificationActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIToastNotificationActivatedEventArgs, nullptr))};
+    if (!ImplementsIToastNotificationActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIToastNotificationActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IUserDataAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IUserDataAccountProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIUserDataAccountProviderActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUserDataAccountProviderActivatedEventArgs, nullptr))};
+    if (!ImplementsIUserDataAccountProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIUserDataAccountProviderActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23115,8 +24402,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIViewSwitcherProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIViewSwitcherProvider, nullptr))};
+    if (!ImplementsIViewSwitcherProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIViewSwitcherProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVoiceCommandActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IVoiceCommandActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IVoiceCommandActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVoiceCommandActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVoiceCommandActivatedEventArgs, nullptr))};
+    if (!ImplementsIVoiceCommandActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVoiceCommandActivatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -23127,14 +24436,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWalletActionActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWalletActionActivatedEventArgs, nullptr))};
+    if (!ImplementsIWalletActionActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWalletActionActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
     if (!IWebAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebAccountProviderActivatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderActivatedEventArgs, nullptr))};
+    if (!ImplementsIWebAccountProviderActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAccountProviderActivatedEventArgs_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebAuthenticationBrokerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr)};
     if (!IWebAuthenticationBrokerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebAuthenticationBrokerContinuationEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAuthenticationBrokerContinuationEventArgs, nullptr))};
+    if (!ImplementsIWebAuthenticationBrokerContinuationEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebAuthenticationBrokerContinuationEventArgs_type.get()) == -1)
     {
         return nullptr;
     }

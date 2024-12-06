@@ -4285,6 +4285,17 @@ namespace py::cpp::Microsoft::UI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IClosableNotifier};
 
+    static PyType_Slot type_slots_ImplementsIClosableNotifier[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIClosableNotifier = {
+        "winrt._winrt_microsoft_ui.ImplementsIClosableNotifier",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIClosableNotifier};
+
     // ----- DisplayId struct --------------------
 
     winrt_struct_wrapper<winrt::Microsoft::UI::DisplayId>* _new_DisplayId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4872,6 +4883,17 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
 
     py::pytype_handle IClosableNotifier_type{py::register_python_type(module.get(), &type_spec_IClosableNotifier, object_bases.get(), nullptr)};
     if (!IClosableNotifier_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIClosableNotifier_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIClosableNotifier, nullptr))};
+    if (!ImplementsIClosableNotifier_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIClosableNotifier_type.get()) == -1)
     {
         return nullptr;
     }

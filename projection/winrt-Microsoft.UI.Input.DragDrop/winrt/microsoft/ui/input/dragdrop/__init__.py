@@ -10,12 +10,8 @@ from winrt._winrt_microsoft_ui_input_dragdrop import (
     DragUIOverride,
     DropOperationTargetRequestedEventArgs,
     IDropOperationTarget,
+    ImplementsIDropOperationTarget,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_input_dragdrop import (
-        ImplementsIDropOperationTarget,
-    )
 
 __all__ = [
     "DragDropModifiers",
@@ -26,6 +22,7 @@ __all__ = [
     "DragUIOverride",
     "DropOperationTargetRequestedEventArgs",
     "IDropOperationTarget",
+    "ImplementsIDropOperationTarget",
 ]
 
 class DragDropModifiers(enum.IntFlag):

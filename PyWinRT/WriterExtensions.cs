@@ -65,6 +65,31 @@ static class WriterExtensions
         }
     }
 
+    public static void WriteImplementsInterfaceImpl(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string moduleSuffix
+    )
+    {
+        w.WriteLine($"static PyType_Slot type_slots_Implements{type.Name}[] = {{");
+        w.Indent++;
+        w.WriteLine("{ }");
+        w.Indent--;
+        w.WriteLine("};");
+        w.WriteBlankLine();
+
+        w.WriteLine($"static PyType_Spec type_spec_Implements{type.Name} = {{");
+        w.Indent++;
+        w.WriteLine(
+            $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.Implements{type.Name}\","
+        );
+        w.WriteLine("0,");
+        w.WriteLine("0,");
+        w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,");
+        w.WriteLine($"type_slots_Implements{type.Name}}};");
+        w.Indent--;
+    }
+
     public static void WriteMetaclass(
         this IndentedTextWriter w,
         ProjectedType type,
@@ -1477,6 +1502,28 @@ static class WriterExtensions
         w.Indent--;
         w.WriteLine("}");
         w.WriteBlankLine();
+
+        if (type.Category == Category.Interface)
+        {
+            w.WriteLine(
+                $"py::pytype_handle Implements{name}_type{{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_Implements{name}, nullptr))}};"
+            );
+            w.WriteLine($"if (!Implements{name}_type)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("return nullptr;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+
+            w.WriteLine($"if (PyModule_AddType(module.get(), Implements{name}_type.get()) == -1)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("return nullptr;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+        }
     }
 
     public static void WriteTryCatch(

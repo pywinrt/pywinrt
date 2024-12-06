@@ -74,14 +74,10 @@ from winrt._winrt_windows_devices_sensors import (
     SimpleOrientationSensorOrientationChangedEventArgs,
     WakeOnApproachOptions,
     IHumanPresenceSensorExtension,
+    ImplementsIHumanPresenceSensorExtension,
     ISensorDataThreshold,
+    ImplementsISensorDataThreshold,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_sensors import (
-        ImplementsIHumanPresenceSensorExtension,
-        ImplementsISensorDataThreshold,
-    )
 
 __all__ = [
     "AccelerometerReadingType",
@@ -165,7 +161,9 @@ __all__ = [
     "SimpleOrientationSensorOrientationChangedEventArgs",
     "WakeOnApproachOptions",
     "IHumanPresenceSensorExtension",
+    "ImplementsIHumanPresenceSensorExtension",
     "ISensorDataThreshold",
+    "ImplementsISensorDataThreshold",
 ]
 
 class AccelerometerReadingType(enum.IntEnum):

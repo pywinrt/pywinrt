@@ -9,26 +9,22 @@ from winrt._winrt_windows_ui_xaml_interop import (
     TypeName,
     NotifyCollectionChangedEventArgs,
     IBindableIterable,
+    ImplementsIBindableIterable,
     IBindableIterator,
+    ImplementsIBindableIterator,
     IBindableObservableVector,
+    ImplementsIBindableObservableVector,
     IBindableVector,
+    ImplementsIBindableVector,
     IBindableVectorView,
+    ImplementsIBindableVectorView,
     INotifyCollectionChanged,
+    ImplementsINotifyCollectionChanged,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from winrt._winrt_windows_ui_xaml_interop import (
         NotifyCollectionChangedEventArgs_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_interop import (
-        ImplementsIBindableIterable,
-        ImplementsIBindableIterator,
-        ImplementsIBindableObservableVector,
-        ImplementsIBindableVector,
-        ImplementsIBindableVectorView,
-        ImplementsINotifyCollectionChanged,
     )
 
 __all__ = [
@@ -37,11 +33,17 @@ __all__ = [
     "TypeName",
     "NotifyCollectionChangedEventArgs",
     "IBindableIterable",
+    "ImplementsIBindableIterable",
     "IBindableIterator",
+    "ImplementsIBindableIterator",
     "IBindableObservableVector",
+    "ImplementsIBindableObservableVector",
     "IBindableVector",
+    "ImplementsIBindableVector",
     "IBindableVectorView",
+    "ImplementsIBindableVectorView",
     "INotifyCollectionChanged",
+    "ImplementsINotifyCollectionChanged",
     "BindableVectorChangedEventHandler",
     "NotifyCollectionChangedEventHandler",
 ]

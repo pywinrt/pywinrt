@@ -15542,6 +15542,17 @@ namespace py::cpp::Windows::Media::Playback
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaEnginePlaybackSource};
 
+    static PyType_Slot type_slots_ImplementsIMediaEnginePlaybackSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaEnginePlaybackSource = {
+        "winrt._winrt_windows_media_playback.ImplementsIMediaEnginePlaybackSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaEnginePlaybackSource};
+
     // ----- IMediaPlaybackSource interface --------------------
 
     static PyObject* _new_IMediaPlaybackSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -15607,6 +15618,17 @@ namespace py::cpp::Windows::Media::Playback
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaPlaybackSource};
+
+    static PyType_Slot type_slots_ImplementsIMediaPlaybackSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMediaPlaybackSource = {
+        "winrt._winrt_windows_media_playback.ImplementsIMediaPlaybackSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMediaPlaybackSource};
 
     // ----- Windows.Media.Playback Initialization --------------------
 
@@ -15929,8 +15951,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playback(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMediaEnginePlaybackSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaEnginePlaybackSource, nullptr))};
+    if (!ImplementsIMediaEnginePlaybackSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaEnginePlaybackSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMediaPlaybackSource_type{py::register_python_type(module.get(), &type_spec_IMediaPlaybackSource, object_bases.get(), nullptr)};
     if (!IMediaPlaybackSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMediaPlaybackSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaPlaybackSource, nullptr))};
+    if (!ImplementsIMediaPlaybackSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMediaPlaybackSource_type.get()) == -1)
     {
         return nullptr;
     }

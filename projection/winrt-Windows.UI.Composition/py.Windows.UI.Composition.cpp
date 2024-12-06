@@ -34655,6 +34655,17 @@ namespace py::cpp::Windows::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAnimationObject};
 
+    static PyType_Slot type_slots_ImplementsIAnimationObject[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAnimationObject = {
+        "winrt._winrt_windows_ui_composition.ImplementsIAnimationObject",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAnimationObject};
+
     // ----- ICompositionAnimationBase interface --------------------
 
     static PyObject* _new_ICompositionAnimationBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -34720,6 +34731,17 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionAnimationBase};
+
+    static PyType_Slot type_slots_ImplementsICompositionAnimationBase[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICompositionAnimationBase = {
+        "winrt._winrt_windows_ui_composition.ImplementsICompositionAnimationBase",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICompositionAnimationBase};
 
     // ----- ICompositionSupportsSystemBackdrop interface --------------------
 
@@ -34849,6 +34871,17 @@ namespace py::cpp::Windows::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSupportsSystemBackdrop};
 
+    static PyType_Slot type_slots_ImplementsICompositionSupportsSystemBackdrop[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICompositionSupportsSystemBackdrop = {
+        "winrt._winrt_windows_ui_composition.ImplementsICompositionSupportsSystemBackdrop",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICompositionSupportsSystemBackdrop};
+
     // ----- ICompositionSurface interface --------------------
 
     static PyObject* _new_ICompositionSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -34914,6 +34947,17 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSurface};
+
+    static PyType_Slot type_slots_ImplementsICompositionSurface[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICompositionSurface = {
+        "winrt._winrt_windows_ui_composition.ImplementsICompositionSurface",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICompositionSurface};
 
     // ----- ICompositionSurfaceFacade interface --------------------
 
@@ -35018,6 +35062,17 @@ namespace py::cpp::Windows::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSurfaceFacade};
 
+    static PyType_Slot type_slots_ImplementsICompositionSurfaceFacade[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICompositionSurfaceFacade = {
+        "winrt._winrt_windows_ui_composition.ImplementsICompositionSurfaceFacade",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICompositionSurfaceFacade};
+
     // ----- IVisualElement interface --------------------
 
     static PyObject* _new_IVisualElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -35083,6 +35138,17 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVisualElement};
+
+    static PyType_Slot type_slots_ImplementsIVisualElement[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVisualElement = {
+        "winrt._winrt_windows_ui_composition.ImplementsIVisualElement",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVisualElement};
 
     // ----- IVisualElement2 interface --------------------
 
@@ -35186,6 +35252,17 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVisualElement2};
+
+    static PyType_Slot type_slots_ImplementsIVisualElement2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVisualElement2 = {
+        "winrt._winrt_windows_ui_composition.ImplementsIVisualElement2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVisualElement2};
 
     // ----- InkTrailPoint struct --------------------
 
@@ -36982,8 +37059,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAnimationObject_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAnimationObject, nullptr))};
+    if (!ImplementsIAnimationObject_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAnimationObject_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICompositionAnimationBase_type{py::register_python_type(module.get(), &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr)};
     if (!ICompositionAnimationBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICompositionAnimationBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionAnimationBase, nullptr))};
+    if (!ImplementsICompositionAnimationBase_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICompositionAnimationBase_type.get()) == -1)
     {
         return nullptr;
     }
@@ -36994,8 +37093,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICompositionSupportsSystemBackdrop_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionSupportsSystemBackdrop, nullptr))};
+    if (!ImplementsICompositionSupportsSystemBackdrop_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICompositionSupportsSystemBackdrop_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICompositionSurface_type{py::register_python_type(module.get(), &type_spec_ICompositionSurface, object_bases.get(), nullptr)};
     if (!ICompositionSurface_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICompositionSurface_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionSurface, nullptr))};
+    if (!ImplementsICompositionSurface_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICompositionSurface_type.get()) == -1)
     {
         return nullptr;
     }
@@ -37006,14 +37127,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICompositionSurfaceFacade_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionSurfaceFacade, nullptr))};
+    if (!ImplementsICompositionSurfaceFacade_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICompositionSurfaceFacade_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVisualElement_type{py::register_python_type(module.get(), &type_spec_IVisualElement, object_bases.get(), nullptr)};
     if (!IVisualElement_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVisualElement_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVisualElement, nullptr))};
+    if (!ImplementsIVisualElement_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVisualElement_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVisualElement2_type{py::register_python_type(module.get(), &type_spec_IVisualElement2, object_bases.get(), nullptr)};
     if (!IVisualElement2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVisualElement2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVisualElement2, nullptr))};
+    if (!ImplementsIVisualElement2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVisualElement2_type.get()) == -1)
     {
         return nullptr;
     }

@@ -81,24 +81,20 @@ from winrt._winrt_windows_media_core import (
     VideoTrackOpenFailedEventArgs,
     VideoTrackSupportInfo,
     IMediaCue,
+    ImplementsIMediaCue,
     IMediaSource,
+    ImplementsIMediaSource,
     IMediaStreamDescriptor,
+    ImplementsIMediaStreamDescriptor,
     IMediaStreamDescriptor2,
+    ImplementsIMediaStreamDescriptor2,
     IMediaTrack,
+    ImplementsIMediaTrack,
     ISingleSelectMediaTrackList,
+    ImplementsISingleSelectMediaTrackList,
     ITimedMetadataTrackProvider,
+    ImplementsITimedMetadataTrackProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_core import (
-        ImplementsIMediaCue,
-        ImplementsIMediaSource,
-        ImplementsIMediaStreamDescriptor,
-        ImplementsIMediaStreamDescriptor2,
-        ImplementsIMediaTrack,
-        ImplementsISingleSelectMediaTrackList,
-        ImplementsITimedMetadataTrackProvider,
-    )
 
 __all__ = [
     "AudioDecoderDegradation",
@@ -210,12 +206,19 @@ __all__ = [
     "VideoTrackOpenFailedEventArgs",
     "VideoTrackSupportInfo",
     "IMediaCue",
+    "ImplementsIMediaCue",
     "IMediaSource",
+    "ImplementsIMediaSource",
     "IMediaStreamDescriptor",
+    "ImplementsIMediaStreamDescriptor",
     "IMediaStreamDescriptor2",
+    "ImplementsIMediaStreamDescriptor2",
     "IMediaTrack",
+    "ImplementsIMediaTrack",
     "ISingleSelectMediaTrackList",
+    "ImplementsISingleSelectMediaTrackList",
     "ITimedMetadataTrackProvider",
+    "ImplementsITimedMetadataTrackProvider",
 ]
 
 class AudioDecoderDegradation(enum.IntEnum):

@@ -1941,6 +1941,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetManager};
 
+    static PyType_Slot type_slots_ImplementsIWidgetManager[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWidgetManager = {
+        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetManager",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWidgetManager};
+
     // ----- IWidgetProvider interface --------------------
 
     static PyObject* _new_IWidgetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2248,6 +2259,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProvider};
 
+    static PyType_Slot type_slots_ImplementsIWidgetProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWidgetProvider = {
+        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWidgetProvider};
+
     // ----- IWidgetProvider2 interface --------------------
 
     static PyObject* _new_IWidgetProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2353,6 +2375,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProvider2};
+
+    static PyType_Slot type_slots_ImplementsIWidgetProvider2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWidgetProvider2 = {
+        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProvider2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWidgetProvider2};
 
     // ----- IWidgetProviderAnalytics interface --------------------
 
@@ -2460,6 +2493,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProviderAnalytics};
 
+    static PyType_Slot type_slots_ImplementsIWidgetProviderAnalytics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWidgetProviderAnalytics = {
+        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProviderAnalytics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWidgetProviderAnalytics};
+
     // ----- IWidgetProviderErrors interface --------------------
 
     static PyObject* _new_IWidgetProviderErrors(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2565,6 +2609,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProviderErrors};
+
+    static PyType_Slot type_slots_ImplementsIWidgetProviderErrors[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWidgetProviderErrors = {
+        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProviderErrors",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWidgetProviderErrors};
 
     // ----- Microsoft.Windows.Widgets.Providers Initialization --------------------
 
@@ -2683,8 +2738,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWidgetManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetManager, nullptr))};
+    if (!ImplementsIWidgetManager_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetManager_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWidgetProvider_type{py::register_python_type(module.get(), &type_spec_IWidgetProvider, object_bases.get(), nullptr)};
     if (!IWidgetProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWidgetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProvider, nullptr))};
+    if (!ImplementsIWidgetProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetProvider_type.get()) == -1)
     {
         return nullptr;
     }
@@ -2695,14 +2772,47 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWidgetProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProvider2, nullptr))};
+    if (!ImplementsIWidgetProvider2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetProvider2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWidgetProviderAnalytics_type{py::register_python_type(module.get(), &type_spec_IWidgetProviderAnalytics, object_bases.get(), nullptr)};
     if (!IWidgetProviderAnalytics_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWidgetProviderAnalytics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProviderAnalytics, nullptr))};
+    if (!ImplementsIWidgetProviderAnalytics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetProviderAnalytics_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWidgetProviderErrors_type{py::register_python_type(module.get(), &type_spec_IWidgetProviderErrors, object_bases.get(), nullptr)};
     if (!IWidgetProviderErrors_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWidgetProviderErrors_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProviderErrors, nullptr))};
+    if (!ImplementsIWidgetProviderErrors_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetProviderErrors_type.get()) == -1)
     {
         return nullptr;
     }

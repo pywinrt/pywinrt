@@ -8734,6 +8734,17 @@ namespace py::cpp::Windows::Web::Http
         Py_TPFLAGS_DEFAULT,
         _type_slots_IHttpContent};
 
+    static PyType_Slot type_slots_ImplementsIHttpContent[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIHttpContent = {
+        "winrt._winrt_windows_web_http.ImplementsIHttpContent",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIHttpContent};
+
     // ----- HttpProgress struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>* _new_HttpProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9277,6 +9288,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
 
     py::pytype_handle IHttpContent_type{py::register_python_type(module.get(), &type_spec_IHttpContent, object_bases.get(), nullptr)};
     if (!IHttpContent_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIHttpContent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHttpContent, nullptr))};
+    if (!ImplementsIHttpContent_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIHttpContent_type.get()) == -1)
     {
         return nullptr;
     }

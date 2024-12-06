@@ -2593,6 +2593,17 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISystemBackdropController};
 
+    static PyType_Slot type_slots_ImplementsISystemBackdropController[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISystemBackdropController = {
+        "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropController",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISystemBackdropController};
+
     // ----- ISystemBackdropControllerWithTargets interface --------------------
 
     static PyObject* _new_ISystemBackdropControllerWithTargets(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3040,6 +3051,17 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISystemBackdropControllerWithTargets};
 
+    static PyType_Slot type_slots_ImplementsISystemBackdropControllerWithTargets[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISystemBackdropControllerWithTargets = {
+        "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropControllerWithTargets",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISystemBackdropControllerWithTargets};
+
     // ----- Microsoft.UI.Composition.SystemBackdrops Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Composition.SystemBackdrops");
@@ -3121,8 +3143,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISystemBackdropController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISystemBackdropController, nullptr))};
+    if (!ImplementsISystemBackdropController_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISystemBackdropController_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISystemBackdropControllerWithTargets_type{py::register_python_type(module.get(), &type_spec_ISystemBackdropControllerWithTargets, object_bases.get(), nullptr)};
     if (!ISystemBackdropControllerWithTargets_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISystemBackdropControllerWithTargets_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISystemBackdropControllerWithTargets, nullptr))};
+    if (!ImplementsISystemBackdropControllerWithTargets_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISystemBackdropControllerWithTargets_type.get()) == -1)
     {
         return nullptr;
     }

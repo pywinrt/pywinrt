@@ -823,6 +823,17 @@ namespace py::cpp::Windows::Devices::Custom
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIOControlCode};
 
+    static PyType_Slot type_slots_ImplementsIIOControlCode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIIOControlCode = {
+        "winrt._winrt_windows_devices_custom.ImplementsIIOControlCode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIIOControlCode};
+
     // ----- Windows.Devices.Custom Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Custom");
@@ -900,6 +911,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
 
     py::pytype_handle IIOControlCode_type{py::register_python_type(module.get(), &type_spec_IIOControlCode, object_bases.get(), nullptr)};
     if (!IIOControlCode_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIIOControlCode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIOControlCode, nullptr))};
+    if (!ImplementsIIOControlCode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIIOControlCode_type.get()) == -1)
     {
         return nullptr;
     }

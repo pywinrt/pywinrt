@@ -13,12 +13,8 @@ from winrt._winrt_windows_storage_fileproperties import (
     StorageItemThumbnail,
     VideoProperties,
     IStorageItemExtraProperties,
+    ImplementsIStorageItemExtraProperties,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_storage_fileproperties import (
-        ImplementsIStorageItemExtraProperties,
-    )
 
 __all__ = [
     "PhotoOrientation",
@@ -36,6 +32,7 @@ __all__ = [
     "StorageItemThumbnail",
     "VideoProperties",
     "IStorageItemExtraProperties",
+    "ImplementsIStorageItemExtraProperties",
 ]
 
 class PhotoOrientation(enum.IntEnum):

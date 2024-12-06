@@ -6179,6 +6179,17 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContentSiteBridge};
 
+    static PyType_Slot type_slots_ImplementsIContentSiteBridge[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContentSiteBridge = {
+        "winrt._winrt_microsoft_ui_content.ImplementsIContentSiteBridge",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContentSiteBridge};
+
     // ----- Microsoft.UI.Content Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Content");
@@ -6382,6 +6393,17 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
 
     py::pytype_handle IContentSiteBridge_type{py::register_python_type(module.get(), &type_spec_IContentSiteBridge, object_bases.get(), nullptr)};
     if (!IContentSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContentSiteBridge_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContentSiteBridge, nullptr))};
+    if (!ImplementsIContentSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContentSiteBridge_type.get()) == -1)
     {
         return nullptr;
     }

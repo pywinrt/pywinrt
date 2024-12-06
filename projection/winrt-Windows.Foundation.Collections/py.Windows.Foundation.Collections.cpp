@@ -1708,6 +1708,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIterable};
 
+    static PyType_Slot type_slots_ImplementsIIterable[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIIterable = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIIterable",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIIterable};
+
     // ----- IIterator interface --------------------
 
     static PyObject* _new_IIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1828,6 +1839,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIterator};
 
+    static PyType_Slot type_slots_ImplementsIIterator[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIIterator = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIIterator",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIIterator};
+
     // ----- IKeyValuePair interface --------------------
 
     static PyObject* _new_IKeyValuePair(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1924,6 +1946,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IKeyValuePair};
 
+    static PyType_Slot type_slots_ImplementsIKeyValuePair[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIKeyValuePair = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIKeyValuePair",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIKeyValuePair};
+
     // ----- IMapChangedEventArgs interface --------------------
 
     static PyObject* _new_IMapChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2019,6 +2052,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMapChangedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIMapChangedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMapChangedEventArgs = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIMapChangedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMapChangedEventArgs};
 
     // ----- IMapView interface --------------------
 
@@ -2136,6 +2180,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMapView};
+
+    static PyType_Slot type_slots_ImplementsIMapView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMapView = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIMapView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMapView};
 
     // ----- IMap interface --------------------
 
@@ -2277,6 +2332,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMap};
+
+    static PyType_Slot type_slots_ImplementsIMap[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMap = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIMap",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMap};
 
     // ----- IObservableMap interface --------------------
 
@@ -2472,6 +2538,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IObservableMap};
+
+    static PyType_Slot type_slots_ImplementsIObservableMap[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIObservableMap = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIObservableMap",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIObservableMap};
 
     // ----- IObservableVector interface --------------------
 
@@ -2697,6 +2774,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IObservableVector};
+
+    static PyType_Slot type_slots_ImplementsIObservableVector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIObservableVector = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIObservableVector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIObservableVector};
 
     // ----- IPropertySet interface --------------------
 
@@ -3226,6 +3314,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertySet};
 
+    static PyType_Slot type_slots_ImplementsIPropertySet[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPropertySet = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIPropertySet",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPropertySet};
+
     // ----- IVectorChangedEventArgs interface --------------------
 
     static PyObject* _new_IVectorChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3346,6 +3445,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVectorChangedEventArgs};
 
+    static PyType_Slot type_slots_ImplementsIVectorChangedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVectorChangedEventArgs = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIVectorChangedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVectorChangedEventArgs};
+
     // ----- IVectorView interface --------------------
 
     static PyObject* _new_IVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3462,6 +3572,17 @@ namespace py::cpp::Windows::Foundation::Collections
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVectorView};
+
+    static PyType_Slot type_slots_ImplementsIVectorView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVectorView = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIVectorView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVectorView};
 
     // ----- IVector interface --------------------
 
@@ -3634,6 +3755,17 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVector};
 
+    static PyType_Slot type_slots_ImplementsIVector[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVector = {
+        "winrt._winrt_windows_foundation_collections.ImplementsIVector",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVector};
+
     // ----- Windows.Foundation.Collections Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Foundation.Collections");
@@ -3703,8 +3835,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIIterable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIterable, nullptr))};
+    if (!ImplementsIIterable_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIIterable_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IIterator_type{py::register_python_type(module.get(), &type_spec_IIterator, object_bases.get(), nullptr)};
     if (!IIterator_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIIterator_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIterator, nullptr))};
+    if (!ImplementsIIterator_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIIterator_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3715,8 +3869,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIKeyValuePair_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIKeyValuePair, nullptr))};
+    if (!ImplementsIKeyValuePair_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIKeyValuePair_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMapChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr)};
     if (!IMapChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMapChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMapChangedEventArgs, nullptr))};
+    if (!ImplementsIMapChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMapChangedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3727,8 +3903,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMapView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMapView, nullptr))};
+    if (!ImplementsIMapView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMapView_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMap_type{py::register_python_type(module.get(), &type_spec_IMap, object_bases.get(), nullptr)};
     if (!IMap_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMap_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMap, nullptr))};
+    if (!ImplementsIMap_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMap_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3739,8 +3937,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIObservableMap_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObservableMap, nullptr))};
+    if (!ImplementsIObservableMap_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIObservableMap_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IObservableVector_type{py::register_python_type(module.get(), &type_spec_IObservableVector, object_bases.get(), nullptr)};
     if (!IObservableVector_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIObservableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObservableVector, nullptr))};
+    if (!ImplementsIObservableVector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIObservableVector_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3751,8 +3971,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIPropertySet_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertySet, nullptr))};
+    if (!ImplementsIPropertySet_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPropertySet_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVectorChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr)};
     if (!IVectorChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVectorChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVectorChangedEventArgs, nullptr))};
+    if (!ImplementsIVectorChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVectorChangedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3763,8 +4005,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVectorView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVectorView, nullptr))};
+    if (!ImplementsIVectorView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVectorView_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVector_type{py::register_python_type(module.get(), &type_spec_IVector, object_bases.get(), nullptr)};
     if (!IVector_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVector, nullptr))};
+    if (!ImplementsIVector_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVector_type.get()) == -1)
     {
         return nullptr;
     }

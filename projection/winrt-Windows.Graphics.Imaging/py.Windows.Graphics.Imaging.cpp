@@ -6393,6 +6393,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapFrame};
 
+    static PyType_Slot type_slots_ImplementsIBitmapFrame[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBitmapFrame = {
+        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrame",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBitmapFrame};
+
     // ----- IBitmapFrameWithSoftwareBitmap interface --------------------
 
     static PyObject* _new_IBitmapFrameWithSoftwareBitmap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6939,6 +6950,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapFrameWithSoftwareBitmap};
 
+    static PyType_Slot type_slots_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBitmapFrameWithSoftwareBitmap = {
+        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrameWithSoftwareBitmap",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBitmapFrameWithSoftwareBitmap};
+
     // ----- IBitmapPropertiesView interface --------------------
 
     static PyObject* _new_IBitmapPropertiesView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7043,6 +7065,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapPropertiesView};
+
+    static PyType_Slot type_slots_ImplementsIBitmapPropertiesView[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBitmapPropertiesView = {
+        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapPropertiesView",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBitmapPropertiesView};
 
     // ----- BitmapBounds struct --------------------
 
@@ -8001,14 +8034,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBitmapFrame_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBitmapFrame, nullptr))};
+    if (!ImplementsIBitmapFrame_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBitmapFrame_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBitmapFrameWithSoftwareBitmap_type{py::register_python_type(module.get(), &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr)};
     if (!IBitmapFrameWithSoftwareBitmap_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBitmapFrameWithSoftwareBitmap_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBitmapFrameWithSoftwareBitmap, nullptr))};
+    if (!ImplementsIBitmapFrameWithSoftwareBitmap_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBitmapFrameWithSoftwareBitmap_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBitmapPropertiesView_type{py::register_python_type(module.get(), &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr)};
     if (!IBitmapPropertiesView_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBitmapPropertiesView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBitmapPropertiesView, nullptr))};
+    if (!ImplementsIBitmapPropertiesView_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBitmapPropertiesView_type.get()) == -1)
     {
         return nullptr;
     }

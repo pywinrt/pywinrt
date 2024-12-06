@@ -8,12 +8,8 @@ from winrt._winrt_windows_devices_custom import (
     IOControlCode,
     KnownDeviceTypes,
     IIOControlCode,
+    ImplementsIIOControlCode,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_custom import (
-        ImplementsIIOControlCode,
-    )
 
 __all__ = [
     "DeviceAccessMode",
@@ -24,6 +20,7 @@ __all__ = [
     "IOControlCode",
     "KnownDeviceTypes",
     "IIOControlCode",
+    "ImplementsIIOControlCode",
 ]
 
 class DeviceAccessMode(enum.IntEnum):

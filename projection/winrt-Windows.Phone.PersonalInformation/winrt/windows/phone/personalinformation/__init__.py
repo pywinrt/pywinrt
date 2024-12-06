@@ -13,14 +13,10 @@ from winrt._winrt_windows_phone_personalinformation import (
     KnownContactProperties,
     StoredContact,
     IContactInformation,
+    ImplementsIContactInformation,
     IContactInformation2,
+    ImplementsIContactInformation2,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_phone_personalinformation import (
-        ImplementsIContactInformation,
-        ImplementsIContactInformation2,
-    )
 
 __all__ = [
     "ContactChangeType",
@@ -37,7 +33,9 @@ __all__ = [
     "KnownContactProperties",
     "StoredContact",
     "IContactInformation",
+    "ImplementsIContactInformation",
     "IContactInformation2",
+    "ImplementsIContactInformation2",
 ]
 
 class ContactChangeType(enum.IntEnum):

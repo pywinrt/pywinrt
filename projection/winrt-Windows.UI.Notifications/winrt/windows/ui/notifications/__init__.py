@@ -42,12 +42,8 @@ from winrt._winrt_windows_ui_notifications import (
     UserNotification,
     UserNotificationChangedEventArgs,
     IAdaptiveNotificationContent,
+    ImplementsIAdaptiveNotificationContent,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_notifications import (
-        ImplementsIAdaptiveNotificationContent,
-    )
 
 __all__ = [
     "AdaptiveNotificationContentKind",
@@ -103,6 +99,7 @@ __all__ = [
     "UserNotification",
     "UserNotificationChangedEventArgs",
     "IAdaptiveNotificationContent",
+    "ImplementsIAdaptiveNotificationContent",
 ]
 
 class AdaptiveNotificationContentKind(enum.IntEnum):

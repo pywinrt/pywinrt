@@ -37792,6 +37792,17 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDataTemplateExtension};
 
+    static PyType_Slot type_slots_ImplementsIDataTemplateExtension[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDataTemplateExtension = {
+        "winrt._winrt_microsoft_ui_xaml.ImplementsIDataTemplateExtension",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDataTemplateExtension};
+
     // ----- IElementFactory interface --------------------
 
     static PyObject* _new_IElementFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -37937,6 +37948,17 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_TPFLAGS_DEFAULT,
         _type_slots_IElementFactory};
 
+    static PyType_Slot type_slots_ImplementsIElementFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIElementFactory = {
+        "winrt._winrt_microsoft_ui_xaml.ImplementsIElementFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIElementFactory};
+
     // ----- IXamlServiceProvider interface --------------------
 
     static PyObject* _new_IXamlServiceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -38041,6 +38063,17 @@ namespace py::cpp::Microsoft::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlServiceProvider};
+
+    static PyType_Slot type_slots_ImplementsIXamlServiceProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIXamlServiceProvider = {
+        "winrt._winrt_microsoft_ui_xaml.ImplementsIXamlServiceProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIXamlServiceProvider};
 
     // ----- CornerRadius struct --------------------
 
@@ -40077,14 +40110,47 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDataTemplateExtension_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDataTemplateExtension, nullptr))};
+    if (!ImplementsIDataTemplateExtension_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDataTemplateExtension_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IElementFactory_type{py::register_python_type(module.get(), &type_spec_IElementFactory, object_bases.get(), nullptr)};
     if (!IElementFactory_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIElementFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIElementFactory, nullptr))};
+    if (!ImplementsIElementFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIElementFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IXamlServiceProvider_type{py::register_python_type(module.get(), &type_spec_IXamlServiceProvider, object_bases.get(), nullptr)};
     if (!IXamlServiceProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIXamlServiceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlServiceProvider, nullptr))};
+    if (!ImplementsIXamlServiceProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIXamlServiceProvider_type.get()) == -1)
     {
         return nullptr;
     }

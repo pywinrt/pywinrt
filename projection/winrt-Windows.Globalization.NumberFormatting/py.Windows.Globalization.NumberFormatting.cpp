@@ -5272,6 +5272,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberFormatter};
 
+    static PyType_Slot type_slots_ImplementsINumberFormatter[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberFormatter = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatter",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberFormatter};
+
     // ----- INumberFormatter2 interface --------------------
 
     static PyObject* _new_INumberFormatter2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5454,6 +5465,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberFormatter2};
+
+    static PyType_Slot type_slots_ImplementsINumberFormatter2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberFormatter2 = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatter2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberFormatter2};
 
     // ----- INumberFormatterOptions interface --------------------
 
@@ -5939,6 +5961,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberFormatterOptions};
 
+    static PyType_Slot type_slots_ImplementsINumberFormatterOptions[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberFormatterOptions = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatterOptions",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberFormatterOptions};
+
     // ----- INumberParser interface --------------------
 
     static PyObject* _new_INumberParser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6121,6 +6154,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberParser};
+
+    static PyType_Slot type_slots_ImplementsINumberParser[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberParser = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberParser",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberParser};
 
     // ----- INumberRounder interface --------------------
 
@@ -6422,6 +6466,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberRounder};
 
+    static PyType_Slot type_slots_ImplementsINumberRounder[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberRounder = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberRounder",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberRounder};
+
     // ----- INumberRounderOption interface --------------------
 
     static PyObject* _new_INumberRounderOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6549,6 +6604,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_INumberRounderOption};
+
+    static PyType_Slot type_slots_ImplementsINumberRounderOption[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsINumberRounderOption = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberRounderOption",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsINumberRounderOption};
 
     // ----- ISignedZeroOption interface --------------------
 
@@ -6678,6 +6744,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISignedZeroOption};
 
+    static PyType_Slot type_slots_ImplementsISignedZeroOption[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISignedZeroOption = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsISignedZeroOption",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISignedZeroOption};
+
     // ----- ISignificantDigitsOption interface --------------------
 
     static PyObject* _new_ISignificantDigitsOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6806,6 +6883,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISignificantDigitsOption};
 
+    static PyType_Slot type_slots_ImplementsISignificantDigitsOption[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISignificantDigitsOption = {
+        "winrt._winrt_windows_globalization_numberformatting.ImplementsISignificantDigitsOption",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISignificantDigitsOption};
+
     // ----- Windows.Globalization.NumberFormatting Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Globalization.NumberFormatting");
@@ -6899,8 +6987,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINumberFormatter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatter, nullptr))};
+    if (!ImplementsINumberFormatter_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberFormatter_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INumberFormatter2_type{py::register_python_type(module.get(), &type_spec_INumberFormatter2, object_bases.get(), nullptr)};
     if (!INumberFormatter2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINumberFormatter2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatter2, nullptr))};
+    if (!ImplementsINumberFormatter2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberFormatter2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6911,8 +7021,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINumberFormatterOptions_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatterOptions, nullptr))};
+    if (!ImplementsINumberFormatterOptions_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberFormatterOptions_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INumberParser_type{py::register_python_type(module.get(), &type_spec_INumberParser, object_bases.get(), nullptr)};
     if (!INumberParser_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINumberParser_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberParser, nullptr))};
+    if (!ImplementsINumberParser_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberParser_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6923,8 +7055,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
+    py::pytype_handle ImplementsINumberRounder_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberRounder, nullptr))};
+    if (!ImplementsINumberRounder_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberRounder_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle INumberRounderOption_type{py::register_python_type(module.get(), &type_spec_INumberRounderOption, object_bases.get(), nullptr)};
     if (!INumberRounderOption_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsINumberRounderOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberRounderOption, nullptr))};
+    if (!ImplementsINumberRounderOption_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsINumberRounderOption_type.get()) == -1)
     {
         return nullptr;
     }
@@ -6935,8 +7089,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISignedZeroOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISignedZeroOption, nullptr))};
+    if (!ImplementsISignedZeroOption_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISignedZeroOption_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISignificantDigitsOption_type{py::register_python_type(module.get(), &type_spec_ISignificantDigitsOption, object_bases.get(), nullptr)};
     if (!ISignificantDigitsOption_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISignificantDigitsOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISignificantDigitsOption, nullptr))};
+    if (!ImplementsISignificantDigitsOption_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISignificantDigitsOption_type.get()) == -1)
     {
         return nullptr;
     }

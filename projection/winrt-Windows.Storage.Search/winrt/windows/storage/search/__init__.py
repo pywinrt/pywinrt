@@ -17,16 +17,12 @@ from winrt._winrt_windows_storage_search import (
     StorageLibraryContentChangedTriggerDetails,
     ValueAndLanguage,
     IIndexableContent,
+    ImplementsIIndexableContent,
     IStorageFolderQueryOperations,
+    ImplementsIStorageFolderQueryOperations,
     IStorageQueryResultBase,
+    ImplementsIStorageQueryResultBase,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_storage_search import (
-        ImplementsIIndexableContent,
-        ImplementsIStorageFolderQueryOperations,
-        ImplementsIStorageQueryResultBase,
-    )
 
 __all__ = [
     "CommonFileQuery",
@@ -48,8 +44,11 @@ __all__ = [
     "StorageLibraryContentChangedTriggerDetails",
     "ValueAndLanguage",
     "IIndexableContent",
+    "ImplementsIIndexableContent",
     "IStorageFolderQueryOperations",
+    "ImplementsIStorageFolderQueryOperations",
     "IStorageQueryResultBase",
+    "ImplementsIStorageQueryResultBase",
 ]
 
 class CommonFileQuery(enum.IntEnum):

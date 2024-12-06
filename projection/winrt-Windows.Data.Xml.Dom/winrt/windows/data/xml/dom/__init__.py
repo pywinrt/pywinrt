@@ -21,20 +21,16 @@ from winrt._winrt_windows_data_xml_dom import (
     XmlProcessingInstruction,
     XmlText,
     IXmlCharacterData,
+    ImplementsIXmlCharacterData,
     IXmlNode,
+    ImplementsIXmlNode,
     IXmlNodeSelector,
+    ImplementsIXmlNodeSelector,
     IXmlNodeSerializer,
+    ImplementsIXmlNodeSerializer,
     IXmlText,
+    ImplementsIXmlText,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_data_xml_dom import (
-        ImplementsIXmlCharacterData,
-        ImplementsIXmlNode,
-        ImplementsIXmlNodeSelector,
-        ImplementsIXmlNodeSerializer,
-        ImplementsIXmlText,
-    )
 
 __all__ = [
     "NodeType",
@@ -55,10 +51,15 @@ __all__ = [
     "XmlProcessingInstruction",
     "XmlText",
     "IXmlCharacterData",
+    "ImplementsIXmlCharacterData",
     "IXmlNode",
+    "ImplementsIXmlNode",
     "IXmlNodeSelector",
+    "ImplementsIXmlNodeSelector",
     "IXmlNodeSerializer",
+    "ImplementsIXmlNodeSerializer",
     "IXmlText",
+    "ImplementsIXmlText",
 ]
 
 class NodeType(enum.IntEnum):

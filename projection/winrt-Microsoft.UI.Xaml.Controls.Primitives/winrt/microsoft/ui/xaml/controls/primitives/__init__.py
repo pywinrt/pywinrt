@@ -81,8 +81,11 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     ZoomSnapPoint,
     ZoomSnapPointBase,
     IScrollController,
+    ImplementsIScrollController,
     IScrollControllerPanningInfo,
+    ImplementsIScrollControllerPanningInfo,
     IScrollSnapPointsInfo,
+    ImplementsIScrollSnapPointsInfo,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -128,13 +131,6 @@ if TYPE_CHECKING:
     from winrt._winrt_microsoft_ui_xaml_controls_primitives_2 import (
         ColorPickerSlider_Static,
         TabViewListView_Static,
-    )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
-        ImplementsIScrollController,
-        ImplementsIScrollControllerPanningInfo,
-        ImplementsIScrollSnapPointsInfo,
     )
 
 __all__ = [
@@ -234,8 +230,11 @@ __all__ = [
     "ZoomSnapPoint",
     "ZoomSnapPointBase",
     "IScrollController",
+    "ImplementsIScrollController",
     "IScrollControllerPanningInfo",
+    "ImplementsIScrollControllerPanningInfo",
     "IScrollSnapPointsInfo",
+    "ImplementsIScrollSnapPointsInfo",
     "DragCompletedEventHandler",
     "DragDeltaEventHandler",
     "DragStartedEventHandler",

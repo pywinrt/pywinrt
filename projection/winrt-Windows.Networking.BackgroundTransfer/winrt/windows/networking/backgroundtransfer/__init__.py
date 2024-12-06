@@ -21,18 +21,14 @@ from winrt._winrt_windows_networking_backgroundtransfer import (
     UnconstrainedTransferRequestResult,
     UploadOperation,
     IBackgroundTransferBase,
+    ImplementsIBackgroundTransferBase,
     IBackgroundTransferContentPartFactory,
+    ImplementsIBackgroundTransferContentPartFactory,
     IBackgroundTransferOperation,
+    ImplementsIBackgroundTransferOperation,
     IBackgroundTransferOperationPriority,
+    ImplementsIBackgroundTransferOperationPriority,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_networking_backgroundtransfer import (
-        ImplementsIBackgroundTransferBase,
-        ImplementsIBackgroundTransferContentPartFactory,
-        ImplementsIBackgroundTransferOperation,
-        ImplementsIBackgroundTransferOperationPriority,
-    )
 
 __all__ = [
     "BackgroundTransferBehavior",
@@ -56,9 +52,13 @@ __all__ = [
     "UnconstrainedTransferRequestResult",
     "UploadOperation",
     "IBackgroundTransferBase",
+    "ImplementsIBackgroundTransferBase",
     "IBackgroundTransferContentPartFactory",
+    "ImplementsIBackgroundTransferContentPartFactory",
     "IBackgroundTransferOperation",
+    "ImplementsIBackgroundTransferOperation",
     "IBackgroundTransferOperationPriority",
+    "ImplementsIBackgroundTransferOperationPriority",
 ]
 
 class BackgroundTransferBehavior(enum.IntEnum):

@@ -69,16 +69,12 @@ from winrt._winrt_windows_ui_webui import (
     WebUIWebAccountProviderActivatedEventArgs,
     WebUIWebAuthenticationBrokerContinuationEventArgs,
     IActivatedEventArgsDeferral,
+    ImplementsIActivatedEventArgsDeferral,
     IWebUIBackgroundTaskInstance,
+    ImplementsIWebUIBackgroundTaskInstance,
     IWebUINavigatedEventArgs,
+    ImplementsIWebUINavigatedEventArgs,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_webui import (
-        ImplementsIActivatedEventArgsDeferral,
-        ImplementsIWebUIBackgroundTaskInstance,
-        ImplementsIWebUINavigatedEventArgs,
-    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
@@ -149,8 +145,11 @@ __all__ = [
     "WebUIWebAccountProviderActivatedEventArgs",
     "WebUIWebAuthenticationBrokerContinuationEventArgs",
     "IActivatedEventArgsDeferral",
+    "ImplementsIActivatedEventArgsDeferral",
     "IWebUIBackgroundTaskInstance",
+    "ImplementsIWebUIBackgroundTaskInstance",
     "IWebUINavigatedEventArgs",
+    "ImplementsIWebUINavigatedEventArgs",
     "ActivatedEventHandler",
     "BackgroundActivatedEventHandler",
     "EnteredBackgroundEventHandler",

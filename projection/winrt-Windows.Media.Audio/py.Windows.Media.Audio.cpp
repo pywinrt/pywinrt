@@ -16980,6 +16980,17 @@ namespace py::cpp::Windows::Media::Audio
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAudioInputNode};
 
+    static PyType_Slot type_slots_ImplementsIAudioInputNode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAudioInputNode = {
+        "winrt._winrt_windows_media_audio.ImplementsIAudioInputNode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAudioInputNode};
+
     // ----- IAudioInputNode2 interface --------------------
 
     static PyObject* _new_IAudioInputNode2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17652,6 +17663,17 @@ namespace py::cpp::Windows::Media::Audio
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAudioInputNode2};
 
+    static PyType_Slot type_slots_ImplementsIAudioInputNode2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAudioInputNode2 = {
+        "winrt._winrt_windows_media_audio.ImplementsIAudioInputNode2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAudioInputNode2};
+
     // ----- IAudioNode interface --------------------
 
     static PyObject* _new_IAudioNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18148,6 +18170,17 @@ namespace py::cpp::Windows::Media::Audio
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAudioNode};
+
+    static PyType_Slot type_slots_ImplementsIAudioNode[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAudioNode = {
+        "winrt._winrt_windows_media_audio.ImplementsIAudioNode",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAudioNode};
 
     // ----- IAudioNodeWithListener interface --------------------
 
@@ -18708,6 +18741,17 @@ namespace py::cpp::Windows::Media::Audio
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAudioNodeWithListener};
 
+    static PyType_Slot type_slots_ImplementsIAudioNodeWithListener[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAudioNodeWithListener = {
+        "winrt._winrt_windows_media_audio.ImplementsIAudioNodeWithListener",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAudioNodeWithListener};
+
     // ----- Windows.Media.Audio Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Media.Audio");
@@ -19053,8 +19097,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAudioInputNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioInputNode, nullptr))};
+    if (!ImplementsIAudioInputNode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAudioInputNode_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAudioInputNode2_type{py::register_python_type(module.get(), &type_spec_IAudioInputNode2, object_bases.get(), nullptr)};
     if (!IAudioInputNode2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAudioInputNode2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioInputNode2, nullptr))};
+    if (!ImplementsIAudioInputNode2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAudioInputNode2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -19065,8 +19131,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAudioNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioNode, nullptr))};
+    if (!ImplementsIAudioNode_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAudioNode_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IAudioNodeWithListener_type{py::register_python_type(module.get(), &type_spec_IAudioNodeWithListener, object_bases.get(), nullptr)};
     if (!IAudioNodeWithListener_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAudioNodeWithListener_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioNodeWithListener, nullptr))};
+    if (!ImplementsIAudioNodeWithListener_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAudioNodeWithListener_type.get()) == -1)
     {
         return nullptr;
     }

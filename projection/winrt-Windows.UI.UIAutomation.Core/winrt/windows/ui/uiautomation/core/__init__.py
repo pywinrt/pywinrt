@@ -16,14 +16,10 @@ from winrt._winrt_windows_ui_uiautomation_core import (
     RemoteAutomationServer,
     RemoteAutomationWindow,
     ICoreAutomationConnectionBoundObjectProvider,
+    ImplementsICoreAutomationConnectionBoundObjectProvider,
     ICoreAutomationRemoteOperationExtensionProvider,
+    ImplementsICoreAutomationRemoteOperationExtensionProvider,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_uiautomation_core import (
-        ImplementsICoreAutomationConnectionBoundObjectProvider,
-        ImplementsICoreAutomationRemoteOperationExtensionProvider,
-    )
 
 __all__ = [
     "AutomationRemoteOperationStatus",
@@ -39,7 +35,9 @@ __all__ = [
     "RemoteAutomationServer",
     "RemoteAutomationWindow",
     "ICoreAutomationConnectionBoundObjectProvider",
+    "ImplementsICoreAutomationConnectionBoundObjectProvider",
     "ICoreAutomationRemoteOperationExtensionProvider",
+    "ImplementsICoreAutomationRemoteOperationExtensionProvider",
 ]
 
 class AutomationRemoteOperationStatus(enum.IntEnum):

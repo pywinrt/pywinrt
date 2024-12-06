@@ -1526,6 +1526,17 @@ namespace py::cpp::Windows::Devices::Spi
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISpiDeviceStatics};
 
+    static PyType_Slot type_slots_ImplementsISpiDeviceStatics[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISpiDeviceStatics = {
+        "winrt._winrt_windows_devices_spi.ImplementsISpiDeviceStatics",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISpiDeviceStatics};
+
     // ----- Windows.Devices.Spi Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Spi");
@@ -1609,6 +1620,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
 
     py::pytype_handle ISpiDeviceStatics_type{py::register_python_type(module.get(), &type_spec_ISpiDeviceStatics, object_bases.get(), nullptr)};
     if (!ISpiDeviceStatics_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISpiDeviceStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiDeviceStatics, nullptr))};
+    if (!ImplementsISpiDeviceStatics_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISpiDeviceStatics_type.get()) == -1)
     {
         return nullptr;
     }

@@ -6,17 +6,14 @@ from winrt._winrt_windows_storage_bulkaccess import (
     FileInformationFactory,
     FolderInformation,
     IStorageItemInformation,
+    ImplementsIStorageItemInformation,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_storage_bulkaccess import (
-        ImplementsIStorageItemInformation,
-    )
 
 __all__ = [
     "FileInformation",
     "FileInformationFactory",
     "FolderInformation",
     "IStorageItemInformation",
+    "ImplementsIStorageItemInformation",
 ]
 

@@ -17,20 +17,16 @@ from winrt._winrt_windows_foundation_diagnostics import (
     RuntimeBrokerErrorSettings,
     TracingStatusChangedEventArgs,
     IErrorReportingSettings,
+    ImplementsIErrorReportingSettings,
     IFileLoggingSession,
+    ImplementsIFileLoggingSession,
     ILoggingChannel,
+    ImplementsILoggingChannel,
     ILoggingSession,
+    ImplementsILoggingSession,
     ILoggingTarget,
+    ImplementsILoggingTarget,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_foundation_diagnostics import (
-        ImplementsIErrorReportingSettings,
-        ImplementsIFileLoggingSession,
-        ImplementsILoggingChannel,
-        ImplementsILoggingSession,
-        ImplementsILoggingTarget,
-    )
 
 __all__ = [
     "CausalityRelation",
@@ -54,10 +50,15 @@ __all__ = [
     "RuntimeBrokerErrorSettings",
     "TracingStatusChangedEventArgs",
     "IErrorReportingSettings",
+    "ImplementsIErrorReportingSettings",
     "IFileLoggingSession",
+    "ImplementsIFileLoggingSession",
     "ILoggingChannel",
+    "ImplementsILoggingChannel",
     "ILoggingSession",
+    "ImplementsILoggingSession",
     "ILoggingTarget",
+    "ImplementsILoggingTarget",
 ]
 
 class CausalityRelation(enum.IntEnum):

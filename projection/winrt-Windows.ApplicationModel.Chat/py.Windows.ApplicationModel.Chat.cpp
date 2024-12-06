@@ -10231,6 +10231,17 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         Py_TPFLAGS_DEFAULT,
         _type_slots_IChatItem};
 
+    static PyType_Slot type_slots_ImplementsIChatItem[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIChatItem = {
+        "winrt._winrt_windows_applicationmodel_chat.ImplementsIChatItem",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIChatItem};
+
     // ----- Windows.ApplicationModel.Chat Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Chat");
@@ -10518,6 +10529,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
 
     py::pytype_handle IChatItem_type{py::register_python_type(module.get(), &type_spec_IChatItem, object_bases.get(), nullptr)};
     if (!IChatItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIChatItem_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIChatItem, nullptr))};
+    if (!ImplementsIChatItem_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIChatItem_type.get()) == -1)
     {
         return nullptr;
     }

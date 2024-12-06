@@ -6593,6 +6593,17 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDeviceEnumerationSettings};
 
+    static PyType_Slot type_slots_ImplementsIDeviceEnumerationSettings[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDeviceEnumerationSettings = {
+        "winrt._winrt_windows_devices_enumeration.ImplementsIDeviceEnumerationSettings",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDeviceEnumerationSettings};
+
     // ----- IDevicePairingSettings interface --------------------
 
     static PyObject* _new_IDevicePairingSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6658,6 +6669,17 @@ namespace py::cpp::Windows::Devices::Enumeration
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDevicePairingSettings};
+
+    static PyType_Slot type_slots_ImplementsIDevicePairingSettings[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIDevicePairingSettings = {
+        "winrt._winrt_windows_devices_enumeration.ImplementsIDevicePairingSettings",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIDevicePairingSettings};
 
     // ----- Windows.Devices.Enumeration Initialization --------------------
 
@@ -6860,8 +6882,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIDeviceEnumerationSettings_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDeviceEnumerationSettings, nullptr))};
+    if (!ImplementsIDeviceEnumerationSettings_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDeviceEnumerationSettings_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IDevicePairingSettings_type{py::register_python_type(module.get(), &type_spec_IDevicePairingSettings, object_bases.get(), nullptr)};
     if (!IDevicePairingSettings_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIDevicePairingSettings_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDevicePairingSettings, nullptr))};
+    if (!ImplementsIDevicePairingSettings_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIDevicePairingSettings_type.get()) == -1)
     {
         return nullptr;
     }

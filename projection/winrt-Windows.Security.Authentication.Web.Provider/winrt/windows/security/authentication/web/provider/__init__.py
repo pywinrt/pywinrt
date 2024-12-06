@@ -17,24 +17,20 @@ from winrt._winrt_windows_security_authentication_web_provider import (
     WebProviderTokenRequest,
     WebProviderTokenResponse,
     IWebAccountProviderBaseReportOperation,
+    ImplementsIWebAccountProviderBaseReportOperation,
     IWebAccountProviderOperation,
+    ImplementsIWebAccountProviderOperation,
     IWebAccountProviderSilentReportOperation,
+    ImplementsIWebAccountProviderSilentReportOperation,
     IWebAccountProviderTokenObjects,
+    ImplementsIWebAccountProviderTokenObjects,
     IWebAccountProviderTokenObjects2,
+    ImplementsIWebAccountProviderTokenObjects2,
     IWebAccountProviderTokenOperation,
+    ImplementsIWebAccountProviderTokenOperation,
     IWebAccountProviderUIReportOperation,
+    ImplementsIWebAccountProviderUIReportOperation,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_security_authentication_web_provider import (
-        ImplementsIWebAccountProviderBaseReportOperation,
-        ImplementsIWebAccountProviderOperation,
-        ImplementsIWebAccountProviderSilentReportOperation,
-        ImplementsIWebAccountProviderTokenObjects,
-        ImplementsIWebAccountProviderTokenObjects2,
-        ImplementsIWebAccountProviderTokenOperation,
-        ImplementsIWebAccountProviderUIReportOperation,
-    )
 
 __all__ = [
     "WebAccountClientViewType",
@@ -54,12 +50,19 @@ __all__ = [
     "WebProviderTokenRequest",
     "WebProviderTokenResponse",
     "IWebAccountProviderBaseReportOperation",
+    "ImplementsIWebAccountProviderBaseReportOperation",
     "IWebAccountProviderOperation",
+    "ImplementsIWebAccountProviderOperation",
     "IWebAccountProviderSilentReportOperation",
+    "ImplementsIWebAccountProviderSilentReportOperation",
     "IWebAccountProviderTokenObjects",
+    "ImplementsIWebAccountProviderTokenObjects",
     "IWebAccountProviderTokenObjects2",
+    "ImplementsIWebAccountProviderTokenObjects2",
     "IWebAccountProviderTokenOperation",
+    "ImplementsIWebAccountProviderTokenOperation",
     "IWebAccountProviderUIReportOperation",
+    "ImplementsIWebAccountProviderUIReportOperation",
 ]
 
 class WebAccountClientViewType(enum.IntEnum):

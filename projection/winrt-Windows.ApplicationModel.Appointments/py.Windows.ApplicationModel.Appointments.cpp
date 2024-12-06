@@ -9611,6 +9611,17 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentParticipant};
 
+    static PyType_Slot type_slots_ImplementsIAppointmentParticipant[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAppointmentParticipant = {
+        "winrt._winrt_windows_applicationmodel_appointments.ImplementsIAppointmentParticipant",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAppointmentParticipant};
+
     // ----- Windows.ApplicationModel.Appointments Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Appointments");
@@ -9784,6 +9795,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
 
     py::pytype_handle IAppointmentParticipant_type{py::register_python_type(module.get(), &type_spec_IAppointmentParticipant, object_bases.get(), nullptr)};
     if (!IAppointmentParticipant_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIAppointmentParticipant_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentParticipant, nullptr))};
+    if (!ImplementsIAppointmentParticipant_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAppointmentParticipant_type.get()) == -1)
     {
         return nullptr;
     }

@@ -1587,6 +1587,17 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreDropOperationTarget};
 
+    static PyType_Slot type_slots_ImplementsICoreDropOperationTarget[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreDropOperationTarget = {
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.ImplementsICoreDropOperationTarget",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreDropOperationTarget};
+
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop.Core Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.DataTransfer.DragDrop.Core");
@@ -1670,6 +1681,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
 
     py::pytype_handle ICoreDropOperationTarget_type{py::register_python_type(module.get(), &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr)};
     if (!ICoreDropOperationTarget_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICoreDropOperationTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreDropOperationTarget, nullptr))};
+    if (!ImplementsICoreDropOperationTarget_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreDropOperationTarget_type.get()) == -1)
     {
         return nullptr;
     }

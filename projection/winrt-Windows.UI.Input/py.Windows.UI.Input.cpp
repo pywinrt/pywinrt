@@ -13306,6 +13306,17 @@ namespace py::cpp::Windows::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPointerPointTransform};
 
+    static PyType_Slot type_slots_ImplementsIPointerPointTransform[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIPointerPointTransform = {
+        "winrt._winrt_windows_ui_input.ImplementsIPointerPointTransform",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIPointerPointTransform};
+
     // ----- CrossSlideThresholds struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>* _new_CrossSlideThresholds(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14529,6 +14540,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
 
     py::pytype_handle IPointerPointTransform_type{py::register_python_type(module.get(), &type_spec_IPointerPointTransform, object_bases.get(), nullptr)};
     if (!IPointerPointTransform_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIPointerPointTransform_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPointerPointTransform, nullptr))};
+    if (!ImplementsIPointerPointTransform_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIPointerPointTransform_type.get()) == -1)
     {
         return nullptr;
     }

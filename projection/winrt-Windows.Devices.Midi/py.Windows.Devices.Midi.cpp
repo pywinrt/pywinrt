@@ -5020,6 +5020,17 @@ namespace py::cpp::Windows::Devices::Midi
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMidiMessage};
 
+    static PyType_Slot type_slots_ImplementsIMidiMessage[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMidiMessage = {
+        "winrt._winrt_windows_devices_midi.ImplementsIMidiMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMidiMessage};
+
     // ----- IMidiOutPort interface --------------------
 
     static PyObject* _new_IMidiOutPort(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5252,6 +5263,17 @@ namespace py::cpp::Windows::Devices::Midi
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMidiOutPort};
 
+    static PyType_Slot type_slots_ImplementsIMidiOutPort[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIMidiOutPort = {
+        "winrt._winrt_windows_devices_midi.ImplementsIMidiOutPort",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIMidiOutPort};
+
     // ----- Windows.Devices.Midi Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Midi");
@@ -5453,8 +5475,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIMidiMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMidiMessage, nullptr))};
+    if (!ImplementsIMidiMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMidiMessage_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IMidiOutPort_type{py::register_python_type(module.get(), &type_spec_IMidiOutPort, object_bases.get(), nullptr)};
     if (!IMidiOutPort_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIMidiOutPort_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMidiOutPort, nullptr))};
+    if (!ImplementsIMidiOutPort_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIMidiOutPort_type.get()) == -1)
     {
         return nullptr;
     }

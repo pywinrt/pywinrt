@@ -13,12 +13,8 @@ from winrt._winrt_windows_devices_lights_effects import (
     LampArraySolidEffect,
     LampArrayUpdateRequestedEventArgs,
     ILampArrayEffect,
+    ImplementsILampArrayEffect,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_devices_lights_effects import (
-        ImplementsILampArrayEffect,
-    )
 
 __all__ = [
     "LampArrayEffectCompletionBehavior",
@@ -33,6 +29,7 @@ __all__ = [
     "LampArraySolidEffect",
     "LampArrayUpdateRequestedEventArgs",
     "ILampArrayEffect",
+    "ImplementsILampArrayEffect",
 ]
 
 class LampArrayEffectCompletionBehavior(enum.IntEnum):

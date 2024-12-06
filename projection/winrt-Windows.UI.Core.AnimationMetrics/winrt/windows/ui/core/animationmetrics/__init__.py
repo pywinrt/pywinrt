@@ -10,12 +10,8 @@ from winrt._winrt_windows_ui_core_animationmetrics import (
     ScaleAnimation,
     TranslationAnimation,
     IPropertyAnimation,
+    ImplementsIPropertyAnimation,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_core_animationmetrics import (
-        ImplementsIPropertyAnimation,
-    )
 
 __all__ = [
     "AnimationEffect",
@@ -27,6 +23,7 @@ __all__ = [
     "ScaleAnimation",
     "TranslationAnimation",
     "IPropertyAnimation",
+    "ImplementsIPropertyAnimation",
 ]
 
 class AnimationEffect(enum.IntEnum):

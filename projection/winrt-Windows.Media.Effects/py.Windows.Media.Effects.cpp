@@ -3105,6 +3105,17 @@ namespace py::cpp::Windows::Media::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAudioEffectDefinition};
 
+    static PyType_Slot type_slots_ImplementsIAudioEffectDefinition[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIAudioEffectDefinition = {
+        "winrt._winrt_windows_media_effects.ImplementsIAudioEffectDefinition",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIAudioEffectDefinition};
+
     // ----- IBasicAudioEffect interface --------------------
 
     static PyObject* _new_IBasicAudioEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3422,6 +3433,17 @@ namespace py::cpp::Windows::Media::Effects
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBasicAudioEffect};
+
+    static PyType_Slot type_slots_ImplementsIBasicAudioEffect[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBasicAudioEffect = {
+        "winrt._winrt_windows_media_effects.ImplementsIBasicAudioEffect",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBasicAudioEffect};
 
     // ----- IBasicVideoEffect interface --------------------
 
@@ -3796,6 +3818,17 @@ namespace py::cpp::Windows::Media::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBasicVideoEffect};
 
+    static PyType_Slot type_slots_ImplementsIBasicVideoEffect[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBasicVideoEffect = {
+        "winrt._winrt_windows_media_effects.ImplementsIBasicVideoEffect",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBasicVideoEffect};
+
     // ----- IVideoCompositor interface --------------------
 
     static PyObject* _new_IVideoCompositor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4088,6 +4121,17 @@ namespace py::cpp::Windows::Media::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVideoCompositor};
 
+    static PyType_Slot type_slots_ImplementsIVideoCompositor[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVideoCompositor = {
+        "winrt._winrt_windows_media_effects.ImplementsIVideoCompositor",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVideoCompositor};
+
     // ----- IVideoCompositorDefinition interface --------------------
 
     static PyObject* _new_IVideoCompositorDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4208,6 +4252,17 @@ namespace py::cpp::Windows::Media::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVideoCompositorDefinition};
 
+    static PyType_Slot type_slots_ImplementsIVideoCompositorDefinition[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVideoCompositorDefinition = {
+        "winrt._winrt_windows_media_effects.ImplementsIVideoCompositorDefinition",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVideoCompositorDefinition};
+
     // ----- IVideoEffectDefinition interface --------------------
 
     static PyObject* _new_IVideoEffectDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4327,6 +4382,17 @@ namespace py::cpp::Windows::Media::Effects
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVideoEffectDefinition};
+
+    static PyType_Slot type_slots_ImplementsIVideoEffectDefinition[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIVideoEffectDefinition = {
+        "winrt._winrt_windows_media_effects.ImplementsIVideoEffectDefinition",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIVideoEffectDefinition};
 
     // ----- Windows.Media.Effects Initialization --------------------
 
@@ -4469,8 +4535,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIAudioEffectDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioEffectDefinition, nullptr))};
+    if (!ImplementsIAudioEffectDefinition_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIAudioEffectDefinition_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBasicAudioEffect_type{py::register_python_type(module.get(), &type_spec_IBasicAudioEffect, object_bases.get(), nullptr)};
     if (!IBasicAudioEffect_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBasicAudioEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBasicAudioEffect, nullptr))};
+    if (!ImplementsIBasicAudioEffect_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBasicAudioEffect_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4481,8 +4569,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBasicVideoEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBasicVideoEffect, nullptr))};
+    if (!ImplementsIBasicVideoEffect_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBasicVideoEffect_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVideoCompositor_type{py::register_python_type(module.get(), &type_spec_IVideoCompositor, object_bases.get(), nullptr)};
     if (!IVideoCompositor_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVideoCompositor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoCompositor, nullptr))};
+    if (!ImplementsIVideoCompositor_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVideoCompositor_type.get()) == -1)
     {
         return nullptr;
     }
@@ -4493,8 +4603,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIVideoCompositorDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoCompositorDefinition, nullptr))};
+    if (!ImplementsIVideoCompositorDefinition_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVideoCompositorDefinition_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IVideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_IVideoEffectDefinition, object_bases.get(), nullptr)};
     if (!IVideoEffectDefinition_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIVideoEffectDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoEffectDefinition, nullptr))};
+    if (!ImplementsIVideoEffectDefinition_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIVideoEffectDefinition_type.get()) == -1)
     {
         return nullptr;
     }

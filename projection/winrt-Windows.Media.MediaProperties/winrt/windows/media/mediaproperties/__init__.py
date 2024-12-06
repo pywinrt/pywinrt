@@ -19,12 +19,8 @@ from winrt._winrt_windows_media_mediaproperties import (
     VideoEncodingProperties,
     Vp9ProfileIds,
     IMediaEncodingProperties,
+    ImplementsIMediaEncodingProperties,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_media_mediaproperties import (
-        ImplementsIMediaEncodingProperties,
-    )
 
 __all__ = [
     "AudioEncodingQuality",
@@ -50,6 +46,7 @@ __all__ = [
     "VideoEncodingProperties",
     "Vp9ProfileIds",
     "IMediaEncodingProperties",
+    "ImplementsIMediaEncodingProperties",
 ]
 
 class AudioEncodingQuality(enum.IntEnum):

@@ -5792,6 +5792,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTransferBase};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTransferBase[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTransferBase = {
+        "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferBase",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTransferBase};
+
     // ----- IBackgroundTransferContentPartFactory interface --------------------
 
     static PyObject* _new_IBackgroundTransferContentPartFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5936,6 +5947,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTransferContentPartFactory};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTransferContentPartFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTransferContentPartFactory = {
+        "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferContentPartFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTransferContentPartFactory};
 
     // ----- IBackgroundTransferOperation interface --------------------
 
@@ -6249,6 +6271,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTransferOperation};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTransferOperation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTransferOperation = {
+        "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferOperation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTransferOperation};
+
     // ----- IBackgroundTransferOperationPriority interface --------------------
 
     static PyObject* _new_IBackgroundTransferOperationPriority(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6376,6 +6409,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTransferOperationPriority};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTransferOperationPriority[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTransferOperationPriority = {
+        "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferOperationPriority",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTransferOperationPriority};
 
     // ----- BackgroundDownloadProgress struct --------------------
 
@@ -7514,8 +7558,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTransferBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferBase, nullptr))};
+    if (!ImplementsIBackgroundTransferBase_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTransferBase_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTransferContentPartFactory_type{py::register_python_type(module.get(), &type_spec_IBackgroundTransferContentPartFactory, object_bases.get(), nullptr)};
     if (!IBackgroundTransferContentPartFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTransferContentPartFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferContentPartFactory, nullptr))};
+    if (!ImplementsIBackgroundTransferContentPartFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTransferContentPartFactory_type.get()) == -1)
     {
         return nullptr;
     }
@@ -7526,8 +7592,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTransferOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferOperation, nullptr))};
+    if (!ImplementsIBackgroundTransferOperation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTransferOperation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTransferOperationPriority_type{py::register_python_type(module.get(), &type_spec_IBackgroundTransferOperationPriority, object_bases.get(), nullptr)};
     if (!IBackgroundTransferOperationPriority_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTransferOperationPriority_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferOperationPriority, nullptr))};
+    if (!ImplementsIBackgroundTransferOperationPriority_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTransferOperationPriority_type.get()) == -1)
     {
         return nullptr;
     }

@@ -246,6 +246,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderEventSource};
 
+    static PyType_Slot type_slots_ImplementsISysStorageProviderEventSource[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISysStorageProviderEventSource = {
+        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderEventSource",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISysStorageProviderEventSource};
+
     // ----- ISysStorageProviderHandlerFactory interface --------------------
 
     static PyObject* _new_ISysStorageProviderHandlerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -391,6 +402,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderHandlerFactory};
 
+    static PyType_Slot type_slots_ImplementsISysStorageProviderHandlerFactory[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISysStorageProviderHandlerFactory = {
+        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHandlerFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISysStorageProviderHandlerFactory};
+
     // ----- ISysStorageProviderHttpRequestProvider interface --------------------
 
     static PyObject* _new_ISysStorageProviderHttpRequestProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -496,6 +518,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderHttpRequestProvider};
 
+    static PyType_Slot type_slots_ImplementsISysStorageProviderHttpRequestProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsISysStorageProviderHttpRequestProvider = {
+        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHttpRequestProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsISysStorageProviderHttpRequestProvider};
+
     // ----- Windows.System.Implementation.FileExplorer Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.System.Implementation.FileExplorer");
@@ -553,14 +586,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_implementation_fileexplorer(void) no
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISysStorageProviderEventSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISysStorageProviderEventSource, nullptr))};
+    if (!ImplementsISysStorageProviderEventSource_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISysStorageProviderEventSource_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISysStorageProviderHandlerFactory_type{py::register_python_type(module.get(), &type_spec_ISysStorageProviderHandlerFactory, object_bases.get(), nullptr)};
     if (!ISysStorageProviderHandlerFactory_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsISysStorageProviderHandlerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISysStorageProviderHandlerFactory, nullptr))};
+    if (!ImplementsISysStorageProviderHandlerFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISysStorageProviderHandlerFactory_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ISysStorageProviderHttpRequestProvider_type{py::register_python_type(module.get(), &type_spec_ISysStorageProviderHttpRequestProvider, object_bases.get(), nullptr)};
     if (!ISysStorageProviderHttpRequestProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsISysStorageProviderHttpRequestProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISysStorageProviderHttpRequestProvider, nullptr))};
+    if (!ImplementsISysStorageProviderHttpRequestProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsISysStorageProviderHttpRequestProvider_type.get()) == -1)
     {
         return nullptr;
     }

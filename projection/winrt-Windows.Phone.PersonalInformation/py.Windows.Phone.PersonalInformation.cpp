@@ -4743,6 +4743,17 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactInformation};
 
+    static PyType_Slot type_slots_ImplementsIContactInformation[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactInformation = {
+        "winrt._winrt_windows_phone_personalinformation.ImplementsIContactInformation",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactInformation};
+
     // ----- IContactInformation2 interface --------------------
 
     static PyObject* _new_IContactInformation2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4871,6 +4882,17 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactInformation2};
 
+    static PyType_Slot type_slots_ImplementsIContactInformation2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIContactInformation2 = {
+        "winrt._winrt_windows_phone_personalinformation.ImplementsIContactInformation2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIContactInformation2};
+
     // ----- Windows.Phone.PersonalInformation Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Phone.PersonalInformation");
@@ -4988,8 +5010,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIContactInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactInformation, nullptr))};
+    if (!ImplementsIContactInformation_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactInformation_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContactInformation2_type{py::register_python_type(module.get(), &type_spec_IContactInformation2, object_bases.get(), nullptr)};
     if (!IContactInformation2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContactInformation2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactInformation2, nullptr))};
+    if (!ImplementsIContactInformation2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContactInformation2_type.get()) == -1)
     {
         return nullptr;
     }

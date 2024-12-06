@@ -11,12 +11,8 @@ from winrt._winrt_windows_ui_popups import (
     UICommand,
     UICommandSeparator,
     IUICommand,
+    ImplementsIUICommand,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_popups import (
-        ImplementsIUICommand,
-    )
 
 __all__ = [
     "MessageDialogOptions",
@@ -26,6 +22,7 @@ __all__ = [
     "UICommand",
     "UICommandSeparator",
     "IUICommand",
+    "ImplementsIUICommand",
     "UICommandInvokedHandler",
 ]
 

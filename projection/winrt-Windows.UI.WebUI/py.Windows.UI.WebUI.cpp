@@ -16838,6 +16838,17 @@ namespace py::cpp::Windows::UI::WebUI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgsDeferral};
 
+    static PyType_Slot type_slots_ImplementsIActivatedEventArgsDeferral[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIActivatedEventArgsDeferral = {
+        "winrt._winrt_windows_ui_webui.ImplementsIActivatedEventArgsDeferral",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIActivatedEventArgsDeferral};
+
     // ----- IWebUIBackgroundTaskInstance interface --------------------
 
     static PyObject* _new_IWebUIBackgroundTaskInstance(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16966,6 +16977,17 @@ namespace py::cpp::Windows::UI::WebUI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUIBackgroundTaskInstance};
 
+    static PyType_Slot type_slots_ImplementsIWebUIBackgroundTaskInstance[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebUIBackgroundTaskInstance = {
+        "winrt._winrt_windows_ui_webui.ImplementsIWebUIBackgroundTaskInstance",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebUIBackgroundTaskInstance};
+
     // ----- IWebUINavigatedEventArgs interface --------------------
 
     static PyObject* _new_IWebUINavigatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -17058,6 +17080,17 @@ namespace py::cpp::Windows::UI::WebUI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUINavigatedEventArgs};
+
+    static PyType_Slot type_slots_ImplementsIWebUINavigatedEventArgs[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIWebUINavigatedEventArgs = {
+        "winrt._winrt_windows_ui_webui.ImplementsIWebUINavigatedEventArgs",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIWebUINavigatedEventArgs};
 
     // ----- Windows.UI.WebUI Initialization --------------------
 
@@ -17500,14 +17533,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIActivatedEventArgsDeferral_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIActivatedEventArgsDeferral, nullptr))};
+    if (!ImplementsIActivatedEventArgsDeferral_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIActivatedEventArgsDeferral_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebUIBackgroundTaskInstance_type{py::register_python_type(module.get(), &type_spec_IWebUIBackgroundTaskInstance, object_bases.get(), nullptr)};
     if (!IWebUIBackgroundTaskInstance_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIWebUIBackgroundTaskInstance_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUIBackgroundTaskInstance, nullptr))};
+    if (!ImplementsIWebUIBackgroundTaskInstance_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebUIBackgroundTaskInstance_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IWebUINavigatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebUINavigatedEventArgs, object_bases.get(), nullptr)};
     if (!IWebUINavigatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWebUINavigatedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUINavigatedEventArgs, nullptr))};
+    if (!ImplementsIWebUINavigatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWebUINavigatedEventArgs_type.get()) == -1)
     {
         return nullptr;
     }

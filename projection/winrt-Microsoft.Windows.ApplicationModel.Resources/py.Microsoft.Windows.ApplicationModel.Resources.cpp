@@ -1756,6 +1756,17 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         Py_TPFLAGS_DEFAULT,
         _type_slots_IResourceContext};
 
+    static PyType_Slot type_slots_ImplementsIResourceContext[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIResourceContext = {
+        "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceContext",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIResourceContext};
+
     // ----- IResourceManager interface --------------------
 
     static PyObject* _new_IResourceManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1945,6 +1956,17 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         Py_TPFLAGS_DEFAULT,
         _type_slots_IResourceManager};
 
+    static PyType_Slot type_slots_ImplementsIResourceManager[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIResourceManager = {
+        "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceManager",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIResourceManager};
+
     // ----- Microsoft.Windows.ApplicationModel.Resources Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.Windows.ApplicationModel.Resources");
@@ -2050,8 +2072,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_resources(void) 
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIResourceContext_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIResourceContext, nullptr))};
+    if (!ImplementsIResourceContext_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIResourceContext_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IResourceManager_type{py::register_python_type(module.get(), &type_spec_IResourceManager, object_bases.get(), nullptr)};
     if (!IResourceManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIResourceManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIResourceManager, nullptr))};
+    if (!ImplementsIResourceManager_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIResourceManager_type.get()) == -1)
     {
         return nullptr;
     }

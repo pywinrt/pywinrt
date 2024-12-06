@@ -15,12 +15,8 @@ from winrt._winrt_windows_applicationmodel_useractivities import (
     UserActivitySessionHistoryItem,
     UserActivityVisualElements,
     IUserActivityContentInfo,
+    ImplementsIUserActivityContentInfo,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_applicationmodel_useractivities import (
-        ImplementsIUserActivityContentInfo,
-    )
 
 __all__ = [
     "UserActivityState",
@@ -35,6 +31,7 @@ __all__ = [
     "UserActivitySessionHistoryItem",
     "UserActivityVisualElements",
     "IUserActivityContentInfo",
+    "ImplementsIUserActivityContentInfo",
 ]
 
 class UserActivityState(enum.IntEnum):

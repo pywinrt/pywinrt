@@ -10667,6 +10667,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundCondition};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundCondition[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundCondition = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundCondition",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundCondition};
+
     // ----- IBackgroundTask interface --------------------
 
     static PyObject* _new_IBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10772,6 +10783,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTask};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTask[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTask = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTask",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTask};
 
     // ----- IBackgroundTaskInstance interface --------------------
 
@@ -11104,6 +11126,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskInstance};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskInstance[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskInstance};
 
     // ----- IBackgroundTaskInstance2 interface --------------------
 
@@ -11476,6 +11509,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskInstance2};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskInstance2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance2 = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskInstance2};
+
     // ----- IBackgroundTaskInstance4 interface --------------------
 
     static PyObject* _new_IBackgroundTaskInstance4(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11835,6 +11879,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskInstance4};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskInstance4[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance4 = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance4",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskInstance4};
+
     // ----- IBackgroundTaskRegistration interface --------------------
 
     static PyObject* _new_IBackgroundTaskRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12112,6 +12167,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskRegistration};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskRegistration[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskRegistration};
 
     // ----- IBackgroundTaskRegistration2 interface --------------------
 
@@ -12418,6 +12484,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskRegistration2};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskRegistration2[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration2 = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskRegistration2};
+
     // ----- IBackgroundTaskRegistration3 interface --------------------
 
     static PyObject* _new_IBackgroundTaskRegistration3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12723,6 +12800,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTaskRegistration3};
 
+    static PyType_Slot type_slots_ImplementsIBackgroundTaskRegistration3[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration3 = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration3",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTaskRegistration3};
+
     // ----- IBackgroundTrigger interface --------------------
 
     static PyObject* _new_IBackgroundTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12788,6 +12876,17 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundTrigger};
+
+    static PyType_Slot type_slots_ImplementsIBackgroundTrigger[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsIBackgroundTrigger = {
+        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTrigger",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsIBackgroundTrigger};
 
     // ----- Windows.ApplicationModel.Background Initialization --------------------
 
@@ -13296,8 +13395,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundCondition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundCondition, nullptr))};
+    if (!ImplementsIBackgroundCondition_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundCondition_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTask_type{py::register_python_type(module.get(), &type_spec_IBackgroundTask, object_bases.get(), nullptr)};
     if (!IBackgroundTask_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTask_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTask, nullptr))};
+    if (!ImplementsIBackgroundTask_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTask_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13308,8 +13429,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTaskInstance_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance, nullptr))};
+    if (!ImplementsIBackgroundTaskInstance_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskInstance_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTaskInstance2_type{py::register_python_type(module.get(), &type_spec_IBackgroundTaskInstance2, object_bases.get(), nullptr)};
     if (!IBackgroundTaskInstance2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTaskInstance2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance2, nullptr))};
+    if (!ImplementsIBackgroundTaskInstance2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskInstance2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13320,8 +13463,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTaskInstance4_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance4, nullptr))};
+    if (!ImplementsIBackgroundTaskInstance4_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskInstance4_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTaskRegistration_type{py::register_python_type(module.get(), &type_spec_IBackgroundTaskRegistration, object_bases.get(), nullptr)};
     if (!IBackgroundTaskRegistration_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTaskRegistration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration, nullptr))};
+    if (!ImplementsIBackgroundTaskRegistration_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskRegistration_type.get()) == -1)
     {
         return nullptr;
     }
@@ -13332,14 +13497,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTaskRegistration2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration2, nullptr))};
+    if (!ImplementsIBackgroundTaskRegistration2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskRegistration2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTaskRegistration3_type{py::register_python_type(module.get(), &type_spec_IBackgroundTaskRegistration3, object_bases.get(), nullptr)};
     if (!IBackgroundTaskRegistration3_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle ImplementsIBackgroundTaskRegistration3_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration3, nullptr))};
+    if (!ImplementsIBackgroundTaskRegistration3_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTaskRegistration3_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IBackgroundTrigger_type{py::register_python_type(module.get(), &type_spec_IBackgroundTrigger, object_bases.get(), nullptr)};
     if (!IBackgroundTrigger_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIBackgroundTrigger_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTrigger, nullptr))};
+    if (!ImplementsIBackgroundTrigger_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIBackgroundTrigger_type.get()) == -1)
     {
         return nullptr;
     }

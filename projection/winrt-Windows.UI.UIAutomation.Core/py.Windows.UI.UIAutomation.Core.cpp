@@ -1781,6 +1781,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreAutomationConnectionBoundObjectProvider};
 
+    static PyType_Slot type_slots_ImplementsICoreAutomationConnectionBoundObjectProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider = {
+        "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationConnectionBoundObjectProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreAutomationConnectionBoundObjectProvider};
+
     // ----- ICoreAutomationRemoteOperationExtensionProvider interface --------------------
 
     static PyObject* _new_ICoreAutomationRemoteOperationExtensionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1927,6 +1938,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICoreAutomationRemoteOperationExtensionProvider};
+
+    static PyType_Slot type_slots_ImplementsICoreAutomationRemoteOperationExtensionProvider[] = {
+        { }
+    };
+
+    static PyType_Spec type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider = {
+        "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationRemoteOperationExtensionProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ImplementsICoreAutomationRemoteOperationExtensionProvider};
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
 
@@ -2389,8 +2411,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ImplementsICoreAutomationConnectionBoundObjectProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider, nullptr))};
+    if (!ImplementsICoreAutomationConnectionBoundObjectProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreAutomationConnectionBoundObjectProvider_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle ICoreAutomationRemoteOperationExtensionProvider_type{py::register_python_type(module.get(), &type_spec_ICoreAutomationRemoteOperationExtensionProvider, object_bases.get(), nullptr)};
     if (!ICoreAutomationRemoteOperationExtensionProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsICoreAutomationRemoteOperationExtensionProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider, nullptr))};
+    if (!ImplementsICoreAutomationRemoteOperationExtensionProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsICoreAutomationRemoteOperationExtensionProvider_type.get()) == -1)
     {
         return nullptr;
     }

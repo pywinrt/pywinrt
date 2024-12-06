@@ -29,18 +29,14 @@ from winrt._winrt_windows_ai_machinelearning import (
     TensorUInt64Bit,
     TensorUInt8Bit,
     ILearningModelFeatureDescriptor,
+    ImplementsILearningModelFeatureDescriptor,
     ILearningModelFeatureValue,
+    ImplementsILearningModelFeatureValue,
     ILearningModelOperatorProvider,
+    ImplementsILearningModelOperatorProvider,
     ITensor,
+    ImplementsITensor,
 )
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ai_machinelearning import (
-        ImplementsILearningModelFeatureDescriptor,
-        ImplementsILearningModelFeatureValue,
-        ImplementsILearningModelOperatorProvider,
-        ImplementsITensor,
-    )
 
 __all__ = [
     "LearningModelDeviceKind",
@@ -72,9 +68,13 @@ __all__ = [
     "TensorUInt64Bit",
     "TensorUInt8Bit",
     "ILearningModelFeatureDescriptor",
+    "ImplementsILearningModelFeatureDescriptor",
     "ILearningModelFeatureValue",
+    "ImplementsILearningModelFeatureValue",
     "ILearningModelOperatorProvider",
+    "ImplementsILearningModelOperatorProvider",
     "ITensor",
+    "ImplementsITensor",
 ]
 
 class LearningModelDeviceKind(enum.IntEnum):
