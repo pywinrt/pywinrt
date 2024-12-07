@@ -303,15 +303,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtBasicConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBasicConnectedAnimationConfiguration() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -320,6 +318,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtBasicConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -352,7 +355,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtBasicConnectedAnimationConfiguration>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtBasicConnectedAnimationConfiguration>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtBasicConnectedAnimationConfiguration>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -1831,15 +1843,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtColorKeyFrame : py::py_obj_ref, BasePyWinrtColorKeyFrame
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1848,6 +1858,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtColorKeyFrame* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -4891,15 +4906,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtDirectConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDirectConnectedAnimationConfiguration() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -4908,6 +4921,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtDirectConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -4940,7 +4958,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDirectConnectedAnimationConfiguration>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtDirectConnectedAnimationConfiguration>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtDirectConnectedAnimationConfiguration>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6190,15 +6217,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtDoubleKeyFrame : py::py_obj_ref, BasePyWinrtDoubleKeyFrame
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6207,6 +6232,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtDoubleKeyFrame* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11544,15 +11574,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtGravityConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGravityConnectedAnimationConfiguration() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11561,6 +11589,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtGravityConnectedAnimationConfiguration* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11593,7 +11626,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGravityConnectedAnimationConfiguration>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtGravityConnectedAnimationConfiguration>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtGravityConnectedAnimationConfiguration>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -12574,15 +12616,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtNavigationTransitionInfo : py::py_obj_ref, BasePyWinrtNavigationTransitionInfo
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12591,6 +12631,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtNavigationTransitionInfo* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         winrt::hstring GetNavigationStateCore()
@@ -13057,15 +13102,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtObjectKeyFrame : py::py_obj_ref, BasePyWinrtObjectKeyFrame
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13074,6 +13117,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtObjectKeyFrame* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -15065,15 +15113,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtPointKeyFrame : py::py_obj_ref, BasePyWinrtPointKeyFrame
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15082,6 +15128,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtPointKeyFrame* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -23478,15 +23529,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtTimeline : py::py_obj_ref, BasePyWinrtTimeline
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23495,6 +23544,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static void toggle_reference(PyWinrtTimeline* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 

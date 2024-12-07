@@ -1756,7 +1756,78 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         Py_TPFLAGS_DEFAULT,
         _type_slots_IResourceContext};
 
+    struct ImplementsIResourceContext : py::ImplementsInterfaceT<ImplementsIResourceContext, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>
+    {
+        ImplementsIResourceContext() = delete;
+        ImplementsIResourceContext(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIResourceContext, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>(py_obj, runtime_class)
+        {
+        }
+
+        auto QualifierValues()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "qualifier_values")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIResourceContext(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIResourceContext(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIResourceContext>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIResourceContext[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceContext), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceContext), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIResourceContext[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIResourceContext) },
         { }
     };
 
@@ -1956,7 +2027,166 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         Py_TPFLAGS_DEFAULT,
         _type_slots_IResourceManager};
 
+    struct ImplementsIResourceManager : py::ImplementsInterfaceT<ImplementsIResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>
+    {
+        ImplementsIResourceManager() = delete;
+        ImplementsIResourceManager(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateResourceContext()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_resource_context")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto MainResourceMap()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "main_resource_map")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceMap>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ResourceNotFound(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_resource_not_found")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ResourceNotFound(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_resource_not_found")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIResourceManager(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIResourceManager(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIResourceManager>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIResourceManager[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceManager), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceManager), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIResourceManager[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIResourceManager) },
         { }
     };
 

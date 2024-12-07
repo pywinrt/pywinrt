@@ -63,11 +63,17 @@ static class DelegateWriterExtensions
         this IndentedTextWriter w,
         MethodDefinition method,
         string callable,
-        Action? writeGetCallable = null
+        Action? writeGetCallable = default,
+        bool ensureGil = true,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
     )
     {
-        w.WriteLine("auto gil = py::ensure_gil();");
-        w.WriteBlankLine();
+        if (ensureGil)
+        {
+            w.WriteLine("auto gil = py::ensure_gil();");
+            w.WriteBlankLine();
+        }
+
         w.WriteLine("try");
         w.WriteLine("{");
         w.Indent++;
@@ -136,16 +142,16 @@ static class DelegateWriterExtensions
                 case ParamCategory.Out:
                     w.WriteBlankLine();
                     w.WriteLine(
-                        $"{param.ToParamName()} = py::convert_to<{param.ParameterType.ToCppTypeName()}>(return_value.get(), {i});"
+                        $"{param.ToParamName()} = py::convert_to<{param.ParameterType.ToCppTypeName(map)}>(return_value.get(), {i});"
                     );
                     break;
                 case ParamCategory.ReceiveArray:
                     w.WriteBlankLine();
                     w.WriteLine(
-                        $"auto {param.ToParamName()}_buf = py::convert_to<py::pybuf_view<{param.ParameterType.ToCppTypeName()}, false>>(return_value.get(), {i});"
+                        $"auto {param.ToParamName()}_buf = py::convert_to<py::pybuf_view<{param.ParameterType.ToCppTypeName(map)}, false>>(return_value.get(), {i});"
                     );
                     w.WriteLine(
-                        $"{param.ToParamName()} = winrt::com_array<{param.ParameterType.ToCppTypeName()}>{{{param.ToParamName()}_buf.begin(), {param.ToParamName()}_buf.end()}};"
+                        $"{param.ToParamName()} = winrt::com_array<{param.ParameterType.ToCppTypeName(map)}>{{{param.ToParamName()}_buf.begin(), {param.ToParamName()}_buf.end()}};"
                     );
                     break;
                 default:
@@ -171,16 +177,16 @@ static class DelegateWriterExtensions
             if (method.ReturnType.IsArray)
             {
                 w.WriteLine(
-                    $"auto return_buf = py::convert_to<py::pybuf_view<{method.ReturnType.ToCppTypeName()}, false>>(return_value.get(){index});"
+                    $"auto return_buf = py::convert_to<py::pybuf_view<{method.ReturnType.ToCppTypeName(map)}, false>>(return_value.get(){index});"
                 );
                 w.WriteLine(
-                    $"return winrt::com_array<{method.ReturnType.ToCppTypeName()}>{{return_buf.begin(), return_buf.end()}};"
+                    $"return winrt::com_array<{method.ReturnType.ToCppTypeName(map)}>{{return_buf.begin(), return_buf.end()}};"
                 );
             }
             else
             {
                 w.WriteLine(
-                    $"return py::convert_to<{method.ReturnType.ToCppTypeName()}>(return_value.get(){index});"
+                    $"return py::convert_to<{method.ReturnType.ToCppTypeName(map)}>(return_value.get(){index});"
                 );
             }
         }

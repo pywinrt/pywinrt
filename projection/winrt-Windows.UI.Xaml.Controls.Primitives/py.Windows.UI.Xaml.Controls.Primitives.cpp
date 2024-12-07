@@ -534,15 +534,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     struct PyWinrtButtonBase : py::py_obj_ref, BasePyWinrtButtonBase
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -551,6 +549,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtButtonBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -1645,15 +1648,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtCarouselPanel(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCarouselPanel() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1662,6 +1663,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtCarouselPanel* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -1694,7 +1700,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCarouselPanel>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtCarouselPanel>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtCarouselPanel>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -2995,15 +3010,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtColorSpectrum(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtColorSpectrum() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3012,6 +3025,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtColorSpectrum* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -3044,7 +3062,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtColorSpectrum>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtColorSpectrum>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtColorSpectrum>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -4306,15 +4333,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtCommandBarFlyoutCommandBar(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCommandBarFlyoutCommandBar() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -4323,6 +4348,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtCommandBarFlyoutCommandBar* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -4355,7 +4385,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyoutCommandBar>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtCommandBarFlyoutCommandBar>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtCommandBarFlyoutCommandBar>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5490,15 +5529,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtDragCompletedEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange, bool canceled) : py::py_obj_ref(py_obj), BasePyWinrtDragCompletedEventArgs(horizontalChange, verticalChange, canceled) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5507,6 +5544,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtDragCompletedEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5543,7 +5585,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragCompletedEventArgs>(self.get(), param0, param1, param2);
+
+                    auto obj_impl = winrt::make_self<PyWinrtDragCompletedEventArgs>(self.get(), param0, param1, param2);
+
+                    auto obj = py::make_py_obj<PyWinrtDragCompletedEventArgs>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5736,15 +5787,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtDragDeltaEventArgs(PyObject* py_obj, double horizontalChange, double verticalChange) : py::py_obj_ref(py_obj), BasePyWinrtDragDeltaEventArgs(horizontalChange, verticalChange) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5753,6 +5802,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtDragDeltaEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5788,7 +5842,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragDeltaEventArgs>(self.get(), param0, param1);
+
+                    auto obj_impl = winrt::make_self<PyWinrtDragDeltaEventArgs>(self.get(), param0, param1);
+
+                    auto obj = py::make_py_obj<PyWinrtDragDeltaEventArgs>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5954,15 +6017,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtDragStartedEventArgs(PyObject* py_obj, double horizontalOffset, double verticalOffset) : py::py_obj_ref(py_obj), BasePyWinrtDragStartedEventArgs(horizontalOffset, verticalOffset) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5971,6 +6032,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtDragStartedEventArgs* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -6006,7 +6072,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDragStartedEventArgs>(self.get(), param0, param1);
+
+                    auto obj_impl = winrt::make_self<PyWinrtDragStartedEventArgs>(self.get(), param0, param1);
+
+                    auto obj = py::make_py_obj<PyWinrtDragStartedEventArgs>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6171,15 +6246,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     struct PyWinrtFlyoutBase : py::py_obj_ref, BasePyWinrtFlyoutBase
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6188,6 +6261,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtFlyoutBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         winrt::Windows::UI::Xaml::Controls::Control CreatePresenter()
@@ -8136,15 +8214,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtFlyoutShowOptions(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlyoutShowOptions() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8153,6 +8229,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtFlyoutShowOptions* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -8185,7 +8266,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlyoutShowOptions>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtFlyoutShowOptions>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtFlyoutShowOptions>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -8676,15 +8766,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtGridViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemPresenter() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8693,6 +8781,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtGridViewItemPresenter* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -8725,7 +8818,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItemPresenter>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtGridViewItemPresenter>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtGridViewItemPresenter>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -12047,15 +12149,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtListViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemPresenter() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12064,6 +12164,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtListViewItemPresenter* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -12096,7 +12201,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItemPresenter>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtListViewItemPresenter>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtListViewItemPresenter>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -18908,15 +19022,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtNavigationViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtNavigationViewItemPresenter() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18925,6 +19037,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtNavigationViewItemPresenter* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -18957,7 +19074,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtNavigationViewItemPresenter>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtNavigationViewItemPresenter>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtNavigationViewItemPresenter>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20490,15 +20616,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     struct PyWinrtPickerFlyoutBase : py::py_obj_ref, BasePyWinrtPickerFlyoutBase
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -20507,6 +20631,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtPickerFlyoutBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         void OnConfirmed()
@@ -20844,15 +20973,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtPivotHeaderItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtPivotHeaderItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -20861,6 +20988,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtPivotHeaderItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -20893,7 +21025,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtPivotHeaderItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtPivotHeaderItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtPivotHeaderItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -23081,15 +23222,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     struct PyWinrtRangeBase : py::py_obj_ref, BasePyWinrtRangeBase
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23098,6 +23237,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtRangeBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         void OnMaximumChanged(double param0, double param1)
@@ -25583,15 +25727,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     struct PyWinrtSelectorItem : py::py_obj_ref, BasePyWinrtSelectorItem
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25600,6 +25742,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtSelectorItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -26830,15 +26977,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     {
         PyWinrtToggleButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtToggleButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26847,6 +26992,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static void toggle_reference(PyWinrtToggleButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         void OnToggle()
@@ -26905,7 +27055,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtToggleButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtToggleButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtToggleButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -28134,7 +28293,312 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_IScrollSnapPointsInfo};
 
+    struct ImplementsIScrollSnapPointsInfo : py::ImplementsInterfaceT<ImplementsIScrollSnapPointsInfo, winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
+    {
+        ImplementsIScrollSnapPointsInfo() = delete;
+        ImplementsIScrollSnapPointsInfo(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIScrollSnapPointsInfo, winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetIrregularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation param0, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_irregular_snap_points")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<float>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetRegularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation param0, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment param1, float& param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_regular_snap_points")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                param2 = py::convert_to<float>(return_value.get(), 1);
+
+                return py::convert_to<float>(return_value.get(), 0);
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AreHorizontalSnapPointsRegular()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "are_horizontal_snap_points_regular")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AreVerticalSnapPointsRegular()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "are_vertical_snap_points_regular")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto HorizontalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_horizontal_snap_points_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto HorizontalSnapPointsChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_horizontal_snap_points_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto VerticalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_vertical_snap_points_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto VerticalSnapPointsChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_vertical_snap_points_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIScrollSnapPointsInfo>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIScrollSnapPointsInfo[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollSnapPointsInfo), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollSnapPointsInfo), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIScrollSnapPointsInfo[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIScrollSnapPointsInfo) },
         { }
     };
 

@@ -587,7 +587,158 @@ namespace py::cpp::Windows::Devices
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILowLevelDevicesAggregateProvider};
 
+    struct ImplementsILowLevelDevicesAggregateProvider : py::ImplementsInterfaceT<ImplementsILowLevelDevicesAggregateProvider, winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
+    {
+        ImplementsILowLevelDevicesAggregateProvider() = delete;
+        ImplementsILowLevelDevicesAggregateProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILowLevelDevicesAggregateProvider, winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>(py_obj, runtime_class)
+        {
+        }
+
+        auto AdcControllerProvider()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "adc_controller_provider")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GpioControllerProvider()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "gpio_controller_provider")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto I2cControllerProvider()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "i2c_controller_provider")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PwmControllerProvider()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "pwm_controller_provider")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SpiControllerProvider()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "spi_controller_provider")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILowLevelDevicesAggregateProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILowLevelDevicesAggregateProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILowLevelDevicesAggregateProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILowLevelDevicesAggregateProvider[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILowLevelDevicesAggregateProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILowLevelDevicesAggregateProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILowLevelDevicesAggregateProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILowLevelDevicesAggregateProvider) },
         { }
     };
 

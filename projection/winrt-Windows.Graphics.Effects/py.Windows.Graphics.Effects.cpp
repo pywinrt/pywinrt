@@ -132,7 +132,101 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGraphicsEffect};
 
+    struct ImplementsIGraphicsEffect : py::ImplementsInterfaceT<ImplementsIGraphicsEffect, winrt::Windows::Graphics::Effects::IGraphicsEffect>
+    {
+        ImplementsIGraphicsEffect() = delete;
+        ImplementsIGraphicsEffect(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIGraphicsEffect, winrt::Windows::Graphics::Effects::IGraphicsEffect>(py_obj, runtime_class)
+        {
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Name(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "name", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIGraphicsEffect(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::Effects::IGraphicsEffect>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIGraphicsEffect(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIGraphicsEffect>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIGraphicsEffect[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffect), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffect), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIGraphicsEffect[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGraphicsEffect) },
         { }
     };
 
@@ -209,7 +303,58 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGraphicsEffectSource};
 
+    struct ImplementsIGraphicsEffectSource : py::ImplementsInterfaceT<ImplementsIGraphicsEffectSource, winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
+    {
+        ImplementsIGraphicsEffectSource() = delete;
+        ImplementsIGraphicsEffectSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIGraphicsEffectSource, winrt::Windows::Graphics::Effects::IGraphicsEffectSource>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIGraphicsEffectSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIGraphicsEffectSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIGraphicsEffectSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIGraphicsEffectSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffectSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffectSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIGraphicsEffectSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGraphicsEffectSource) },
         { }
     };
 

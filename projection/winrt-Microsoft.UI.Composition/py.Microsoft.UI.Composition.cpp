@@ -33801,7 +33801,100 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAnimationObject};
 
+    struct ImplementsIAnimationObject : py::ImplementsInterfaceT<ImplementsIAnimationObject, winrt::Microsoft::UI::Composition::IAnimationObject>
+    {
+        ImplementsIAnimationObject() = delete;
+        ImplementsIAnimationObject(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAnimationObject, winrt::Microsoft::UI::Composition::IAnimationObject>(py_obj, runtime_class)
+        {
+        }
+
+        auto PopulatePropertyInfo(winrt::hstring const& param0, winrt::Microsoft::UI::Composition::AnimationPropertyInfo const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "populate_property_info")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAnimationObject(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::IAnimationObject>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAnimationObject(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAnimationObject>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAnimationObject[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnimationObject), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAnimationObject[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAnimationObject) },
         { }
     };
 
@@ -33878,7 +33971,58 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionAnimationBase};
 
+    struct ImplementsICompositionAnimationBase : py::ImplementsInterfaceT<ImplementsICompositionAnimationBase, winrt::Microsoft::UI::Composition::ICompositionAnimationBase>
+    {
+        ImplementsICompositionAnimationBase() = delete;
+        ImplementsICompositionAnimationBase(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICompositionAnimationBase, winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsICompositionAnimationBase(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICompositionAnimationBase(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICompositionAnimationBase>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICompositionAnimationBase[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionAnimationBase), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionAnimationBase), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICompositionAnimationBase[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionAnimationBase) },
         { }
     };
 
@@ -34017,7 +34161,101 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSupportsSystemBackdrop};
 
+    struct ImplementsICompositionSupportsSystemBackdrop : py::ImplementsInterfaceT<ImplementsICompositionSupportsSystemBackdrop, winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>
+    {
+        ImplementsICompositionSupportsSystemBackdrop() = delete;
+        ImplementsICompositionSupportsSystemBackdrop(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICompositionSupportsSystemBackdrop, winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(py_obj, runtime_class)
+        {
+        }
+
+        auto SystemBackdrop()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "system_backdrop")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::Composition::CompositionBrush>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void SystemBackdrop(winrt::Windows::UI::Composition::CompositionBrush const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "system_backdrop", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICompositionSupportsSystemBackdrop>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICompositionSupportsSystemBackdrop[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSupportsSystemBackdrop), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSupportsSystemBackdrop), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICompositionSupportsSystemBackdrop[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSupportsSystemBackdrop) },
         { }
     };
 
@@ -34094,7 +34332,58 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSurface};
 
+    struct ImplementsICompositionSurface : py::ImplementsInterfaceT<ImplementsICompositionSurface, winrt::Microsoft::UI::Composition::ICompositionSurface>
+    {
+        ImplementsICompositionSurface() = delete;
+        ImplementsICompositionSurface(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICompositionSurface, winrt::Microsoft::UI::Composition::ICompositionSurface>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsICompositionSurface(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::ICompositionSurface>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICompositionSurface(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICompositionSurface>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICompositionSurface[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurface), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurface), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICompositionSurface[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSurface) },
         { }
     };
 
@@ -34208,7 +34497,84 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICompositionSurfaceFacade};
 
+    struct ImplementsICompositionSurfaceFacade : py::ImplementsInterfaceT<ImplementsICompositionSurfaceFacade, winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>
+    {
+        ImplementsICompositionSurfaceFacade() = delete;
+        ImplementsICompositionSurfaceFacade(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICompositionSurfaceFacade, winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetRealSurface()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_real_surface")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSurface>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICompositionSurfaceFacade>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICompositionSurfaceFacade[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurfaceFacade), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurfaceFacade), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICompositionSurfaceFacade[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSurfaceFacade) },
         { }
     };
 
@@ -34285,7 +34651,58 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVisualElement};
 
+    struct ImplementsIVisualElement : py::ImplementsInterfaceT<ImplementsIVisualElement, winrt::Microsoft::UI::Composition::IVisualElement>
+    {
+        ImplementsIVisualElement() = delete;
+        ImplementsIVisualElement(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVisualElement, winrt::Microsoft::UI::Composition::IVisualElement>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVisualElement(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::IVisualElement>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVisualElement(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVisualElement>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVisualElement[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVisualElement[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVisualElement) },
         { }
     };
 
@@ -34399,7 +34816,84 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVisualElement2};
 
+    struct ImplementsIVisualElement2 : py::ImplementsInterfaceT<ImplementsIVisualElement2, winrt::Microsoft::UI::Composition::IVisualElement2>
+    {
+        ImplementsIVisualElement2() = delete;
+        ImplementsIVisualElement2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVisualElement2, winrt::Microsoft::UI::Composition::IVisualElement2>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetVisualInternal()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_visual_internal")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::UI::Composition::Visual>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVisualElement2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Composition::IVisualElement2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVisualElement2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVisualElement2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVisualElement2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVisualElement2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVisualElement2) },
         { }
     };
 

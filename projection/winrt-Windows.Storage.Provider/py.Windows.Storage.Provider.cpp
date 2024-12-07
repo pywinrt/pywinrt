@@ -5429,7 +5429,90 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderItemPropertySource};
 
+    struct ImplementsIStorageProviderItemPropertySource : py::ImplementsInterfaceT<ImplementsIStorageProviderItemPropertySource, winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>
+    {
+        ImplementsIStorageProviderItemPropertySource() = delete;
+        ImplementsIStorageProviderItemPropertySource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderItemPropertySource, winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetItemProperties(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_item_properties")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderItemPropertySource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderItemPropertySource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderItemPropertySource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderItemPropertySource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderItemPropertySource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderItemPropertySource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderItemPropertySource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderItemPropertySource) },
         { }
     };
 
@@ -5602,7 +5685,146 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderKnownFolderSyncInfoSource};
 
+    struct ImplementsIStorageProviderKnownFolderSyncInfoSource : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>
+    {
+        ImplementsIStorageProviderKnownFolderSyncInfoSource() = delete;
+        ImplementsIStorageProviderKnownFolderSyncInfoSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetKnownFolderSyncInfo()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_known_folder_sync_info")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto KnownFolderSyncInfoChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_known_folder_sync_info_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto KnownFolderSyncInfoChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_known_folder_sync_info_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderKnownFolderSyncInfoSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderKnownFolderSyncInfoSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderKnownFolderSyncInfoSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderKnownFolderSyncInfoSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderKnownFolderSyncInfoSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderKnownFolderSyncInfoSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderKnownFolderSyncInfoSource) },
         { }
     };
 
@@ -5716,7 +5938,84 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory};
 
+    struct ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>
+    {
+        ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory() = delete;
+        ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetKnownFolderSyncInfoSource()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_known_folder_sync_info_source")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory) },
         { }
     };
 
@@ -5832,7 +6131,90 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderPropertyCapabilities};
 
+    struct ImplementsIStorageProviderPropertyCapabilities : py::ImplementsInterfaceT<ImplementsIStorageProviderPropertyCapabilities, winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>
+    {
+        ImplementsIStorageProviderPropertyCapabilities() = delete;
+        ImplementsIStorageProviderPropertyCapabilities(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderPropertyCapabilities, winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>(py_obj, runtime_class)
+        {
+        }
+
+        auto IsPropertySupported(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "is_property_supported")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderPropertyCapabilities(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderPropertyCapabilities(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderPropertyCapabilities>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderPropertyCapabilities[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderPropertyCapabilities), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderPropertyCapabilities), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderPropertyCapabilities[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderPropertyCapabilities) },
         { }
     };
 
@@ -6026,7 +6408,154 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderShareLinkSource};
 
+    struct ImplementsIStorageProviderShareLinkSource : py::ImplementsInterfaceT<ImplementsIStorageProviderShareLinkSource, winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
+    {
+        ImplementsIStorageProviderShareLinkSource() = delete;
+        ImplementsIStorageProviderShareLinkSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderShareLinkSource, winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateLinkAsync(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_link_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Uri>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetDefaultAccessControlStringAsync(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_default_access_control_string_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::hstring>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetState(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_state")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Provider::StorageProviderShareLinkState>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderShareLinkSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderShareLinkSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderShareLinkSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderShareLinkSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderShareLinkSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderShareLinkSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderShareLinkSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderShareLinkSource) },
         { }
     };
 
@@ -6199,7 +6728,146 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderStatusUISource};
 
+    struct ImplementsIStorageProviderStatusUISource : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISource, winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>
+    {
+        ImplementsIStorageProviderStatusUISource() = delete;
+        ImplementsIStorageProviderStatusUISource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISource, winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetStatusUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_status_ui")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::StorageProviderStatusUI>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StatusUIChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource, winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_status_ui_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StatusUIChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_status_ui_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderStatusUISource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderStatusUISource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderStatusUISource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderStatusUISource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderStatusUISource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderStatusUISource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderStatusUISource) },
         { }
     };
 
@@ -6315,7 +6983,90 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderStatusUISourceFactory};
 
+    struct ImplementsIStorageProviderStatusUISourceFactory : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISourceFactory, winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>
+    {
+        ImplementsIStorageProviderStatusUISourceFactory() = delete;
+        ImplementsIStorageProviderStatusUISourceFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISourceFactory, winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetStatusUISource(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_status_ui_source")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderStatusUISourceFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderStatusUISourceFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderStatusUISourceFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderStatusUISourceFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderStatusUISourceFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderStatusUISourceFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISourceFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderStatusUISourceFactory) },
         { }
     };
 
@@ -6538,7 +7289,162 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderUICommand};
 
+    struct ImplementsIStorageProviderUICommand : py::ImplementsInterfaceT<ImplementsIStorageProviderUICommand, winrt::Windows::Storage::Provider::IStorageProviderUICommand>
+    {
+        ImplementsIStorageProviderUICommand() = delete;
+        ImplementsIStorageProviderUICommand(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderUICommand, winrt::Windows::Storage::Provider::IStorageProviderUICommand>(py_obj, runtime_class)
+        {
+        }
+
+        auto Invoke()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "invoke")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Description()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "description")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Icon()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "icon")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Uri>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Label()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "label")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto State()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::StorageProviderUICommandState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderUICommand(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderUICommand>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderUICommand(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderUICommand>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderUICommand[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderUICommand), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderUICommand), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderUICommand[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderUICommand) },
         { }
     };
 
@@ -6697,7 +7603,142 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderUriSource};
 
+    struct ImplementsIStorageProviderUriSource : py::ImplementsInterfaceT<ImplementsIStorageProviderUriSource, winrt::Windows::Storage::Provider::IStorageProviderUriSource>
+    {
+        ImplementsIStorageProviderUriSource() = delete;
+        ImplementsIStorageProviderUriSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderUriSource, winrt::Windows::Storage::Provider::IStorageProviderUriSource>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetContentInfoForPath(winrt::hstring const& param0, winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_content_info_for_path")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetPathForContentUri(winrt::hstring const& param0, winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_path_for_content_uri")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStorageProviderUriSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderUriSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderUriSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderUriSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderUriSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderUriSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderUriSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStorageProviderUriSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderUriSource) },
         { }
     };
 

@@ -246,7 +246,120 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderEventSource};
 
+    struct ImplementsISysStorageProviderEventSource : py::ImplementsInterfaceT<ImplementsISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
+    {
+        ImplementsISysStorageProviderEventSource() = delete;
+        ImplementsISysStorageProviderEventSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>(py_obj, runtime_class)
+        {
+        }
+
+        auto EventReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_event_received")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto EventReceived(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_event_received")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISysStorageProviderEventSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISysStorageProviderEventSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISysStorageProviderEventSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISysStorageProviderEventSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderEventSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderEventSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISysStorageProviderEventSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderEventSource) },
         { }
     };
 
@@ -402,7 +515,134 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderHandlerFactory};
 
+    struct ImplementsISysStorageProviderHandlerFactory : py::ImplementsInterfaceT<ImplementsISysStorageProviderHandlerFactory, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
+    {
+        ImplementsISysStorageProviderHandlerFactory() = delete;
+        ImplementsISysStorageProviderHandlerFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISysStorageProviderHandlerFactory, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetEventSource(winrt::hstring const& param0, winrt::hstring const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_event_source")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetHttpRequestProvider(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_http_request_provider")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISysStorageProviderHandlerFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISysStorageProviderHandlerFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISysStorageProviderHandlerFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISysStorageProviderHandlerFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHandlerFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHandlerFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISysStorageProviderHandlerFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderHandlerFactory) },
         { }
     };
 
@@ -518,7 +758,90 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISysStorageProviderHttpRequestProvider};
 
+    struct ImplementsISysStorageProviderHttpRequestProvider : py::ImplementsInterfaceT<ImplementsISysStorageProviderHttpRequestProvider, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
+    {
+        ImplementsISysStorageProviderHttpRequestProvider() = delete;
+        ImplementsISysStorageProviderHttpRequestProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISysStorageProviderHttpRequestProvider, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>(py_obj, runtime_class)
+        {
+        }
+
+        auto SendRequestAsync(winrt::Windows::Web::Http::HttpRequestMessage const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "send_request_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Web::Http::HttpResponseMessage>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISysStorageProviderHttpRequestProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISysStorageProviderHttpRequestProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISysStorageProviderHttpRequestProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISysStorageProviderHttpRequestProvider[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHttpRequestProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHttpRequestProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISysStorageProviderHttpRequestProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderHttpRequestProvider) },
         { }
     };
 

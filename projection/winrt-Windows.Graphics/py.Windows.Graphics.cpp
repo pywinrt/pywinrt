@@ -70,7 +70,58 @@ namespace py::cpp::Windows::Graphics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGeometrySource2D};
 
+    struct ImplementsIGeometrySource2D : py::ImplementsInterfaceT<ImplementsIGeometrySource2D, winrt::Windows::Graphics::IGeometrySource2D>
+    {
+        ImplementsIGeometrySource2D() = delete;
+        ImplementsIGeometrySource2D(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIGeometrySource2D, winrt::Windows::Graphics::IGeometrySource2D>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIGeometrySource2D(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::IGeometrySource2D>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIGeometrySource2D(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIGeometrySource2D>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIGeometrySource2D[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGeometrySource2D), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGeometrySource2D), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIGeometrySource2D[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGeometrySource2D) },
         { }
     };
 

@@ -10240,7 +10240,98 @@ namespace py::cpp::Windows::UI::Notifications
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAdaptiveNotificationContent};
 
+    struct ImplementsIAdaptiveNotificationContent : py::ImplementsInterfaceT<ImplementsIAdaptiveNotificationContent, winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
+    {
+        ImplementsIAdaptiveNotificationContent() = delete;
+        ImplementsIAdaptiveNotificationContent(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAdaptiveNotificationContent, winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>(py_obj, runtime_class)
+        {
+        }
+
+        auto Hints()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "hints")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::Notifications::AdaptiveNotificationContentKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAdaptiveNotificationContent(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAdaptiveNotificationContent(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAdaptiveNotificationContent>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAdaptiveNotificationContent[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdaptiveNotificationContent), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdaptiveNotificationContent), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAdaptiveNotificationContent[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAdaptiveNotificationContent) },
         { }
     };
 

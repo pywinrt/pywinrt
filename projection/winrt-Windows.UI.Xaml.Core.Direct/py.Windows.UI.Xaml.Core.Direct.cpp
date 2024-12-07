@@ -2324,7 +2324,58 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         Py_TPFLAGS_DEFAULT,
         _type_slots_IXamlDirectObject};
 
+    struct ImplementsIXamlDirectObject : py::ImplementsInterfaceT<ImplementsIXamlDirectObject, winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
+    {
+        ImplementsIXamlDirectObject() = delete;
+        ImplementsIXamlDirectObject(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIXamlDirectObject, winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIXamlDirectObject(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIXamlDirectObject(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIXamlDirectObject>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIXamlDirectObject[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlDirectObject), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlDirectObject), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIXamlDirectObject[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXamlDirectObject) },
         { }
     };
 

@@ -12249,7 +12249,101 @@ namespace py::cpp::Windows::System
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILauncherViewOptions};
 
+    struct ImplementsILauncherViewOptions : py::ImplementsInterfaceT<ImplementsILauncherViewOptions, winrt::Windows::System::ILauncherViewOptions>
+    {
+        ImplementsILauncherViewOptions() = delete;
+        ImplementsILauncherViewOptions(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILauncherViewOptions, winrt::Windows::System::ILauncherViewOptions>(py_obj, runtime_class)
+        {
+        }
+
+        auto DesiredRemainingView()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "desired_remaining_view")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::ViewManagement::ViewSizePreference>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void DesiredRemainingView(winrt::Windows::UI::ViewManagement::ViewSizePreference param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "desired_remaining_view", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILauncherViewOptions(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::System::ILauncherViewOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILauncherViewOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILauncherViewOptions>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILauncherViewOptions[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILauncherViewOptions), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILauncherViewOptions), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILauncherViewOptions[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILauncherViewOptions) },
         { }
     };
 

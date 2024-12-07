@@ -500,18 +500,18 @@ static class ObjectWriterExtensions
         }
 
         w.WriteBlankLine();
-        w.WriteLine("using py::py_obj_ref::get_py_obj;");
-        w.WriteBlankLine();
-        w.WriteLine("int32_t GetPyObject(PyObject*& obj)");
+        w.WriteLine("int32_t GetPyObject(PyObject*& obj) override");
         w.WriteLine("{");
         w.Indent++;
-        w.WriteLine("obj = get_py_obj();");
+        w.WriteLine("obj = py::py_obj_ref::get_py_obj();");
         w.WriteLine("return 0;");
         w.Indent--;
         w.WriteLine("}");
 
         w.WriteBlankLine();
-        w.WriteLine("int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)");
+        w.WriteLine(
+            "int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
+        );
         w.WriteLine("{");
         w.Indent++;
         if (type.IsComposable)
@@ -533,6 +533,16 @@ static class ObjectWriterExtensions
         w.WriteLine("{");
         w.Indent++;
         w.WriteLine("py::py_obj_ref::toggle_reference(instance, is_last_reference);");
+        w.Indent--;
+        w.WriteLine("}");
+
+        w.WriteBlankLine();
+        w.WriteLine(
+            "int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override"
+        );
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);");
         w.Indent--;
         w.WriteLine("}");
 
