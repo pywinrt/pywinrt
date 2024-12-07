@@ -8544,7 +8544,84 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_IEnteredBackgroundEventArgs};
 
+    struct ImplementsIEnteredBackgroundEventArgs : py::ImplementsInterfaceT<ImplementsIEnteredBackgroundEventArgs, winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
+    {
+        ImplementsIEnteredBackgroundEventArgs() = delete;
+        ImplementsIEnteredBackgroundEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIEnteredBackgroundEventArgs, winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetDeferral()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_deferral")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Deferral>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIEnteredBackgroundEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIEnteredBackgroundEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIEnteredBackgroundEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIEnteredBackgroundEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIEnteredBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIEnteredBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIEnteredBackgroundEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIEnteredBackgroundEventArgs) },
         { }
     };
 
@@ -8658,7 +8735,84 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILeavingBackgroundEventArgs};
 
+    struct ImplementsILeavingBackgroundEventArgs : py::ImplementsInterfaceT<ImplementsILeavingBackgroundEventArgs, winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
+    {
+        ImplementsILeavingBackgroundEventArgs() = delete;
+        ImplementsILeavingBackgroundEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILeavingBackgroundEventArgs, winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetDeferral()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_deferral")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Deferral>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILeavingBackgroundEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILeavingBackgroundEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILeavingBackgroundEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILeavingBackgroundEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILeavingBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILeavingBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILeavingBackgroundEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILeavingBackgroundEventArgs) },
         { }
     };
 
@@ -8774,7 +8928,90 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPackageCatalogStatics2};
 
+    struct ImplementsIPackageCatalogStatics2 : py::ImplementsInterfaceT<ImplementsIPackageCatalogStatics2, winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
+    {
+        ImplementsIPackageCatalogStatics2() = delete;
+        ImplementsIPackageCatalogStatics2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPackageCatalogStatics2, winrt::Windows::ApplicationModel::IPackageCatalogStatics2>(py_obj, runtime_class)
+        {
+        }
+
+        auto OpenForPackage(winrt::Windows::ApplicationModel::Package const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "open_for_package")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::PackageCatalog>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPackageCatalogStatics2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPackageCatalogStatics2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPackageCatalogStatics2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPackageCatalogStatics2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPackageCatalogStatics2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPackageCatalogStatics2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPackageCatalogStatics2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPackageCatalogStatics2) },
         { }
     };
 
@@ -8889,7 +9126,82 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingDeferral};
 
+    struct ImplementsISuspendingDeferral : py::ImplementsInterfaceT<ImplementsISuspendingDeferral, winrt::Windows::ApplicationModel::ISuspendingDeferral>
+    {
+        ImplementsISuspendingDeferral() = delete;
+        ImplementsISuspendingDeferral(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISuspendingDeferral, winrt::Windows::ApplicationModel::ISuspendingDeferral>(py_obj, runtime_class)
+        {
+        }
+
+        auto Complete()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "complete")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISuspendingDeferral(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::ISuspendingDeferral>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISuspendingDeferral(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISuspendingDeferral>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISuspendingDeferral[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingDeferral), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingDeferral), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISuspendingDeferral[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingDeferral) },
         { }
     };
 
@@ -8993,7 +9305,78 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingEventArgs};
 
+    struct ImplementsISuspendingEventArgs : py::ImplementsInterfaceT<ImplementsISuspendingEventArgs, winrt::Windows::ApplicationModel::ISuspendingEventArgs>
+    {
+        ImplementsISuspendingEventArgs() = delete;
+        ImplementsISuspendingEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISuspendingEventArgs, winrt::Windows::ApplicationModel::ISuspendingEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto SuspendingOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "suspending_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::SuspendingOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISuspendingEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::ISuspendingEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISuspendingEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISuspendingEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISuspendingEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISuspendingEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingEventArgs) },
         { }
     };
 
@@ -9134,7 +9517,104 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISuspendingOperation};
 
+    struct ImplementsISuspendingOperation : py::ImplementsInterfaceT<ImplementsISuspendingOperation, winrt::Windows::ApplicationModel::ISuspendingOperation>
+    {
+        ImplementsISuspendingOperation() = delete;
+        ImplementsISuspendingOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISuspendingOperation, winrt::Windows::ApplicationModel::ISuspendingOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetDeferral()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_deferral")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::SuspendingDeferral>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Deadline()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "deadline")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::DateTime>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISuspendingOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::ISuspendingOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISuspendingOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISuspendingOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISuspendingOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISuspendingOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingOperation) },
         { }
     };
 

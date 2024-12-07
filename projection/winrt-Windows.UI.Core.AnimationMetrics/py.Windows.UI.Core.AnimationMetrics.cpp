@@ -1424,7 +1424,158 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertyAnimation};
 
+    struct ImplementsIPropertyAnimation : py::ImplementsInterfaceT<ImplementsIPropertyAnimation, winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
+    {
+        ImplementsIPropertyAnimation() = delete;
+        ImplementsIPropertyAnimation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPropertyAnimation, winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(py_obj, runtime_class)
+        {
+        }
+
+        auto Control1()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "control1")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Point>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Control2()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "control2")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Point>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Delay()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "delay")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::TimeSpan>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Duration()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "duration")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::TimeSpan>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Type()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "type")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPropertyAnimation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPropertyAnimation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPropertyAnimation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPropertyAnimation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyAnimation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyAnimation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPropertyAnimation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertyAnimation) },
         { }
     };
 

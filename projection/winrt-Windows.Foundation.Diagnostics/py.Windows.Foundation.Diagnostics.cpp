@@ -9116,7 +9116,114 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IErrorReportingSettings};
 
+    struct ImplementsIErrorReportingSettings : py::ImplementsInterfaceT<ImplementsIErrorReportingSettings, winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
+    {
+        ImplementsIErrorReportingSettings() = delete;
+        ImplementsIErrorReportingSettings(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIErrorReportingSettings, winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetErrorOptions()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_error_options")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SetErrorOptions(winrt::Windows::Foundation::Diagnostics::ErrorOptions param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "set_error_options")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIErrorReportingSettings(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIErrorReportingSettings(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIErrorReportingSettings>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIErrorReportingSettings[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIErrorReportingSettings), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIErrorReportingSettings), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIErrorReportingSettings[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIErrorReportingSettings) },
         { }
     };
 
@@ -9496,7 +9603,292 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileLoggingSession};
 
+    struct ImplementsIFileLoggingSession : py::ImplementsInterfaceT<ImplementsIFileLoggingSession, winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
+    {
+        ImplementsIFileLoggingSession() = delete;
+        ImplementsIFileLoggingSession(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileLoggingSession, winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>(py_obj, runtime_class)
+        {
+        }
+
+        auto AddLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_logging_channel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AddLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0, winrt::Windows::Foundation::Diagnostics::LoggingLevel param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_logging_channel_with_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto CloseAndSaveToFileAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close_and_save_to_file_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoveLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_logging_channel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogFileGenerated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_log_file_generated")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogFileGenerated(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_log_file_generated")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileLoggingSession(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileLoggingSession(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileLoggingSession>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileLoggingSession[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileLoggingSession), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileLoggingSession), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileLoggingSession[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileLoggingSession) },
         { }
     };
 
@@ -9936,7 +10328,366 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingChannel};
 
+    struct ImplementsILoggingChannel : py::ImplementsInterfaceT<ImplementsILoggingChannel, winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
+    {
+        ImplementsILoggingChannel() = delete;
+        ImplementsILoggingChannel(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILoggingChannel, winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(py_obj, runtime_class)
+        {
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogMessage(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_message")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogMessage(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingLevel param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_message_with_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogValuePair(winrt::hstring const& param0, int32_t param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_value_pair")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogValuePair(winrt::hstring const& param0, int32_t param1, winrt::Windows::Foundation::Diagnostics::LoggingLevel param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_value_pair_with_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Enabled()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "enabled")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Level()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "level")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LoggingEnabled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_logging_enabled")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LoggingEnabled(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_logging_enabled")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILoggingChannel(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILoggingChannel(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILoggingChannel>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILoggingChannel[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingChannel), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingChannel), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILoggingChannel[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingChannel) },
         { }
     };
 
@@ -10260,7 +11011,248 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingSession};
 
+    struct ImplementsILoggingSession : py::ImplementsInterfaceT<ImplementsILoggingSession, winrt::Windows::Foundation::Diagnostics::ILoggingSession>
+    {
+        ImplementsILoggingSession() = delete;
+        ImplementsILoggingSession(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILoggingSession, winrt::Windows::Foundation::Diagnostics::ILoggingSession>(py_obj, runtime_class)
+        {
+        }
+
+        auto AddLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_logging_channel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AddLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0, winrt::Windows::Foundation::Diagnostics::LoggingLevel param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_logging_channel_with_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoveLoggingChannel(winrt::Windows::Foundation::Diagnostics::ILoggingChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_logging_channel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SaveToFileAsync(winrt::Windows::Storage::IStorageFolder const& param0, winrt::hstring const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "save_to_file_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILoggingSession(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Diagnostics::ILoggingSession>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILoggingSession(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILoggingSession>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILoggingSession[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingSession), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingSession), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILoggingSession[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingSession) },
         { }
     };
 
@@ -10781,7 +11773,516 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILoggingTarget};
 
+    struct ImplementsILoggingTarget : py::ImplementsInterfaceT<ImplementsILoggingTarget, winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
+    {
+        ImplementsILoggingTarget() = delete;
+        ImplementsILoggingTarget(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILoggingTarget, winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(py_obj, runtime_class)
+        {
+        }
+
+        auto IsEnabled()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "is_enabled")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsEnabled(winrt::Windows::Foundation::Diagnostics::LoggingLevel param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "is_enabled_with_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsEnabled(winrt::Windows::Foundation::Diagnostics::LoggingLevel param0, int64_t param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "is_enabled_with_level_and_keywords")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogEvent(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_event")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogEvent(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_event_with_fields")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogEvent(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1, winrt::Windows::Foundation::Diagnostics::LoggingLevel param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_event_with_fields_and_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LogEvent(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1, winrt::Windows::Foundation::Diagnostics::LoggingLevel param2, winrt::Windows::Foundation::Diagnostics::LoggingOptions const& param3)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "log_event_with_fields_and_options")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(4, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StartActivity(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "start_activity")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingActivity>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StartActivity(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "start_activity_with_fields")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingActivity>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StartActivity(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1, winrt::Windows::Foundation::Diagnostics::LoggingLevel param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "start_activity_with_fields_and_level")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingActivity>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto StartActivity(winrt::hstring const& param0, winrt::Windows::Foundation::Diagnostics::LoggingFields const& param1, winrt::Windows::Foundation::Diagnostics::LoggingLevel param2, winrt::Windows::Foundation::Diagnostics::LoggingOptions const& param3)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "start_activity_with_fields_and_options")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(4, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingActivity>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILoggingTarget(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILoggingTarget(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILoggingTarget>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILoggingTarget[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingTarget), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingTarget), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILoggingTarget[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingTarget) },
         { }
     };
 

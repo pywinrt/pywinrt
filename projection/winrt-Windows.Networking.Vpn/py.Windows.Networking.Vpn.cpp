@@ -11259,7 +11259,100 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnChannelStatics};
 
+    struct ImplementsIVpnChannelStatics : py::ImplementsInterfaceT<ImplementsIVpnChannelStatics, winrt::Windows::Networking::Vpn::IVpnChannelStatics>
+    {
+        ImplementsIVpnChannelStatics() = delete;
+        ImplementsIVpnChannelStatics(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnChannelStatics, winrt::Windows::Networking::Vpn::IVpnChannelStatics>(py_obj, runtime_class)
+        {
+        }
+
+        auto ProcessEventAsync(winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::Foundation::IInspectable const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "process_event_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnChannelStatics(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnChannelStatics>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnChannelStatics(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnChannelStatics>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnChannelStatics[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnChannelStatics), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnChannelStatics), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnChannelStatics[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnChannelStatics) },
         { }
     };
 
@@ -11444,7 +11537,138 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCredential};
 
+    struct ImplementsIVpnCredential : py::ImplementsInterfaceT<ImplementsIVpnCredential, winrt::Windows::Networking::Vpn::IVpnCredential>
+    {
+        ImplementsIVpnCredential() = delete;
+        ImplementsIVpnCredential(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnCredential, winrt::Windows::Networking::Vpn::IVpnCredential>(py_obj, runtime_class)
+        {
+        }
+
+        auto AdditionalPin()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "additional_pin")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto CertificateCredential()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "certificate_credential")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OldPasswordCredential()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "old_password_credential")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PasskeyCredential()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "passkey_credential")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnCredential(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnCredential>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnCredential(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnCredential>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnCredential[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCredential), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCredential), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnCredential[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCredential) },
         { }
     };
 
@@ -11707,7 +11931,187 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCustomPrompt};
 
+    struct ImplementsIVpnCustomPrompt : py::ImplementsInterfaceT<ImplementsIVpnCustomPrompt, winrt::Windows::Networking::Vpn::IVpnCustomPrompt>
+    {
+        ImplementsIVpnCustomPrompt() = delete;
+        ImplementsIVpnCustomPrompt(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnCustomPrompt, winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(py_obj, runtime_class)
+        {
+        }
+
+        auto Bordered()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bordered")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Bordered(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "bordered", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Compulsory()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "compulsory")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Compulsory(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "compulsory", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Label()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "label")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Label(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "label", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnCustomPrompt(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnCustomPrompt(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnCustomPrompt>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnCustomPrompt[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPrompt), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPrompt), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnCustomPrompt[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCustomPrompt) },
         { }
     };
 
@@ -11970,7 +12374,187 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnCustomPromptElement};
 
+    struct ImplementsIVpnCustomPromptElement : py::ImplementsInterfaceT<ImplementsIVpnCustomPromptElement, winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>
+    {
+        ImplementsIVpnCustomPromptElement() = delete;
+        ImplementsIVpnCustomPromptElement(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnCustomPromptElement, winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(py_obj, runtime_class)
+        {
+        }
+
+        auto Compulsory()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "compulsory")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Compulsory(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "compulsory", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DisplayName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "display_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void DisplayName(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "display_name", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Emphasized()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "emphasized")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Emphasized(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "emphasized", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnCustomPromptElement(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnCustomPromptElement(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnCustomPromptElement>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnCustomPromptElement[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPromptElement), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPromptElement), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnCustomPromptElement[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCustomPromptElement) },
         { }
     };
 
@@ -12089,7 +12673,114 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnDomainNameInfoFactory};
 
+    struct ImplementsIVpnDomainNameInfoFactory : py::ImplementsInterfaceT<ImplementsIVpnDomainNameInfoFactory, winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>
+    {
+        ImplementsIVpnDomainNameInfoFactory() = delete;
+        ImplementsIVpnDomainNameInfoFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnDomainNameInfoFactory, winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateVpnDomainNameInfo(winrt::hstring const& param0, winrt::Windows::Networking::Vpn::VpnDomainNameType param1, winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName> const& param2, winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName> const& param3)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_vpn_domain_name_info")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(4, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameInfo>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnDomainNameInfoFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnDomainNameInfoFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnDomainNameInfoFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnDomainNameInfoFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnDomainNameInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnDomainNameInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnDomainNameInfoFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnDomainNameInfoFactory) },
         { }
     };
 
@@ -12205,7 +12896,90 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnInterfaceIdFactory};
 
+    struct ImplementsIVpnInterfaceIdFactory : py::ImplementsInterfaceT<ImplementsIVpnInterfaceIdFactory, winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>
+    {
+        ImplementsIVpnInterfaceIdFactory() = delete;
+        ImplementsIVpnInterfaceIdFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnInterfaceIdFactory, winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateVpnInterfaceId(winrt::array_view<uint8_t const> param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_vpn_interface_id")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnInterfaceIdFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnInterfaceIdFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnInterfaceIdFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnInterfaceIdFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnInterfaceIdFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnInterfaceIdFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnInterfaceIdFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnInterfaceIdFactory) },
         { }
     };
 
@@ -12323,7 +13097,108 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnNamespaceInfoFactory};
 
+    struct ImplementsIVpnNamespaceInfoFactory : py::ImplementsInterfaceT<ImplementsIVpnNamespaceInfoFactory, winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>
+    {
+        ImplementsIVpnNamespaceInfoFactory() = delete;
+        ImplementsIVpnNamespaceInfoFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnNamespaceInfoFactory, winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateVpnNamespaceInfo(winrt::hstring const& param0, winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName> const& param1, winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName> const& param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_vpn_namespace_info")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnNamespaceInfoFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnNamespaceInfoFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnNamespaceInfoFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnNamespaceInfoFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnNamespaceInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnNamespaceInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnNamespaceInfoFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnNamespaceInfoFactory) },
         { }
     };
 
@@ -12441,7 +13316,108 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPacketBufferFactory};
 
+    struct ImplementsIVpnPacketBufferFactory : py::ImplementsInterfaceT<ImplementsIVpnPacketBufferFactory, winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>
+    {
+        ImplementsIVpnPacketBufferFactory() = delete;
+        ImplementsIVpnPacketBufferFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnPacketBufferFactory, winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateVpnPacketBuffer(winrt::Windows::Networking::Vpn::VpnPacketBuffer const& param0, uint32_t param1, uint32_t param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_vpn_packet_buffer")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnPacketBufferFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnPacketBufferFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnPacketBufferFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnPacketBufferFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPacketBufferFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPacketBufferFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnPacketBufferFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPacketBufferFactory) },
         { }
     };
 
@@ -12730,7 +13706,252 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPlugIn};
 
+    struct ImplementsIVpnPlugIn : py::ImplementsInterfaceT<ImplementsIVpnPlugIn, winrt::Windows::Networking::Vpn::IVpnPlugIn>
+    {
+        ImplementsIVpnPlugIn() = delete;
+        ImplementsIVpnPlugIn(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnPlugIn, winrt::Windows::Networking::Vpn::IVpnPlugIn>(py_obj, runtime_class)
+        {
+        }
+
+        auto Connect(winrt::Windows::Networking::Vpn::VpnChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "connect")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Decapsulate(winrt::Windows::Networking::Vpn::VpnChannel const& param0, winrt::Windows::Networking::Vpn::VpnPacketBuffer const& param1, winrt::Windows::Networking::Vpn::VpnPacketBufferList const& param2, winrt::Windows::Networking::Vpn::VpnPacketBufferList const& param3)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "decapsulate")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(4, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Disconnect(winrt::Windows::Networking::Vpn::VpnChannel const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "disconnect")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Encapsulate(winrt::Windows::Networking::Vpn::VpnChannel const& param0, winrt::Windows::Networking::Vpn::VpnPacketBufferList const& param1, winrt::Windows::Networking::Vpn::VpnPacketBufferList const& param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "encapsulate")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetKeepAlivePayload(winrt::Windows::Networking::Vpn::VpnChannel const& param0, winrt::Windows::Networking::Vpn::VpnPacketBuffer& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_keep_alive_payload")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(return_value.get(), 0);
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnPlugIn(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnPlugIn>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnPlugIn(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnPlugIn>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnPlugIn[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugIn), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugIn), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnPlugIn[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPlugIn) },
         { }
     };
 
@@ -12848,7 +14069,100 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPlugInReconnectTransport};
 
+    struct ImplementsIVpnPlugInReconnectTransport : py::ImplementsInterfaceT<ImplementsIVpnPlugInReconnectTransport, winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>
+    {
+        ImplementsIVpnPlugInReconnectTransport() = delete;
+        ImplementsIVpnPlugInReconnectTransport(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnPlugInReconnectTransport, winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>(py_obj, runtime_class)
+        {
+        }
+
+        auto ReconnectTransport(winrt::Windows::Networking::Vpn::VpnChannel const& param0, winrt::Windows::Foundation::IInspectable const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "reconnect_transport")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnPlugInReconnectTransport>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnPlugInReconnectTransport[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugInReconnectTransport), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugInReconnectTransport), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnPlugInReconnectTransport[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPlugInReconnectTransport) },
         { }
     };
 
@@ -13219,7 +14533,267 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnProfile};
 
+    struct ImplementsIVpnProfile : py::ImplementsInterfaceT<ImplementsIVpnProfile, winrt::Windows::Networking::Vpn::IVpnProfile>
+    {
+        ImplementsIVpnProfile() = delete;
+        ImplementsIVpnProfile(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnProfile, winrt::Windows::Networking::Vpn::IVpnProfile>(py_obj, runtime_class)
+        {
+        }
+
+        auto AlwaysOn()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "always_on")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void AlwaysOn(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "always_on", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AppTriggers()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "app_triggers")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnAppId>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DomainNameInfoList()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "domain_name_info_list")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnDomainNameInfo>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ProfileName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "profile_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void ProfileName(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "profile_name", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RememberCredentials()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "remember_credentials")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void RememberCredentials(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "remember_credentials", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Routes()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "routes")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TrafficFilters()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "traffic_filters")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnTrafficFilter>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnProfile(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnProfile>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnProfile(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnProfile>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnProfile[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnProfile), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnProfile), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnProfile[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnProfile) },
         { }
     };
 
@@ -13336,7 +14910,102 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnRouteFactory};
 
+    struct ImplementsIVpnRouteFactory : py::ImplementsInterfaceT<ImplementsIVpnRouteFactory, winrt::Windows::Networking::Vpn::IVpnRouteFactory>
+    {
+        ImplementsIVpnRouteFactory() = delete;
+        ImplementsIVpnRouteFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVpnRouteFactory, winrt::Windows::Networking::Vpn::IVpnRouteFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateVpnRoute(winrt::Windows::Networking::HostName const& param0, uint8_t param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_vpn_route")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Networking::Vpn::VpnRoute>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVpnRouteFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Networking::Vpn::IVpnRouteFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVpnRouteFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVpnRouteFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVpnRouteFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnRouteFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnRouteFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVpnRouteFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnRouteFactory) },
         { }
     };
 

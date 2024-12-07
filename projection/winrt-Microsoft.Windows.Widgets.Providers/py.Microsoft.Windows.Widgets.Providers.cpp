@@ -1941,7 +1941,204 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetManager};
 
+    struct ImplementsIWidgetManager : py::ImplementsInterfaceT<ImplementsIWidgetManager, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>
+    {
+        ImplementsIWidgetManager() = delete;
+        ImplementsIWidgetManager(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetManager, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>(py_obj, runtime_class)
+        {
+        }
+
+        auto DeleteWidget(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "delete_widget")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetWidgetIds()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_widget_ids")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get());
+                return winrt::com_array<winrt::hstring>{return_buf.begin(), return_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetWidgetInfo(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_widget_info")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetWidgetInfos()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_widget_infos")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo, false>>(return_value.get());
+                return winrt::com_array<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>{return_buf.begin(), return_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto UpdateWidget(winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "update_widget")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWidgetManager(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetManager(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetManager>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetManager[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetManager), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetManager), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWidgetManager[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetManager) },
         { }
     };
 
@@ -2259,7 +2456,250 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProvider};
 
+    struct ImplementsIWidgetProvider : py::ImplementsInterfaceT<ImplementsIWidgetProvider, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>
+    {
+        ImplementsIWidgetProvider() = delete;
+        ImplementsIWidgetProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetProvider, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>(py_obj, runtime_class)
+        {
+        }
+
+        auto Activate(winrt::Microsoft::Windows::Widgets::Providers::WidgetContext const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "activate")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto CreateWidget(winrt::Microsoft::Windows::Widgets::Providers::WidgetContext const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_widget")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Deactivate(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "deactivate")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DeleteWidget(winrt::hstring const& param0, winrt::hstring const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "delete_widget")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OnActionInvoked(winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_action_invoked")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OnWidgetContextChanged(winrt::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_widget_context_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWidgetProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetProvider[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWidgetProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetProvider) },
         { }
     };
 
@@ -2376,7 +2816,88 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProvider2};
 
+    struct ImplementsIWidgetProvider2 : py::ImplementsInterfaceT<ImplementsIWidgetProvider2, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>
+    {
+        ImplementsIWidgetProvider2() = delete;
+        ImplementsIWidgetProvider2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetProvider2, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>(py_obj, runtime_class)
+        {
+        }
+
+        auto OnCustomizationRequested(winrt::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_customization_requested")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWidgetProvider2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetProvider2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetProvider2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetProvider2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetProvider2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetProvider2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWidgetProvider2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetProvider2) },
         { }
     };
 
@@ -2493,7 +3014,88 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProviderAnalytics};
 
+    struct ImplementsIWidgetProviderAnalytics : py::ImplementsInterfaceT<ImplementsIWidgetProviderAnalytics, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>
+    {
+        ImplementsIWidgetProviderAnalytics() = delete;
+        ImplementsIWidgetProviderAnalytics(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetProviderAnalytics, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>(py_obj, runtime_class)
+        {
+        }
+
+        auto OnAnalyticsInfoReported(winrt::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_analytics_info_reported")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWidgetProviderAnalytics(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetProviderAnalytics(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetProviderAnalytics>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetProviderAnalytics[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetProviderAnalytics), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetProviderAnalytics), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWidgetProviderAnalytics[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetProviderAnalytics) },
         { }
     };
 
@@ -2610,7 +3212,88 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWidgetProviderErrors};
 
+    struct ImplementsIWidgetProviderErrors : py::ImplementsInterfaceT<ImplementsIWidgetProviderErrors, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>
+    {
+        ImplementsIWidgetProviderErrors() = delete;
+        ImplementsIWidgetProviderErrors(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetProviderErrors, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>(py_obj, runtime_class)
+        {
+        }
+
+        auto OnErrorInfoReported(winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_error_info_reported")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWidgetProviderErrors(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetProviderErrors(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetProviderErrors>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetProviderErrors[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetProviderErrors), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetProviderErrors), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWidgetProviderErrors[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetProviderErrors) },
         { }
     };
 

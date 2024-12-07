@@ -3785,7 +3785,233 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncAction};
 
+    struct ImplementsIAsyncAction : py::ImplementsInterfaceT<ImplementsIAsyncAction, winrt::Windows::Foundation::IAsyncAction>
+    {
+        ImplementsIAsyncAction() = delete;
+        ImplementsIAsyncAction(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAsyncAction, winrt::Windows::Foundation::IAsyncAction>(py_obj, runtime_class)
+        {
+        }
+
+        auto Cancel()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "cancel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetResults()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_results")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Completed()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "completed")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Completed(winrt::Windows::Foundation::AsyncActionCompletedHandler const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "completed", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ErrorCode()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "error_code")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hresult>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Id()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Status()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "status")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::AsyncStatus>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAsyncAction(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IAsyncAction>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAsyncAction(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAsyncAction>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAsyncAction[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncAction), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncAction), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAsyncAction[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncAction) },
         { }
     };
 
@@ -4061,7 +4287,50 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncActionWithProgress};
 
+    static PyObject* _guid_ImplementsIAsyncActionWithProgress(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAsyncActionWithProgress(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAsyncActionWithProgress[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncActionWithProgress), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncActionWithProgress), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAsyncActionWithProgress[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncActionWithProgress) },
         { }
     };
 
@@ -4295,7 +4564,166 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncInfo};
 
+    struct ImplementsIAsyncInfo : py::ImplementsInterfaceT<ImplementsIAsyncInfo, winrt::Windows::Foundation::IAsyncInfo>
+    {
+        ImplementsIAsyncInfo() = delete;
+        ImplementsIAsyncInfo(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAsyncInfo, winrt::Windows::Foundation::IAsyncInfo>(py_obj, runtime_class)
+        {
+        }
+
+        auto Cancel()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "cancel")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ErrorCode()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "error_code")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hresult>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Id()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Status()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "status")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::AsyncStatus>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAsyncInfo(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IAsyncInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAsyncInfo(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAsyncInfo>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAsyncInfo[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncInfo), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncInfo), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAsyncInfo[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncInfo) },
         { }
     };
 
@@ -4571,7 +4999,50 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncOperationWithProgress};
 
+    static PyObject* _guid_ImplementsIAsyncOperationWithProgress(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAsyncOperationWithProgress(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAsyncOperationWithProgress[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperationWithProgress), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperationWithProgress), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAsyncOperationWithProgress[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncOperationWithProgress) },
         { }
     };
 
@@ -4788,7 +5259,50 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAsyncOperation};
 
+    static PyObject* _guid_ImplementsIAsyncOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAsyncOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAsyncOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAsyncOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncOperation) },
         { }
     };
 
@@ -4924,7 +5438,82 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IClosable};
 
+    struct ImplementsIClosable : py::ImplementsInterfaceT<ImplementsIClosable, winrt::Windows::Foundation::IClosable>
+    {
+        ImplementsIClosable() = delete;
+        ImplementsIClosable(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIClosable, winrt::Windows::Foundation::IClosable>(py_obj, runtime_class)
+        {
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIClosable(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IClosable>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIClosable(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIClosable>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIClosable[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIClosable), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIClosable), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIClosable[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIClosable) },
         { }
     };
 
@@ -5040,7 +5629,90 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IGetActivationFactory};
 
+    struct ImplementsIGetActivationFactory : py::ImplementsInterfaceT<ImplementsIGetActivationFactory, winrt::Windows::Foundation::IGetActivationFactory>
+    {
+        ImplementsIGetActivationFactory() = delete;
+        ImplementsIGetActivationFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIGetActivationFactory, winrt::Windows::Foundation::IGetActivationFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetActivationFactory(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_activation_factory")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIGetActivationFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IGetActivationFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIGetActivationFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIGetActivationFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIGetActivationFactory[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGetActivationFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGetActivationFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIGetActivationFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGetActivationFactory) },
         { }
     };
 
@@ -5213,7 +5885,108 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMemoryBuffer};
 
+    struct ImplementsIMemoryBuffer : py::ImplementsInterfaceT<ImplementsIMemoryBuffer, winrt::Windows::Foundation::IMemoryBuffer>
+    {
+        ImplementsIMemoryBuffer() = delete;
+        ImplementsIMemoryBuffer(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMemoryBuffer, winrt::Windows::Foundation::IMemoryBuffer>(py_obj, runtime_class)
+        {
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto CreateReference()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_reference")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IMemoryBufferReference>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMemoryBuffer(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IMemoryBuffer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMemoryBuffer(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMemoryBuffer>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMemoryBuffer[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBuffer), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBuffer), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMemoryBuffer[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMemoryBuffer) },
         { }
     };
 
@@ -5450,7 +6223,164 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMemoryBufferReference};
 
+    struct ImplementsIMemoryBufferReference : py::ImplementsInterfaceT<ImplementsIMemoryBufferReference, winrt::Windows::Foundation::IMemoryBufferReference>
+    {
+        ImplementsIMemoryBufferReference() = delete;
+        ImplementsIMemoryBufferReference(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMemoryBufferReference, winrt::Windows::Foundation::IMemoryBufferReference>(py_obj, runtime_class)
+        {
+        }
+
+        auto Close()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "close")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Capacity()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "capacity")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IMemoryBufferReference, winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_closed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Closed(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_closed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMemoryBufferReference(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IMemoryBufferReference>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMemoryBufferReference(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMemoryBufferReference>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMemoryBufferReference[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBufferReference), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBufferReference), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMemoryBufferReference[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMemoryBufferReference) },
         { }
     };
 
@@ -7121,7 +8051,1079 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertyValue};
 
+    struct ImplementsIPropertyValue : py::ImplementsInterfaceT<ImplementsIPropertyValue, winrt::Windows::Foundation::IPropertyValue>
+    {
+        ImplementsIPropertyValue() = delete;
+        ImplementsIPropertyValue(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPropertyValue, winrt::Windows::Foundation::IPropertyValue>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetBoolean()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_boolean")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetBooleanArray(winrt::com_array<bool>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_boolean_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<bool, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<bool>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetChar16()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_char16")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<char16_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetChar16Array(winrt::com_array<char16_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_char16_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<char16_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<char16_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetDateTime()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_date_time")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::DateTime>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetDateTimeArray(winrt::com_array<winrt::Windows::Foundation::DateTime>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_date_time_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::DateTime>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetDouble()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_double")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<double>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetDoubleArray(winrt::com_array<double>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_double_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<double, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<double>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetGuid()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_guid")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::guid>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetGuidArray(winrt::com_array<winrt::guid>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_guid_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::guid, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::guid>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInspectableArray(winrt::com_array<winrt::Windows::Foundation::IInspectable>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_inspectable_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IInspectable, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::IInspectable>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt16()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int16")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<int16_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt16Array(winrt::com_array<int16_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int16_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<int16_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<int16_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt32()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int32")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<int32_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt32Array(winrt::com_array<int32_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int32_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<int32_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<int32_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt64()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int64")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<int64_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetInt64Array(winrt::com_array<int64_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_int64_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<int64_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<int64_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetPoint()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_point")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Point>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetPointArray(winrt::com_array<winrt::Windows::Foundation::Point>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_point_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::Point>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetRect()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_rect")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Rect>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetRectArray(winrt::com_array<winrt::Windows::Foundation::Rect>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_rect_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::Rect>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSingle()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_single")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<float>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSingleArray(winrt::com_array<float>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_single_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<float, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<float>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSize()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_size")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Size>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSizeArray(winrt::com_array<winrt::Windows::Foundation::Size>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_size_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::Size>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetString()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_string")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetStringArray(winrt::com_array<winrt::hstring>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_string_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::hstring>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetTimeSpan()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_time_span")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::TimeSpan>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetTimeSpanArray(winrt::com_array<winrt::Windows::Foundation::TimeSpan>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_time_span_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<winrt::Windows::Foundation::TimeSpan>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt16()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint16")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint16_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt16Array(winrt::com_array<uint16_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint16_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<uint16_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<uint16_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt32()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint32")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt32Array(winrt::com_array<uint32_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint32_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<uint32_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<uint32_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt64()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint64")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint64_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt64Array(winrt::com_array<uint64_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint64_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<uint64_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<uint64_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt8()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint8")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint8_t>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetUInt8Array(winrt::com_array<uint8_t>& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_uint8_array")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                auto param0_buf = py::convert_to<py::pybuf_view<uint8_t, false>>(return_value.get(), 0);
+                param0 = winrt::com_array<uint8_t>{param0_buf.begin(), param0_buf.end()};
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsNumericScalar()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "is_numeric_scalar")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Type()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "type")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::PropertyType>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPropertyValue(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IPropertyValue>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPropertyValue(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPropertyValue>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPropertyValue[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyValue), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyValue), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPropertyValue[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertyValue) },
         { }
     };
 
@@ -7477,7 +9479,50 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IReferenceArray};
 
+    static PyObject* _guid_ImplementsIReferenceArray(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIReferenceArray(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIReferenceArray[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReferenceArray), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReferenceArray), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIReferenceArray[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIReferenceArray) },
         { }
     };
 
@@ -7833,7 +9878,50 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IReference};
 
+    static PyObject* _guid_ImplementsIReference(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIReference(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIReference[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReference), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReference), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIReference[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIReference) },
         { }
     };
 
@@ -7961,7 +10049,84 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStringable};
 
+    struct ImplementsIStringable : py::ImplementsInterfaceT<ImplementsIStringable, winrt::Windows::Foundation::IStringable>
+    {
+        ImplementsIStringable() = delete;
+        ImplementsIStringable(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStringable, winrt::Windows::Foundation::IStringable>(py_obj, runtime_class)
+        {
+        }
+
+        auto ToString()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "to_string")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStringable(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IStringable>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStringable(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStringable>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStringable[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStringable), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStringable), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStringable[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStringable) },
         { }
     };
 
@@ -8092,7 +10257,98 @@ namespace py::cpp::Windows::Foundation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWwwFormUrlDecoderEntry};
 
+    struct ImplementsIWwwFormUrlDecoderEntry : py::ImplementsInterfaceT<ImplementsIWwwFormUrlDecoderEntry, winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>
+    {
+        ImplementsIWwwFormUrlDecoderEntry() = delete;
+        ImplementsIWwwFormUrlDecoderEntry(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWwwFormUrlDecoderEntry, winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>(py_obj, runtime_class)
+        {
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Value()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "value")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWwwFormUrlDecoderEntry(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWwwFormUrlDecoderEntry(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWwwFormUrlDecoderEntry>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWwwFormUrlDecoderEntry[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWwwFormUrlDecoderEntry), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWwwFormUrlDecoderEntry), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWwwFormUrlDecoderEntry[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWwwFormUrlDecoderEntry) },
         { }
     };
 

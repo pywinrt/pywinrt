@@ -13,15 +13,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtCustomMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCustomMapTileDataSource() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -30,6 +28,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtCustomMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -62,7 +65,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCustomMapTileDataSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtCustomMapTileDataSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtCustomMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -234,15 +246,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         PyWinrtHttpMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtHttpMapTileDataSource() {}
         PyWinrtHttpMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), BasePyWinrtHttpMapTileDataSource(uriFormatString) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -251,6 +261,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtHttpMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -283,7 +298,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtHttpMapTileDataSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtHttpMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -312,7 +336,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHttpMapTileDataSource>(self.get(), param0);
+
+                    auto obj_impl = winrt::make_self<PyWinrtHttpMapTileDataSource>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtHttpMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -635,15 +668,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         PyWinrtLocalMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtLocalMapTileDataSource() {}
         PyWinrtLocalMapTileDataSource(PyObject* py_obj, winrt::hstring uriFormatString) : py::py_obj_ref(py_obj), BasePyWinrtLocalMapTileDataSource(uriFormatString) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -652,6 +683,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtLocalMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -684,7 +720,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtLocalMapTileDataSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtLocalMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -713,7 +758,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtLocalMapTileDataSource>(self.get(), param0);
+
+                    auto obj_impl = winrt::make_self<PyWinrtLocalMapTileDataSource>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtLocalMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -9962,15 +10016,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapCustomExperience(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapCustomExperience() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9979,6 +10031,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapCustomExperience* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -10011,7 +10068,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapCustomExperience>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapCustomExperience>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapCustomExperience>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -10211,15 +10277,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapElement(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapElement() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -10228,6 +10292,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapElement* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -10260,7 +10329,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapElement>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapElement>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapElement>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -14254,15 +14332,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapLayer(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapLayer() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14271,6 +14347,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapLayer* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -14303,7 +14384,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapLayer>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapLayer>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapLayer>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -14682,15 +14772,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapModel3D(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapModel3D() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14699,6 +14787,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapModel3D* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -14731,7 +14824,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapModel3D>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapModel3D>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapModel3D>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -16010,15 +16112,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapRouteView(PyObject* py_obj, winrt::Windows::Services::Maps::MapRoute route) : py::py_obj_ref(py_obj), BasePyWinrtMapRouteView(route) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16027,6 +16127,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapRouteView* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -16061,7 +16166,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapRouteView>(self.get(), param0);
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapRouteView>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtMapRouteView>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -19904,15 +20018,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         PyWinrtMapTileDataSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMapTileDataSource() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19921,6 +20033,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapTileDataSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -19953,7 +20070,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileDataSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileDataSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileDataSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20069,15 +20195,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource, zoomLevelRange, bounds) {}
         PyWinrtMapTileSource(PyObject* py_obj, winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource dataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange zoomLevelRange, winrt::Windows::Devices::Geolocation::GeoboundingBox bounds, int32_t tileSizeInPixels) : py::py_obj_ref(py_obj), BasePyWinrtMapTileSource(dataSource, zoomLevelRange, bounds, tileSizeInPixels) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -20086,6 +20210,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         static void toggle_reference(PyWinrtMapTileSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -20118,7 +20247,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20147,7 +20285,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0);
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileSource>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20177,7 +20324,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1);
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileSource>(self.get(), param0, param1);
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20208,7 +20364,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2);
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileSource>(self.get(), param0, param1, param2);
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -20240,7 +20405,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMapTileSource>(self.get(), param0, param1, param2, param3);
+
+                    auto obj_impl = winrt::make_self<PyWinrtMapTileSource>(self.get(), param0, param1, param2, param3);
+
+                    auto obj = py::make_py_obj<PyWinrtMapTileSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }

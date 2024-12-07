@@ -6393,7 +6393,352 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapFrame};
 
+    struct ImplementsIBitmapFrame : py::ImplementsInterfaceT<ImplementsIBitmapFrame, winrt::Windows::Graphics::Imaging::IBitmapFrame>
+    {
+        ImplementsIBitmapFrame() = delete;
+        ImplementsIBitmapFrame(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIBitmapFrame, winrt::Windows::Graphics::Imaging::IBitmapFrame>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetPixelDataAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::PixelDataProvider>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetPixelDataAsync(winrt::Windows::Graphics::Imaging::BitmapPixelFormat param0, winrt::Windows::Graphics::Imaging::BitmapAlphaMode param1, winrt::Windows::Graphics::Imaging::BitmapTransform const& param2, winrt::Windows::Graphics::Imaging::ExifOrientationMode param3, winrt::Windows::Graphics::Imaging::ColorManagementMode param4)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_transformed_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param4{py::convert(param4)};
+                if (!py_param4)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(5, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get(), py_param4.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::PixelDataProvider>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetThumbnailAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_thumbnail_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::ImageStream>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapAlphaMode()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_alpha_mode")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapPixelFormat()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_pixel_format")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapProperties()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_properties")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DpiX()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "dpi_x")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<double>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DpiY()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "dpi_y")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<double>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OrientedPixelHeight()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "oriented_pixel_height")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OrientedPixelWidth()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "oriented_pixel_width")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PixelHeight()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "pixel_height")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PixelWidth()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "pixel_width")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIBitmapFrame(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::Imaging::IBitmapFrame>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIBitmapFrame(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIBitmapFrame>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIBitmapFrame[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrame), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrame), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIBitmapFrame[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapFrame) },
         { }
     };
 
@@ -6950,7 +7295,484 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapFrameWithSoftwareBitmap};
 
+    struct ImplementsIBitmapFrameWithSoftwareBitmap : py::ImplementsInterfaceT<ImplementsIBitmapFrameWithSoftwareBitmap, winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
+    {
+        ImplementsIBitmapFrameWithSoftwareBitmap() = delete;
+        ImplementsIBitmapFrameWithSoftwareBitmap(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIBitmapFrameWithSoftwareBitmap, winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetPixelDataAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::PixelDataProvider>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetPixelDataAsync(winrt::Windows::Graphics::Imaging::BitmapPixelFormat param0, winrt::Windows::Graphics::Imaging::BitmapAlphaMode param1, winrt::Windows::Graphics::Imaging::BitmapTransform const& param2, winrt::Windows::Graphics::Imaging::ExifOrientationMode param3, winrt::Windows::Graphics::Imaging::ColorManagementMode param4)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_transformed_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param4{py::convert(param4)};
+                if (!py_param4)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(5, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get(), py_param4.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::PixelDataProvider>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSoftwareBitmapAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_software_bitmap_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::SoftwareBitmap>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSoftwareBitmapAsync(winrt::Windows::Graphics::Imaging::BitmapPixelFormat param0, winrt::Windows::Graphics::Imaging::BitmapAlphaMode param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_software_bitmap_converted_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::SoftwareBitmap>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetSoftwareBitmapAsync(winrt::Windows::Graphics::Imaging::BitmapPixelFormat param0, winrt::Windows::Graphics::Imaging::BitmapAlphaMode param1, winrt::Windows::Graphics::Imaging::BitmapTransform const& param2, winrt::Windows::Graphics::Imaging::ExifOrientationMode param3, winrt::Windows::Graphics::Imaging::ColorManagementMode param4)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_software_bitmap_transformed_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param4{py::convert(param4)};
+                if (!py_param4)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(5, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get(), py_param4.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::SoftwareBitmap>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetThumbnailAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_thumbnail_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::ImageStream>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapAlphaMode()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_alpha_mode")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapPixelFormat()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_pixel_format")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto BitmapProperties()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "bitmap_properties")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DpiX()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "dpi_x")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<double>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto DpiY()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "dpi_y")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<double>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OrientedPixelHeight()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "oriented_pixel_height")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto OrientedPixelWidth()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "oriented_pixel_width")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PixelHeight()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "pixel_height")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PixelWidth()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "pixel_width")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIBitmapFrameWithSoftwareBitmap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIBitmapFrameWithSoftwareBitmap(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIBitmapFrameWithSoftwareBitmap>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrameWithSoftwareBitmap), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrameWithSoftwareBitmap), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapFrameWithSoftwareBitmap) },
         { }
     };
 
@@ -7066,7 +7888,90 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBitmapPropertiesView};
 
+    struct ImplementsIBitmapPropertiesView : py::ImplementsInterfaceT<ImplementsIBitmapPropertiesView, winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
+    {
+        ImplementsIBitmapPropertiesView() = delete;
+        ImplementsIBitmapPropertiesView(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIBitmapPropertiesView, winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetPropertiesAsync(winrt::Windows::Foundation::Collections::IIterable<winrt::hstring> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_properties_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Imaging::BitmapPropertySet>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIBitmapPropertiesView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIBitmapPropertiesView(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIBitmapPropertiesView>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIBitmapPropertiesView[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapPropertiesView), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapPropertiesView), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIBitmapPropertiesView[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapPropertiesView) },
         { }
     };
 

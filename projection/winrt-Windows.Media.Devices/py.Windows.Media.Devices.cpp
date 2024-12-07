@@ -13617,7 +13617,98 @@ namespace py::cpp::Windows::Media::Devices
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDefaultAudioDeviceChangedEventArgs};
 
+    struct ImplementsIDefaultAudioDeviceChangedEventArgs : py::ImplementsInterfaceT<ImplementsIDefaultAudioDeviceChangedEventArgs, winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
+    {
+        ImplementsIDefaultAudioDeviceChangedEventArgs() = delete;
+        ImplementsIDefaultAudioDeviceChangedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIDefaultAudioDeviceChangedEventArgs, winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Id()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Role()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "role")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIDefaultAudioDeviceChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIDefaultAudioDeviceChangedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIDefaultAudioDeviceChangedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDefaultAudioDeviceChangedEventArgs) },
         { }
     };
 
@@ -13812,7 +13903,166 @@ namespace py::cpp::Windows::Media::Devices
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaDeviceController};
 
+    struct ImplementsIMediaDeviceController : py::ImplementsInterfaceT<ImplementsIMediaDeviceController, winrt::Windows::Media::Devices::IMediaDeviceController>
+    {
+        ImplementsIMediaDeviceController() = delete;
+        ImplementsIMediaDeviceController(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMediaDeviceController, winrt::Windows::Media::Devices::IMediaDeviceController>(py_obj, runtime_class)
+        {
+        }
+
+        auto GetAvailableMediaStreamProperties(winrt::Windows::Media::Capture::MediaStreamType param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_available_media_stream_properties")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetMediaStreamProperties(winrt::Windows::Media::Capture::MediaStreamType param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_media_stream_properties")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SetMediaStreamPropertiesAsync(winrt::Windows::Media::Capture::MediaStreamType param0, winrt::Windows::Media::MediaProperties::IMediaEncodingProperties const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "set_media_stream_properties_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncAction>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMediaDeviceController(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Media::Devices::IMediaDeviceController>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMediaDeviceController(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMediaDeviceController>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMediaDeviceController[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaDeviceController), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaDeviceController), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMediaDeviceController[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaDeviceController) },
         { }
     };
 

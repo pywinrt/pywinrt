@@ -3117,7 +3117,118 @@ namespace py::cpp::Windows::ApplicationModel::Search
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchPaneQueryChangedEventArgs};
 
+    struct ImplementsISearchPaneQueryChangedEventArgs : py::ImplementsInterfaceT<ImplementsISearchPaneQueryChangedEventArgs, winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>
+    {
+        ImplementsISearchPaneQueryChangedEventArgs() = delete;
+        ImplementsISearchPaneQueryChangedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISearchPaneQueryChangedEventArgs, winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Language()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "language")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LinguisticDetails()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "linguistic_details")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto QueryText()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "query_text")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISearchPaneQueryChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISearchPaneQueryChangedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISearchPaneQueryChangedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISearchPaneQueryChangedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchPaneQueryChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchPaneQueryChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISearchPaneQueryChangedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchPaneQueryChangedEventArgs) },
         { }
     };
 

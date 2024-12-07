@@ -10545,7 +10545,138 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelFeatureDescriptor};
 
+    struct ImplementsILearningModelFeatureDescriptor : py::ImplementsInterfaceT<ImplementsILearningModelFeatureDescriptor, winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
+    {
+        ImplementsILearningModelFeatureDescriptor() = delete;
+        ImplementsILearningModelFeatureDescriptor(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILearningModelFeatureDescriptor, winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(py_obj, runtime_class)
+        {
+        }
+
+        auto Description()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "description")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsRequired()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "is_required")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Name()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILearningModelFeatureDescriptor>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILearningModelFeatureDescriptor[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureDescriptor), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureDescriptor), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILearningModelFeatureDescriptor[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelFeatureDescriptor) },
         { }
     };
 
@@ -10649,7 +10780,78 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelFeatureValue};
 
+    struct ImplementsILearningModelFeatureValue : py::ImplementsInterfaceT<ImplementsILearningModelFeatureValue, winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
+    {
+        ImplementsILearningModelFeatureValue() = delete;
+        ImplementsILearningModelFeatureValue(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILearningModelFeatureValue, winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(py_obj, runtime_class)
+        {
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILearningModelFeatureValue(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILearningModelFeatureValue(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILearningModelFeatureValue>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILearningModelFeatureValue[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureValue), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureValue), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILearningModelFeatureValue[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelFeatureValue) },
         { }
     };
 
@@ -10726,7 +10928,58 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILearningModelOperatorProvider};
 
+    struct ImplementsILearningModelOperatorProvider : py::ImplementsInterfaceT<ImplementsILearningModelOperatorProvider, winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
+    {
+        ImplementsILearningModelOperatorProvider() = delete;
+        ImplementsILearningModelOperatorProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILearningModelOperatorProvider, winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILearningModelOperatorProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILearningModelOperatorProvider[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelOperatorProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelOperatorProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILearningModelOperatorProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelOperatorProvider) },
         { }
     };
 
@@ -10884,7 +11137,118 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_TPFLAGS_DEFAULT,
         _type_slots_ITensor};
 
+    struct ImplementsITensor : py::ImplementsInterfaceT<ImplementsITensor, winrt::Windows::AI::MachineLearning::ITensor>
+    {
+        ImplementsITensor() = delete;
+        ImplementsITensor(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsITensor, winrt::Windows::AI::MachineLearning::ITensor>(py_obj, runtime_class)
+        {
+        }
+
+        auto Shape()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "shape")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<int64_t>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TensorKind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tensor_kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::AI::MachineLearning::TensorKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsITensor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::AI::MachineLearning::ITensor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsITensor(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsITensor>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsITensor[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITensor), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITensor), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsITensor[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITensor) },
         { }
     };
 

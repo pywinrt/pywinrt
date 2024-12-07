@@ -1744,7 +1744,98 @@ namespace py::cpp::Windows::Media::Protection
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaProtectionServiceRequest};
 
+    struct ImplementsIMediaProtectionServiceRequest : py::ImplementsInterfaceT<ImplementsIMediaProtectionServiceRequest, winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
+    {
+        ImplementsIMediaProtectionServiceRequest() = delete;
+        ImplementsIMediaProtectionServiceRequest(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMediaProtectionServiceRequest, winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(py_obj, runtime_class)
+        {
+        }
+
+        auto ProtectionSystem()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "protection_system")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::guid>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Type()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "type")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::guid>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMediaProtectionServiceRequest(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMediaProtectionServiceRequest(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMediaProtectionServiceRequest>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMediaProtectionServiceRequest[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaProtectionServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaProtectionServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMediaProtectionServiceRequest[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaProtectionServiceRequest) },
         { }
     };
 

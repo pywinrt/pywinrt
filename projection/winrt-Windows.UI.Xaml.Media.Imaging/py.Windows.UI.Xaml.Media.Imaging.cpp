@@ -1035,15 +1035,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     struct PyWinrtBitmapSource : py::py_obj_ref, BasePyWinrtBitmapSource
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1052,6 +1050,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         static void toggle_reference(PyWinrtBitmapSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -1993,15 +1996,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight) : py::py_obj_ref(py_obj), BasePyWinrtSurfaceImageSource(pixelWidth, pixelHeight) {}
         PyWinrtSurfaceImageSource(PyObject* py_obj, int32_t pixelWidth, int32_t pixelHeight, bool isOpaque) : py::py_obj_ref(py_obj), BasePyWinrtSurfaceImageSource(pixelWidth, pixelHeight, isOpaque) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -2010,6 +2011,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         static void toggle_reference(PyWinrtSurfaceImageSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -2045,7 +2051,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1);
+
+                    auto obj_impl = winrt::make_self<PyWinrtSurfaceImageSource>(self.get(), param0, param1);
+
+                    auto obj = py::make_py_obj<PyWinrtSurfaceImageSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -2076,7 +2091,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSurfaceImageSource>(self.get(), param0, param1, param2);
+
+                    auto obj_impl = winrt::make_self<PyWinrtSurfaceImageSource>(self.get(), param0, param1, param2);
+
+                    auto obj = py::make_py_obj<PyWinrtSurfaceImageSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -2189,15 +2213,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         PyWinrtSvgImageSource(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSvgImageSource() {}
         PyWinrtSvgImageSource(PyObject* py_obj, winrt::Windows::Foundation::Uri uriSource) : py::py_obj_ref(py_obj), BasePyWinrtSvgImageSource(uriSource) {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -2206,6 +2228,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         static void toggle_reference(PyWinrtSvgImageSource* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -2238,7 +2265,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtSvgImageSource>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtSvgImageSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -2267,7 +2303,16 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSvgImageSource>(self.get(), param0);
+
+                    auto obj_impl = winrt::make_self<PyWinrtSvgImageSource>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtSvgImageSource>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -3225,15 +3270,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     struct PyWinrtXamlRenderingBackgroundTask : py::py_obj_ref, BasePyWinrtXamlRenderingBackgroundTask
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3242,6 +3285,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         static void toggle_reference(PyWinrtXamlRenderingBackgroundTask* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         void OnRun(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& param0)

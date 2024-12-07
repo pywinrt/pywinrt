@@ -2010,7 +2010,58 @@ namespace py::cpp::Windows::UI::WebUI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUICommandBarElement};
 
+    struct ImplementsIWebUICommandBarElement : py::ImplementsInterfaceT<ImplementsIWebUICommandBarElement, winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
+    {
+        ImplementsIWebUICommandBarElement() = delete;
+        ImplementsIWebUICommandBarElement(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebUICommandBarElement, winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebUICommandBarElement(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebUICommandBarElement(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebUICommandBarElement>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebUICommandBarElement[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarElement), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarElement), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebUICommandBarElement[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUICommandBarElement) },
         { }
     };
 
@@ -2087,7 +2138,58 @@ namespace py::cpp::Windows::UI::WebUI::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUICommandBarIcon};
 
+    struct ImplementsIWebUICommandBarIcon : py::ImplementsInterfaceT<ImplementsIWebUICommandBarIcon, winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
+    {
+        ImplementsIWebUICommandBarIcon() = delete;
+        ImplementsIWebUICommandBarIcon(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebUICommandBarIcon, winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebUICommandBarIcon(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebUICommandBarIcon(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebUICommandBarIcon>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebUICommandBarIcon[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarIcon), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarIcon), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebUICommandBarIcon[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUICommandBarIcon) },
         { }
     };
 

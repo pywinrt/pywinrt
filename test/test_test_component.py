@@ -35,6 +35,18 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 0)
         self.assertEqual(c.one(), 1)
 
+    def test_composable_subclass_with_interface(self):
+        class C(tc.Override, tc.ImplementsIRequiredOne):
+            def one(self) -> int:
+                return 1
+
+        c = C()
+
+        self.assertEqual(c.one(), 1, "calling from python didn't work")
+        self.assertEqual(
+            tc.Composable.expect_required_one(c), 1, "calling from winrt didn't work"
+        )
+
     def test_overriding_new(self):
         class C(tc.Composable):
             def __new__(cls):

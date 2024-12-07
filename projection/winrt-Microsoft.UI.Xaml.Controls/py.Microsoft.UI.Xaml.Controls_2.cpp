@@ -13,15 +13,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtAppBarButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAppBarButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -30,6 +28,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtAppBarButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -62,7 +65,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtAppBarButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtAppBarButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -789,15 +801,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtAppBarToggleButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAppBarToggleButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -806,6 +816,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtAppBarToggleButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -838,7 +853,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtAppBarToggleButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtAppBarToggleButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtAppBarToggleButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -1565,15 +1589,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1582,6 +1604,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -1614,7 +1641,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -1815,15 +1851,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtCheckBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCheckBox() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1832,6 +1866,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtCheckBox* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -1864,7 +1903,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCheckBox>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtCheckBox>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtCheckBox>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -1976,15 +2024,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtComboBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComboBox() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1993,6 +2039,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtComboBox* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
         void OnDropDownClosed(winrt::Windows::Foundation::IInspectable const& param0)
@@ -2089,7 +2140,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBox>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtComboBox>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtComboBox>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -3723,15 +3783,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtComboBoxItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3740,6 +3798,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtComboBoxItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -3772,7 +3835,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtComboBoxItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtComboBoxItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtComboBoxItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -3884,15 +3956,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtCommandBarFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCommandBarFlyout() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3901,6 +3971,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtCommandBarFlyout* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -3933,7 +4008,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtCommandBarFlyout>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtCommandBarFlyout>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtCommandBarFlyout>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5262,15 +5346,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtDropDownButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDropDownButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5279,6 +5361,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtDropDownButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5311,7 +5398,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtDropDownButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtDropDownButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtDropDownButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5423,15 +5519,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlipView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlipView() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5440,6 +5534,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtFlipView* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5472,7 +5571,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipView>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtFlipView>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtFlipView>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5673,15 +5781,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlipViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5690,6 +5796,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtFlipViewItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5722,7 +5833,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlipViewItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtFlipViewItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtFlipViewItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -5834,15 +5954,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlyout() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5851,6 +5969,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtFlyout* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -5883,7 +6006,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtFlyout>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtFlyout>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtFlyout>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6173,15 +6305,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtGridView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridView() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6190,6 +6320,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtGridView* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -6222,7 +6357,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridView>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtGridView>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtGridView>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6334,15 +6478,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtGridViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6351,6 +6493,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtGridViewItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -6383,7 +6530,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtGridViewItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtGridViewItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtGridViewItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6522,15 +6678,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtHyperlinkButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtHyperlinkButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6539,6 +6693,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtHyperlinkButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -6571,7 +6730,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtHyperlinkButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtHyperlinkButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtHyperlinkButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -6772,15 +6940,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListBox() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6789,6 +6955,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtListBox* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -6821,7 +6992,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBox>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtListBox>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtListBox>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -7216,15 +7396,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListBoxItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7233,6 +7411,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtListBoxItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -7265,7 +7448,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListBoxItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtListBoxItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtListBoxItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -8327,15 +8519,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListView() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8344,6 +8534,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtListView* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -8376,7 +8571,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListView>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtListView>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtListView>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -8487,15 +8691,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     struct PyWinrtListViewBase : py::py_obj_ref, BasePyWinrtListViewBase
     {
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8504,6 +8706,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtListViewBase* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11557,15 +11764,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListViewItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11574,6 +11779,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtListViewItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11606,7 +11816,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtListViewItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtListViewItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtListViewItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -11745,15 +11964,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtMenuBarItemFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarItemFlyout() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11762,6 +11979,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtMenuBarItemFlyout* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11794,7 +12016,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuBarItemFlyout>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMenuBarItemFlyout>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMenuBarItemFlyout>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -11906,15 +12137,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtMenuFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyout() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11923,6 +12152,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtMenuFlyout* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -11955,7 +12189,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtMenuFlyout>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtMenuFlyout>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtMenuFlyout>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -12613,15 +12856,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtProgressBar(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtProgressBar() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12630,6 +12871,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtProgressBar* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -12662,7 +12908,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtProgressBar>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtProgressBar>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtProgressBar>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -13068,15 +13323,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtRadioButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRadioButton() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13085,6 +13338,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtRadioButton* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -13117,7 +13375,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRadioButton>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtRadioButton>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtRadioButton>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -13318,15 +13585,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtRevealListViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRevealListViewItemPresenter() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13335,6 +13600,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtRevealListViewItemPresenter* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -13367,7 +13637,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtRevealListViewItemPresenter>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtRevealListViewItemPresenter>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtRevealListViewItemPresenter>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -13479,15 +13758,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtSlider(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSlider() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13496,6 +13773,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtSlider* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -13528,7 +13810,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtSlider>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtSlider>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtSlider>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -14619,15 +14910,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTabViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTabViewItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14636,6 +14925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtTabViewItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -14668,7 +14962,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTabViewItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtTabViewItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtTabViewItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -15249,15 +15552,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTextCommandBarFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTextCommandBarFlyout() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15266,6 +15567,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtTextCommandBarFlyout* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -15298,7 +15604,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTextCommandBarFlyout>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtTextCommandBarFlyout>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtTextCommandBarFlyout>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -15888,15 +16203,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTreeViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewItem() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15905,6 +16218,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtTreeViewItem* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -15937,7 +16255,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewItem>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtTreeViewItem>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtTreeViewItem>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }
@@ -16815,15 +17142,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTreeViewList(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewList() {}
 
-        using py::py_obj_ref::get_py_obj;
-
-        int32_t GetPyObject(PyObject*& obj)
+        int32_t GetPyObject(PyObject*& obj) override
         {
-            obj = get_py_obj();
+            obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner)
+        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16832,6 +17157,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static void toggle_reference(PyWinrtTreeViewList* instance, bool is_last_reference)
         {
             py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
         }
     };
 
@@ -16864,7 +17194,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                     }
 
                     std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
-                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = winrt::make<PyWinrtTreeViewList>(self.get());
+
+                    auto obj_impl = winrt::make_self<PyWinrtTreeViewList>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtTreeViewList>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
 
                     return self.detach();
                 }

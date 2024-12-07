@@ -11184,7 +11184,118 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgs};
 
+    struct ImplementsIActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
+    {
+        ImplementsIActivatedEventArgs() = delete;
+        ImplementsIActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActivatedEventArgs) },
         { }
     };
 
@@ -11369,7 +11480,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgsWithUser};
 
+    struct ImplementsIActivatedEventArgsWithUser : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsWithUser, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
+    {
+        ImplementsIActivatedEventArgsWithUser() = delete;
+        ImplementsIActivatedEventArgsWithUser(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsWithUser, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>(py_obj, runtime_class)
+        {
+        }
+
+        auto User()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "user")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::System::User>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIActivatedEventArgsWithUser(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIActivatedEventArgsWithUser(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIActivatedEventArgsWithUser>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIActivatedEventArgsWithUser[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsWithUser), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsWithUser), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIActivatedEventArgsWithUser[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActivatedEventArgsWithUser) },
         { }
     };
 
@@ -11554,7 +11796,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IApplicationViewActivatedEventArgs};
 
+    struct ImplementsIApplicationViewActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIApplicationViewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
+    {
+        ImplementsIApplicationViewActivatedEventArgs() = delete;
+        ImplementsIApplicationViewActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIApplicationViewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto CurrentlyShownApplicationViewId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "currently_shown_application_view_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<int32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIApplicationViewActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIApplicationViewActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIApplicationViewActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIApplicationViewActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIApplicationViewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIApplicationViewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIApplicationViewActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIApplicationViewActivatedEventArgs) },
         { }
     };
 
@@ -11739,7 +12112,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderActivatedEventArgs) },
         { }
     };
 
@@ -11951,7 +12455,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto AddAppointmentOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "add_appointment_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { }
     };
 
@@ -12163,7 +12818,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto RemoveAppointmentOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "remove_appointment_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { }
     };
 
@@ -12375,7 +13181,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ReplaceAppointmentOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "replace_appointment_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { }
     };
 
@@ -12641,7 +13598,198 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto InstanceStartDate()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "instance_start_date")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto LocalId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "local_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RoamingId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "roaming_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { }
     };
 
@@ -12880,7 +14028,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs};
 
+    struct ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
+    {
+        ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs() = delete;
+        ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Duration()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "duration")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::TimeSpan>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TimeToShow()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "time_to_show")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::DateTime>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { }
     };
 
@@ -12984,7 +14303,78 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBackgroundActivatedEventArgs};
 
+    struct ImplementsIBackgroundActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIBackgroundActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
+    {
+        ImplementsIBackgroundActivatedEventArgs() = delete;
+        ImplementsIBackgroundActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIBackgroundActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto TaskInstance()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "task_instance")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIBackgroundActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIBackgroundActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIBackgroundActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIBackgroundActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIBackgroundActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundActivatedEventArgs) },
         { }
     };
 
@@ -13169,7 +14559,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IBarcodeScannerPreviewActivatedEventArgs};
 
+    struct ImplementsIBarcodeScannerPreviewActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIBarcodeScannerPreviewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
+    {
+        ImplementsIBarcodeScannerPreviewActivatedEventArgs() = delete;
+        ImplementsIBarcodeScannerPreviewActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIBarcodeScannerPreviewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ConnectionId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "connection_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIBarcodeScannerPreviewActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIBarcodeScannerPreviewActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIBarcodeScannerPreviewActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBarcodeScannerPreviewActivatedEventArgs) },
         { }
     };
 
@@ -13354,7 +14875,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICachedFileUpdaterActivatedEventArgs};
 
+    struct ImplementsICachedFileUpdaterActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICachedFileUpdaterActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
+    {
+        ImplementsICachedFileUpdaterActivatedEventArgs() = delete;
+        ImplementsICachedFileUpdaterActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICachedFileUpdaterActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto CachedFileUpdaterUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "cached_file_updater_ui")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsICachedFileUpdaterActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICachedFileUpdaterActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICachedFileUpdaterActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICachedFileUpdaterActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICachedFileUpdaterActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICachedFileUpdaterActivatedEventArgs) },
         { }
     };
 
@@ -13566,7 +15218,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICameraSettingsActivatedEventArgs};
 
+    struct ImplementsICameraSettingsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICameraSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
+    {
+        ImplementsICameraSettingsActivatedEventArgs() = delete;
+        ImplementsICameraSettingsActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICameraSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto VideoDeviceController()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "video_device_controller")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto VideoDeviceExtension()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "video_device_extension")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsICameraSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICameraSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICameraSettingsActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICameraSettingsActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICameraSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICameraSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICameraSettingsActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICameraSettingsActivatedEventArgs) },
         { }
     };
 
@@ -13751,7 +15554,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ICommandLineActivatedEventArgs};
 
+    struct ImplementsICommandLineActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICommandLineActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
+    {
+        ImplementsICommandLineActivatedEventArgs() = delete;
+        ImplementsICommandLineActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsICommandLineActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Operation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsICommandLineActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsICommandLineActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsICommandLineActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsICommandLineActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommandLineActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommandLineActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsICommandLineActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommandLineActivatedEventArgs) },
         { }
     };
 
@@ -13936,7 +15870,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactActivatedEventArgs};
 
+    struct ImplementsIContactActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
+    {
+        ImplementsIContactActivatedEventArgs() = delete;
+        ImplementsIContactActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactActivatedEventArgs) },
         { }
     };
 
@@ -14202,7 +16267,198 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactCallActivatedEventArgs};
 
+    struct ImplementsIContactCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
+    {
+        ImplementsIContactCallActivatedEventArgs() = delete;
+        ImplementsIContactCallActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceUserId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_user_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactCallActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactCallActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactCallActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactCallActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactCallActivatedEventArgs) },
         { }
     };
 
@@ -14441,7 +16697,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactMapActivatedEventArgs};
 
+    struct ImplementsIContactMapActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactMapActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
+    {
+        ImplementsIContactMapActivatedEventArgs() = delete;
+        ImplementsIContactMapActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactMapActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Address()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "address")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAddress>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactMapActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactMapActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactMapActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactMapActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMapActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMapActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactMapActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactMapActivatedEventArgs) },
         { }
     };
 
@@ -14707,7 +17134,198 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactMessageActivatedEventArgs};
 
+    struct ImplementsIContactMessageActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactMessageActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
+    {
+        ImplementsIContactMessageActivatedEventArgs() = delete;
+        ImplementsIContactMessageActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactMessageActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceUserId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_user_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactMessageActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactMessageActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactMessageActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactMessageActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMessageActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMessageActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactMessageActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactMessageActivatedEventArgs) },
         { }
     };
 
@@ -14838,7 +17456,98 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPanelActivatedEventArgs};
 
+    struct ImplementsIContactPanelActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPanelActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
+    {
+        ImplementsIContactPanelActivatedEventArgs() = delete;
+        ImplementsIContactPanelActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactPanelActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ContactPanel()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact_panel")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactPanel>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactPanelActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactPanelActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactPanelActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactPanelActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPanelActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPanelActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactPanelActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPanelActivatedEventArgs) },
         { }
     };
 
@@ -15023,7 +17732,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPickerActivatedEventArgs};
 
+    struct ImplementsIContactPickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
+    {
+        ImplementsIContactPickerActivatedEventArgs() = delete;
+        ImplementsIContactPickerActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ContactPickerUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact_picker_ui")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactPickerActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactPickerActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactPickerActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPickerActivatedEventArgs) },
         { }
     };
 
@@ -15289,7 +18129,198 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactPostActivatedEventArgs};
 
+    struct ImplementsIContactPostActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPostActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
+    {
+        ImplementsIContactPostActivatedEventArgs() = delete;
+        ImplementsIContactPostActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactPostActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceUserId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_user_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactPostActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactPostActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactPostActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactPostActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPostActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPostActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactPostActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPostActivatedEventArgs) },
         { }
     };
 
@@ -15555,7 +18586,198 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactVideoCallActivatedEventArgs};
 
+    struct ImplementsIContactVideoCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactVideoCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
+    {
+        ImplementsIContactVideoCallActivatedEventArgs() = delete;
+        ImplementsIContactVideoCallActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactVideoCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Contact()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "contact")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ServiceUserId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "service_user_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactVideoCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactVideoCallActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactVideoCallActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactVideoCallActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactVideoCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactVideoCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactVideoCallActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactVideoCallActivatedEventArgs) },
         { }
     };
 
@@ -15740,7 +18962,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContactsProviderActivatedEventArgs};
 
+    struct ImplementsIContactsProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
+    {
+        ImplementsIContactsProviderActivatedEventArgs() = delete;
+        ImplementsIContactsProviderActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContactsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContactsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContactsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContactsProviderActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContactsProviderActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContactsProviderActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactsProviderActivatedEventArgs) },
         { }
     };
 
@@ -15925,7 +19278,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IContinuationActivatedEventArgs};
 
+    struct ImplementsIContinuationActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContinuationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
+    {
+        ImplementsIContinuationActivatedEventArgs() = delete;
+        ImplementsIContinuationActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContinuationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ContinuationData()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "continuation_data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIContinuationActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContinuationActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContinuationActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContinuationActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContinuationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContinuationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIContinuationActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContinuationActivatedEventArgs) },
         { }
     };
 
@@ -16137,7 +19621,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDeviceActivatedEventArgs};
 
+    struct ImplementsIDeviceActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDeviceActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
+    {
+        ImplementsIDeviceActivatedEventArgs() = delete;
+        ImplementsIDeviceActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIDeviceActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto DeviceInformationId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "device_information_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIDeviceActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIDeviceActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIDeviceActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIDeviceActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIDeviceActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDeviceActivatedEventArgs) },
         { }
     };
 
@@ -16322,7 +19957,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDevicePairingActivatedEventArgs};
 
+    struct ImplementsIDevicePairingActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDevicePairingActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
+    {
+        ImplementsIDevicePairingActivatedEventArgs() = delete;
+        ImplementsIDevicePairingActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIDevicePairingActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto DeviceInformation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "device_information")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIDevicePairingActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIDevicePairingActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIDevicePairingActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIDevicePairingActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIDevicePairingActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDevicePairingActivatedEventArgs) },
         { }
     };
 
@@ -16561,7 +20327,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IDialReceiverActivatedEventArgs};
 
+    struct ImplementsIDialReceiverActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDialReceiverActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
+    {
+        ImplementsIDialReceiverActivatedEventArgs() = delete;
+        ImplementsIDialReceiverActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIDialReceiverActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto AppName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "app_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Arguments()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "arguments")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TileId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tile_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIDialReceiverActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIDialReceiverActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIDialReceiverActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIDialReceiverActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDialReceiverActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDialReceiverActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIDialReceiverActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDialReceiverActivatedEventArgs) },
         { }
     };
 
@@ -16773,7 +20710,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgs};
 
+    struct ImplementsIFileActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
+    {
+        ImplementsIFileActivatedEventArgs() = delete;
+        ImplementsIFileActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Files()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "files")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgs) },
         { }
     };
 
@@ -16958,7 +21046,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName};
 
+    struct ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
+    {
+        ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName() = delete;
+        ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>(py_obj, runtime_class)
+        {
+        }
+
+        auto CallerPackageFamilyName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "caller_package_family_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName) },
         { }
     };
 
@@ -17197,7 +21416,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileActivatedEventArgsWithNeighboringFiles};
 
+    struct ImplementsIFileActivatedEventArgsWithNeighboringFiles : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithNeighboringFiles, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
+    {
+        ImplementsIFileActivatedEventArgsWithNeighboringFiles() = delete;
+        ImplementsIFileActivatedEventArgsWithNeighboringFiles(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithNeighboringFiles, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>(py_obj, runtime_class)
+        {
+        }
+
+        auto NeighboringFilesQuery()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "neighboring_files_query")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Search::StorageFileQueryResult>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Files()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "files")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Verb()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "verb")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileActivatedEventArgsWithNeighboringFiles(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileActivatedEventArgsWithNeighboringFiles(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileActivatedEventArgsWithNeighboringFiles>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgsWithNeighboringFiles) },
         { }
     };
 
@@ -17382,7 +21772,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerActivatedEventArgs};
 
+    struct ImplementsIFileOpenPickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
+    {
+        ImplementsIFileOpenPickerActivatedEventArgs() = delete;
+        ImplementsIFileOpenPickerActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto FileOpenPickerUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "file_open_picker_ui")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileOpenPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileOpenPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileOpenPickerActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerActivatedEventArgs) },
         { }
     };
 
@@ -17486,7 +22007,78 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerActivatedEventArgs2};
 
+    struct ImplementsIFileOpenPickerActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
+    {
+        ImplementsIFileOpenPickerActivatedEventArgs2() = delete;
+        ImplementsIFileOpenPickerActivatedEventArgs2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>(py_obj, runtime_class)
+        {
+        }
+
+        auto CallerPackageFamilyName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "caller_package_family_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileOpenPickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileOpenPickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileOpenPickerActivatedEventArgs2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerActivatedEventArgs2) },
         { }
     };
 
@@ -17698,7 +22290,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileOpenPickerContinuationEventArgs};
 
+    struct ImplementsIFileOpenPickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFileOpenPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
+    {
+        ImplementsIFileOpenPickerContinuationEventArgs() = delete;
+        ImplementsIFileOpenPickerContinuationEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileOpenPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Files()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "files")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageFile>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ContinuationData()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "continuation_data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileOpenPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileOpenPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileOpenPickerContinuationEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileOpenPickerContinuationEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileOpenPickerContinuationEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerContinuationEventArgs) },
         { }
     };
 
@@ -17883,7 +22626,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerActivatedEventArgs};
 
+    struct ImplementsIFileSavePickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
+    {
+        ImplementsIFileSavePickerActivatedEventArgs() = delete;
+        ImplementsIFileSavePickerActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto FileSavePickerUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "file_save_picker_ui")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileSavePickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileSavePickerActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileSavePickerActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerActivatedEventArgs) },
         { }
     };
 
@@ -18014,7 +22888,98 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerActivatedEventArgs2};
 
+    struct ImplementsIFileSavePickerActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
+    {
+        ImplementsIFileSavePickerActivatedEventArgs2() = delete;
+        ImplementsIFileSavePickerActivatedEventArgs2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>(py_obj, runtime_class)
+        {
+        }
+
+        auto CallerPackageFamilyName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "caller_package_family_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto EnterpriseId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "enterprise_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileSavePickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileSavePickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileSavePickerActivatedEventArgs2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerActivatedEventArgs2) },
         { }
     };
 
@@ -18226,7 +23191,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFileSavePickerContinuationEventArgs};
 
+    struct ImplementsIFileSavePickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFileSavePickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
+    {
+        ImplementsIFileSavePickerContinuationEventArgs() = delete;
+        ImplementsIFileSavePickerContinuationEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFileSavePickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto File()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "file")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::StorageFile>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ContinuationData()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "continuation_data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFileSavePickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFileSavePickerContinuationEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFileSavePickerContinuationEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFileSavePickerContinuationEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFileSavePickerContinuationEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerContinuationEventArgs) },
         { }
     };
 
@@ -18438,7 +23554,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFolderPickerContinuationEventArgs};
 
+    struct ImplementsIFolderPickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFolderPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
+    {
+        ImplementsIFolderPickerContinuationEventArgs() = delete;
+        ImplementsIFolderPickerContinuationEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFolderPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Folder()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "folder")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::StorageFolder>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ContinuationData()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "continuation_data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIFolderPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFolderPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFolderPickerContinuationEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFolderPickerContinuationEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFolderPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFolderPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIFolderPickerContinuationEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFolderPickerContinuationEventArgs) },
         { }
     };
 
@@ -18650,7 +23917,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILaunchActivatedEventArgs};
 
+    struct ImplementsILaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
+    {
+        ImplementsILaunchActivatedEventArgs() = delete;
+        ImplementsILaunchActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Arguments()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "arguments")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TileId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tile_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILaunchActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILaunchActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILaunchActivatedEventArgs) },
         { }
     };
 
@@ -18889,7 +24307,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILaunchActivatedEventArgs2};
 
+    struct ImplementsILaunchActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
+    {
+        ImplementsILaunchActivatedEventArgs2() = delete;
+        ImplementsILaunchActivatedEventArgs2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>(py_obj, runtime_class)
+        {
+        }
+
+        auto TileActivatedInfo()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tile_activated_info")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::TileActivatedInfo>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Arguments()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "arguments")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TileId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tile_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILaunchActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILaunchActivatedEventArgs2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILaunchActivatedEventArgs2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILaunchActivatedEventArgs2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILaunchActivatedEventArgs2) },
         { }
     };
 
@@ -19074,7 +24663,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILockScreenActivatedEventArgs};
 
+    struct ImplementsILockScreenActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILockScreenActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
+    {
+        ImplementsILockScreenActivatedEventArgs() = delete;
+        ImplementsILockScreenActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILockScreenActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Info()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "info")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILockScreenActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILockScreenActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILockScreenActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILockScreenActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILockScreenActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILockScreenActivatedEventArgs) },
         { }
     };
 
@@ -19313,7 +25033,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ILockScreenCallActivatedEventArgs};
 
+    struct ImplementsILockScreenCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILockScreenCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
+    {
+        ImplementsILockScreenCallActivatedEventArgs() = delete;
+        ImplementsILockScreenCallActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsILockScreenCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto CallUI()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "call_ui")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Arguments()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "arguments")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto TileId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "tile_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsILockScreenCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsILockScreenCallActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsILockScreenCallActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsILockScreenCallActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsILockScreenCallActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILockScreenCallActivatedEventArgs) },
         { }
     };
 
@@ -19498,7 +25389,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPhoneCallActivatedEventArgs};
 
+    struct ImplementsIPhoneCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPhoneCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
+    {
+        ImplementsIPhoneCallActivatedEventArgs() = delete;
+        ImplementsIPhoneCallActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPhoneCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto LineId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "line_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::guid>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPhoneCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPhoneCallActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPhoneCallActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPhoneCallActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPhoneCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPhoneCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPhoneCallActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPhoneCallActivatedEventArgs) },
         { }
     };
 
@@ -19683,7 +25705,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPickerReturnedActivatedEventArgs};
 
+    struct ImplementsIPickerReturnedActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPickerReturnedActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
+    {
+        ImplementsIPickerReturnedActivatedEventArgs() = delete;
+        ImplementsIPickerReturnedActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPickerReturnedActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto PickerOperationId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "picker_operation_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPickerReturnedActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPickerReturnedActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPickerReturnedActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPickerReturnedActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPickerReturnedActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPickerReturnedActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPickerReturnedActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPickerReturnedActivatedEventArgs) },
         { }
     };
 
@@ -19868,7 +26021,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrelaunchActivatedEventArgs};
 
+    struct ImplementsIPrelaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrelaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
+    {
+        ImplementsIPrelaunchActivatedEventArgs() = delete;
+        ImplementsIPrelaunchActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPrelaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto PrelaunchActivated()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "prelaunch_activated")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPrelaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPrelaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPrelaunchActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPrelaunchActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrelaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrelaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPrelaunchActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrelaunchActivatedEventArgs) },
         { }
     };
 
@@ -20053,7 +26337,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrint3DWorkflowActivatedEventArgs};
 
+    struct ImplementsIPrint3DWorkflowActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrint3DWorkflowActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
+    {
+        ImplementsIPrint3DWorkflowActivatedEventArgs() = delete;
+        ImplementsIPrint3DWorkflowActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPrint3DWorkflowActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Workflow()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "workflow")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPrint3DWorkflowActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPrint3DWorkflowActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPrint3DWorkflowActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrint3DWorkflowActivatedEventArgs) },
         { }
     };
 
@@ -20238,7 +26653,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPrintTaskSettingsActivatedEventArgs};
 
+    struct ImplementsIPrintTaskSettingsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrintTaskSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
+    {
+        ImplementsIPrintTaskSettingsActivatedEventArgs() = delete;
+        ImplementsIPrintTaskSettingsActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPrintTaskSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Configuration()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "configuration")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPrintTaskSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPrintTaskSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPrintTaskSettingsActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintTaskSettingsActivatedEventArgs) },
         { }
     };
 
@@ -20423,7 +26969,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolActivatedEventArgs};
 
+    struct ImplementsIProtocolActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
+    {
+        ImplementsIProtocolActivatedEventArgs() = delete;
+        ImplementsIProtocolActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Uri()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "uri")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Uri>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIProtocolActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIProtocolActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIProtocolActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIProtocolActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolActivatedEventArgs) },
         { }
     };
 
@@ -20635,7 +27312,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
 
+    struct ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
+    {
+        ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData() = delete;
+        ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>(py_obj, runtime_class)
+        {
+        }
+
+        auto CallerPackageFamilyName()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "caller_package_family_name")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Data()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { }
     };
 
@@ -20820,7 +27648,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IProtocolForResultsActivatedEventArgs};
 
+    struct ImplementsIProtocolForResultsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIProtocolForResultsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
+    {
+        ImplementsIProtocolForResultsActivatedEventArgs() = delete;
+        ImplementsIProtocolForResultsActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIProtocolForResultsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ProtocolForResultsOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "protocol_for_results_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::System::ProtocolForResultsOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIProtocolForResultsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIProtocolForResultsActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIProtocolForResultsActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIProtocolForResultsActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolForResultsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolForResultsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIProtocolForResultsActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolForResultsActivatedEventArgs) },
         { }
     };
 
@@ -21005,7 +27964,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IRestrictedLaunchActivatedEventArgs};
 
+    struct ImplementsIRestrictedLaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIRestrictedLaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
+    {
+        ImplementsIRestrictedLaunchActivatedEventArgs() = delete;
+        ImplementsIRestrictedLaunchActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIRestrictedLaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto SharedContext()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "shared_context")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIRestrictedLaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIRestrictedLaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIRestrictedLaunchActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRestrictedLaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRestrictedLaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRestrictedLaunchActivatedEventArgs) },
         { }
     };
 
@@ -21217,7 +28307,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchActivatedEventArgs};
 
+    struct ImplementsISearchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
+    {
+        ImplementsISearchActivatedEventArgs() = delete;
+        ImplementsISearchActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Language()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "language")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto QueryText()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "query_text")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISearchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISearchActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISearchActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISearchActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISearchActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchActivatedEventArgs) },
         { }
     };
 
@@ -21321,7 +28562,78 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ISearchActivatedEventArgsWithLinguisticDetails};
 
+    struct ImplementsISearchActivatedEventArgsWithLinguisticDetails : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgsWithLinguisticDetails, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
+    {
+        ImplementsISearchActivatedEventArgsWithLinguisticDetails() = delete;
+        ImplementsISearchActivatedEventArgsWithLinguisticDetails(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgsWithLinguisticDetails, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>(py_obj, runtime_class)
+        {
+        }
+
+        auto LinguisticDetails()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "linguistic_details")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsISearchActivatedEventArgsWithLinguisticDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsISearchActivatedEventArgsWithLinguisticDetails(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsISearchActivatedEventArgsWithLinguisticDetails>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchActivatedEventArgsWithLinguisticDetails) },
         { }
     };
 
@@ -21506,7 +28818,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IShareTargetActivatedEventArgs};
 
+    struct ImplementsIShareTargetActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIShareTargetActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
+    {
+        ImplementsIShareTargetActivatedEventArgs() = delete;
+        ImplementsIShareTargetActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIShareTargetActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ShareOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "share_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIShareTargetActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIShareTargetActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIShareTargetActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIShareTargetActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIShareTargetActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIShareTargetActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIShareTargetActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIShareTargetActivatedEventArgs) },
         { }
     };
 
@@ -21691,7 +29134,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStartupTaskActivatedEventArgs};
 
+    struct ImplementsIStartupTaskActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIStartupTaskActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
+    {
+        ImplementsIStartupTaskActivatedEventArgs() = delete;
+        ImplementsIStartupTaskActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStartupTaskActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto TaskId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "task_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIStartupTaskActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStartupTaskActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStartupTaskActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStartupTaskActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStartupTaskActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStartupTaskActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIStartupTaskActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStartupTaskActivatedEventArgs) },
         { }
     };
 
@@ -21903,7 +29477,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IToastNotificationActivatedEventArgs};
 
+    struct ImplementsIToastNotificationActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIToastNotificationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
+    {
+        ImplementsIToastNotificationActivatedEventArgs() = delete;
+        ImplementsIToastNotificationActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIToastNotificationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Argument()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "argument")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto UserInput()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "user_input")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIToastNotificationActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIToastNotificationActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIToastNotificationActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIToastNotificationActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIToastNotificationActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIToastNotificationActivatedEventArgs) },
         { }
     };
 
@@ -22088,7 +29813,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUserDataAccountProviderActivatedEventArgs};
 
+    struct ImplementsIUserDataAccountProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIUserDataAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
+    {
+        ImplementsIUserDataAccountProviderActivatedEventArgs() = delete;
+        ImplementsIUserDataAccountProviderActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIUserDataAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Operation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIUserDataAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIUserDataAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIUserDataAccountProviderActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUserDataAccountProviderActivatedEventArgs) },
         { }
     };
 
@@ -22273,7 +30129,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IViewSwitcherProvider};
 
+    struct ImplementsIViewSwitcherProvider : py::ImplementsInterfaceT<ImplementsIViewSwitcherProvider, winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
+    {
+        ImplementsIViewSwitcherProvider() = delete;
+        ImplementsIViewSwitcherProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIViewSwitcherProvider, winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>(py_obj, runtime_class)
+        {
+        }
+
+        auto ViewSwitcher()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "view_switcher")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIViewSwitcherProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIViewSwitcherProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIViewSwitcherProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIViewSwitcherProvider[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIViewSwitcherProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIViewSwitcherProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIViewSwitcherProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIViewSwitcherProvider) },
         { }
     };
 
@@ -22458,7 +30445,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVoiceCommandActivatedEventArgs};
 
+    struct ImplementsIVoiceCommandActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIVoiceCommandActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
+    {
+        ImplementsIVoiceCommandActivatedEventArgs() = delete;
+        ImplementsIVoiceCommandActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVoiceCommandActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Result()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "result")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVoiceCommandActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVoiceCommandActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVoiceCommandActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVoiceCommandActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVoiceCommandActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVoiceCommandActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVoiceCommandActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVoiceCommandActivatedEventArgs) },
         { }
     };
 
@@ -22697,7 +30815,178 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWalletActionActivatedEventArgs};
 
+    struct ImplementsIWalletActionActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIWalletActionActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
+    {
+        ImplementsIWalletActionActivatedEventArgs() = delete;
+        ImplementsIWalletActionActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWalletActionActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto ActionId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "action_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ActionKind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "action_kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletActionKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ItemId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "item_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWalletActionActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWalletActionActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWalletActionActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWalletActionActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWalletActionActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWalletActionActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWalletActionActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWalletActionActivatedEventArgs) },
         { }
     };
 
@@ -22882,7 +31171,138 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderActivatedEventArgs};
 
+    struct ImplementsIWebAccountProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIWebAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
+    {
+        ImplementsIWebAccountProviderActivatedEventArgs() = delete;
+        ImplementsIWebAccountProviderActivatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto Operation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderActivatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderActivatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderActivatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderActivatedEventArgs) },
         { }
     };
 
@@ -23094,7 +31514,158 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAuthenticationBrokerContinuationEventArgs};
 
+    struct ImplementsIWebAuthenticationBrokerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIWebAuthenticationBrokerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
+    {
+        ImplementsIWebAuthenticationBrokerContinuationEventArgs() = delete;
+        ImplementsIWebAuthenticationBrokerContinuationEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAuthenticationBrokerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto WebAuthenticationResult()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "web_authentication_result")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ContinuationData()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "continuation_data")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ActivationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto PreviousExecutionState()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "previous_execution_state")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto SplashScreen()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "splash_screen")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::ApplicationModel::Activation::SplashScreen>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAuthenticationBrokerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAuthenticationBrokerContinuationEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAuthenticationBrokerContinuationEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAuthenticationBrokerContinuationEventArgs) },
         { }
     };
 

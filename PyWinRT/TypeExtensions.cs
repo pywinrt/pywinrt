@@ -530,25 +530,30 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static string ToDelegateParam(this ParameterDefinition param) =>
+    public static string ToDelegateParam(
+        this ParameterDefinition param,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
+    ) =>
         param.GetCategory() switch
         {
             ParamCategory.In
                 => param.ParameterType switch
                 {
                     GenericParameter gen
-                        => $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}",
+                        => map is null
+                            ? $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}"
+                            : $"{map[gen].ToCppTypeName(map)} const& {param.ToParamName()}",
                     { IsValueType: true }
-                        => $"{param.ParameterType.ToCppTypeName()} {param.ToParamName()}",
-                    _ => $"{param.ParameterType.ToCppTypeName()} const& {param.ToParamName()}"
+                        => $"{param.ParameterType.ToCppTypeName(map)} {param.ToParamName()}",
+                    _ => $"{param.ParameterType.ToCppTypeName(map)} const& {param.ToParamName()}"
                 },
-            ParamCategory.Out => $"{param.ParameterType.ToCppTypeName()}& {param.ToParamName()}",
+            ParamCategory.Out => $"{param.ParameterType.ToCppTypeName(map)}& {param.ToParamName()}",
             ParamCategory.PassArray
-                => $"winrt::array_view<{param.ParameterType.ToCppTypeName()} const> {param.ToParamName()}",
+                => $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)} const> {param.ToParamName()}",
             ParamCategory.FillArray
-                => $"winrt::array_view<{param.ParameterType.ToCppTypeName()}> {param.ToParamName()}",
+                => $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)}> {param.ToParamName()}",
             ParamCategory.ReceiveArray
-                => $"winrt::com_array<{param.ParameterType.ToCppTypeName()}>& {param.ToParamName()}",
+                => $"winrt::com_array<{param.ParameterType.ToCppTypeName(map)}>& {param.ToParamName()}",
             _ => throw new NotImplementedException(),
         };
 

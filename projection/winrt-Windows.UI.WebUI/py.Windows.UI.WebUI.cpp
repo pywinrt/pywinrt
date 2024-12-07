@@ -16838,7 +16838,78 @@ namespace py::cpp::Windows::UI::WebUI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IActivatedEventArgsDeferral};
 
+    struct ImplementsIActivatedEventArgsDeferral : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsDeferral, winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
+    {
+        ImplementsIActivatedEventArgsDeferral() = delete;
+        ImplementsIActivatedEventArgsDeferral(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsDeferral, winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>(py_obj, runtime_class)
+        {
+        }
+
+        auto ActivatedOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "activated_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::WebUI::ActivatedOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIActivatedEventArgsDeferral>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIActivatedEventArgsDeferral[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsDeferral), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsDeferral), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIActivatedEventArgsDeferral[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActivatedEventArgsDeferral) },
         { }
     };
 
@@ -16977,7 +17048,101 @@ namespace py::cpp::Windows::UI::WebUI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUIBackgroundTaskInstance};
 
+    struct ImplementsIWebUIBackgroundTaskInstance : py::ImplementsInterfaceT<ImplementsIWebUIBackgroundTaskInstance, winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
+    {
+        ImplementsIWebUIBackgroundTaskInstance() = delete;
+        ImplementsIWebUIBackgroundTaskInstance(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebUIBackgroundTaskInstance, winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>(py_obj, runtime_class)
+        {
+        }
+
+        auto Succeeded()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "succeeded")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Succeeded(bool param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "succeeded", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebUIBackgroundTaskInstance>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebUIBackgroundTaskInstance[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUIBackgroundTaskInstance), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUIBackgroundTaskInstance), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebUIBackgroundTaskInstance[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUIBackgroundTaskInstance) },
         { }
     };
 
@@ -17081,7 +17246,78 @@ namespace py::cpp::Windows::UI::WebUI
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebUINavigatedEventArgs};
 
+    struct ImplementsIWebUINavigatedEventArgs : py::ImplementsInterfaceT<ImplementsIWebUINavigatedEventArgs, winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
+    {
+        ImplementsIWebUINavigatedEventArgs() = delete;
+        ImplementsIWebUINavigatedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebUINavigatedEventArgs, winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto NavigatedOperation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "navigated_operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::WebUI::WebUINavigatedOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebUINavigatedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebUINavigatedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUINavigatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUINavigatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebUINavigatedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUINavigatedEventArgs) },
         { }
     };
 

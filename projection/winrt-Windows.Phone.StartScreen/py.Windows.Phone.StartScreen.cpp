@@ -720,7 +720,90 @@ namespace py::cpp::Windows::Phone::StartScreen
         Py_TPFLAGS_DEFAULT,
         _type_slots_IToastNotificationManagerStatics3};
 
+    struct ImplementsIToastNotificationManagerStatics3 : py::ImplementsInterfaceT<ImplementsIToastNotificationManagerStatics3, winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
+    {
+        ImplementsIToastNotificationManagerStatics3() = delete;
+        ImplementsIToastNotificationManagerStatics3(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIToastNotificationManagerStatics3, winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateToastNotifierForSecondaryTile(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_toast_notifier_for_secondary_tile")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::UI::Notifications::ToastNotifier>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIToastNotificationManagerStatics3(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIToastNotificationManagerStatics3(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIToastNotificationManagerStatics3>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIToastNotificationManagerStatics3[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationManagerStatics3), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationManagerStatics3), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIToastNotificationManagerStatics3[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIToastNotificationManagerStatics3) },
         { }
     };
 

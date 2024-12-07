@@ -3682,7 +3682,112 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderBaseReportOperation};
 
+    struct ImplementsIWebAccountProviderBaseReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderBaseReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>
+    {
+        ImplementsIWebAccountProviderBaseReportOperation() = delete;
+        ImplementsIWebAccountProviderBaseReportOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderBaseReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto ReportCompleted()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_completed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportError(winrt::Windows::Security::Authentication::Web::Core::WebProviderError const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_error")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderBaseReportOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderBaseReportOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderBaseReportOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderBaseReportOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderBaseReportOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderBaseReportOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderBaseReportOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderBaseReportOperation) },
         { }
     };
 
@@ -3786,7 +3891,78 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderOperation};
 
+    struct ImplementsIWebAccountProviderOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>
+    {
+        ImplementsIWebAccountProviderOperation() = delete;
+        ImplementsIWebAccountProviderOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderOperation) },
         { }
     };
 
@@ -4019,7 +4195,166 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderSilentReportOperation};
 
+    struct ImplementsIWebAccountProviderSilentReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderSilentReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>
+    {
+        ImplementsIWebAccountProviderSilentReportOperation() = delete;
+        ImplementsIWebAccountProviderSilentReportOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderSilentReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto ReportCompleted()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_completed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportError(winrt::Windows::Security::Authentication::Web::Core::WebProviderError const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_error")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportUserInteractionRequired()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_user_interaction_required")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportUserInteractionRequired(winrt::Windows::Security::Authentication::Web::Core::WebProviderError const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_user_interaction_required_with_error")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderSilentReportOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderSilentReportOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderSilentReportOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderSilentReportOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderSilentReportOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderSilentReportOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderSilentReportOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderSilentReportOperation) },
         { }
     };
 
@@ -4123,7 +4458,78 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenObjects};
 
+    struct ImplementsIWebAccountProviderTokenObjects : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>
+    {
+        ImplementsIWebAccountProviderTokenObjects() = delete;
+        ImplementsIWebAccountProviderTokenObjects(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>(py_obj, runtime_class)
+        {
+        }
+
+        auto Operation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderTokenObjects(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderTokenObjects(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderTokenObjects>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenObjects) },
         { }
     };
 
@@ -4254,7 +4660,98 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenObjects2};
 
+    struct ImplementsIWebAccountProviderTokenObjects2 : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects2, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>
+    {
+        ImplementsIWebAccountProviderTokenObjects2() = delete;
+        ImplementsIWebAccountProviderTokenObjects2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects2, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>(py_obj, runtime_class)
+        {
+        }
+
+        auto User()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "user")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::System::User>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Operation()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "operation")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderTokenObjects2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderTokenObjects2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderTokenObjects2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects2[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects2), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenObjects2) },
         { }
     };
 
@@ -4474,7 +4971,161 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderTokenOperation};
 
+    struct ImplementsIWebAccountProviderTokenOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>
+    {
+        ImplementsIWebAccountProviderTokenOperation() = delete;
+        ImplementsIWebAccountProviderTokenOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto CacheExpirationTime()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "cache_expiration_time")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::DateTime>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void CacheExpirationTime(winrt::Windows::Foundation::DateTime param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "cache_expiration_time", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ProviderRequest()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "provider_request")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ProviderResponses()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "provider_responses")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderTokenOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderTokenOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderTokenOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderTokenOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenOperation) },
         { }
     };
 
@@ -4667,7 +5318,136 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IWebAccountProviderUIReportOperation};
 
+    struct ImplementsIWebAccountProviderUIReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderUIReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>
+    {
+        ImplementsIWebAccountProviderUIReportOperation() = delete;
+        ImplementsIWebAccountProviderUIReportOperation(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWebAccountProviderUIReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>(py_obj, runtime_class)
+        {
+        }
+
+        auto ReportCompleted()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_completed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportError(winrt::Windows::Security::Authentication::Web::Core::WebProviderError const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_error")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportUserCanceled()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_user_canceled")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIWebAccountProviderUIReportOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWebAccountProviderUIReportOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWebAccountProviderUIReportOperation>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWebAccountProviderUIReportOperation[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderUIReportOperation), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderUIReportOperation), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIWebAccountProviderUIReportOperation[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderUIReportOperation) },
         { }
     };
 

@@ -1708,7 +1708,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIterable};
 
+    static PyObject* _guid_ImplementsIIterable(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIIterable(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIIterable[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterable), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterable), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIIterable[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIterable) },
         { }
     };
 
@@ -1839,7 +1882,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IIterator};
 
+    static PyObject* _guid_ImplementsIIterator(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIIterator(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIIterator[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterator), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterator), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIIterator[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIterator) },
         { }
     };
 
@@ -1946,7 +2032,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IKeyValuePair};
 
+    static PyObject* _guid_ImplementsIKeyValuePair(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIKeyValuePair(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIKeyValuePair[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIKeyValuePair), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIKeyValuePair), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIKeyValuePair[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIKeyValuePair) },
         { }
     };
 
@@ -2053,7 +2182,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMapChangedEventArgs};
 
+    static PyObject* _guid_ImplementsIMapChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMapChangedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMapChangedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMapChangedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMapChangedEventArgs) },
         { }
     };
 
@@ -2181,7 +2353,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMapView};
 
+    static PyObject* _guid_ImplementsIMapView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMapView(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMapView[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapView), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapView), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMapView[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMapView) },
         { }
     };
 
@@ -2333,7 +2548,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMap};
 
+    static PyObject* _guid_ImplementsIMap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMap(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMap[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMap), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMap), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMap[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMap) },
         { }
     };
 
@@ -2539,7 +2797,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IObservableMap};
 
+    static PyObject* _guid_ImplementsIObservableMap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIObservableMap(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIObservableMap[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableMap), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableMap), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIObservableMap[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIObservableMap) },
         { }
     };
 
@@ -2775,7 +3076,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IObservableVector};
 
+    static PyObject* _guid_ImplementsIObservableVector(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIObservableVector(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIObservableVector[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableVector), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableVector), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIObservableVector[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIObservableVector) },
         { }
     };
 
@@ -3314,7 +3658,354 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IPropertySet};
 
+    struct ImplementsIPropertySet : py::ImplementsInterfaceT<ImplementsIPropertySet, winrt::Windows::Foundation::Collections::IPropertySet>
+    {
+        ImplementsIPropertySet() = delete;
+        ImplementsIPropertySet(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIPropertySet, winrt::Windows::Foundation::Collections::IPropertySet>(py_obj, runtime_class)
+        {
+        }
+
+        auto Clear()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "clear")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto First()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "first")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IIterator<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto GetView()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_view")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto HasKey(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "has_key")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Insert(winrt::hstring const& param0, winrt::Windows::Foundation::IInspectable const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "insert")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Lookup(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "lookup")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IInspectable>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Remove(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Size()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "size")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto MapChanged(winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_map_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto MapChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_map_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIPropertySet(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Collections::IPropertySet>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIPropertySet(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIPropertySet>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIPropertySet[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertySet), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertySet), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIPropertySet[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertySet) },
         { }
     };
 
@@ -3445,7 +4136,98 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVectorChangedEventArgs};
 
+    struct ImplementsIVectorChangedEventArgs : py::ImplementsInterfaceT<ImplementsIVectorChangedEventArgs, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
+    {
+        ImplementsIVectorChangedEventArgs() = delete;
+        ImplementsIVectorChangedEventArgs(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIVectorChangedEventArgs, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>(py_obj, runtime_class)
+        {
+        }
+
+        auto CollectionChange()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "collection_change")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::CollectionChange>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Index()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "index")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<uint32_t>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIVectorChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVectorChangedEventArgs(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIVectorChangedEventArgs>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVectorChangedEventArgs[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVectorChangedEventArgs[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVectorChangedEventArgs) },
         { }
     };
 
@@ -3573,7 +4355,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVectorView};
 
+    static PyObject* _guid_ImplementsIVectorView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVectorView(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVectorView[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorView), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorView), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVectorView[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVectorView) },
         { }
     };
 
@@ -3755,7 +4580,50 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVector};
 
+    static PyObject* _guid_ImplementsIVector(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIVector(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            PyErr_SetString(PyExc_NotImplementedError, "Generic types are not supported");
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIVector[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVector), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVector), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIVector[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVector) },
         { }
     };
 

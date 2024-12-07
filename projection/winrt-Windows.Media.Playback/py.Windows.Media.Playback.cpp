@@ -15542,7 +15542,108 @@ namespace py::cpp::Windows::Media::Playback
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaEnginePlaybackSource};
 
+    struct ImplementsIMediaEnginePlaybackSource : py::ImplementsInterfaceT<ImplementsIMediaEnginePlaybackSource, winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
+    {
+        ImplementsIMediaEnginePlaybackSource() = delete;
+        ImplementsIMediaEnginePlaybackSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMediaEnginePlaybackSource, winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>(py_obj, runtime_class)
+        {
+        }
+
+        auto SetPlaybackSource(winrt::Windows::Media::Playback::IMediaPlaybackSource const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "set_playback_source")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto CurrentItem()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "current_item")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Media::Playback::MediaPlaybackItem>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMediaEnginePlaybackSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMediaEnginePlaybackSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMediaEnginePlaybackSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMediaEnginePlaybackSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaEnginePlaybackSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaEnginePlaybackSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMediaEnginePlaybackSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaEnginePlaybackSource) },
         { }
     };
 
@@ -15619,7 +15720,58 @@ namespace py::cpp::Windows::Media::Playback
         Py_TPFLAGS_DEFAULT,
         _type_slots_IMediaPlaybackSource};
 
+    struct ImplementsIMediaPlaybackSource : py::ImplementsInterfaceT<ImplementsIMediaPlaybackSource, winrt::Windows::Media::Playback::IMediaPlaybackSource>
+    {
+        ImplementsIMediaPlaybackSource() = delete;
+        ImplementsIMediaPlaybackSource(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIMediaPlaybackSource, winrt::Windows::Media::Playback::IMediaPlaybackSource>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _guid_ImplementsIMediaPlaybackSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Media::Playback::IMediaPlaybackSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIMediaPlaybackSource(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIMediaPlaybackSource>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIMediaPlaybackSource[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaPlaybackSource), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaPlaybackSource), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIMediaPlaybackSource[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaPlaybackSource) },
         { }
     };
 

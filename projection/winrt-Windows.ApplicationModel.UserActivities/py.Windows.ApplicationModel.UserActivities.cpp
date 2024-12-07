@@ -2957,7 +2957,84 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         Py_TPFLAGS_DEFAULT,
         _type_slots_IUserActivityContentInfo};
 
+    struct ImplementsIUserActivityContentInfo : py::ImplementsInterfaceT<ImplementsIUserActivityContentInfo, winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
+    {
+        ImplementsIUserActivityContentInfo() = delete;
+        ImplementsIUserActivityContentInfo(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIUserActivityContentInfo, winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>(py_obj, runtime_class)
+        {
+        }
+
+        auto ToJson()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "to_json")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _guid_ImplementsIUserActivityContentInfo(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIUserActivityContentInfo(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIUserActivityContentInfo>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIUserActivityContentInfo[] = {
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserActivityContentInfo), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserActivityContentInfo), METH_VARARGS | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyType_Slot type_slots_ImplementsIUserActivityContentInfo[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUserActivityContentInfo) },
         { }
     };
 
