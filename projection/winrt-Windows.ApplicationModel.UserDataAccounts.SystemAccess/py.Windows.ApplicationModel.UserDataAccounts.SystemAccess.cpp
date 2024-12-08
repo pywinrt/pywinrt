@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailAddress();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EmailAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EmailAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.Domain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Domain();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Domain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Domain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAccountTypeId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAccountTypeId();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DeviceAccountTypeId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceAccountTypeId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerAddress();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OutgoingServerAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactsSyncEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactsSyncEnabled();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ContactsSyncEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactsSyncEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalendarSyncEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalendarSyncEnabled();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CalendarSyncEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CalendarSyncEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountName();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AccountName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccountName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerUsername());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerUsername();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.IncomingServerUsername(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerUsername(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerRequiresSsl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerRequiresSsl();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncomingServerRequiresSsl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerRequiresSsl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerPort();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IncomingServerPort(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerPort(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerAddress();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.IncomingServerAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailSyncEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailSyncEnabled();
+            }());
         }
         catch (...)
         {
@@ -765,7 +857,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.EmailSyncEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EmailSyncEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -792,7 +888,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerType();
+            }());
         }
         catch (...)
         {
@@ -826,7 +926,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>(arg);
 
-            self->obj.ServerType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -853,7 +957,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerUsername());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerUsername();
+            }());
         }
         catch (...)
         {
@@ -887,7 +995,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OutgoingServerUsername(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerUsername(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -914,7 +1026,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerRequiresSsl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerRequiresSsl();
+            }());
         }
         catch (...)
         {
@@ -948,7 +1064,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.OutgoingServerRequiresSsl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerRequiresSsl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -975,7 +1095,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerPort();
+            }());
         }
         catch (...)
         {
@@ -1009,7 +1133,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.OutgoingServerPort(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerPort(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1036,7 +1164,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountIconId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountIconId();
+            }());
         }
         catch (...)
         {
@@ -1070,7 +1202,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>(arg);
 
-            self->obj.AccountIconId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccountIconId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1097,7 +1233,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalDavServerUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalDavServerUrl();
+            }());
         }
         catch (...)
         {
@@ -1131,7 +1271,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.CalDavServerUrl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CalDavServerUrl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1158,7 +1302,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalDavRequiresSsl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalDavRequiresSsl();
+            }());
         }
         catch (...)
         {
@@ -1192,7 +1340,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CalDavRequiresSsl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CalDavRequiresSsl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1219,7 +1371,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoSelectAuthenticationCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoSelectAuthenticationCertificate();
+            }());
         }
         catch (...)
         {
@@ -1253,7 +1409,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoSelectAuthenticationCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoSelectAuthenticationCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1280,7 +1440,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationType();
+            }());
         }
         catch (...)
         {
@@ -1314,7 +1478,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>(arg);
 
-            self->obj.AuthenticationType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthenticationType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1341,7 +1509,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationCertificateId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationCertificateId();
+            }());
         }
         catch (...)
         {
@@ -1375,7 +1547,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AuthenticationCertificateId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthenticationCertificateId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1402,7 +1578,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOutgoingServerAuthenticationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOutgoingServerAuthenticationEnabled();
+            }());
         }
         catch (...)
         {
@@ -1436,7 +1616,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsOutgoingServerAuthenticationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOutgoingServerAuthenticationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1463,7 +1647,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClientAuthenticationCertificateRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsClientAuthenticationCertificateRequired();
+            }());
         }
         catch (...)
         {
@@ -1497,7 +1685,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsClientAuthenticationCertificateRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsClientAuthenticationCertificateRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1524,7 +1716,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerCredential();
+            }());
         }
         catch (...)
         {
@@ -1558,7 +1754,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.IncomingServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1585,7 +1785,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOutgoingServerAuthenticationRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOutgoingServerAuthenticationRequired();
+            }());
         }
         catch (...)
         {
@@ -1619,7 +1823,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsOutgoingServerAuthenticationRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOutgoingServerAuthenticationRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1646,7 +1854,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CardDavSyncScheduleKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CardDavSyncScheduleKind();
+            }());
         }
         catch (...)
         {
@@ -1680,7 +1892,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
-            self->obj.CardDavSyncScheduleKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CardDavSyncScheduleKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1707,7 +1923,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysDownloadFullMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysDownloadFullMessage();
+            }());
         }
         catch (...)
         {
@@ -1741,7 +1961,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysDownloadFullMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysDownloadFullMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1768,7 +1992,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CardDavServerUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CardDavServerUrl();
+            }());
         }
         catch (...)
         {
@@ -1802,7 +2030,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.CardDavServerUrl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CardDavServerUrl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1829,7 +2061,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CardDavRequiresSsl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CardDavRequiresSsl();
+            }());
         }
         catch (...)
         {
@@ -1863,7 +2099,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CardDavRequiresSsl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CardDavRequiresSsl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1890,7 +2130,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalDavSyncScheduleKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalDavSyncScheduleKind();
+            }());
         }
         catch (...)
         {
@@ -1924,7 +2168,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
-            self->obj.CalDavSyncScheduleKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CalDavSyncScheduleKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1951,7 +2199,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncomingServerCertificateHash());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncomingServerCertificateHash();
+            }());
         }
         catch (...)
         {
@@ -1985,7 +2237,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.IncomingServerCertificateHash(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncomingServerCertificateHash(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2012,7 +2268,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.WasOutgoingServerCertificateHashConfirmed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WasOutgoingServerCertificateHashConfirmed();
+            }());
         }
         catch (...)
         {
@@ -2046,7 +2306,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.WasOutgoingServerCertificateHashConfirmed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WasOutgoingServerCertificateHashConfirmed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2073,7 +2337,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.WasModifiedByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WasModifiedByUser();
+            }());
         }
         catch (...)
         {
@@ -2107,7 +2375,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.WasModifiedByUser(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WasModifiedByUser(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2134,7 +2406,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.SyncScheduleKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncScheduleKind();
+            }());
         }
         catch (...)
         {
@@ -2168,7 +2444,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
-            self->obj.SyncScheduleKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncScheduleKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2195,7 +2475,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.SsoAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SsoAccountId();
+            }());
         }
         catch (...)
         {
@@ -2229,7 +2513,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SsoAccountId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SsoAccountId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2256,7 +2544,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.WasIncomingServerCertificateHashConfirmed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WasIncomingServerCertificateHashConfirmed();
+            }());
         }
         catch (...)
         {
@@ -2290,7 +2582,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.WasIncomingServerCertificateHashConfirmed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WasIncomingServerCertificateHashConfirmed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2317,7 +2613,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OAuthRefreshToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OAuthRefreshToken();
+            }());
         }
         catch (...)
         {
@@ -2351,7 +2651,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OAuthRefreshToken(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OAuthRefreshToken(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2378,7 +2682,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExternallyManaged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExternallyManaged();
+            }());
         }
         catch (...)
         {
@@ -2412,7 +2720,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsExternallyManaged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsExternallyManaged(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2439,7 +2751,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.MailAgeFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MailAgeFilter();
+            }());
         }
         catch (...)
         {
@@ -2473,7 +2789,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>(arg);
 
-            self->obj.MailAgeFilter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MailAgeFilter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2500,7 +2820,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSyncScheduleManagedBySystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSyncScheduleManagedBySystem();
+            }());
         }
         catch (...)
         {
@@ -2534,7 +2858,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSyncScheduleManagedBySystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSyncScheduleManagedBySystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2561,7 +2889,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerCertificateHash());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerCertificateHash();
+            }());
         }
         catch (...)
         {
@@ -2595,7 +2927,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OutgoingServerCertificateHash(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerCertificateHash(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2622,7 +2958,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingServerCredential();
+            }());
         }
         catch (...)
         {
@@ -2656,7 +2996,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.OutgoingServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2683,7 +3027,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.DoesPolicyAllowMailSync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DoesPolicyAllowMailSync();
+            }());
         }
         catch (...)
         {
@@ -2709,7 +3057,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSsoAuthenticationSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSsoAuthenticationSupported();
+            }());
         }
         catch (...)
         {
@@ -2844,7 +3196,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::AddAndShowDeviceAccountsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::AddAndShowDeviceAccountsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2882,7 +3238,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::CreateDeviceAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::CreateDeviceAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2920,7 +3280,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::DeleteDeviceAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::DeleteDeviceAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2958,7 +3322,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::GetDeviceAccountConfigurationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::GetDeviceAccountConfigurationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2996,7 +3364,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::SuppressLocalAccountWithAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager::SuppressLocalAccountWithAccountAsync(param0);
+                }());
             }
             catch (...)
             {

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsChatCapable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsChatCapable();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFileTransferCapable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFileTransferCapable();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGeoLocationPushCapable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGeoLocationPushCapable();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIntegratedMessagingCapable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIntegratedMessagingCapable();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOnline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOnline();
+            }());
         }
         catch (...)
         {
@@ -237,7 +257,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCachedCapabilitiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCachedCapabilitiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -276,7 +300,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCachedCapabilitiesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCachedCapabilitiesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -314,7 +342,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -353,7 +385,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -457,7 +493,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -493,7 +533,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMessageReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageReader();
+                }());
             }
             catch (...)
             {
@@ -529,7 +573,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MarkMessagesAsReadAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkMessagesAsReadAsync();
+                }());
             }
             catch (...)
             {
@@ -567,7 +615,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(self->obj.MarkMessagesAsReadAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkMessagesAsReadAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -607,7 +659,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.NotifyLocalParticipantComposing(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyLocalParticipantComposing(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -648,7 +704,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.NotifyRemoteParticipantComposing(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyRemoteParticipantComposing(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -685,7 +745,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -717,7 +781,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -751,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subject(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subject(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -778,7 +850,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConversationMuted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConversationMuted();
+            }());
         }
         catch (...)
         {
@@ -812,7 +888,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsConversationMuted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsConversationMuted(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -839,7 +919,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasUnreadMessages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasUnreadMessages();
+            }());
         }
         catch (...)
         {
@@ -865,7 +949,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -891,7 +979,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MostRecentMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MostRecentMessageId();
+            }());
         }
         catch (...)
         {
@@ -917,7 +1009,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Participants());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participants();
+            }());
         }
         catch (...)
         {
@@ -943,7 +1039,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThreadingInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThreadingInfo();
+            }());
         }
         catch (...)
         {
@@ -969,7 +1069,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanModifyParticipants());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanModifyParticipants();
+            }());
         }
         catch (...)
         {
@@ -1003,7 +1107,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanModifyParticipants(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanModifyParticipants(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1030,7 +1138,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemKind();
+            }());
         }
         catch (...)
         {
@@ -1058,7 +1170,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatConversation, winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.RemoteParticipantComposingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteParticipantComposingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1086,7 +1202,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RemoteParticipantComposingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteParticipantComposingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1201,7 +1321,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -1239,7 +1363,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReadBatchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1361,7 +1489,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1395,7 +1527,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind>(arg);
 
-            self->obj.Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1422,7 +1558,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Custom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Custom();
+            }());
         }
         catch (...)
         {
@@ -1456,7 +1596,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Custom(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Custom(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1483,7 +1627,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConversationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConversationId();
+            }());
         }
         catch (...)
         {
@@ -1517,7 +1665,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ConversationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConversationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1544,7 +1696,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactId();
+            }());
         }
         catch (...)
         {
@@ -1578,7 +1734,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1605,7 +1765,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Participants());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participants();
+            }());
         }
         catch (...)
         {
@@ -1724,7 +1888,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemKind();
+            }());
         }
         catch (...)
         {
@@ -1750,7 +1918,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIncoming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIncoming();
+            }());
         }
         catch (...)
         {
@@ -1784,7 +1956,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIncoming(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsIncoming(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1811,7 +1987,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsForwardingDisabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsForwardingDisabled();
+            }());
         }
         catch (...)
         {
@@ -1845,7 +2025,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsForwardingDisabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsForwardingDisabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1872,7 +2056,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportId();
+            }());
         }
         catch (...)
         {
@@ -1906,7 +2094,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TransportId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransportId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1933,7 +2125,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1967,7 +2163,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1994,7 +2194,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -2028,7 +2232,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.From(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.From(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2055,7 +2263,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -2089,7 +2301,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Body(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Body(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2116,7 +2332,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -2150,7 +2370,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subject(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subject(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2177,7 +2401,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRead();
+            }());
         }
         catch (...)
         {
@@ -2211,7 +2439,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRead(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRead(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2238,7 +2470,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkTimestamp();
+            }());
         }
         catch (...)
         {
@@ -2272,7 +2508,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.NetworkTimestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NetworkTimestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2299,7 +2539,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalTimestamp();
+            }());
         }
         catch (...)
         {
@@ -2333,7 +2577,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LocalTimestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocalTimestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2360,7 +2608,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecipientSendStatuses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecipientSendStatuses();
+            }());
         }
         catch (...)
         {
@@ -2386,7 +2638,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recipients());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recipients();
+            }());
         }
         catch (...)
         {
@@ -2412,7 +2668,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportFriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportFriendlyName();
+            }());
         }
         catch (...)
         {
@@ -2438,7 +2698,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attachments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attachments();
+            }());
         }
         catch (...)
         {
@@ -2464,7 +2728,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2490,7 +2758,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSeen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSeen();
+            }());
         }
         catch (...)
         {
@@ -2524,7 +2796,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSeen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSeen(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2551,7 +2827,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageKind();
+            }());
         }
         catch (...)
         {
@@ -2585,7 +2865,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageKind>(arg);
 
-            self->obj.MessageKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2612,7 +2896,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReceivedDuringQuietHours());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReceivedDuringQuietHours();
+            }());
         }
         catch (...)
         {
@@ -2646,7 +2934,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsReceivedDuringQuietHours(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsReceivedDuringQuietHours(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2673,7 +2965,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAutoReply());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAutoReply();
+            }());
         }
         catch (...)
         {
@@ -2707,7 +3003,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAutoReply(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAutoReply(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2734,7 +3034,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.EstimatedDownloadSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EstimatedDownloadSize();
+            }());
         }
         catch (...)
         {
@@ -2768,7 +3072,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.EstimatedDownloadSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EstimatedDownloadSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2795,7 +3103,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThreadingInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThreadingInfo();
+            }());
         }
         catch (...)
         {
@@ -2829,7 +3141,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>(arg);
 
-            self->obj.ThreadingInfo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ThreadingInfo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2856,7 +3172,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldSuppressNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldSuppressNotification();
+            }());
         }
         catch (...)
         {
@@ -2890,7 +3210,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldSuppressNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldSuppressNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2917,7 +3241,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -2951,7 +3279,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2978,7 +3310,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageOperatorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageOperatorKind();
+            }());
         }
         catch (...)
         {
@@ -3012,7 +3348,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind>(arg);
 
-            self->obj.MessageOperatorKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageOperatorKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3039,7 +3379,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReplyDisabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReplyDisabled();
+            }());
         }
         catch (...)
         {
@@ -3065,7 +3409,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSimMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSimMessage();
+            }());
         }
         catch (...)
         {
@@ -3091,7 +3439,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecipientsDeliveryInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecipientsDeliveryInfos();
+            }());
         }
         catch (...)
         {
@@ -3117,7 +3469,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.SyncId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncId();
+            }());
         }
         catch (...)
         {
@@ -3151,7 +3507,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SyncId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3298,7 +3658,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -3332,7 +3696,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3359,7 +3727,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MimeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MimeType();
+            }());
         }
         catch (...)
         {
@@ -3393,7 +3765,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MimeType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MimeType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3420,7 +3796,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.GroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GroupId();
+            }());
         }
         catch (...)
         {
@@ -3454,7 +3834,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.GroupId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GroupId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3481,7 +3865,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataStreamReference());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataStreamReference();
+            }());
         }
         catch (...)
         {
@@ -3515,7 +3903,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.DataStreamReference(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataStreamReference(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3542,7 +3934,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferProgress();
+            }());
         }
         catch (...)
         {
@@ -3576,7 +3972,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TransferProgress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransferProgress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3603,7 +4003,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -3637,7 +4041,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3664,7 +4072,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginalFileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalFileName();
+            }());
         }
         catch (...)
         {
@@ -3698,7 +4110,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OriginalFileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OriginalFileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3797,7 +4213,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking::MarkMessageAsBlockedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking::MarkMessageAsBlockedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3894,7 +4314,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeType();
+            }());
         }
         catch (...)
         {
@@ -3920,7 +4344,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -4018,7 +4446,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                self->obj.AcceptChanges();
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptChanges();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4057,7 +4489,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>(args, 0);
 
-                self->obj.AcceptChangesThrough(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptChangesThrough(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4094,7 +4530,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -4199,7 +4639,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                self->obj.Enable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Enable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4236,7 +4680,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetChangeReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetChangeReader();
+                }());
             }
             catch (...)
             {
@@ -4272,7 +4720,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4378,7 +4830,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4482,7 +4938,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4579,7 +5039,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::GetTransportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::GetTransportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4615,7 +5079,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::GetTransportsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::GetTransportsAsync();
+                }());
             }
             catch (...)
             {
@@ -4651,7 +5119,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RegisterTransportAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RegisterTransportAsync();
+                }());
             }
             catch (...)
             {
@@ -4687,7 +5159,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RequestStoreAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RequestStoreAsync();
+                }());
             }
             catch (...)
             {
@@ -4723,7 +5199,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RequestSyncManagerAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::RequestSyncManagerAsync();
+                }());
             }
             catch (...)
             {
@@ -4761,7 +5241,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::ChatMessageManager::ShowComposeSmsMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::ChatMessageManager::ShowComposeSmsMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4797,7 +5281,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Chat::ChatMessageManager::ShowSmsSettings();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Chat::ChatMessageManager::ShowSmsSettings();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4901,7 +5389,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChatMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChatMessage();
+            }());
         }
         catch (...)
         {
@@ -4927,7 +5419,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldDisplayToast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplayToast();
+            }());
         }
         catch (...)
         {
@@ -4953,7 +5449,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldUpdateActionCenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldUpdateActionCenter();
+            }());
         }
         catch (...)
         {
@@ -4979,7 +5479,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldUpdateBadge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldUpdateBadge();
+            }());
         }
         catch (...)
         {
@@ -5005,7 +5509,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldUpdateDetailText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldUpdateDetailText();
+            }());
         }
         catch (...)
         {
@@ -5106,7 +5614,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -5144,7 +5656,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReadBatchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5250,7 +5766,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5288,7 +5808,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DownloadMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DownloadMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5327,7 +5851,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.ForwardMessageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ForwardMessageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5365,7 +5893,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetConversationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5404,7 +5936,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.GetConversationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5442,7 +5978,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetConversationReader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationReader(param0);
+                }());
             }
             catch (...)
             {
@@ -5480,7 +6020,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>(args, 0);
 
-                return py::convert(self->obj.GetConversationFromThreadingInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationFromThreadingInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5516,7 +6060,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConversationReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationReader();
+                }());
             }
             catch (...)
             {
@@ -5554,7 +6102,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5593,7 +6145,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetMessageByRemoteIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageByRemoteIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5631,7 +6187,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetMessageBySyncIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageBySyncIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5667,7 +6227,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMessageReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageReader();
+                }());
             }
             catch (...)
             {
@@ -5705,7 +6269,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                return py::convert(self->obj.GetMessageReader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageReader(param0);
+                }());
             }
             catch (...)
             {
@@ -5743,7 +6311,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>(args, 0);
 
-                return py::convert(self->obj.GetSearchReader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSearchReader(param0);
+                }());
             }
             catch (...)
             {
@@ -5779,7 +6351,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUnseenCountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUnseenCountAsync();
+                }());
             }
             catch (...)
             {
@@ -5817,7 +6393,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetUnseenCountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUnseenCountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5853,7 +6433,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MarkAsSeenAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkAsSeenAsync();
+                }());
             }
             catch (...)
             {
@@ -5891,7 +6475,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.MarkAsSeenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkAsSeenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5929,7 +6517,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.MarkMessageReadAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkMessageReadAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5967,7 +6559,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RetrySendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RetrySendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6005,7 +6601,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
-                return py::convert(self->obj.SaveMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6043,7 +6643,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
-                return py::convert(self->obj.SendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6081,7 +6685,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryCancelDownloadMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCancelDownloadMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6119,7 +6727,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryCancelSendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCancelSendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6157,7 +6769,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
-                return py::convert(self->obj.ValidateMessage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ValidateMessage(param0);
+                }());
             }
             catch (...)
             {
@@ -6189,7 +6805,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeTracker());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeTracker();
+            }());
         }
         catch (...)
         {
@@ -6217,7 +6837,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -6245,7 +6869,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6274,7 +6902,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StoreChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoreChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -6302,7 +6934,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StoreChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StoreChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6425,7 +7061,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -6451,7 +7091,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -6549,7 +7193,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestSetAsNotificationProviderAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestSetAsNotificationProviderAsync();
+                }());
             }
             catch (...)
             {
@@ -6581,7 +7229,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -6607,7 +7259,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAppSetAsNotificationProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAppSetAsNotificationProvider();
+            }());
         }
         catch (...)
         {
@@ -6633,7 +7289,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportFriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportFriendlyName();
+            }());
         }
         catch (...)
         {
@@ -6659,7 +7319,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportId();
+            }());
         }
         catch (...)
         {
@@ -6685,7 +7349,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -6711,7 +7379,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportKind();
+            }());
         }
         catch (...)
         {
@@ -6810,7 +7482,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedProperties();
+            }());
         }
         catch (...)
         {
@@ -6836,7 +7512,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAttachmentCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAttachmentCount();
+            }());
         }
         catch (...)
         {
@@ -6862,7 +7542,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxMessageSizeInKilobytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxMessageSizeInKilobytes();
+            }());
         }
         catch (...)
         {
@@ -6888,7 +7572,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxRecipientCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxRecipientCount();
+            }());
         }
         catch (...)
         {
@@ -6914,7 +7602,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedVideoFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedVideoFormat();
+            }());
         }
         catch (...)
         {
@@ -7011,7 +7703,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPartCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPartCount();
+            }());
         }
         catch (...)
         {
@@ -7037,7 +7733,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartCount();
+            }());
         }
         catch (...)
         {
@@ -7063,7 +7763,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemainingCharacterCountInPart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemainingCharacterCountInPart();
+            }());
         }
         catch (...)
         {
@@ -7089,7 +7793,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -7207,7 +7915,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.SearchString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SearchString();
+            }());
         }
         catch (...)
         {
@@ -7241,7 +7953,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SearchString(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SearchString(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7357,7 +8073,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportAddress();
+            }());
         }
         catch (...)
         {
@@ -7391,7 +8111,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TransportAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransportAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7418,7 +8142,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadTime();
+            }());
         }
         catch (...)
         {
@@ -7452,7 +8180,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.ReadTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7479,7 +8211,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeliveryTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeliveryTime();
+            }());
         }
         catch (...)
         {
@@ -7513,7 +8249,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.DeliveryTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeliveryTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7540,7 +8280,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsErrorPermanent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsErrorPermanent();
+            }());
         }
         catch (...)
         {
@@ -7566,7 +8310,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -7592,7 +8340,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportErrorCode();
+            }());
         }
         catch (...)
         {
@@ -7618,7 +8370,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportErrorCodeCategory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportErrorCodeCategory();
+            }());
         }
         catch (...)
         {
@@ -7644,7 +8400,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportInterpretedErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportInterpretedErrorCode();
+            }());
         }
         catch (...)
         {
@@ -7748,7 +8508,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -7786,7 +8550,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReadBatchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7886,7 +8654,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.RestoreHistorySpan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RestoreHistorySpan();
+            }());
         }
         catch (...)
         {
@@ -7920,7 +8692,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan>(arg);
 
-            self->obj.RestoreHistorySpan(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RestoreHistorySpan(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7947,7 +8723,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSyncEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSyncEnabled();
+            }());
         }
         catch (...)
         {
@@ -7981,7 +8761,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSyncEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSyncEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8082,7 +8866,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
-                return py::convert(self->obj.AssociateAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AssociateAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8120,7 +8908,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
-                return py::convert(self->obj.IsAccountAssociated(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAccountAssociated(param0);
+                }());
             }
             catch (...)
             {
@@ -8158,7 +8950,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>(args, 0);
 
-                return py::convert(self->obj.SetConfigurationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetConfigurationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8194,7 +8990,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                self->obj.StartSync();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartSync();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8231,7 +9031,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UnassociateAccountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnassociateAccountAsync();
+                }());
             }
             catch (...)
             {
@@ -8263,7 +9067,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -8367,7 +9175,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>(args, 0);
 
-                return py::convert(self->obj.SendResponseAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendResponseAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8406,7 +9218,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SendResponseWithPinAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendResponseWithPinAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8438,7 +9254,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Actions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Actions();
+            }());
         }
         catch (...)
         {
@@ -8464,7 +9284,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPinRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPinRequired();
+            }());
         }
         catch (...)
         {
@@ -8490,7 +9314,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -8516,7 +9344,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -8542,7 +9374,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportId();
+            }());
         }
         catch (...)
         {
@@ -8641,7 +9477,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -8734,7 +9574,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMessageAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMessageAvailable();
+            }());
         }
         catch (...)
         {
@@ -8760,7 +9604,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -8854,7 +9702,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -8880,7 +9732,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -8976,7 +9832,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager, winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageAvailableChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageAvailableChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9004,7 +9864,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageAvailableChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageAvailableChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9095,7 +9959,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::RcsManager::GetEndUserMessageManager());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::RcsManager::GetEndUserMessageManager();
+                }());
             }
             catch (...)
             {
@@ -9133,7 +10001,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::RcsManager::GetTransportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::RcsManager::GetTransportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9169,7 +10041,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::RcsManager::GetTransportsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::RcsManager::GetTransportsAsync();
+                }());
             }
             catch (...)
             {
@@ -9207,7 +10083,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversation>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Chat::RcsManager::LeaveConversationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Chat::RcsManager::LeaveConversationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9241,7 +10121,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Chat::RcsManager::TransportListChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Chat::RcsManager::TransportListChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9269,7 +10153,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Chat::RcsManager::TransportListChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Chat::RcsManager::TransportListChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9366,7 +10254,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceKind();
+            }());
         }
         catch (...)
         {
@@ -9465,7 +10357,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>(args, 0);
 
-                return py::convert(self->obj.IsServiceKindSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsServiceKindSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -9503,7 +10399,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>(args, 0);
 
-                return py::convert(self->obj.IsStoreAndForwardEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsStoreAndForwardEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -9535,7 +10435,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -9561,7 +10465,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedProperties();
+            }());
         }
         catch (...)
         {
@@ -9587,7 +10495,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -9613,7 +10525,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportFriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportFriendlyName();
+            }());
         }
         catch (...)
         {
@@ -9639,7 +10555,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportId();
+            }());
         }
         catch (...)
         {
@@ -9667,7 +10587,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsTransport, winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServiceKindSupportedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceKindSupportedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9695,7 +10619,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServiceKindSupportedChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceKindSupportedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9797,7 +10725,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAttachmentCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAttachmentCount();
+            }());
         }
         catch (...)
         {
@@ -9823,7 +10755,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxFileSizeInKilobytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxFileSizeInKilobytes();
+            }());
         }
         catch (...)
         {
@@ -9849,7 +10785,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxGroupMessageSizeInKilobytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxGroupMessageSizeInKilobytes();
+            }());
         }
         catch (...)
         {
@@ -9875,7 +10815,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxMessageSizeInKilobytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxMessageSizeInKilobytes();
+            }());
         }
         catch (...)
         {
@@ -9901,7 +10845,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxRecipientCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxRecipientCount();
+            }());
         }
         catch (...)
         {
@@ -9927,7 +10875,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningFileSizeInKilobytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningFileSizeInKilobytes();
+            }());
         }
         catch (...)
         {
@@ -10025,7 +10977,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsComposing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsComposing();
+            }());
         }
         catch (...)
         {
@@ -10051,7 +11007,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParticipantAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParticipantAddress();
+            }());
         }
         catch (...)
         {
@@ -10077,7 +11037,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportId();
+            }());
         }
         catch (...)
         {
@@ -10172,7 +11136,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemKind();
+            }());
         }
         catch (...)
         {

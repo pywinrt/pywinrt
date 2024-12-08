@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Resolve());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Resolve();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ResolveAll());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResolveAll();
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
 
-                return py::convert(self->obj.ResolveAll(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResolveAll(param0);
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
 
-                return py::convert(self->obj.Resolve(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Resolve(param0);
+                }());
             }
             catch (...)
             {
@@ -186,7 +202,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Candidates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Candidates();
+            }());
         }
         catch (...)
         {
@@ -212,7 +232,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -316,7 +340,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetQualifierValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetQualifierValue(param0);
+                }());
             }
             catch (...)
             {
@@ -352,7 +380,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetValueAsFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValueAsFileAsync();
+                }());
             }
             catch (...)
             {
@@ -388,7 +420,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetValueAsStreamAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValueAsStreamAsync();
+                }());
             }
             catch (...)
             {
@@ -420,7 +456,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDefault());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDefault();
+            }());
         }
         catch (...)
         {
@@ -446,7 +486,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMatch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMatch();
+            }());
         }
         catch (...)
         {
@@ -472,7 +516,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMatchAsDefault());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMatchAsDefault();
+            }());
         }
         catch (...)
         {
@@ -498,7 +546,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Qualifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Qualifiers();
+            }());
         }
         catch (...)
         {
@@ -524,7 +576,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueAsString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueAsString();
+            }());
         }
         catch (...)
         {
@@ -550,7 +606,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -655,7 +715,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -693,7 +757,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -732,7 +800,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -771,7 +843,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -783,6 +859,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -815,7 +892,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -852,7 +933,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -865,6 +950,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -878,7 +964,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -917,7 +1007,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -930,7 +1025,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -1041,7 +1140,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Clone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Clone();
+                }());
             }
             catch (...)
             {
@@ -1079,7 +1182,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::CreateMatchingContext(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::CreateMatchingContext(param0);
+                }());
             }
             catch (...)
             {
@@ -1115,7 +1222,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -1153,7 +1264,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIContext>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForUIContext(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForUIContext(param0);
+                }());
             }
             catch (...)
             {
@@ -1189,7 +1304,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForViewIndependentUse());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::GetForViewIndependentUse();
+                }());
             }
             catch (...)
             {
@@ -1227,7 +1346,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>>(args, 0);
 
-                self->obj.OverrideToMatch(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideToMatch(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1264,7 +1387,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1301,7 +1428,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::ResetGlobalQualifierValues();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::ResetGlobalQualifierValues();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1340,7 +1471,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::ResetGlobalQualifierValues(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::ResetGlobalQualifierValues(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1379,7 +1514,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                self->obj.Reset(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1419,7 +1558,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::SetGlobalQualifierValue(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::SetGlobalQualifierValue(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1460,7 +1603,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence>(args, 2);
 
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::SetGlobalQualifierValue(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::SetGlobalQualifierValue(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1493,7 +1640,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -1527,7 +1678,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
-            self->obj.Languages(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Languages(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1554,7 +1709,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualifierValues());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualifierValues();
+            }());
         }
         catch (...)
         {
@@ -1689,7 +1848,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1727,7 +1890,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -1766,7 +1933,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1805,7 +1976,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1817,6 +1992,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1849,7 +2025,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1886,7 +2066,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -1899,6 +2083,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1912,7 +2097,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -1951,7 +2140,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -1964,7 +2158,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             winrt::com_array<winrt::hstring> items(static_cast<uint32_t>(length), empty_instance<winrt::hstring>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -2056,7 +2254,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>(args, 1);
 
-                return py::convert(self->obj.GetAllNamedResourcesForPackage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllNamedResourcesForPackage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2095,7 +2297,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>(args, 1);
 
-                return py::convert(self->obj.GetAllSubtreesForPackage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllSubtreesForPackage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2133,7 +2339,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceManager::IsResourceReference(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::Core::ResourceManager::IsResourceReference(param0);
+                }());
             }
             catch (...)
             {
@@ -2171,7 +2381,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageFile>>(args, 0);
 
-                self->obj.LoadPriFiles(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadPriFiles(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2210,7 +2424,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageFile>>(args, 0);
 
-                self->obj.UnloadPriFiles(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnloadPriFiles(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2243,7 +2461,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllResourceMaps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllResourceMaps();
+            }());
         }
         catch (...)
         {
@@ -2269,7 +2491,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultContext();
+            }());
         }
         catch (...)
         {
@@ -2295,7 +2521,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.MainResourceMap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MainResourceMap();
+            }());
         }
         catch (...)
         {
@@ -2321,7 +2551,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Resources::Core::ResourceManager::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Resources::Core::ResourceManager::Current();
+            }());
         }
         catch (...)
         {
@@ -2451,7 +2685,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2489,7 +2727,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetSubtree(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSubtree(param0);
+                }());
             }
             catch (...)
             {
@@ -2527,7 +2769,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -2566,7 +2812,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 1);
 
-                return py::convert(self->obj.GetValue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2604,7 +2854,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -2642,7 +2896,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -2681,7 +2939,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -2693,6 +2954,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -2725,7 +2987,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2751,7 +3017,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2788,7 +3058,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -2808,7 +3082,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -2821,6 +3099,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2835,12 +3114,22 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -2937,7 +3226,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -2973,7 +3266,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -3005,7 +3302,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -3031,7 +3332,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -3075,9 +3380,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -3160,7 +3469,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3198,7 +3511,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -3236,7 +3553,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -3275,7 +3596,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -3287,6 +3611,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -3319,7 +3644,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3356,7 +3685,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -3376,7 +3709,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -3389,6 +3726,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3403,12 +3741,22 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -3501,7 +3849,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -3537,7 +3889,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -3569,7 +3925,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -3595,7 +3955,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -3639,9 +4003,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -3720,7 +4088,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDefault());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDefault();
+            }());
         }
         catch (...)
         {
@@ -3746,7 +4118,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMatch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMatch();
+            }());
         }
         catch (...)
         {
@@ -3772,7 +4148,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualifierName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualifierName();
+            }());
         }
         catch (...)
         {
@@ -3798,7 +4178,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualifierValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualifierValue();
+            }());
         }
         catch (...)
         {
@@ -3824,7 +4208,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Score());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Score();
+            }());
         }
         catch (...)
         {
@@ -3925,7 +4313,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3963,7 +4355,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -4001,7 +4397,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -4040,7 +4440,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -4052,6 +4455,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -4084,7 +4488,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4121,7 +4529,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -4141,7 +4553,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -4154,6 +4570,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -4168,12 +4585,22 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -4264,7 +4691,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4301,7 +4732,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -4337,7 +4772,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -4375,7 +4814,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -4414,7 +4857,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4452,7 +4899,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -4490,7 +4941,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4523,7 +4978,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4551,7 +5010,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::hstring>>(arg);
 
-            return py::convert(self->obj.MapChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MapChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4579,7 +5042,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MapChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MapChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4617,7 +5084,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -4637,7 +5108,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -4650,6 +5125,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -4664,12 +5140,22 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -4695,7 +5181,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -4703,7 +5194,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::hstring>(value));
+            auto _value = py::convert_to<winrt::hstring>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -4792,7 +5287,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -4830,7 +5329,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -4869,7 +5372,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4908,7 +5415,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4920,6 +5431,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4952,7 +5464,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4989,7 +5505,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -5002,6 +5522,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -5015,7 +5536,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -5054,7 +5579,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -5067,7 +5597,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
             winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {

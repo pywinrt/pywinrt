@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -131,7 +135,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinChange();
+            }());
         }
         catch (...)
         {
@@ -228,7 +236,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -267,7 +279,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SerialCommunication::SerialDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -303,7 +319,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -341,7 +361,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -380,7 +404,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelectorFromUsbVidPid(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelectorFromUsbVidPid(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -412,7 +440,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDataTerminalReadyEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDataTerminalReadyEnabled();
+            }());
         }
         catch (...)
         {
@@ -446,7 +478,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDataTerminalReadyEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDataTerminalReadyEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -473,7 +509,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataBits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataBits();
+            }());
         }
         catch (...)
         {
@@ -507,7 +547,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<uint16_t>(arg);
 
-            self->obj.DataBits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataBits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -534,7 +578,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handshake());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handshake();
+            }());
         }
         catch (...)
         {
@@ -568,7 +616,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialHandshake>(arg);
 
-            self->obj.Handshake(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handshake(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -595,7 +647,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BreakSignalState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BreakSignalState();
+            }());
         }
         catch (...)
         {
@@ -629,7 +685,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.BreakSignalState(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BreakSignalState(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -656,7 +716,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaudRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaudRate();
+            }());
         }
         catch (...)
         {
@@ -690,7 +754,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.BaudRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaudRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -717,7 +785,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteTimeout();
+            }());
         }
         catch (...)
         {
@@ -751,7 +823,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.WriteTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -778,7 +854,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.StopBits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StopBits();
+            }());
         }
         catch (...)
         {
@@ -812,7 +892,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialStopBitCount>(arg);
 
-            self->obj.StopBits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StopBits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -839,7 +923,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadTimeout();
+            }());
         }
         catch (...)
         {
@@ -873,7 +961,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.ReadTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -900,7 +992,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parity();
+            }());
         }
         catch (...)
         {
@@ -934,7 +1030,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialParity>(arg);
 
-            self->obj.Parity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Parity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -961,7 +1061,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequestToSendEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequestToSendEnabled();
+            }());
         }
         catch (...)
         {
@@ -995,7 +1099,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRequestToSendEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRequestToSendEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1022,7 +1130,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -1048,7 +1160,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.CarrierDetectState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CarrierDetectState();
+            }());
         }
         catch (...)
         {
@@ -1074,7 +1190,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClearToSendState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClearToSendState();
+            }());
         }
         catch (...)
         {
@@ -1100,7 +1220,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataSetReadyState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataSetReadyState();
+            }());
         }
         catch (...)
         {
@@ -1126,7 +1250,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -1152,7 +1280,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -1178,7 +1310,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.PortName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PortName();
+            }());
         }
         catch (...)
         {
@@ -1204,7 +1340,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsbProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsbProductId();
+            }());
         }
         catch (...)
         {
@@ -1230,7 +1370,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsbVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsbVendorId();
+            }());
         }
         catch (...)
         {
@@ -1258,7 +1402,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SerialCommunication::SerialDevice, winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ErrorReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1286,7 +1434,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ErrorReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1315,7 +1467,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SerialCommunication::SerialDevice, winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PinChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1343,7 +1499,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PinChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1386,7 +1546,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

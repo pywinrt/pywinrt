@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::Adc
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Devices::Adc
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadRatio());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadRatio();
+                }());
             }
             catch (...)
             {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Devices::Adc
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadValue());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValue();
+                }());
             }
             catch (...)
             {
@@ -147,7 +159,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controller());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controller();
+            }());
         }
         catch (...)
         {
@@ -189,7 +205,11 @@ namespace py::cpp::Windows::Devices::Adc
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -270,7 +290,11 @@ namespace py::cpp::Windows::Devices::Adc
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Adc::Provider::IAdcProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Adc::AdcController::GetControllersAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Adc::AdcController::GetControllersAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -306,7 +330,11 @@ namespace py::cpp::Windows::Devices::Adc
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Adc::AdcController::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Adc::AdcController::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -344,7 +372,11 @@ namespace py::cpp::Windows::Devices::Adc
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Adc::AdcChannelMode>(args, 0);
 
-                return py::convert(self->obj.IsChannelModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsChannelModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -382,7 +414,11 @@ namespace py::cpp::Windows::Devices::Adc
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.OpenChannel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenChannel(param0);
+                }());
             }
             catch (...)
             {
@@ -414,7 +450,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelMode();
+            }());
         }
         catch (...)
         {
@@ -448,7 +488,11 @@ namespace py::cpp::Windows::Devices::Adc
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Adc::AdcChannelMode>(arg);
 
-            self->obj.ChannelMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChannelMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -475,7 +519,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelCount();
+            }());
         }
         catch (...)
         {
@@ -501,7 +549,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxValue();
+            }());
         }
         catch (...)
         {
@@ -527,7 +579,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinValue();
+            }());
         }
         catch (...)
         {
@@ -553,7 +609,11 @@ namespace py::cpp::Windows::Devices::Adc
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolutionInBits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolutionInBits();
+            }());
         }
         catch (...)
         {

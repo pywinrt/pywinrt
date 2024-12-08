@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager::GetForCurrentApp());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager::GetForCurrentApp();
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(self->obj.SetThumbnailAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetThumbnailAsync(param0);
+                }());
             }
             catch (...)
             {

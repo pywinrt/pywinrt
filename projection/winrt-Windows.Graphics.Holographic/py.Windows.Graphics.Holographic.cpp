@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetFarPlaneDistance(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFarPlaneDistance(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetNearPlaneDistance(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetNearPlaneDistance(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewportScaleFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewportScaleFactor();
+            }());
         }
         catch (...)
         {
@@ -150,7 +162,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ViewportScaleFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ViewportScaleFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -177,7 +193,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -203,7 +223,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStereo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStereo();
+            }());
         }
         catch (...)
         {
@@ -229,7 +253,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RenderTargetSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RenderTargetSize();
+            }());
         }
         catch (...)
         {
@@ -255,7 +283,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Display());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Display();
+            }());
         }
         catch (...)
         {
@@ -281,7 +313,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.LeftViewportParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LeftViewportParameters();
+            }());
         }
         catch (...)
         {
@@ -307,7 +343,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightViewportParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightViewportParameters();
+            }());
         }
         catch (...)
         {
@@ -333,7 +373,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPrimaryLayerEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPrimaryLayerEnabled();
+            }());
         }
         catch (...)
         {
@@ -367,7 +411,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPrimaryLayerEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsPrimaryLayerEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -394,7 +442,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxQuadLayerCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxQuadLayerCount();
+            }());
         }
         catch (...)
         {
@@ -420,7 +472,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.QuadLayers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuadLayers();
+            }());
         }
         catch (...)
         {
@@ -446,7 +502,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanOverrideViewport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanOverrideViewport();
+            }());
         }
         catch (...)
         {
@@ -472,7 +532,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHardwareContentProtectionEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHardwareContentProtectionEnabled();
+            }());
         }
         catch (...)
         {
@@ -506,7 +570,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHardwareContentProtectionEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsHardwareContentProtectionEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -533,7 +601,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHardwareContentProtectionSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHardwareContentProtectionSupported();
+            }());
         }
         catch (...)
         {
@@ -559,7 +631,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewConfiguration();
+            }());
         }
         catch (...)
         {
@@ -673,7 +749,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>(args, 0);
 
-                self->obj.OverrideProjectionTransform(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideProjectionTransform(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -713,7 +793,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>(args, 1);
 
-                self->obj.OverrideViewTransform(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideViewTransform(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -753,7 +837,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                self->obj.OverrideViewport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideViewport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -792,7 +880,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetCullingFrustum(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetCullingFrustum(param0);
+                }());
             }
             catch (...)
             {
@@ -830,7 +922,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetViewTransform(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetViewTransform(param0);
+                }());
             }
             catch (...)
             {
@@ -868,7 +964,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetVisibleFrustum(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetVisibleFrustum(param0);
+                }());
             }
             catch (...)
             {
@@ -900,7 +1000,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.FarPlaneDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FarPlaneDistance();
+            }());
         }
         catch (...)
         {
@@ -926,7 +1030,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.HolographicCamera());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HolographicCamera();
+            }());
         }
         catch (...)
         {
@@ -952,7 +1060,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.NearPlaneDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NearPlaneDistance();
+            }());
         }
         catch (...)
         {
@@ -978,7 +1090,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProjectionTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProjectionTransform();
+            }());
         }
         catch (...)
         {
@@ -1004,7 +1120,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Viewport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Viewport();
+            }());
         }
         catch (...)
         {
@@ -1113,7 +1233,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
-                self->obj.CommitDirect3D11DepthBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CommitDirect3D11DepthBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1153,7 +1277,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                self->obj.SetFocusPoint(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFocusPoint(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1194,7 +1322,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
 
-                self->obj.SetFocusPoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFocusPoint(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1236,7 +1368,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
 
-                self->obj.SetFocusPoint(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFocusPoint(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1269,7 +1405,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direct3D11BackBuffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direct3D11BackBuffer();
+            }());
         }
         catch (...)
         {
@@ -1295,7 +1435,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direct3D11Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direct3D11Device();
+            }());
         }
         catch (...)
         {
@@ -1321,7 +1465,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReprojectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReprojectionMode();
+            }());
         }
         catch (...)
         {
@@ -1355,7 +1503,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicReprojectionMode>(arg);
 
-            self->obj.ReprojectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReprojectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1382,7 +1534,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsContentProtectionEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsContentProtectionEnabled();
+            }());
         }
         catch (...)
         {
@@ -1416,7 +1572,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsContentProtectionEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsContentProtectionEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1443,7 +1603,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.DepthReprojectionMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DepthReprojectionMethod();
+            }());
         }
         catch (...)
         {
@@ -1477,7 +1641,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicDepthReprojectionMethod>(arg);
 
-            self->obj.DepthReprojectionMethod(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DepthReprojectionMethod(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1579,7 +1747,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.HiddenAreaMesh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HiddenAreaMesh();
+            }());
         }
         catch (...)
         {
@@ -1605,7 +1777,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisibleAreaMesh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisibleAreaMesh();
+            }());
         }
         catch (...)
         {
@@ -1703,7 +1879,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Holographic::HolographicDisplay::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Holographic::HolographicDisplay::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1741,7 +1921,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicViewConfigurationKind>(args, 0);
 
-                return py::convert(self->obj.TryGetViewConfiguration(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetViewConfiguration(param0);
+                }());
             }
             catch (...)
             {
@@ -1773,7 +1957,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdapterId();
+            }());
         }
         catch (...)
         {
@@ -1799,7 +1987,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1825,7 +2017,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOpaque());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOpaque();
+            }());
         }
         catch (...)
         {
@@ -1851,7 +2047,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStereo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStereo();
+            }());
         }
         catch (...)
         {
@@ -1877,7 +2077,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxViewportSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxViewportSize();
+            }());
         }
         catch (...)
         {
@@ -1903,7 +2107,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialLocator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialLocator();
+            }());
         }
         catch (...)
         {
@@ -1929,7 +2137,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RefreshRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RefreshRate();
+            }());
         }
         catch (...)
         {
@@ -2061,7 +2273,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>(args, 0);
 
-                return py::convert(self->obj.GetQuadLayerUpdateParameters(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetQuadLayerUpdateParameters(param0);
+                }());
             }
             catch (...)
             {
@@ -2099,7 +2315,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicCameraPose>(args, 0);
 
-                return py::convert(self->obj.GetRenderingParameters(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRenderingParameters(param0);
+                }());
             }
             catch (...)
             {
@@ -2135,7 +2355,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PresentUsingCurrentPrediction());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PresentUsingCurrentPrediction();
+                }());
             }
             catch (...)
             {
@@ -2173,7 +2397,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>(args, 0);
 
-                return py::convert(self->obj.PresentUsingCurrentPrediction(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PresentUsingCurrentPrediction(param0);
+                }());
             }
             catch (...)
             {
@@ -2209,7 +2437,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.UpdateCurrentPrediction();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateCurrentPrediction();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2246,7 +2478,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.WaitForFrameToFinish();
+                {
+                    auto _gil = release_gil();
+                    self->obj.WaitForFrameToFinish();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2279,7 +2515,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.AddedCameras());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AddedCameras();
+            }());
         }
         catch (...)
         {
@@ -2305,7 +2545,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentPrediction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentPrediction();
+            }());
         }
         catch (...)
         {
@@ -2331,7 +2575,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -2357,7 +2605,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemovedCameras());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemovedCameras();
+            }());
         }
         catch (...)
         {
@@ -2383,7 +2635,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2486,7 +2742,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.CameraPoses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CameraPoses();
+            }());
         }
         catch (...)
         {
@@ -2512,7 +2772,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2610,7 +2874,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2647,7 +2915,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadReports());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadReports();
+                }());
             }
             catch (...)
             {
@@ -2695,7 +2967,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2768,7 +3044,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppGpuDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppGpuDuration();
+            }());
         }
         catch (...)
         {
@@ -2794,7 +3074,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppGpuOverrun());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppGpuOverrun();
+            }());
         }
         catch (...)
         {
@@ -2820,7 +3104,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompositorGpuDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompositorGpuDuration();
+            }());
         }
         catch (...)
         {
@@ -2846,7 +3134,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.MissedPresentationOpportunityCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MissedPresentationOpportunityCount();
+            }());
         }
         catch (...)
         {
@@ -2872,7 +3164,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationCount();
+            }());
         }
         catch (...)
         {
@@ -2969,7 +3265,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -2995,7 +3295,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.MissedLatchCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MissedLatchCount();
+            }());
         }
         catch (...)
         {
@@ -3021,7 +3325,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeActualGpuFinishTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeActualGpuFinishTime();
+            }());
         }
         catch (...)
         {
@@ -3047,7 +3355,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeFrameReadyTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeFrameReadyTime();
+            }());
         }
         catch (...)
         {
@@ -3073,7 +3385,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeTargetLatchTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeTargetLatchTime();
+            }());
         }
         catch (...)
         {
@@ -3174,7 +3490,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3211,7 +3531,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadReports());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadReports();
+                }());
             }
             catch (...)
             {
@@ -3259,7 +3583,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3332,7 +3660,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.MissedScanoutCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MissedScanoutCount();
+            }());
         }
         catch (...)
         {
@@ -3358,7 +3690,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RenderingReport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RenderingReport();
+            }());
         }
         catch (...)
         {
@@ -3384,7 +3720,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeLatchTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeLatchTime();
+            }());
         }
         catch (...)
         {
@@ -3410,7 +3750,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativePhotonTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativePhotonTime();
+            }());
         }
         catch (...)
         {
@@ -3436,7 +3780,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeScanoutStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeScanoutStartTime();
+            }());
         }
         catch (...)
         {
@@ -3577,7 +3925,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3610,7 +3962,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelFormat();
+            }());
         }
         catch (...)
         {
@@ -3636,7 +3992,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3678,7 +4038,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3756,7 +4120,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AcquireBufferToUpdateContent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AcquireBufferToUpdateContent();
+                }());
             }
             catch (...)
             {
@@ -3792,7 +4160,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AcquireBufferToUpdateContentWithHardwareProtection());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AcquireBufferToUpdateContentWithHardwareProtection();
+                }());
             }
             catch (...)
             {
@@ -3830,7 +4202,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.UpdateContentProtectionEnabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateContentProtectionEnabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3869,7 +4245,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
 
-                self->obj.UpdateExtents(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateExtents(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3909,7 +4289,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
-                self->obj.UpdateLocationWithDisplayRelativeMode(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateLocationWithDisplayRelativeMode(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3950,7 +4334,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
 
-                self->obj.UpdateLocationWithStationaryMode(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateLocationWithStationaryMode(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3989,7 +4377,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                self->obj.UpdateViewport(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateViewport(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4022,7 +4414,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanAcquireWithHardwareProtection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanAcquireWithHardwareProtection();
+            }());
         }
         catch (...)
         {
@@ -4128,7 +4524,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(param0);
+                }());
             }
             catch (...)
             {
@@ -4166,7 +4566,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.CreateFramePresentationMonitor(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFramePresentationMonitor(param0);
+                }());
             }
             catch (...)
             {
@@ -4204,7 +4608,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.CreateFrameScanoutMonitor(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameScanoutMonitor(param0);
+                }());
             }
             catch (...)
             {
@@ -4240,7 +4648,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateNextFrame());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateNextFrame();
+                }());
             }
             catch (...)
             {
@@ -4278,7 +4690,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
 
-                self->obj.SetDirect3D11Device(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDirect3D11Device(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4315,7 +4731,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                self->obj.WaitForNextFrameReady();
+                {
+                    auto _gil = release_gil();
+                    self->obj.WaitForNextFrameReady();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4354,7 +4774,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.WaitForNextFrameReadyWithHeadStart(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.WaitForNextFrameReadyWithHeadStart(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4387,7 +4811,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryAdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryAdapterId();
+            }());
         }
         catch (...)
         {
@@ -4413,7 +4841,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserPresence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserPresence();
+            }());
         }
         catch (...)
         {
@@ -4439,7 +4871,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailable();
+            }());
         }
         catch (...)
         {
@@ -4465,7 +4901,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Holographic::HolographicSpace::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Holographic::HolographicSpace::IsSupported();
+            }());
         }
         catch (...)
         {
@@ -4491,7 +4931,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Holographic::HolographicSpace::IsConfigured());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Holographic::HolographicSpace::IsConfigured();
+            }());
         }
         catch (...)
         {
@@ -4519,7 +4963,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.CameraAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CameraAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -4547,7 +4995,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CameraAdded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CameraAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4576,7 +5028,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.CameraRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CameraRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -4604,7 +5060,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CameraRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CameraRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4633,7 +5093,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.UserPresenceChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserPresenceChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4661,7 +5125,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserPresenceChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserPresenceChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4690,7 +5158,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailableChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailableChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4718,7 +5190,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailableChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Holographic::HolographicSpace::IsAvailableChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4860,7 +5336,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4892,7 +5372,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Camera());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Camera();
+            }());
         }
         catch (...)
         {
@@ -4986,7 +5470,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Camera());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Camera();
+            }());
         }
         catch (...)
         {
@@ -5085,7 +5573,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
-                return py::convert(self->obj.RequestRenderTargetSize(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestRenderTargetSize(param0);
+                }());
             }
             catch (...)
             {
@@ -5117,7 +5609,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelFormat();
+            }());
         }
         catch (...)
         {
@@ -5151,7 +5647,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
-            self->obj.PixelFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PixelFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5178,7 +5678,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -5212,7 +5716,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5239,7 +5747,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Display());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Display();
+            }());
         }
         catch (...)
         {
@@ -5265,7 +5777,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStereo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStereo();
+            }());
         }
         catch (...)
         {
@@ -5291,7 +5807,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -5317,7 +5837,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeRenderTargetSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeRenderTargetSize();
+            }());
         }
         catch (...)
         {
@@ -5343,7 +5867,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RefreshRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RefreshRate();
+            }());
         }
         catch (...)
         {
@@ -5369,7 +5897,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.RenderTargetSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RenderTargetSize();
+            }());
         }
         catch (...)
         {
@@ -5395,7 +5927,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedPixelFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedPixelFormats();
+            }());
         }
         catch (...)
         {
@@ -5421,7 +5957,11 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedDepthReprojectionMethods());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedDepthReprojectionMethods();
+            }());
         }
         catch (...)
         {

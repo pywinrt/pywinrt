@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81,7 +85,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Cancel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentStatus();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -193,7 +209,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Pause(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                     return nullptr;
                 }
 
-                self->obj.Restart();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Restart();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -269,7 +293,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Restart(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Restart(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -302,7 +330,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallType();
+            }());
         }
         catch (...)
         {
@@ -328,7 +360,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUserInitiated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserInitiated();
+            }());
         }
         catch (...)
         {
@@ -354,7 +390,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -380,7 +420,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProductId();
+            }());
         }
         catch (...)
         {
@@ -406,7 +450,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -432,7 +480,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemOperationsMightAffectOtherItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemOperationsMightAffectOtherItems();
+            }());
         }
         catch (...)
         {
@@ -458,7 +510,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaunchAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -492,7 +548,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.LaunchAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LaunchAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -519,7 +579,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToTaskbarAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToTaskbarAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -553,7 +617,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToTaskbarAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToTaskbarAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -580,7 +648,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToStartAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToStartAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -614,7 +686,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToStartAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToStartAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -641,7 +717,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToDesktopAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToDesktopAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -675,7 +755,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToDesktopAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToDesktopAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -702,7 +786,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallInProgressToastNotificationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallInProgressToastNotificationMode();
+            }());
         }
         catch (...)
         {
@@ -736,7 +824,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
-            self->obj.InstallInProgressToastNotificationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallInProgressToastNotificationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -763,7 +855,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletedInstallToastNotificationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletedInstallToastNotificationMode();
+            }());
         }
         catch (...)
         {
@@ -797,7 +893,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
-            self->obj.CompletedInstallToastNotificationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompletedInstallToastNotificationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -826,7 +926,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -854,7 +958,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -883,7 +991,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -911,7 +1023,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1055,7 +1171,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Cancel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1095,7 +1215,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Cancel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1136,7 +1260,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.GetFreeDeviceEntitlementAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFreeDeviceEntitlementAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1176,7 +1304,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.GetFreeUserEntitlementAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFreeUserEntitlementAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1217,7 +1349,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.GetFreeUserEntitlementForUserAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFreeUserEntitlementForUserAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1255,7 +1391,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetIsAppAllowedToInstallAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsAppAllowedToInstallAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1297,7 +1437,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                return py::convert(self->obj.GetIsAppAllowedToInstallForUserAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsAppAllowedToInstallForUserAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -1338,7 +1482,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.GetIsAppAllowedToInstallAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsAppAllowedToInstallAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1377,7 +1525,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetIsApplicableAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsApplicableAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1417,7 +1569,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.GetIsApplicableForUserAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsApplicableForUserAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1457,7 +1613,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.GetIsPackageIdentityAllowedToInstallAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsPackageIdentityAllowedToInstallAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1498,7 +1658,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.GetIsPackageIdentityAllowedToInstallForUserAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIsPackageIdentityAllowedToInstallForUserAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1537,7 +1701,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.IsStoreBlockedByPolicyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsStoreBlockedByPolicyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1576,7 +1744,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.MoveToFrontOfDownloadQueue(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.MoveToFrontOfDownloadQueue(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1615,7 +1787,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Pause(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1655,7 +1831,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Pause(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1694,7 +1874,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Restart(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Restart(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1734,7 +1918,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Restart(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Restart(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1771,7 +1959,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SearchForAllUpdatesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForAllUpdatesAsync();
+                }());
             }
             catch (...)
             {
@@ -1810,7 +2002,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SearchForAllUpdatesForUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForAllUpdatesForUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1848,7 +2044,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SearchForAllUpdatesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForAllUpdatesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1888,7 +2088,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 2);
 
-                return py::convert(self->obj.SearchForAllUpdatesAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForAllUpdatesAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1929,7 +2133,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 3);
 
-                return py::convert(self->obj.SearchForAllUpdatesForUserAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForAllUpdatesForUserAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1968,7 +2176,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForUpdatesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2010,7 +2222,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                return py::convert(self->obj.SearchForUpdatesForUserAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForUpdatesForUserAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2051,7 +2267,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForUpdatesAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2093,7 +2313,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 4);
 
-                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForUpdatesAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2136,7 +2360,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 5);
 
-                return py::convert(self->obj.SearchForUpdatesForUserAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SearchForUpdatesForUserAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -2177,7 +2405,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<bool>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                return py::convert(self->obj.StartAppInstallAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAppInstallAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2221,7 +2453,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
 
-                return py::convert(self->obj.StartAppInstallAsync(param0, param1, param2, param3, param4, param5, param6));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAppInstallAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
             }
             catch (...)
             {
@@ -2266,7 +2502,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
                 auto param7 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 7);
 
-                return py::convert(self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4, param5, param6, param7));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4, param5, param6, param7);
+                }());
             }
             catch (...)
             {
@@ -2312,7 +2552,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param7 = py::convert_to<winrt::hstring>(args, 7);
                 auto param8 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 8);
 
-                return py::convert(self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5, param6, param7, param8));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                }());
             }
             catch (...)
             {
@@ -2354,7 +2598,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 4);
 
-                return py::convert(self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2397,7 +2645,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 5);
 
-                return py::convert(self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -2435,7 +2687,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.UpdateAppByPackageFamilyNameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAppByPackageFamilyNameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2475,7 +2731,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.UpdateAppByPackageFamilyNameForUserAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAppByPackageFamilyNameForUserAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2514,7 +2774,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.UpdateAppByPackageFamilyNameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAppByPackageFamilyNameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2546,7 +2810,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoUpdateSetting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoUpdateSetting();
+            }());
         }
         catch (...)
         {
@@ -2580,7 +2848,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting>(arg);
 
-            self->obj.AutoUpdateSetting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoUpdateSetting(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2607,7 +2879,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcquisitionIdentity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcquisitionIdentity();
+            }());
         }
         catch (...)
         {
@@ -2641,7 +2917,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AcquisitionIdentity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AcquisitionIdentity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2668,7 +2948,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppInstallItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppInstallItems();
+            }());
         }
         catch (...)
         {
@@ -2694,7 +2978,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppInstallItemsWithGroupSupport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppInstallItemsWithGroupSupport();
+            }());
         }
         catch (...)
         {
@@ -2720,7 +3008,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanInstallForAllUsers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanInstallForAllUsers();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3040,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager, winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2776,7 +3072,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2805,7 +3105,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager, winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2833,7 +3137,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2972,7 +3280,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.Item());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Item();
+            }());
         }
         catch (...)
         {
@@ -3087,7 +3399,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetVolume();
+            }());
         }
         catch (...)
         {
@@ -3121,7 +3437,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(arg);
 
-            self->obj.TargetVolume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetVolume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3148,7 +3468,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.Repair());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Repair();
+            }());
         }
         catch (...)
         {
@@ -3182,7 +3506,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Repair(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Repair(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3209,7 +3537,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaunchAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -3243,7 +3575,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.LaunchAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LaunchAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3270,7 +3606,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceUseOfNonRemovableStorage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceUseOfNonRemovableStorage();
+            }());
         }
         catch (...)
         {
@@ -3304,7 +3644,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceUseOfNonRemovableStorage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceUseOfNonRemovableStorage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3331,7 +3675,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CatalogId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CatalogId();
+            }());
         }
         catch (...)
         {
@@ -3365,7 +3713,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CatalogId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CatalogId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3392,7 +3744,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowForcedAppRestart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowForcedAppRestart();
+            }());
         }
         catch (...)
         {
@@ -3426,7 +3782,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowForcedAppRestart(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowForcedAppRestart(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3453,7 +3813,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.StageButDoNotInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StageButDoNotInstall();
+            }());
         }
         catch (...)
         {
@@ -3487,7 +3851,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StageButDoNotInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StageButDoNotInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3514,7 +3882,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToTaskbarAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToTaskbarAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -3548,7 +3920,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToTaskbarAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToTaskbarAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3575,7 +3951,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToStartAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToStartAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -3609,7 +3989,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToStartAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToStartAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3636,7 +4020,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinToDesktopAfterInstall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinToDesktopAfterInstall();
+            }());
         }
         catch (...)
         {
@@ -3670,7 +4058,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PinToDesktopAfterInstall(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PinToDesktopAfterInstall(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3697,7 +4089,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallInProgressToastNotificationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallInProgressToastNotificationMode();
+            }());
         }
         catch (...)
         {
@@ -3731,7 +4127,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
-            self->obj.InstallInProgressToastNotificationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallInProgressToastNotificationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3758,7 +4158,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallForAllUsers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallForAllUsers();
+            }());
         }
         catch (...)
         {
@@ -3792,7 +4196,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InstallForAllUsers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallForAllUsers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3819,7 +4227,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedCampaignId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedCampaignId();
+            }());
         }
         catch (...)
         {
@@ -3853,7 +4265,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ExtendedCampaignId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExtendedCampaignId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3880,7 +4296,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletedInstallToastNotificationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletedInstallToastNotificationMode();
+            }());
         }
         catch (...)
         {
@@ -3914,7 +4334,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
-            self->obj.CompletedInstallToastNotificationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompletedInstallToastNotificationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3941,7 +4365,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CampaignId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CampaignId();
+            }());
         }
         catch (...)
         {
@@ -3975,7 +4403,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CampaignId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CampaignId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4083,7 +4515,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesDownloaded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesDownloaded();
+            }());
         }
         catch (...)
         {
@@ -4109,7 +4545,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.DownloadSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -4135,7 +4575,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -4161,7 +4605,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallState();
+            }());
         }
         catch (...)
         {
@@ -4187,7 +4635,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.PercentComplete());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PercentComplete();
+            }());
         }
         catch (...)
         {
@@ -4213,7 +4665,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadyForLaunch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadyForLaunch();
+            }());
         }
         catch (...)
         {
@@ -4239,7 +4695,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -4265,7 +4725,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStaged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStaged();
+            }());
         }
         catch (...)
         {
@@ -4387,7 +4851,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.CatalogId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CatalogId();
+            }());
         }
         catch (...)
         {
@@ -4421,7 +4889,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CatalogId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CatalogId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4448,7 +4920,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowForcedAppRestart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowForcedAppRestart();
+            }());
         }
         catch (...)
         {
@@ -4482,7 +4958,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowForcedAppRestart(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowForcedAppRestart(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4509,7 +4989,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomaticallyDownloadAndInstallUpdateIfFound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomaticallyDownloadAndInstallUpdateIfFound();
+            }());
         }
         catch (...)
         {
@@ -4543,7 +5027,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutomaticallyDownloadAndInstallUpdateIfFound(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutomaticallyDownloadAndInstallUpdateIfFound(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4639,7 +5127,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -4665,7 +5157,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailabilityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityId();
+            }());
         }
         catch (...)
         {
@@ -4691,7 +5187,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAlreadyOwned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAlreadyOwned();
+            }());
         }
         catch (...)
         {
@@ -4717,7 +5217,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrderId();
+            }());
         }
         catch (...)
         {
@@ -4743,7 +5247,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
 
-            return py::convert(self->obj.SkuId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SkuId();
+            }());
         }
         catch (...)
         {

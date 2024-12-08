@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Perception::Automation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IGetActivationFactory>(args, 0);
 
-                winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation::SetActivationFactoryProvider(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation::SetActivationFactoryProvider(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

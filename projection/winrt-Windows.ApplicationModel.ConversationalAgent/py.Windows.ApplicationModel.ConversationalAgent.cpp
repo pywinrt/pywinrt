@@ -45,7 +45,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.ApplyTrainingData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApplyTrainingData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.ApplyTrainingDataAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApplyTrainingDataAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                self->obj.ClearModelData();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearModelData();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -157,7 +169,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearModelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearModelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -193,7 +209,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                self->obj.ClearTrainingData();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearTrainingData();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearTrainingDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearTrainingDataAsync();
+                }());
             }
             catch (...)
             {
@@ -266,7 +290,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -303,7 +331,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetModelData());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetModelData();
+                }());
             }
             catch (...)
             {
@@ -339,7 +371,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetModelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetModelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -375,7 +411,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetModelDataType());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetModelDataType();
+                }());
             }
             catch (...)
             {
@@ -411,7 +451,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetModelDataTypeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetModelDataTypeAsync();
+                }());
             }
             catch (...)
             {
@@ -449,7 +493,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.SetEnabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEnabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -488,7 +536,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.SetEnabledAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetEnabledAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -526,7 +578,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.SetEnabledWithResult(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetEnabledWithResult(param0);
+                }());
             }
             catch (...)
             {
@@ -564,7 +620,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.SetEnabledWithResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetEnabledWithResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -603,7 +663,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                self->obj.SetModelData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetModelData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -643,7 +707,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.SetModelDataAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetModelDataAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -682,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.SetModelDataWithResult(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetModelDataWithResult(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -721,7 +793,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.SetModelDataWithResultAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetModelDataWithResultAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -753,7 +829,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailabilityInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityInfo();
+            }());
         }
         catch (...)
         {
@@ -779,7 +859,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -805,7 +889,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -831,7 +919,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelId();
+            }());
         }
         catch (...)
         {
@@ -857,7 +949,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalId();
+            }());
         }
         catch (...)
         {
@@ -883,7 +979,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrainingDataFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrainingDataFormat();
+            }());
         }
         catch (...)
         {
@@ -909,7 +1009,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrainingStepsCompleted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrainingStepsCompleted();
+            }());
         }
         catch (...)
         {
@@ -935,7 +1039,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrainingStepsRemaining());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrainingStepsRemaining();
+            }());
         }
         catch (...)
         {
@@ -961,7 +1069,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrainingStepCompletionMaxAllowedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrainingStepCompletionMaxAllowedTime();
+            }());
         }
         catch (...)
         {
@@ -989,7 +1101,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AvailabilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1017,7 +1133,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AvailabilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AvailabilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1060,7 +1180,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1161,7 +1285,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -1187,7 +1315,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1289,7 +1421,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.CreateConfiguration(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateConfiguration(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1330,7 +1466,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateConfigurationAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateConfigurationAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1370,7 +1510,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateConfigurationWithResult(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateConfigurationWithResult(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1410,7 +1554,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateConfigurationWithResultAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateConfigurationWithResultAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1448,7 +1596,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAvailableModelIdsForSignalId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAvailableModelIdsForSignalId(param0);
+                }());
             }
             catch (...)
             {
@@ -1486,7 +1638,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAvailableModelIdsForSignalIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAvailableModelIdsForSignalIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1525,7 +1681,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetConfiguration(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConfiguration(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1564,7 +1724,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetConfigurationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConfigurationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1600,7 +1764,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConfigurations());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConfigurations();
+                }());
             }
             catch (...)
             {
@@ -1636,7 +1804,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConfigurationsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConfigurationsAsync();
+                }());
             }
             catch (...)
             {
@@ -1674,7 +1846,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetSupportedModelIdsForSignalId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedModelIdsForSignalId(param0);
+                }());
             }
             catch (...)
             {
@@ -1712,7 +1888,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetSupportedModelIdsForSignalIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedModelIdsForSignalIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1751,7 +1931,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.RemoveConfiguration(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveConfiguration(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1791,7 +1975,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RemoveConfigurationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveConfigurationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1830,7 +2018,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RemoveConfigurationWithResult(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveConfigurationWithResult(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1869,7 +2061,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RemoveConfigurationWithResultAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveConfigurationWithResultAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1901,7 +2097,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanCreateConfigurations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanCreateConfigurations();
+            }());
         }
         catch (...)
         {
@@ -1927,7 +2127,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1953,7 +2157,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -1979,7 +2187,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedModelDataTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedModelDataTypes();
+            }());
         }
         catch (...)
         {
@@ -2005,7 +2217,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedPowerStates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedPowerStates();
+            }());
         }
         catch (...)
         {
@@ -2031,7 +2247,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedTrainingDataFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedTrainingDataFormats();
+            }());
         }
         catch (...)
         {
@@ -2057,7 +2277,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetectorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetectorId();
+            }());
         }
         catch (...)
         {
@@ -2178,7 +2402,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetActivationSignalDetectorFromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActivationSignalDetectorFromId(param0);
+                }());
             }
             catch (...)
             {
@@ -2216,7 +2444,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetActivationSignalDetectorFromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActivationSignalDetectorFromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2254,7 +2486,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>(args, 0);
 
-                return py::convert(self->obj.GetActivationSignalDetectors(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActivationSignalDetectors(param0);
+                }());
             }
             catch (...)
             {
@@ -2292,7 +2528,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>(args, 0);
 
-                return py::convert(self->obj.GetActivationSignalDetectorsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActivationSignalDetectorsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2328,7 +2568,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllActivationSignalDetectors());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllActivationSignalDetectors();
+                }());
             }
             catch (...)
             {
@@ -2364,7 +2608,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllActivationSignalDetectorsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllActivationSignalDetectorsAsync();
+                }());
             }
             catch (...)
             {
@@ -2396,7 +2644,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager::Default());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager::Default();
+            }());
         }
         catch (...)
         {
@@ -2524,7 +2776,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2563,7 +2819,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                return py::convert(self->obj.CreateAudioDeviceInputNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAudioDeviceInputNode(param0);
+                }());
             }
             catch (...)
             {
@@ -2601,7 +2861,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                return py::convert(self->obj.CreateAudioDeviceInputNodeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAudioDeviceInputNodeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2637,7 +2901,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioCaptureDeviceId());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioCaptureDeviceId();
+                }());
             }
             catch (...)
             {
@@ -2673,7 +2941,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioCaptureDeviceIdAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioCaptureDeviceIdAsync();
+                }());
             }
             catch (...)
             {
@@ -2709,7 +2981,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioClient());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioClient();
+                }());
             }
             catch (...)
             {
@@ -2745,7 +3021,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioClientAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioClientAsync();
+                }());
             }
             catch (...)
             {
@@ -2781,7 +3061,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioRenderDeviceId());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioRenderDeviceId();
+                }());
             }
             catch (...)
             {
@@ -2817,7 +3101,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioRenderDeviceIdAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioRenderDeviceIdAsync();
+                }());
             }
             catch (...)
             {
@@ -2853,7 +3141,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession::GetCurrentSessionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession::GetCurrentSessionAsync();
+                }());
             }
             catch (...)
             {
@@ -2889,7 +3181,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession::GetCurrentSessionSync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession::GetCurrentSessionSync();
+                }());
             }
             catch (...)
             {
@@ -2925,7 +3221,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMissingPrerequisites());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMissingPrerequisites();
+                }());
             }
             catch (...)
             {
@@ -2961,7 +3261,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMissingPrerequisitesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMissingPrerequisitesAsync();
+                }());
             }
             catch (...)
             {
@@ -2997,7 +3301,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSignalModelId());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSignalModelId();
+                }());
             }
             catch (...)
             {
@@ -3033,7 +3341,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSignalModelIdAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSignalModelIdAsync();
+                }());
             }
             catch (...)
             {
@@ -3069,7 +3381,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedSignalModelIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedSignalModelIds();
+                }());
             }
             catch (...)
             {
@@ -3105,7 +3421,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedSignalModelIdsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedSignalModelIdsAsync();
+                }());
             }
             catch (...)
             {
@@ -3143,7 +3463,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>(args, 0);
 
-                return py::convert(self->obj.RequestActivation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestActivation(param0);
+                }());
             }
             catch (...)
             {
@@ -3181,7 +3505,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>(args, 0);
 
-                return py::convert(self->obj.RequestActivationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestActivationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3219,7 +3547,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>(args, 0);
 
-                return py::convert(self->obj.RequestAgentStateChange(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAgentStateChange(param0);
+                }());
             }
             catch (...)
             {
@@ -3257,7 +3589,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>(args, 0);
 
-                return py::convert(self->obj.RequestAgentStateChangeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAgentStateChangeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3293,7 +3629,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestForegroundActivation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestForegroundActivation();
+                }());
             }
             catch (...)
             {
@@ -3329,7 +3669,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestForegroundActivationAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestForegroundActivationAsync();
+                }());
             }
             catch (...)
             {
@@ -3367,7 +3711,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.RequestInterruptible(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestInterruptible(param0);
+                }());
             }
             catch (...)
             {
@@ -3405,7 +3753,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.RequestInterruptibleAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestInterruptibleAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3443,7 +3795,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.SetSignalModelId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetSignalModelId(param0);
+                }());
             }
             catch (...)
             {
@@ -3481,7 +3837,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.SetSignalModelIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetSignalModelIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3519,7 +3879,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.SetSupportLockScreenActivation(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSupportLockScreenActivation(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3558,7 +3922,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.SetSupportLockScreenActivationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetSupportLockScreenActivationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3590,7 +3958,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.AgentState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AgentState();
+            }());
         }
         catch (...)
         {
@@ -3616,7 +3988,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIndicatorLightAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIndicatorLightAvailable();
+            }());
         }
         catch (...)
         {
@@ -3642,7 +4018,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInterrupted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInterrupted();
+            }());
         }
         catch (...)
         {
@@ -3668,7 +4048,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInterruptible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInterruptible();
+            }());
         }
         catch (...)
         {
@@ -3694,7 +4078,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsScreenAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScreenAvailable();
+            }());
         }
         catch (...)
         {
@@ -3720,7 +4108,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUserAuthenticated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserAuthenticated();
+            }());
         }
         catch (...)
         {
@@ -3746,7 +4138,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVoiceActivationAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVoiceActivationAvailable();
+            }());
         }
         catch (...)
         {
@@ -3772,7 +4168,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Signal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Signal();
+            }());
         }
         catch (...)
         {
@@ -3800,7 +4200,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>>(arg);
 
-            return py::convert(self->obj.SessionInterrupted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInterrupted(param0);
+            }());
         }
         catch (...)
         {
@@ -3828,7 +4232,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SessionInterrupted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SessionInterrupted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3857,7 +4265,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.SignalDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -3885,7 +4297,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SignalDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3914,7 +4330,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SystemStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3942,7 +4362,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3985,7 +4409,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4190,7 +4618,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalStart();
+            }());
         }
         catch (...)
         {
@@ -4224,7 +4656,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.SignalStart(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalStart(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4251,7 +4687,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalName();
+            }());
         }
         catch (...)
         {
@@ -4285,7 +4725,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SignalName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4312,7 +4756,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalId();
+            }());
         }
         catch (...)
         {
@@ -4346,7 +4794,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SignalId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4373,7 +4825,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalEnd());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalEnd();
+            }());
         }
         catch (...)
         {
@@ -4407,7 +4863,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.SignalEnd(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalEnd(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4434,7 +4894,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalContext();
+            }());
         }
         catch (...)
         {
@@ -4468,7 +4932,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.SignalContext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalContext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4495,7 +4963,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSignalVerificationRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSignalVerificationRequired();
+            }());
         }
         catch (...)
         {
@@ -4529,7 +5001,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSignalVerificationRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSignalVerificationRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4556,7 +5032,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetectorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetectorId();
+            }());
         }
         catch (...)
         {
@@ -4582,7 +5062,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetectorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetectorKind();
+            }());
         }
         catch (...)
         {
@@ -4748,7 +5232,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemStateChangeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemStateChangeType();
+            }());
         }
         catch (...)
         {
@@ -4841,7 +5329,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4934,7 +5426,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasLockScreenPermission());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasLockScreenPermission();
+            }());
         }
         catch (...)
         {
@@ -4960,7 +5456,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasPermission());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasPermission();
+            }());
         }
         catch (...)
         {
@@ -4986,7 +5486,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasSystemResourceAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSystemResourceAccess();
+            }());
         }
         catch (...)
         {
@@ -5012,7 +5516,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -5038,7 +5546,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnavailableSystemResources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnavailableSystemResources();
+            }());
         }
         catch (...)
         {

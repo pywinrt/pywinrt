@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Radios
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Radios::Radio::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Radios::Radio::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Devices::Radios
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Radios::Radio::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Radios::Radio::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Devices::Radios
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Radios::Radio::GetRadiosAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Radios::Radio::GetRadiosAsync();
+                }());
             }
             catch (...)
             {
@@ -152,7 +164,11 @@ namespace py::cpp::Windows::Devices::Radios
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Radios::Radio::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Radios::Radio::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -190,7 +206,11 @@ namespace py::cpp::Windows::Devices::Radios
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Radios::RadioState>(args, 0);
 
-                return py::convert(self->obj.SetStateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetStateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -222,7 +242,11 @@ namespace py::cpp::Windows::Devices::Radios
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -248,7 +272,11 @@ namespace py::cpp::Windows::Devices::Radios
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -274,7 +302,11 @@ namespace py::cpp::Windows::Devices::Radios
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -302,7 +334,11 @@ namespace py::cpp::Windows::Devices::Radios
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Radios::Radio, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -330,7 +366,11 @@ namespace py::cpp::Windows::Devices::Radios
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

@@ -30,7 +30,11 @@ namespace py::cpp::Microsoft::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Microsoft::Windows::Globalization
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            winrt::Microsoft::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -91,7 +99,11 @@ namespace py::cpp::Microsoft::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::Globalization::ApplicationLanguages::Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::Globalization::ApplicationLanguages::Languages();
+            }());
         }
         catch (...)
         {
@@ -117,7 +129,11 @@ namespace py::cpp::Microsoft::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::Globalization::ApplicationLanguages::ManifestLanguages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::Globalization::ApplicationLanguages::ManifestLanguages();
+            }());
         }
         catch (...)
         {

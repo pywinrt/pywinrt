@@ -36,7 +36,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::AddLicenseAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::AddLicenseAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -75,7 +79,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::GetSatisfactionInfosAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::GetSatisfactionInfosAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -113,7 +121,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::RefreshLicensesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::RefreshLicensesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -212,7 +224,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSatisfied());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSatisfied();
+            }());
         }
         catch (...)
         {
@@ -238,7 +254,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedByDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedByDevice();
+            }());
         }
         catch (...)
         {
@@ -264,7 +284,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedByInstallMedia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedByInstallMedia();
+            }());
         }
         catch (...)
         {
@@ -290,7 +314,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedByOpenLicense());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedByOpenLicense();
+            }());
         }
         catch (...)
         {
@@ -316,7 +344,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedByPass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedByPass();
+            }());
         }
         catch (...)
         {
@@ -342,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedBySignedInUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedBySignedInUser();
+            }());
         }
         catch (...)
         {
@@ -368,7 +404,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatisfiedByTrial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatisfiedByTrial();
+            }());
         }
         catch (...)
         {
@@ -467,7 +507,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -493,7 +537,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.LicenseSatisfactionInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseSatisfactionInfos();
+            }());
         }
         catch (...)
         {

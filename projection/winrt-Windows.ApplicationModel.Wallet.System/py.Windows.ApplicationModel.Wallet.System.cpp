@@ -44,7 +44,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
-                return py::convert(self->obj.DeleteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
-                return py::convert(self->obj.GetAppStatusForItem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppStatusForItem(param0);
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(self->obj.ImportItemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportItemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -194,7 +210,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
-                return py::convert(self->obj.LaunchAppForItemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchAppForItemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -228,7 +248,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ItemsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -256,7 +280,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -352,7 +380,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem::RequestStoreAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem::RequestStoreAsync();
+                }());
             }
             catch (...)
             {

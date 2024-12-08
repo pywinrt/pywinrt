@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Media::Playlists
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Playlists::Playlist::LoadAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Playlists::Playlist::LoadAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -106,7 +110,11 @@ namespace py::cpp::Windows::Media::Playlists
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
 
-                return py::convert(self->obj.SaveAsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -147,7 +155,11 @@ namespace py::cpp::Windows::Media::Playlists
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Media::Playlists::PlaylistFormat>(args, 3);
 
-                return py::convert(self->obj.SaveAsAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -183,7 +195,11 @@ namespace py::cpp::Windows::Media::Playlists
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -215,7 +231,11 @@ namespace py::cpp::Windows::Media::Playlists
                 return nullptr;
             }
 
-            return py::convert(self->obj.Files());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Files();
+            }());
         }
         catch (...)
         {

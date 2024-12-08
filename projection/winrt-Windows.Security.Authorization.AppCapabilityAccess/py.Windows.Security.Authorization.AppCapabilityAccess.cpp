@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CheckAccess());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CheckAccess();
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::CreateWithProcessIdForUser(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::CreateWithProcessIdForUser(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -194,7 +210,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::RequestAccessForCapabilitiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::RequestAccessForCapabilitiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -233,7 +253,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::RequestAccessForCapabilitiesForUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::RequestAccessForCapabilitiesForUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -265,7 +289,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.CapabilityName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CapabilityName();
+            }());
         }
         catch (...)
         {
@@ -291,7 +319,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -317,7 +349,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMessage();
+            }());
         }
         catch (...)
         {
@@ -351,7 +387,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -380,7 +420,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccessChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -408,7 +452,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccessChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccessChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

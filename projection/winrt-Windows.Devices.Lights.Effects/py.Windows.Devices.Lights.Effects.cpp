@@ -63,7 +63,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateInterval();
+            }());
         }
         catch (...)
         {
@@ -97,7 +101,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.UpdateInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdateInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -124,7 +132,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartDelay();
+            }());
         }
         catch (...)
         {
@@ -158,7 +170,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.StartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -185,7 +201,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -219,7 +239,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -246,7 +270,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedBitmapSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedBitmapSize();
+            }());
         }
         catch (...)
         {
@@ -272,7 +300,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -306,7 +338,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -335,7 +371,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect, winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.BitmapRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -363,7 +403,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BitmapRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitmapRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -469,7 +513,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                self->obj.UpdateBitmap(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateBitmap(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -502,7 +550,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SinceStarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SinceStarted();
+            }());
         }
         catch (...)
         {
@@ -621,7 +673,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SustainDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SustainDuration();
+            }());
         }
         catch (...)
         {
@@ -655,7 +711,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.SustainDuration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SustainDuration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -682,7 +742,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartDelay();
+            }());
         }
         catch (...)
         {
@@ -716,7 +780,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.StartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -743,7 +811,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.RepetitionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RepetitionMode();
+            }());
         }
         catch (...)
         {
@@ -777,7 +849,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>(arg);
 
-            self->obj.RepetitionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RepetitionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -804,7 +880,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.RepetitionDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RepetitionDelay();
+            }());
         }
         catch (...)
         {
@@ -838,7 +918,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.RepetitionDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RepetitionDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -865,7 +949,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Occurrences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Occurrences();
+            }());
         }
         catch (...)
         {
@@ -899,7 +987,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Occurrences(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Occurrences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -926,7 +1018,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecayDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecayDuration();
+            }());
         }
         catch (...)
         {
@@ -960,7 +1056,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DecayDuration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DecayDuration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -987,7 +1087,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -1021,7 +1125,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1048,7 +1156,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttackDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttackDuration();
+            }());
         }
         catch (...)
         {
@@ -1082,7 +1194,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.AttackDuration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AttackDuration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1109,7 +1225,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -1143,7 +1263,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1270,7 +1394,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartDelay();
+            }());
         }
         catch (...)
         {
@@ -1304,7 +1432,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.StartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1331,7 +1463,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.RampDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RampDuration();
+            }());
         }
         catch (...)
         {
@@ -1365,7 +1501,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.RampDuration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RampDuration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1392,7 +1532,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletionBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletionBehavior();
+            }());
         }
         catch (...)
         {
@@ -1426,7 +1570,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>(arg);
 
-            self->obj.CompletionBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompletionBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1453,7 +1601,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -1487,7 +1639,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1514,7 +1670,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -1548,7 +1708,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1671,7 +1835,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateInterval();
+            }());
         }
         catch (...)
         {
@@ -1705,7 +1873,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.UpdateInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdateInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1732,7 +1904,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -1766,7 +1942,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1793,7 +1973,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -1827,7 +2011,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1856,7 +2044,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect, winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.UpdateRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1884,7 +2076,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UpdateRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdateRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2010,7 +2206,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2047,7 +2247,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2085,7 +2289,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -2124,7 +2332,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2163,7 +2375,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2175,6 +2391,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2213,7 +2430,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.OverrideZIndex(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideZIndex(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2250,7 +2471,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2289,7 +2514,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::PauseAll(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::PauseAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2326,7 +2555,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2365,7 +2598,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StartAll(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StartAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2402,7 +2639,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2441,7 +2682,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StopAll(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StopAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2474,7 +2719,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.RepetitionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RepetitionMode();
+            }());
         }
         catch (...)
         {
@@ -2508,7 +2757,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>(arg);
 
-            self->obj.RepetitionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RepetitionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2535,7 +2788,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Occurrences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Occurrences();
+            }());
         }
         catch (...)
         {
@@ -2569,7 +2826,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Occurrences(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Occurrences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2596,7 +2857,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectStartMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectStartMode();
+            }());
         }
         catch (...)
         {
@@ -2630,7 +2895,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>(arg);
 
-            self->obj.EffectStartMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EffectStartMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2657,7 +2926,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2694,7 +2967,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2707,6 +2984,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2720,7 +2998,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -2759,7 +3041,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -2772,7 +3059,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             winrt::com_array<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -2918,7 +3209,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -2952,7 +3247,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2979,7 +3278,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartDelay();
+            }());
         }
         catch (...)
         {
@@ -3013,7 +3316,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.StartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3040,7 +3347,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -3074,7 +3385,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3101,7 +3416,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletionBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletionBehavior();
+            }());
         }
         catch (...)
         {
@@ -3135,7 +3454,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>(arg);
 
-            self->obj.CompletionBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompletionBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3162,7 +3485,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -3196,7 +3523,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3300,7 +3631,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
-                self->obj.SetColor(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColor(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3340,7 +3675,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorForIndex(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorForIndex(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3380,7 +3719,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Color, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                self->obj.SetColorsForIndices(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorsForIndices(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3420,7 +3763,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                self->obj.SetSingleColorForIndices(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSingleColorForIndices(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3453,7 +3800,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SinceStarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SinceStarted();
+            }());
         }
         catch (...)
         {
@@ -3550,7 +3901,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZIndex();
+            }());
         }
         catch (...)
         {
@@ -3584,7 +3939,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZIndex(param0);
+            }
+
             return 0;
         }
         catch (...)

@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Display
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Display::DisplayMonitor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Devices::Display
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::FromInterfaceIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Display::DisplayMonitor::FromInterfaceIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::Devices::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>(args, 0);
 
-                return py::convert(self->obj.GetDescriptor(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptor(param0);
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Devices::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Display::DisplayMonitor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -188,7 +204,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.BluePrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BluePrimary();
+            }());
         }
         catch (...)
         {
@@ -214,7 +234,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionKind();
+            }());
         }
         catch (...)
         {
@@ -240,7 +264,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -266,7 +294,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayAdapterDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayAdapterDeviceId();
+            }());
         }
         catch (...)
         {
@@ -292,7 +324,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayAdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayAdapterId();
+            }());
         }
         catch (...)
         {
@@ -318,7 +354,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayAdapterTargetId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayAdapterTargetId();
+            }());
         }
         catch (...)
         {
@@ -344,7 +384,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -370,7 +414,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.GreenPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GreenPrimary();
+            }());
         }
         catch (...)
         {
@@ -396,7 +444,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAverageFullFrameLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAverageFullFrameLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -422,7 +474,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -448,7 +504,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -474,7 +534,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeResolutionInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeResolutionInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -500,7 +564,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhysicalConnector());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalConnector();
+            }());
         }
         catch (...)
         {
@@ -526,7 +594,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhysicalSizeInInches());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalSizeInInches();
+            }());
         }
         catch (...)
         {
@@ -552,7 +624,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawDpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawDpiX();
+            }());
         }
         catch (...)
         {
@@ -578,7 +654,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawDpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawDpiY();
+            }());
         }
         catch (...)
         {
@@ -604,7 +684,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RedPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RedPrimary();
+            }());
         }
         catch (...)
         {
@@ -630,7 +714,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageKind();
+            }());
         }
         catch (...)
         {
@@ -656,7 +744,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.WhitePoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WhitePoint();
+            }());
         }
         catch (...)
         {
@@ -682,7 +774,11 @@ namespace py::cpp::Windows::Devices::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDolbyVisionSupportedInHdrMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDolbyVisionSupportedInHdrMode();
+            }());
         }
         catch (...)
         {

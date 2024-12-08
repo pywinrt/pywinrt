@@ -38,7 +38,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExecutableFileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExecutableFileName();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteSystem();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -278,7 +294,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -304,7 +324,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExecutableFileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExecutableFileName();
+            }());
         }
         catch (...)
         {
@@ -330,7 +354,11 @@ namespace py::cpp::Windows::UI::UIAutomation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteSystem();
+            }());
         }
         catch (...)
         {

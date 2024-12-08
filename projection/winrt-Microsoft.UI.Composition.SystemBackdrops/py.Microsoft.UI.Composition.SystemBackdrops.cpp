@@ -66,7 +66,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.AddSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -102,7 +106,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -139,7 +147,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -175,7 +187,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.RemoveAllSystemBackdropTargets();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAllSystemBackdropTargets();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -214,7 +230,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -250,7 +270,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.ResetProperties();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResetProperties();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -289,7 +313,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
-                self->obj.SetSystemBackdropConfiguration(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSystemBackdropConfiguration(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -329,7 +357,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -368,7 +400,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -400,7 +436,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TintOpacity();
+            }());
         }
         catch (...)
         {
@@ -434,7 +474,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.TintOpacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TintOpacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -461,7 +505,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TintColor();
+            }());
         }
         catch (...)
         {
@@ -495,7 +543,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.TintColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TintColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -522,7 +574,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.LuminosityOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LuminosityOpacity();
+            }());
         }
         catch (...)
         {
@@ -556,7 +612,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.LuminosityOpacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LuminosityOpacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -583,7 +643,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.FallbackColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FallbackColor();
+            }());
         }
         catch (...)
         {
@@ -617,7 +681,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.FallbackColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FallbackColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -644,7 +712,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -678,7 +750,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicKind>(arg);
 
-            self->obj.Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -705,7 +781,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -731,7 +811,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClosed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsClosed();
+            }());
         }
         catch (...)
         {
@@ -759,7 +843,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -787,7 +875,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -816,7 +908,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -844,7 +940,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -873,7 +973,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.FrameworkClosed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameworkClosed(param0);
+            }());
         }
         catch (...)
         {
@@ -901,7 +1005,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkClosed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameworkClosed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -944,7 +1052,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1090,7 +1202,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.AddSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -1126,7 +1242,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1163,7 +1283,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -1199,7 +1323,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.RemoveAllSystemBackdropTargets();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAllSystemBackdropTargets();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1238,7 +1366,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -1274,7 +1406,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.ResetProperties();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResetProperties();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1313,7 +1449,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
-                self->obj.SetSystemBackdropConfiguration(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSystemBackdropConfiguration(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1353,7 +1493,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1392,7 +1536,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1424,7 +1572,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TintOpacity();
+            }());
         }
         catch (...)
         {
@@ -1458,7 +1610,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.TintOpacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TintOpacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1485,7 +1641,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TintColor();
+            }());
         }
         catch (...)
         {
@@ -1519,7 +1679,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.TintColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TintColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1546,7 +1710,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.LuminosityOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LuminosityOpacity();
+            }());
         }
         catch (...)
         {
@@ -1580,7 +1748,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.LuminosityOpacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LuminosityOpacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1607,7 +1779,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.FallbackColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FallbackColor();
+            }());
         }
         catch (...)
         {
@@ -1641,7 +1817,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.FallbackColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FallbackColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1668,7 +1848,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1702,7 +1886,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>(arg);
 
-            self->obj.Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1729,7 +1917,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1755,7 +1947,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClosed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsClosed();
+            }());
         }
         catch (...)
         {
@@ -1783,7 +1979,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1811,7 +2011,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1840,7 +2044,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -1868,7 +2076,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1897,7 +2109,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.FrameworkClosed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameworkClosed(param0);
+            }());
         }
         catch (...)
         {
@@ -1925,7 +2141,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkClosed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameworkClosed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1968,7 +2188,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2108,7 +2332,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.Theme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Theme();
+            }());
         }
         catch (...)
         {
@@ -2142,7 +2370,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropTheme>(arg);
 
-            self->obj.Theme(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Theme(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2169,7 +2401,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInputActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInputActive();
+            }());
         }
         catch (...)
         {
@@ -2203,7 +2439,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsInputActive(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsInputActive(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2230,7 +2470,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHighContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHighContrast();
+            }());
         }
         catch (...)
         {
@@ -2264,7 +2508,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHighContrast(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsHighContrast(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2291,7 +2539,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighContrastBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighContrastBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2325,7 +2577,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.HighContrastBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HighContrastBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2426,7 +2682,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2466,7 +2726,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2505,7 +2769,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2553,7 +2821,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2807,7 +3079,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.AddSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -2843,7 +3119,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2880,7 +3160,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                     return nullptr;
                 }
 
-                self->obj.RemoveAllSystemBackdropTargets();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAllSystemBackdropTargets();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2919,7 +3203,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
-                return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveSystemBackdropTarget(param0);
+                }());
             }
             catch (...)
             {
@@ -2957,7 +3245,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
-                self->obj.SetSystemBackdropConfiguration(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSystemBackdropConfiguration(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2997,7 +3289,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3036,7 +3332,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
-                return py::convert(self->obj.SetTarget(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTarget(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3068,7 +3368,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3096,7 +3400,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3124,7 +3432,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3167,7 +3479,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

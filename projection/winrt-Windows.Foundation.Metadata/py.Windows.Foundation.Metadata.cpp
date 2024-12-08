@@ -37,7 +37,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsApiContractPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsApiContractPresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -77,7 +81,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsApiContractPresent(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsApiContractPresent(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsEnumNamedValuePresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsEnumNamedValuePresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -194,7 +210,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -234,7 +254,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -273,7 +297,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -312,7 +340,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsReadOnlyPropertyPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsReadOnlyPropertyPresent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -350,7 +382,11 @@ namespace py::cpp::Windows::Foundation::Metadata
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsTypePresent(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsTypePresent(param0);
+                }());
             }
             catch (...)
             {
@@ -389,7 +425,11 @@ namespace py::cpp::Windows::Foundation::Metadata
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Foundation::Metadata::ApiInformation::IsWriteablePropertyPresent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Metadata::ApiInformation::IsWriteablePropertyPresent(param0, param1);
+                }());
             }
             catch (...)
             {

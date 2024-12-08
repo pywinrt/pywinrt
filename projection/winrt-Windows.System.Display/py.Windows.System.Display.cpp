@@ -64,7 +64,11 @@ namespace py::cpp::Windows::System::Display
                     return nullptr;
                 }
 
-                self->obj.RequestActive();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestActive();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101,7 +105,11 @@ namespace py::cpp::Windows::System::Display
                     return nullptr;
                 }
 
-                self->obj.RequestRelease();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestRelease();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

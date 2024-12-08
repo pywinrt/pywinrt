@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -75,7 +79,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSize();
+            }());
         }
         catch (...)
         {
@@ -101,7 +109,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.Surface());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Surface();
+            }());
         }
         catch (...)
         {
@@ -127,7 +139,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeTime();
+            }());
         }
         catch (...)
         {
@@ -153,7 +169,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.DirtyRegionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DirtyRegionMode();
+            }());
         }
         catch (...)
         {
@@ -179,7 +199,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.DirtyRegions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DirtyRegions();
+            }());
         }
         catch (...)
         {
@@ -221,7 +245,11 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -302,7 +330,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -344,7 +376,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 3);
 
-                return py::convert(winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool::Create(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool::Create(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -382,7 +418,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>(args, 0);
 
-                return py::convert(self->obj.CreateCaptureSession(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCaptureSession(param0);
+                }());
             }
             catch (...)
             {
@@ -423,7 +463,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 3);
 
-                return py::convert(winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool::CreateFreeThreaded(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool::CreateFreeThreaded(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -464,7 +508,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 3);
 
-                self->obj.Recreate(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Recreate(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -501,7 +549,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetNextFrame());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetNextFrame();
+                }());
             }
             catch (...)
             {
@@ -533,7 +585,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {
@@ -561,7 +617,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FrameArrived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameArrived(param0);
+            }());
         }
         catch (...)
         {
@@ -589,7 +649,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameArrived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameArrived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -632,7 +696,11 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -735,7 +803,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Capture::GraphicsCaptureAccess::RequestAccessAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::GraphicsCaptureAccess::RequestAccessAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -838,7 +910,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Capture::GraphicsCaptureItem::CreateFromVisual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::GraphicsCaptureItem::CreateFromVisual(param0);
+                }());
             }
             catch (...)
             {
@@ -876,7 +952,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DisplayId>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Capture::GraphicsCaptureItem::TryCreateFromDisplayId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::GraphicsCaptureItem::TryCreateFromDisplayId(param0);
+                }());
             }
             catch (...)
             {
@@ -914,7 +994,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Capture::GraphicsCaptureItem::TryCreateFromWindowId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::GraphicsCaptureItem::TryCreateFromWindowId(param0);
+                }());
             }
             catch (...)
             {
@@ -946,7 +1030,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1060,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1000,7 +1092,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::GraphicsCaptureItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -1028,7 +1124,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1179,7 +1279,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PickSingleItemAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleItemAsync();
+                }());
             }
             catch (...)
             {
@@ -1282,7 +1386,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1319,7 +1427,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Capture::GraphicsCaptureSession::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Capture::GraphicsCaptureSession::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -1355,7 +1467,11 @@ namespace py::cpp::Windows::Graphics::Capture
                     return nullptr;
                 }
 
-                self->obj.StartCapture();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartCapture();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1388,7 +1504,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCursorCaptureEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCursorCaptureEnabled();
+            }());
         }
         catch (...)
         {
@@ -1422,7 +1542,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCursorCaptureEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCursorCaptureEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1449,7 +1573,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBorderRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBorderRequired();
+            }());
         }
         catch (...)
         {
@@ -1483,7 +1611,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsBorderRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsBorderRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1510,7 +1642,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.DirtyRegionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DirtyRegionMode();
+            }());
         }
         catch (...)
         {
@@ -1544,7 +1680,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode>(arg);
 
-            self->obj.DirtyRegionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DirtyRegionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1571,7 +1711,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinUpdateInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinUpdateInterval();
+            }());
         }
         catch (...)
         {
@@ -1605,7 +1749,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.MinUpdateInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinUpdateInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1632,7 +1780,11 @@ namespace py::cpp::Windows::Graphics::Capture
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeSecondaryWindows());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeSecondaryWindows();
+            }());
         }
         catch (...)
         {
@@ -1666,7 +1818,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeSecondaryWindows(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeSecondaryWindows(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1709,7 +1865,11 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

@@ -63,7 +63,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Animations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Animations();
+            }());
         }
         catch (...)
         {
@@ -89,7 +93,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.DelayLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DelayLimit();
+            }());
         }
         catch (...)
         {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaggerDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaggerDelay();
+            }());
         }
         catch (...)
         {
@@ -141,7 +153,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaggerDelayFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaggerDelayFactor();
+            }());
         }
         catch (...)
         {
@@ -167,7 +183,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZOrder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZOrder();
+            }());
         }
         catch (...)
         {
@@ -264,7 +284,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FinalOpacity();
+            }());
         }
         catch (...)
         {
@@ -290,7 +314,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialOpacity();
+            }());
         }
         catch (...)
         {
@@ -316,7 +344,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control1();
+            }());
         }
         catch (...)
         {
@@ -342,7 +374,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control2();
+            }());
         }
         catch (...)
         {
@@ -368,7 +404,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -394,7 +434,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -420,7 +464,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -519,7 +567,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control1();
+            }());
         }
         catch (...)
         {
@@ -545,7 +597,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control2();
+            }());
         }
         catch (...)
         {
@@ -571,7 +627,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -597,7 +657,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -623,7 +687,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -720,7 +788,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control1();
+            }());
         }
         catch (...)
         {
@@ -746,7 +818,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control2();
+            }());
         }
         catch (...)
         {
@@ -772,7 +848,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -798,7 +878,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -824,7 +908,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -850,7 +938,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalScaleX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FinalScaleX();
+            }());
         }
         catch (...)
         {
@@ -876,7 +968,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalScaleY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FinalScaleY();
+            }());
         }
         catch (...)
         {
@@ -902,7 +998,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialScaleX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialScaleX();
+            }());
         }
         catch (...)
         {
@@ -928,7 +1028,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialScaleY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialScaleY();
+            }());
         }
         catch (...)
         {
@@ -954,7 +1058,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalizedOrigin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalizedOrigin();
+            }());
         }
         catch (...)
         {
@@ -1056,7 +1164,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control1();
+            }());
         }
         catch (...)
         {
@@ -1082,7 +1194,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control2();
+            }());
         }
         catch (...)
         {
@@ -1108,7 +1224,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -1134,7 +1254,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -1160,7 +1284,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1385,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control1();
+            }());
         }
         catch (...)
         {
@@ -1283,7 +1415,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control2();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1445,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -1335,7 +1475,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -1361,7 +1505,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {

@@ -79,7 +79,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     return nullptr;
                 }
 
-                self->obj.Play();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Play();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -116,7 +120,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -149,7 +157,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.UriSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UriSource();
+            }());
         }
         catch (...)
         {
@@ -183,7 +195,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.UriSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UriSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -210,7 +226,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecodePixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecodePixelWidth();
+            }());
         }
         catch (...)
         {
@@ -244,7 +264,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DecodePixelWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DecodePixelWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -271,7 +295,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecodePixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecodePixelHeight();
+            }());
         }
         catch (...)
         {
@@ -305,7 +333,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DecodePixelHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DecodePixelHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -332,7 +364,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.CreateOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CreateOptions();
+            }());
         }
         catch (...)
         {
@@ -366,7 +402,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions>(arg);
 
-            self->obj.CreateOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CreateOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -393,7 +433,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecodePixelType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecodePixelType();
+            }());
         }
         catch (...)
         {
@@ -427,7 +471,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType>(arg);
 
-            self->obj.DecodePixelType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DecodePixelType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -454,7 +502,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoPlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoPlay();
+            }());
         }
         catch (...)
         {
@@ -488,7 +540,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoPlay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoPlay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -515,7 +571,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAnimatedBitmap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAnimatedBitmap();
+            }());
         }
         catch (...)
         {
@@ -541,7 +601,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlaying());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlaying();
+            }());
         }
         catch (...)
         {
@@ -567,7 +631,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::CreateOptionsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::CreateOptionsProperty();
+            }());
         }
         catch (...)
         {
@@ -593,7 +661,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -619,7 +691,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -645,7 +721,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::UriSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::UriSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -671,7 +751,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -697,7 +781,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::AutoPlayProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::AutoPlayProperty();
+            }());
         }
         catch (...)
         {
@@ -723,7 +811,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsAnimatedBitmapProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsAnimatedBitmapProperty();
+            }());
         }
         catch (...)
         {
@@ -749,7 +841,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsPlayingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsPlayingProperty();
+            }());
         }
         catch (...)
         {
@@ -777,7 +873,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventHandler>(arg);
 
-            return py::convert(self->obj.DownloadProgress(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadProgress(param0);
+            }());
         }
         catch (...)
         {
@@ -805,7 +905,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadProgress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadProgress(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -834,7 +938,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler>(arg);
 
-            return py::convert(self->obj.ImageFailed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageFailed(param0);
+            }());
         }
         catch (...)
         {
@@ -862,7 +970,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ImageFailed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ImageFailed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -891,7 +1003,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.ImageOpened(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageOpened(param0);
+            }());
         }
         catch (...)
         {
@@ -919,7 +1035,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ImageOpened(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ImageOpened(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1096,7 +1216,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().SetSource(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().SetSource(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1135,7 +1259,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().SetSourceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().SetSourceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1167,7 +1295,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -1193,7 +1325,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>().PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -1219,7 +1355,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -1245,7 +1385,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -1368,7 +1512,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -1402,7 +1550,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1522,7 +1674,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPixelsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelsAsync();
+                }());
             }
             catch (...)
             {
@@ -1560,7 +1716,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.RenderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RenderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1600,7 +1760,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                return py::convert(self->obj.RenderAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RenderAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1632,7 +1796,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -1658,7 +1826,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -1684,7 +1856,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -1710,7 +1886,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -1860,7 +2040,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1899,7 +2083,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(self->obj.SetBitmapAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetBitmapAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1947,7 +2135,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2364,7 +2556,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().SetSourceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().SetSourceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2396,7 +2592,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource();
+            }());
         }
         catch (...)
         {
@@ -2430,7 +2630,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2457,7 +2661,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth();
+            }());
         }
         catch (...)
         {
@@ -2491,7 +2699,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2518,7 +2730,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight();
+            }());
         }
         catch (...)
         {
@@ -2552,7 +2768,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2579,7 +2799,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -2605,7 +2829,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -2631,7 +2859,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::UriSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::UriSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -2659,7 +2891,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0);
+            }());
         }
         catch (...)
         {
@@ -2687,7 +2923,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2716,7 +2956,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0);
+            }());
         }
         catch (...)
         {
@@ -2744,7 +2988,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2873,7 +3121,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3169,7 +3421,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                     return nullptr;
                 }
 
-                self->obj.Invalidate();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Invalidate();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3202,7 +3458,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelBuffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelBuffer();
+            }());
         }
         catch (...)
         {
@@ -3363,7 +3623,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides>().OnRun(param0);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides>().OnRun(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

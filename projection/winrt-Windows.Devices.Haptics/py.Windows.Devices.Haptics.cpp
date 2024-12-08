@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BuzzContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BuzzContinuous();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Click());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Click();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Press());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Press();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Release());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Release();
+            }());
         }
         catch (...)
         {
@@ -134,7 +150,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::RumbleContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::RumbleContinuous();
+            }());
         }
         catch (...)
         {
@@ -160,7 +180,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BrushContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BrushContinuous();
+            }());
         }
         catch (...)
         {
@@ -186,7 +210,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::ChiselMarkerContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::ChiselMarkerContinuous();
+            }());
         }
         catch (...)
         {
@@ -212,7 +240,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::EraserContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::EraserContinuous();
+            }());
         }
         catch (...)
         {
@@ -238,7 +270,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Error();
+            }());
         }
         catch (...)
         {
@@ -264,7 +300,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::GalaxyPenContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::GalaxyPenContinuous();
+            }());
         }
         catch (...)
         {
@@ -290,7 +330,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Hover());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Hover();
+            }());
         }
         catch (...)
         {
@@ -316,7 +360,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::InkContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::InkContinuous();
+            }());
         }
         catch (...)
         {
@@ -342,7 +390,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::MarkerContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::MarkerContinuous();
+            }());
         }
         catch (...)
         {
@@ -368,7 +420,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::PencilContinuous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::PencilContinuous();
+            }());
         }
         catch (...)
         {
@@ -394,7 +450,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Success());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Success();
+            }());
         }
         catch (...)
         {
@@ -505,7 +565,11 @@ namespace py::cpp::Windows::Devices::Haptics
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
 
-                self->obj.SendHapticFeedback(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendHapticFeedback(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -546,7 +610,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                self->obj.SendHapticFeedbackForDuration(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendHapticFeedbackForDuration(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -588,7 +656,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 3);
 
-                self->obj.SendHapticFeedbackForPlayCount(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendHapticFeedbackForPlayCount(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -628,7 +700,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.SendHapticFeedback(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendHapticFeedback(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -665,7 +741,11 @@ namespace py::cpp::Windows::Devices::Haptics
                     return nullptr;
                 }
 
-                self->obj.StopFeedback();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopFeedback();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -698,7 +778,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -724,7 +808,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIntensitySupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIntensitySupported();
+            }());
         }
         catch (...)
         {
@@ -750,7 +838,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlayCountSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlayCountSupported();
+            }());
         }
         catch (...)
         {
@@ -776,7 +868,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlayDurationSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlayDurationSupported();
+            }());
         }
         catch (...)
         {
@@ -802,7 +898,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReplayPauseIntervalSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReplayPauseIntervalSupported();
+            }());
         }
         catch (...)
         {
@@ -828,7 +928,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedFeedback());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedFeedback();
+            }());
         }
         catch (...)
         {
@@ -931,7 +1035,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -957,7 +1065,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Waveform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Waveform();
+            }());
         }
         catch (...)
         {
@@ -1055,7 +1167,11 @@ namespace py::cpp::Windows::Devices::Haptics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::FindAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Haptics::VibrationDevice::FindAllAsync();
+                }());
             }
             catch (...)
             {
@@ -1093,7 +1209,11 @@ namespace py::cpp::Windows::Devices::Haptics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Haptics::VibrationDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1129,7 +1249,11 @@ namespace py::cpp::Windows::Devices::Haptics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Haptics::VibrationDevice::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -1165,7 +1289,11 @@ namespace py::cpp::Windows::Devices::Haptics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Haptics::VibrationDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1201,7 +1329,11 @@ namespace py::cpp::Windows::Devices::Haptics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Haptics::VibrationDevice::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -1233,7 +1365,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1259,7 +1395,11 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {

@@ -45,7 +45,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetFeature(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFeature(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetParameterDefinition(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetParameterDefinition(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentBindingFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentBindingFeature();
+            }());
         }
         catch (...)
         {
@@ -142,7 +154,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentCollateFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentCollateFeature();
+            }());
         }
         catch (...)
         {
@@ -168,7 +184,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentDuplexFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentDuplexFeature();
+            }());
         }
         catch (...)
         {
@@ -194,7 +214,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentHolePunchFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentHolePunchFeature();
+            }());
         }
         catch (...)
         {
@@ -220,7 +244,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentInputBinFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentInputBinFeature();
+            }());
         }
         catch (...)
         {
@@ -246,7 +274,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentNUpFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentNUpFeature();
+            }());
         }
         catch (...)
         {
@@ -272,7 +304,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentStapleFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentStapleFeature();
+            }());
         }
         catch (...)
         {
@@ -298,7 +334,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.JobPasscodeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JobPasscodeFeature();
+            }());
         }
         catch (...)
         {
@@ -324,7 +364,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -350,7 +394,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageBorderlessFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageBorderlessFeature();
+            }());
         }
         catch (...)
         {
@@ -376,7 +424,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageMediaSizeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageMediaSizeFeature();
+            }());
         }
         catch (...)
         {
@@ -402,7 +454,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageMediaTypeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageMediaTypeFeature();
+            }());
         }
         catch (...)
         {
@@ -428,7 +484,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOrientationFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOrientationFeature();
+            }());
         }
         catch (...)
         {
@@ -454,7 +514,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOutputColorFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOutputColorFeature();
+            }());
         }
         catch (...)
         {
@@ -480,7 +544,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOutputQualityFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOutputQualityFeature();
+            }());
         }
         catch (...)
         {
@@ -506,7 +574,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageResolutionFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageResolutionFeature();
+            }());
         }
         catch (...)
         {
@@ -532,7 +604,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -558,7 +634,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -677,7 +757,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetOption(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOption(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -713,7 +797,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSelectedOption());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSelectedOption();
+                }());
             }
             catch (...)
             {
@@ -751,7 +839,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>(args, 0);
 
-                self->obj.SetSelectedOption(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSelectedOption(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -784,7 +876,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -810,7 +906,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -836,7 +936,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -862,7 +966,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionType();
+            }());
         }
         catch (...)
         {
@@ -888,7 +996,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -914,7 +1026,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -1022,7 +1138,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetPropertyNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertyNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1061,7 +1181,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetPropertyValue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertyValue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1100,7 +1224,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetScoredPropertyNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetScoredPropertyNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1139,7 +1267,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetScoredPropertyValue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetScoredPropertyValue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1171,7 +1303,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1197,7 +1333,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1223,7 +1363,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -1249,7 +1393,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -1349,7 +1497,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataType();
+            }());
         }
         catch (...)
         {
@@ -1375,7 +1527,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1401,7 +1557,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.RangeMax());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RangeMax();
+            }());
         }
         catch (...)
         {
@@ -1427,7 +1587,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.RangeMin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RangeMin();
+            }());
         }
         catch (...)
         {
@@ -1453,7 +1617,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnitType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnitType();
+            }());
         }
         catch (...)
         {
@@ -1479,7 +1647,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -1505,7 +1677,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -1604,7 +1780,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1638,7 +1818,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1665,7 +1849,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1691,7 +1879,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -1717,7 +1909,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -1817,7 +2013,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetValueAsInteger());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValueAsInteger();
+                }());
             }
             catch (...)
             {
@@ -1853,7 +2053,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetValueAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValueAsString();
+                }());
             }
             catch (...)
             {
@@ -1885,7 +2089,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1984,7 +2192,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCapabilities());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCapabilities();
+                }());
             }
             catch (...)
             {
@@ -2023,7 +2235,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetFeature(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFeature(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2062,7 +2278,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetParameterInitializer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetParameterInitializer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2100,7 +2320,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
 
-                return py::convert(self->obj.MergeAndValidateTicket(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MergeAndValidateTicket(param0);
+                }());
             }
             catch (...)
             {
@@ -2136,7 +2360,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NotifyXmlChangedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NotifyXmlChangedAsync();
+                }());
             }
             catch (...)
             {
@@ -2176,7 +2404,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                return py::convert(self->obj.SetParameterInitializerAsInteger(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetParameterInitializerAsInteger(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2216,7 +2448,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.SetParameterInitializerAsString(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetParameterInitializerAsString(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2252,7 +2488,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ValidateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ValidateAsync();
+                }());
             }
             catch (...)
             {
@@ -2284,7 +2524,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentBindingFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentBindingFeature();
+            }());
         }
         catch (...)
         {
@@ -2310,7 +2554,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentCollateFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentCollateFeature();
+            }());
         }
         catch (...)
         {
@@ -2336,7 +2584,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentDuplexFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentDuplexFeature();
+            }());
         }
         catch (...)
         {
@@ -2362,7 +2614,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentHolePunchFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentHolePunchFeature();
+            }());
         }
         catch (...)
         {
@@ -2388,7 +2644,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentInputBinFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentInputBinFeature();
+            }());
         }
         catch (...)
         {
@@ -2414,7 +2674,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentNUpFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentNUpFeature();
+            }());
         }
         catch (...)
         {
@@ -2440,7 +2704,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentStapleFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentStapleFeature();
+            }());
         }
         catch (...)
         {
@@ -2466,7 +2734,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.JobPasscodeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JobPasscodeFeature();
+            }());
         }
         catch (...)
         {
@@ -2492,7 +2764,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2518,7 +2794,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageBorderlessFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageBorderlessFeature();
+            }());
         }
         catch (...)
         {
@@ -2544,7 +2824,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageMediaSizeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageMediaSizeFeature();
+            }());
         }
         catch (...)
         {
@@ -2570,7 +2854,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageMediaTypeFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageMediaTypeFeature();
+            }());
         }
         catch (...)
         {
@@ -2596,7 +2884,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOrientationFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOrientationFeature();
+            }());
         }
         catch (...)
         {
@@ -2622,7 +2914,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOutputColorFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOutputColorFeature();
+            }());
         }
         catch (...)
         {
@@ -2648,7 +2944,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOutputQualityFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOutputQualityFeature();
+            }());
         }
         catch (...)
         {
@@ -2674,7 +2974,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageResolutionFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageResolutionFeature();
+            }());
         }
         catch (...)
         {
@@ -2700,7 +3004,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNamespace();
+            }());
         }
         catch (...)
         {
@@ -2726,7 +3034,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.XmlNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XmlNode();
+            }());
         }
         catch (...)
         {
@@ -2844,7 +3156,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -2870,7 +3186,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
                 return nullptr;
             }
 
-            return py::convert(self->obj.Validated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Validated();
+            }());
         }
         catch (...)
         {

@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Phone::Devices::Notification
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Phone::Devices::Notification
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Devices::Notification::VibrationDevice::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Devices::Notification::VibrationDevice::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.Vibrate(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Vibrate(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

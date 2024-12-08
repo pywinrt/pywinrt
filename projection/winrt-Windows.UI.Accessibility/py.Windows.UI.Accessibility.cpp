@@ -38,7 +38,11 @@ namespace py::cpp::Windows::UI::Accessibility
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadingText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadingText();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::UI::Accessibility
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScreenPositionInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenPositionInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -180,7 +188,11 @@ namespace py::cpp::Windows::UI::Accessibility
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentScreenReaderPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentScreenReaderPosition();
+            }());
         }
         catch (...)
         {
@@ -208,7 +220,11 @@ namespace py::cpp::Windows::UI::Accessibility
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Accessibility::ScreenReaderService, winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ScreenReaderPositionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenReaderPositionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -236,7 +252,11 @@ namespace py::cpp::Windows::UI::Accessibility
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScreenReaderPositionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenReaderPositionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

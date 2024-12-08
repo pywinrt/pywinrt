@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeletedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeletedItems();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasSucceeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSucceeded();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosCount();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsCount();
+            }());
         }
         catch (...)
         {
@@ -194,7 +218,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -220,7 +248,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsCount();
+            }());
         }
         catch (...)
         {
@@ -246,7 +278,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -272,7 +308,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalCount();
+            }());
         }
         catch (...)
         {
@@ -298,7 +338,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -324,7 +368,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosCount();
+            }());
         }
         catch (...)
         {
@@ -350,7 +398,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -462,7 +514,11 @@ namespace py::cpp::Windows::Media::Import
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                self->obj.AddItemsInDateRangeToSelection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddItemsInDateRangeToSelection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -499,7 +555,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ImportItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -535,7 +595,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                self->obj.SelectAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SelectAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -572,7 +636,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SelectNewAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNewAsync();
+                }());
             }
             catch (...)
             {
@@ -608,7 +676,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                self->obj.SelectNone();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SelectNone();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -647,7 +719,11 @@ namespace py::cpp::Windows::Media::Import
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportImportMode>(args, 0);
 
-                self->obj.SetImportMode(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetImportMode(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -680,7 +756,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.FoundItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FoundItems();
+            }());
         }
         catch (...)
         {
@@ -706,7 +786,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasSucceeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSucceeded();
+            }());
         }
         catch (...)
         {
@@ -732,7 +816,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImportMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImportMode();
+            }());
         }
         catch (...)
         {
@@ -758,7 +846,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosCount();
+            }());
         }
         catch (...)
         {
@@ -784,7 +876,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -810,7 +906,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPhotosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedPhotosCount();
+            }());
         }
         catch (...)
         {
@@ -836,7 +936,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPhotosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedPhotosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -862,7 +966,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedSiblingsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedSiblingsCount();
+            }());
         }
         catch (...)
         {
@@ -888,7 +996,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedSiblingsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedSiblingsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -914,7 +1026,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedSidecarsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedSidecarsCount();
+            }());
         }
         catch (...)
         {
@@ -940,7 +1056,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedSidecarsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedSidecarsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1086,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedTotalCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedTotalCount();
+            }());
         }
         catch (...)
         {
@@ -992,7 +1116,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedTotalSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedTotalSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1018,7 +1146,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedVideosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedVideosCount();
+            }());
         }
         catch (...)
         {
@@ -1044,7 +1176,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedVideosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedVideosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1070,7 +1206,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -1096,7 +1236,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsCount();
+            }());
         }
         catch (...)
         {
@@ -1122,7 +1266,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1148,7 +1296,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsCount();
+            }());
         }
         catch (...)
         {
@@ -1174,7 +1326,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1200,7 +1356,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalCount();
+            }());
         }
         catch (...)
         {
@@ -1226,7 +1386,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1252,7 +1416,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosCount();
+            }());
         }
         catch (...)
         {
@@ -1278,7 +1446,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1306,7 +1478,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Import::PhotoImportFindItemsResult, winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemImported(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemImported(param0);
+            }());
         }
         catch (...)
         {
@@ -1334,7 +1510,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemImported(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemImported(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1363,7 +1543,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Import::PhotoImportFindItemsResult, winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SelectionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1391,7 +1575,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SelectionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1522,7 +1710,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteImportedItemsFromSourceAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteImportedItemsFromSourceAsync();
+                }());
             }
             catch (...)
             {
@@ -1554,7 +1746,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasSucceeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSucceeded();
+            }());
         }
         catch (...)
         {
@@ -1580,7 +1776,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImportedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImportedItems();
+            }());
         }
         catch (...)
         {
@@ -1606,7 +1806,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosCount();
+            }());
         }
         catch (...)
         {
@@ -1632,7 +1836,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1658,7 +1866,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -1684,7 +1896,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsCount();
+            }());
         }
         catch (...)
         {
@@ -1710,7 +1926,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiblingsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SiblingsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1736,7 +1956,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsCount();
+            }());
         }
         catch (...)
         {
@@ -1762,7 +1986,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SidecarsSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SidecarsSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1788,7 +2016,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalCount();
+            }());
         }
         catch (...)
         {
@@ -1814,7 +2046,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1840,7 +2076,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosCount();
+            }());
         }
         catch (...)
         {
@@ -1866,7 +2106,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideosSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideosSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1972,7 +2216,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSelected();
+            }());
         }
         catch (...)
         {
@@ -2006,7 +2254,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSelected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2033,7 +2285,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -2059,7 +2315,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -2085,7 +2345,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeletedFileNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeletedFileNames();
+            }());
         }
         catch (...)
         {
@@ -2111,7 +2375,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImportedFileNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImportedFileNames();
+            }());
         }
         catch (...)
         {
@@ -2137,7 +2405,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemKey();
+            }());
         }
         catch (...)
         {
@@ -2163,7 +2435,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2189,7 +2465,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sibling();
+            }());
         }
         catch (...)
         {
@@ -2215,7 +2495,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sidecars());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sidecars();
+            }());
         }
         catch (...)
         {
@@ -2241,7 +2525,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -2267,7 +2555,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -2293,7 +2585,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoSegments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoSegments();
+            }());
         }
         catch (...)
         {
@@ -2319,7 +2615,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -2424,7 +2724,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImportedItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImportedItem();
+            }());
         }
         catch (...)
         {
@@ -2513,7 +2817,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Import::PhotoImportManager::FindAllSourcesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Import::PhotoImportManager::FindAllSourcesAsync();
+                }());
             }
             catch (...)
             {
@@ -2549,7 +2857,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Import::PhotoImportManager::GetPendingOperations());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Import::PhotoImportManager::GetPendingOperations();
+                }());
             }
             catch (...)
             {
@@ -2585,7 +2897,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Import::PhotoImportManager::IsSupportedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Import::PhotoImportManager::IsSupportedAsync();
+                }());
             }
             catch (...)
             {
@@ -2684,7 +3000,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinueDeletingImportedItemsFromSourceAsync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinueDeletingImportedItemsFromSourceAsync();
+            }());
         }
         catch (...)
         {
@@ -2710,7 +3030,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinueFindingItemsAsync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinueFindingItemsAsync();
+            }());
         }
         catch (...)
         {
@@ -2736,7 +3060,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinueImportingItemsAsync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinueImportingItemsAsync();
+            }());
         }
         catch (...)
         {
@@ -2762,7 +3090,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -2788,7 +3120,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stage();
+            }());
         }
         catch (...)
         {
@@ -2885,7 +3221,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelectionEmpty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSelectionEmpty();
+            }());
         }
         catch (...)
         {
@@ -2982,7 +3322,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3022,7 +3366,11 @@ namespace py::cpp::Windows::Media::Import
                 auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportContentTypeFilter>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Import::PhotoImportItemSelectionMode>(args, 1);
 
-                return py::convert(self->obj.FindItemsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindItemsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3054,7 +3402,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubfolderCreationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubfolderCreationMode();
+            }());
         }
         catch (...)
         {
@@ -3088,7 +3440,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportSubfolderCreationMode>(arg);
 
-            self->obj.SubfolderCreationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SubfolderCreationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3115,7 +3471,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DestinationFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DestinationFolder();
+            }());
         }
         catch (...)
         {
@@ -3149,7 +3509,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(arg);
 
-            self->obj.DestinationFolder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DestinationFolder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3176,7 +3540,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DestinationFileNamePrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DestinationFileNamePrefix();
+            }());
         }
         catch (...)
         {
@@ -3210,7 +3578,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DestinationFileNamePrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DestinationFileNamePrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3237,7 +3609,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppendSessionDateToDestinationFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppendSessionDateToDestinationFolder();
+            }());
         }
         catch (...)
         {
@@ -3271,7 +3647,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AppendSessionDateToDestinationFolder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppendSessionDateToDestinationFolder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3298,7 +3678,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -3324,7 +3708,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -3350,7 +3738,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubfolderDateFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubfolderDateFormat();
+            }());
         }
         catch (...)
         {
@@ -3384,7 +3776,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportSubfolderDateFormat>(arg);
 
-            self->obj.SubfolderDateFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SubfolderDateFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3411,7 +3807,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.RememberDeselectedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RememberDeselectedItems();
+            }());
         }
         catch (...)
         {
@@ -3445,7 +3845,11 @@ namespace py::cpp::Windows::Media::Import
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RememberDeselectedItems(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RememberDeselectedItems(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3488,7 +3892,11 @@ namespace py::cpp::Windows::Media::Import
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3569,7 +3977,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -3595,7 +4007,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -3621,7 +4037,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -3720,7 +4140,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateImportSession());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateImportSession();
+                }());
             }
             catch (...)
             {
@@ -3758,7 +4182,11 @@ namespace py::cpp::Windows::Media::Import
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Import::PhotoImportSource::FromFolderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Import::PhotoImportSource::FromFolderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3796,7 +4224,11 @@ namespace py::cpp::Windows::Media::Import
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Import::PhotoImportSource::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Import::PhotoImportSource::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3828,7 +4260,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.BatteryLevelPercent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BatteryLevelPercent();
+            }());
         }
         catch (...)
         {
@@ -3854,7 +4290,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionProtocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionProtocol();
+            }());
         }
         catch (...)
         {
@@ -3880,7 +4320,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionTransport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionTransport();
+            }());
         }
         catch (...)
         {
@@ -3906,7 +4350,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DateTime();
+            }());
         }
         catch (...)
         {
@@ -3932,7 +4380,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3958,7 +4410,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3984,7 +4440,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -4010,7 +4470,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLocked();
+            }());
         }
         catch (...)
         {
@@ -4036,7 +4500,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMassStorage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMassStorage();
+            }());
         }
         catch (...)
         {
@@ -4062,7 +4530,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Manufacturer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Manufacturer();
+            }());
         }
         catch (...)
         {
@@ -4088,7 +4560,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Model());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Model();
+            }());
         }
         catch (...)
         {
@@ -4114,7 +4590,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.PowerSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PowerSource();
+            }());
         }
         catch (...)
         {
@@ -4140,7 +4620,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SerialNumber();
+            }());
         }
         catch (...)
         {
@@ -4166,7 +4650,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.StorageMedia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StorageMedia();
+            }());
         }
         catch (...)
         {
@@ -4192,7 +4680,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -4218,7 +4710,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4358,7 +4854,11 @@ namespace py::cpp::Windows::Media::Import
                     return nullptr;
                 }
 
-                self->obj.Refresh();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Refresh();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4391,7 +4891,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailableSpaceInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailableSpaceInBytes();
+            }());
         }
         catch (...)
         {
@@ -4417,7 +4921,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.CapacityInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CapacityInBytes();
+            }());
         }
         catch (...)
         {
@@ -4443,7 +4951,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -4469,7 +4981,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4495,7 +5011,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SerialNumber();
+            }());
         }
         catch (...)
         {
@@ -4521,7 +5041,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.StorageMediumType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StorageMediumType();
+            }());
         }
         catch (...)
         {
@@ -4547,7 +5071,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedAccessMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedAccessMode();
+            }());
         }
         catch (...)
         {
@@ -4647,7 +5175,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -4673,7 +5205,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4699,7 +5235,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sibling();
+            }());
         }
         catch (...)
         {
@@ -4725,7 +5265,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sidecars());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sidecars();
+            }());
         }
         catch (...)
         {
@@ -4751,7 +5295,11 @@ namespace py::cpp::Windows::Media::Import
                 return nullptr;
             }
 
-            return py::convert(self->obj.SizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SizeInBytes();
+            }());
         }
         catch (...)
         {

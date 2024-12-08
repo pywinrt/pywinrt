@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::ApplicationLanguages::GetLanguagesForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::ApplicationLanguages::GetLanguagesForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -68,7 +72,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride();
+            }());
         }
         catch (...)
         {
@@ -102,7 +110,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -129,7 +141,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::ApplicationLanguages::Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::ApplicationLanguages::Languages();
+            }());
         }
         catch (...)
         {
@@ -155,7 +171,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::ApplicationLanguages::ManifestLanguages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::ApplicationLanguages::ManifestLanguages();
+            }());
         }
         catch (...)
         {
@@ -327,7 +347,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddDays(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDays(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -366,7 +390,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddEras(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEras(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -405,7 +433,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddHours(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddHours(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -444,7 +476,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddMinutes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddMinutes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -483,7 +519,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddMonths(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddMonths(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -522,7 +562,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddNanoseconds(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddNanoseconds(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -561,7 +605,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddPeriods(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPeriods(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -600,7 +648,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddSeconds(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSeconds(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -639,7 +691,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddWeeks(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddWeeks(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -678,7 +734,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AddYears(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddYears(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -717,7 +777,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ChangeCalendarSystem(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeCalendarSystem(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -756,7 +820,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ChangeClock(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeClock(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -795,7 +863,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ChangeTimeZone(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeTimeZone(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -832,7 +904,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Clone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Clone();
+                }());
             }
             catch (...)
             {
@@ -870,7 +946,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Calendar>(args, 0);
 
-                return py::convert(self->obj.Compare(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Compare(param0);
+                }());
             }
             catch (...)
             {
@@ -908,7 +988,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(self->obj.CompareDateTime(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CompareDateTime(param0);
+                }());
             }
             catch (...)
             {
@@ -946,7 +1030,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Calendar>(args, 0);
 
-                self->obj.CopyTo(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CopyTo(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -985,7 +1073,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.DayAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1021,7 +1113,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DayAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayAsString();
+                }());
             }
             catch (...)
             {
@@ -1057,7 +1153,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DayOfWeekAsSoloString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayOfWeekAsSoloString();
+                }());
             }
             catch (...)
             {
@@ -1093,7 +1193,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DayOfWeekAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayOfWeekAsString();
+                }());
             }
             catch (...)
             {
@@ -1131,7 +1235,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.DayOfWeekAsSoloString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayOfWeekAsSoloString(param0);
+                }());
             }
             catch (...)
             {
@@ -1169,7 +1277,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.DayOfWeekAsString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DayOfWeekAsString(param0);
+                }());
             }
             catch (...)
             {
@@ -1205,7 +1317,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.EraAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EraAsString();
+                }());
             }
             catch (...)
             {
@@ -1243,7 +1359,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.EraAsString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EraAsString(param0);
+                }());
             }
             catch (...)
             {
@@ -1279,7 +1399,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCalendarSystem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCalendarSystem();
+                }());
             }
             catch (...)
             {
@@ -1315,7 +1439,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClock());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClock();
+                }());
             }
             catch (...)
             {
@@ -1351,7 +1479,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDateTime());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDateTime();
+                }());
             }
             catch (...)
             {
@@ -1387,7 +1519,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTimeZone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTimeZone();
+                }());
             }
             catch (...)
             {
@@ -1425,7 +1561,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.HourAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HourAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1461,7 +1601,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HourAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HourAsString();
+                }());
             }
             catch (...)
             {
@@ -1499,7 +1643,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.MinuteAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MinuteAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1535,7 +1683,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MinuteAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MinuteAsString();
+                }());
             }
             catch (...)
             {
@@ -1571,7 +1723,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MonthAsSoloString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsSoloString();
+                }());
             }
             catch (...)
             {
@@ -1607,7 +1763,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MonthAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsString();
+                }());
             }
             catch (...)
             {
@@ -1643,7 +1803,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MonthAsNumericString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsNumericString();
+                }());
             }
             catch (...)
             {
@@ -1681,7 +1845,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.MonthAsPaddedNumericString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsPaddedNumericString(param0);
+                }());
             }
             catch (...)
             {
@@ -1719,7 +1887,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.MonthAsSoloString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsSoloString(param0);
+                }());
             }
             catch (...)
             {
@@ -1757,7 +1929,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.MonthAsString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MonthAsString(param0);
+                }());
             }
             catch (...)
             {
@@ -1795,7 +1971,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.NanosecondAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NanosecondAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1831,7 +2011,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NanosecondAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NanosecondAsString();
+                }());
             }
             catch (...)
             {
@@ -1867,7 +2051,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PeriodAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PeriodAsString();
+                }());
             }
             catch (...)
             {
@@ -1905,7 +2093,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.PeriodAsString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PeriodAsString(param0);
+                }());
             }
             catch (...)
             {
@@ -1943,7 +2135,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.SecondAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SecondAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1979,7 +2175,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SecondAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SecondAsString();
+                }());
             }
             catch (...)
             {
@@ -2017,7 +2217,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                self->obj.SetDateTime(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDateTime(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2054,7 +2258,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                self->obj.SetToMax();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetToMax();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2091,7 +2299,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                self->obj.SetToMin();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetToMin();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2128,7 +2340,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                self->obj.SetToNow();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetToNow();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2165,7 +2381,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TimeZoneAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TimeZoneAsString();
+                }());
             }
             catch (...)
             {
@@ -2203,7 +2423,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.TimeZoneAsString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TimeZoneAsString(param0);
+                }());
             }
             catch (...)
             {
@@ -2241,7 +2465,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.YearAsPaddedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.YearAsPaddedString(param0);
+                }());
             }
             catch (...)
             {
@@ -2277,7 +2505,11 @@ namespace py::cpp::Windows::Globalization
                     return nullptr;
                 }
 
-                return py::convert(self->obj.YearAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.YearAsString();
+                }());
             }
             catch (...)
             {
@@ -2315,7 +2547,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.YearAsTruncatedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.YearAsTruncatedString(param0);
+                }());
             }
             catch (...)
             {
@@ -2347,7 +2583,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Year());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Year();
+            }());
         }
         catch (...)
         {
@@ -2381,7 +2621,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Year(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Year(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2408,7 +2652,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Second());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Second();
+            }());
         }
         catch (...)
         {
@@ -2442,7 +2690,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Second(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Second(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2469,7 +2721,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Period());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Period();
+            }());
         }
         catch (...)
         {
@@ -2503,7 +2759,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Period(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Period(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2530,7 +2790,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Nanosecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Nanosecond();
+            }());
         }
         catch (...)
         {
@@ -2564,7 +2828,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Nanosecond(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Nanosecond(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2591,7 +2859,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Month());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Month();
+            }());
         }
         catch (...)
         {
@@ -2625,7 +2897,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Month(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Month(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2652,7 +2928,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Minute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Minute();
+            }());
         }
         catch (...)
         {
@@ -2686,7 +2966,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Minute(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Minute(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2713,7 +2997,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -2747,7 +3035,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2774,7 +3066,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Era());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Era();
+            }());
         }
         catch (...)
         {
@@ -2808,7 +3104,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Era(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Era(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2835,7 +3135,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Hour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Hour();
+            }());
         }
         catch (...)
         {
@@ -2869,7 +3173,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Hour(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Hour(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2896,7 +3204,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Day());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Day();
+            }());
         }
         catch (...)
         {
@@ -2930,7 +3242,11 @@ namespace py::cpp::Windows::Globalization
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Day(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Day(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2957,7 +3273,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstSecondInThisMinute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstSecondInThisMinute();
+            }());
         }
         catch (...)
         {
@@ -2983,7 +3303,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstYearInThisEra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstYearInThisEra();
+            }());
         }
         catch (...)
         {
@@ -3009,7 +3333,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDaylightSavingTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDaylightSavingTime();
+            }());
         }
         catch (...)
         {
@@ -3035,7 +3363,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -3061,7 +3393,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastDayInThisMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastDayInThisMonth();
+            }());
         }
         catch (...)
         {
@@ -3087,7 +3423,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastEra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastEra();
+            }());
         }
         catch (...)
         {
@@ -3113,7 +3453,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastHourInThisPeriod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastHourInThisPeriod();
+            }());
         }
         catch (...)
         {
@@ -3139,7 +3483,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastMinuteInThisHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastMinuteInThisHour();
+            }());
         }
         catch (...)
         {
@@ -3165,7 +3513,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastMonthInThisYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastMonthInThisYear();
+            }());
         }
         catch (...)
         {
@@ -3191,7 +3543,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastSecondInThisMinute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastSecondInThisMinute();
+            }());
         }
         catch (...)
         {
@@ -3217,7 +3573,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastYearInThisEra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastYearInThisEra();
+            }());
         }
         catch (...)
         {
@@ -3243,7 +3603,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.DayOfWeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DayOfWeek();
+            }());
         }
         catch (...)
         {
@@ -3269,7 +3633,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstDayInThisMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstDayInThisMonth();
+            }());
         }
         catch (...)
         {
@@ -3295,7 +3663,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastPeriodInThisDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastPeriodInThisDay();
+            }());
         }
         catch (...)
         {
@@ -3321,7 +3693,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstEra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstEra();
+            }());
         }
         catch (...)
         {
@@ -3347,7 +3723,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfDaysInThisMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfDaysInThisMonth();
+            }());
         }
         catch (...)
         {
@@ -3373,7 +3753,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfEras());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfEras();
+            }());
         }
         catch (...)
         {
@@ -3399,7 +3783,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfHoursInThisPeriod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfHoursInThisPeriod();
+            }());
         }
         catch (...)
         {
@@ -3425,7 +3813,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfMinutesInThisHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfMinutesInThisHour();
+            }());
         }
         catch (...)
         {
@@ -3451,7 +3843,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstHourInThisPeriod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstHourInThisPeriod();
+            }());
         }
         catch (...)
         {
@@ -3477,7 +3873,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfMonthsInThisYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfMonthsInThisYear();
+            }());
         }
         catch (...)
         {
@@ -3503,7 +3903,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfPeriodsInThisDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfPeriodsInThisDay();
+            }());
         }
         catch (...)
         {
@@ -3529,7 +3933,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfSecondsInThisMinute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfSecondsInThisMinute();
+            }());
         }
         catch (...)
         {
@@ -3555,7 +3963,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfYearsInThisEra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfYearsInThisEra();
+            }());
         }
         catch (...)
         {
@@ -3581,7 +3993,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstMinuteInThisHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstMinuteInThisHour();
+            }());
         }
         catch (...)
         {
@@ -3607,7 +4023,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -3633,7 +4053,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstMonthInThisYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstMonthInThisYear();
+            }());
         }
         catch (...)
         {
@@ -3659,7 +4083,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstPeriodInThisDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstPeriodInThisDay();
+            }());
         }
         catch (...)
         {
@@ -3835,7 +4263,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Julian());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Julian();
+            }());
         }
         catch (...)
         {
@@ -3861,7 +4293,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Gregorian());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Gregorian();
+            }());
         }
         catch (...)
         {
@@ -3887,7 +4323,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Hebrew());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Hebrew();
+            }());
         }
         catch (...)
         {
@@ -3913,7 +4353,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Hijri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Hijri();
+            }());
         }
         catch (...)
         {
@@ -3939,7 +4383,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Japanese());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Japanese();
+            }());
         }
         catch (...)
         {
@@ -3965,7 +4413,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Korean());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Korean();
+            }());
         }
         catch (...)
         {
@@ -3991,7 +4443,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Taiwan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Taiwan();
+            }());
         }
         catch (...)
         {
@@ -4017,7 +4473,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Thai());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Thai();
+            }());
         }
         catch (...)
         {
@@ -4043,7 +4503,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::UmAlQura());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::UmAlQura();
+            }());
         }
         catch (...)
         {
@@ -4069,7 +4533,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Persian());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::Persian();
+            }());
         }
         catch (...)
         {
@@ -4095,7 +4563,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::ChineseLunar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::ChineseLunar();
+            }());
         }
         catch (...)
         {
@@ -4121,7 +4593,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::VietnameseLunar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::VietnameseLunar();
+            }());
         }
         catch (...)
         {
@@ -4147,7 +4623,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::TaiwanLunar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::TaiwanLunar();
+            }());
         }
         catch (...)
         {
@@ -4173,7 +4653,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::KoreanLunar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::KoreanLunar();
+            }());
         }
         catch (...)
         {
@@ -4199,7 +4683,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::JapaneseLunar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CalendarIdentifiers::JapaneseLunar();
+            }());
         }
         catch (...)
         {
@@ -4296,7 +4784,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::ClockIdentifiers::TwelveHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::ClockIdentifiers::TwelveHour();
+            }());
         }
         catch (...)
         {
@@ -4322,7 +4814,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::ClockIdentifiers::TwentyFourHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::ClockIdentifiers::TwentyFourHour();
+            }());
         }
         catch (...)
         {
@@ -4439,7 +4935,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Amount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Amount();
+            }());
         }
         catch (...)
         {
@@ -4465,7 +4965,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Currency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Currency();
+            }());
         }
         catch (...)
         {
@@ -4551,7 +5055,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HNL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::HNL();
+            }());
         }
         catch (...)
         {
@@ -4577,7 +5085,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AED());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AED();
+            }());
         }
         catch (...)
         {
@@ -4603,7 +5115,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AFN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AFN();
+            }());
         }
         catch (...)
         {
@@ -4629,7 +5145,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ALL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ALL();
+            }());
         }
         catch (...)
         {
@@ -4655,7 +5175,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AMD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AMD();
+            }());
         }
         catch (...)
         {
@@ -4681,7 +5205,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ANG());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ANG();
+            }());
         }
         catch (...)
         {
@@ -4707,7 +5235,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AOA());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AOA();
+            }());
         }
         catch (...)
         {
@@ -4733,7 +5265,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ARS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ARS();
+            }());
         }
         catch (...)
         {
@@ -4759,7 +5295,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AUD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AUD();
+            }());
         }
         catch (...)
         {
@@ -4785,7 +5325,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AWG());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AWG();
+            }());
         }
         catch (...)
         {
@@ -4811,7 +5355,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AZN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::AZN();
+            }());
         }
         catch (...)
         {
@@ -4837,7 +5385,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BAM());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BAM();
+            }());
         }
         catch (...)
         {
@@ -4863,7 +5415,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BBD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BBD();
+            }());
         }
         catch (...)
         {
@@ -4889,7 +5445,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BDT());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BDT();
+            }());
         }
         catch (...)
         {
@@ -4915,7 +5475,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BGN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BGN();
+            }());
         }
         catch (...)
         {
@@ -4941,7 +5505,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BHD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BHD();
+            }());
         }
         catch (...)
         {
@@ -4967,7 +5535,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BIF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BIF();
+            }());
         }
         catch (...)
         {
@@ -4993,7 +5565,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BMD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BMD();
+            }());
         }
         catch (...)
         {
@@ -5019,7 +5595,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BND());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BND();
+            }());
         }
         catch (...)
         {
@@ -5045,7 +5625,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BOB());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BOB();
+            }());
         }
         catch (...)
         {
@@ -5071,7 +5655,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BRL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BRL();
+            }());
         }
         catch (...)
         {
@@ -5097,7 +5685,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BSD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BSD();
+            }());
         }
         catch (...)
         {
@@ -5123,7 +5715,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BTN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BTN();
+            }());
         }
         catch (...)
         {
@@ -5149,7 +5745,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BWP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BWP();
+            }());
         }
         catch (...)
         {
@@ -5175,7 +5775,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BYR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BYR();
+            }());
         }
         catch (...)
         {
@@ -5201,7 +5805,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BZD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BZD();
+            }());
         }
         catch (...)
         {
@@ -5227,7 +5835,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CAD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CAD();
+            }());
         }
         catch (...)
         {
@@ -5253,7 +5865,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CDF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CDF();
+            }());
         }
         catch (...)
         {
@@ -5279,7 +5895,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CHF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CHF();
+            }());
         }
         catch (...)
         {
@@ -5305,7 +5925,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CLP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CLP();
+            }());
         }
         catch (...)
         {
@@ -5331,7 +5955,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CNY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CNY();
+            }());
         }
         catch (...)
         {
@@ -5357,7 +5985,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::COP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::COP();
+            }());
         }
         catch (...)
         {
@@ -5383,7 +6015,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CRC());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CRC();
+            }());
         }
         catch (...)
         {
@@ -5409,7 +6045,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CUP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CUP();
+            }());
         }
         catch (...)
         {
@@ -5435,7 +6075,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CVE());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CVE();
+            }());
         }
         catch (...)
         {
@@ -5461,7 +6105,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CZK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::CZK();
+            }());
         }
         catch (...)
         {
@@ -5487,7 +6135,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DJF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::DJF();
+            }());
         }
         catch (...)
         {
@@ -5513,7 +6165,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DKK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::DKK();
+            }());
         }
         catch (...)
         {
@@ -5539,7 +6195,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DOP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::DOP();
+            }());
         }
         catch (...)
         {
@@ -5565,7 +6225,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DZD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::DZD();
+            }());
         }
         catch (...)
         {
@@ -5591,7 +6255,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::EGP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::EGP();
+            }());
         }
         catch (...)
         {
@@ -5617,7 +6285,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ERN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ERN();
+            }());
         }
         catch (...)
         {
@@ -5643,7 +6315,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ETB());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ETB();
+            }());
         }
         catch (...)
         {
@@ -5669,7 +6345,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::EUR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::EUR();
+            }());
         }
         catch (...)
         {
@@ -5695,7 +6375,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::FJD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::FJD();
+            }());
         }
         catch (...)
         {
@@ -5721,7 +6405,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::FKP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::FKP();
+            }());
         }
         catch (...)
         {
@@ -5747,7 +6435,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GBP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GBP();
+            }());
         }
         catch (...)
         {
@@ -5773,7 +6465,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GEL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GEL();
+            }());
         }
         catch (...)
         {
@@ -5799,7 +6495,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GHS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GHS();
+            }());
         }
         catch (...)
         {
@@ -5825,7 +6525,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GIP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GIP();
+            }());
         }
         catch (...)
         {
@@ -5851,7 +6555,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GMD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GMD();
+            }());
         }
         catch (...)
         {
@@ -5877,7 +6585,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GNF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GNF();
+            }());
         }
         catch (...)
         {
@@ -5903,7 +6615,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GTQ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GTQ();
+            }());
         }
         catch (...)
         {
@@ -5929,7 +6645,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GYD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::GYD();
+            }());
         }
         catch (...)
         {
@@ -5955,7 +6675,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HKD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::HKD();
+            }());
         }
         catch (...)
         {
@@ -5981,7 +6705,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RON());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::RON();
+            }());
         }
         catch (...)
         {
@@ -6007,7 +6735,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HRK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::HRK();
+            }());
         }
         catch (...)
         {
@@ -6033,7 +6765,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HTG());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::HTG();
+            }());
         }
         catch (...)
         {
@@ -6059,7 +6795,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HUF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::HUF();
+            }());
         }
         catch (...)
         {
@@ -6085,7 +6825,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IDR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::IDR();
+            }());
         }
         catch (...)
         {
@@ -6111,7 +6855,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ILS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ILS();
+            }());
         }
         catch (...)
         {
@@ -6137,7 +6885,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::INR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::INR();
+            }());
         }
         catch (...)
         {
@@ -6163,7 +6915,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IQD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::IQD();
+            }());
         }
         catch (...)
         {
@@ -6189,7 +6945,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IRR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::IRR();
+            }());
         }
         catch (...)
         {
@@ -6215,7 +6975,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ISK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ISK();
+            }());
         }
         catch (...)
         {
@@ -6241,7 +7005,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JMD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::JMD();
+            }());
         }
         catch (...)
         {
@@ -6267,7 +7035,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JOD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::JOD();
+            }());
         }
         catch (...)
         {
@@ -6293,7 +7065,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JPY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::JPY();
+            }());
         }
         catch (...)
         {
@@ -6319,7 +7095,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KES());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KES();
+            }());
         }
         catch (...)
         {
@@ -6345,7 +7125,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KGS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KGS();
+            }());
         }
         catch (...)
         {
@@ -6371,7 +7155,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KHR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KHR();
+            }());
         }
         catch (...)
         {
@@ -6397,7 +7185,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KMF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KMF();
+            }());
         }
         catch (...)
         {
@@ -6423,7 +7215,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KPW());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KPW();
+            }());
         }
         catch (...)
         {
@@ -6449,7 +7245,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KRW());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KRW();
+            }());
         }
         catch (...)
         {
@@ -6475,7 +7275,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KWD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KWD();
+            }());
         }
         catch (...)
         {
@@ -6501,7 +7305,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KYD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KYD();
+            }());
         }
         catch (...)
         {
@@ -6527,7 +7335,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KZT());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::KZT();
+            }());
         }
         catch (...)
         {
@@ -6553,7 +7365,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LAK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LAK();
+            }());
         }
         catch (...)
         {
@@ -6579,7 +7395,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LBP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LBP();
+            }());
         }
         catch (...)
         {
@@ -6605,7 +7425,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LKR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LKR();
+            }());
         }
         catch (...)
         {
@@ -6631,7 +7455,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LRD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LRD();
+            }());
         }
         catch (...)
         {
@@ -6657,7 +7485,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LSL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LSL();
+            }());
         }
         catch (...)
         {
@@ -6683,7 +7515,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LTL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LTL();
+            }());
         }
         catch (...)
         {
@@ -6709,7 +7545,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LVL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LVL();
+            }());
         }
         catch (...)
         {
@@ -6735,7 +7575,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LYD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::LYD();
+            }());
         }
         catch (...)
         {
@@ -6761,7 +7605,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MAD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MAD();
+            }());
         }
         catch (...)
         {
@@ -6787,7 +7635,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MDL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MDL();
+            }());
         }
         catch (...)
         {
@@ -6813,7 +7665,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MGA());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MGA();
+            }());
         }
         catch (...)
         {
@@ -6839,7 +7695,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MKD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MKD();
+            }());
         }
         catch (...)
         {
@@ -6865,7 +7725,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MMK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MMK();
+            }());
         }
         catch (...)
         {
@@ -6891,7 +7755,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MNT());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MNT();
+            }());
         }
         catch (...)
         {
@@ -6917,7 +7785,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MOP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MOP();
+            }());
         }
         catch (...)
         {
@@ -6943,7 +7815,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MRO());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MRO();
+            }());
         }
         catch (...)
         {
@@ -6969,7 +7845,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MUR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MUR();
+            }());
         }
         catch (...)
         {
@@ -6995,7 +7875,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MVR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MVR();
+            }());
         }
         catch (...)
         {
@@ -7021,7 +7905,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MWK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MWK();
+            }());
         }
         catch (...)
         {
@@ -7047,7 +7935,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MXN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MXN();
+            }());
         }
         catch (...)
         {
@@ -7073,7 +7965,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MYR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MYR();
+            }());
         }
         catch (...)
         {
@@ -7099,7 +7995,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MZN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MZN();
+            }());
         }
         catch (...)
         {
@@ -7125,7 +8025,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NAD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NAD();
+            }());
         }
         catch (...)
         {
@@ -7151,7 +8055,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NGN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NGN();
+            }());
         }
         catch (...)
         {
@@ -7177,7 +8085,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NIO());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NIO();
+            }());
         }
         catch (...)
         {
@@ -7203,7 +8115,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NOK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NOK();
+            }());
         }
         catch (...)
         {
@@ -7229,7 +8145,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NPR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NPR();
+            }());
         }
         catch (...)
         {
@@ -7255,7 +8175,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NZD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::NZD();
+            }());
         }
         catch (...)
         {
@@ -7281,7 +8205,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::OMR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::OMR();
+            }());
         }
         catch (...)
         {
@@ -7307,7 +8235,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PAB());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PAB();
+            }());
         }
         catch (...)
         {
@@ -7333,7 +8265,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PEN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PEN();
+            }());
         }
         catch (...)
         {
@@ -7359,7 +8295,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PGK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PGK();
+            }());
         }
         catch (...)
         {
@@ -7385,7 +8325,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PHP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PHP();
+            }());
         }
         catch (...)
         {
@@ -7411,7 +8355,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PKR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PKR();
+            }());
         }
         catch (...)
         {
@@ -7437,7 +8385,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PLN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PLN();
+            }());
         }
         catch (...)
         {
@@ -7463,7 +8415,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PYG());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::PYG();
+            }());
         }
         catch (...)
         {
@@ -7489,7 +8445,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::QAR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::QAR();
+            }());
         }
         catch (...)
         {
@@ -7515,7 +8475,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RSD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::RSD();
+            }());
         }
         catch (...)
         {
@@ -7541,7 +8505,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RUB());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::RUB();
+            }());
         }
         catch (...)
         {
@@ -7567,7 +8535,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RWF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::RWF();
+            }());
         }
         catch (...)
         {
@@ -7593,7 +8565,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SAR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SAR();
+            }());
         }
         catch (...)
         {
@@ -7619,7 +8595,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SBD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SBD();
+            }());
         }
         catch (...)
         {
@@ -7645,7 +8625,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SCR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SCR();
+            }());
         }
         catch (...)
         {
@@ -7671,7 +8655,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SDG());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SDG();
+            }());
         }
         catch (...)
         {
@@ -7697,7 +8685,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SEK());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SEK();
+            }());
         }
         catch (...)
         {
@@ -7723,7 +8715,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SGD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SGD();
+            }());
         }
         catch (...)
         {
@@ -7749,7 +8745,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SHP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SHP();
+            }());
         }
         catch (...)
         {
@@ -7775,7 +8775,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SLL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SLL();
+            }());
         }
         catch (...)
         {
@@ -7801,7 +8805,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SOS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SOS();
+            }());
         }
         catch (...)
         {
@@ -7827,7 +8835,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SRD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SRD();
+            }());
         }
         catch (...)
         {
@@ -7853,7 +8865,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::STD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::STD();
+            }());
         }
         catch (...)
         {
@@ -7879,7 +8895,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SYP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SYP();
+            }());
         }
         catch (...)
         {
@@ -7905,7 +8925,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SZL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SZL();
+            }());
         }
         catch (...)
         {
@@ -7931,7 +8955,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::THB());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::THB();
+            }());
         }
         catch (...)
         {
@@ -7957,7 +8985,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TJS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TJS();
+            }());
         }
         catch (...)
         {
@@ -7983,7 +9015,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TMT());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TMT();
+            }());
         }
         catch (...)
         {
@@ -8009,7 +9045,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TND());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TND();
+            }());
         }
         catch (...)
         {
@@ -8035,7 +9075,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TOP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TOP();
+            }());
         }
         catch (...)
         {
@@ -8061,7 +9105,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TRY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TRY();
+            }());
         }
         catch (...)
         {
@@ -8087,7 +9135,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TTD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TTD();
+            }());
         }
         catch (...)
         {
@@ -8113,7 +9165,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TWD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TWD();
+            }());
         }
         catch (...)
         {
@@ -8139,7 +9195,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TZS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::TZS();
+            }());
         }
         catch (...)
         {
@@ -8165,7 +9225,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UAH());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::UAH();
+            }());
         }
         catch (...)
         {
@@ -8191,7 +9255,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UGX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::UGX();
+            }());
         }
         catch (...)
         {
@@ -8217,7 +9285,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::USD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::USD();
+            }());
         }
         catch (...)
         {
@@ -8243,7 +9315,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UYU());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::UYU();
+            }());
         }
         catch (...)
         {
@@ -8269,7 +9345,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UZS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::UZS();
+            }());
         }
         catch (...)
         {
@@ -8295,7 +9375,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VEF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::VEF();
+            }());
         }
         catch (...)
         {
@@ -8321,7 +9405,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VND());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::VND();
+            }());
         }
         catch (...)
         {
@@ -8347,7 +9435,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VUV());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::VUV();
+            }());
         }
         catch (...)
         {
@@ -8373,7 +9465,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::WST());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::WST();
+            }());
         }
         catch (...)
         {
@@ -8399,7 +9495,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XAF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::XAF();
+            }());
         }
         catch (...)
         {
@@ -8425,7 +9525,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XCD());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::XCD();
+            }());
         }
         catch (...)
         {
@@ -8451,7 +9555,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XOF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::XOF();
+            }());
         }
         catch (...)
         {
@@ -8477,7 +9585,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XPF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::XPF();
+            }());
         }
         catch (...)
         {
@@ -8503,7 +9615,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XXX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::XXX();
+            }());
         }
         catch (...)
         {
@@ -8529,7 +9645,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::YER());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::YER();
+            }());
         }
         catch (...)
         {
@@ -8555,7 +9675,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZAR());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ZAR();
+            }());
         }
         catch (...)
         {
@@ -8581,7 +9705,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZMW());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ZMW();
+            }());
         }
         catch (...)
         {
@@ -8607,7 +9735,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZWL());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::ZWL();
+            }());
         }
         catch (...)
         {
@@ -8633,7 +9765,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BYN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::BYN();
+            }());
         }
         catch (...)
         {
@@ -8659,7 +9795,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SSP());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::SSP();
+            }());
         }
         catch (...)
         {
@@ -8685,7 +9825,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::STN());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::STN();
+            }());
         }
         catch (...)
         {
@@ -8711,7 +9855,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VES());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::VES();
+            }());
         }
         catch (...)
         {
@@ -8737,7 +9885,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MRU());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::CurrencyIdentifiers::MRU();
+            }());
         }
         catch (...)
         {
@@ -9032,7 +10184,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::GeographicRegion::IsSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::GeographicRegion::IsSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -9064,7 +10220,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Code());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Code();
+            }());
         }
         catch (...)
         {
@@ -9090,7 +10250,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.CodeThreeDigit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CodeThreeDigit();
+            }());
         }
         catch (...)
         {
@@ -9116,7 +10280,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.CodeThreeLetter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CodeThreeLetter();
+            }());
         }
         catch (...)
         {
@@ -9142,7 +10310,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.CodeTwoLetter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CodeTwoLetter();
+            }());
         }
         catch (...)
         {
@@ -9168,7 +10340,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrenciesInUse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrenciesInUse();
+            }());
         }
         catch (...)
         {
@@ -9194,7 +10370,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -9220,7 +10400,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeName();
+            }());
         }
         catch (...)
         {
@@ -9345,7 +10529,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayText();
+            }());
         }
         catch (...)
         {
@@ -9371,7 +10559,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPhraseStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPhraseStart();
+            }());
         }
         catch (...)
         {
@@ -9397,7 +10589,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.YomiText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YomiText();
+            }());
         }
         catch (...)
         {
@@ -9490,7 +10686,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::JapanesePhoneticAnalyzer::GetWords(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::JapanesePhoneticAnalyzer::GetWords(param0);
+                }());
             }
             catch (...)
             {
@@ -9529,7 +10729,11 @@ namespace py::cpp::Windows::Globalization
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(winrt::Windows::Globalization::JapanesePhoneticAnalyzer::GetWords(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::JapanesePhoneticAnalyzer::GetWords(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9657,7 +10861,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetExtensionSubtags(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetExtensionSubtags(param0);
+                }());
             }
             catch (...)
             {
@@ -9695,7 +10903,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::Language::GetMuiCompatibleLanguageListFromLanguageTags(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::Language::GetMuiCompatibleLanguageListFromLanguageTags(param0);
+                }());
             }
             catch (...)
             {
@@ -9733,7 +10945,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::Language::IsWellFormed(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::Language::IsWellFormed(param0);
+                }());
             }
             catch (...)
             {
@@ -9771,7 +10987,11 @@ namespace py::cpp::Windows::Globalization
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::Language::TrySetInputMethodLanguageTag(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::Language::TrySetInputMethodLanguageTag(param0);
+                }());
             }
             catch (...)
             {
@@ -9803,7 +11023,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -9829,7 +11053,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageTag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageTag();
+            }());
         }
         catch (...)
         {
@@ -9855,7 +11083,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeName();
+            }());
         }
         catch (...)
         {
@@ -9881,7 +11113,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.Script());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Script();
+            }());
         }
         catch (...)
         {
@@ -9907,7 +11143,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutDirection();
+            }());
         }
         catch (...)
         {
@@ -9933,7 +11173,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbbreviatedName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbbreviatedName();
+            }());
         }
         catch (...)
         {
@@ -9959,7 +11203,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::Language::CurrentInputMethodLanguageTag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::Language::CurrentInputMethodLanguageTag();
+            }());
         }
         catch (...)
         {
@@ -10079,7 +11327,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::FullWide());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::FullWide();
+            }());
         }
         catch (...)
         {
@@ -10105,7 +11357,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Arab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Arab();
+            }());
         }
         catch (...)
         {
@@ -10131,7 +11387,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ArabExt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ArabExt();
+            }());
         }
         catch (...)
         {
@@ -10157,7 +11417,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Bali());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Bali();
+            }());
         }
         catch (...)
         {
@@ -10183,7 +11447,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Beng());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Beng();
+            }());
         }
         catch (...)
         {
@@ -10209,7 +11477,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Cham());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Cham();
+            }());
         }
         catch (...)
         {
@@ -10235,7 +11507,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Deva());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Deva();
+            }());
         }
         catch (...)
         {
@@ -10261,7 +11537,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MymrShan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MymrShan();
+            }());
         }
         catch (...)
         {
@@ -10287,7 +11567,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Gujr());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Gujr();
+            }());
         }
         catch (...)
         {
@@ -10313,7 +11597,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Guru());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Guru();
+            }());
         }
         catch (...)
         {
@@ -10339,7 +11627,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::HaniDec());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::HaniDec();
+            }());
         }
         catch (...)
         {
@@ -10365,7 +11657,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Java());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Java();
+            }());
         }
         catch (...)
         {
@@ -10391,7 +11687,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Kali());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Kali();
+            }());
         }
         catch (...)
         {
@@ -10417,7 +11717,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Khmr());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Khmr();
+            }());
         }
         catch (...)
         {
@@ -10443,7 +11747,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Knda());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Knda();
+            }());
         }
         catch (...)
         {
@@ -10469,7 +11777,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Lana());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Lana();
+            }());
         }
         catch (...)
         {
@@ -10495,7 +11807,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::LanaTham());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::LanaTham();
+            }());
         }
         catch (...)
         {
@@ -10521,7 +11837,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Laoo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Laoo();
+            }());
         }
         catch (...)
         {
@@ -10547,7 +11867,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Latn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Latn();
+            }());
         }
         catch (...)
         {
@@ -10573,7 +11897,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Lepc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Lepc();
+            }());
         }
         catch (...)
         {
@@ -10599,7 +11927,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Limb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Limb();
+            }());
         }
         catch (...)
         {
@@ -10625,7 +11957,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mlym());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Mlym();
+            }());
         }
         catch (...)
         {
@@ -10651,7 +11987,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mong());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Mong();
+            }());
         }
         catch (...)
         {
@@ -10677,7 +12017,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mtei());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Mtei();
+            }());
         }
         catch (...)
         {
@@ -10703,7 +12047,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mymr());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Mymr();
+            }());
         }
         catch (...)
         {
@@ -10729,7 +12077,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Nkoo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Nkoo();
+            }());
         }
         catch (...)
         {
@@ -10755,7 +12107,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Olck());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Olck();
+            }());
         }
         catch (...)
         {
@@ -10781,7 +12137,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Orya());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Orya();
+            }());
         }
         catch (...)
         {
@@ -10807,7 +12167,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Saur());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Saur();
+            }());
         }
         catch (...)
         {
@@ -10833,7 +12197,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Sund());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Sund();
+            }());
         }
         catch (...)
         {
@@ -10859,7 +12227,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Talu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Talu();
+            }());
         }
         catch (...)
         {
@@ -10885,7 +12257,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::TamlDec());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::TamlDec();
+            }());
         }
         catch (...)
         {
@@ -10911,7 +12287,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Telu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Telu();
+            }());
         }
         catch (...)
         {
@@ -10937,7 +12317,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Thai());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Thai();
+            }());
         }
         catch (...)
         {
@@ -10963,7 +12347,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Tibt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Tibt();
+            }());
         }
         catch (...)
         {
@@ -10989,7 +12377,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Vaii());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Vaii();
+            }());
         }
         catch (...)
         {
@@ -11015,7 +12407,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathBold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MathBold();
+            }());
         }
         catch (...)
         {
@@ -11041,7 +12437,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathDbl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MathDbl();
+            }());
         }
         catch (...)
         {
@@ -11067,7 +12467,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathMono());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MathMono();
+            }());
         }
         catch (...)
         {
@@ -11093,7 +12497,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSanb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSanb();
+            }());
         }
         catch (...)
         {
@@ -11119,7 +12527,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSans());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSans();
+            }());
         }
         catch (...)
         {
@@ -11145,7 +12557,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Osma());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Osma();
+            }());
         }
         catch (...)
         {
@@ -11171,7 +12587,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthBold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthBold();
+            }());
         }
         catch (...)
         {
@@ -11197,7 +12617,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthDbl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthDbl();
+            }());
         }
         catch (...)
         {
@@ -11223,7 +12647,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthMono());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthMono();
+            }());
         }
         catch (...)
         {
@@ -11249,7 +12677,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSanb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSanb();
+            }());
         }
         catch (...)
         {
@@ -11275,7 +12707,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSans());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSans();
+            }());
         }
         catch (...)
         {
@@ -11301,7 +12737,11 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Brah());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::NumeralSystemIdentifiers::Brah();
+            }());
         }
         catch (...)
         {

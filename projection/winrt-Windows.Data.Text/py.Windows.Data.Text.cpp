@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlternateText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlternateText();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalizationFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalizationFormat();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceTextSegment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceTextSegment();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceTextSegment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceTextSegment();
+            }());
         }
         catch (...)
         {
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -336,7 +356,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetTokenAt(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTokenAt(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -374,7 +398,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetTokens(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTokens(param0);
+                }());
             }
             catch (...)
             {
@@ -414,7 +442,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::SelectableWordSegmentsTokenizingHandler>(args, 2);
 
-                self->obj.Tokenize(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Tokenize(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -447,7 +479,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -589,7 +625,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Find(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Find(param0);
+                }());
             }
             catch (...)
             {
@@ -628,7 +668,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.FindInProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindInProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -758,7 +802,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetCandidatesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCandidatesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -797,7 +845,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetCandidatesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCandidatesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -829,7 +881,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageAvailableButNotInstalled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageAvailableButNotInstalled();
+            }());
         }
         catch (...)
         {
@@ -855,7 +911,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -951,7 +1011,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayText();
+            }());
         }
         catch (...)
         {
@@ -977,7 +1041,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingText();
+            }());
         }
         catch (...)
         {
@@ -1101,7 +1169,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetCandidatesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCandidatesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1140,7 +1212,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetCandidatesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCandidatesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1181,7 +1257,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::TextPredictionOptions>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 3);
 
-                return py::convert(self->obj.GetCandidatesAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCandidatesAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1220,7 +1300,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.GetNextWordCandidatesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNextWordCandidatesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1252,7 +1336,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageAvailableButNotInstalled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageAvailableButNotInstalled();
+            }());
         }
         catch (...)
         {
@@ -1278,7 +1366,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -1304,7 +1396,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputScope();
+            }());
         }
         catch (...)
         {
@@ -1338,7 +1434,11 @@ namespace py::cpp::Windows::Data::Text
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputScope>(arg);
 
-            self->obj.InputScope(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputScope(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1468,7 +1568,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ConvertBackAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConvertBackAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1506,7 +1610,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetPhonemesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPhonemesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1538,7 +1646,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageAvailableButNotInstalled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageAvailableButNotInstalled();
+            }());
         }
         catch (...)
         {
@@ -1564,7 +1676,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -1659,7 +1775,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::GetCodepointFromSurrogatePair(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::GetCodepointFromSurrogatePair(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1697,7 +1817,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::GetGeneralCategory(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::GetGeneralCategory(param0);
+                }());
             }
             catch (...)
             {
@@ -1735,7 +1859,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::GetNumericType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::GetNumericType(param0);
+                }());
             }
             catch (...)
             {
@@ -1775,7 +1903,10 @@ namespace py::cpp::Windows::Data::Text
                 char16_t param1{};
                 char16_t param2{};
 
-                winrt::Windows::Data::Text::UnicodeCharacters::GetSurrogatePairFromCodepoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Data::Text::UnicodeCharacters::GetSurrogatePairFromCodepoint(param0, param1, param2);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -1787,6 +1918,7 @@ namespace py::cpp::Windows::Data::Text
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out1.get(), out2.get());
             }
             catch (...)
@@ -1825,7 +1957,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsAlphabetic(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsAlphabetic(param0);
+                }());
             }
             catch (...)
             {
@@ -1863,7 +1999,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsCased(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsCased(param0);
+                }());
             }
             catch (...)
             {
@@ -1901,7 +2041,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeBase(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeBase(param0);
+                }());
             }
             catch (...)
             {
@@ -1939,7 +2083,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeExtend(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeExtend(param0);
+                }());
             }
             catch (...)
             {
@@ -1977,7 +2125,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsHighSurrogate(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsHighSurrogate(param0);
+                }());
             }
             catch (...)
             {
@@ -2015,7 +2167,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsIdContinue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsIdContinue(param0);
+                }());
             }
             catch (...)
             {
@@ -2053,7 +2209,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsIdStart(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsIdStart(param0);
+                }());
             }
             catch (...)
             {
@@ -2091,7 +2251,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsLowSurrogate(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsLowSurrogate(param0);
+                }());
             }
             catch (...)
             {
@@ -2129,7 +2293,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsLowercase(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsLowercase(param0);
+                }());
             }
             catch (...)
             {
@@ -2167,7 +2335,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsNoncharacter(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsNoncharacter(param0);
+                }());
             }
             catch (...)
             {
@@ -2205,7 +2377,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsSupplementary(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsSupplementary(param0);
+                }());
             }
             catch (...)
             {
@@ -2243,7 +2419,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsUppercase(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsUppercase(param0);
+                }());
             }
             catch (...)
             {
@@ -2281,7 +2461,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsWhitespace(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Text::UnicodeCharacters::IsWhitespace(param0);
+                }());
             }
             catch (...)
             {
@@ -2394,7 +2578,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlternateForms());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlternateForms();
+            }());
         }
         catch (...)
         {
@@ -2420,7 +2608,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceTextSegment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceTextSegment();
+            }());
         }
         catch (...)
         {
@@ -2446,7 +2638,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -2572,7 +2768,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetTokenAt(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTokenAt(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2610,7 +2810,11 @@ namespace py::cpp::Windows::Data::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetTokens(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTokens(param0);
+                }());
             }
             catch (...)
             {
@@ -2650,7 +2854,11 @@ namespace py::cpp::Windows::Data::Text
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::WordSegmentsTokenizingHandler>(args, 2);
 
-                self->obj.Tokenize(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Tokenize(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2683,7 +2891,11 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {

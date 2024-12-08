@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.GetResults();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetResults();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -149,7 +161,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -175,7 +191,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -201,7 +221,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -227,7 +251,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -261,7 +289,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -371,7 +403,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -408,7 +444,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -445,7 +485,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.GetResults();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetResults();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -478,7 +522,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -504,7 +552,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -530,7 +582,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -556,7 +612,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -590,7 +650,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -700,7 +764,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -737,7 +805,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -774,7 +846,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResults());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResults();
+                }());
             }
             catch (...)
             {
@@ -806,7 +882,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -832,7 +912,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -858,7 +942,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -884,7 +972,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -918,7 +1010,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Devices::Sms::SmsDevice>>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1028,7 +1124,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1065,7 +1165,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1102,7 +1206,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResults());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResults();
+                }());
             }
             catch (...)
             {
@@ -1134,7 +1242,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1160,7 +1272,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1186,7 +1302,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1212,7 +1332,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -1246,7 +1370,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Devices::Sms::ISmsMessage>>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1356,7 +1484,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1393,7 +1525,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1430,7 +1566,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResults());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResults();
+                }());
             }
             catch (...)
             {
@@ -1462,7 +1602,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1488,7 +1632,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1514,7 +1662,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1540,7 +1692,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -1574,7 +1730,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationProgressHandler<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sms::ISmsMessage>, int32_t>>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1601,7 +1761,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -1635,7 +1799,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationWithProgressCompletedHandler<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sms::ISmsMessage>, int32_t>>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1746,7 +1914,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1783,7 +1955,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1820,7 +1996,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.GetResults();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetResults();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1853,7 +2033,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1879,7 +2063,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1905,7 +2093,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2123,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -1965,7 +2161,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2093,7 +2293,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolId();
+            }());
         }
         catch (...)
         {
@@ -2127,7 +2331,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ProtocolId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtocolId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2154,7 +2362,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PortNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PortNumber();
+            }());
         }
         catch (...)
         {
@@ -2188,7 +2400,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.PortNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PortNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2215,7 +2431,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDeliveryNotificationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDeliveryNotificationEnabled();
+            }());
         }
         catch (...)
         {
@@ -2249,7 +2469,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDeliveryNotificationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDeliveryNotificationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2276,7 +2500,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.RetryAttemptCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RetryAttemptCount();
+            }());
         }
         catch (...)
         {
@@ -2310,7 +2538,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.RetryAttemptCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RetryAttemptCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2337,7 +2569,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Encoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Encoding();
+            }());
         }
         catch (...)
         {
@@ -2371,7 +2607,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
-            self->obj.Encoding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Encoding(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2398,7 +2638,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -2432,7 +2676,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Body(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Body(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2459,7 +2707,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallbackNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallbackNumber();
+            }());
         }
         catch (...)
         {
@@ -2493,7 +2745,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CallbackNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallbackNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2520,7 +2776,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BinaryBody());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BinaryBody();
+            }());
         }
         catch (...)
         {
@@ -2554,7 +2814,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.BinaryBody(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BinaryBody(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2581,7 +2845,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -2615,7 +2883,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.To(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.To(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2642,7 +2914,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TeleserviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TeleserviceId();
+            }());
         }
         catch (...)
         {
@@ -2676,7 +2952,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TeleserviceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TeleserviceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2703,7 +2983,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -2729,7 +3013,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2755,7 +3043,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -2781,7 +3073,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -2807,7 +3103,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -2833,7 +3133,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -2859,7 +3163,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -2994,7 +3302,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetData());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetData();
+                }());
             }
             catch (...)
             {
@@ -3032,7 +3344,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.SetData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3065,7 +3381,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -3099,7 +3419,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3126,7 +3450,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3152,7 +3480,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -3249,7 +3581,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -3275,7 +3611,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BroadcastType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BroadcastType();
+            }());
         }
         catch (...)
         {
@@ -3301,7 +3641,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -3327,7 +3671,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicalScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicalScope();
+            }());
         }
         catch (...)
         {
@@ -3353,7 +3701,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEmergencyAlert());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEmergencyAlert();
+            }());
         }
         catch (...)
         {
@@ -3379,7 +3731,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUserPopupRequested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserPopupRequested();
+            }());
         }
         catch (...)
         {
@@ -3405,7 +3761,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageCode();
+            }());
         }
         catch (...)
         {
@@ -3431,7 +3791,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3457,7 +3821,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -3483,7 +3851,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateNumber();
+            }());
         }
         catch (...)
         {
@@ -3509,7 +3881,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -3535,7 +3911,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -3561,7 +3941,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -3587,7 +3971,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -3613,7 +4001,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -3726,7 +4118,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsTextMessage>(args, 0);
 
-                return py::convert(self->obj.CalculateLength(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CalculateLength(param0);
+                }());
             }
             catch (...)
             {
@@ -3764,7 +4160,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3802,7 +4202,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice::FromNetworkAccountIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice::FromNetworkAccountIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3838,7 +4242,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -3874,7 +4282,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -3912,7 +4324,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessage>(args, 0);
 
-                return py::convert(self->obj.SendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3944,7 +4360,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountPhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountPhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -3970,7 +4390,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -3996,7 +4420,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceStatus();
+            }());
         }
         catch (...)
         {
@@ -4022,7 +4450,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageStore());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageStore();
+            }());
         }
         catch (...)
         {
@@ -4050,7 +4482,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>(arg);
 
-            return py::convert(self->obj.SmsDeviceStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmsDeviceStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4078,7 +4514,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SmsDeviceStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmsDeviceStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4107,7 +4547,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler>(arg);
 
-            return py::convert(self->obj.SmsMessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmsMessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -4135,7 +4579,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SmsMessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmsMessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4273,7 +4721,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessageBase>(args, 0);
 
-                return py::convert(self->obj.CalculateLength(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CalculateLength(param0);
+                }());
             }
             catch (...)
             {
@@ -4311,7 +4763,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice2::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -4349,7 +4805,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::FromParentId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice2::FromParentId(param0);
+                }());
             }
             catch (...)
             {
@@ -4385,7 +4845,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice2::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -4421,7 +4885,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsDevice2::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -4459,7 +4927,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessageBase>(args, 0);
 
-                return py::convert(self->obj.SendMessageAndGetResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAndGetResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4491,7 +4963,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmscAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmscAddress();
+            }());
         }
         catch (...)
         {
@@ -4525,7 +5001,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SmscAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmscAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4552,7 +5032,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountPhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountPhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -4578,7 +5062,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -4604,7 +5092,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -4630,7 +5122,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceStatus();
+            }());
         }
         catch (...)
         {
@@ -4656,7 +5152,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentDeviceId();
+            }());
         }
         catch (...)
         {
@@ -4684,7 +5184,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sms::SmsDevice2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DeviceStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4712,7 +5216,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeviceStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4850,7 +5358,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.DeleteMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4888,7 +5400,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageFilter>(args, 0);
 
-                return py::convert(self->obj.DeleteMessagesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteMessagesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4926,7 +5442,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4964,7 +5484,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageFilter>(args, 0);
 
-                return py::convert(self->obj.GetMessagesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessagesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4996,7 +5520,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxMessages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxMessages();
+            }());
         }
         catch (...)
         {
@@ -5117,7 +5645,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -5151,7 +5683,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::CellularClass>(arg);
 
-            self->obj.CellularClass(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CellularClass(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5178,7 +5714,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BroadcastChannels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BroadcastChannels();
+            }());
         }
         catch (...)
         {
@@ -5204,7 +5744,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BroadcastTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BroadcastTypes();
+            }());
         }
         catch (...)
         {
@@ -5230,7 +5774,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceIds();
+            }());
         }
         catch (...)
         {
@@ -5256,7 +5804,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImsiPrefixes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImsiPrefixes();
+            }());
         }
         catch (...)
         {
@@ -5282,7 +5834,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -5308,7 +5864,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PortNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PortNumbers();
+            }());
         }
         catch (...)
         {
@@ -5334,7 +5894,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolIds();
+            }());
         }
         catch (...)
         {
@@ -5360,7 +5924,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SenderNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SenderNumbers();
+            }());
         }
         catch (...)
         {
@@ -5386,7 +5954,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TeleserviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TeleserviceIds();
+            }());
         }
         catch (...)
         {
@@ -5412,7 +5984,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextMessagePrefixes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextMessagePrefixes();
+            }());
         }
         catch (...)
         {
@@ -5438,7 +6014,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.WapApplicationIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WapApplicationIds();
+            }());
         }
         catch (...)
         {
@@ -5464,7 +6044,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.WapContentTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WapContentTypes();
+            }());
         }
         catch (...)
         {
@@ -5593,7 +6177,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionType();
+            }());
         }
         catch (...)
         {
@@ -5619,7 +6207,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rules());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rules();
+            }());
         }
         catch (...)
         {
@@ -5713,7 +6305,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BinaryMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BinaryMessage();
+            }());
         }
         catch (...)
         {
@@ -5739,7 +6335,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextMessage();
+            }());
         }
         catch (...)
         {
@@ -5837,7 +6437,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Accept();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Accept();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5874,7 +6478,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Drop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Drop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5907,7 +6515,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppMessage();
+            }());
         }
         catch (...)
         {
@@ -5933,7 +6545,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BroadcastMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BroadcastMessage();
+            }());
         }
         catch (...)
         {
@@ -5959,7 +6575,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -5985,7 +6605,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.StatusMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusMessage();
+            }());
         }
         catch (...)
         {
@@ -6011,7 +6635,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextMessage();
+            }());
         }
         catch (...)
         {
@@ -6037,7 +6665,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.VoicemailMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VoicemailMessage();
+            }());
         }
         catch (...)
         {
@@ -6063,7 +6695,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.WapMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WapMessage();
+            }());
         }
         catch (...)
         {
@@ -6171,7 +6807,11 @@ namespace py::cpp::Windows::Devices::Sms
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sms::SmsFilterRules>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsMessageRegistration::Register(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsMessageRegistration::Register(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6207,7 +6847,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                self->obj.Unregister();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6240,7 +6884,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -6266,7 +6914,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Sms::SmsMessageRegistration::AllRegistrations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Sms::SmsMessageRegistration::AllRegistrations();
+            }());
         }
         catch (...)
         {
@@ -6294,7 +6946,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sms::SmsMessageRegistration, winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -6322,7 +6978,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6446,7 +7106,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -6472,7 +7136,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageIndex();
+            }());
         }
         catch (...)
         {
@@ -6498,7 +7166,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BinaryMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BinaryMessage();
+            }());
         }
         catch (...)
         {
@@ -6524,7 +7196,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -6620,7 +7296,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -6646,7 +7326,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsErrorTransient());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsErrorTransient();
+            }());
         }
         catch (...)
         {
@@ -6672,7 +7356,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSuccessful());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSuccessful();
+            }());
         }
         catch (...)
         {
@@ -6698,7 +7386,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageReferenceNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReferenceNumbers();
+            }());
         }
         catch (...)
         {
@@ -6724,7 +7416,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModemErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModemErrorCode();
+            }());
         }
         catch (...)
         {
@@ -6750,7 +7446,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkCauseCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkCauseCode();
+            }());
         }
         catch (...)
         {
@@ -6776,7 +7476,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportFailureCause());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportFailureCause();
+            }());
         }
         catch (...)
         {
@@ -6875,7 +7579,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -6901,7 +7609,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -6927,7 +7639,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -6953,7 +7669,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -6979,7 +7699,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -7005,7 +7729,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -7031,7 +7759,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -7057,7 +7789,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DischargeTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DischargeTime();
+            }());
         }
         catch (...)
         {
@@ -7083,7 +7819,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -7109,7 +7849,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageReferenceNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReferenceNumber();
+            }());
         }
         catch (...)
         {
@@ -7135,7 +7879,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceCenterTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceCenterTimestamp();
+            }());
         }
         catch (...)
         {
@@ -7161,7 +7909,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -7294,7 +8046,11 @@ namespace py::cpp::Windows::Devices::Sms
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsTextMessage::FromBinaryData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsTextMessage::FromBinaryData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7332,7 +8088,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsBinaryMessage>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sms::SmsTextMessage::FromBinaryMessage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sms::SmsTextMessage::FromBinaryMessage(param0);
+                }());
             }
             catch (...)
             {
@@ -7370,7 +8130,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
 
-                return py::convert(self->obj.ToBinaryMessages(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToBinaryMessages(param0);
+                }());
             }
             catch (...)
             {
@@ -7402,7 +8166,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -7428,7 +8196,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -7454,7 +8226,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -7488,7 +8264,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.To(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.To(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7515,7 +8295,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -7549,7 +8333,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.From(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.From(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7576,7 +8364,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Encoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Encoding();
+            }());
         }
         catch (...)
         {
@@ -7610,7 +8402,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
-            self->obj.Encoding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Encoding(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7637,7 +8433,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -7671,7 +8471,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Body(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Body(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7698,7 +8502,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartCount();
+            }());
         }
         catch (...)
         {
@@ -7724,7 +8532,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartNumber();
+            }());
         }
         catch (...)
         {
@@ -7750,7 +8562,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartReferenceId();
+            }());
         }
         catch (...)
         {
@@ -7776,7 +8592,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -7928,7 +8748,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -7954,7 +8778,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -7980,7 +8808,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -8006,7 +8838,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -8032,7 +8868,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -8058,7 +8898,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.RetryAttemptCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RetryAttemptCount();
+            }());
         }
         catch (...)
         {
@@ -8092,7 +8936,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.RetryAttemptCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RetryAttemptCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8119,7 +8967,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -8153,7 +9005,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.To(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.To(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8180,7 +9036,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDeliveryNotificationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDeliveryNotificationEnabled();
+            }());
         }
         catch (...)
         {
@@ -8214,7 +9074,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDeliveryNotificationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDeliveryNotificationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8241,7 +9105,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Encoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Encoding();
+            }());
         }
         catch (...)
         {
@@ -8275,7 +9143,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
-            self->obj.Encoding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Encoding(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8302,7 +9174,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallbackNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallbackNumber();
+            }());
         }
         catch (...)
         {
@@ -8336,7 +9212,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CallbackNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallbackNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8363,7 +9243,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -8397,7 +9281,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Body(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Body(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8424,7 +9312,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolId();
+            }());
         }
         catch (...)
         {
@@ -8450,7 +9342,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -8476,7 +9372,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -8502,7 +9402,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.TeleserviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TeleserviceId();
+            }());
         }
         catch (...)
         {
@@ -8609,7 +9513,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -8635,7 +9543,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -8661,7 +9573,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -8687,7 +9603,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -8713,7 +9633,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -8739,7 +9663,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -8765,7 +9693,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageCount();
+            }());
         }
         catch (...)
         {
@@ -8791,7 +9723,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -8817,7 +9753,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -8918,7 +9858,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -8944,7 +9888,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -8970,7 +9918,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -8996,7 +9948,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -9022,7 +9978,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -9048,7 +10008,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -9074,7 +10038,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationId();
+            }());
         }
         catch (...)
         {
@@ -9100,7 +10068,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.BinaryBody());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BinaryBody();
+            }());
         }
         catch (...)
         {
@@ -9126,7 +10098,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -9152,7 +10128,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -9178,7 +10158,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -9204,7 +10188,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -9312,7 +10300,11 @@ namespace py::cpp::Windows::Devices::Sms
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetData());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetData();
+                }());
             }
             catch (...)
             {
@@ -9350,7 +10342,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.SetData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9383,7 +10379,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -9417,7 +10417,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9444,7 +10448,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -9470,7 +10478,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -9775,7 +10787,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsTextMessage>(args, 0);
 
-                return py::convert(self->obj.CalculateLength(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CalculateLength(param0);
+                }());
             }
             catch (...)
             {
@@ -9813,7 +10829,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessage>(args, 0);
 
-                return py::convert(self->obj.SendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9845,7 +10865,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountPhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountPhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -9871,7 +10895,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -9897,7 +10925,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceStatus();
+            }());
         }
         catch (...)
         {
@@ -9923,7 +10955,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageStore());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageStore();
+            }());
         }
         catch (...)
         {
@@ -9951,7 +10987,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>(arg);
 
-            return py::convert(self->obj.SmsDeviceStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmsDeviceStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9979,7 +11019,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SmsDeviceStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmsDeviceStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10008,7 +11052,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler>(arg);
 
-            return py::convert(self->obj.SmsMessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmsMessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -10036,7 +11084,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SmsMessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmsMessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10469,7 +11521,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -10495,7 +11551,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -10691,7 +11751,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularClass();
+            }());
         }
         catch (...)
         {
@@ -10717,7 +11781,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -10743,7 +11811,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {
@@ -10769,7 +11841,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -10795,7 +11871,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimIccId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimIccId();
+            }());
         }
         catch (...)
         {
@@ -11060,7 +12140,11 @@ namespace py::cpp::Windows::Devices::Sms
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
 
-                return py::convert(self->obj.ToBinaryMessages(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToBinaryMessages(param0);
+                }());
             }
             catch (...)
             {
@@ -11092,7 +12176,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -11126,7 +12214,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Body(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Body(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11153,7 +12245,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Encoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Encoding();
+            }());
         }
         catch (...)
         {
@@ -11187,7 +12283,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
-            self->obj.Encoding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Encoding(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11214,7 +12314,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -11248,7 +12352,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.From(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.From(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11275,7 +12383,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartCount();
+            }());
         }
         catch (...)
         {
@@ -11301,7 +12413,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartNumber();
+            }());
         }
         catch (...)
         {
@@ -11327,7 +12443,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartReferenceId();
+            }());
         }
         catch (...)
         {
@@ -11353,7 +12473,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -11379,7 +12503,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.To());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.To();
+            }());
         }
         catch (...)
         {
@@ -11413,7 +12541,11 @@ namespace py::cpp::Windows::Devices::Sms
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.To(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.To(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11440,7 +12572,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -11466,7 +12602,11 @@ namespace py::cpp::Windows::Devices::Sms
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageClass());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageClass();
+            }());
         }
         catch (...)
         {

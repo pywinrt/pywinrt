@@ -34,7 +34,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::Clear();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::Clipboard::Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -71,7 +75,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ClearHistory());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ClearHistory();
+                }());
             }
             catch (...)
             {
@@ -109,7 +117,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::DeleteItemFromHistory(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::DeleteItemFromHistory(param0);
+                }());
             }
             catch (...)
             {
@@ -145,7 +157,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::Flush();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::Clipboard::Flush();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetContent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetContent();
+                }());
             }
             catch (...)
             {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetHistoryItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetHistoryItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -254,7 +278,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::IsHistoryEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::IsHistoryEnabled();
+                }());
             }
             catch (...)
             {
@@ -290,7 +318,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::IsRoamingEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::IsRoamingEnabled();
+                }());
             }
             catch (...)
             {
@@ -328,7 +360,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
 
-                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetContent(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetContent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -368,7 +404,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetContentWithOptions(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetContentWithOptions(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -406,7 +446,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetHistoryItemAsContent(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::SetHistoryItemAsContent(param0);
+                }());
             }
             catch (...)
             {
@@ -440,7 +484,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -468,7 +516,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -497,7 +549,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -525,7 +581,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::HistoryEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -554,7 +614,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::RoamingEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::RoamingEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -582,7 +646,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::DataTransfer::Clipboard::RoamingEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::RoamingEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -611,7 +679,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ContentChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ContentChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -639,7 +711,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ContentChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ContentChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -771,7 +847,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRoamable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRoamable();
+            }());
         }
         catch (...)
         {
@@ -805,7 +885,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRoamable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRoamable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -832,7 +916,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAllowedInHistory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAllowedInHistory();
+            }());
         }
         catch (...)
         {
@@ -866,7 +954,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAllowedInHistory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAllowedInHistory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -893,7 +985,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.HistoryFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HistoryFormats();
+            }());
         }
         catch (...)
         {
@@ -919,7 +1015,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoamingFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoamingFormats();
+            }());
         }
         catch (...)
         {
@@ -1081,7 +1181,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -1107,7 +1211,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1133,7 +1241,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1228,7 +1340,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -1254,7 +1370,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1374,7 +1494,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -1412,7 +1536,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                self->obj.SetApplicationLink(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetApplicationLink(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1451,7 +1579,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(args, 0);
 
-                self->obj.SetBitmap(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBitmap(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1491,7 +1623,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.SetData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1531,7 +1667,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataProviderHandler>(args, 1);
 
-                self->obj.SetDataProvider(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDataProvider(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1570,7 +1710,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetHtmlFormat(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetHtmlFormat(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1609,7 +1753,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetRtf(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRtf(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1649,7 +1797,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                self->obj.SetStorageItems(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetStorageItems(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1688,7 +1840,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
 
-                self->obj.SetStorageItems(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetStorageItems(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1727,7 +1883,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetText(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1766,7 +1926,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                self->obj.SetUri(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetUri(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1805,7 +1969,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                self->obj.SetWebLink(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetWebLink(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1838,7 +2006,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedOperation();
+            }());
         }
         catch (...)
         {
@@ -1872,7 +2044,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
-            self->obj.RequestedOperation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestedOperation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1899,7 +2075,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1925,7 +2105,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceMap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceMap();
+            }());
         }
         catch (...)
         {
@@ -1953,7 +2137,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Destroyed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Destroyed(param0);
+            }());
         }
         catch (...)
         {
@@ -1981,7 +2169,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Destroyed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Destroyed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2010,7 +2202,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.OperationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2038,7 +2234,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.OperationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OperationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2067,7 +2267,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ShareCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2095,7 +2299,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ShareCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShareCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2124,7 +2332,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ShareCanceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareCanceled(param0);
+            }());
         }
         catch (...)
         {
@@ -2152,7 +2364,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ShareCanceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShareCanceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2272,7 +2488,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2309,7 +2529,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2345,7 +2569,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -2383,7 +2611,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -2422,7 +2654,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2460,7 +2696,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -2498,7 +2738,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2531,7 +2775,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -2565,7 +2813,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2592,7 +2844,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -2626,7 +2882,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2653,7 +2913,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2687,7 +2951,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2714,7 +2982,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationName();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3020,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ApplicationName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ApplicationName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2775,7 +3051,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationListingUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationListingUri();
+            }());
         }
         catch (...)
         {
@@ -2809,7 +3089,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ApplicationListingUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ApplicationListingUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2836,7 +3120,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileTypes();
+            }());
         }
         catch (...)
         {
@@ -2862,7 +3150,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square30x30Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square30x30Logo();
+            }());
         }
         catch (...)
         {
@@ -2896,7 +3188,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Square30x30Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square30x30Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2923,7 +3219,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -2957,7 +3257,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PackageFamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageFamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2984,7 +3288,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogoBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogoBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3018,7 +3326,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.LogoBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogoBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3045,7 +3357,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceWebLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceWebLink();
+            }());
         }
         catch (...)
         {
@@ -3079,7 +3395,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContentSourceWebLink(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentSourceWebLink(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3106,7 +3426,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceApplicationLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceApplicationLink();
+            }());
         }
         catch (...)
         {
@@ -3140,7 +3464,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContentSourceApplicationLink(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentSourceApplicationLink(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3167,7 +3495,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnterpriseId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnterpriseId();
+            }());
         }
         catch (...)
         {
@@ -3201,7 +3533,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EnterpriseId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnterpriseId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3228,7 +3564,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceUserActivityJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceUserActivityJson();
+            }());
         }
         catch (...)
         {
@@ -3262,7 +3602,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContentSourceUserActivityJson(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentSourceUserActivityJson(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3289,7 +3633,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3674,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -3346,7 +3698,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -3359,6 +3715,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3373,12 +3730,22 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -3404,7 +3771,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -3412,7 +3784,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -3512,7 +3888,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3550,7 +3930,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -3588,7 +3972,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -3627,7 +4015,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -3639,6 +4030,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -3671,7 +4063,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationListingUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationListingUri();
+            }());
         }
         catch (...)
         {
@@ -3697,7 +4093,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationName();
+            }());
         }
         catch (...)
         {
@@ -3723,7 +4123,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3749,7 +4153,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileTypes();
+            }());
         }
         catch (...)
         {
@@ -3775,7 +4183,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -3801,7 +4213,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -3827,7 +4243,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceApplicationLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceApplicationLink();
+            }());
         }
         catch (...)
         {
@@ -3853,7 +4273,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceWebLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceWebLink();
+            }());
         }
         catch (...)
         {
@@ -3879,7 +4303,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogoBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogoBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3905,7 +4333,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -3931,7 +4363,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square30x30Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square30x30Logo();
+            }());
         }
         catch (...)
         {
@@ -3957,7 +4393,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnterpriseId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnterpriseId();
+            }());
         }
         catch (...)
         {
@@ -3983,7 +4423,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceUserActivityJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceUserActivityJson();
+            }());
         }
         catch (...)
         {
@@ -4009,7 +4453,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFromRoamingClipboard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFromRoamingClipboard();
+            }());
         }
         catch (...)
         {
@@ -4035,7 +4483,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4072,7 +4524,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -4092,7 +4548,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -4105,6 +4565,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -4119,12 +4580,22 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -4231,7 +4702,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Contains(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Contains(param0);
+                }());
             }
             catch (...)
             {
@@ -4267,7 +4742,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetApplicationLinkAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetApplicationLinkAsync();
+                }());
             }
             catch (...)
             {
@@ -4303,7 +4782,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBitmapAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBitmapAsync();
+                }());
             }
             catch (...)
             {
@@ -4341,7 +4824,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetTextAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTextAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4379,7 +4866,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetDataAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4415,7 +4906,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetHtmlFormatAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHtmlFormatAsync();
+                }());
             }
             catch (...)
             {
@@ -4451,7 +4946,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResourceMapAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResourceMapAsync();
+                }());
             }
             catch (...)
             {
@@ -4487,7 +4986,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRtfAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRtfAsync();
+                }());
             }
             catch (...)
             {
@@ -4523,7 +5026,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStorageItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStorageItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -4559,7 +5066,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTextAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTextAsync();
+                }());
             }
             catch (...)
             {
@@ -4595,7 +5106,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUriAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUriAsync();
+                }());
             }
             catch (...)
             {
@@ -4631,7 +5146,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetWebLinkAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWebLinkAsync();
+                }());
             }
             catch (...)
             {
@@ -4669,7 +5188,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(args, 0);
 
-                self->obj.ReportOperationCompleted(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportOperationCompleted(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4706,7 +5229,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -4744,7 +5271,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RequestAccessAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4782,7 +5313,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetAcceptedFormatId(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAcceptedFormatId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4819,7 +5354,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UnlockAndAssumeEnterpriseIdentity());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnlockAndAssumeEnterpriseIdentity();
+                }());
             }
             catch (...)
             {
@@ -4851,7 +5390,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailableFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailableFormats();
+            }());
         }
         catch (...)
         {
@@ -4877,7 +5420,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -4903,7 +5450,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedOperation();
+            }());
         }
         catch (...)
         {
@@ -5019,7 +5570,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5123,7 +5678,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -5161,7 +5720,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.SetData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5194,7 +5757,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -5220,7 +5787,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FormatId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormatId();
+            }());
         }
         catch (...)
         {
@@ -5322,7 +5893,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.FailWithDisplayText(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.FailWithDisplayText(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5359,7 +5934,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -5391,7 +5970,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -5425,7 +6008,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5452,7 +6039,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -5552,7 +6143,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5652,7 +6247,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -5749,7 +6348,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -5785,7 +6388,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -5821,7 +6428,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::ShowShareUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::ShowShareUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5860,7 +6471,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions>(args, 0);
 
-                winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::ShowShareUI(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager::ShowShareUI(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5895,7 +6510,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.DataRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -5923,7 +6542,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DataRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5952,7 +6575,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>>(arg);
 
-            return py::convert(self->obj.TargetApplicationChosen(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetApplicationChosen(param0);
+            }());
         }
         catch (...)
         {
@@ -5980,7 +6607,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TargetApplicationChosen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetApplicationChosen(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6009,7 +6640,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ShareProvidersRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareProvidersRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -6037,7 +6672,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ShareProvidersRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShareProvidersRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6163,7 +6802,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper::CreateHtmlFormat(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper::CreateHtmlFormat(param0);
+                }());
             }
             catch (...)
             {
@@ -6201,7 +6844,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper::GetStaticFragment(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper::GetStaticFragment(param0);
+                }());
             }
             catch (...)
             {
@@ -6299,7 +6946,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Operation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Operation();
+            }());
         }
         catch (...)
         {
@@ -6325,7 +6976,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptedFormatId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptedFormatId();
+            }());
         }
         catch (...)
         {
@@ -6419,7 +7074,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShareTarget());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareTarget();
+            }());
         }
         catch (...)
         {
@@ -6539,7 +7198,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -6573,7 +7236,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6600,7 +7267,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -6626,7 +7297,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayIcon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayIcon();
+            }());
         }
         catch (...)
         {
@@ -6652,7 +7327,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -6752,7 +7431,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                self->obj.ReportCompleted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6785,7 +7468,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -6811,7 +7498,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Provider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Provider();
+            }());
         }
         catch (...)
         {
@@ -6910,7 +7601,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -6942,7 +7637,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -6968,7 +7667,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Providers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Providers();
+            }());
         }
         catch (...)
         {
@@ -7063,7 +7766,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -7089,7 +7796,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShareProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareProvider();
+            }());
         }
         catch (...)
         {
@@ -7205,7 +7916,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Theme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Theme();
+            }());
         }
         catch (...)
         {
@@ -7239,7 +7954,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme>(arg);
 
-            self->obj.Theme(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Theme(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7266,7 +7985,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionRect();
+            }());
         }
         catch (...)
         {
@@ -7300,7 +8023,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
-            self->obj.SelectionRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectionRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7393,7 +8120,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::AddFile(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::AddFile(param0);
+                }());
             }
             catch (...)
             {
@@ -7431,7 +8162,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::RedeemTokenForFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::RedeemTokenForFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7469,7 +8204,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::RemoveFile(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager::RemoveFile(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7561,7 +8300,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Bitmap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Bitmap();
+            }());
         }
         catch (...)
         {
@@ -7587,7 +8330,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Html());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Html();
+            }());
         }
         catch (...)
         {
@@ -7613,7 +8360,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Rtf());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Rtf();
+            }());
         }
         catch (...)
         {
@@ -7639,7 +8390,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::StorageItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::StorageItems();
+            }());
         }
         catch (...)
         {
@@ -7665,7 +8420,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Text();
+            }());
         }
         catch (...)
         {
@@ -7691,7 +8450,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Uri();
+            }());
         }
         catch (...)
         {
@@ -7717,7 +8480,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::ApplicationLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::ApplicationLink();
+            }());
         }
         catch (...)
         {
@@ -7743,7 +8510,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::WebLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::WebLink();
+            }());
         }
         catch (...)
         {
@@ -7769,7 +8540,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::UserActivityJsonArray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::UserActivityJsonArray();
+            }());
         }
         catch (...)
         {
@@ -7868,7 +8643,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationName();
+            }());
         }
         catch (...)
         {

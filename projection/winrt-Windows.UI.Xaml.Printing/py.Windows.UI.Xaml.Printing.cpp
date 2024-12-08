@@ -60,7 +60,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintTaskOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTaskOptions();
+            }());
         }
         catch (...)
         {
@@ -175,7 +179,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageNumber();
+            }());
         }
         catch (...)
         {
@@ -290,7 +298,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentPreviewPageNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentPreviewPageNumber();
+            }());
         }
         catch (...)
         {
@@ -316,7 +328,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintTaskOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTaskOptions();
+            }());
         }
         catch (...)
         {
@@ -498,7 +514,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -535,7 +555,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPagesComplete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPagesComplete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -572,7 +596,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().InvalidatePreview();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().InvalidatePreview();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -612,7 +640,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().SetPreviewPage(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().SetPreviewPage(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -652,7 +684,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().SetPreviewPageCount(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().SetPreviewPageCount(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -685,7 +721,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().DocumentSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().DocumentSource();
+            }());
         }
         catch (...)
         {
@@ -711,7 +751,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Printing::PrintDocument::DocumentSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Printing::PrintDocument::DocumentSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -739,7 +783,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::AddPagesEventHandler>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPages(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPages(param0);
+            }());
         }
         catch (...)
         {
@@ -767,7 +815,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPages(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().AddPages(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -796,7 +848,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventHandler>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().GetPreviewPage(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().GetPreviewPage(param0);
+            }());
         }
         catch (...)
         {
@@ -824,7 +880,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().GetPreviewPage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().GetPreviewPage(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -853,7 +913,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::PaginateEventHandler>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().Paginate(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().Paginate(param0);
+            }());
         }
         catch (...)
         {
@@ -881,7 +945,11 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().Paginate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Printing::PrintDocument>().Paginate(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

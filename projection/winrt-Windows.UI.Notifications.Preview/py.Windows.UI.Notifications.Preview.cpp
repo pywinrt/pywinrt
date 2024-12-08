@@ -37,7 +37,11 @@ namespace py::cpp::Windows::UI::Notifications::Preview
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview::SetToastWindowMargin(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview::SetToastWindowMargin(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

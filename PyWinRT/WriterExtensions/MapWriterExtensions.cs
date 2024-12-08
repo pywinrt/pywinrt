@@ -13,7 +13,13 @@ static class MapWriterExtensions
             var method = type.Methods.Single(m => m.Name == "First");
             var self = type.GetMethodInvokeContext(method);
 
-            w.WriteLine($"py::pyobj_handle iter{{py::convert({self}First())}};");
+            w.WriteLine("py::pyobj_handle iter{py::convert([&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}First();");
+            w.Indent--;
+            w.WriteLine("}())};");
             w.WriteBlankLine();
             w.WriteLine("if (!iter)");
             w.WriteLine("{");
@@ -115,9 +121,13 @@ static class MapWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine(
-                    $"return static_cast<int>({self}HasKey(py::convert_to<{keyType}>(key)));"
-                );
+                w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"return static_cast<int>({self}HasKey(_key));");
+                w.Indent--;
+                w.WriteLine("}");
             },
             catchReturn: "-1"
         );
@@ -132,6 +142,7 @@ static class MapWriterExtensions
         w.WriteTryCatch(
             () =>
             {
+                w.WriteLine("auto _gil = py::release_gil();");
                 w.WriteLine($"return static_cast<Py_ssize_t>({self}Size());");
             },
             catchReturn: "-1"
@@ -152,7 +163,13 @@ static class MapWriterExtensions
             w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
             // we use the CppWinRT extension TryLookup so we can raise
             // KeyError on failure.
-            w.WriteLine($"auto value = {self}TryLookup(_key);");
+            w.WriteLine("auto value = [&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}TryLookup(_key);");
+            w.Indent--;
+            w.WriteLine("}();");
             w.WriteBlankLine();
             w.WriteLine("if (!value) {");
             w.Indent++;
@@ -165,7 +182,15 @@ static class MapWriterExtensions
             );
             w.WriteLine("{");
             w.Indent++;
-            w.WriteLine($"if ({self}HasKey(_key))");
+            w.WriteLine("auto has_key = [&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}HasKey(_key);");
+            w.Indent--;
+            w.WriteLine("}();");
+            w.WriteBlankLine();
+            w.WriteLine("if (has_key)");
             w.WriteLine("{");
             w.Indent++;
             w.WriteLine("Py_RETURN_NONE;");
@@ -201,7 +226,14 @@ static class MapWriterExtensions
                 w.WriteBlankLine();
                 w.WriteLine("if (value == nullptr) {");
                 w.Indent++;
-                w.WriteLine($"if (!{self}TryRemove(_key)) {{");
+                w.WriteLine("bool did_remove;");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"did_remove = {self}TryRemove(_key);");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteLine("if (!did_remove) {");
                 w.Indent++;
                 w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");
                 w.WriteLine("return -1;");
@@ -212,7 +244,13 @@ static class MapWriterExtensions
                 w.Indent--;
                 w.WriteLine("}");
                 w.WriteBlankLine();
-                w.WriteLine($"{self}Insert(_key, py::convert_to<{valueType}>(value));");
+                w.WriteLine($"auto _value = py::convert_to<{valueType}>(value);");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"{self}Insert(_key, _value);");
+                w.Indent--;
+                w.WriteLine("}");
                 w.WriteBlankLine();
                 w.WriteLine("return 0;");
             },

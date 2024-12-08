@@ -67,7 +67,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().TextAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().TextAlignment();
+            }());
         }
         catch (...)
         {
@@ -101,7 +105,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TextAlignment>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().TextAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().TextAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -128,7 +136,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().Margin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().Margin();
+            }());
         }
         catch (...)
         {
@@ -162,7 +174,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().Margin(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().Margin(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -189,7 +205,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineStackingStrategy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineStackingStrategy();
+            }());
         }
         catch (...)
         {
@@ -223,7 +243,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LineStackingStrategy>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineStackingStrategy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineStackingStrategy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -250,7 +274,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineHeight();
+            }());
         }
         catch (...)
         {
@@ -284,7 +312,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().LineHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -311,7 +343,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().HorizontalTextAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().HorizontalTextAlignment();
+            }());
         }
         catch (...)
         {
@@ -345,7 +381,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TextAlignment>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().HorizontalTextAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Block>().HorizontalTextAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -372,7 +412,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Block::HorizontalTextAlignmentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Block::HorizontalTextAlignmentProperty();
+            }());
         }
         catch (...)
         {
@@ -398,7 +442,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Block::LineHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Block::LineHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -424,7 +472,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Block::LineStackingStrategyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Block::LineStackingStrategyProperty();
+            }());
         }
         catch (...)
         {
@@ -450,7 +502,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Block::MarginProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Block::MarginProperty();
+            }());
         }
         catch (...)
         {
@@ -476,7 +532,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Block::TextAlignmentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Block::TextAlignmentProperty();
+            }());
         }
         catch (...)
         {
@@ -609,7 +669,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -646,7 +710,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -683,7 +751,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -721,7 +793,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -760,7 +836,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Documents::Block, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -796,7 +876,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -835,7 +919,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -847,6 +935,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -886,7 +975,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -925,7 +1018,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -962,7 +1059,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1001,7 +1102,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Documents::Block, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1041,7 +1146,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1074,7 +1183,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1111,7 +1224,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -1124,6 +1241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1137,7 +1255,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -1176,7 +1298,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -1189,7 +1316,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             winrt::com_array<winrt::Microsoft::UI::Xaml::Documents::Block> items(static_cast<uint32_t>(length), empty_instance<winrt::Microsoft::UI::Xaml::Documents::Block>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -1212,11 +1343,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(value));
+                auto _value = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -1415,7 +1551,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnicodeString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnicodeString();
+            }());
         }
         catch (...)
         {
@@ -1449,7 +1589,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UnicodeString(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnicodeString(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1476,7 +1620,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.StyleSimulations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StyleSimulations();
+            }());
         }
         catch (...)
         {
@@ -1510,7 +1658,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::StyleSimulations>(arg);
 
-            self->obj.StyleSimulations(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StyleSimulations(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1537,7 +1689,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginY();
+            }());
         }
         catch (...)
         {
@@ -1571,7 +1727,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OriginY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OriginY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1598,7 +1758,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginX();
+            }());
         }
         catch (...)
         {
@@ -1632,7 +1796,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OriginX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OriginX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1659,7 +1827,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsColorFontEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsColorFontEnabled();
+            }());
         }
         catch (...)
         {
@@ -1693,7 +1865,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsColorFontEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsColorFontEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1720,7 +1896,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Indices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Indices();
+            }());
         }
         catch (...)
         {
@@ -1754,7 +1934,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Indices(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Indices(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1781,7 +1965,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontUri();
+            }());
         }
         catch (...)
         {
@@ -1815,7 +2003,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.FontUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FontUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1842,7 +2034,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontRenderingEmSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontRenderingEmSize();
+            }());
         }
         catch (...)
         {
@@ -1876,7 +2072,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.FontRenderingEmSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FontRenderingEmSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1903,7 +2103,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Fill());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Fill();
+            }());
         }
         catch (...)
         {
@@ -1937,7 +2141,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Fill(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Fill(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1964,7 +2172,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorFontPaletteIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorFontPaletteIndex();
+            }());
         }
         catch (...)
         {
@@ -1998,7 +2210,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ColorFontPaletteIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorFontPaletteIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2025,7 +2241,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::ColorFontPaletteIndexProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::ColorFontPaletteIndexProperty();
+            }());
         }
         catch (...)
         {
@@ -2051,7 +2271,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::FillProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::FillProperty();
+            }());
         }
         catch (...)
         {
@@ -2077,7 +2301,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::FontRenderingEmSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::FontRenderingEmSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -2103,7 +2331,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::FontUriProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::FontUriProperty();
+            }());
         }
         catch (...)
         {
@@ -2129,7 +2361,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::IndicesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::IndicesProperty();
+            }());
         }
         catch (...)
         {
@@ -2155,7 +2391,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::IsColorFontEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::IsColorFontEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -2181,7 +2421,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::OriginXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::OriginXProperty();
+            }());
         }
         catch (...)
         {
@@ -2207,7 +2451,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::OriginYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::OriginYProperty();
+            }());
         }
         catch (...)
         {
@@ -2233,7 +2481,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::StyleSimulationsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::StyleSimulationsProperty();
+            }());
         }
         catch (...)
         {
@@ -2259,7 +2511,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Glyphs::UnicodeStringProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Glyphs::UnicodeStringProperty();
+            }());
         }
         catch (...)
         {
@@ -2424,7 +2680,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
 
-                return py::convert(self->obj.Focus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Focus(param0);
+                }());
             }
             catch (...)
             {
@@ -2456,7 +2716,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusUpNavigationStrategy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusUpNavigationStrategy();
+            }());
         }
         catch (...)
         {
@@ -2490,7 +2754,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
-            self->obj.XYFocusUpNavigationStrategy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusUpNavigationStrategy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2517,7 +2785,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusUp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusUp();
+            }());
         }
         catch (...)
         {
@@ -2551,7 +2823,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.XYFocusUp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusUp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2578,7 +2854,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusRightNavigationStrategy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusRightNavigationStrategy();
+            }());
         }
         catch (...)
         {
@@ -2612,7 +2892,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
-            self->obj.XYFocusRightNavigationStrategy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusRightNavigationStrategy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2639,7 +2923,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusRight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusRight();
+            }());
         }
         catch (...)
         {
@@ -2673,7 +2961,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.XYFocusRight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusRight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2700,7 +2992,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusLeftNavigationStrategy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusLeftNavigationStrategy();
+            }());
         }
         catch (...)
         {
@@ -2734,7 +3030,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
-            self->obj.XYFocusLeftNavigationStrategy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusLeftNavigationStrategy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2761,7 +3061,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusLeft());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusLeft();
+            }());
         }
         catch (...)
         {
@@ -2795,7 +3099,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.XYFocusLeft(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusLeft(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2822,7 +3130,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusDownNavigationStrategy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusDownNavigationStrategy();
+            }());
         }
         catch (...)
         {
@@ -2856,7 +3168,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
-            self->obj.XYFocusDownNavigationStrategy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusDownNavigationStrategy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2883,7 +3199,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusDown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusDown();
+            }());
         }
         catch (...)
         {
@@ -2917,7 +3237,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.XYFocusDown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusDown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2944,7 +3268,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnderlineStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnderlineStyle();
+            }());
         }
         catch (...)
         {
@@ -2978,7 +3306,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::UnderlineStyle>(arg);
 
-            self->obj.UnderlineStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnderlineStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3005,7 +3337,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.TabIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabIndex();
+            }());
         }
         catch (...)
         {
@@ -3039,7 +3375,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TabIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TabIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3066,7 +3406,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigateUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigateUri();
+            }());
         }
         catch (...)
         {
@@ -3100,7 +3444,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.NavigateUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigateUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3127,7 +3475,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTabStop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTabStop();
+            }());
         }
         catch (...)
         {
@@ -3161,7 +3513,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsTabStop(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsTabStop(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3188,7 +3544,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementSoundMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementSoundMode();
+            }());
         }
         catch (...)
         {
@@ -3222,7 +3582,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementSoundMode>(arg);
 
-            self->obj.ElementSoundMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ElementSoundMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3249,7 +3613,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FocusState();
+            }());
         }
         catch (...)
         {
@@ -3275,7 +3643,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::ElementSoundModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::ElementSoundModeProperty();
+            }());
         }
         catch (...)
         {
@@ -3301,7 +3673,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::FocusStateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::FocusStateProperty();
+            }());
         }
         catch (...)
         {
@@ -3327,7 +3703,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::IsTabStopProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::IsTabStopProperty();
+            }());
         }
         catch (...)
         {
@@ -3353,7 +3733,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::NavigateUriProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::NavigateUriProperty();
+            }());
         }
         catch (...)
         {
@@ -3379,7 +3763,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::TabIndexProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::TabIndexProperty();
+            }());
         }
         catch (...)
         {
@@ -3405,7 +3793,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::UnderlineStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::UnderlineStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -3431,7 +3823,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusDownNavigationStrategyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusDownNavigationStrategyProperty();
+            }());
         }
         catch (...)
         {
@@ -3457,7 +3853,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusDownProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusDownProperty();
+            }());
         }
         catch (...)
         {
@@ -3483,7 +3883,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusLeftNavigationStrategyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusLeftNavigationStrategyProperty();
+            }());
         }
         catch (...)
         {
@@ -3509,7 +3913,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusLeftProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusLeftProperty();
+            }());
         }
         catch (...)
         {
@@ -3535,7 +3943,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusRightNavigationStrategyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusRightNavigationStrategyProperty();
+            }());
         }
         catch (...)
         {
@@ -3561,7 +3973,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusRightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusRightProperty();
+            }());
         }
         catch (...)
         {
@@ -3587,7 +4003,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusUpNavigationStrategyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusUpNavigationStrategyProperty();
+            }());
         }
         catch (...)
         {
@@ -3613,7 +4033,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusUpProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Hyperlink::XYFocusUpProperty();
+            }());
         }
         catch (...)
         {
@@ -3641,7 +4065,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Documents::Hyperlink, winrt::Microsoft::UI::Xaml::Documents::HyperlinkClickEventArgs>>(arg);
 
-            return py::convert(self->obj.Click(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Click(param0);
+            }());
         }
         catch (...)
         {
@@ -3669,7 +4097,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Click(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Click(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3698,7 +4130,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.GotFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GotFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -3726,7 +4162,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GotFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GotFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3755,7 +4195,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.LostFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LostFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -3783,7 +4227,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LostFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LostFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4128,7 +4576,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4165,7 +4617,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4202,7 +4658,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -4240,7 +4700,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -4279,7 +4743,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Documents::Inline, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4315,7 +4783,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -4354,7 +4826,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4366,6 +4842,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4405,7 +4882,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4444,7 +4925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4481,7 +4966,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4520,7 +5009,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Documents::Inline, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4560,7 +5053,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4593,7 +5090,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4630,7 +5131,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -4643,6 +5148,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -4656,7 +5162,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -4695,7 +5205,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -4708,7 +5223,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             winrt::com_array<winrt::Microsoft::UI::Xaml::Documents::Inline> items(static_cast<uint32_t>(length), empty_instance<winrt::Microsoft::UI::Xaml::Documents::Inline>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -4731,11 +5250,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(value));
+                auto _value = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -4846,7 +5370,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Child());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Child();
+            }());
         }
         catch (...)
         {
@@ -4880,7 +5408,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
-            self->obj.Child(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Child(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5172,7 +5704,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextIndent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextIndent();
+            }());
         }
         catch (...)
         {
@@ -5206,7 +5742,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TextIndent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextIndent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5233,7 +5773,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Inlines());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Inlines();
+            }());
         }
         catch (...)
         {
@@ -5259,7 +5803,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Paragraph::TextIndentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Paragraph::TextIndentProperty();
+            }());
         }
         catch (...)
         {
@@ -5401,7 +5949,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -5435,7 +5987,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5462,7 +6018,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FlowDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FlowDirection();
+            }());
         }
         catch (...)
         {
@@ -5496,7 +6056,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FlowDirection>(arg);
 
-            self->obj.FlowDirection(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FlowDirection(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5523,7 +6087,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Run::FlowDirectionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Run::FlowDirectionProperty();
+            }());
         }
         catch (...)
         {
@@ -5725,7 +6293,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Span>().Inlines());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Span>().Inlines();
+            }());
         }
         catch (...)
         {
@@ -5759,7 +6331,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::InlineCollection>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Span>().Inlines(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::Span>().Inlines(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5884,7 +6460,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FindName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FindName(param0);
+                }());
             }
             catch (...)
             {
@@ -5920,7 +6500,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                     return nullptr;
                 }
 
-                py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Documents::ITextElementOverrides>().OnDisconnectVisualChildren();
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Documents::ITextElementOverrides>().OnDisconnectVisualChildren();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5953,7 +6537,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().XamlRoot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().XamlRoot();
+            }());
         }
         catch (...)
         {
@@ -5987,7 +6575,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().XamlRoot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().XamlRoot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6014,7 +6606,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().TextDecorations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().TextDecorations();
+            }());
         }
         catch (...)
         {
@@ -6048,7 +6644,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::TextDecorations>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().TextDecorations(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().TextDecorations(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6075,7 +6675,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Language();
+            }());
         }
         catch (...)
         {
@@ -6109,7 +6713,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6136,7 +6744,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset();
+            }());
         }
         catch (...)
         {
@@ -6170,7 +6782,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6197,7 +6813,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode();
+            }());
         }
         catch (...)
         {
@@ -6231,7 +6851,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6258,7 +6882,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset();
+            }());
         }
         catch (...)
         {
@@ -6292,7 +6920,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6319,7 +6951,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled();
+            }());
         }
         catch (...)
         {
@@ -6353,7 +6989,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6380,7 +7020,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsAccessKeyScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsAccessKeyScope();
+            }());
         }
         catch (...)
         {
@@ -6414,7 +7058,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsAccessKeyScope(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().IsAccessKeyScope(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6441,7 +7089,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Foreground());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Foreground();
+            }());
         }
         catch (...)
         {
@@ -6475,7 +7127,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Foreground(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Foreground(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6502,7 +7158,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontWeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontWeight();
+            }());
         }
         catch (...)
         {
@@ -6536,7 +7196,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontWeight>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontWeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontWeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6563,7 +7227,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStyle();
+            }());
         }
         catch (...)
         {
@@ -6597,7 +7265,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStyle>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6624,7 +7296,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStretch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStretch();
+            }());
         }
         catch (...)
         {
@@ -6658,7 +7334,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStretch>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStretch(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontStretch(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6685,7 +7365,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontSize();
+            }());
         }
         catch (...)
         {
@@ -6719,7 +7403,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6746,7 +7434,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontFamily());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontFamily();
+            }());
         }
         catch (...)
         {
@@ -6780,7 +7472,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FontFamily>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontFamily(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().FontFamily(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6807,7 +7503,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked();
+            }());
         }
         catch (...)
         {
@@ -6841,7 +7541,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6868,7 +7572,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().CharacterSpacing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().CharacterSpacing();
+            }());
         }
         catch (...)
         {
@@ -6902,7 +7610,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().CharacterSpacing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().CharacterSpacing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6929,7 +7641,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction();
+            }());
         }
         catch (...)
         {
@@ -6963,7 +7679,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6990,7 +7710,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner();
+            }());
         }
         catch (...)
         {
@@ -7024,7 +7748,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7051,7 +7779,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKey();
+            }());
         }
         catch (...)
         {
@@ -7085,7 +7817,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKey(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKey(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7112,7 +7848,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ContentEnd());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ContentEnd();
+            }());
         }
         catch (...)
         {
@@ -7138,7 +7878,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ContentStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ContentStart();
+            }());
         }
         catch (...)
         {
@@ -7164,7 +7908,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ElementEnd());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ElementEnd();
+            }());
         }
         catch (...)
         {
@@ -7190,7 +7938,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ElementStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().ElementStart();
+            }());
         }
         catch (...)
         {
@@ -7216,7 +7968,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().Name();
+            }());
         }
         catch (...)
         {
@@ -7242,7 +7998,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::AccessKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::AccessKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -7268,7 +8028,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::AccessKeyScopeOwnerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::AccessKeyScopeOwnerProperty();
+            }());
         }
         catch (...)
         {
@@ -7294,7 +8058,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::AllowFocusOnInteractionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::AllowFocusOnInteractionProperty();
+            }());
         }
         catch (...)
         {
@@ -7320,7 +8088,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::CharacterSpacingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::CharacterSpacingProperty();
+            }());
         }
         catch (...)
         {
@@ -7346,7 +8118,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::ExitDisplayModeOnAccessKeyInvokedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::ExitDisplayModeOnAccessKeyInvokedProperty();
+            }());
         }
         catch (...)
         {
@@ -7372,7 +8148,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::FontFamilyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::FontFamilyProperty();
+            }());
         }
         catch (...)
         {
@@ -7398,7 +8178,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::FontSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::FontSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -7424,7 +8208,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::FontStretchProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::FontStretchProperty();
+            }());
         }
         catch (...)
         {
@@ -7450,7 +8238,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::FontStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::FontStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -7476,7 +8268,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::FontWeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::FontWeightProperty();
+            }());
         }
         catch (...)
         {
@@ -7502,7 +8298,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::ForegroundProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::ForegroundProperty();
+            }());
         }
         catch (...)
         {
@@ -7528,7 +8328,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::IsAccessKeyScopeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::IsAccessKeyScopeProperty();
+            }());
         }
         catch (...)
         {
@@ -7554,7 +8358,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::IsTextScaleFactorEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::IsTextScaleFactorEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -7580,7 +8388,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipHorizontalOffsetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipHorizontalOffsetProperty();
+            }());
         }
         catch (...)
         {
@@ -7606,7 +8418,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipPlacementModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipPlacementModeProperty();
+            }());
         }
         catch (...)
         {
@@ -7632,7 +8448,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipVerticalOffsetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::KeyTipVerticalOffsetProperty();
+            }());
         }
         catch (...)
         {
@@ -7658,7 +8478,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::LanguageProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::LanguageProperty();
+            }());
         }
         catch (...)
         {
@@ -7684,7 +8508,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextElement::TextDecorationsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextElement::TextDecorationsProperty();
+            }());
         }
         catch (...)
         {
@@ -7712,7 +8540,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Documents::TextElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0);
+            }());
         }
         catch (...)
         {
@@ -7740,7 +8572,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7769,7 +8605,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Documents::TextElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -7797,7 +8637,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7826,7 +8670,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Documents::TextElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0);
+            }());
         }
         catch (...)
         {
@@ -7854,7 +8702,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8104,7 +8956,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Foreground());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Foreground();
+            }());
         }
         catch (...)
         {
@@ -8138,7 +8994,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Foreground(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Foreground(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8165,7 +9025,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Background());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Background();
+            }());
         }
         catch (...)
         {
@@ -8199,7 +9063,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Background(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Background(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8226,7 +9094,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Ranges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>().Ranges();
+            }());
         }
         catch (...)
         {
@@ -8252,7 +9124,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextHighlighter::BackgroundProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextHighlighter::BackgroundProperty();
+            }());
         }
         catch (...)
         {
@@ -8278,7 +9154,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::TextHighlighter::ForegroundProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::TextHighlighter::ForegroundProperty();
+            }());
         }
         catch (...)
         {
@@ -8497,7 +9377,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::LogicalDirection>(args, 0);
 
-                return py::convert(self->obj.GetCharacterRect(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacterRect(param0);
+                }());
             }
             catch (...)
             {
@@ -8536,7 +9420,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::LogicalDirection>(args, 1);
 
-                return py::convert(self->obj.GetPositionAtOffset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPositionAtOffset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8568,7 +9456,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogicalDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogicalDirection();
+            }());
         }
         catch (...)
         {
@@ -8594,7 +9486,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Offset();
+            }());
         }
         catch (...)
         {
@@ -8620,7 +9516,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -8646,7 +9546,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualParent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisualParent();
+            }());
         }
         catch (...)
         {
@@ -8750,7 +9654,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetAnnotationAlternates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetAnnotationAlternates(param0);
+                }());
             }
             catch (...)
             {
@@ -8788,7 +9696,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetCapitalSpacing(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetCapitalSpacing(param0);
+                }());
             }
             catch (...)
             {
@@ -8826,7 +9738,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetCapitals(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetCapitals(param0);
+                }());
             }
             catch (...)
             {
@@ -8864,7 +9780,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetCaseSensitiveForms(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetCaseSensitiveForms(param0);
+                }());
             }
             catch (...)
             {
@@ -8902,7 +9822,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualAlternates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualAlternates(param0);
+                }());
             }
             catch (...)
             {
@@ -8940,7 +9864,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualLigatures(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualLigatures(param0);
+                }());
             }
             catch (...)
             {
@@ -8978,7 +9906,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualSwashes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetContextualSwashes(param0);
+                }());
             }
             catch (...)
             {
@@ -9016,7 +9948,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetDiscretionaryLigatures(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetDiscretionaryLigatures(param0);
+                }());
             }
             catch (...)
             {
@@ -9054,7 +9990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianExpertForms(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianExpertForms(param0);
+                }());
             }
             catch (...)
             {
@@ -9092,7 +10032,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -9130,7 +10074,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianWidths(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetEastAsianWidths(param0);
+                }());
             }
             catch (...)
             {
@@ -9168,7 +10116,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetFraction(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetFraction(param0);
+                }());
             }
             catch (...)
             {
@@ -9206,7 +10158,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetHistoricalForms(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetHistoricalForms(param0);
+                }());
             }
             catch (...)
             {
@@ -9244,7 +10200,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetHistoricalLigatures(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetHistoricalLigatures(param0);
+                }());
             }
             catch (...)
             {
@@ -9282,7 +10242,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetKerning(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetKerning(param0);
+                }());
             }
             catch (...)
             {
@@ -9320,7 +10284,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetMathematicalGreek(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetMathematicalGreek(param0);
+                }());
             }
             catch (...)
             {
@@ -9358,7 +10326,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetNumeralAlignment(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetNumeralAlignment(param0);
+                }());
             }
             catch (...)
             {
@@ -9396,7 +10368,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetNumeralStyle(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetNumeralStyle(param0);
+                }());
             }
             catch (...)
             {
@@ -9434,7 +10410,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetSlashedZero(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetSlashedZero(param0);
+                }());
             }
             catch (...)
             {
@@ -9472,7 +10452,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStandardLigatures(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStandardLigatures(param0);
+                }());
             }
             catch (...)
             {
@@ -9510,7 +10494,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStandardSwashes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStandardSwashes(param0);
+                }());
             }
             catch (...)
             {
@@ -9548,7 +10536,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticAlternates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticAlternates(param0);
+                }());
             }
             catch (...)
             {
@@ -9586,7 +10578,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet1(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet1(param0);
+                }());
             }
             catch (...)
             {
@@ -9624,7 +10620,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet10(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet10(param0);
+                }());
             }
             catch (...)
             {
@@ -9662,7 +10662,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet11(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet11(param0);
+                }());
             }
             catch (...)
             {
@@ -9700,7 +10704,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet12(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet12(param0);
+                }());
             }
             catch (...)
             {
@@ -9738,7 +10746,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet13(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet13(param0);
+                }());
             }
             catch (...)
             {
@@ -9776,7 +10788,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet14(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet14(param0);
+                }());
             }
             catch (...)
             {
@@ -9814,7 +10830,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet15(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet15(param0);
+                }());
             }
             catch (...)
             {
@@ -9852,7 +10872,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet16(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet16(param0);
+                }());
             }
             catch (...)
             {
@@ -9890,7 +10914,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet17(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet17(param0);
+                }());
             }
             catch (...)
             {
@@ -9928,7 +10956,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet18(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet18(param0);
+                }());
             }
             catch (...)
             {
@@ -9966,7 +10998,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet19(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet19(param0);
+                }());
             }
             catch (...)
             {
@@ -10004,7 +11040,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet2(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet2(param0);
+                }());
             }
             catch (...)
             {
@@ -10042,7 +11082,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet20(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet20(param0);
+                }());
             }
             catch (...)
             {
@@ -10080,7 +11124,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet3(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet3(param0);
+                }());
             }
             catch (...)
             {
@@ -10118,7 +11166,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet4(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet4(param0);
+                }());
             }
             catch (...)
             {
@@ -10156,7 +11208,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet5(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet5(param0);
+                }());
             }
             catch (...)
             {
@@ -10194,7 +11250,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet6(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet6(param0);
+                }());
             }
             catch (...)
             {
@@ -10232,7 +11292,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet7(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet7(param0);
+                }());
             }
             catch (...)
             {
@@ -10270,7 +11334,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet8(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet8(param0);
+                }());
             }
             catch (...)
             {
@@ -10308,7 +11376,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet9(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetStylisticSet9(param0);
+                }());
             }
             catch (...)
             {
@@ -10346,7 +11418,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::GetVariants(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Documents::Typography::GetVariants(param0);
+                }());
             }
             catch (...)
             {
@@ -10385,7 +11461,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetAnnotationAlternates(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetAnnotationAlternates(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10425,7 +11505,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetCapitalSpacing(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetCapitalSpacing(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10465,7 +11549,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontCapitals>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetCapitals(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetCapitals(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10505,7 +11593,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetCaseSensitiveForms(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetCaseSensitiveForms(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10545,7 +11637,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualAlternates(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualAlternates(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10585,7 +11681,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualLigatures(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualLigatures(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10625,7 +11725,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualSwashes(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetContextualSwashes(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10665,7 +11769,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetDiscretionaryLigatures(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetDiscretionaryLigatures(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10705,7 +11813,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianExpertForms(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianExpertForms(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10745,7 +11857,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontEastAsianLanguage>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianLanguage(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianLanguage(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10785,7 +11901,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontEastAsianWidths>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianWidths(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetEastAsianWidths(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10825,7 +11945,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontFraction>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetFraction(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetFraction(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10865,7 +11989,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetHistoricalForms(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetHistoricalForms(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10905,7 +12033,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetHistoricalLigatures(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetHistoricalLigatures(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10945,7 +12077,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetKerning(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetKerning(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10985,7 +12121,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetMathematicalGreek(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetMathematicalGreek(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11025,7 +12165,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontNumeralAlignment>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetNumeralAlignment(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetNumeralAlignment(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11065,7 +12209,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontNumeralStyle>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetNumeralStyle(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetNumeralStyle(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11105,7 +12253,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetSlashedZero(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetSlashedZero(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11145,7 +12297,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStandardLigatures(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStandardLigatures(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11185,7 +12341,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStandardSwashes(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStandardSwashes(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11225,7 +12385,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticAlternates(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticAlternates(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11265,7 +12429,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet1(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet1(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11305,7 +12473,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet10(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet10(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11345,7 +12517,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet11(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet11(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11385,7 +12561,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet12(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet12(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11425,7 +12605,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet13(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet13(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11465,7 +12649,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet14(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet14(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11505,7 +12693,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet15(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet15(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11545,7 +12737,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet16(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet16(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11585,7 +12781,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet17(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet17(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11625,7 +12825,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet18(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet18(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11665,7 +12869,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet19(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet19(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11705,7 +12913,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet2(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet2(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11745,7 +12957,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet20(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet20(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11785,7 +13001,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet3(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet3(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11825,7 +13045,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet4(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet4(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11865,7 +13089,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet5(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet5(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11905,7 +13133,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet6(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet6(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11945,7 +13177,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet7(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet7(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11985,7 +13221,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet8(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet8(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12025,7 +13265,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet9(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetStylisticSet9(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12065,7 +13309,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FontVariants>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Documents::Typography::SetVariants(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Documents::Typography::SetVariants(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12098,7 +13346,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::AnnotationAlternatesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::AnnotationAlternatesProperty();
+            }());
         }
         catch (...)
         {
@@ -12124,7 +13376,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::CapitalSpacingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::CapitalSpacingProperty();
+            }());
         }
         catch (...)
         {
@@ -12150,7 +13406,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::CapitalsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::CapitalsProperty();
+            }());
         }
         catch (...)
         {
@@ -12176,7 +13436,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::CaseSensitiveFormsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::CaseSensitiveFormsProperty();
+            }());
         }
         catch (...)
         {
@@ -12202,7 +13466,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualAlternatesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualAlternatesProperty();
+            }());
         }
         catch (...)
         {
@@ -12228,7 +13496,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualLigaturesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualLigaturesProperty();
+            }());
         }
         catch (...)
         {
@@ -12254,7 +13526,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualSwashesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::ContextualSwashesProperty();
+            }());
         }
         catch (...)
         {
@@ -12280,7 +13556,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::DiscretionaryLigaturesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::DiscretionaryLigaturesProperty();
+            }());
         }
         catch (...)
         {
@@ -12306,7 +13586,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianExpertFormsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianExpertFormsProperty();
+            }());
         }
         catch (...)
         {
@@ -12332,7 +13616,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianLanguageProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianLanguageProperty();
+            }());
         }
         catch (...)
         {
@@ -12358,7 +13646,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianWidthsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::EastAsianWidthsProperty();
+            }());
         }
         catch (...)
         {
@@ -12384,7 +13676,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::FractionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::FractionProperty();
+            }());
         }
         catch (...)
         {
@@ -12410,7 +13706,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::HistoricalFormsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::HistoricalFormsProperty();
+            }());
         }
         catch (...)
         {
@@ -12436,7 +13736,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::HistoricalLigaturesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::HistoricalLigaturesProperty();
+            }());
         }
         catch (...)
         {
@@ -12462,7 +13766,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::KerningProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::KerningProperty();
+            }());
         }
         catch (...)
         {
@@ -12488,7 +13796,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::MathematicalGreekProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::MathematicalGreekProperty();
+            }());
         }
         catch (...)
         {
@@ -12514,7 +13826,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::NumeralAlignmentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::NumeralAlignmentProperty();
+            }());
         }
         catch (...)
         {
@@ -12540,7 +13856,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::NumeralStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::NumeralStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -12566,7 +13886,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::SlashedZeroProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::SlashedZeroProperty();
+            }());
         }
         catch (...)
         {
@@ -12592,7 +13916,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StandardLigaturesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StandardLigaturesProperty();
+            }());
         }
         catch (...)
         {
@@ -12618,7 +13946,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StandardSwashesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StandardSwashesProperty();
+            }());
         }
         catch (...)
         {
@@ -12644,7 +13976,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticAlternatesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticAlternatesProperty();
+            }());
         }
         catch (...)
         {
@@ -12670,7 +14006,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet10Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet10Property();
+            }());
         }
         catch (...)
         {
@@ -12696,7 +14036,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet11Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet11Property();
+            }());
         }
         catch (...)
         {
@@ -12722,7 +14066,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet12Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet12Property();
+            }());
         }
         catch (...)
         {
@@ -12748,7 +14096,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet13Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet13Property();
+            }());
         }
         catch (...)
         {
@@ -12774,7 +14126,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet14Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet14Property();
+            }());
         }
         catch (...)
         {
@@ -12800,7 +14156,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet15Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet15Property();
+            }());
         }
         catch (...)
         {
@@ -12826,7 +14186,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet16Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet16Property();
+            }());
         }
         catch (...)
         {
@@ -12852,7 +14216,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet17Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet17Property();
+            }());
         }
         catch (...)
         {
@@ -12878,7 +14246,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet18Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet18Property();
+            }());
         }
         catch (...)
         {
@@ -12904,7 +14276,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet19Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet19Property();
+            }());
         }
         catch (...)
         {
@@ -12930,7 +14306,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet1Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet1Property();
+            }());
         }
         catch (...)
         {
@@ -12956,7 +14336,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet20Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet20Property();
+            }());
         }
         catch (...)
         {
@@ -12982,7 +14366,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet2Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet2Property();
+            }());
         }
         catch (...)
         {
@@ -13008,7 +14396,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet3Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet3Property();
+            }());
         }
         catch (...)
         {
@@ -13034,7 +14426,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet4Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet4Property();
+            }());
         }
         catch (...)
         {
@@ -13060,7 +14456,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet5Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet5Property();
+            }());
         }
         catch (...)
         {
@@ -13086,7 +14486,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet6Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet6Property();
+            }());
         }
         catch (...)
         {
@@ -13112,7 +14516,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet7Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet7Property();
+            }());
         }
         catch (...)
         {
@@ -13138,7 +14546,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet8Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet8Property();
+            }());
         }
         catch (...)
         {
@@ -13164,7 +14576,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet9Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::StylisticSet9Property();
+            }());
         }
         catch (...)
         {
@@ -13190,7 +14606,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Documents::Typography::VariantsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Documents::Typography::VariantsProperty();
+            }());
         }
         catch (...)
         {

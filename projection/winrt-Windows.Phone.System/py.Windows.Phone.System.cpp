@@ -34,7 +34,11 @@ namespace py::cpp::Windows::Phone::System
                     return nullptr;
                 }
 
-                winrt::Windows::Phone::System::SystemProtection::RequestScreenUnlock();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::System::SystemProtection::RequestScreenUnlock();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -67,7 +71,11 @@ namespace py::cpp::Windows::Phone::System
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::System::SystemProtection::ScreenLocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::SystemProtection::ScreenLocked();
+            }());
         }
         catch (...)
         {

@@ -99,7 +99,11 @@ namespace py::cpp::Windows::System::Threading::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RunAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RunAsync();
+                }());
             }
             catch (...)
             {
@@ -205,7 +209,11 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
 
-                return py::convert(winrt::Windows::System::Threading::Core::SignalNotifier::AttachToEvent(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::Core::SignalNotifier::AttachToEvent(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -245,7 +253,11 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                return py::convert(winrt::Windows::System::Threading::Core::SignalNotifier::AttachToEvent(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::Core::SignalNotifier::AttachToEvent(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -284,7 +296,11 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
 
-                return py::convert(winrt::Windows::System::Threading::Core::SignalNotifier::AttachToSemaphore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::Core::SignalNotifier::AttachToSemaphore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -324,7 +340,11 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                return py::convert(winrt::Windows::System::Threading::Core::SignalNotifier::AttachToSemaphore(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::Core::SignalNotifier::AttachToSemaphore(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -360,7 +380,11 @@ namespace py::cpp::Windows::System::Threading::Core
                     return nullptr;
                 }
 
-                self->obj.Enable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Enable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -397,7 +421,11 @@ namespace py::cpp::Windows::System::Threading::Core
                     return nullptr;
                 }
 
-                self->obj.Terminate();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Terminate();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

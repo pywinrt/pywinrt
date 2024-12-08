@@ -44,7 +44,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
-                return py::convert(self->obj.AddContact(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddContact(param0);
+                }());
             }
             catch (...)
             {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 1);
 
-                return py::convert(self->obj.AddContact(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddContact(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ContainsContact(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ContainsContact(param0);
+                }());
             }
             catch (...)
             {
@@ -148,7 +160,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveContact(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveContact(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -181,7 +197,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredFields());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredFields();
+            }());
         }
         catch (...)
         {
@@ -207,7 +227,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionMode();
+            }());
         }
         catch (...)
         {
@@ -233,7 +257,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredFieldsWithContactFieldType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredFieldsWithContactFieldType();
+            }());
         }
         catch (...)
         {
@@ -261,7 +289,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI, winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.ContactRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -289,7 +321,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContactRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -390,7 +426,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {

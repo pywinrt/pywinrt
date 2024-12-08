@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                winrt::Windows::UI::WindowManagement::AppWindow::ClearAllPersistedState();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::WindowManagement::AppWindow::ClearAllPersistedState();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81,7 +85,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::WindowManagement::AppWindow::ClearPersistedState(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::WindowManagement::AppWindow::ClearPersistedState(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloseAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloseAsync();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDisplayRegions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDisplayRegions();
+                }());
             }
             catch (...)
             {
@@ -190,7 +206,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPlacement());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPlacement();
+                }());
             }
             catch (...)
             {
@@ -226,7 +246,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                self->obj.RequestMoveAdjacentToCurrentView();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveAdjacentToCurrentView();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -265,7 +289,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
-                self->obj.RequestMoveAdjacentToWindow(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveAdjacentToWindow(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -304,7 +332,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                self->obj.RequestMoveRelativeToCurrentViewContent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveRelativeToCurrentViewContent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -344,7 +376,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::DisplayRegion>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.RequestMoveRelativeToDisplayRegion(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveRelativeToDisplayRegion(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -384,7 +420,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.RequestMoveRelativeToWindowContent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveRelativeToWindowContent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -423,7 +463,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::DisplayRegion>(args, 0);
 
-                self->obj.RequestMoveToDisplayRegion(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestMoveToDisplayRegion(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -462,7 +506,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
-                self->obj.RequestSize(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestSize(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -499,7 +547,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::WindowManagement::AppWindow::TryCreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::WindowManagement::AppWindow::TryCreateAsync();
+                }());
             }
             catch (...)
             {
@@ -535,7 +587,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryShowAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryShowAsync();
+                }());
             }
             catch (...)
             {
@@ -567,7 +623,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -601,7 +661,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -628,7 +692,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.PersistedStateId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PersistedStateId();
+            }());
         }
         catch (...)
         {
@@ -662,7 +730,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PersistedStateId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PersistedStateId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -689,7 +761,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -715,7 +791,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {
@@ -741,7 +821,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Frame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Frame();
+            }());
         }
         catch (...)
         {
@@ -767,7 +851,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisible();
+            }());
         }
         catch (...)
         {
@@ -793,7 +881,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Presenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Presenter();
+            }());
         }
         catch (...)
         {
@@ -819,7 +911,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.TitleBar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TitleBar();
+            }());
         }
         catch (...)
         {
@@ -845,7 +941,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.UIContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UIContext();
+            }());
         }
         catch (...)
         {
@@ -871,7 +971,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowingEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowingEnvironment();
+            }());
         }
         catch (...)
         {
@@ -899,7 +1003,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -927,7 +1035,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -956,7 +1068,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.CloseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CloseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -984,7 +1100,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CloseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CloseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1013,7 +1133,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -1041,7 +1165,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1189,7 +1317,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidAvailableWindowPresentationsChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidAvailableWindowPresentationsChange();
+            }());
         }
         catch (...)
         {
@@ -1215,7 +1347,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidDisplayRegionsChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidDisplayRegionsChange();
+            }());
         }
         catch (...)
         {
@@ -1241,7 +1377,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidFrameChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidFrameChange();
+            }());
         }
         catch (...)
         {
@@ -1267,7 +1407,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidSizeChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidSizeChange();
+            }());
         }
         catch (...)
         {
@@ -1293,7 +1437,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidTitleBarChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidTitleBarChange();
+            }());
         }
         catch (...)
         {
@@ -1319,7 +1467,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidVisibilityChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidVisibilityChange();
+            }());
         }
         catch (...)
         {
@@ -1345,7 +1497,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidWindowPresentationChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidWindowPresentationChange();
+            }());
         }
         catch (...)
         {
@@ -1371,7 +1527,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DidWindowingEnvironmentChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidWindowingEnvironmentChange();
+            }());
         }
         catch (...)
         {
@@ -1475,7 +1635,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1507,7 +1671,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -1541,7 +1709,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1636,7 +1808,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -1733,7 +1909,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetFrameStyle());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFrameStyle();
+                }());
             }
             catch (...)
             {
@@ -1771,7 +1951,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowFrameStyle>(args, 0);
 
-                self->obj.SetFrameStyle(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFrameStyle(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1804,7 +1988,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragRegionVisuals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DragRegionVisuals();
+            }());
         }
         catch (...)
         {
@@ -1899,7 +2087,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayRegion();
+            }());
         }
         catch (...)
         {
@@ -1925,7 +2117,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Offset();
+            }());
         }
         catch (...)
         {
@@ -1951,7 +2147,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2046,7 +2246,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>().Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>().Kind();
+            }());
         }
         catch (...)
         {
@@ -2168,7 +2372,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConfiguration());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConfiguration();
+                }());
             }
             catch (...)
             {
@@ -2206,7 +2414,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>(args, 0);
 
-                return py::convert(self->obj.IsPresentationSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPresentationSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2244,7 +2456,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>(args, 0);
 
-                return py::convert(self->obj.RequestPresentation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPresentation(param0);
+                }());
             }
             catch (...)
             {
@@ -2282,7 +2498,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>(args, 0);
 
-                return py::convert(self->obj.RequestPresentation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPresentation(param0);
+                }());
             }
             catch (...)
             {
@@ -2388,7 +2608,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPreferredVisibility());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPreferredVisibility();
+                }());
             }
             catch (...)
             {
@@ -2424,7 +2648,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTitleBarOcclusions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTitleBarOcclusions();
+                }());
             }
             catch (...)
             {
@@ -2462,7 +2690,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility>(args, 0);
 
-                self->obj.SetPreferredVisibility(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPreferredVisibility(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2495,7 +2727,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.InactiveForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InactiveForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -2529,7 +2765,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.InactiveForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InactiveForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2556,7 +2796,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.InactiveBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InactiveBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2590,7 +2834,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.InactiveBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InactiveBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2617,7 +2865,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -2651,7 +2903,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2678,7 +2934,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendsContentIntoTitleBar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendsContentIntoTitleBar();
+            }());
         }
         catch (...)
         {
@@ -2712,7 +2972,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExtendsContentIntoTitleBar(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExtendsContentIntoTitleBar(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2739,7 +3003,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonPressedForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonPressedForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -2773,7 +3041,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonPressedForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonPressedForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2800,7 +3072,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonPressedBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonPressedBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2834,7 +3110,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonPressedBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonPressedBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2861,7 +3141,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonInactiveForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonInactiveForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -2895,7 +3179,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonInactiveForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonInactiveForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2922,7 +3210,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonInactiveBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonInactiveBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2956,7 +3248,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonInactiveBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonInactiveBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2983,7 +3279,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonHoverForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonHoverForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -3017,7 +3317,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonHoverForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonHoverForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3044,7 +3348,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonHoverBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonHoverBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3078,7 +3386,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonHoverBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonHoverBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3105,7 +3417,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -3139,7 +3455,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3166,7 +3486,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3200,7 +3524,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.ButtonBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3227,7 +3555,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3261,7 +3593,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3288,7 +3624,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisible();
+            }());
         }
         catch (...)
         {
@@ -3397,7 +3737,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.OccludingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OccludingRect();
+            }());
         }
         catch (...)
         {
@@ -3666,7 +4010,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMonitorDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMonitorDeviceId();
+            }());
         }
         catch (...)
         {
@@ -3692,7 +4040,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisible();
+            }());
         }
         catch (...)
         {
@@ -3718,7 +4070,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowingEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowingEnvironment();
+            }());
         }
         catch (...)
         {
@@ -3744,7 +4100,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WorkAreaOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkAreaOffset();
+            }());
         }
         catch (...)
         {
@@ -3770,7 +4130,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WorkAreaSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkAreaSize();
+            }());
         }
         catch (...)
         {
@@ -3798,7 +4162,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::DisplayRegion, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -3826,7 +4194,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3948,7 +4320,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExclusive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExclusive();
+            }());
         }
         catch (...)
         {
@@ -3982,7 +4358,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsExclusive(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsExclusive(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4072,7 +4452,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::WindowManagement::WindowServices::FindAllTopLevelWindowIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::WindowManagement::WindowServices::FindAllTopLevelWindowIds();
+                }());
             }
             catch (...)
             {
@@ -4173,7 +4557,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::WindowManagement::WindowingEnvironment::FindAll());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::WindowManagement::WindowingEnvironment::FindAll();
+                }());
             }
             catch (...)
             {
@@ -4211,7 +4599,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind>(args, 0);
 
-                return py::convert(winrt::Windows::UI::WindowManagement::WindowingEnvironment::FindAll(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::WindowManagement::WindowingEnvironment::FindAll(param0);
+                }());
             }
             catch (...)
             {
@@ -4247,7 +4639,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDisplayRegions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDisplayRegions();
+                }());
             }
             catch (...)
             {
@@ -4279,7 +4675,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -4305,7 +4705,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4333,7 +4737,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::WindowingEnvironment, winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -4361,7 +4769,11 @@ namespace py::cpp::Windows::UI::WindowManagement
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4486,7 +4898,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowingEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowingEnvironment();
+            }());
         }
         catch (...)
         {
@@ -4645,7 +5061,11 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowingEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowingEnvironment();
+            }());
         }
         catch (...)
         {

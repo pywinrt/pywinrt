@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewId();
+            }());
         }
         catch (...)
         {
@@ -131,7 +135,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisible();
+            }());
         }
         catch (...)
         {
@@ -157,7 +165,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewId();
+            }());
         }
         catch (...)
         {
@@ -255,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview::GetForCurrentApp());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview::GetForCurrentApp();
+                }());
             }
             catch (...)
             {
@@ -293,7 +309,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetNotePlacement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNotePlacement(param0);
+                }());
             }
             catch (...)
             {
@@ -331,7 +351,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.HideNote(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.HideNote(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -368,7 +392,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                     return nullptr;
                 }
 
-                self->obj.SetFocusToNextView();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFocusToNextView();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -405,7 +433,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                     return nullptr;
                 }
 
-                self->obj.SetFocusToPreviousView();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFocusToPreviousView();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -444,7 +476,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.SetNotesThumbnailAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetNotesThumbnailAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -482,7 +518,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(self->obj.SetThumbnailImageForTaskSwitcherAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetThumbnailImageForTaskSwitcherAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -520,7 +560,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.ShowNote(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowNote(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -560,7 +604,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.ShowNoteRelativeTo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowNoteRelativeTo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -601,7 +649,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>(args, 2);
 
-                self->obj.ShowNoteRelativeTo(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowNoteRelativeTo(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -641,7 +693,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                self->obj.ShowNoteWithPlacement(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowNoteWithPlacement(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -682,7 +738,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>(args, 2);
 
-                self->obj.ShowNoteWithPlacement(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowNoteWithPlacement(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -722,7 +782,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
-                return py::convert(self->obj.TrySetNoteSize(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetNoteSize(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -754,7 +818,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsScreenLocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScreenLocked();
+            }());
         }
         catch (...)
         {
@@ -782,7 +850,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>>(arg);
 
-            return py::convert(self->obj.NotePlacementChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotePlacementChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -810,7 +882,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NotePlacementChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NotePlacementChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -839,7 +915,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>>(arg);
 
-            return py::convert(self->obj.NoteVisibilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoteVisibilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -867,7 +947,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NoteVisibilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoteVisibilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -896,7 +980,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SystemLockStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemLockStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -924,7 +1012,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemLockStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemLockStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1084,7 +1176,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowWithFocus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowWithFocus();
+            }());
         }
         catch (...)
         {
@@ -1118,7 +1214,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowWithFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowWithFocus(param0);
+            }
+
             return 0;
         }
         catch (...)

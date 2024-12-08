@@ -40,7 +40,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 auto param3 = py::convert_to<bool>(args, 3);
                 auto param4 = py::convert_to<bool>(args, 4);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::DownloadLatestSettingsForNamespace(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::DownloadLatestSettingsForNamespace(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::ForceUpload(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::ForceUpload(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetActiveScenarioList());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetActiveScenarioList();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
                 auto param0 = py::convert_to<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetActiveTraceRuntime(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetActiveTraceRuntime(param0);
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
                 auto param0 = py::convert_to<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetKnownTraceList(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::GetKnownTraceList(param0);
+                }());
             }
             catch (...)
             {
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::IsScenarioEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::IsScenarioEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -270,7 +294,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<uint64_t>(args, 2);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::IsTraceRunning(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::IsTraceRunning(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -313,7 +341,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 auto param4 = py::convert_to<bool>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 5);
 
-                return py::convert(winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::TryEscalateScenario(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions::TryEscalateScenario(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -417,7 +449,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAutoLogger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAutoLogger();
+            }());
         }
         catch (...)
         {
@@ -443,7 +479,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExclusive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExclusive();
+            }());
         }
         catch (...)
         {
@@ -469,7 +509,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxTraceDurationFileTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxTraceDurationFileTime();
+            }());
         }
         catch (...)
         {
@@ -495,7 +539,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -521,7 +569,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileHash());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileHash();
+            }());
         }
         catch (...)
         {
@@ -547,7 +599,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScenarioId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScenarioId();
+            }());
         }
         catch (...)
         {
@@ -645,7 +701,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.EtwRuntimeFileTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EtwRuntimeFileTime();
+            }());
         }
         catch (...)
         {
@@ -671,7 +731,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
                 return nullptr;
             }
 
-            return py::convert(self->obj.RuntimeFileTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RuntimeFileTime();
+            }());
         }
         catch (...)
         {

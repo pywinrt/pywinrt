@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindAppointmentCalendarsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentCalendarsAsync();
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindContactAnnotationListsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindContactAnnotationListsAsync();
+                }());
             }
             catch (...)
             {
@@ -150,7 +162,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindContactGroupsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindContactGroupsAsync();
+                }());
             }
             catch (...)
             {
@@ -186,7 +202,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindContactListsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindContactListsAsync();
+                }());
             }
             catch (...)
             {
@@ -222,7 +242,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindEmailMailboxesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindEmailMailboxesAsync();
+                }());
             }
             catch (...)
             {
@@ -258,7 +282,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindUserDataTaskListsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindUserDataTaskListsAsync();
+                }());
             }
             catch (...)
             {
@@ -294,7 +322,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -330,7 +362,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryShowCreateContactGroupAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryShowCreateContactGroupAsync();
+                }());
             }
             catch (...)
             {
@@ -362,7 +398,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDisplayName();
+            }());
         }
         catch (...)
         {
@@ -396,7 +436,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserDisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserDisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -423,7 +467,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppReadAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppReadAccess();
+            }());
         }
         catch (...)
         {
@@ -457,7 +505,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>(arg);
 
-            self->obj.OtherAppReadAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppReadAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -484,7 +536,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -518,7 +574,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -545,7 +605,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAccountTypeId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAccountTypeId();
+            }());
         }
         catch (...)
         {
@@ -571,7 +635,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -597,7 +665,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -623,7 +695,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsProtectedUnderLock());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsProtectedUnderLock();
+            }());
         }
         catch (...)
         {
@@ -657,7 +733,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsProtectedUnderLock(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsProtectedUnderLock(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -684,7 +764,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnterpriseId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnterpriseId();
+            }());
         }
         catch (...)
         {
@@ -710,7 +794,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -744,7 +832,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -771,7 +863,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExplictReadAccessPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExplictReadAccessPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -797,7 +893,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanShowCreateContactGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanShowCreateContactGroup();
+            }());
         }
         catch (...)
         {
@@ -831,7 +931,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanShowCreateContactGroup(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanShowCreateContactGroup(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -858,7 +962,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderProperties();
+            }());
         }
         catch (...)
         {
@@ -969,7 +1077,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -1007,7 +1119,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1045,7 +1161,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountErrorResolverAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountErrorResolverAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1083,7 +1203,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountSettingsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountSettingsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1121,7 +1245,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAddAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAddAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1228,7 +1356,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>(args, 0);
 
-                return py::convert(self->obj.RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1260,7 +1392,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1360,7 +1496,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1400,7 +1540,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateAccountAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAccountAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1439,7 +1583,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateAccountAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAccountAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1475,7 +1623,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindAccountsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAccountsAsync();
+                }());
             }
             catch (...)
             {
@@ -1513,7 +1665,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAccountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAccountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1547,7 +1703,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StoreChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoreChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1575,7 +1735,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StoreChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StoreChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1679,7 +1843,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {

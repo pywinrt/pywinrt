@@ -74,7 +74,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param5 = py::convert_to<float>(args, 5);
                 auto param6 = py::convert_to<float>(args, 6);
 
-                self->obj.SetParameters(param0, param1, param2, param3, param4, param5, param6);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParameters(param0, param1, param2, param3, param4, param5, param6);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -111,7 +115,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -148,7 +156,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -181,7 +193,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -207,7 +223,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -241,7 +261,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -268,7 +292,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -395,7 +423,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                self->obj.SetParameters(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParameters(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -442,7 +474,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param7 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 7);
                 auto param8 = py::convert_to<uint32_t>(args, 8);
 
-                self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -479,7 +515,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -516,7 +556,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -549,7 +593,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -583,7 +631,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -610,7 +662,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -714,7 +770,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>(args, 0);
 
-                return py::convert(self->obj.LoadEffectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LoadEffectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -750,7 +810,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.PauseAllEffects();
+                {
+                    auto _gil = release_gil();
+                    self->obj.PauseAllEffects();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -787,7 +851,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.ResumeAllEffects();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResumeAllEffects();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -824,7 +892,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.StopAllEffects();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopAllEffects();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -861,7 +933,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryDisableAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryDisableAsync();
+                }());
             }
             catch (...)
             {
@@ -897,7 +973,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryEnableAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryEnableAsync();
+                }());
             }
             catch (...)
             {
@@ -933,7 +1013,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryResetAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryResetAsync();
+                }());
             }
             catch (...)
             {
@@ -971,7 +1055,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>(args, 0);
 
-                return py::convert(self->obj.TryUnloadEffectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUnloadEffectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1003,7 +1091,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.MasterGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MasterGain();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1129,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MasterGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MasterGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1064,7 +1160,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreEffectsPaused());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreEffectsPaused();
+            }());
         }
         catch (...)
         {
@@ -1090,7 +1190,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1116,7 +1220,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedAxes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedAxes();
+            }());
         }
         catch (...)
         {
@@ -1254,7 +1362,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param3 = py::convert_to<float>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 4);
 
-                self->obj.SetParameters(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParameters(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1304,7 +1416,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param10 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 10);
                 auto param11 = py::convert_to<uint32_t>(args, 11);
 
-                self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1341,7 +1457,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1378,7 +1498,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1411,7 +1535,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -1445,7 +1573,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1472,7 +1604,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1498,7 +1634,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1627,7 +1767,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                self->obj.SetParameters(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParameters(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1675,7 +1819,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 auto param8 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 8);
                 auto param9 = py::convert_to<uint32_t>(args, 9);
 
-                self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1712,7 +1860,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1749,7 +1901,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1782,7 +1938,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -1816,7 +1976,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1843,7 +2007,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1945,7 +2113,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1982,7 +2154,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2015,7 +2191,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -2049,7 +2229,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2076,7 +2260,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {

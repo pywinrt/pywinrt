@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP521Sha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP521Sha512();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha1();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha256();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP256Sha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP256Sha256();
+            }());
         }
         catch (...)
         {
@@ -134,7 +150,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP384Sha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP384Sha384();
+            }());
         }
         catch (...)
         {
@@ -160,7 +180,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha256();
+            }());
         }
         catch (...)
         {
@@ -186,7 +210,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha1();
+            }());
         }
         catch (...)
         {
@@ -212,7 +240,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha256();
+            }());
         }
         catch (...)
         {
@@ -238,7 +270,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha384();
+            }());
         }
         catch (...)
         {
@@ -264,7 +300,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha512();
+            }());
         }
         catch (...)
         {
@@ -290,7 +330,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaPkcs1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaPkcs1();
+            }());
         }
         catch (...)
         {
@@ -316,7 +360,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha1();
+            }());
         }
         catch (...)
         {
@@ -342,7 +390,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha384();
+            }());
         }
         catch (...)
         {
@@ -368,7 +420,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha512();
+            }());
         }
         catch (...)
         {
@@ -394,7 +450,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha1();
+            }());
         }
         catch (...)
         {
@@ -420,7 +480,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha256();
+            }());
         }
         catch (...)
         {
@@ -446,7 +510,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha384();
+            }());
         }
         catch (...)
         {
@@ -472,7 +540,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha512();
+            }());
         }
         catch (...)
         {
@@ -498,7 +570,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha384();
+            }());
         }
         catch (...)
         {
@@ -524,7 +600,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha512();
+            }());
         }
         catch (...)
         {
@@ -550,7 +630,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha256();
+            }());
         }
         catch (...)
         {
@@ -667,7 +751,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.CreateKeyPair(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateKeyPair(param0);
+                }());
             }
             catch (...)
             {
@@ -705,7 +793,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateKeyPairWithCurveName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateKeyPairWithCurveName(param0);
+                }());
             }
             catch (...)
             {
@@ -743,7 +835,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.CreateKeyPairWithCurveParameters(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateKeyPairWithCurveParameters(param0);
+                }());
             }
             catch (...)
             {
@@ -781,7 +877,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.ImportKeyPair(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportKeyPair(param0);
+                }());
             }
             catch (...)
             {
@@ -819,7 +919,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.ImportPublicKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPublicKey(param0);
+                }());
             }
             catch (...)
             {
@@ -858,7 +962,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 1);
 
-                return py::convert(self->obj.ImportKeyPair(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportKeyPair(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -897,7 +1005,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 1);
 
-                return py::convert(self->obj.ImportPublicKey(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPublicKey(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -935,7 +1047,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider::OpenAlgorithm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider::OpenAlgorithm(param0);
+                }());
             }
             catch (...)
             {
@@ -967,7 +1083,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -1093,7 +1213,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Decrypt(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Decrypt(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1135,7 +1259,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param3 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 4);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DecryptAndAuthenticate(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DecryptAndAuthenticate(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -1175,7 +1303,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DecryptAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DecryptAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1215,7 +1347,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DeriveKeyMaterial(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::DeriveKeyMaterial(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1255,7 +1391,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Encrypt(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Encrypt(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1296,7 +1436,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 3);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::EncryptAndAuthenticate(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::EncryptAndAuthenticate(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1335,7 +1479,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Sign(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::Sign(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1374,7 +1522,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1413,7 +1565,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignHashedData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignHashedData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1452,7 +1608,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignHashedDataAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::SignHashedDataAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1492,7 +1652,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::VerifySignature(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::VerifySignature(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1532,7 +1696,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::CryptographicEngine::VerifySignatureWithHashInput(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::CryptographicEngine::VerifySignatureWithHashInput(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1646,7 +1814,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1683,7 +1855,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetValueAndReset());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetValueAndReset();
+                }());
             }
             catch (...)
             {
@@ -1787,7 +1963,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Export());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Export();
+                }());
             }
             catch (...)
             {
@@ -1823,7 +2003,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ExportPublicKey());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExportPublicKey();
+                }());
             }
             catch (...)
             {
@@ -1861,7 +2045,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 0);
 
-                return py::convert(self->obj.Export(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Export(param0);
+                }());
             }
             catch (...)
             {
@@ -1899,7 +2087,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 0);
 
-                return py::convert(self->obj.ExportPublicKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExportPublicKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1931,7 +2123,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeySize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeySize();
+            }());
         }
         catch (...)
         {
@@ -2020,7 +2216,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::AllEccCurveNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::AllEccCurveNames();
+            }());
         }
         catch (...)
         {
@@ -2046,7 +2246,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160r1();
+            }());
         }
         catch (...)
         {
@@ -2072,7 +2276,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160t1();
+            }());
         }
         catch (...)
         {
@@ -2098,7 +2306,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192r1();
+            }());
         }
         catch (...)
         {
@@ -2124,7 +2336,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192t1();
+            }());
         }
         catch (...)
         {
@@ -2150,7 +2366,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224r1();
+            }());
         }
         catch (...)
         {
@@ -2176,7 +2396,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224t1();
+            }());
         }
         catch (...)
         {
@@ -2202,7 +2426,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256r1();
+            }());
         }
         catch (...)
         {
@@ -2228,7 +2456,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256t1();
+            }());
         }
         catch (...)
         {
@@ -2254,7 +2486,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320r1();
+            }());
         }
         catch (...)
         {
@@ -2280,7 +2516,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320t1();
+            }());
         }
         catch (...)
         {
@@ -2306,7 +2546,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384r1();
+            }());
         }
         catch (...)
         {
@@ -2332,7 +2576,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384t1();
+            }());
         }
         catch (...)
         {
@@ -2358,7 +2606,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512r1();
+            }());
         }
         catch (...)
         {
@@ -2384,7 +2636,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512t1();
+            }());
         }
         catch (...)
         {
@@ -2410,7 +2666,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Curve25519());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::Curve25519();
+            }());
         }
         catch (...)
         {
@@ -2436,7 +2696,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Ec192wapi());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::Ec192wapi();
+            }());
         }
         catch (...)
         {
@@ -2462,7 +2726,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP192());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP192();
+            }());
         }
         catch (...)
         {
@@ -2488,7 +2756,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP224());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP224();
+            }());
         }
         catch (...)
         {
@@ -2514,7 +2786,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP256();
+            }());
         }
         catch (...)
         {
@@ -2540,7 +2816,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP384();
+            }());
         }
         catch (...)
         {
@@ -2566,7 +2846,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP521());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP521();
+            }());
         }
         catch (...)
         {
@@ -2592,7 +2876,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP256t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP256t1();
+            }());
         }
         catch (...)
         {
@@ -2618,7 +2906,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP384t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP384t1();
+            }());
         }
         catch (...)
         {
@@ -2644,7 +2936,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP512t1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP512t1();
+            }());
         }
         catch (...)
         {
@@ -2670,7 +2966,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160k1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160k1();
+            }());
         }
         catch (...)
         {
@@ -2696,7 +2996,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r1();
+            }());
         }
         catch (...)
         {
@@ -2722,7 +3026,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r2();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3056,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192k1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192k1();
+            }());
         }
         catch (...)
         {
@@ -2774,7 +3086,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192r1();
+            }());
         }
         catch (...)
         {
@@ -2800,7 +3116,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224k1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224k1();
+            }());
         }
         catch (...)
         {
@@ -2826,7 +3146,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224r1();
+            }());
         }
         catch (...)
         {
@@ -2852,7 +3176,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256k1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256k1();
+            }());
         }
         catch (...)
         {
@@ -2878,7 +3206,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256r1();
+            }());
         }
         catch (...)
         {
@@ -2904,7 +3236,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP384r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP384r1();
+            }());
         }
         catch (...)
         {
@@ -2930,7 +3266,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP521r1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP521r1();
+            }());
         }
         catch (...)
         {
@@ -2956,7 +3296,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls12();
+            }());
         }
         catch (...)
         {
@@ -2982,7 +3326,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls7();
+            }());
         }
         catch (...)
         {
@@ -3008,7 +3356,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls9());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls9();
+            }());
         }
         catch (...)
         {
@@ -3034,7 +3386,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v1();
+            }());
         }
         catch (...)
         {
@@ -3060,7 +3416,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v2();
+            }());
         }
         catch (...)
         {
@@ -3086,7 +3446,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v3();
+            }());
         }
         catch (...)
         {
@@ -3112,7 +3476,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v1();
+            }());
         }
         catch (...)
         {
@@ -3138,7 +3506,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v2();
+            }());
         }
         catch (...)
         {
@@ -3164,7 +3536,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v3();
+            }());
         }
         catch (...)
         {
@@ -3190,7 +3566,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P256v1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P256v1();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3706,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationTag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationTag();
+            }());
         }
         catch (...)
         {
@@ -3352,7 +3736,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncryptedData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncryptedData();
+            }());
         }
         catch (...)
         {
@@ -3438,7 +3826,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Md5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Md5();
+            }());
         }
         catch (...)
         {
@@ -3464,7 +3856,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha1();
+            }());
         }
         catch (...)
         {
@@ -3490,7 +3886,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha256();
+            }());
         }
         catch (...)
         {
@@ -3516,7 +3916,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha384();
+            }());
         }
         catch (...)
         {
@@ -3542,7 +3946,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha512();
+            }());
         }
         catch (...)
         {
@@ -3641,7 +4049,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateHash());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateHash();
+                }());
             }
             catch (...)
             {
@@ -3679,7 +4091,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.HashData(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HashData(param0);
+                }());
             }
             catch (...)
             {
@@ -3717,7 +4133,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider::OpenAlgorithm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider::OpenAlgorithm(param0);
+                }());
             }
             catch (...)
             {
@@ -3749,7 +4169,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -3775,7 +4199,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.HashLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HashLength();
+            }());
         }
         catch (...)
         {
@@ -3889,7 +4317,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha256();
+            }());
         }
         catch (...)
         {
@@ -3915,7 +4347,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Md5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Md5();
+            }());
         }
         catch (...)
         {
@@ -3941,7 +4377,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha1();
+            }());
         }
         catch (...)
         {
@@ -3967,7 +4407,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha512();
+            }());
         }
         catch (...)
         {
@@ -3993,7 +4437,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha384();
+            }());
         }
         catch (...)
         {
@@ -4019,7 +4467,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha512();
+            }());
         }
         catch (...)
         {
@@ -4045,7 +4497,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacMd5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacMd5();
+            }());
         }
         catch (...)
         {
@@ -4071,7 +4527,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha1();
+            }());
         }
         catch (...)
         {
@@ -4097,7 +4557,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha256();
+            }());
         }
         catch (...)
         {
@@ -4123,7 +4587,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha384();
+            }());
         }
         catch (...)
         {
@@ -4149,7 +4617,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatMd5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatMd5();
+            }());
         }
         catch (...)
         {
@@ -4175,7 +4647,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha1();
+            }());
         }
         catch (...)
         {
@@ -4201,7 +4677,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha256();
+            }());
         }
         catch (...)
         {
@@ -4227,7 +4707,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha384();
+            }());
         }
         catch (...)
         {
@@ -4253,7 +4737,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha512();
+            }());
         }
         catch (...)
         {
@@ -4279,7 +4767,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha1();
+            }());
         }
         catch (...)
         {
@@ -4305,7 +4797,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha256();
+            }());
         }
         catch (...)
         {
@@ -4331,7 +4827,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha384();
+            }());
         }
         catch (...)
         {
@@ -4357,7 +4857,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha512();
+            }());
         }
         catch (...)
         {
@@ -4383,7 +4887,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfMd5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfMd5();
+            }());
         }
         catch (...)
         {
@@ -4499,7 +5007,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.CreateKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateKey(param0);
+                }());
             }
             catch (...)
             {
@@ -4537,7 +5049,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider::OpenAlgorithm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider::OpenAlgorithm(param0);
+                }());
             }
             catch (...)
             {
@@ -4569,7 +5085,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -4695,7 +5215,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForCapi1Kdf(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForCapi1Kdf(param0);
+                }());
             }
             catch (...)
             {
@@ -4734,7 +5258,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForPbkdf2(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForPbkdf2(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4773,7 +5301,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForSP800108(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForSP800108(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4815,7 +5347,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param3 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 4);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForSP80056a(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForSP80056a(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -4847,7 +5383,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.KdfGenericBinary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KdfGenericBinary();
+            }());
         }
         catch (...)
         {
@@ -4881,7 +5421,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.KdfGenericBinary(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KdfGenericBinary(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4908,7 +5452,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IterationCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IterationCount();
+            }());
         }
         catch (...)
         {
@@ -4934,7 +5482,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Capi1KdfTargetAlgorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Capi1KdfTargetAlgorithm();
+            }());
         }
         catch (...)
         {
@@ -4968,7 +5520,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(arg);
 
-            self->obj.Capi1KdfTargetAlgorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Capi1KdfTargetAlgorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5085,7 +5641,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::AesCmac());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::AesCmac();
+            }());
         }
         catch (...)
         {
@@ -5111,7 +5671,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacMd5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacMd5();
+            }());
         }
         catch (...)
         {
@@ -5137,7 +5701,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha1();
+            }());
         }
         catch (...)
         {
@@ -5163,7 +5731,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha256();
+            }());
         }
         catch (...)
         {
@@ -5189,7 +5761,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha384();
+            }());
         }
         catch (...)
         {
@@ -5215,7 +5791,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha512());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha512();
+            }());
         }
         catch (...)
         {
@@ -5317,7 +5897,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.CreateHash(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateHash(param0);
+                }());
             }
             catch (...)
             {
@@ -5355,7 +5939,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.CreateKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateKey(param0);
+                }());
             }
             catch (...)
             {
@@ -5393,7 +5981,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider::OpenAlgorithm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider::OpenAlgorithm(param0);
+                }());
             }
             catch (...)
             {
@@ -5425,7 +6017,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -5451,7 +6047,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.MacLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MacLength();
+            }());
         }
         catch (...)
         {
@@ -5573,7 +6173,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider::OpenKeyPairFromCertificateAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider::OpenKeyPairFromCertificateAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5613,7 +6217,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider::OpenPublicKeyFromCertificate(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider::OpenPublicKeyFromCertificate(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5703,7 +6311,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbc();
+            }());
         }
         catch (...)
         {
@@ -5729,7 +6341,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbcPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbcPkcs7();
+            }());
         }
         catch (...)
         {
@@ -5755,7 +6371,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCcm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCcm();
+            }());
         }
         catch (...)
         {
@@ -5781,7 +6401,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcb();
+            }());
         }
         catch (...)
         {
@@ -5807,7 +6431,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcbPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcbPkcs7();
+            }());
         }
         catch (...)
         {
@@ -5833,7 +6461,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesGcm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesGcm();
+            }());
         }
         catch (...)
         {
@@ -5859,7 +6491,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbc();
+            }());
         }
         catch (...)
         {
@@ -5885,7 +6521,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbcPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbcPkcs7();
+            }());
         }
         catch (...)
         {
@@ -5911,7 +6551,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcb();
+            }());
         }
         catch (...)
         {
@@ -5937,7 +6581,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcbPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcbPkcs7();
+            }());
         }
         catch (...)
         {
@@ -5963,7 +6611,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Cbc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Cbc();
+            }());
         }
         catch (...)
         {
@@ -5989,7 +6641,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2CbcPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2CbcPkcs7();
+            }());
         }
         catch (...)
         {
@@ -6015,7 +6671,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Ecb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Ecb();
+            }());
         }
         catch (...)
         {
@@ -6041,7 +6701,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2EcbPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2EcbPkcs7();
+            }());
         }
         catch (...)
         {
@@ -6067,7 +6731,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc4());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc4();
+            }());
         }
         catch (...)
         {
@@ -6093,7 +6761,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbc();
+            }());
         }
         catch (...)
         {
@@ -6119,7 +6791,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbcPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbcPkcs7();
+            }());
         }
         catch (...)
         {
@@ -6145,7 +6821,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcb();
+            }());
         }
         catch (...)
         {
@@ -6171,7 +6851,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcbPkcs7());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcbPkcs7();
+            }());
         }
         catch (...)
         {
@@ -6286,7 +6970,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.CreateSymmetricKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSymmetricKey(param0);
+                }());
             }
             catch (...)
             {
@@ -6324,7 +7012,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider::OpenAlgorithm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider::OpenAlgorithm(param0);
+                }());
             }
             catch (...)
             {
@@ -6356,7 +7048,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -6382,7 +7078,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.BlockLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BlockLength();
+            }());
         }
         catch (...)
         {

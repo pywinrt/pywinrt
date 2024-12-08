@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CaptureTimeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CaptureTimeOffset();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CapturedFrameControlValues());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CapturedFrameControlValues();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Frame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Frame();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsedFrameControllerIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsedFrameControllerIndex();
+            }());
         }
         catch (...)
         {
@@ -216,7 +232,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FinishAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FinishAsync();
+                }());
             }
             catch (...)
             {
@@ -252,7 +272,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -288,7 +312,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StopAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StopAsync();
+                }());
             }
             catch (...)
             {
@@ -324,7 +352,11 @@ namespace py::cpp::Windows::Media::Capture::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UpdateSettingsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateSettingsAsync();
+                }());
             }
             catch (...)
             {
@@ -358,7 +390,11 @@ namespace py::cpp::Windows::Media::Capture::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture, winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>>(arg);
 
-            return py::convert(self->obj.PhotoCaptured(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotoCaptured(param0);
+            }());
         }
         catch (...)
         {
@@ -386,7 +422,11 @@ namespace py::cpp::Windows::Media::Capture::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PhotoCaptured(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PhotoCaptured(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -415,7 +455,11 @@ namespace py::cpp::Windows::Media::Capture::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Stopped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped(param0);
+            }());
         }
         catch (...)
         {
@@ -443,7 +487,11 @@ namespace py::cpp::Windows::Media::Capture::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Stopped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Stopped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

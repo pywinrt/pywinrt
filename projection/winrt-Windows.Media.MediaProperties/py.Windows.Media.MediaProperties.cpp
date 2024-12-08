@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Copy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Copy();
+                }());
             }
             catch (...)
             {
@@ -104,7 +108,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAac(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAac(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -144,7 +152,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAacAdts(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAacAdts(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -184,7 +196,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAlac(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateAlac(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -224,7 +240,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateFlac(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateFlac(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -264,7 +284,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateMp3(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateMp3(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -304,7 +328,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreatePcm(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreatePcm(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -344,7 +372,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateWma(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::AudioEncodingProperties::CreateWma(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -382,13 +414,17 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 winrt::com_array<uint8_t> param0{};
 
-                self->obj.GetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetFormatUserData(param0);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -427,7 +463,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.SetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFormatUserData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -460,7 +500,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.SampleRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SampleRate();
+            }());
         }
         catch (...)
         {
@@ -494,7 +538,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.SampleRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SampleRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -521,7 +569,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelCount();
+            }());
         }
         catch (...)
         {
@@ -555,7 +607,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ChannelCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChannelCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -582,7 +638,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitsPerSample());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitsPerSample();
+            }());
         }
         catch (...)
         {
@@ -616,7 +676,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.BitsPerSample(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitsPerSample(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -643,7 +707,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bitrate();
+            }());
         }
         catch (...)
         {
@@ -677,7 +745,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Bitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -704,7 +776,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSpatial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSpatial();
+            }());
         }
         catch (...)
         {
@@ -730,7 +806,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -764,7 +844,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -791,7 +875,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -817,7 +905,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -944,7 +1036,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -970,7 +1066,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -996,7 +1096,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -1022,7 +1126,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -1048,7 +1156,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -1074,7 +1186,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -1100,7 +1216,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling400BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling400BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -1126,7 +1246,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling420BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling420BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -1152,7 +1276,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -1178,7 +1306,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -1204,7 +1336,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -1230,7 +1366,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling444BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling444BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -1358,7 +1498,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Copy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Copy();
+                }());
             }
             catch (...)
             {
@@ -1390,7 +1534,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -1424,7 +1572,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1451,7 +1603,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1477,7 +1633,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1565,7 +1725,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Baseline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::Baseline();
+            }());
         }
         catch (...)
         {
@@ -1591,7 +1755,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::ConstrainedBaseline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::ConstrainedBaseline();
+            }());
         }
         catch (...)
         {
@@ -1617,7 +1785,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Extended());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::Extended();
+            }());
         }
         catch (...)
         {
@@ -1643,7 +1815,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::High();
+            }());
         }
         catch (...)
         {
@@ -1669,7 +1845,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::High10();
+            }());
         }
         catch (...)
         {
@@ -1695,7 +1875,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High422());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::High422();
+            }());
         }
         catch (...)
         {
@@ -1721,7 +1905,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High444());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::High444();
+            }());
         }
         catch (...)
         {
@@ -1747,7 +1935,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Main());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::Main();
+            }());
         }
         catch (...)
         {
@@ -1773,7 +1965,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::MultiviewHigh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::MultiviewHigh();
+            }());
         }
         catch (...)
         {
@@ -1799,7 +1995,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::StereoHigh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::H264ProfileIds::StereoHigh();
+            }());
         }
         catch (...)
         {
@@ -1891,7 +2091,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -1917,7 +2121,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -1943,7 +2151,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -1969,7 +2181,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -1995,7 +2211,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2021,7 +2241,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -2047,7 +2271,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2073,7 +2301,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -2099,7 +2331,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -2125,7 +2361,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2151,7 +2391,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -2177,7 +2421,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -2203,7 +2451,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2229,7 +2481,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -2255,7 +2511,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2281,7 +2541,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth16();
+            }());
         }
         catch (...)
         {
@@ -2307,7 +2571,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -2333,7 +2601,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling420BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling420BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -2359,7 +2631,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth16();
+            }());
         }
         catch (...)
         {
@@ -2385,7 +2661,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -2411,7 +2691,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth12();
+            }());
         }
         catch (...)
         {
@@ -2437,7 +2721,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth16();
+            }());
         }
         catch (...)
         {
@@ -2575,7 +2863,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Copy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Copy();
+                }());
             }
             catch (...)
             {
@@ -2611,7 +2903,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateBmp());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateBmp();
+                }());
             }
             catch (...)
             {
@@ -2647,7 +2943,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateHeif());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateHeif();
+                }());
             }
             catch (...)
             {
@@ -2683,7 +2983,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpeg());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpeg();
+                }());
             }
             catch (...)
             {
@@ -2719,7 +3023,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpegXR());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpegXR();
+                }());
             }
             catch (...)
             {
@@ -2755,7 +3063,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreatePng());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreatePng();
+                }());
             }
             catch (...)
             {
@@ -2793,7 +3105,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaPixelFormat>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateUncompressed(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateUncompressed(param0);
+                }());
             }
             catch (...)
             {
@@ -2825,7 +3141,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -2859,7 +3179,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Width(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Width(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2886,7 +3210,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -2920,7 +3248,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Height(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Height(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2947,7 +3279,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -2981,7 +3317,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3008,7 +3348,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -3034,7 +3378,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3191,7 +3539,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAlac(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAlac(param0);
+                }());
             }
             catch (...)
             {
@@ -3229,7 +3581,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAv1(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAv1(param0);
+                }());
             }
             catch (...)
             {
@@ -3267,7 +3623,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAvi(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAvi(param0);
+                }());
             }
             catch (...)
             {
@@ -3305,7 +3665,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFlac(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFlac(param0);
+                }());
             }
             catch (...)
             {
@@ -3343,7 +3707,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3381,7 +3749,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3419,7 +3791,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateHevc(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateHevc(param0);
+                }());
             }
             catch (...)
             {
@@ -3457,7 +3833,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateM4a(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateM4a(param0);
+                }());
             }
             catch (...)
             {
@@ -3495,7 +3875,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp3(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp3(param0);
+                }());
             }
             catch (...)
             {
@@ -3533,7 +3917,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp4(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp4(param0);
+                }());
             }
             catch (...)
             {
@@ -3571,7 +3959,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateVp9(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateVp9(param0);
+                }());
             }
             catch (...)
             {
@@ -3609,7 +4001,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWav(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWav(param0);
+                }());
             }
             catch (...)
             {
@@ -3647,7 +4043,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWma(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWma(param0);
+                }());
             }
             catch (...)
             {
@@ -3685,7 +4085,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWmv(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWmv(param0);
+                }());
             }
             catch (...)
             {
@@ -3721,7 +4125,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioTracks());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioTracks();
+                }());
             }
             catch (...)
             {
@@ -3757,7 +4165,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTimedMetadataTracks());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTimedMetadataTracks();
+                }());
             }
             catch (...)
             {
@@ -3793,7 +4205,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVideoTracks());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVideoTracks();
+                }());
             }
             catch (...)
             {
@@ -3831,7 +4247,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
 
-                self->obj.SetAudioTracks(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAudioTracks(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3870,7 +4290,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>>(args, 0);
 
-                self->obj.SetTimedMetadataTracks(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTimedMetadataTracks(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3909,7 +4333,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 0);
 
-                self->obj.SetVideoTracks(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetVideoTracks(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3942,7 +4370,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Video());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Video();
+            }());
         }
         catch (...)
         {
@@ -3976,7 +4408,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(arg);
 
-            self->obj.Video(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Video(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4003,7 +4439,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Container();
+            }());
         }
         catch (...)
         {
@@ -4037,7 +4477,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>(arg);
 
-            self->obj.Container(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Container(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4064,7 +4508,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Audio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Audio();
+            }());
         }
         catch (...)
         {
@@ -4098,7 +4546,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(arg);
 
-            self->obj.Audio(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Audio(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4231,7 +4683,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Argb32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Argb32();
+            }());
         }
         catch (...)
         {
@@ -4257,7 +4713,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Aac());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Aac();
+            }());
         }
         catch (...)
         {
@@ -4283,7 +4743,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AacAdts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AacAdts();
+            }());
         }
         catch (...)
         {
@@ -4309,7 +4773,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ac3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ac3();
+            }());
         }
         catch (...)
         {
@@ -4335,7 +4803,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrNb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrNb();
+            }());
         }
         catch (...)
         {
@@ -4361,7 +4833,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrWb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrWb();
+            }());
         }
         catch (...)
         {
@@ -4387,7 +4863,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg();
+            }());
         }
         catch (...)
         {
@@ -4413,7 +4893,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Asf());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Asf();
+            }());
         }
         catch (...)
         {
@@ -4439,7 +4923,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Avi());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Avi();
+            }());
         }
         catch (...)
         {
@@ -4465,7 +4953,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bgra8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bgra8();
+            }());
         }
         catch (...)
         {
@@ -4491,7 +4983,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bmp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bmp();
+            }());
         }
         catch (...)
         {
@@ -4517,7 +5013,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Eac3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Eac3();
+            }());
         }
         catch (...)
         {
@@ -4543,7 +5043,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Float());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Float();
+            }());
         }
         catch (...)
         {
@@ -4569,7 +5073,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Gif());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Gif();
+            }());
         }
         catch (...)
         {
@@ -4595,7 +5103,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H263());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H263();
+            }());
         }
         catch (...)
         {
@@ -4621,7 +5133,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264();
+            }());
         }
         catch (...)
         {
@@ -4647,7 +5163,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264Es());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264Es();
+            }());
         }
         catch (...)
         {
@@ -4673,7 +5193,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Hevc());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Hevc();
+            }());
         }
         catch (...)
         {
@@ -4699,7 +5223,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::HevcEs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::HevcEs();
+            }());
         }
         catch (...)
         {
@@ -4725,7 +5253,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Iyuv());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Iyuv();
+            }());
         }
         catch (...)
         {
@@ -4751,7 +5283,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Jpeg());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Jpeg();
+            }());
         }
         catch (...)
         {
@@ -4777,7 +5313,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::JpegXr());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::JpegXr();
+            }());
         }
         catch (...)
         {
@@ -4803,7 +5343,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mjpg());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mjpg();
+            }());
         }
         catch (...)
         {
@@ -4829,7 +5373,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mp3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mp3();
+            }());
         }
         catch (...)
         {
@@ -4855,7 +5403,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg1();
+            }());
         }
         catch (...)
         {
@@ -4881,7 +5433,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg2();
+            }());
         }
         catch (...)
         {
@@ -4907,7 +5463,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg4());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg4();
+            }());
         }
         catch (...)
         {
@@ -4933,7 +5493,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Nv12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Nv12();
+            }());
         }
         catch (...)
         {
@@ -4959,7 +5523,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pcm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pcm();
+            }());
         }
         catch (...)
         {
@@ -4985,7 +5553,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Png());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Png();
+            }());
         }
         catch (...)
         {
@@ -5011,7 +5583,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb24());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb24();
+            }());
         }
         catch (...)
         {
@@ -5037,7 +5613,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb32();
+            }());
         }
         catch (...)
         {
@@ -5063,7 +5643,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Tiff());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Tiff();
+            }());
         }
         catch (...)
         {
@@ -5089,7 +5673,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wave());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wave();
+            }());
         }
         catch (...)
         {
@@ -5115,7 +5703,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma8();
+            }());
         }
         catch (...)
         {
@@ -5141,7 +5733,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma9());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma9();
+            }());
         }
         catch (...)
         {
@@ -5167,7 +5763,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wmv3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wmv3();
+            }());
         }
         catch (...)
         {
@@ -5193,7 +5793,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wvc1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wvc1();
+            }());
         }
         catch (...)
         {
@@ -5219,7 +5823,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yuy2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yuy2();
+            }());
         }
         catch (...)
         {
@@ -5245,7 +5853,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yv12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yv12();
+            }());
         }
         catch (...)
         {
@@ -5271,7 +5883,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::D16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::D16();
+            }());
         }
         catch (...)
         {
@@ -5297,7 +5913,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L16();
+            }());
         }
         catch (...)
         {
@@ -5323,7 +5943,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L8();
+            }());
         }
         catch (...)
         {
@@ -5349,7 +5973,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Vp9());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Vp9();
+            }());
         }
         catch (...)
         {
@@ -5375,7 +6003,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Alac());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Alac();
+            }());
         }
         catch (...)
         {
@@ -5401,7 +6033,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Flac());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Flac();
+            }());
         }
         catch (...)
         {
@@ -5427,7 +6063,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::P010());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::P010();
+            }());
         }
         catch (...)
         {
@@ -5453,7 +6093,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Heif());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Heif();
+            }());
         }
         catch (...)
         {
@@ -5479,7 +6123,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pgs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pgs();
+            }());
         }
         catch (...)
         {
@@ -5505,7 +6153,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Srt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Srt();
+            }());
         }
         catch (...)
         {
@@ -5531,7 +6183,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ssa());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ssa();
+            }());
         }
         catch (...)
         {
@@ -5557,7 +6213,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::VobSub());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::VobSub();
+            }());
         }
         catch (...)
         {
@@ -5583,7 +6243,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Av1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Av1();
+            }());
         }
         catch (...)
         {
@@ -5752,7 +6416,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5789,7 +6457,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -5825,7 +6497,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -5863,7 +6539,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -5902,7 +6582,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5940,7 +6624,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -5978,7 +6666,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6011,7 +6703,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -6048,7 +6744,11 @@ namespace py::cpp::Windows::Media::MediaProperties
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -6068,7 +6768,11 @@ namespace py::cpp::Windows::Media::MediaProperties
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::guid>(key)));
+            auto _key = py::convert_to<winrt::guid>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -6081,6 +6785,7 @@ namespace py::cpp::Windows::Media::MediaProperties
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -6095,12 +6800,22 @@ namespace py::cpp::Windows::Media::MediaProperties
         try
         {
             auto _key = py::convert_to<winrt::guid>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -6126,7 +6841,12 @@ namespace py::cpp::Windows::Media::MediaProperties
             auto _key = py::convert_to<winrt::guid>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -6134,7 +6854,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -6217,7 +6941,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Numerator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Numerator();
+            }());
         }
         catch (...)
         {
@@ -6251,7 +6979,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Numerator(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Numerator(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6278,7 +7010,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Denominator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Denominator();
+            }());
         }
         catch (...)
         {
@@ -6312,7 +7048,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Denominator(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Denominator(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6399,7 +7139,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::High());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::High();
+            }());
         }
         catch (...)
         {
@@ -6425,7 +7169,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Main());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Main();
+            }());
         }
         catch (...)
         {
@@ -6451,7 +7199,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SignalNoiseRatioScalable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SignalNoiseRatioScalable();
+            }());
         }
         catch (...)
         {
@@ -6477,7 +7229,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Simple());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Simple();
+            }());
         }
         catch (...)
         {
@@ -6503,7 +7259,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SpatiallyScalable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SpatiallyScalable();
+            }());
         }
         catch (...)
         {
@@ -6624,7 +7384,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Copy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Copy();
+                }());
             }
             catch (...)
             {
@@ -6660,7 +7424,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreatePgs());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreatePgs();
+                }());
             }
             catch (...)
             {
@@ -6696,7 +7464,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSrt());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSrt();
+                }());
             }
             catch (...)
             {
@@ -6734,7 +7506,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSsa(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSsa(param0);
+                }());
             }
             catch (...)
             {
@@ -6772,7 +7548,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateVobSub(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateVobSub(param0);
+                }());
             }
             catch (...)
             {
@@ -6810,13 +7590,17 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 winrt::com_array<uint8_t> param0{};
 
-                self->obj.GetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetFormatUserData(param0);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -6855,7 +7639,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.SetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFormatUserData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6888,7 +7676,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -6922,7 +7714,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6949,7 +7745,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -6975,7 +7775,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -7128,7 +7932,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Copy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Copy();
+                }());
             }
             catch (...)
             {
@@ -7164,7 +7972,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateAv1());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateAv1();
+                }());
             }
             catch (...)
             {
@@ -7200,7 +8012,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateH264());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateH264();
+                }());
             }
             catch (...)
             {
@@ -7236,7 +8052,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateHevc());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateHevc();
+                }());
             }
             catch (...)
             {
@@ -7272,7 +8092,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateMpeg2());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateMpeg2();
+                }());
             }
             catch (...)
             {
@@ -7312,7 +8136,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateUncompressed(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateUncompressed(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7348,7 +8176,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateVp9());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateVp9();
+                }());
             }
             catch (...)
             {
@@ -7386,13 +8218,17 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 winrt::com_array<uint8_t> param0{};
 
-                self->obj.GetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetFormatUserData(param0);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -7431,7 +8267,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.SetFormatUserData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFormatUserData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7464,7 +8304,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -7498,7 +8342,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7525,7 +8373,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -7551,7 +8403,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -7577,7 +8433,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -7611,7 +8471,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Width(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Width(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7638,7 +8502,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -7672,7 +8540,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Height(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Height(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7699,7 +8571,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bitrate();
+            }());
         }
         catch (...)
         {
@@ -7733,7 +8609,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Bitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7760,7 +8640,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelAspectRatio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelAspectRatio();
+            }());
         }
         catch (...)
         {
@@ -7786,7 +8670,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameRate();
+            }());
         }
         catch (...)
         {
@@ -7812,7 +8700,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileId();
+            }());
         }
         catch (...)
         {
@@ -7846,7 +8738,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ProfileId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7873,7 +8769,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.StereoscopicVideoPackingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StereoscopicVideoPackingMode();
+            }());
         }
         catch (...)
         {
@@ -7899,7 +8799,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.SphericalVideoFrameFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SphericalVideoFrameFormat();
+            }());
         }
         catch (...)
         {
@@ -8028,7 +8932,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile0ChromaSubsampling420BitDepth8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile0ChromaSubsampling420BitDepth8();
+            }());
         }
         catch (...)
         {
@@ -8054,7 +8962,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth10());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth10();
+            }());
         }
         catch (...)
         {
@@ -8080,7 +8992,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth12();
+            }());
         }
         catch (...)
         {
@@ -8173,7 +9089,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -8199,7 +9119,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtype();
+            }());
         }
         catch (...)
         {
@@ -8233,7 +9157,11 @@ namespace py::cpp::Windows::Media::MediaProperties
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subtype(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtype(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8260,7 +9188,11 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {

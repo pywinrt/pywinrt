@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Power
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Power::Battery::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Power::Battery::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Devices::Power
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Power::Battery::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Power::Battery::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Devices::Power
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -148,7 +160,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -174,7 +190,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Power::Battery::AggregateBattery());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Power::Battery::AggregateBattery();
+            }());
         }
         catch (...)
         {
@@ -202,7 +222,11 @@ namespace py::cpp::Windows::Devices::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Power::Battery, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ReportUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -230,7 +254,11 @@ namespace py::cpp::Windows::Devices::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReportUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -355,7 +383,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChargeRateInMilliwatts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChargeRateInMilliwatts();
+            }());
         }
         catch (...)
         {
@@ -381,7 +413,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesignCapacityInMilliwattHours());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesignCapacityInMilliwattHours();
+            }());
         }
         catch (...)
         {
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.FullChargeCapacityInMilliwattHours());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FullChargeCapacityInMilliwattHours();
+            }());
         }
         catch (...)
         {
@@ -433,7 +473,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemainingCapacityInMilliwattHours());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemainingCapacityInMilliwattHours();
+            }());
         }
         catch (...)
         {
@@ -459,7 +503,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -556,7 +604,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLowUserExperienceImpact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLowUserExperienceImpact();
+            }());
         }
         catch (...)
         {
@@ -582,7 +634,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.Severity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Severity();
+            }());
         }
         catch (...)
         {
@@ -680,7 +736,11 @@ namespace py::cpp::Windows::Devices::Power
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Power::PowerGridForecast::GetForecast());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Power::PowerGridForecast::GetForecast();
+                }());
             }
             catch (...)
             {
@@ -712,7 +772,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.BlockDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BlockDuration();
+            }());
         }
         catch (...)
         {
@@ -738,7 +802,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.Forecast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Forecast();
+            }());
         }
         catch (...)
         {
@@ -764,7 +832,11 @@ namespace py::cpp::Windows::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -792,7 +864,11 @@ namespace py::cpp::Windows::Devices::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -820,7 +896,11 @@ namespace py::cpp::Windows::Devices::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

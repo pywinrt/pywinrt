@@ -66,7 +66,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowBadgeIfUserNotEngaged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowBadgeIfUserNotEngaged();
+            }());
         }
         catch (...)
         {
@@ -100,7 +104,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowBadgeIfUserNotEngaged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowBadgeIfUserNotEngaged(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -127,7 +135,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecondaryTextColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecondaryTextColor();
+            }());
         }
         catch (...)
         {
@@ -161,7 +173,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementTextColor>(arg);
 
-            self->obj.SecondaryTextColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SecondaryTextColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -188,7 +204,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecondaryText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecondaryText();
+            }());
         }
         catch (...)
         {
@@ -222,7 +242,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SecondaryText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SecondaryText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -249,7 +273,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryTextColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryTextColor();
+            }());
         }
         catch (...)
         {
@@ -283,7 +311,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementTextColor>(arg);
 
-            self->obj.PrimaryTextColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrimaryTextColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -310,7 +342,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryText();
+            }());
         }
         catch (...)
         {
@@ -344,7 +380,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PrimaryText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrimaryText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -371,7 +411,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.LightModeIconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LightModeIconUri();
+            }());
         }
         catch (...)
         {
@@ -405,7 +449,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.LightModeIconUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LightModeIconUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -432,7 +480,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSecondaryTextSubtle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSecondaryTextSubtle();
+            }());
         }
         catch (...)
         {
@@ -466,7 +518,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSecondaryTextSubtle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSecondaryTextSubtle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -493,7 +549,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -527,7 +587,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -554,7 +618,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationTime();
+            }());
         }
         catch (...)
         {
@@ -588,7 +656,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.ExpirationTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExpirationTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -615,7 +687,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -649,7 +725,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -676,7 +756,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.DarkModeIconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DarkModeIconUri();
+            }());
         }
         catch (...)
         {
@@ -710,7 +794,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.DarkModeIconUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DarkModeIconUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -737,7 +825,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomAccessibilityText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomAccessibilityText();
+            }());
         }
         catch (...)
         {
@@ -771,7 +863,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CustomAccessibilityText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomAccessibilityText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -876,7 +972,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActionKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionKind();
+            }());
         }
         catch (...)
         {
@@ -902,7 +1002,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnnouncementId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AnnouncementId();
+            }());
         }
         catch (...)
         {
@@ -928,7 +1032,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -954,7 +1062,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {

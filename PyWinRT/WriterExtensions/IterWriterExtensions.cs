@@ -40,7 +40,13 @@ static class IterWriterExtensions
                 var method = type.Methods.Single(m => m.Name == "First");
                 var self = type.GetMethodInvokeContext(method);
 
-                w.WriteLine($"return py::convert({self}First());");
+                w.WriteLine("return py::convert([&]()");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"return {self}First();");
+                w.Indent--;
+                w.WriteLine("}());");
             });
         }
         else
@@ -59,9 +65,15 @@ static class IterWriterExtensions
             w.WriteLine($"if ({self}HasCurrent())");
             w.WriteLine("{");
             w.Indent++;
+            w.WriteLine("return py::convert([&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
             w.WriteLine($"auto cur = {self}Current();");
             w.WriteLine($"{self}MoveNext();");
-            w.WriteLine("return py::convert(cur);");
+            w.WriteLine("return cur;");
+            w.Indent--;
+            w.WriteLine("}());");
             w.Indent--;
             w.WriteLine("}");
             w.WriteLine("else");

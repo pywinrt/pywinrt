@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Media::Casting
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Media::Casting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DisconnectAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DisconnectAsync();
+                }());
             }
             catch (...)
             {
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(args, 0);
 
-                return py::convert(self->obj.RequestStartCastingAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStartCastingAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -149,7 +161,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -183,7 +199,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(arg);
 
-            self->obj.Source(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Source(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -210,7 +230,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -236,7 +260,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -264,7 +292,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingConnection, winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>>(arg);
 
-            return py::convert(self->obj.ErrorOccurred(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorOccurred(param0);
+            }());
         }
         catch (...)
         {
@@ -292,7 +324,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ErrorOccurred(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorOccurred(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -321,7 +357,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingConnection, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -349,7 +389,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -392,7 +436,11 @@ namespace py::cpp::Windows::Media::Casting
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -473,7 +521,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -499,7 +551,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -597,7 +653,11 @@ namespace py::cpp::Windows::Media::Casting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateCastingConnection());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCastingConnection();
+                }());
             }
             catch (...)
             {
@@ -635,7 +695,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Casting::CastingDevice::DeviceInfoSupportsCastingAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Casting::CastingDevice::DeviceInfoSupportsCastingAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -673,7 +737,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Casting::CastingDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Casting::CastingDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -711,7 +779,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingPlaybackTypes>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -749,7 +821,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelectorFromCastingSourceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelectorFromCastingSourceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -785,7 +861,11 @@ namespace py::cpp::Windows::Media::Casting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedCastingPlaybackTypesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedCastingPlaybackTypesAsync();
+                }());
             }
             catch (...)
             {
@@ -817,7 +897,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -843,7 +927,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -869,7 +957,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1021,7 +1113,11 @@ namespace py::cpp::Windows::Media::Casting
                     return nullptr;
                 }
 
-                self->obj.Hide();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Hide();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1060,7 +1156,11 @@ namespace py::cpp::Windows::Media::Casting
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                self->obj.Show(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1100,7 +1200,11 @@ namespace py::cpp::Windows::Media::Casting
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                self->obj.Show(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1133,7 +1237,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appearance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appearance();
+            }());
         }
         catch (...)
         {
@@ -1159,7 +1267,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Filter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Filter();
+            }());
         }
         catch (...)
         {
@@ -1187,7 +1299,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingDevicePicker, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CastingDevicePickerDismissed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CastingDevicePickerDismissed(param0);
+            }());
         }
         catch (...)
         {
@@ -1215,7 +1331,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CastingDevicePickerDismissed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CastingDevicePickerDismissed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1244,7 +1364,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingDevicePicker, winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>>(arg);
 
-            return py::convert(self->obj.CastingDeviceSelected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CastingDeviceSelected(param0);
+            }());
         }
         catch (...)
         {
@@ -1272,7 +1396,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CastingDeviceSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CastingDeviceSelected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1374,7 +1502,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsVideo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsVideo();
+            }());
         }
         catch (...)
         {
@@ -1408,7 +1540,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SupportsVideo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SupportsVideo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1435,7 +1571,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsPictures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsPictures();
+            }());
         }
         catch (...)
         {
@@ -1469,7 +1609,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SupportsPictures(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SupportsPictures(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1496,7 +1640,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsAudio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsAudio();
+            }());
         }
         catch (...)
         {
@@ -1530,7 +1678,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SupportsAudio(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SupportsAudio(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1557,7 +1709,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedCastingSources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedCastingSources();
+            }());
         }
         catch (...)
         {
@@ -1653,7 +1809,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedCastingDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedCastingDevice();
+            }());
         }
         catch (...)
         {
@@ -1746,7 +1906,11 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredSourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredSourceUri();
+            }());
         }
         catch (...)
         {
@@ -1780,7 +1944,11 @@ namespace py::cpp::Windows::Media::Casting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.PreferredSourceUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredSourceUri(param0);
+            }
+
             return 0;
         }
         catch (...)

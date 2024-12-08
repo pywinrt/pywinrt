@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Perception::People
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::People::EyesPose::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::People::EyesPose::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Perception::People
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::People::EyesPose::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::People::EyesPose::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gaze());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gaze();
+            }());
         }
         catch (...)
         {
@@ -136,7 +148,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCalibrationValid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCalibrationValid();
+            }());
         }
         catch (...)
         {
@@ -162,7 +178,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTimestamp();
+            }());
         }
         catch (...)
         {
@@ -290,7 +310,11 @@ namespace py::cpp::Windows::Perception::People
 
                 auto param0 = py::convert_to<py::pybuf_view<uint16_t, true>>(args, 0);
 
-                self->obj.GetTriangleIndices(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetTriangleIndices(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -329,7 +353,11 @@ namespace py::cpp::Windows::Perception::People
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::People::HandPose>(args, 0);
 
-                return py::convert(self->obj.GetVertexStateForPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVertexStateForPose(param0);
+                }());
             }
             catch (...)
             {
@@ -361,7 +389,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelId();
+            }());
         }
         catch (...)
         {
@@ -387,7 +419,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.NeutralPose());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NeutralPose();
+            }());
         }
         catch (...)
         {
@@ -413,7 +449,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.NeutralPoseVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NeutralPoseVersion();
+            }());
         }
         catch (...)
         {
@@ -439,7 +479,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -465,7 +509,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriangleIndexCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriangleIndexCount();
+            }());
         }
         catch (...)
         {
@@ -491,7 +539,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexCount();
+            }());
         }
         catch (...)
         {
@@ -597,7 +649,11 @@ namespace py::cpp::Windows::Perception::People
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandMeshVertex, true>>(args, 0);
 
-                self->obj.GetVertices(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetVertices(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -630,7 +686,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -656,7 +716,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTimestamp();
+            }());
         }
         catch (...)
         {
@@ -758,7 +822,11 @@ namespace py::cpp::Windows::Perception::People
                 auto param0 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 1);
 
-                return py::convert(self->obj.GetRelativeJoint(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRelativeJoint(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -798,7 +866,11 @@ namespace py::cpp::Windows::Perception::People
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandJointKind, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::JointPose, true>>(args, 2);
 
-                self->obj.GetRelativeJoints(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetRelativeJoints(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -839,7 +911,11 @@ namespace py::cpp::Windows::Perception::People
                 auto param1 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 1);
                 winrt::Windows::Perception::People::JointPose param2{};
 
-                auto return_value = self->obj.TryGetJoint(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetJoint(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -851,6 +927,7 @@ namespace py::cpp::Windows::Perception::People
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -891,7 +968,11 @@ namespace py::cpp::Windows::Perception::People
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandJointKind, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::JointPose, true>>(args, 2);
 
-                return py::convert(self->obj.TryGetJoints(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetJoints(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -993,7 +1074,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForwardDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardDirection();
+            }());
         }
         catch (...)
         {
@@ -1019,7 +1104,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -1045,7 +1134,11 @@ namespace py::cpp::Windows::Perception::People
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpDirection();
+            }());
         }
         catch (...)
         {

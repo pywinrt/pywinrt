@@ -38,7 +38,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelRange();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -194,7 +218,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -220,7 +248,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -246,7 +278,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -353,7 +389,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::ImageFeatureValue::CreateFromVideoFrame(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::ImageFeatureValue::CreateFromVideoFrame(param0);
+                }());
             }
             catch (...)
             {
@@ -385,7 +425,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoFrame();
+            }());
         }
         catch (...)
         {
@@ -411,7 +455,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -535,7 +583,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -574,7 +626,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromFilePath(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromFilePath(param0);
+                }());
             }
             catch (...)
             {
@@ -613,7 +669,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromFilePath(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromFilePath(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -651,7 +711,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStorageFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStorageFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -690,7 +754,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStorageFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStorageFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -728,7 +796,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0);
+                }());
             }
             catch (...)
             {
@@ -766,7 +838,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -805,7 +881,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -844,7 +924,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -876,7 +960,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Author());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Author();
+            }());
         }
         catch (...)
         {
@@ -902,7 +990,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -928,7 +1020,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Domain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Domain();
+            }());
         }
         catch (...)
         {
@@ -954,7 +1050,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputFeatures();
+            }());
         }
         catch (...)
         {
@@ -980,7 +1080,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metadata();
+            }());
         }
         catch (...)
         {
@@ -1006,7 +1110,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1032,7 +1140,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFeatures();
+            }());
         }
         catch (...)
         {
@@ -1058,7 +1170,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -1100,7 +1216,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1244,7 +1364,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.Bind(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Bind(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1285,7 +1409,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
-                self->obj.Bind(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Bind(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1322,7 +1450,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1359,7 +1491,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1397,7 +1533,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1435,7 +1575,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -1474,7 +1618,10 @@ namespace py::cpp::Windows::AI::MachineLearning
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -1486,6 +1633,7 @@ namespace py::cpp::Windows::AI::MachineLearning
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -1518,7 +1666,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1555,7 +1707,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -1575,7 +1731,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1588,6 +1748,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1602,12 +1763,22 @@ namespace py::cpp::Windows::AI::MachineLearning
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1727,7 +1898,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModelDevice::CreateFromDirect3D11Device(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::LearningModelDevice::CreateFromDirect3D11Device(param0);
+                }());
             }
             catch (...)
             {
@@ -1759,7 +1934,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdapterId();
+            }());
         }
         catch (...)
         {
@@ -1785,7 +1964,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direct3D11Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direct3D11Device();
+            }());
         }
         catch (...)
         {
@@ -1905,7 +2088,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2118,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -1957,7 +2148,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Outputs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Outputs();
+            }());
         }
         catch (...)
         {
@@ -1983,7 +2178,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -2140,7 +2339,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2180,7 +2383,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Evaluate(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Evaluate(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2219,7 +2426,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.EvaluateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2258,7 +2469,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.EvaluateFeatures(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateFeatures(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2297,7 +2512,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.EvaluateFeaturesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateFeaturesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2329,7 +2548,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -2355,7 +2578,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.EvaluationProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EvaluationProperties();
+            }());
         }
         catch (...)
         {
@@ -2381,7 +2608,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Model());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Model();
+            }());
         }
         catch (...)
         {
@@ -2423,7 +2654,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2531,7 +2766,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.OverrideNamedDimension(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OverrideNamedDimension(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2564,7 +2803,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.BatchSizeOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BatchSizeOverride();
+            }());
         }
         catch (...)
         {
@@ -2598,7 +2841,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.BatchSizeOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BatchSizeOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2625,7 +2872,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.CloseModelOnSessionCreation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CloseModelOnSessionCreation();
+            }());
         }
         catch (...)
         {
@@ -2659,7 +2910,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CloseModelOnSessionCreation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CloseModelOnSessionCreation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2755,7 +3010,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2781,7 +3040,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -2807,7 +3070,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2833,7 +3100,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2859,7 +3130,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyKind();
+            }());
         }
         catch (...)
         {
@@ -2885,7 +3160,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueDescriptor();
+            }());
         }
         catch (...)
         {
@@ -2983,7 +3262,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3009,7 +3292,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -3035,7 +3322,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3061,7 +3352,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -3087,7 +3382,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementDescriptor();
+            }());
         }
         catch (...)
         {
@@ -3188,7 +3487,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3225,7 +3528,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::Create();
+                }());
             }
             catch (...)
             {
@@ -3263,7 +3570,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -3302,7 +3613,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3341,7 +3656,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3380,7 +3699,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<bool>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3419,7 +3742,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorBoolean::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3455,7 +3782,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -3491,7 +3822,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -3523,7 +3858,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3549,7 +3888,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -3575,7 +3918,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -3617,7 +3964,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3729,7 +4080,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3766,7 +4121,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::Create();
+                }());
             }
             catch (...)
             {
@@ -3804,7 +4163,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -3843,7 +4206,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3882,7 +4249,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3921,7 +4292,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<double>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3960,7 +4335,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorDouble::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3996,7 +4375,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -4032,7 +4415,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -4064,7 +4451,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4090,7 +4481,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -4116,7 +4511,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -4158,7 +4557,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4266,7 +4669,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -4292,7 +4699,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -4318,7 +4729,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4344,7 +4759,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4370,7 +4789,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -4396,7 +4819,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -4498,7 +4925,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4535,7 +4966,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::Create();
+                }());
             }
             catch (...)
             {
@@ -4573,7 +5008,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -4612,7 +5051,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4651,7 +5094,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4690,7 +5137,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4729,7 +5180,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4765,7 +5220,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -4801,7 +5260,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -4833,7 +5296,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4859,7 +5326,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -4885,7 +5356,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -4927,7 +5402,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -5039,7 +5518,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5076,7 +5559,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -5114,7 +5601,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -5153,7 +5644,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5192,7 +5687,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5231,7 +5730,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5270,7 +5773,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorFloat16Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5306,7 +5813,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -5342,7 +5853,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -5374,7 +5889,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -5400,7 +5919,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -5426,7 +5949,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -5468,7 +5995,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -5580,7 +6111,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5617,7 +6152,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -5655,7 +6194,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -5694,7 +6237,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5733,7 +6280,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5772,7 +6323,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int16_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5811,7 +6366,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt16Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5847,7 +6406,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -5883,7 +6446,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -5915,7 +6482,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -5941,7 +6512,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -5967,7 +6542,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -6009,7 +6588,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6121,7 +6704,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6158,7 +6745,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -6196,7 +6787,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -6235,7 +6830,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6274,7 +6873,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6313,7 +6916,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int32_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6352,7 +6959,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt32Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6388,7 +6999,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -6424,7 +7039,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -6456,7 +7075,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -6482,7 +7105,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -6508,7 +7135,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -6550,7 +7181,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6662,7 +7297,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6699,7 +7338,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -6737,7 +7380,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -6776,7 +7423,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6815,7 +7466,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6854,7 +7509,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6893,7 +7552,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt64Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6929,7 +7592,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -6965,7 +7632,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -6997,7 +7668,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -7023,7 +7698,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -7049,7 +7728,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -7091,7 +7774,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -7203,7 +7890,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7240,7 +7931,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -7278,7 +7973,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -7317,7 +8016,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7356,7 +8059,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7395,7 +8102,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7434,7 +8145,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorInt8Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7470,7 +8185,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -7506,7 +8225,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -7538,7 +8261,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -7564,7 +8291,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -7590,7 +8321,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -7632,7 +8367,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -7744,7 +8483,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7781,7 +8524,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorString::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorString::Create();
+                }());
             }
             catch (...)
             {
@@ -7819,7 +8566,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorString::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorString::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -7858,7 +8609,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorString::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorString::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7897,7 +8652,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorString::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorString::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7936,7 +8695,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorString::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorString::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7972,7 +8735,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -8008,7 +8775,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -8040,7 +8811,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -8066,7 +8841,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -8092,7 +8871,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -8134,7 +8917,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -8245,7 +9032,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8282,7 +9073,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -8320,7 +9115,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -8359,7 +9158,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8398,7 +9201,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8437,7 +9244,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint16_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8476,7 +9287,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt16Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8512,7 +9327,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -8548,7 +9367,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -8580,7 +9403,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -8606,7 +9433,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -8632,7 +9463,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -8674,7 +9509,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -8786,7 +9625,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8823,7 +9666,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -8861,7 +9708,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -8900,7 +9751,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8939,7 +9794,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8978,7 +9837,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9017,7 +9880,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt32Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9053,7 +9920,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -9089,7 +9960,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -9121,7 +9996,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -9147,7 +10026,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -9173,7 +10056,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -9215,7 +10102,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -9327,7 +10218,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9364,7 +10259,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -9402,7 +10301,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -9441,7 +10344,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9480,7 +10387,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9519,7 +10430,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint64_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9558,7 +10473,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt64Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9594,7 +10513,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -9630,7 +10553,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -9662,7 +10589,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -9688,7 +10619,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -9714,7 +10649,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -9756,7 +10695,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -9868,7 +10811,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9905,7 +10852,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create();
+                }());
             }
             catch (...)
             {
@@ -9943,7 +10894,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -9982,7 +10937,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10021,7 +10980,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromBuffer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromBuffer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10060,7 +11023,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10099,7 +11066,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromShapeArrayAndDataArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::TensorUInt8Bit::CreateFromShapeArrayAndDataArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10135,7 +11106,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -10171,7 +11146,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAsVectorView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsVectorView();
+                }());
             }
             catch (...)
             {
@@ -10203,7 +11182,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -10229,7 +11212,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -10255,7 +11242,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -10297,7 +11288,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -10405,7 +11400,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -10431,7 +11430,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -10457,7 +11460,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -10483,7 +11490,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -10721,7 +11732,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -11024,7 +12039,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -11050,7 +12069,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.TensorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TensorKind();
+            }());
         }
         catch (...)
         {
@@ -11076,7 +12099,11 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {

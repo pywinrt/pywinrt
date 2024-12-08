@@ -38,7 +38,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -156,7 +160,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomQueryParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomQueryParameters();
+            }());
         }
         catch (...)
         {
@@ -182,7 +190,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -276,7 +288,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnalyticsJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AnalyticsJson();
+            }());
         }
         catch (...)
         {
@@ -302,7 +318,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -328,7 +348,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -423,7 +447,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -449,7 +477,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -543,7 +575,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -569,7 +605,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -663,7 +703,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorJson();
+            }());
         }
         catch (...)
         {
@@ -689,7 +733,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -715,7 +763,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -814,7 +866,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -850,7 +906,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetEnabledFeedProviders());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnabledFeedProviders();
+                }());
             }
             catch (...)
             {
@@ -890,7 +950,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.SendMessageToContent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessageToContent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -929,7 +993,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions>(args, 0);
 
-                self->obj.SetCustomQueryParameters(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetCustomQueryParameters(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -970,7 +1038,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>(args, 2);
 
-                self->obj.TryShowAnnouncement(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TryShowAnnouncement(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1099,7 +1171,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1201,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1151,7 +1231,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1246,7 +1330,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1339,7 +1427,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1432,7 +1524,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnabledFeedDefinitionIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnabledFeedDefinitionIds();
+            }());
         }
         catch (...)
         {
@@ -1458,7 +1554,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1552,7 +1652,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -1586,7 +1690,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Method(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1613,7 +1721,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -1647,7 +1759,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::StringMap>(arg);
 
-            self->obj.Headers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Headers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1674,7 +1790,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -1708,7 +1828,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1735,7 +1859,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -1835,7 +1963,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1867,7 +1999,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -1901,7 +2037,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>(arg);
 
-            self->obj.Response(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Response(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1928,7 +2068,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1954,7 +2098,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeedProviderDefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeedProviderDefinitionId();
+            }());
         }
         catch (...)
         {
@@ -1980,7 +2128,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2103,7 +2255,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -2137,7 +2293,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(arg);
 
-            self->obj.Headers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Headers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2164,7 +2324,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -2190,7 +2354,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReasonPhrase());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReasonPhrase();
+            }());
         }
         catch (...)
         {
@@ -2216,7 +2384,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.StatusCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusCode();
+            }());
         }
         catch (...)
         {
@@ -2318,7 +2490,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs>(args, 0);
 
-                self->obj.OnAnnouncementInvoked(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnAnnouncementInvoked(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2514,7 +2690,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetEnabledFeedProviders());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnabledFeedProviders();
+                }());
             }
             catch (...)
             {
@@ -2552,7 +2732,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions>(args, 0);
 
-                self->obj.SetCustomQueryParameters(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetCustomQueryParameters(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2780,7 +2964,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.SendMessageToContent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessageToContent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2821,7 +3009,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>(args, 2);
 
-                self->obj.TryShowAnnouncement(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TryShowAnnouncement(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3086,7 +3278,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersRequestedArgs>(args, 0);
 
-                self->obj.OnCustomQueryParametersRequested(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnCustomQueryParametersRequested(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3125,7 +3321,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedDisabledArgs>(args, 0);
 
-                self->obj.OnFeedDisabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnFeedDisabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3164,7 +3364,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedEnabledArgs>(args, 0);
 
-                self->obj.OnFeedEnabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnFeedEnabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3203,7 +3407,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderDisabledArgs>(args, 0);
 
-                self->obj.OnFeedProviderDisabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnFeedProviderDisabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3242,7 +3450,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs>(args, 0);
 
-                self->obj.OnFeedProviderEnabled(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnFeedProviderEnabled(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3564,7 +3776,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>(args, 0);
 
-                self->obj.OnAnalyticsInfoReported(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnAnalyticsInfoReported(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3762,7 +3978,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>(args, 0);
 
-                self->obj.OnErrorInfoReported(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnErrorInfoReported(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3960,7 +4180,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>(args, 0);
 
-                self->obj.OnMessageReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnMessageReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4158,7 +4382,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>(args, 0);
 
-                self->obj.OnResourceRequested(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnResourceRequested(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

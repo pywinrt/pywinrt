@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommandName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandName();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeechRecognitionResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpeechRecognitionResult();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -278,7 +294,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Confirmed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Confirmed();
+            }());
         }
         catch (...)
         {
@@ -393,7 +413,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -427,7 +451,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -454,7 +482,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextLine3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextLine3();
+            }());
         }
         catch (...)
         {
@@ -488,7 +520,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TextLine3(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextLine3(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -515,7 +551,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextLine2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextLine2();
+            }());
         }
         catch (...)
         {
@@ -549,7 +589,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TextLine2(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextLine2(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -576,7 +620,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextLine1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextLine1();
+            }());
         }
         catch (...)
         {
@@ -610,7 +658,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TextLine1(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextLine1(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -637,7 +689,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Image());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Image();
+            }());
         }
         catch (...)
         {
@@ -671,7 +727,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(arg);
 
-            self->obj.Image(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Image(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -698,7 +758,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentTileType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentTileType();
+            }());
         }
         catch (...)
         {
@@ -732,7 +796,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType>(arg);
 
-            self->obj.ContentTileType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentTileType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -759,7 +827,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppLaunchArgument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppLaunchArgument();
+            }());
         }
         catch (...)
         {
@@ -793,7 +865,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AppLaunchArgument(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppLaunchArgument(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -820,7 +896,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppContext();
+            }());
         }
         catch (...)
         {
@@ -854,7 +934,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.AppContext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppContext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -962,7 +1046,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.SetPhraseListAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPhraseListAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -994,7 +1082,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -1020,7 +1112,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1113,7 +1209,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1145,7 +1245,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstalledCommandDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstalledCommandDefinitions();
+            }());
         }
         catch (...)
         {
@@ -1237,7 +1341,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedItem();
+            }());
         }
         catch (...)
         {
@@ -1336,7 +1444,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -1375,7 +1487,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponseForPrompt(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponseForPrompt(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1415,7 +1531,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponseForPrompt(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponseForPrompt(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1454,7 +1574,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1486,7 +1610,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.RepeatMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RepeatMessage();
+            }());
         }
         catch (...)
         {
@@ -1520,7 +1648,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(arg);
 
-            self->obj.RepeatMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RepeatMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1547,7 +1679,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1581,7 +1717,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(arg);
 
-            self->obj.Message(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Message(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1608,7 +1748,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppLaunchArgument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppLaunchArgument();
+            }());
         }
         catch (...)
         {
@@ -1642,7 +1786,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AppLaunchArgument(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppLaunchArgument(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1669,7 +1817,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.VoiceCommandContentTiles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VoiceCommandContentTiles();
+            }());
         }
         catch (...)
         {
@@ -1695,7 +1847,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::MaxSupportedVoiceCommandContentTiles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::MaxSupportedVoiceCommandContentTiles();
+            }());
         }
         catch (...)
         {
@@ -1827,7 +1983,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection::FromAppServiceTriggerDetails(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection::FromAppServiceTriggerDetails(param0);
+                }());
             }
             catch (...)
             {
@@ -1863,7 +2023,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVoiceCommandAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVoiceCommandAsync();
+                }());
             }
             catch (...)
             {
@@ -1901,7 +2065,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.ReportFailureAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailureAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1939,7 +2107,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.ReportProgressAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportProgressAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1977,7 +2149,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.ReportSuccessAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportSuccessAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2015,7 +2191,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.RequestAppLaunchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAppLaunchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2053,7 +2233,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.RequestConfirmationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestConfirmationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2091,7 +2275,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
-                return py::convert(self->obj.RequestDisambiguationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDisambiguationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2123,7 +2311,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -2151,7 +2343,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection, winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.VoiceCommandCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VoiceCommandCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2179,7 +2375,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.VoiceCommandCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VoiceCommandCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2330,7 +2530,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpokenMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpokenMessage();
+            }());
         }
         catch (...)
         {
@@ -2364,7 +2568,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SpokenMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpokenMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2391,7 +2599,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMessage();
+            }());
         }
         catch (...)
         {
@@ -2425,7 +2637,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayMessage(param0);
+            }
+
             return 0;
         }
         catch (...)

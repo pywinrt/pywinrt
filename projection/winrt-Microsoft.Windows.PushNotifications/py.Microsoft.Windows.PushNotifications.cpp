@@ -42,7 +42,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -75,7 +79,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationTime();
+            }());
         }
         catch (...)
         {
@@ -101,7 +109,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -196,7 +208,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -222,7 +238,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -248,7 +268,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -349,7 +373,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.CreateChannelAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateChannelAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -385,7 +413,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -421,7 +453,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                self->obj.Register();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Register();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -458,7 +494,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                self->obj.Unregister();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -495,7 +535,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                self->obj.UnregisterAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -528,7 +572,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::Default());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::Default();
+            }());
         }
         catch (...)
         {
@@ -556,7 +604,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager, winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.PushReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PushReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -584,7 +636,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PushReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PushReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -714,7 +770,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -746,7 +806,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Payload());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Payload();
+            }());
         }
         catch (...)
         {
@@ -774,7 +838,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
-            return py::convert(self->obj.Canceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled(param0);
+            }());
         }
         catch (...)
         {
@@ -802,7 +870,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

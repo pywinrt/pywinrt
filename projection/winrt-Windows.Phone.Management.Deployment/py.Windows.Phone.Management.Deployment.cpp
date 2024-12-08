@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnrollmentValidFrom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnrollmentValidFrom();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnrollmentValidTo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnrollmentValidTo();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.WorkplaceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkplaceId();
+            }());
         }
         catch (...)
         {
@@ -264,7 +288,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::RequestEnrollmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::RequestEnrollmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -302,7 +330,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::Management::Deployment::Enterprise>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::RequestUnenrollmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::RequestUnenrollmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -338,7 +370,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::ValidateEnterprisesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::ValidateEnterprisesAsync();
+                }());
             }
             catch (...)
             {
@@ -370,7 +406,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::CurrentEnterprise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::CurrentEnterprise();
+            }());
         }
         catch (...)
         {
@@ -396,7 +436,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::EnrolledEnterprises());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager::EnrolledEnterprises();
+            }());
         }
         catch (...)
         {
@@ -491,7 +535,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnrolledEnterprise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnrolledEnterprise();
+            }());
         }
         catch (...)
         {
@@ -517,7 +565,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -610,7 +662,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::AddPackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::AddPackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -652,7 +708,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 4);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::AddPackageAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::AddPackageAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -688,7 +748,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackages());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackages();
+                }());
             }
             catch (...)
             {
@@ -727,7 +791,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackages(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackages(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -763,7 +831,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackagesForCurrentPublisher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::FindPackagesForCurrentPublisher();
+                }());
             }
             catch (...)
             {
@@ -799,7 +871,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::GetPendingPackageInstalls());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::GetPendingPackageInstalls();
+                }());
             }
             catch (...)
             {
@@ -839,7 +915,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::RegisterPackageAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::RegisterPackageAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -878,7 +958,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovalOptions>(args, 1);
 
-                return py::convert(winrt::Windows::Phone::Management::Deployment::InstallationManager::RemovePackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Management::Deployment::InstallationManager::RemovePackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -982,7 +1066,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallState();
+            }());
         }
         catch (...)
         {
@@ -1008,7 +1096,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProductId();
+            }());
         }
         catch (...)
         {
@@ -1034,7 +1126,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {

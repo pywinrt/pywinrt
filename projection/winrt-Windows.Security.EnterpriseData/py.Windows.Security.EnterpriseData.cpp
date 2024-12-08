@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Buffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Buffer();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionInfo();
+            }());
         }
         catch (...)
         {
@@ -158,7 +166,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identity();
+            }());
         }
         catch (...)
         {
@@ -184,7 +196,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -276,7 +292,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetProtectionInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetProtectionInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -314,7 +334,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetStreamProtectionInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetStreamProtectionInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -353,7 +377,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::ProtectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::ProtectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -393,7 +421,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::ProtectStreamAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::ProtectStreamAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -431,7 +463,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::UnprotectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::UnprotectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -470,7 +506,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::UnprotectStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::DataProtectionManager::UnprotectStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -572,7 +612,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identity();
+            }());
         }
         catch (...)
         {
@@ -598,7 +642,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRoamable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRoamable();
+            }());
         }
         catch (...)
         {
@@ -624,7 +672,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -650,7 +702,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsProtectWhileOpenSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsProtectWhileOpenSupported();
+            }());
         }
         catch (...)
         {
@@ -745,7 +801,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::CopyProtectionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::CopyProtectionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -786,7 +846,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 3);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::CreateProtectedAndOpenAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::CreateProtectedAndOpenAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -824,7 +888,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::GetProtectionInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::GetProtectionInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -862,7 +930,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::IsContainerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::IsContainerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -900,7 +972,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -940,7 +1016,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -979,7 +1059,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1018,7 +1102,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::ProtectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::ProtectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1056,7 +1144,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::SaveFileAsContainerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::SaveFileAsContainerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1095,7 +1187,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::SaveFileAsContainerAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::SaveFileAsContainerAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1133,7 +1229,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::UnprotectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::UnprotectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1172,7 +1272,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::UnprotectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::UnprotectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1279,7 +1383,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileRevocationManager::CopyProtectionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileRevocationManager::CopyProtectionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1317,7 +1425,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileRevocationManager::GetStatusAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileRevocationManager::GetStatusAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1356,7 +1468,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::FileRevocationManager::ProtectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileRevocationManager::ProtectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1394,7 +1510,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::EnterpriseData::FileRevocationManager::Revoke(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::EnterpriseData::FileRevocationManager::Revoke(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1519,7 +1639,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Audit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Audit();
+            }());
         }
         catch (...)
         {
@@ -1553,7 +1677,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Audit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Audit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1647,7 +1775,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identities();
+            }());
         }
         catch (...)
         {
@@ -1744,7 +1876,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1776,7 +1912,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -1802,7 +1942,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identities();
+            }());
         }
         catch (...)
         {
@@ -1897,7 +2041,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -1923,7 +2071,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2017,7 +2169,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -2043,7 +2199,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2137,7 +2297,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identities();
+            }());
         }
         catch (...)
         {
@@ -2230,7 +2394,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -2256,7 +2424,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionInfo();
+            }());
         }
         catch (...)
         {
@@ -2282,7 +2454,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stream();
+            }());
         }
         catch (...)
         {
@@ -2420,7 +2596,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetDescription();
+            }());
         }
         catch (...)
         {
@@ -2454,7 +2634,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TargetDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2481,7 +2665,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDescription();
+            }());
         }
         catch (...)
         {
@@ -2515,7 +2703,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SourceDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2542,7 +2734,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataDescription();
+            }());
         }
         catch (...)
         {
@@ -2576,7 +2772,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DataDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2603,7 +2803,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -2637,7 +2841,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>(arg);
 
-            self->obj.Action(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Action(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2741,7 +2949,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CheckAccess(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CheckAccess(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2780,7 +2992,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CheckAccessForApp(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CheckAccessForApp(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2816,7 +3032,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                     return nullptr;
                 }
 
-                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ClearProcessUIPolicy();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ClearProcessUIPolicy();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2855,7 +3075,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CreateCurrentThreadNetworkContext(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CreateCurrentThreadNetworkContext(param0);
+                }());
             }
             catch (...)
             {
@@ -2893,7 +3117,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetEnforcementLevel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetEnforcementLevel(param0);
+                }());
             }
             catch (...)
             {
@@ -2929,7 +3157,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -2967,7 +3199,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForIdentity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForIdentity(param0);
+                }());
             }
             catch (...)
             {
@@ -3005,7 +3241,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForNetworkEndpointAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForNetworkEndpointAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3044,7 +3284,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::HasContentBeenRevokedSince(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::HasContentBeenRevokedSince(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3083,7 +3327,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsFileProtectionRequiredAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsFileProtectionRequiredAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3123,7 +3371,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsFileProtectionRequiredForNewFileAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsFileProtectionRequiredForNewFileAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3161,7 +3413,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsIdentityManaged(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsIdentityManaged(param0);
+                }());
             }
             catch (...)
             {
@@ -3199,7 +3455,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionUnderLockRequired(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionUnderLockRequired(param0);
+                }());
             }
             catch (...)
             {
@@ -3237,7 +3497,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsRoamableProtectionEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsRoamableProtectionEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -3275,7 +3539,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsUserDecryptionAllowed(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsUserDecryptionAllowed(param0);
+                }());
             }
             catch (...)
             {
@@ -3315,7 +3583,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
 
-                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::LogAuditEvent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::LogAuditEvent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3355,7 +3627,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3394,7 +3670,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3434,7 +3714,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3476,7 +3760,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -3517,7 +3805,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -3557,7 +3849,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForAppAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForAppAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3599,7 +3895,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForAppAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForAppAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -3639,7 +3939,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForProcessAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForProcessAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3681,7 +3985,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForProcessAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForProcessAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -3721,7 +4029,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3763,7 +4075,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -3804,7 +4120,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -3842,7 +4162,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RevokeContent(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RevokeContent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3881,7 +4205,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::TryApplyProcessUIPolicy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::TryApplyProcessUIPolicy(param0);
+                }());
             }
             catch (...)
             {
@@ -3913,7 +4241,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identity();
+            }());
         }
         catch (...)
         {
@@ -3947,7 +4279,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Identity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Identity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3974,7 +4310,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowEnterpriseIndicator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowEnterpriseIndicator();
+            }());
         }
         catch (...)
         {
@@ -4008,7 +4348,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowEnterpriseIndicator(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowEnterpriseIndicator(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4035,7 +4379,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionEnabled();
+            }());
         }
         catch (...)
         {
@@ -4061,7 +4409,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PrimaryManagedIdentity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PrimaryManagedIdentity();
+            }());
         }
         catch (...)
         {
@@ -4089,7 +4441,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4117,7 +4473,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4146,7 +4506,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0);
+            }());
         }
         catch (...)
         {
@@ -4174,7 +4538,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4203,7 +4571,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0);
+            }());
         }
         catch (...)
         {
@@ -4231,7 +4603,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4260,7 +4636,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0);
+            }());
         }
         catch (...)
         {
@@ -4288,7 +4668,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4452,7 +4836,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4501,7 +4889,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

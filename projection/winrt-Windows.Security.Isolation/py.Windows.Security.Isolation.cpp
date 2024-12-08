@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(args, 0);
 
-                self->obj.ChangePriority(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangePriority(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::CreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::CreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -122,7 +130,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::CreateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::CreateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -160,7 +172,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::FindByOwnerId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::FindByOwnerId(param0);
+                }());
             }
             catch (...)
             {
@@ -198,7 +214,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::GetById(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::GetById(param0);
+                }());
             }
             catch (...)
             {
@@ -234,7 +254,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUserInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUserInfo();
+                }());
             }
             catch (...)
             {
@@ -275,7 +299,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 3);
 
-                return py::convert(self->obj.LaunchFileWithUIAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchFileWithUIAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -315,7 +343,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.LaunchFileWithUIAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchFileWithUIAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -354,7 +386,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
-                return py::convert(self->obj.PostMessageToReceiverAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PostMessageToReceiverAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -394,7 +430,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
 
-                return py::convert(self->obj.PostMessageToReceiverAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PostMessageToReceiverAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -433,7 +473,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::MessageReceivedCallback>(args, 1);
 
-                self->obj.RegisterMessageReceiver(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RegisterMessageReceiver(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -473,7 +517,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>(args, 1);
 
-                return py::convert(self->obj.ShareFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShareFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -513,7 +561,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
 
-                return py::convert(self->obj.ShareFileAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShareFileAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -552,7 +604,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>(args, 1);
 
-                return py::convert(self->obj.ShareFolderAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShareFolderAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -592,7 +648,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
 
-                return py::convert(self->obj.ShareFolderAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShareFolderAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -632,7 +692,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>(args, 2);
 
-                return py::convert(self->obj.StartProcessSilentlyAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProcessSilentlyAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -673,7 +737,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 3);
 
-                return py::convert(self->obj.StartProcessSilentlyAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartProcessSilentlyAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -709,7 +777,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TerminateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TerminateAsync();
+                }());
             }
             catch (...)
             {
@@ -747,7 +819,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 0);
 
-                return py::convert(self->obj.TerminateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TerminateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -785,7 +861,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.UnregisterMessageReceiver(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterMessageReceiver(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -818,7 +898,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -962,7 +1046,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(args, 0);
 
-                self->obj.ChangeCreationPriority(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeCreationPriority(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -995,7 +1083,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Environment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Environment();
+            }());
         }
         catch (...)
         {
@@ -1021,7 +1113,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1047,7 +1143,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1147,7 +1247,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1180,7 +1284,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HostPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostPath();
+            }());
         }
         catch (...)
         {
@@ -1206,7 +1314,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1232,7 +1344,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GuestPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GuestPath();
+            }());
         }
         catch (...)
         {
@@ -1258,7 +1374,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadOnly();
+            }());
         }
         catch (...)
         {
@@ -1347,7 +1467,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::HostErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::HostErrors();
+            }());
         }
         catch (...)
         {
@@ -1373,7 +1497,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::IsReady());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::IsReady();
+            }());
         }
         catch (...)
         {
@@ -1465,7 +1593,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1491,7 +1623,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -1517,7 +1653,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1641,7 +1781,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.ShareHostFolderForUntrustedItems(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShareHostFolderForUntrustedItems(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1674,7 +1818,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PersistUserProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PersistUserProfile();
+            }());
         }
         catch (...)
         {
@@ -1708,7 +1856,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PersistUserProfile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PersistUserProfile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1735,7 +1887,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnvironmentOwnerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnvironmentOwnerId();
+            }());
         }
         catch (...)
         {
@@ -1769,7 +1925,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EnvironmentOwnerId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnvironmentOwnerId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1796,7 +1956,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClipboardCopyPasteDirections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClipboardCopyPasteDirections();
+            }());
         }
         catch (...)
         {
@@ -1830,7 +1994,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections>(arg);
 
-            self->obj.ClipboardCopyPasteDirections(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClipboardCopyPasteDirections(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1857,7 +2025,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailablePrinters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailablePrinters();
+            }());
         }
         catch (...)
         {
@@ -1891,7 +2063,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters>(arg);
 
-            self->obj.AvailablePrinters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AvailablePrinters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1918,7 +2094,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedClipboardFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedClipboardFormats();
+            }());
         }
         catch (...)
         {
@@ -1952,7 +2132,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
-            self->obj.AllowedClipboardFormats(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowedClipboardFormats(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1979,7 +2163,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowGraphicsHardwareAcceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowGraphicsHardwareAcceleration();
+            }());
         }
         catch (...)
         {
@@ -2013,7 +2201,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowGraphicsHardwareAcceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowGraphicsHardwareAcceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2040,7 +2232,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowCameraAndMicrophoneAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowCameraAndMicrophoneAccess();
+            }());
         }
         catch (...)
         {
@@ -2074,7 +2270,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowCameraAndMicrophoneAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowCameraAndMicrophoneAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2101,7 +2301,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedFolderNameInEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedFolderNameInEnvironment();
+            }());
         }
         catch (...)
         {
@@ -2127,7 +2331,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedHostFolderPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedHostFolderPath();
+            }());
         }
         catch (...)
         {
@@ -2153,7 +2361,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowAnnotationOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowAnnotationOverride();
+            }());
         }
         catch (...)
         {
@@ -2187,7 +2399,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WindowAnnotationOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WindowAnnotationOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2214,7 +2430,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.CreationPriority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CreationPriority();
+            }());
         }
         catch (...)
         {
@@ -2248,7 +2468,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(arg);
 
-            self->obj.CreationPriority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CreationPriority(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2275,7 +2499,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedClipboardFormatsToHost());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedClipboardFormatsToHost();
+            }());
         }
         catch (...)
         {
@@ -2309,7 +2537,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
-            self->obj.AllowedClipboardFormatsToHost(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowedClipboardFormatsToHost(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2336,7 +2568,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedClipboardFormatsToEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedClipboardFormatsToEnvironment();
+            }());
         }
         catch (...)
         {
@@ -2370,7 +2606,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
-            self->obj.AllowedClipboardFormatsToEnvironment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowedClipboardFormatsToEnvironment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2476,7 +2716,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration::Register(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration::Register(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2514,7 +2758,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration::Unregister(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration::Unregister(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2635,7 +2883,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivationFileExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationFileExtensions();
+            }());
         }
         catch (...)
         {
@@ -2661,7 +2913,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessesRunnableAsSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessesRunnableAsSystem();
+            }());
         }
         catch (...)
         {
@@ -2687,7 +2943,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessesRunnableAsUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessesRunnableAsUser();
+            }());
         }
         catch (...)
         {
@@ -2713,7 +2973,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShareableFolders());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShareableFolders();
+            }());
         }
         catch (...)
         {
@@ -2809,7 +3073,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -2835,7 +3103,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2929,7 +3201,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -2955,7 +3231,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3053,7 +3333,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                self->obj.WaitForExit();
+                {
+                    auto _gil = release_gil();
+                    self->obj.WaitForExit();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3090,7 +3374,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.WaitForExitAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WaitForExitAsync();
+                }());
             }
             catch (...)
             {
@@ -3128,7 +3416,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.WaitForExitWithTimeout(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.WaitForExitWithTimeout(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3161,7 +3453,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExitCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExitCode();
+            }());
         }
         catch (...)
         {
@@ -3187,7 +3483,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3306,7 +3606,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWrite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWrite();
+            }());
         }
         catch (...)
         {
@@ -3340,7 +3644,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWrite(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWrite(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3434,7 +3742,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3460,7 +3772,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -3486,7 +3802,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3603,7 +3923,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWrite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWrite();
+            }());
         }
         catch (...)
         {
@@ -3637,7 +3961,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWrite(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWrite(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3731,7 +4059,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3757,7 +4089,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3851,7 +4187,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3877,7 +4217,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Process());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Process();
+            }());
         }
         catch (...)
         {
@@ -3903,7 +4247,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -4020,7 +4368,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -4054,7 +4406,11 @@ namespace py::cpp::Windows::Security::Isolation
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.CorrelationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CorrelationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4152,7 +4508,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryWaitForSignInAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryWaitForSignInAsync();
+                }());
             }
             catch (...)
             {
@@ -4188,7 +4548,11 @@ namespace py::cpp::Windows::Security::Isolation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryWaitForSignInWithProgressAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryWaitForSignInWithProgressAsync();
+                }());
             }
             catch (...)
             {
@@ -4220,7 +4584,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnvironmentUserName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnvironmentUserName();
+            }());
         }
         catch (...)
         {
@@ -4246,7 +4614,11 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnvironmentUserSid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnvironmentUserSid();
+            }());
         }
         catch (...)
         {
@@ -4340,7 +4712,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::GetFileId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::GetFileId(param0);
+                }());
             }
             catch (...)
             {
@@ -4379,7 +4755,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
-                winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::PostMessageToReceiver(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::PostMessageToReceiver(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4419,7 +4799,11 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::HostMessageReceivedCallback>(args, 1);
 
-                winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::RegisterHostMessageReceiver(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::RegisterHostMessageReceiver(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4458,7 +4842,11 @@ namespace py::cpp::Windows::Security::Isolation
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::UnregisterHostMessageReceiver(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::UnregisterHostMessageReceiver(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

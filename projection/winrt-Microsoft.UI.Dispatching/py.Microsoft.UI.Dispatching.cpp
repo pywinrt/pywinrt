@@ -64,7 +64,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -168,7 +172,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateTimer());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateTimer();
+                }());
             }
             catch (...)
             {
@@ -204,7 +212,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.EnqueueEventLoopExit();
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnqueueEventLoopExit();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -241,7 +253,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.EnsureSystemDispatcherQueue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnsureSystemDispatcherQueue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -278,7 +294,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueue::GetForCurrentThread());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Dispatching::DispatcherQueue::GetForCurrentThread();
+                }());
             }
             catch (...)
             {
@@ -314,7 +334,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.RunEventLoop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RunEventLoop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -354,7 +378,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>(args, 1);
 
-                self->obj.RunEventLoop(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RunEventLoop(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -393,7 +421,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 0);
 
-                return py::convert(self->obj.TryEnqueue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryEnqueue(param0);
+                }());
             }
             catch (...)
             {
@@ -432,7 +464,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 1);
 
-                return py::convert(self->obj.TryEnqueue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryEnqueue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -464,7 +500,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasThreadAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasThreadAccess();
+            }());
         }
         catch (...)
         {
@@ -492,7 +532,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ShutdownCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShutdownCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -520,7 +564,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ShutdownCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShutdownCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -549,7 +597,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.ShutdownStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShutdownStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -577,7 +629,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ShutdownStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShutdownStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -606,7 +662,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FrameworkShutdownCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameworkShutdownCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -634,7 +694,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkShutdownCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameworkShutdownCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -663,7 +727,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameworkShutdownStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameworkShutdownStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -691,7 +759,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkShutdownStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameworkShutdownStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -830,7 +902,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnCurrentThread());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnCurrentThread();
+                }());
             }
             catch (...)
             {
@@ -866,7 +942,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnDedicatedThread());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnDedicatedThread();
+                }());
             }
             catch (...)
             {
@@ -902,7 +982,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.ShutdownQueue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShutdownQueue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -939,7 +1023,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ShutdownQueueAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShutdownQueueAsync();
+                }());
             }
             catch (...)
             {
@@ -971,7 +1059,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {
@@ -1097,7 +1189,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1200,7 +1296,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1237,7 +1337,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1270,7 +1374,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRepeating());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRepeating();
+            }());
         }
         catch (...)
         {
@@ -1304,7 +1412,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRepeating(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRepeating(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1331,7 +1443,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -1365,7 +1481,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Interval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Interval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1392,7 +1512,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRunning());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRunning();
+            }());
         }
         catch (...)
         {
@@ -1420,7 +1544,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Tick(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tick(param0);
+            }());
         }
         catch (...)
         {
@@ -1448,7 +1576,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Tick(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tick(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

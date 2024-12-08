@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::ApplyLockdownProfileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::ApplyLockdownProfileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetCurrentLockdownProfile());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetCurrentLockdownProfile();
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetLockdownProfileInformation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetLockdownProfileInformation(param0);
+                }());
             }
             catch (...)
             {
@@ -146,7 +158,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetSupportedLockdownProfiles());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetSupportedLockdownProfiles();
+                }());
             }
             catch (...)
             {
@@ -246,7 +262,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {

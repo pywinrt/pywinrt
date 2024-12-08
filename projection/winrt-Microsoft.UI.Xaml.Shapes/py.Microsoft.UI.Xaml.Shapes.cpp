@@ -148,7 +148,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Y2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Y2();
+            }());
         }
         catch (...)
         {
@@ -182,7 +186,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Y2(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Y2(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -209,7 +217,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Y1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Y1();
+            }());
         }
         catch (...)
         {
@@ -243,7 +255,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Y1(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Y1(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -270,7 +286,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.X2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.X2();
+            }());
         }
         catch (...)
         {
@@ -304,7 +324,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.X2(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.X2(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -331,7 +355,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.X1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.X1();
+            }());
         }
         catch (...)
         {
@@ -365,7 +393,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.X1(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.X1(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -392,7 +424,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Line::X1Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Line::X1Property();
+            }());
         }
         catch (...)
         {
@@ -418,7 +454,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Line::X2Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Line::X2Property();
+            }());
         }
         catch (...)
         {
@@ -444,7 +484,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Line::Y1Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Line::Y1Property();
+            }());
         }
         catch (...)
         {
@@ -470,7 +514,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Line::Y2Property());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Line::Y2Property();
+            }());
         }
         catch (...)
         {
@@ -677,7 +725,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data();
+            }());
         }
         catch (...)
         {
@@ -711,7 +763,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -738,7 +794,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Path::DataProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Path::DataProperty();
+            }());
         }
         catch (...)
         {
@@ -879,7 +939,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Points());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Points();
+            }());
         }
         catch (...)
         {
@@ -913,7 +977,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
-            self->obj.Points(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Points(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -940,7 +1008,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.FillRule());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FillRule();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1046,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
-            self->obj.FillRule(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FillRule(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1001,7 +1077,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Polygon::FillRuleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Polygon::FillRuleProperty();
+            }());
         }
         catch (...)
         {
@@ -1027,7 +1107,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Polygon::PointsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Polygon::PointsProperty();
+            }());
         }
         catch (...)
         {
@@ -1170,7 +1254,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Points());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Points();
+            }());
         }
         catch (...)
         {
@@ -1204,7 +1292,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
-            self->obj.Points(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Points(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1231,7 +1323,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.FillRule());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FillRule();
+            }());
         }
         catch (...)
         {
@@ -1265,7 +1361,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
-            self->obj.FillRule(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FillRule(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1292,7 +1392,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Polyline::FillRuleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Polyline::FillRuleProperty();
+            }());
         }
         catch (...)
         {
@@ -1318,7 +1422,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Polyline::PointsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Polyline::PointsProperty();
+            }());
         }
         catch (...)
         {
@@ -1461,7 +1569,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RadiusY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RadiusY();
+            }());
         }
         catch (...)
         {
@@ -1495,7 +1607,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RadiusY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RadiusY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1522,7 +1638,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RadiusX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RadiusX();
+            }());
         }
         catch (...)
         {
@@ -1556,7 +1676,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RadiusX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RadiusX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1583,7 +1707,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Rectangle::RadiusXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Rectangle::RadiusXProperty();
+            }());
         }
         catch (...)
         {
@@ -1609,7 +1737,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Rectangle::RadiusYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Rectangle::RadiusYProperty();
+            }());
         }
         catch (...)
         {
@@ -1763,7 +1895,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GetAlphaMask());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GetAlphaMask();
+                }());
             }
             catch (...)
             {
@@ -1795,7 +1931,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness();
+            }());
         }
         catch (...)
         {
@@ -1829,7 +1969,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1856,7 +2000,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap();
+            }());
         }
         catch (...)
         {
@@ -1890,7 +2038,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1917,7 +2069,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit();
+            }());
         }
         catch (...)
         {
@@ -1951,7 +2107,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1978,7 +2138,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin();
+            }());
         }
         catch (...)
         {
@@ -2012,7 +2176,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineJoin>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2039,7 +2207,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap();
+            }());
         }
         catch (...)
         {
@@ -2073,7 +2245,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2100,7 +2276,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset();
+            }());
         }
         catch (...)
         {
@@ -2134,7 +2314,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2161,7 +2345,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap();
+            }());
         }
         catch (...)
         {
@@ -2195,7 +2383,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2222,7 +2414,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray();
+            }());
         }
         catch (...)
         {
@@ -2256,7 +2452,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::DoubleCollection>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2283,7 +2483,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke();
+            }());
         }
         catch (...)
         {
@@ -2317,7 +2521,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2344,7 +2552,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch();
+            }());
         }
         catch (...)
         {
@@ -2378,7 +2590,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2405,7 +2621,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill();
+            }());
         }
         catch (...)
         {
@@ -2439,7 +2659,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2466,7 +2690,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GeometryTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GeometryTransform();
+            }());
         }
         catch (...)
         {
@@ -2492,7 +2720,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::FillProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::FillProperty();
+            }());
         }
         catch (...)
         {
@@ -2518,7 +2750,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StretchProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StretchProperty();
+            }());
         }
         catch (...)
         {
@@ -2544,7 +2780,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashArrayProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashArrayProperty();
+            }());
         }
         catch (...)
         {
@@ -2570,7 +2810,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashCapProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashCapProperty();
+            }());
         }
         catch (...)
         {
@@ -2596,7 +2840,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashOffsetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeDashOffsetProperty();
+            }());
         }
         catch (...)
         {
@@ -2622,7 +2870,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeEndLineCapProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeEndLineCapProperty();
+            }());
         }
         catch (...)
         {
@@ -2648,7 +2900,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeLineJoinProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeLineJoinProperty();
+            }());
         }
         catch (...)
         {
@@ -2674,7 +2930,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeMiterLimitProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeMiterLimitProperty();
+            }());
         }
         catch (...)
         {
@@ -2700,7 +2960,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeProperty();
+            }());
         }
         catch (...)
         {
@@ -2726,7 +2990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeStartLineCapProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeStartLineCapProperty();
+            }());
         }
         catch (...)
         {
@@ -2752,7 +3020,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeThicknessProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Shapes::Shape::StrokeThicknessProperty();
+            }());
         }
         catch (...)
         {

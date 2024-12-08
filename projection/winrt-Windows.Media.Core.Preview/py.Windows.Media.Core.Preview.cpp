@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Media::Core::Preview
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevel();
+            }());
         }
         catch (...)
         {
@@ -58,7 +62,11 @@ namespace py::cpp::Windows::Media::Core::Preview
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevelChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevelChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -86,7 +94,11 @@ namespace py::cpp::Windows::Media::Core::Preview
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevelChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Media::Core::Preview::SoundLevelBroker::SoundLevelChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

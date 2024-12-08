@@ -36,7 +36,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::AppService::AppServiceCatalog::FindAppServiceProvidersAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::AppService::AppServiceCatalog::FindAppServiceProvidersAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -133,7 +137,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -252,7 +260,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -289,7 +301,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                     return nullptr;
                 }
 
-                return py::convert(self->obj.OpenAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenAsync();
+                }());
             }
             catch (...)
             {
@@ -327,7 +343,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(args, 0);
 
-                return py::convert(self->obj.OpenRemoteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenRemoteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -365,7 +385,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.SendMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -405,7 +429,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::AppService::AppServiceConnection::SendStatelessMessageAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::AppService::AppServiceConnection::SendStatelessMessageAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -437,7 +465,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -471,7 +503,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PackageFamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageFamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -498,7 +534,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppServiceName();
+            }());
         }
         catch (...)
         {
@@ -532,7 +572,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AppServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -559,7 +603,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -593,7 +641,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::Windows::System::User>(arg);
 
-            self->obj.User(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.User(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -622,7 +674,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppService::AppServiceConnection, winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -650,7 +706,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -679,7 +739,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppService::AppServiceConnection, winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServiceClosed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceClosed(param0);
+            }());
         }
         catch (...)
         {
@@ -707,7 +771,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServiceClosed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceClosed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -750,7 +818,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -862,7 +934,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -968,7 +1044,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.SendResponseAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendResponseAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1000,7 +1080,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1098,7 +1182,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1130,7 +1218,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1224,7 +1316,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1250,7 +1346,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1350,7 +1450,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CheckCallerForCapabilityAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CheckCallerForCapabilityAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1382,7 +1486,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppServiceConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppServiceConnection();
+            }());
         }
         catch (...)
         {
@@ -1408,7 +1516,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallerPackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallerPackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -1434,7 +1546,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1460,7 +1576,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRemoteSystemConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteSystemConnection();
+            }());
         }
         catch (...)
         {
@@ -1486,7 +1606,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallerRemoteConnectionToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallerRemoteConnectionToken();
+            }());
         }
         catch (...)
         {
@@ -1584,7 +1708,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1610,7 +1738,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {

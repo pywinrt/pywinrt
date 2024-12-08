@@ -84,7 +84,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -121,7 +125,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.DecreaseNetworkKeepAliveInterval();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DecreaseNetworkKeepAliveInterval();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -158,7 +166,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.FlushTransport();
+                {
+                    auto _gil = release_gil();
+                    self->obj.FlushTransport();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -197,7 +209,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.UsingTransport(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UsingTransport(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -234,7 +250,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.WaitForPushEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WaitForPushEnabled();
+                }());
             }
             catch (...)
             {
@@ -266,7 +286,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerKeepAliveIntervalInMinutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerKeepAliveIntervalInMinutes();
+            }());
         }
         catch (...)
         {
@@ -300,7 +324,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ServerKeepAliveIntervalInMinutes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerKeepAliveIntervalInMinutes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -327,7 +355,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlChannelTriggerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlChannelTriggerId();
+            }());
         }
         catch (...)
         {
@@ -353,7 +385,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentKeepAliveIntervalInMinutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentKeepAliveIntervalInMinutes();
+            }());
         }
         catch (...)
         {
@@ -379,7 +415,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeepAliveTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeepAliveTrigger();
+            }());
         }
         catch (...)
         {
@@ -405,7 +445,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.PushNotificationTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PushNotificationTrigger();
+            }());
         }
         catch (...)
         {
@@ -431,7 +475,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportObject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportObject();
+            }());
         }
         catch (...)
         {
@@ -457,7 +505,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWakeFromLowPowerSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWakeFromLowPowerSupported();
+            }());
         }
         catch (...)
         {
@@ -499,7 +551,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -611,7 +667,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.BindEndpointAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindEndpointAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -650,7 +710,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
 
-                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindServiceNameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -688,7 +752,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.BindServiceNameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindServiceNameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -724,7 +792,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CancelIOAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CancelIOAsync();
+                }());
             }
             catch (...)
             {
@@ -760,7 +832,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -800,7 +876,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -838,7 +918,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
-                return py::convert(self->obj.ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -876,7 +960,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.EnableTransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -916,7 +1004,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
-                self->obj.EnableTransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -956,7 +1048,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Networking::Sockets::DatagramSocket::GetEndpointPairsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::DatagramSocket::GetEndpointPairsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -996,7 +1092,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::HostNameSortOptions>(args, 2);
 
-                return py::convert(winrt::Windows::Networking::Sockets::DatagramSocket::GetEndpointPairsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::DatagramSocket::GetEndpointPairsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1035,7 +1135,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetOutputStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1073,7 +1177,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
-                return py::convert(self->obj.GetOutputStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1111,7 +1219,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
-                self->obj.JoinMulticastGroup(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.JoinMulticastGroup(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1150,7 +1262,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.TransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1190,7 +1306,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
-                self->obj.TransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1231,7 +1351,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                self->obj.TransferOwnership(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1264,7 +1388,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -1290,7 +1418,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -1316,7 +1448,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -1344,7 +1480,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::DatagramSocket, winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1372,7 +1512,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1415,7 +1559,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1533,7 +1681,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualityOfService());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualityOfService();
+            }());
         }
         catch (...)
         {
@@ -1567,7 +1719,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
-            self->obj.QualityOfService(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QualityOfService(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1594,7 +1750,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundUnicastHopLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundUnicastHopLimit();
+            }());
         }
         catch (...)
         {
@@ -1628,7 +1788,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.OutboundUnicastHopLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundUnicastHopLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1655,7 +1819,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1689,7 +1857,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.InboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1716,7 +1888,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.DontFragment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DontFragment();
+            }());
         }
         catch (...)
         {
@@ -1750,7 +1926,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DontFragment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DontFragment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1777,7 +1957,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MulticastOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MulticastOnly();
+            }());
         }
         catch (...)
         {
@@ -1811,7 +1995,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MulticastOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MulticastOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1909,7 +2097,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -1935,7 +2127,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPort();
+            }());
         }
         catch (...)
         {
@@ -1961,7 +2157,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteAddress();
+            }());
         }
         catch (...)
         {
@@ -1987,7 +2187,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemotePort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemotePort();
+            }());
         }
         catch (...)
         {
@@ -2087,7 +2291,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDataReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataReader();
+                }());
             }
             catch (...)
             {
@@ -2123,7 +2331,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDataStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataStream();
+                }());
             }
             catch (...)
             {
@@ -2155,7 +2367,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -2181,7 +2397,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteAddress();
+            }());
         }
         catch (...)
         {
@@ -2207,7 +2427,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemotePort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemotePort();
+            }());
         }
         catch (...)
         {
@@ -2330,7 +2554,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2370,7 +2598,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Close(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2409,7 +2641,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2447,7 +2683,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.SendFinalFrameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendFinalFrameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2485,7 +2725,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.SendNonfinalFrameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendNonfinalFrameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2524,7 +2768,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2557,7 +2805,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -2583,7 +2835,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -2609,7 +2865,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -2637,7 +2897,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::MessageWebSocket, winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -2665,7 +2929,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2694,7 +2962,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -2722,7 +2994,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2751,7 +3027,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::MessageWebSocket, winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerCustomValidationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCustomValidationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2779,7 +3059,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerCustomValidationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCustomValidationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2822,7 +3106,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2908,7 +3196,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -2942,7 +3234,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(arg);
 
-            self->obj.MessageType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2969,7 +3265,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxMessageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxMessageSize();
+            }());
         }
         catch (...)
         {
@@ -3003,7 +3303,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxMessageSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxMessageSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3030,7 +3334,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReceiveMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReceiveMode();
+            }());
         }
         catch (...)
         {
@@ -3064,7 +3372,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::MessageWebSocketReceiveMode>(arg);
 
-            self->obj.ReceiveMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReceiveMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3091,7 +3403,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredUnsolicitedPongInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredUnsolicitedPongInterval();
+            }());
         }
         catch (...)
         {
@@ -3125,7 +3441,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DesiredUnsolicitedPongInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredUnsolicitedPongInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3152,7 +3472,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCertificate();
+            }());
         }
         catch (...)
         {
@@ -3186,7 +3510,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.ClientCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClientCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3213,7 +3541,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualUnsolicitedPongInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualUnsolicitedPongInterval();
+            }());
         }
         catch (...)
         {
@@ -3239,7 +3571,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -3273,7 +3609,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3300,7 +3640,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -3334,7 +3678,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3361,7 +3709,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -3395,7 +3747,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3422,7 +3778,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedProtocols());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedProtocols();
+            }());
         }
         catch (...)
         {
@@ -3448,7 +3808,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnorableServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnorableServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -3551,7 +3915,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -3577,7 +3945,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -3603,7 +3975,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -3629,7 +4005,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -3655,7 +4035,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -3681,7 +4065,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -3707,7 +4095,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -3810,7 +4202,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDataReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataReader();
+                }());
             }
             catch (...)
             {
@@ -3846,7 +4242,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDataStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataStream();
+                }());
             }
             catch (...)
             {
@@ -3878,7 +4278,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -3904,7 +4308,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMessageComplete());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMessageComplete();
+            }());
         }
         catch (...)
         {
@@ -4004,7 +4412,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4044,7 +4456,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Close(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4077,7 +4493,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -4103,7 +4523,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -4129,7 +4553,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -4157,7 +4585,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerMessageWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -4185,7 +4617,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4214,7 +4650,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerMessageWebSocket, winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -4242,7 +4682,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4285,7 +4729,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4365,7 +4813,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -4399,7 +4851,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(arg);
 
-            self->obj.MessageType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4493,7 +4949,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -4519,7 +4979,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -4545,7 +5009,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -4644,7 +5112,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4684,7 +5156,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Close(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4717,7 +5193,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -4743,7 +5223,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -4769,7 +5253,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -4797,7 +5285,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerStreamWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -4825,7 +5317,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4868,7 +5364,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4946,7 +5446,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -4972,7 +5476,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -4998,7 +5506,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -5117,7 +5629,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -5210,7 +5726,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Context());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
         }
         catch (...)
         {
@@ -5236,7 +5756,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.DatagramSocket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DatagramSocket();
+            }());
         }
         catch (...)
         {
@@ -5262,7 +5786,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -5288,7 +5816,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SocketKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SocketKind();
+            }());
         }
         catch (...)
         {
@@ -5314,7 +5846,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.StreamSocket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StreamSocket();
+            }());
         }
         catch (...)
         {
@@ -5340,7 +5876,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.StreamSocketListener());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StreamSocketListener();
+            }());
         }
         catch (...)
         {
@@ -5366,7 +5906,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskId();
+            }());
         }
         catch (...)
         {
@@ -5392,7 +5936,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Sockets::SocketActivityInformation::AllSockets());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Sockets::SocketActivityInformation::AllSockets();
+            }());
         }
         catch (...)
         {
@@ -5517,7 +6065,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -5543,7 +6095,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SocketInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SocketInformation();
+            }());
         }
         catch (...)
         {
@@ -5635,7 +6191,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Sockets::SocketError::GetStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::SocketError::GetStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -5758,7 +6318,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CancelIOAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CancelIOAsync();
+                }());
             }
             catch (...)
             {
@@ -5794,7 +6358,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5834,7 +6402,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5873,7 +6445,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5911,7 +6487,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
-                return py::convert(self->obj.ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5952,7 +6532,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 3);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -5992,7 +6576,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -6030,7 +6618,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.EnableTransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6070,7 +6662,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
-                self->obj.EnableTransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6110,7 +6706,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Networking::Sockets::StreamSocket::GetEndpointPairsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::StreamSocket::GetEndpointPairsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6150,7 +6750,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::HostNameSortOptions>(args, 2);
 
-                return py::convert(winrt::Windows::Networking::Sockets::StreamSocket::GetEndpointPairsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::StreamSocket::GetEndpointPairsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -6188,7 +6792,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.TransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6228,7 +6836,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
-                self->obj.TransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6269,7 +6881,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                self->obj.TransferOwnership(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6309,7 +6925,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostName>(args, 1);
 
-                return py::convert(self->obj.UpgradeToSslAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpgradeToSslAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6341,7 +6961,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -6367,7 +6991,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -6393,7 +7021,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -6419,7 +7051,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -6461,7 +7097,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6576,7 +7216,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualityOfService());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualityOfService();
+            }());
         }
         catch (...)
         {
@@ -6610,7 +7254,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
-            self->obj.QualityOfService(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QualityOfService(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6637,7 +7285,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundUnicastHopLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundUnicastHopLimit();
+            }());
         }
         catch (...)
         {
@@ -6671,7 +7323,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.OutboundUnicastHopLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundUnicastHopLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6698,7 +7354,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -6732,7 +7392,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6759,7 +7423,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.NoDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoDelay();
+            }());
         }
         catch (...)
         {
@@ -6793,7 +7461,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NoDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6820,7 +7492,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeepAlive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeepAlive();
+            }());
         }
         catch (...)
         {
@@ -6854,7 +7530,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.KeepAlive(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeepAlive(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6881,7 +7561,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnorableServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnorableServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -6907,7 +7591,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SerializeConnectionAttempts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SerializeConnectionAttempts();
+            }());
         }
         catch (...)
         {
@@ -6941,7 +7629,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SerializeConnectionAttempts(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SerializeConnectionAttempts(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6968,7 +7660,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCertificate();
+            }());
         }
         catch (...)
         {
@@ -7002,7 +7698,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.ClientCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClientCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7029,7 +7729,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -7063,7 +7767,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(arg);
 
-            self->obj.MinProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7165,7 +7873,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -7191,7 +7903,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -7217,7 +7933,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPort();
+            }());
         }
         catch (...)
         {
@@ -7243,7 +7963,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -7269,7 +7993,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteAddress();
+            }());
         }
         catch (...)
         {
@@ -7295,7 +8023,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteHostName();
+            }());
         }
         catch (...)
         {
@@ -7321,7 +8053,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemotePort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemotePort();
+            }());
         }
         catch (...)
         {
@@ -7347,7 +8083,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteServiceName();
+            }());
         }
         catch (...)
         {
@@ -7373,7 +8113,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoundTripTimeStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoundTripTimeStatistics();
+            }());
         }
         catch (...)
         {
@@ -7399,7 +8143,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionKey();
+            }());
         }
         catch (...)
         {
@@ -7425,7 +8173,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -7451,7 +8203,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -7477,7 +8233,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -7503,7 +8263,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -7638,7 +8402,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.BindEndpointAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindEndpointAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7676,7 +8444,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.BindServiceNameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindServiceNameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7716,7 +8488,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 2);
 
-                return py::convert(self->obj.BindServiceNameAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindServiceNameAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7755,7 +8531,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
 
-                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BindServiceNameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7791,7 +8571,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CancelIOAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CancelIOAsync();
+                }());
             }
             catch (...)
             {
@@ -7827,7 +8611,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7866,7 +8654,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.EnableTransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7906,7 +8698,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
-                self->obj.EnableTransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7945,7 +8741,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.TransferOwnership(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7985,7 +8785,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
-                self->obj.TransferOwnership(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferOwnership(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8018,7 +8822,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -8044,7 +8852,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -8072,7 +8884,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::StreamSocketListener, winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ConnectionReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -8100,7 +8916,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8143,7 +8963,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -8228,7 +9052,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Socket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Socket();
+            }());
         }
         catch (...)
         {
@@ -8321,7 +9149,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualityOfService());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualityOfService();
+            }());
         }
         catch (...)
         {
@@ -8355,7 +9187,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
-            self->obj.QualityOfService(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QualityOfService(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8382,7 +9218,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundUnicastHopLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundUnicastHopLimit();
+            }());
         }
         catch (...)
         {
@@ -8416,7 +9256,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.OutboundUnicastHopLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundUnicastHopLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8443,7 +9287,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -8477,7 +9325,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8504,7 +9356,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.NoDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoDelay();
+            }());
         }
         catch (...)
         {
@@ -8538,7 +9394,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NoDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8565,7 +9425,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeepAlive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeepAlive();
+            }());
         }
         catch (...)
         {
@@ -8599,7 +9463,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.KeepAlive(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeepAlive(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8697,7 +9565,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPort();
+            }());
         }
         catch (...)
         {
@@ -8816,7 +9688,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8856,7 +9732,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Close(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8895,7 +9775,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8934,7 +9818,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8967,7 +9855,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Control());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Control();
+            }());
         }
         catch (...)
         {
@@ -8993,7 +9885,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Information());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Information();
+            }());
         }
         catch (...)
         {
@@ -9019,7 +9915,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -9045,7 +9945,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -9073,7 +9977,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -9101,7 +10009,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9130,7 +10042,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::StreamWebSocket, winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerCustomValidationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCustomValidationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -9158,7 +10074,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerCustomValidationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCustomValidationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9201,7 +10121,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -9284,7 +10208,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.NoDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoDelay();
+            }());
         }
         catch (...)
         {
@@ -9318,7 +10246,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NoDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9345,7 +10277,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredUnsolicitedPongInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredUnsolicitedPongInterval();
+            }());
         }
         catch (...)
         {
@@ -9379,7 +10315,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DesiredUnsolicitedPongInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredUnsolicitedPongInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9406,7 +10346,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCertificate();
+            }());
         }
         catch (...)
         {
@@ -9440,7 +10384,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.ClientCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClientCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9467,7 +10415,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualUnsolicitedPongInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualUnsolicitedPongInterval();
+            }());
         }
         catch (...)
         {
@@ -9493,7 +10445,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -9527,7 +10483,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9554,7 +10514,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -9588,7 +10552,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9615,7 +10583,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -9649,7 +10621,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9676,7 +10652,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedProtocols());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedProtocols();
+            }());
         }
         catch (...)
         {
@@ -9702,7 +10682,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnorableServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnorableServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -9803,7 +10787,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -9829,7 +10817,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -9855,7 +10847,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -9881,7 +10877,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -9907,7 +10907,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -9933,7 +10937,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -9959,7 +10967,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -10058,7 +11070,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Code());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Code();
+            }());
         }
         catch (...)
         {
@@ -10084,7 +11100,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -10176,7 +11196,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Sockets::WebSocketError::GetStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Sockets::WebSocketError::GetStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -10301,7 +11325,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
 
-                self->obj.Run(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Run(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10405,7 +11433,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -10441,7 +11473,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Reject();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reject();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10474,7 +11510,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -10500,7 +11540,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -10526,7 +11570,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -10552,7 +11600,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -10650,7 +11702,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlChannelTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlChannelTrigger();
+            }());
         }
         catch (...)
         {
@@ -10825,7 +11881,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareSlotReset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareSlotReset();
+            }());
         }
         catch (...)
         {
@@ -10851,7 +11911,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResetReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResetReason();
+            }());
         }
         catch (...)
         {
@@ -10877,7 +11941,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SoftwareSlotReset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SoftwareSlotReset();
+            }());
         }
         catch (...)
         {
@@ -11098,7 +12166,11 @@ namespace py::cpp::Windows::Networking::Sockets
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11138,7 +12210,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Close(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11177,7 +12253,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -11216,7 +12296,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11249,7 +12333,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -11277,7 +12365,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -11305,7 +12397,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11348,7 +12444,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -11710,7 +12810,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -11744,7 +12848,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11771,7 +12879,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -11805,7 +12917,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11832,7 +12948,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -11866,7 +12986,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11893,7 +13017,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedProtocols());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedProtocols();
+            }());
         }
         catch (...)
         {
@@ -12200,7 +13328,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnorableServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnorableServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -12226,7 +13358,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBufferSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBufferSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -12260,7 +13396,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.OutboundBufferSizeInBytes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutboundBufferSizeInBytes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12287,7 +13427,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -12321,7 +13465,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12348,7 +13496,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -12382,7 +13534,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12409,7 +13565,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedProtocols());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedProtocols();
+            }());
         }
         catch (...)
         {
@@ -12737,7 +13897,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -12763,7 +13927,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -12789,7 +13957,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -13006,7 +14178,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -13032,7 +14208,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -13058,7 +14238,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -13084,7 +14268,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -13110,7 +14298,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.BandwidthStatistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BandwidthStatistics();
+            }());
         }
         catch (...)
         {
@@ -13136,7 +14328,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddress();
+            }());
         }
         catch (...)
         {
@@ -13162,7 +14358,11 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {

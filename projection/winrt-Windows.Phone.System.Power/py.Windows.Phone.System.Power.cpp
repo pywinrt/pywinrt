@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Phone::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::Power::PowerManager::PowerSavingMode();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Phone::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeEnabled();
+            }());
         }
         catch (...)
         {
@@ -84,7 +92,11 @@ namespace py::cpp::Windows::Phone::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -112,7 +124,11 @@ namespace py::cpp::Windows::Phone::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

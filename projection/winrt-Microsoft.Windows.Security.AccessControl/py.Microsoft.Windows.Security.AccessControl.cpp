@@ -38,7 +38,11 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers::GetSddlForAppContainerNames(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers::GetSddlForAppContainerNames(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers::GetSecurityDescriptorBytesFromAppContainerNames(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers::GetSecurityDescriptorBytesFromAppContainerNames(param0, param1, param2);
+                }());
             }
             catch (...)
             {

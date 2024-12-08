@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreConcurrentOperationsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreConcurrentOperationsEnabled();
+            }());
         }
         catch (...)
         {
@@ -108,7 +116,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreConcurrentOperationsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreConcurrentOperationsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -137,7 +149,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager, winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TargetRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -165,7 +181,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TargetRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -287,7 +307,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -313,7 +337,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Modifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Modifiers();
+            }());
         }
         catch (...)
         {
@@ -339,7 +367,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -365,7 +397,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedOperations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedOperations();
+            }());
         }
         catch (...)
         {
@@ -489,7 +525,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                self->obj.SetDragUIContentFromSoftwareBitmap(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDragUIContentFromSoftwareBitmap(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -529,7 +569,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.SetDragUIContentFromSoftwareBitmap(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDragUIContentFromSoftwareBitmap(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -568,7 +612,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.SetPointerId(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPointerId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -605,7 +653,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -637,7 +689,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragUIContentMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DragUIContentMode();
+            }());
         }
         catch (...)
         {
@@ -671,7 +727,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>(arg);
 
-            self->obj.DragUIContentMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DragUIContentMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -698,7 +758,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -724,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedOperations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedOperations();
+            }());
         }
         catch (...)
         {
@@ -758,7 +826,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
-            self->obj.AllowedOperations(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowedOperations(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -862,7 +934,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -901,7 +977,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                self->obj.SetContentFromSoftwareBitmap(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetContentFromSoftwareBitmap(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -941,7 +1021,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.SetContentFromSoftwareBitmap(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetContentFromSoftwareBitmap(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -974,7 +1058,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGlyphVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGlyphVisible();
+            }());
         }
         catch (...)
         {
@@ -1008,7 +1096,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGlyphVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGlyphVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1035,7 +1127,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsContentVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsContentVisible();
+            }());
         }
         catch (...)
         {
@@ -1069,7 +1165,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsContentVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsContentVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1096,7 +1196,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCaptionVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCaptionVisible();
+            }());
         }
         catch (...)
         {
@@ -1130,7 +1234,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCaptionVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCaptionVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1157,7 +1265,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Caption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Caption();
+            }());
         }
         catch (...)
         {
@@ -1191,7 +1303,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Caption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Caption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1297,7 +1413,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>(args, 0);
 
-                self->obj.SetTarget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTarget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1403,7 +1523,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
-                return py::convert(self->obj.DropAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DropAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1442,7 +1566,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
-                return py::convert(self->obj.EnterAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnterAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1480,7 +1608,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
-                return py::convert(self->obj.LeaveAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LeaveAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1519,7 +1651,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
-                return py::convert(self->obj.OverAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OverAsync(param0, param1);
+                }());
             }
             catch (...)
             {

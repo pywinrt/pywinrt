@@ -887,7 +887,14 @@ static class WriterExtensions
             w.WriteTryCatch(() =>
             {
                 var closeMethod = type.Methods.Single(m => m.Name == "Close");
+
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
                 w.WriteLine($"{type.GetMethodInvokeContext(closeMethod)}Close();");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
                 w.WriteLine("Py_RETURN_FALSE;");
             });
             w.Indent--;
@@ -921,13 +928,24 @@ static class WriterExtensions
 
         if (type.IsPyStringable)
         {
+            var method = type.Methods.Single(m => m.Name == "ToString");
+
             w.WriteBlankLine();
             w.WriteLine(
                 $"static PyObject* _str_{type.Name}({type.CppPyWrapperType}* self) noexcept"
             );
             w.WriteLine("{");
             w.Indent++;
-            w.WriteTryCatch(() => w.WriteLine("return py::convert(self->obj.ToString());"));
+            w.WriteTryCatch(() =>
+            {
+                w.WriteLine("return py::convert([&]()");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"return {type.GetMethodInvokeContext(method)}ToString();");
+                w.Indent--;
+                w.WriteLine("}());");
+            });
             w.Indent--;
             w.WriteLine("}");
         }
@@ -1287,45 +1305,33 @@ static class WriterExtensions
         // Invoke member - simplified code path for methods w/ no out params
         if (!method.Method.Parameters.Any(p => p.IsPythonOutParam()))
         {
+            var context = type.GetMethodInvokeContext(method);
+
             if (method.Method.ReturnType.FullName == "System.Void")
             {
-                var invoke =
-                    $"{type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});";
-
-                // HACK: WinRT APIs are generally non-blocking, but some are
-                // long-running and block other threads in the Python interpreter.
-                // To avoid this, we release the GIL before invoking the method.
-                // The known methods are just hard-coded here for now. We can
-                // generalize this if we find more methods that need this treatment.
-                // For the Application::Start methods though, what we really need
-                // is an alternative that integrates with asyncio in Python.
-                if (
-                    (type.Namespace == "Windows.UI.Xaml" || type.Namespace == "Microsoft.UI.Xaml")
-                    && type.Name == "Application"
-                    && method.Name == "Start"
-                )
-                {
-                    w.WriteLine("{");
-                    w.Indent++;
-                    w.WriteLine("auto ts = release_gil();");
-                    w.WriteLine(invoke);
-                    w.Indent--;
-                    w.WriteLine("}");
-                }
-                else
-                {
-                    w.WriteLine(invoke);
-                }
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = release_gil();");
+                w.WriteLine(
+                    $"{context}{method.CppName}({method.Method.Parameters.ToParameterList()});"
+                );
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
 
                 w.WriteLine(voidReturn);
             }
             else
             {
-                var context = type.GetMethodInvokeContext(method);
-                var cppMethod = method.CppName;
                 var paramList = method.Method.Parameters.ToParameterList();
 
-                w.WriteLine($"return py::convert({context}{cppMethod}({paramList}));");
+                w.WriteLine("return py::convert([&]()");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = release_gil();");
+                w.WriteLine($"return {context}{method.CppName}({paramList});");
+                w.Indent--;
+                w.WriteLine("}());");
             }
 
             return;
@@ -1333,14 +1339,30 @@ static class WriterExtensions
 
         // Invoke member - code path for methods w/ out params
 
-        if (method.Method.ReturnType.FullName != "System.Void")
+        if (method.Method.ReturnType.FullName == "System.Void")
         {
-            w.Write($"auto return_value = ");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = release_gil();");
+            w.WriteLine(
+                $"{type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
+            );
+            w.Indent--;
+            w.WriteLine("}");
+        }
+        else
+        {
+            w.WriteLine($"auto return_value = [&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = release_gil();");
+            w.WriteLine(
+                $"return {type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
+            );
+            w.Indent--;
+            w.WriteLine("}();");
         }
 
-        w.WriteLine(
-            $"{type.GetMethodInvokeContext(method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
-        );
         w.WriteBlankLine();
 
         // Convert return values and out parameters from C++ -> Python
@@ -1375,8 +1397,9 @@ static class WriterExtensions
             returnValues.Add(outParam);
         }
 
-        // Return Python projected return/out params
+        w.WriteBlankLine();
 
+        // Return Python projected return/out params
 
         if (returnValues.Count == 0)
         {

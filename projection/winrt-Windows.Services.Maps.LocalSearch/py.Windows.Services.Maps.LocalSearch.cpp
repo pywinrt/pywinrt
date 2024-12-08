@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::All());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::All();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::BankAndCreditUnions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::BankAndCreditUnions();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::EatDrink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::EatDrink();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Hospitals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Hospitals();
+            }());
         }
         catch (...)
         {
@@ -134,7 +150,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::HotelsAndMotels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::HotelsAndMotels();
+            }());
         }
         catch (...)
         {
@@ -160,7 +180,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Parking());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Parking();
+            }());
         }
         catch (...)
         {
@@ -186,7 +210,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::SeeDo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::SeeDo();
+            }());
         }
         catch (...)
         {
@@ -212,7 +240,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Shop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Shop();
+            }());
         }
         catch (...)
         {
@@ -310,7 +342,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -336,7 +372,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataAttribution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataAttribution();
+            }());
         }
         catch (...)
         {
@@ -362,7 +402,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -388,7 +432,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -414,7 +462,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identifier();
+            }());
         }
         catch (...)
         {
@@ -440,7 +492,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -466,7 +522,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Point());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Point();
+            }());
         }
         catch (...)
         {
@@ -492,7 +552,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -518,7 +582,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoursOfOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoursOfOperation();
+            }());
         }
         catch (...)
         {
@@ -544,7 +612,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.RatingInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RatingInfo();
+            }());
         }
         catch (...)
         {
@@ -647,7 +719,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<uint32_t>(args, 3);
 
-                return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder::FindLocalLocationsAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder::FindLocalLocationsAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -744,7 +820,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalLocations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalLocations();
+            }());
         }
         catch (...)
         {
@@ -770,7 +850,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -864,7 +948,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Day());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Day();
+            }());
         }
         catch (...)
         {
@@ -890,7 +978,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Span());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Span();
+            }());
         }
         catch (...)
         {
@@ -916,7 +1008,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.Start());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Start();
+            }());
         }
         catch (...)
         {
@@ -1011,7 +1107,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.AggregateRating());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AggregateRating();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1137,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderIdentifier();
+            }());
         }
         catch (...)
         {
@@ -1063,7 +1167,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
                 return nullptr;
             }
 
-            return py::convert(self->obj.RatingCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RatingCount();
+            }());
         }
         catch (...)
         {
@@ -1156,7 +1264,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper::CreateFromLocalLocation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper::CreateFromLocalLocation(param0);
+                }());
             }
             catch (...)
             {

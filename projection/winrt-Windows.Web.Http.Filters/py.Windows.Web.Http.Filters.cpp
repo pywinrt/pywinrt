@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                     return nullptr;
                 }
 
-                self->obj.ClearAuthenticationCache();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearAuthenticationCache();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101,7 +105,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -140,7 +148,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter::CreateForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter::CreateForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -178,7 +190,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                return py::convert(self->obj.SendRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendRequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -210,7 +226,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.UseProxy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseProxy();
+            }());
         }
         catch (...)
         {
@@ -244,7 +264,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.UseProxy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UseProxy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -271,7 +295,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -305,7 +333,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -332,7 +364,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -366,7 +402,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -393,7 +433,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxConnectionsPerServer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxConnectionsPerServer();
+            }());
         }
         catch (...)
         {
@@ -427,7 +471,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxConnectionsPerServer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxConnectionsPerServer(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -454,7 +502,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCertificate();
+            }());
         }
         catch (...)
         {
@@ -488,7 +540,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.ClientCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClientCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -515,7 +571,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomaticDecompression());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomaticDecompression();
+            }());
         }
         catch (...)
         {
@@ -549,7 +609,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutomaticDecompression(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutomaticDecompression(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -576,7 +640,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowUI());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowUI();
+            }());
         }
         catch (...)
         {
@@ -610,7 +678,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowUI(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowUI(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -637,7 +709,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowAutoRedirect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowAutoRedirect();
+            }());
         }
         catch (...)
         {
@@ -671,7 +747,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowAutoRedirect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowAutoRedirect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -698,7 +778,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.CacheControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CacheControl();
+            }());
         }
         catch (...)
         {
@@ -724,7 +808,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.CookieManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CookieManager();
+            }());
         }
         catch (...)
         {
@@ -750,7 +838,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnorableServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnorableServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -776,7 +868,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxVersion();
+            }());
         }
         catch (...)
         {
@@ -810,7 +906,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpVersion>(arg);
 
-            self->obj.MaxVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -837,7 +937,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.CookieUsageBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CookieUsageBehavior();
+            }());
         }
         catch (...)
         {
@@ -871,7 +975,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>(arg);
 
-            self->obj.CookieUsageBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CookieUsageBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -898,7 +1006,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -926,7 +1038,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter, winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerCustomValidationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCustomValidationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -954,7 +1070,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerCustomValidationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCustomValidationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -997,7 +1117,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1113,7 +1237,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteBehavior();
+            }());
         }
         catch (...)
         {
@@ -1147,7 +1275,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>(arg);
 
-            self->obj.WriteBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1174,7 +1306,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadBehavior();
+            }());
         }
         catch (...)
         {
@@ -1208,7 +1344,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>(arg);
 
-            self->obj.ReadBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1307,7 +1447,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1343,7 +1487,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                     return nullptr;
                 }
 
-                self->obj.Reject();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reject();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1376,7 +1524,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestMessage();
+            }());
         }
         catch (...)
         {
@@ -1402,7 +1554,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -1428,7 +1584,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrorSeverity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorSeverity();
+            }());
         }
         catch (...)
         {
@@ -1454,7 +1614,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCertificateErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrors();
+            }());
         }
         catch (...)
         {
@@ -1480,7 +1644,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerIntermediateCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerIntermediateCertificates();
+            }());
         }
         catch (...)
         {
@@ -1583,7 +1751,11 @@ namespace py::cpp::Windows::Web::Http::Filters
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1622,7 +1794,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                return py::convert(self->obj.SendRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendRequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1670,7 +1846,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

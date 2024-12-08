@@ -40,7 +40,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<uint64_t>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::AsyncStatus>(args, 4);
 
-                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationCompletion(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationCompletion(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<uint64_t>(args, 5);
 
-                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationCreation(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationCreation(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -127,7 +135,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<uint64_t>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityRelation>(args, 4);
 
-                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationRelation(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceOperationRelation(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -168,7 +180,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>(args, 2);
 
-                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceSynchronousWorkCompletion(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceSynchronousWorkCompletion(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<uint64_t>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>(args, 4);
 
-                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceSynchronousWorkStart(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TraceSynchronousWorkStart(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -246,7 +266,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -274,7 +298,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -378,7 +406,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Foundation::Diagnostics::ErrorDetails::CreateFromHResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Foundation::Diagnostics::ErrorDetails::CreateFromHResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -410,7 +442,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -436,7 +472,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.HelpUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HelpUri();
+            }());
         }
         catch (...)
         {
@@ -462,7 +502,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.LongDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LongDescription();
+            }());
         }
         catch (...)
         {
@@ -613,7 +657,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.AddLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -653,7 +701,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.AddLoggingChannel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -690,7 +742,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -727,7 +783,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloseAndSaveToFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloseAndSaveToFileAsync();
+                }());
             }
             catch (...)
             {
@@ -765,7 +825,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.RemoveLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -798,7 +862,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -826,7 +894,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
-            return py::convert(self->obj.LogFileGenerated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogFileGenerated(param0);
+            }());
         }
         catch (...)
         {
@@ -854,7 +926,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LogFileGenerated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogFileGenerated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -897,7 +973,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -976,7 +1056,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -1115,7 +1199,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1152,7 +1240,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled();
+                }());
             }
             catch (...)
             {
@@ -1190,7 +1282,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
-                return py::convert(self->obj.IsEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -1229,7 +1325,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
-                return py::convert(self->obj.IsEnabled(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1267,7 +1367,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1307,7 +1411,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                self->obj.LogEvent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1348,7 +1456,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                self->obj.LogEvent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1390,7 +1502,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                self->obj.LogEvent(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1429,7 +1545,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.StartActivity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0);
+                }());
             }
             catch (...)
             {
@@ -1468,7 +1588,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                return py::convert(self->obj.StartActivity(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1508,7 +1632,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1549,7 +1677,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1587,7 +1719,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.StopActivity(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopActivity(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1627,7 +1763,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                self->obj.StopActivity(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopActivity(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1668,7 +1808,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 2);
 
-                self->obj.StopActivity(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopActivity(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1701,7 +1845,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1727,7 +1875,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1753,7 +1905,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -1795,7 +1951,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1945,7 +2105,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1982,7 +2146,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled();
+                }());
             }
             catch (...)
             {
@@ -2020,7 +2188,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
-                return py::convert(self->obj.IsEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -2059,7 +2231,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
-                return py::convert(self->obj.IsEnabled(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2097,7 +2273,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2137,7 +2317,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                self->obj.LogEvent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2178,7 +2362,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                self->obj.LogEvent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2220,7 +2408,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                self->obj.LogEvent(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2259,7 +2451,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2299,7 +2495,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.LogMessage(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogMessage(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2339,7 +2539,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.LogValuePair(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogValuePair(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2380,7 +2584,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                self->obj.LogValuePair(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogValuePair(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2419,7 +2627,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.StartActivity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0);
+                }());
             }
             catch (...)
             {
@@ -2458,7 +2670,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                return py::convert(self->obj.StartActivity(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2498,7 +2714,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2539,7 +2759,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2571,7 +2795,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Enabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Enabled();
+            }());
         }
         catch (...)
         {
@@ -2597,7 +2825,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Level());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Level();
+            }());
         }
         catch (...)
         {
@@ -2623,7 +2855,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2649,7 +2885,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2677,7 +2917,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LoggingEnabled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LoggingEnabled(param0);
+            }());
         }
         catch (...)
         {
@@ -2705,7 +2949,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LoggingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LoggingEnabled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2748,7 +2996,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2878,7 +3130,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -2912,7 +3168,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3035,7 +3295,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                self->obj.AddBoolean(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBoolean(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3075,7 +3339,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
-                self->obj.AddBooleanArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBooleanArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3116,7 +3384,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddBooleanArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBooleanArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3158,7 +3430,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddBooleanArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBooleanArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3199,7 +3475,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddBoolean(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBoolean(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3241,7 +3521,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddBoolean(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddBoolean(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3281,7 +3565,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
 
-                self->obj.AddChar16(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3321,7 +3609,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
 
-                self->obj.AddChar16Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3362,7 +3654,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddChar16Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3404,7 +3700,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddChar16Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3445,7 +3745,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<char16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddChar16(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3487,7 +3791,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddChar16(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddChar16(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3527,7 +3835,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                self->obj.AddDateTime(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTime(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3567,7 +3879,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
 
-                self->obj.AddDateTimeArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTimeArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3608,7 +3924,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddDateTimeArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTimeArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3650,7 +3970,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddDateTimeArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTimeArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3691,7 +4015,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddDateTime(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTime(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3733,7 +4061,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddDateTime(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDateTime(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3773,7 +4105,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddDouble(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDouble(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3813,7 +4149,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
-                self->obj.AddDoubleArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDoubleArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3854,7 +4194,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddDoubleArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDoubleArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3896,7 +4240,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddDoubleArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDoubleArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3937,7 +4285,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddDouble(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDouble(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3979,7 +4331,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddDouble(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDouble(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4018,7 +4374,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddEmpty(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEmpty(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4058,7 +4418,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
 
-                self->obj.AddEmpty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEmpty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4099,7 +4463,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                self->obj.AddEmpty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEmpty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4139,7 +4507,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                self->obj.AddGuid(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuid(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4179,7 +4551,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
 
-                self->obj.AddGuidArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuidArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4220,7 +4596,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddGuidArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuidArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4262,7 +4642,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddGuidArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuidArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4303,7 +4687,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddGuid(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuid(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4345,7 +4733,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddGuid(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddGuid(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4385,7 +4777,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
 
-                self->obj.AddInt16(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4425,7 +4821,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
-                self->obj.AddInt16Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4466,7 +4866,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt16Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4508,7 +4912,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt16Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4549,7 +4957,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt16(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4591,7 +5003,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt16(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt16(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4631,7 +5047,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.AddInt32(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4671,7 +5091,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                self->obj.AddInt32Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4712,7 +5136,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt32Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4754,7 +5182,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt32Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4795,7 +5227,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt32(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4837,7 +5273,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt32(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt32(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4877,7 +5317,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
-                self->obj.AddInt64(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4917,7 +5361,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
-                self->obj.AddInt64Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4958,7 +5406,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt64Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5000,7 +5452,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt64Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5041,7 +5497,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<int64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddInt64(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5083,7 +5543,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddInt64(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInt64(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5123,7 +5587,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.AddPoint(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPoint(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5163,7 +5631,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
 
-                self->obj.AddPointArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPointArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5204,7 +5676,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddPointArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPointArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5246,7 +5722,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddPointArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPointArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5287,7 +5767,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddPoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPoint(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5329,7 +5813,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddPoint(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPoint(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5369,7 +5857,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                self->obj.AddRect(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRect(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5409,7 +5901,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
 
-                self->obj.AddRectArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRectArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5450,7 +5946,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddRectArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRectArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5492,7 +5992,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddRectArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRectArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5533,7 +6037,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddRect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRect(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5575,7 +6083,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddRect(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddRect(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5615,7 +6127,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                self->obj.AddSingle(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingle(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5655,7 +6171,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
-                self->obj.AddSingleArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingleArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5696,7 +6216,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddSingleArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingleArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5738,7 +6262,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddSingleArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingleArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5779,7 +6307,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddSingle(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingle(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5821,7 +6353,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddSingle(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSingle(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5861,7 +6397,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
-                self->obj.AddSize(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSize(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5901,7 +6441,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
 
-                self->obj.AddSizeArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSizeArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5942,7 +6486,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddSizeArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSizeArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5984,7 +6532,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddSizeArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSizeArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6025,7 +6577,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddSize(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSize(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6067,7 +6623,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddSize(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddSize(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6107,7 +6667,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.AddString(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddString(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6147,7 +6711,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
-                self->obj.AddStringArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddStringArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6188,7 +6756,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddStringArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddStringArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6230,7 +6802,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddStringArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddStringArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6271,7 +6847,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddString(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddString(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6313,7 +6893,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddString(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddString(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6353,7 +6937,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                self->obj.AddTimeSpan(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpan(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6393,7 +6981,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
 
-                self->obj.AddTimeSpanArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpanArray(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6434,7 +7026,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddTimeSpanArray(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpanArray(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6476,7 +7072,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddTimeSpanArray(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpanArray(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6517,7 +7117,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddTimeSpan(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpan(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6559,7 +7163,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddTimeSpan(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTimeSpan(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6599,7 +7207,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                self->obj.AddUInt16(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6639,7 +7251,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
-                self->obj.AddUInt16Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6680,7 +7296,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt16Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6722,7 +7342,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt16Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6763,7 +7387,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt16(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6805,7 +7433,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt16(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt16(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6845,7 +7477,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.AddUInt32(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6885,7 +7521,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
-                self->obj.AddUInt32Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6926,7 +7566,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt32Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6968,7 +7612,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt32Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7009,7 +7657,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt32(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7051,7 +7703,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt32(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt32(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7091,7 +7747,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
-                self->obj.AddUInt64(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7131,7 +7791,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
-                self->obj.AddUInt64Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7172,7 +7836,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt64Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7214,7 +7882,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt64Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7255,7 +7927,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt64(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7297,7 +7973,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt64(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt64(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7337,7 +8017,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                self->obj.AddUInt8(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7377,7 +8061,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                self->obj.AddUInt8Array(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8Array(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7418,7 +8106,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt8Array(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8Array(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7460,7 +8152,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt8Array(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8Array(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7501,7 +8197,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
 
-                self->obj.AddUInt8(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7543,7 +8243,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                self->obj.AddUInt8(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddUInt8(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7582,7 +8286,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.BeginStruct(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.BeginStruct(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7622,7 +8330,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.BeginStruct(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.BeginStruct(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7659,7 +8371,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7696,7 +8412,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.EndStruct();
+                {
+                    auto _gil = release_gil();
+                    self->obj.EndStruct();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7947,7 +8667,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Task());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Task();
+            }());
         }
         catch (...)
         {
@@ -7981,7 +8705,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<int16_t>(arg);
 
-            self->obj.Task(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Task(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8008,7 +8736,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tags());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tags();
+            }());
         }
         catch (...)
         {
@@ -8042,7 +8774,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Tags(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tags(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8069,7 +8805,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelatedActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelatedActivityId();
+            }());
         }
         catch (...)
         {
@@ -8103,7 +8843,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.RelatedActivityId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelatedActivityId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8130,7 +8874,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Opcode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Opcode();
+            }());
         }
         catch (...)
         {
@@ -8164,7 +8912,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>(arg);
 
-            self->obj.Opcode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Opcode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8191,7 +8943,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Keywords());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Keywords();
+            }());
         }
         catch (...)
         {
@@ -8225,7 +8981,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<int64_t>(arg);
 
-            self->obj.Keywords(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Keywords(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8252,7 +9012,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -8286,7 +9050,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.ActivityId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActivityId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8415,7 +9183,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.AddLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8455,7 +9227,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.AddLoggingChannel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8492,7 +9268,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8531,7 +9311,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.RemoveLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8571,7 +9355,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SaveToFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveToFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8603,7 +9391,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -8645,7 +9437,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -8748,7 +9544,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetErrorOptions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetErrorOptions();
+                }());
             }
             catch (...)
             {
@@ -8786,7 +9586,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
-                self->obj.SetErrorOptions(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetErrorOptions(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8887,7 +9691,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Enabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Enabled();
+            }());
         }
         catch (...)
         {
@@ -8913,7 +9721,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.TraceLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TraceLevel();
+            }());
         }
         catch (...)
         {
@@ -9011,7 +9823,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetErrorOptions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetErrorOptions();
+                }());
             }
             catch (...)
             {
@@ -9049,7 +9865,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
-                self->obj.SetErrorOptions(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetErrorOptions(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9274,7 +10094,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.AddLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9314,7 +10138,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.AddLoggingChannel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9351,7 +10179,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9388,7 +10220,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloseAndSaveToFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloseAndSaveToFileAsync();
+                }());
             }
             catch (...)
             {
@@ -9426,7 +10262,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.RemoveLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9459,7 +10299,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -9487,7 +10331,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
-            return py::convert(self->obj.LogFileGenerated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogFileGenerated(param0);
+            }());
         }
         catch (...)
         {
@@ -9515,7 +10363,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LogFileGenerated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogFileGenerated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9558,7 +10410,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -9937,7 +10793,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9976,7 +10836,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10016,7 +10880,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.LogMessage(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogMessage(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10056,7 +10924,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.LogValuePair(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogValuePair(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10097,7 +10969,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                self->obj.LogValuePair(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogValuePair(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10130,7 +11006,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Enabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Enabled();
+            }());
         }
         catch (...)
         {
@@ -10156,7 +11036,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Level());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Level();
+            }());
         }
         catch (...)
         {
@@ -10182,7 +11066,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -10210,7 +11098,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LoggingEnabled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LoggingEnabled(param0);
+            }());
         }
         catch (...)
         {
@@ -10238,7 +11130,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LoggingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LoggingEnabled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10281,7 +11177,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -10738,7 +11638,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.AddLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10778,7 +11682,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
-                self->obj.AddLoggingChannel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddLoggingChannel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10815,7 +11723,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10854,7 +11766,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
-                self->obj.RemoveLoggingChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveLoggingChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10894,7 +11810,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SaveToFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveToFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10926,7 +11846,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -10968,7 +11892,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -11301,7 +12229,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled();
+                }());
             }
             catch (...)
             {
@@ -11339,7 +12271,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
-                return py::convert(self->obj.IsEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -11378,7 +12314,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
-                return py::convert(self->obj.IsEnabled(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEnabled(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11416,7 +12356,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11456,7 +12400,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                self->obj.LogEvent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11497,7 +12445,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                self->obj.LogEvent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11539,7 +12491,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                self->obj.LogEvent(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogEvent(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11578,7 +12534,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.StartActivity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0);
+                }());
             }
             catch (...)
             {
@@ -11617,7 +12577,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
-                return py::convert(self->obj.StartActivity(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11657,7 +12621,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -11698,7 +12666,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 3);
 
-                return py::convert(self->obj.StartActivity(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartActivity(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {

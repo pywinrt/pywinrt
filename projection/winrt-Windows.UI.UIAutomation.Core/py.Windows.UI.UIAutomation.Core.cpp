@@ -44,7 +44,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
-                return py::convert(self->obj.GetOperand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOperand(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
-                return py::convert(self->obj.HasOperand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasOperand(param0);
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorLocation();
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -166,7 +182,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -261,7 +281,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::RegisterAnnotationType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::RegisterAnnotationType(param0);
+                }());
             }
             catch (...)
             {
@@ -299,7 +323,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(args, 0);
 
-                winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::UnregisterAnnotationType(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::UnregisterAnnotationType(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -426,7 +454,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
-                self->obj.AddToResults(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddToResults(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -465,7 +497,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.Execute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Execute(param0);
+                }());
             }
             catch (...)
             {
@@ -504,7 +540,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>(args, 1);
 
-                self->obj.ImportConnectionBoundObject(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ImportConnectionBoundObject(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -544,7 +584,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationElement>(args, 1);
 
-                self->obj.ImportElement(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ImportElement(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -584,7 +628,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationTextRange>(args, 1);
 
-                self->obj.ImportTextRange(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ImportTextRange(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -623,7 +671,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.IsOpcodeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsOpcodeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -733,7 +785,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
-                return py::convert(self->obj.GetOperand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOperand(param0);
+                }());
             }
             catch (...)
             {
@@ -772,7 +828,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.SetOperand(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetOperand(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -813,7 +873,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
 
-                self->obj.SetOperand(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetOperand(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -963,7 +1027,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                return py::convert(self->obj.CreateWindowAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWindowAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -999,7 +1067,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1036,7 +1108,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1069,7 +1145,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -1097,7 +1177,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ConnectionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1209,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1154,7 +1242,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>>(arg);
 
-            return py::convert(self->obj.Disconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Disconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -1182,7 +1274,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Disconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Disconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1283,7 +1379,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPipeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPipeName();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1409,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteProcessId();
+            }());
         }
         catch (...)
         {
@@ -1403,7 +1507,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPipeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPipeName();
+            }());
         }
         catch (...)
         {
@@ -1494,7 +1602,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer::ReportSession(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer::ReportSession(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1596,7 +1708,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UnregisterAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnregisterAsync();
+                }());
             }
             catch (...)
             {
@@ -1628,7 +1744,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomationProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomationProvider();
+            }());
         }
         catch (...)
         {
@@ -1722,7 +1842,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsComThreadingRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsComThreadingRequired();
+            }());
         }
         catch (...)
         {
@@ -1905,7 +2029,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId, false>>(args, 2);
 
-                self->obj.CallExtension(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CallExtension(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1944,7 +2072,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.IsExtensionSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsExtensionSupported(param0);
+                }());
             }
             catch (...)
             {

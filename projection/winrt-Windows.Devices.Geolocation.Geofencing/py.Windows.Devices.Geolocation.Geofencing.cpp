@@ -121,7 +121,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -147,7 +151,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.DwellTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DwellTime();
+            }());
         }
         catch (...)
         {
@@ -173,7 +181,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Geoshape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Geoshape();
+            }());
         }
         catch (...)
         {
@@ -199,7 +211,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -225,7 +241,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.MonitoredStates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MonitoredStates();
+            }());
         }
         catch (...)
         {
@@ -251,7 +271,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.SingleUse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SingleUse();
+            }());
         }
         catch (...)
         {
@@ -277,7 +301,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -380,7 +408,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadReports());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadReports();
+                }());
             }
             catch (...)
             {
@@ -412,7 +444,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Geofences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Geofences();
+            }());
         }
         catch (...)
         {
@@ -438,7 +474,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastKnownGeoposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastKnownGeoposition();
+            }());
         }
         catch (...)
         {
@@ -464,7 +504,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -490,7 +534,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor::Current();
+            }());
         }
         catch (...)
         {
@@ -518,7 +566,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.GeofenceStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeofenceStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -546,7 +598,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GeofenceStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GeofenceStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -575,7 +631,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -603,7 +663,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -730,7 +794,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Geofence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Geofence();
+            }());
         }
         catch (...)
         {
@@ -756,7 +824,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Geoposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Geoposition();
+            }());
         }
         catch (...)
         {
@@ -782,7 +854,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewState();
+            }());
         }
         catch (...)
         {
@@ -808,7 +884,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemovalReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemovalReason();
+            }());
         }
         catch (...)
         {

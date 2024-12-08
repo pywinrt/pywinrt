@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Location();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Location(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Location(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllDay();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllDay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllDay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Organizer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Organizer();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer>(arg);
 
-            self->obj.Organizer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Organizer(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Details(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Details(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.BusyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BusyStatus();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentBusyStatus>(arg);
 
-            self->obj.BusyStatus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BusyStatus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recurrence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recurrence();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>(arg);
 
-            self->obj.Recurrence(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Recurrence(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subject(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subject(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.StartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sensitivity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sensitivity();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentSensitivity>(arg);
 
-            self->obj.Sensitivity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Sensitivity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reminder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reminder();
+            }());
         }
         catch (...)
         {
@@ -765,7 +857,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.Reminder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Reminder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -792,7 +888,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invitees();
+            }());
         }
         catch (...)
         {
@@ -818,7 +918,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowNewTimeProposal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowNewTimeProposal();
+            }());
         }
         catch (...)
         {
@@ -852,7 +956,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowNewTimeProposal(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowNewTimeProposal(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -879,7 +987,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserResponse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserResponse();
+            }());
         }
         catch (...)
         {
@@ -913,7 +1025,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>(arg);
 
-            self->obj.UserResponse(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserResponse(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -940,7 +1056,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoamingId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoamingId();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1094,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RoamingId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoamingId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1001,7 +1125,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReplyTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReplyTime();
+            }());
         }
         catch (...)
         {
@@ -1035,7 +1163,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.ReplyTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReplyTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1062,7 +1194,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsResponseRequested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsResponseRequested();
+            }());
         }
         catch (...)
         {
@@ -1096,7 +1232,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsResponseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsResponseRequested(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1123,7 +1263,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOrganizedByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOrganizedByUser();
+            }());
         }
         catch (...)
         {
@@ -1157,7 +1301,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsOrganizedByUser(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOrganizedByUser(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1184,7 +1332,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceledMeeting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceledMeeting();
+            }());
         }
         catch (...)
         {
@@ -1218,7 +1370,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCanceledMeeting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCanceledMeeting(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1245,7 +1401,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.OnlineMeetingLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OnlineMeetingLink();
+            }());
         }
         catch (...)
         {
@@ -1279,7 +1439,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OnlineMeetingLink(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OnlineMeetingLink(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1306,7 +1470,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasInvitees();
+            }());
         }
         catch (...)
         {
@@ -1332,7 +1500,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalendarId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalendarId();
+            }());
         }
         catch (...)
         {
@@ -1358,7 +1530,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalId();
+            }());
         }
         catch (...)
         {
@@ -1384,7 +1560,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -1410,7 +1590,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteChangeNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteChangeNumber();
+            }());
         }
         catch (...)
         {
@@ -1444,7 +1628,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.RemoteChangeNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteChangeNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1471,7 +1659,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetailsKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailsKind();
+            }());
         }
         catch (...)
         {
@@ -1505,7 +1697,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentDetailsKind>(arg);
 
-            self->obj.DetailsKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DetailsKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1532,7 +1728,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeNumber();
+            }());
         }
         catch (...)
         {
@@ -1658,7 +1858,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1697,7 +1901,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.DeleteAppointmentInstanceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAppointmentInstanceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1733,7 +1941,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -1773,7 +1985,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                return py::convert(self->obj.FindAllInstancesAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAllInstancesAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1814,7 +2030,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 3);
 
-                return py::convert(self->obj.FindAllInstancesAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAllInstancesAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1853,7 +2073,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.FindAppointmentsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1893,7 +2117,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 2);
 
-                return py::convert(self->obj.FindAppointmentsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1931,7 +2159,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FindExceptionsFromMasterAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindExceptionsFromMasterAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1967,7 +2199,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindUnexpandedAppointmentsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindUnexpandedAppointmentsAsync();
+                }());
             }
             catch (...)
             {
@@ -2005,7 +2241,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 0);
 
-                return py::convert(self->obj.FindUnexpandedAppointmentsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindUnexpandedAppointmentsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2043,7 +2283,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2082,7 +2326,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.GetAppointmentInstanceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppointmentInstanceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2118,7 +2366,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RegisterSyncManagerAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterSyncManagerAsync();
+                }());
             }
             catch (...)
             {
@@ -2156,7 +2408,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(self->obj.SaveAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2192,7 +2448,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -2233,7 +2493,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                return py::convert(self->obj.TryCancelMeetingAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCancelMeetingAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2272,7 +2536,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.TryCreateOrUpdateAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateOrUpdateAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2314,7 +2582,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                return py::convert(self->obj.TryForwardMeetingAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryForwardMeetingAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2356,7 +2628,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                return py::convert(self->obj.TryProposeNewTimeForMeetingAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryProposeNewTimeForMeetingAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2398,7 +2674,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<bool>(args, 4);
 
-                return py::convert(self->obj.TryUpdateMeetingResponseAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdateMeetingResponseAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2430,7 +2710,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SummaryCardView());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SummaryCardView();
+            }());
         }
         catch (...)
         {
@@ -2464,7 +2748,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentSummaryCardView>(arg);
 
-            self->obj.SummaryCardView(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SummaryCardView(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2491,7 +2779,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppWriteAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppWriteAccess();
+            }());
         }
         catch (...)
         {
@@ -2525,7 +2817,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppWriteAccess>(arg);
 
-            self->obj.OtherAppWriteAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppWriteAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2552,7 +2848,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayColor();
+            }());
         }
         catch (...)
         {
@@ -2586,7 +2886,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.DisplayColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2613,7 +2917,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHidden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHidden();
+            }());
         }
         catch (...)
         {
@@ -2647,7 +2955,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHidden(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsHidden(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2674,7 +2986,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -2708,7 +3024,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2735,7 +3055,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppReadAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppReadAccess();
+            }());
         }
         catch (...)
         {
@@ -2769,7 +3093,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess>(arg);
 
-            self->obj.OtherAppReadAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppReadAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2796,7 +3124,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalId();
+            }());
         }
         catch (...)
         {
@@ -2822,7 +3154,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDisplayName();
+            }());
         }
         catch (...)
         {
@@ -2848,7 +3184,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanCancelMeetings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanCancelMeetings();
+            }());
         }
         catch (...)
         {
@@ -2882,7 +3222,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanCancelMeetings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanCancelMeetings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2909,7 +3253,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanNotifyInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanNotifyInvitees();
+            }());
         }
         catch (...)
         {
@@ -2943,7 +3291,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanNotifyInvitees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanNotifyInvitees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2970,7 +3322,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -3004,7 +3360,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3031,7 +3391,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.MustNofityInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MustNofityInvitees();
+            }());
         }
         catch (...)
         {
@@ -3065,7 +3429,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MustNofityInvitees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MustNofityInvitees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3092,7 +3460,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanUpdateMeetingResponses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanUpdateMeetingResponses();
+            }());
         }
         catch (...)
         {
@@ -3126,7 +3498,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanUpdateMeetingResponses(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanUpdateMeetingResponses(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3153,7 +3529,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanProposeNewTimeForMeetings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanProposeNewTimeForMeetings();
+            }());
         }
         catch (...)
         {
@@ -3187,7 +3567,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanProposeNewTimeForMeetings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanProposeNewTimeForMeetings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3214,7 +3598,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanCreateOrUpdateAppointments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanCreateOrUpdateAppointments();
+            }());
         }
         catch (...)
         {
@@ -3248,7 +3636,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanCreateOrUpdateAppointments(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanCreateOrUpdateAppointments(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3275,7 +3667,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanForwardMeetings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanForwardMeetings();
+            }());
         }
         catch (...)
         {
@@ -3309,7 +3705,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanForwardMeetings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanForwardMeetings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3336,7 +3736,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SyncManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncManager();
+            }());
         }
         catch (...)
         {
@@ -3362,7 +3766,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDataAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDataAccountId();
+            }());
         }
         catch (...)
         {
@@ -3496,7 +3904,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SyncAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SyncAsync();
+                }());
             }
             catch (...)
             {
@@ -3528,7 +3940,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3562,7 +3978,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3589,7 +4009,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastSuccessfulSyncTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastSuccessfulSyncTime();
+            }());
         }
         catch (...)
         {
@@ -3623,7 +4047,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastSuccessfulSyncTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastSuccessfulSyncTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3650,7 +4078,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastAttemptedSyncTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastAttemptedSyncTime();
+            }());
         }
         catch (...)
         {
@@ -3684,7 +4116,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastAttemptedSyncTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastAttemptedSyncTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3713,7 +4149,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SyncStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3741,7 +4181,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SyncStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3840,7 +4284,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -3866,7 +4314,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3960,7 +4412,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appointment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appointment();
+            }());
         }
         catch (...)
         {
@@ -3986,7 +4442,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExceptionProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExceptionProperties();
+            }());
         }
         catch (...)
         {
@@ -4012,7 +4472,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDeleted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDeleted();
+            }());
         }
         catch (...)
         {
@@ -4129,7 +4593,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Role());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Role();
+            }());
         }
         catch (...)
         {
@@ -4163,7 +4631,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantRole>(arg);
 
-            self->obj.Role(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Role(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4190,7 +4662,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -4224,7 +4700,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>(arg);
 
-            self->obj.Response(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Response(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4251,7 +4731,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4285,7 +4769,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4312,7 +4800,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -4346,7 +4838,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Address(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Address(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4441,7 +4937,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -4479,7 +4979,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreAccessType>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4518,7 +5022,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAddAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAddAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4558,7 +5066,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAddAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAddAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4596,7 +5108,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAppointmentDetailsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAppointmentDetailsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4635,7 +5151,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAppointmentDetailsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowAppointmentDetailsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4673,7 +5193,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowEditNewAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowEditNewAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4712,7 +5236,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4753,7 +5281,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 3);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4793,7 +5325,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4833,7 +5369,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4875,7 +5415,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 4);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -4916,7 +5460,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4955,7 +5503,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowTimeFrameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowTimeFrameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5071,7 +5623,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreAccessType>(args, 0);
 
-                return py::convert(self->obj.RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5110,7 +5666,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.ShowAddAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAddAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5150,7 +5710,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
 
-                return py::convert(self->obj.ShowAddAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAddAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5188,7 +5752,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ShowAppointmentDetailsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAppointmentDetailsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5227,7 +5795,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.ShowAppointmentDetailsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAppointmentDetailsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5265,7 +5837,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(self->obj.ShowEditNewAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowEditNewAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5304,7 +5880,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowRemoveAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5345,7 +5925,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 3);
 
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowRemoveAppointmentAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -5385,7 +5969,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
 
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowRemoveAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5425,7 +6013,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
 
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowReplaceAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5467,7 +6059,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 4);
 
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -5508,7 +6104,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
 
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -5547,7 +6147,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.ShowTimeFrameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowTimeFrameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5579,7 +6183,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -5707,7 +6315,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -5741,7 +6353,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5768,7 +6384,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -5802,7 +6422,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Address(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Address(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5889,7 +6513,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::HasInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::HasInvitees();
+            }());
         }
         catch (...)
         {
@@ -5915,7 +6543,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::AllDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::AllDay();
+            }());
         }
         catch (...)
         {
@@ -5941,7 +6573,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::AllowNewTimeProposal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::AllowNewTimeProposal();
+            }());
         }
         catch (...)
         {
@@ -5967,7 +6603,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::BusyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::BusyStatus();
+            }());
         }
         catch (...)
         {
@@ -5993,7 +6633,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::DefaultProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::DefaultProperties();
+            }());
         }
         catch (...)
         {
@@ -6019,7 +6663,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Details();
+            }());
         }
         catch (...)
         {
@@ -6045,7 +6693,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Duration();
+            }());
         }
         catch (...)
         {
@@ -6071,7 +6723,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Recurrence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Recurrence();
+            }());
         }
         catch (...)
         {
@@ -6097,7 +6753,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Invitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Invitees();
+            }());
         }
         catch (...)
         {
@@ -6123,7 +6783,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsCanceledMeeting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsCanceledMeeting();
+            }());
         }
         catch (...)
         {
@@ -6149,7 +6813,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsOrganizedByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsOrganizedByUser();
+            }());
         }
         catch (...)
         {
@@ -6175,7 +6843,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsResponseRequested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::IsResponseRequested();
+            }());
         }
         catch (...)
         {
@@ -6201,7 +6873,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Location();
+            }());
         }
         catch (...)
         {
@@ -6227,7 +6903,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::OnlineMeetingLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::OnlineMeetingLink();
+            }());
         }
         catch (...)
         {
@@ -6253,7 +6933,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Organizer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Organizer();
+            }());
         }
         catch (...)
         {
@@ -6279,7 +6963,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::OriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::OriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -6305,7 +6993,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Reminder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Reminder();
+            }());
         }
         catch (...)
         {
@@ -6331,7 +7023,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::ReplyTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::ReplyTime();
+            }());
         }
         catch (...)
         {
@@ -6357,7 +7053,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Sensitivity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Sensitivity();
+            }());
         }
         catch (...)
         {
@@ -6383,7 +7083,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::StartTime();
+            }());
         }
         catch (...)
         {
@@ -6409,7 +7113,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Subject();
+            }());
         }
         catch (...)
         {
@@ -6435,7 +7143,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::Uri();
+            }());
         }
         catch (...)
         {
@@ -6461,7 +7173,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::UserResponse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::UserResponse();
+            }());
         }
         catch (...)
         {
@@ -6487,7 +7203,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::DetailsKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::DetailsKind();
+            }());
         }
         catch (...)
         {
@@ -6513,7 +7233,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::RemoteChangeNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::RemoteChangeNumber();
+            }());
         }
         catch (...)
         {
@@ -6539,7 +7263,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::ChangeNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Appointments::AppointmentProperties::ChangeNumber();
+            }());
         }
         catch (...)
         {
@@ -6677,7 +7405,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -6711,7 +7443,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit>(arg);
 
-            self->obj.Unit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6738,7 +7474,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Occurrences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Occurrences();
+            }());
         }
         catch (...)
         {
@@ -6772,7 +7512,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.Occurrences(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Occurrences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6799,7 +7543,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Month());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Month();
+            }());
         }
         catch (...)
         {
@@ -6833,7 +7581,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Month(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Month(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6860,7 +7612,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -6894,7 +7650,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Interval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Interval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6921,7 +7681,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DaysOfWeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DaysOfWeek();
+            }());
         }
         catch (...)
         {
@@ -6955,7 +7719,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek>(arg);
 
-            self->obj.DaysOfWeek(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DaysOfWeek(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6982,7 +7750,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Day());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Day();
+            }());
         }
         catch (...)
         {
@@ -7016,7 +7788,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Day(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Day(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7043,7 +7819,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.WeekOfMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WeekOfMonth();
+            }());
         }
         catch (...)
         {
@@ -7077,7 +7857,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentWeekOfMonth>(arg);
 
-            self->obj.WeekOfMonth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WeekOfMonth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7104,7 +7888,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Until());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Until();
+            }());
         }
         catch (...)
         {
@@ -7138,7 +7926,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Until(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Until(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7165,7 +7957,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeZone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeZone();
+            }());
         }
         catch (...)
         {
@@ -7199,7 +7995,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TimeZone(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimeZone(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7226,7 +8026,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecurrenceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecurrenceType();
+            }());
         }
         catch (...)
         {
@@ -7252,7 +8056,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalendarIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalendarIdentifier();
+            }());
         }
         catch (...)
         {
@@ -7361,7 +8169,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateAppointmentCalendarAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAppointmentCalendarAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7400,7 +8212,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateAppointmentCalendarAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAppointmentCalendarAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7436,7 +8252,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindAppointmentCalendarsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentCalendarsAsync();
+                }());
             }
             catch (...)
             {
@@ -7474,7 +8294,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentCalendarsOptions>(args, 0);
 
-                return py::convert(self->obj.FindAppointmentCalendarsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentCalendarsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7513,7 +8337,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.FindAppointmentsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7553,7 +8381,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 2);
 
-                return py::convert(self->obj.FindAppointmentsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAppointmentsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7591,7 +8423,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(self->obj.FindConflictAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindConflictAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7630,7 +8466,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.FindConflictAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindConflictAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7668,7 +8508,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FindLocalIdsFromRoamingIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindLocalIdsFromRoamingIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7706,7 +8550,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7744,7 +8592,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAppointmentCalendarAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppointmentCalendarAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7783,7 +8635,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.GetAppointmentInstanceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppointmentInstanceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7821,7 +8677,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetChangeTracker(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetChangeTracker(param0);
+                }());
             }
             catch (...)
             {
@@ -7860,7 +8720,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>(args, 1);
 
-                return py::convert(self->obj.MoveAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7899,7 +8763,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.ShowAddAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAddAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7937,7 +8805,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ShowAppointmentDetailsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAppointmentDetailsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7976,7 +8848,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.ShowAppointmentDetailsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAppointmentDetailsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8014,7 +8890,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(self->obj.ShowEditNewAppointmentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowEditNewAppointmentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8053,7 +8933,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowRemoveAppointmentAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8094,7 +8978,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 3);
 
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowRemoveAppointmentAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -8134,7 +9022,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
 
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowReplaceAppointmentAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -8176,7 +9068,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 4);
 
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -8208,7 +9104,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeTracker());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeTracker();
+            }());
         }
         catch (...)
         {
@@ -8236,7 +9136,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::AppointmentStore, winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StoreChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoreChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -8264,7 +9168,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StoreChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StoreChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8382,7 +9290,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appointment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appointment();
+            }());
         }
         catch (...)
         {
@@ -8408,7 +9320,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeType();
+            }());
         }
         catch (...)
         {
@@ -8434,7 +9350,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendar();
+            }());
         }
         catch (...)
         {
@@ -8533,7 +9453,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                self->obj.AcceptChanges();
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptChanges();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8572,7 +9496,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>(args, 0);
 
-                self->obj.AcceptChangesThrough(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptChangesThrough(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8609,7 +9537,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -8714,7 +9646,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                self->obj.Enable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Enable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8751,7 +9687,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetChangeReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetChangeReader();
+                }());
             }
             catch (...)
             {
@@ -8787,7 +9727,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8820,7 +9764,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTracking());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTracking();
+            }());
         }
         catch (...)
         {
@@ -8920,7 +9868,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9024,7 +9976,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -9211,7 +10167,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxCount();
+            }());
         }
         catch (...)
         {
@@ -9245,7 +10205,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9272,7 +10236,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeHidden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeHidden();
+            }());
         }
         catch (...)
         {
@@ -9306,7 +10274,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeHidden(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeHidden(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9333,7 +10305,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalendarIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalendarIds();
+            }());
         }
         catch (...)
         {
@@ -9359,7 +10335,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.FetchProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FetchProperties();
+            }());
         }
         catch (...)
         {
@@ -9455,7 +10435,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -9489,7 +10473,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Address(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Address(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9516,7 +10504,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -9550,7 +10542,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)

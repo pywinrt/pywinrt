@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -193,7 +209,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -229,7 +249,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -268,7 +292,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -307,7 +335,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -345,7 +377,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -384,7 +420,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -422,7 +462,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -461,7 +505,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -493,7 +541,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NotationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotationName();
+            }());
         }
         catch (...)
         {
@@ -519,7 +571,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublicId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublicId();
+            }());
         }
         catch (...)
         {
@@ -545,7 +601,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemId();
+            }());
         }
         catch (...)
         {
@@ -571,7 +631,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -605,7 +669,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -632,7 +700,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -666,7 +738,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -693,7 +769,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -719,7 +799,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -745,7 +829,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -771,7 +859,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -797,7 +889,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -823,7 +919,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -849,7 +949,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -875,7 +979,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -901,7 +1009,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -927,7 +1039,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -953,7 +1069,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -979,7 +1099,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -1005,7 +1129,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -1039,7 +1167,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1168,7 +1300,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -1206,7 +1342,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -1242,7 +1382,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -1278,7 +1422,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -1317,7 +1465,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1353,7 +1505,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1392,7 +1548,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -1431,7 +1591,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1469,7 +1633,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -1508,7 +1676,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1546,7 +1718,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -1585,7 +1761,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1617,7 +1797,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublicId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublicId();
+            }());
         }
         catch (...)
         {
@@ -1643,7 +1827,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemId();
+            }());
         }
         catch (...)
         {
@@ -1669,7 +1857,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -1703,7 +1895,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1730,7 +1926,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -1764,7 +1964,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1791,7 +1995,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -1817,7 +2025,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -1843,7 +2055,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -1869,7 +2085,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -1895,7 +2115,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -1921,7 +2145,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -1947,7 +2175,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -1973,7 +2205,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -1999,7 +2235,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -2025,7 +2265,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -2051,7 +2295,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -2077,7 +2325,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -2103,7 +2355,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -2137,7 +2393,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2265,7 +2525,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -2303,7 +2567,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -2339,7 +2607,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -2375,7 +2647,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -2414,7 +2690,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2450,7 +2730,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2489,7 +2773,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -2528,7 +2816,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2566,7 +2858,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -2605,7 +2901,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2643,7 +2943,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -2682,7 +2986,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2714,7 +3022,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3060,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2775,7 +3091,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Specified());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Specified();
+            }());
         }
         catch (...)
         {
@@ -2801,7 +3121,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2827,7 +3151,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -2861,7 +3189,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2888,7 +3220,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -2922,7 +3258,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2949,7 +3289,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -2975,7 +3319,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -3001,7 +3349,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -3027,7 +3379,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -3053,7 +3409,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -3079,7 +3439,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -3105,7 +3469,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -3131,7 +3499,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -3157,7 +3529,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -3183,7 +3559,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -3209,7 +3589,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -3235,7 +3619,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -3261,7 +3649,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -3295,7 +3687,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3424,7 +3820,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -3462,7 +3862,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3501,7 +3905,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -3540,7 +3948,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.DeleteData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3577,7 +3989,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -3613,7 +4029,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -3652,7 +4072,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3691,7 +4115,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3728,7 +4156,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3767,7 +4199,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -3806,7 +4242,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3846,7 +4286,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.ReplaceData(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceData(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3885,7 +4329,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -3924,7 +4372,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3962,7 +4414,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -4001,7 +4457,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4039,7 +4499,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.SplitText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SplitText(param0);
+                }());
             }
             catch (...)
             {
@@ -4078,7 +4542,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.SubstringData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubstringData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4110,7 +4578,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -4144,7 +4616,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4171,7 +4647,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -4197,7 +4677,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -4231,7 +4715,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4258,7 +4746,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -4292,7 +4784,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4319,7 +4815,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -4345,7 +4845,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -4371,7 +4875,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -4397,7 +4905,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -4423,7 +4935,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -4449,7 +4965,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -4475,7 +4995,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -4501,7 +5025,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -4527,7 +5055,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -4553,7 +5085,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -4579,7 +5115,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -4605,7 +5145,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -4631,7 +5175,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -4665,7 +5213,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4799,7 +5351,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -4837,7 +5393,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4876,7 +5436,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -4915,7 +5479,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.DeleteData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4952,7 +5520,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -4988,7 +5560,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -5027,7 +5603,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5066,7 +5646,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5103,7 +5687,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5142,7 +5730,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -5181,7 +5773,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5221,7 +5817,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.ReplaceData(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceData(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5260,7 +5860,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -5299,7 +5903,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5337,7 +5945,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -5376,7 +5988,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5415,7 +6031,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.SubstringData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubstringData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5447,7 +6067,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -5481,7 +6105,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5508,7 +6136,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -5534,7 +6166,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -5568,7 +6204,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5595,7 +6235,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -5629,7 +6273,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5656,7 +6304,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -5682,7 +6334,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -5708,7 +6364,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -5734,7 +6394,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -5760,7 +6424,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -5786,7 +6454,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -5812,7 +6484,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -5838,7 +6514,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -5864,7 +6544,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -5890,7 +6574,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -5916,7 +6604,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -5942,7 +6634,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -5968,7 +6664,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -6002,7 +6702,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6157,7 +6861,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -6195,7 +6903,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -6233,7 +6945,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateAttribute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttribute(param0);
+                }());
             }
             catch (...)
             {
@@ -6272,7 +6988,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateAttributeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttributeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6310,7 +7030,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateCDataSection(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCDataSection(param0);
+                }());
             }
             catch (...)
             {
@@ -6348,7 +7072,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateComment(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateComment(param0);
+                }());
             }
             catch (...)
             {
@@ -6384,7 +7112,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateDocumentFragment());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDocumentFragment();
+                }());
             }
             catch (...)
             {
@@ -6422,7 +7154,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateElement(param0);
+                }());
             }
             catch (...)
             {
@@ -6461,7 +7197,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateElementNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateElementNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6499,7 +7239,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateEntityReference(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEntityReference(param0);
+                }());
             }
             catch (...)
             {
@@ -6538,7 +7282,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateProcessingInstruction(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateProcessingInstruction(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6576,7 +7324,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateTextNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateTextNode(param0);
+                }());
             }
             catch (...)
             {
@@ -6614,7 +7366,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetElementById(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetElementById(param0);
+                }());
             }
             catch (...)
             {
@@ -6652,7 +7408,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetElementsByTagName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetElementsByTagName(param0);
+                }());
             }
             catch (...)
             {
@@ -6688,7 +7448,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -6724,7 +7488,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -6763,7 +7531,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.ImportNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6802,7 +7574,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6840,7 +7616,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6879,7 +7659,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
-                return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6917,7 +7701,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromUriAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromUriAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6956,7 +7744,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
-                return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6994,7 +7786,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LoadXml(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadXml(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7033,7 +7829,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.LoadXmlFromBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadXmlFromBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7073,7 +7873,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
-                self->obj.LoadXmlFromBuffer(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadXmlFromBuffer(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7113,7 +7917,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
-                self->obj.LoadXml(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadXml(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7150,7 +7958,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7189,7 +8001,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -7228,7 +8044,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7266,7 +8086,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.SaveToFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveToFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7304,7 +8128,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -7343,7 +8171,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7381,7 +8213,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -7420,7 +8256,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7452,7 +8292,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Doctype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Doctype();
+            }());
         }
         catch (...)
         {
@@ -7478,7 +8322,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentElement();
+            }());
         }
         catch (...)
         {
@@ -7504,7 +8352,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentUri();
+            }());
         }
         catch (...)
         {
@@ -7530,7 +8382,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Implementation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Implementation();
+            }());
         }
         catch (...)
         {
@@ -7556,7 +8412,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -7590,7 +8450,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7617,7 +8481,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -7651,7 +8519,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7678,7 +8550,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -7704,7 +8580,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -7730,7 +8610,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -7756,7 +8640,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -7782,7 +8670,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -7808,7 +8700,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -7834,7 +8730,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -7860,7 +8760,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -7886,7 +8790,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -7912,7 +8820,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -7938,7 +8850,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -7964,7 +8880,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -7990,7 +8910,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -8024,7 +8948,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8201,7 +9129,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -8239,7 +9171,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -8275,7 +9211,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -8311,7 +9251,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -8350,7 +9294,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8386,7 +9334,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8425,7 +9377,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -8464,7 +9420,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8502,7 +9462,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -8541,7 +9505,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8579,7 +9547,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -8618,7 +9590,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8650,7 +9626,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -8684,7 +9664,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8711,7 +9695,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -8745,7 +9733,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8772,7 +9764,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -8798,7 +9794,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -8824,7 +9824,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -8850,7 +9854,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -8876,7 +9884,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -8902,7 +9914,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -8928,7 +9944,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -8954,7 +9974,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -8980,7 +10004,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -9006,7 +10034,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -9032,7 +10064,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -9058,7 +10094,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -9084,7 +10124,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -9118,7 +10162,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9244,7 +10292,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -9282,7 +10334,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -9318,7 +10374,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -9354,7 +10414,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -9393,7 +10457,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9429,7 +10497,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9468,7 +10540,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -9507,7 +10583,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9545,7 +10625,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -9584,7 +10668,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9622,7 +10710,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -9661,7 +10753,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9693,7 +10789,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Entities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Entities();
+            }());
         }
         catch (...)
         {
@@ -9719,7 +10819,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -9745,7 +10849,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Notations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Notations();
+            }());
         }
         catch (...)
         {
@@ -9771,7 +10879,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -9805,7 +10917,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9832,7 +10948,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -9866,7 +10986,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9893,7 +11017,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -9919,7 +11047,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -9945,7 +11077,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -9971,7 +11107,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -9997,7 +11137,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -10023,7 +11167,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -10049,7 +11197,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -10075,7 +11227,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -10101,7 +11257,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -10127,7 +11287,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -10153,7 +11317,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -10179,7 +11347,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -10205,7 +11377,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -10239,7 +11415,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10369,7 +11549,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.HasFeature(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasFeature(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10474,7 +11658,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -10512,7 +11700,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -10550,7 +11742,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAttribute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAttribute(param0);
+                }());
             }
             catch (...)
             {
@@ -10589,7 +11785,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetAttributeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAttributeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10627,7 +11827,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAttributeNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAttributeNode(param0);
+                }());
             }
             catch (...)
             {
@@ -10666,7 +11870,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetAttributeNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAttributeNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10704,7 +11912,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetElementsByTagName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetElementsByTagName(param0);
+                }());
             }
             catch (...)
             {
@@ -10740,7 +11952,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -10776,7 +11992,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -10815,7 +12035,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10851,7 +12075,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10890,7 +12118,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveAttribute(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAttribute(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10930,7 +12162,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.RemoveAttributeNS(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAttributeNS(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10969,7 +12205,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
-                return py::convert(self->obj.RemoveAttributeNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAttributeNode(param0);
+                }());
             }
             catch (...)
             {
@@ -11007,7 +12247,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -11046,7 +12290,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11084,7 +12332,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -11123,7 +12375,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11161,7 +12417,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -11200,7 +12460,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11239,7 +12503,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetAttribute(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAttribute(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11280,7 +12548,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.SetAttributeNS(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAttributeNS(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11319,7 +12591,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
-                return py::convert(self->obj.SetAttributeNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetAttributeNode(param0);
+                }());
             }
             catch (...)
             {
@@ -11357,7 +12633,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
-                return py::convert(self->obj.SetAttributeNodeNS(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetAttributeNodeNS(param0);
+                }());
             }
             catch (...)
             {
@@ -11389,7 +12669,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.TagName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TagName();
+            }());
         }
         catch (...)
         {
@@ -11415,7 +12699,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -11449,7 +12737,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11476,7 +12768,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -11510,7 +12806,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11537,7 +12837,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -11563,7 +12867,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -11589,7 +12897,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -11615,7 +12927,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -11641,7 +12957,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -11667,7 +12987,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -11693,7 +13017,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -11719,7 +13047,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -11745,7 +13077,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -11771,7 +13107,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -11797,7 +13137,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -11823,7 +13167,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -11849,7 +13197,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -11883,7 +13235,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12022,7 +13378,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -12060,7 +13420,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -12096,7 +13460,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -12132,7 +13500,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -12171,7 +13543,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -12207,7 +13583,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12246,7 +13626,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -12285,7 +13669,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -12323,7 +13711,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -12362,7 +13754,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -12400,7 +13796,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -12439,7 +13839,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -12471,7 +13875,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -12505,7 +13913,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12532,7 +13944,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -12566,7 +13982,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12593,7 +14013,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -12619,7 +14043,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -12645,7 +14073,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -12671,7 +14103,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -12697,7 +14133,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -12723,7 +14163,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -12749,7 +14193,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -12775,7 +14223,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -12801,7 +14253,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -12827,7 +14283,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -12853,7 +14313,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -12879,7 +14343,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -12905,7 +14373,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -12939,7 +14411,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13081,7 +14557,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidateOnParse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidateOnParse();
+            }());
         }
         catch (...)
         {
@@ -13115,7 +14595,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ValidateOnParse(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValidateOnParse(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13142,7 +14626,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolveExternals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolveExternals();
+            }());
         }
         catch (...)
         {
@@ -13176,7 +14664,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ResolveExternals(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResolveExternals(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13203,7 +14695,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProhibitDtd());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProhibitDtd();
+            }());
         }
         catch (...)
         {
@@ -13237,7 +14733,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ProhibitDtd(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProhibitDtd(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13264,7 +14764,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxElementDepth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxElementDepth();
+            }());
         }
         catch (...)
         {
@@ -13298,7 +14802,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxElementDepth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxElementDepth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13325,7 +14833,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementContentWhiteSpace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementContentWhiteSpace();
+            }());
         }
         catch (...)
         {
@@ -13359,7 +14871,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ElementContentWhiteSpace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ElementContentWhiteSpace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13461,7 +14977,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -13499,7 +15019,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -13538,7 +15062,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Xml::Dom::IXmlNode, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13576,7 +15104,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedItem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedItem(param0);
+                }());
             }
             catch (...)
             {
@@ -13615,7 +15147,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetNamedItemNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedItemNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13654,7 +15190,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -13666,6 +15206,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -13704,7 +15245,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.Item(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Item(param0);
+                }());
             }
             catch (...)
             {
@@ -13742,7 +15287,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RemoveNamedItem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveNamedItem(param0);
+                }());
             }
             catch (...)
             {
@@ -13781,7 +15330,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RemoveNamedItemNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveNamedItemNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13819,7 +15372,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.SetNamedItem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetNamedItem(param0);
+                }());
             }
             catch (...)
             {
@@ -13857,7 +15414,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.SetNamedItemNS(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetNamedItemNS(param0);
+                }());
             }
             catch (...)
             {
@@ -13889,7 +15450,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -13915,7 +15480,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -13952,7 +15521,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -13965,6 +15538,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -13978,7 +15552,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -14017,7 +15595,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -14030,7 +15613,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -14127,7 +15714,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -14165,7 +15756,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -14204,7 +15799,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Xml::Dom::IXmlNode, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14243,7 +15842,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -14255,6 +15858,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -14293,7 +15897,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.Item(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Item(param0);
+                }());
             }
             catch (...)
             {
@@ -14325,7 +15933,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -14351,7 +15963,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -14388,7 +16004,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -14401,6 +16021,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -14414,7 +16035,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -14453,7 +16078,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -14466,7 +16096,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -14559,7 +16193,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -14597,7 +16235,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -14633,7 +16275,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -14669,7 +16315,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -14708,7 +16358,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14744,7 +16398,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14783,7 +16441,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -14822,7 +16484,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14860,7 +16526,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -14899,7 +16569,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14937,7 +16611,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -14976,7 +16654,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -15008,7 +16690,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -15042,7 +16728,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15069,7 +16759,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -15103,7 +16797,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15130,7 +16828,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -15156,7 +16858,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -15182,7 +16888,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -15208,7 +16918,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -15234,7 +16948,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -15260,7 +16978,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -15286,7 +17008,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -15312,7 +17038,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -15338,7 +17068,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -15364,7 +17098,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -15390,7 +17128,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -15416,7 +17158,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -15442,7 +17188,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -15476,7 +17226,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15503,7 +17257,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -15537,7 +17295,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15564,7 +17326,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Target());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Target();
+            }());
         }
         catch (...)
         {
@@ -15691,7 +17457,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -15729,7 +17499,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15768,7 +17542,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -15807,7 +17585,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.DeleteData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15844,7 +17626,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -15880,7 +17666,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -15919,7 +17709,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -15958,7 +17752,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15995,7 +17793,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16034,7 +17836,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -16073,7 +17879,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16113,7 +17923,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.ReplaceData(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceData(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16152,7 +17966,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -16191,7 +18009,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16229,7 +18051,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -16268,7 +18094,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16306,7 +18136,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.SplitText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SplitText(param0);
+                }());
             }
             catch (...)
             {
@@ -16345,7 +18179,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.SubstringData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubstringData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16377,7 +18215,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -16411,7 +18253,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16438,7 +18284,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -16464,7 +18314,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -16498,7 +18352,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16525,7 +18383,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -16559,7 +18421,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16586,7 +18452,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -16612,7 +18482,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -16638,7 +18512,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -16664,7 +18542,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -16690,7 +18572,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -16716,7 +18602,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -16742,7 +18632,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -16768,7 +18662,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -16794,7 +18692,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -16820,7 +18722,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -16846,7 +18752,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -16872,7 +18782,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -16898,7 +18812,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -16932,7 +18850,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17066,7 +18988,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -17104,7 +19030,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17143,7 +19073,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -17182,7 +19116,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.DeleteData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17219,7 +19157,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -17255,7 +19197,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -17294,7 +19240,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17333,7 +19283,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17370,7 +19324,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17409,7 +19367,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -17448,7 +19410,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17488,7 +19454,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.ReplaceData(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceData(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17527,7 +19497,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -17566,7 +19540,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17604,7 +19582,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -17643,7 +19625,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17682,7 +19668,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.SubstringData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubstringData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17714,7 +19704,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -17748,7 +19742,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17775,7 +19773,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -17801,7 +19803,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -17827,7 +19833,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -17853,7 +19863,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -17879,7 +19893,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -17905,7 +19923,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -17931,7 +19953,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -17957,7 +19983,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -17983,7 +20013,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -18009,7 +20043,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -18035,7 +20073,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -18069,7 +20111,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18096,7 +20142,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -18122,7 +20172,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -18148,7 +20202,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -18182,7 +20240,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18209,7 +20271,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -18235,7 +20301,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -18269,7 +20339,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19514,7 +21588,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -19552,7 +21630,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -19588,7 +21670,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -19624,7 +21710,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -19663,7 +21753,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -19699,7 +21793,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19738,7 +21836,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -19777,7 +21879,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -19815,7 +21921,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -19854,7 +21964,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -19892,7 +22006,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -19931,7 +22049,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -19963,7 +22085,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -19989,7 +22115,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -20015,7 +22145,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -20041,7 +22175,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -20067,7 +22205,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -20093,7 +22235,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -20119,7 +22265,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -20145,7 +22295,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -20171,7 +22325,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -20197,7 +22355,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -20231,7 +22393,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20258,7 +22424,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -20284,7 +22454,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -20310,7 +22484,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -20344,7 +22522,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20371,7 +22553,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -20397,7 +22583,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -20431,7 +22621,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -21400,7 +23594,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -21439,7 +23637,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -21477,7 +23679,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -21516,7 +23722,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -21836,7 +24046,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -21868,7 +24082,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -21902,7 +24120,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22134,7 +24356,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.AppendChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendChild(param0);
+                }());
             }
             catch (...)
             {
@@ -22172,7 +24398,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22211,7 +24441,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.CloneNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneNode(param0);
+                }());
             }
             catch (...)
             {
@@ -22250,7 +24484,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.DeleteData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22287,7 +24525,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXml());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXml();
+                }());
             }
             catch (...)
             {
@@ -22323,7 +24565,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasChildNodes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasChildNodes();
+                }());
             }
             catch (...)
             {
@@ -22362,7 +24608,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.InsertBefore(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InsertBefore(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -22401,7 +24651,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertData(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertData(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22438,7 +24692,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                     return nullptr;
                 }
 
-                self->obj.Normalize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Normalize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22477,7 +24735,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.RemoveChild(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveChild(param0);
+                }());
             }
             catch (...)
             {
@@ -22516,7 +24778,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
-                return py::convert(self->obj.ReplaceChild(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceChild(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -22556,7 +24822,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.ReplaceData(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceData(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22595,7 +24865,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -22634,7 +24908,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectNodesNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectNodesNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -22672,7 +24950,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNode(param0);
+                }());
             }
             catch (...)
             {
@@ -22711,7 +24993,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.SelectSingleNodeNS(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleNodeNS(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -22749,7 +25035,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.SplitText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SplitText(param0);
+                }());
             }
             catch (...)
             {
@@ -22788,7 +25078,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.SubstringData(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubstringData(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -22820,7 +25114,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -22854,7 +25152,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22881,7 +25183,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -22907,7 +25213,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -22933,7 +25243,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildNodes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildNodes();
+            }());
         }
         catch (...)
         {
@@ -22959,7 +25273,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstChild();
+            }());
         }
         catch (...)
         {
@@ -22985,7 +25303,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastChild());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastChild();
+            }());
         }
         catch (...)
         {
@@ -23011,7 +25333,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -23037,7 +25363,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -23063,7 +25393,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextSibling();
+            }());
         }
         catch (...)
         {
@@ -23089,7 +25423,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -23115,7 +25453,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeType();
+            }());
         }
         catch (...)
         {
@@ -23141,7 +25483,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -23175,7 +25521,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -23202,7 +25552,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerDocument();
+            }());
         }
         catch (...)
         {
@@ -23228,7 +25582,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentNode();
+            }());
         }
         catch (...)
         {
@@ -23254,7 +25612,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Prefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Prefix();
+            }());
         }
         catch (...)
         {
@@ -23288,7 +25650,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Prefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Prefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -23315,7 +25681,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousSibling());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousSibling();
+            }());
         }
         catch (...)
         {
@@ -23341,7 +25711,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerText();
+            }());
         }
         catch (...)
         {
@@ -23375,7 +25749,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.InnerText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InnerText(param0);
+            }
+
             return 0;
         }
         catch (...)

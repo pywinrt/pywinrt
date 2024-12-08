@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::AssociateNetworkAccountAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::AssociateNetworkAccountAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::AssociateSocialNetworkAccountAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::AssociateSocialNetworkAccountAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::ImportVcardToSystemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::ImportVcardToSystemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -219,7 +231,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
                 auto param5 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 5);
                 auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 6);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager::ImportMmsToSystemAsync(param0, param1, param2, param3, param4, param5, param6));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager::ImportMmsToSystemAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
             }
             catch (...)
             {
@@ -262,7 +278,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 5);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager::ImportSmsToSystemAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager::ImportSmsToSystemAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {

@@ -187,7 +187,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides>().GetResource(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides>().GetResource(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -219,7 +223,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader::Current();
+            }());
         }
         catch (...)
         {
@@ -253,7 +261,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader>(arg);
 
-            winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader::Current(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader::Current(param0);
+            }
+
             return 0;
         }
         catch (...)

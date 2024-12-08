@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AcquireChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcquireChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode>(args, 0);
 
-                return py::convert(self->obj.IsChannelModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsChannelModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReadValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValue(param0);
+                }());
             }
             catch (...)
             {
@@ -159,7 +171,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.ReleaseChannel(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReleaseChannel(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelCount();
+            }());
         }
         catch (...)
         {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelMode();
+            }());
         }
         catch (...)
         {
@@ -252,7 +276,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode>(arg);
 
-            self->obj.ChannelMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChannelMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -279,7 +307,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxValue();
+            }());
         }
         catch (...)
         {
@@ -305,7 +337,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinValue();
+            }());
         }
         catch (...)
         {
@@ -331,7 +367,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolutionInBits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolutionInBits();
+            }());
         }
         catch (...)
         {
@@ -745,7 +785,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetControllers());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetControllers();
+                }());
             }
             catch (...)
             {

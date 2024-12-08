@@ -38,7 +38,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Black());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Black();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Bold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Bold();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::ExtraBlack());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::ExtraBlack();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::ExtraBold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::ExtraBold();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::ExtraLight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::ExtraLight();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Light());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Light();
+            }());
         }
         catch (...)
         {
@@ -194,7 +218,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Medium());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Medium();
+            }());
         }
         catch (...)
         {
@@ -220,7 +248,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Normal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Normal();
+            }());
         }
         catch (...)
         {
@@ -246,7 +278,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::SemiBold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::SemiBold();
+            }());
         }
         catch (...)
         {
@@ -272,7 +308,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::SemiLight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::SemiLight();
+            }());
         }
         catch (...)
         {
@@ -298,7 +338,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::FontWeights::Thin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::FontWeights::Thin();
+            }());
         }
         catch (...)
         {
@@ -430,7 +474,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ApplyDisplayUpdates());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApplyDisplayUpdates();
+                }());
             }
             catch (...)
             {
@@ -466,7 +514,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BatchDisplayUpdates());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BatchDisplayUpdates();
+                }());
             }
             catch (...)
             {
@@ -502,7 +554,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.BeginUndoGroup();
+                {
+                    auto _gil = release_gil();
+                    self->obj.BeginUndoGroup();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -539,7 +595,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CanCopy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanCopy();
+                }());
             }
             catch (...)
             {
@@ -575,7 +635,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CanPaste());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanPaste();
+                }());
             }
             catch (...)
             {
@@ -611,7 +675,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CanRedo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanRedo();
+                }());
             }
             catch (...)
             {
@@ -647,7 +715,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CanUndo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanUndo();
+                }());
             }
             catch (...)
             {
@@ -683,7 +755,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.ClearUndoRedoHistory();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearUndoRedoHistory();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -720,7 +796,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.EndUndoGroup();
+                {
+                    auto _gil = release_gil();
+                    self->obj.EndUndoGroup();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -757,7 +837,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDefaultCharacterFormat());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDefaultCharacterFormat();
+                }());
             }
             catch (...)
             {
@@ -793,7 +877,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDefaultParagraphFormat());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDefaultParagraphFormat();
+                }());
             }
             catch (...)
             {
@@ -832,7 +920,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetRange(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRange(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -871,7 +963,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 1);
 
-                return py::convert(self->obj.GetRangeFromPoint(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRangeFromPoint(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -910,13 +1006,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
-                self->obj.GetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetText(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -956,7 +1056,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.LoadFromStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadFromStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -993,7 +1097,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Redo();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Redo();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1033,7 +1141,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.SaveToStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SaveToStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1072,7 +1184,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(args, 0);
 
-                self->obj.SetDefaultCharacterFormat(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDefaultCharacterFormat(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1111,7 +1227,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(args, 0);
 
-                self->obj.SetDefaultParagraphFormat(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDefaultParagraphFormat(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1151,7 +1271,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1188,7 +1312,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Undo();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Undo();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1221,7 +1349,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.UndoLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UndoLimit();
+            }());
         }
         catch (...)
         {
@@ -1255,7 +1387,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.UndoLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UndoLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1282,7 +1418,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnoreTrailingCharacterSpacing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnoreTrailingCharacterSpacing();
+            }());
         }
         catch (...)
         {
@@ -1316,7 +1456,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IgnoreTrailingCharacterSpacing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IgnoreTrailingCharacterSpacing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1343,7 +1487,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultTabStop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultTabStop();
+            }());
         }
         catch (...)
         {
@@ -1377,7 +1525,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.DefaultTabStop(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultTabStop(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1404,7 +1556,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.CaretType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CaretType();
+            }());
         }
         catch (...)
         {
@@ -1438,7 +1594,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::CaretType>(arg);
 
-            self->obj.CaretType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CaretType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1465,7 +1625,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlignmentIncludesTrailingWhitespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlignmentIncludesTrailingWhitespace();
+            }());
         }
         catch (...)
         {
@@ -1499,7 +1663,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlignmentIncludesTrailingWhitespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlignmentIncludesTrailingWhitespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1526,7 +1694,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Selection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Selection();
+            }());
         }
         catch (...)
         {
@@ -1651,7 +1823,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.CanPaste(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanPaste(param0);
+                }());
             }
             catch (...)
             {
@@ -1689,7 +1865,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::LetterCase>(args, 0);
 
-                self->obj.ChangeCase(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeCase(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1728,7 +1908,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Collapse(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collapse(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1765,7 +1949,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Copy();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Copy();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1802,7 +1990,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Cut();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cut();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1842,7 +2034,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Delete(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Delete(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1881,7 +2077,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.EndOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EndOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1919,7 +2119,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.Expand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Expand(param0);
+                }());
             }
             catch (...)
             {
@@ -1959,7 +2163,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::FindOptions>(args, 2);
 
-                return py::convert(self->obj.FindText(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindText(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1998,13 +2206,17 @@ namespace py::cpp::Microsoft::UI::Text
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.GetCharacterUtf32(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetCharacterUtf32(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -2041,7 +2253,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClone();
+                }());
             }
             catch (...)
             {
@@ -2079,7 +2295,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.GetIndex(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIndex(param0);
+                }());
             }
             catch (...)
             {
@@ -2120,13 +2340,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 2);
                 winrt::Windows::Foundation::Point param3{};
 
-                self->obj.GetPoint(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetPoint(param0, param1, param2, param3);
+                }
 
                 py::pyobj_handle out3{ py::convert(param3) };
                 if (!out3)
                 {
                     return nullptr;
                 }
+
                 return out3.detach();
             }
             catch (...)
@@ -2167,7 +2391,10 @@ namespace py::cpp::Microsoft::UI::Text
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
 
-                self->obj.GetRect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetRect(param0, param1, param2);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -2179,6 +2406,7 @@ namespace py::cpp::Microsoft::UI::Text
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out1.get(), out2.get());
             }
             catch (...)
@@ -2218,13 +2446,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
-                self->obj.GetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetText(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -2264,7 +2496,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.GetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2303,7 +2539,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InRange(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InRange(param0);
+                }());
             }
             catch (...)
             {
@@ -2341,7 +2581,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InStory(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InStory(param0);
+                }());
             }
             catch (...)
             {
@@ -2384,7 +2628,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 5);
 
-                self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2423,7 +2671,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -2459,7 +2711,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.MatchSelection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.MatchSelection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2499,7 +2755,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Move(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Move(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2538,7 +2798,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveEnd(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveEnd(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2577,7 +2841,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveStart(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveStart(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2615,7 +2883,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.Paste(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Paste(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2654,7 +2926,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 0);
 
-                self->obj.ScrollIntoView(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ScrollIntoView(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2695,7 +2971,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetIndex(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetIndex(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2736,7 +3016,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetPoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPoint(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2776,7 +3060,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.SetRange(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRange(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2816,7 +3104,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2856,7 +3148,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.SetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2896,7 +3192,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.StartOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2928,7 +3228,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -2962,7 +3266,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2989,7 +3297,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartPosition();
+            }());
         }
         catch (...)
         {
@@ -3023,7 +3335,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.StartPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3050,7 +3366,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParagraphFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParagraphFormat();
+            }());
         }
         catch (...)
         {
@@ -3084,7 +3404,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(arg);
 
-            self->obj.ParagraphFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ParagraphFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3111,7 +3435,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Link());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Link();
+            }());
         }
         catch (...)
         {
@@ -3145,7 +3473,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Link(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Link(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3172,7 +3504,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gravity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gravity();
+            }());
         }
         catch (...)
         {
@@ -3206,7 +3542,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::RangeGravity>(arg);
 
-            self->obj.Gravity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gravity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3233,7 +3573,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FormattedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormattedText();
+            }());
         }
         catch (...)
         {
@@ -3267,7 +3611,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(arg);
 
-            self->obj.FormattedText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FormattedText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3294,7 +3642,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndPosition();
+            }());
         }
         catch (...)
         {
@@ -3328,7 +3680,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.EndPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3355,7 +3711,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacterFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacterFormat();
+            }());
         }
         catch (...)
         {
@@ -3389,7 +3749,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(arg);
 
-            self->obj.CharacterFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharacterFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3416,7 +3780,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Character());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Character();
+            }());
         }
         catch (...)
         {
@@ -3450,7 +3818,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<char16_t>(arg);
 
-            self->obj.Character(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Character(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3477,7 +3849,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -3503,7 +3879,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StoryLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoryLength();
+            }());
         }
         catch (...)
         {
@@ -3630,7 +4010,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::AutoColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::AutoColor();
+            }());
         }
         catch (...)
         {
@@ -3656,7 +4040,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::MaxUnitCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::MaxUnitCount();
+            }());
         }
         catch (...)
         {
@@ -3682,7 +4070,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::MinUnitCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::MinUnitCount();
+            }());
         }
         catch (...)
         {
@@ -3708,7 +4100,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::UndefinedColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::UndefinedColor();
+            }());
         }
         catch (...)
         {
@@ -3734,7 +4130,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::UndefinedFloatValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::UndefinedFloatValue();
+            }());
         }
         catch (...)
         {
@@ -3760,7 +4160,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::UndefinedFontStretch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::UndefinedFontStretch();
+            }());
         }
         catch (...)
         {
@@ -3786,7 +4190,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::UndefinedFontStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::UndefinedFontStyle();
+            }());
         }
         catch (...)
         {
@@ -3812,7 +4220,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Text::TextConstants::UndefinedInt32Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Text::TextConstants::UndefinedInt32Value();
+            }());
         }
         catch (...)
         {
@@ -3914,7 +4326,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClone();
+                }());
             }
             catch (...)
             {
@@ -3952,7 +4368,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -3990,7 +4410,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(args, 0);
 
-                self->obj.SetClone(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetClone(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4023,7 +4447,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllCaps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllCaps();
+            }());
         }
         catch (...)
         {
@@ -4057,7 +4485,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.AllCaps(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllCaps(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4084,7 +4516,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -4118,7 +4554,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4145,7 +4585,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bold();
+            }());
         }
         catch (...)
         {
@@ -4179,7 +4623,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Bold(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bold(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4206,7 +4654,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStretch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontStretch();
+            }());
         }
         catch (...)
         {
@@ -4240,7 +4692,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStretch>(arg);
 
-            self->obj.FontStretch(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FontStretch(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4267,7 +4723,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontStyle();
+            }());
         }
         catch (...)
         {
@@ -4301,7 +4761,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStyle>(arg);
 
-            self->obj.FontStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FontStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4328,7 +4792,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -4362,7 +4830,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.ForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4389,7 +4861,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Hidden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Hidden();
+            }());
         }
         catch (...)
         {
@@ -4423,7 +4899,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Hidden(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Hidden(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4450,7 +4930,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Italic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Italic();
+            }());
         }
         catch (...)
         {
@@ -4484,7 +4968,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Italic(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Italic(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4511,7 +4999,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kerning());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kerning();
+            }());
         }
         catch (...)
         {
@@ -4545,7 +5037,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.Kerning(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kerning(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4572,7 +5068,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageTag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageTag();
+            }());
         }
         catch (...)
         {
@@ -4606,7 +5106,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LanguageTag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LanguageTag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4633,7 +5137,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LinkType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LinkType();
+            }());
         }
         catch (...)
         {
@@ -4659,7 +5167,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4693,7 +5205,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4720,7 +5236,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Outline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Outline();
+            }());
         }
         catch (...)
         {
@@ -4754,7 +5274,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Outline(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Outline(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4781,7 +5305,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4815,7 +5343,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.Position(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Position(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4842,7 +5374,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectedText();
+            }());
         }
         catch (...)
         {
@@ -4876,7 +5412,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.ProtectedText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtectedText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4903,7 +5443,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4937,7 +5481,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4964,7 +5512,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmallCaps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmallCaps();
+            }());
         }
         catch (...)
         {
@@ -4998,7 +5550,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.SmallCaps(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmallCaps(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5025,7 +5581,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Spacing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Spacing();
+            }());
         }
         catch (...)
         {
@@ -5059,7 +5619,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.Spacing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Spacing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5086,7 +5650,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Strikethrough());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Strikethrough();
+            }());
         }
         catch (...)
         {
@@ -5120,7 +5688,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Strikethrough(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Strikethrough(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5147,7 +5719,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subscript());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subscript();
+            }());
         }
         catch (...)
         {
@@ -5181,7 +5757,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Subscript(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subscript(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5208,7 +5788,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Superscript());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Superscript();
+            }());
         }
         catch (...)
         {
@@ -5242,7 +5826,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.Superscript(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Superscript(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5269,7 +5857,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextScript());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextScript();
+            }());
         }
         catch (...)
         {
@@ -5303,7 +5895,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextScript>(arg);
 
-            self->obj.TextScript(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextScript(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5330,7 +5926,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Underline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Underline();
+            }());
         }
         catch (...)
         {
@@ -5364,7 +5964,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::UnderlineType>(arg);
 
-            self->obj.Underline(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Underline(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5391,7 +5995,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Weight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Weight();
+            }());
         }
         catch (...)
         {
@@ -5425,7 +6033,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Weight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Weight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6712,7 +7324,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Text::TabAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::TabLeader>(args, 2);
 
-                self->obj.AddTab(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddTab(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6749,7 +7365,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.ClearAllTabs();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearAllTabs();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6788,7 +7408,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<float>(args, 0);
 
-                self->obj.DeleteTab(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteTab(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6825,7 +7449,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClone();
+                }());
             }
             catch (...)
             {
@@ -6866,7 +7494,10 @@ namespace py::cpp::Microsoft::UI::Text
                 winrt::Microsoft::UI::Text::TabAlignment param2{};
                 winrt::Microsoft::UI::Text::TabLeader param3{};
 
-                self->obj.GetTab(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetTab(param0, param1, param2, param3);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -6883,6 +7514,7 @@ namespace py::cpp::Microsoft::UI::Text
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(3, out1.get(), out2.get(), out3.get());
             }
             catch (...)
@@ -6921,7 +7553,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -6959,7 +7595,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(args, 0);
 
-                self->obj.SetClone(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetClone(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7000,7 +7640,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
 
-                self->obj.SetIndents(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetIndents(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7040,7 +7684,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::LineSpacingRule>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                self->obj.SetLineSpacing(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetLineSpacing(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7073,7 +7721,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Alignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Alignment();
+            }());
         }
         catch (...)
         {
@@ -7107,7 +7759,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ParagraphAlignment>(arg);
 
-            self->obj.Alignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Alignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7134,7 +7790,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstLineIndent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstLineIndent();
+            }());
         }
         catch (...)
         {
@@ -7160,7 +7820,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeepTogether());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeepTogether();
+            }());
         }
         catch (...)
         {
@@ -7194,7 +7858,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.KeepTogether(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeepTogether(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7221,7 +7889,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeepWithNext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeepWithNext();
+            }());
         }
         catch (...)
         {
@@ -7255,7 +7927,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.KeepWithNext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeepWithNext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7282,7 +7958,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LeftIndent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LeftIndent();
+            }());
         }
         catch (...)
         {
@@ -7308,7 +7988,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineSpacing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineSpacing();
+            }());
         }
         catch (...)
         {
@@ -7334,7 +8018,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineSpacingRule());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineSpacingRule();
+            }());
         }
         catch (...)
         {
@@ -7360,7 +8048,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListAlignment();
+            }());
         }
         catch (...)
         {
@@ -7394,7 +8086,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::MarkerAlignment>(arg);
 
-            self->obj.ListAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7421,7 +8117,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListLevelIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListLevelIndex();
+            }());
         }
         catch (...)
         {
@@ -7455,7 +8155,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ListLevelIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListLevelIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7482,7 +8186,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListStart();
+            }());
         }
         catch (...)
         {
@@ -7516,7 +8224,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ListStart(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListStart(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7543,7 +8255,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListStyle();
+            }());
         }
         catch (...)
         {
@@ -7577,7 +8293,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::MarkerStyle>(arg);
 
-            self->obj.ListStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7604,7 +8324,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListTab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListTab();
+            }());
         }
         catch (...)
         {
@@ -7638,7 +8362,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.ListTab(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListTab(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7665,7 +8393,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListType();
+            }());
         }
         catch (...)
         {
@@ -7699,7 +8431,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::MarkerType>(arg);
 
-            self->obj.ListType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7726,7 +8462,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.NoLineNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoLineNumber();
+            }());
         }
         catch (...)
         {
@@ -7760,7 +8500,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.NoLineNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoLineNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7787,7 +8531,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageBreakBefore());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageBreakBefore();
+            }());
         }
         catch (...)
         {
@@ -7821,7 +8569,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.PageBreakBefore(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageBreakBefore(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7848,7 +8600,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightIndent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightIndent();
+            }());
         }
         catch (...)
         {
@@ -7882,7 +8638,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RightIndent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightIndent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7909,7 +8669,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightToLeft());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightToLeft();
+            }());
         }
         catch (...)
         {
@@ -7943,7 +8707,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.RightToLeft(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightToLeft(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7970,7 +8738,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpaceAfter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpaceAfter();
+            }());
         }
         catch (...)
         {
@@ -8004,7 +8776,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.SpaceAfter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpaceAfter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8031,7 +8807,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpaceBefore());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpaceBefore();
+            }());
         }
         catch (...)
         {
@@ -8065,7 +8845,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.SpaceBefore(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpaceBefore(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8092,7 +8876,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Style());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Style();
+            }());
         }
         catch (...)
         {
@@ -8126,7 +8914,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ParagraphStyle>(arg);
 
-            self->obj.Style(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Style(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8153,7 +8945,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.TabCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabCount();
+            }());
         }
         catch (...)
         {
@@ -8179,7 +8975,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidowControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidowControl();
+            }());
         }
         catch (...)
         {
@@ -8213,7 +9013,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::FormatEffect>(arg);
 
-            self->obj.WidowControl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WidowControl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9552,7 +10356,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.CanPaste(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanPaste(param0);
+                }());
             }
             catch (...)
             {
@@ -9590,7 +10398,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::LetterCase>(args, 0);
 
-                self->obj.ChangeCase(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeCase(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9629,7 +10441,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Collapse(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collapse(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9666,7 +10482,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Copy();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Copy();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9703,7 +10523,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Cut();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cut();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9743,7 +10567,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Delete(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Delete(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9782,7 +10610,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.EndOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EndOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9820,7 +10652,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.Expand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Expand(param0);
+                }());
             }
             catch (...)
             {
@@ -9860,7 +10696,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::FindOptions>(args, 2);
 
-                return py::convert(self->obj.FindText(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindText(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -9899,13 +10739,17 @@ namespace py::cpp::Microsoft::UI::Text
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.GetCharacterUtf32(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetCharacterUtf32(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -9942,7 +10786,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClone();
+                }());
             }
             catch (...)
             {
@@ -9980,7 +10828,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.GetIndex(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIndex(param0);
+                }());
             }
             catch (...)
             {
@@ -10021,13 +10873,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 2);
                 winrt::Windows::Foundation::Point param3{};
 
-                self->obj.GetPoint(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetPoint(param0, param1, param2, param3);
+                }
 
                 py::pyobj_handle out3{ py::convert(param3) };
                 if (!out3)
                 {
                     return nullptr;
                 }
+
                 return out3.detach();
             }
             catch (...)
@@ -10068,7 +10924,10 @@ namespace py::cpp::Microsoft::UI::Text
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
 
-                self->obj.GetRect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetRect(param0, param1, param2);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -10080,6 +10939,7 @@ namespace py::cpp::Microsoft::UI::Text
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out1.get(), out2.get());
             }
             catch (...)
@@ -10119,13 +10979,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
-                self->obj.GetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetText(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -10165,7 +11029,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.GetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10204,7 +11072,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InRange(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InRange(param0);
+                }());
             }
             catch (...)
             {
@@ -10242,7 +11114,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InStory(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InStory(param0);
+                }());
             }
             catch (...)
             {
@@ -10285,7 +11161,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 5);
 
-                self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10324,7 +11204,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -10360,7 +11244,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.MatchSelection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.MatchSelection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10400,7 +11288,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Move(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Move(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10439,7 +11331,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveEnd(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveEnd(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10478,7 +11374,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveStart(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveStart(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10516,7 +11416,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.Paste(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Paste(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10555,7 +11459,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 0);
 
-                self->obj.ScrollIntoView(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ScrollIntoView(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10596,7 +11504,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetIndex(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetIndex(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10637,7 +11549,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetPoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPoint(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10677,7 +11593,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.SetRange(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRange(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10717,7 +11637,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10757,7 +11681,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.SetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10797,7 +11725,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.StartOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10829,7 +11761,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Character());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Character();
+            }());
         }
         catch (...)
         {
@@ -10863,7 +11799,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<char16_t>(arg);
 
-            self->obj.Character(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Character(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10890,7 +11830,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacterFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacterFormat();
+            }());
         }
         catch (...)
         {
@@ -10924,7 +11868,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(arg);
 
-            self->obj.CharacterFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharacterFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10951,7 +11899,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndPosition();
+            }());
         }
         catch (...)
         {
@@ -10985,7 +11937,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.EndPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11012,7 +11968,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FormattedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormattedText();
+            }());
         }
         catch (...)
         {
@@ -11046,7 +12006,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(arg);
 
-            self->obj.FormattedText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FormattedText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11073,7 +12037,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gravity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gravity();
+            }());
         }
         catch (...)
         {
@@ -11107,7 +12075,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::RangeGravity>(arg);
 
-            self->obj.Gravity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gravity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11134,7 +12106,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -11160,7 +12136,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Link());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Link();
+            }());
         }
         catch (...)
         {
@@ -11194,7 +12174,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Link(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Link(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11221,7 +12205,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParagraphFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParagraphFormat();
+            }());
         }
         catch (...)
         {
@@ -11255,7 +12243,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(arg);
 
-            self->obj.ParagraphFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ParagraphFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11282,7 +12274,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartPosition();
+            }());
         }
         catch (...)
         {
@@ -11316,7 +12312,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.StartPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11343,7 +12343,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StoryLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoryLength();
+            }());
         }
         catch (...)
         {
@@ -11369,7 +12373,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -11403,7 +12411,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13236,7 +14248,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.CanPaste(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanPaste(param0);
+                }());
             }
             catch (...)
             {
@@ -13274,7 +14290,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::LetterCase>(args, 0);
 
-                self->obj.ChangeCase(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ChangeCase(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13313,7 +14333,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Collapse(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collapse(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13350,7 +14374,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Copy();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Copy();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13387,7 +14415,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.Cut();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cut();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13427,7 +14459,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Delete(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Delete(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13466,7 +14502,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.EndKey(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EndKey(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13505,7 +14545,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.EndOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EndOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13543,7 +14587,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.Expand(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Expand(param0);
+                }());
             }
             catch (...)
             {
@@ -13583,7 +14631,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::FindOptions>(args, 2);
 
-                return py::convert(self->obj.FindText(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindText(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -13622,13 +14674,17 @@ namespace py::cpp::Microsoft::UI::Text
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.GetCharacterUtf32(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetCharacterUtf32(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -13665,7 +14721,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClone();
+                }());
             }
             catch (...)
             {
@@ -13703,7 +14763,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
 
-                return py::convert(self->obj.GetIndex(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIndex(param0);
+                }());
             }
             catch (...)
             {
@@ -13744,13 +14808,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 2);
                 winrt::Windows::Foundation::Point param3{};
 
-                self->obj.GetPoint(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetPoint(param0, param1, param2, param3);
+                }
 
                 py::pyobj_handle out3{ py::convert(param3) };
                 if (!out3)
                 {
                     return nullptr;
                 }
+
                 return out3.detach();
             }
             catch (...)
@@ -13791,7 +14859,10 @@ namespace py::cpp::Microsoft::UI::Text
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
 
-                self->obj.GetRect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetRect(param0, param1, param2);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -13803,6 +14874,7 @@ namespace py::cpp::Microsoft::UI::Text
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out1.get(), out2.get());
             }
             catch (...)
@@ -13842,13 +14914,17 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
-                self->obj.GetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetText(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -13888,7 +14964,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.GetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13928,7 +15008,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.HomeKey(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HomeKey(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13966,7 +15050,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InRange(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InRange(param0);
+                }());
             }
             catch (...)
             {
@@ -14004,7 +15092,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.InStory(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InStory(param0);
+                }());
             }
             catch (...)
             {
@@ -14047,7 +15139,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 5);
 
-                self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14086,7 +15182,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -14122,7 +15222,11 @@ namespace py::cpp::Microsoft::UI::Text
                     return nullptr;
                 }
 
-                self->obj.MatchSelection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.MatchSelection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14162,7 +15266,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.Move(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Move(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14202,7 +15310,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(self->obj.MoveDown(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveDown(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -14241,7 +15353,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveEnd(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveEnd(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14281,7 +15397,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(self->obj.MoveLeft(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveLeft(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -14321,7 +15441,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(self->obj.MoveRight(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveRight(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -14360,7 +15484,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.MoveStart(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveStart(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14400,7 +15528,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(self->obj.MoveUp(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveUp(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -14438,7 +15570,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.Paste(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Paste(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14477,7 +15613,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 0);
 
-                self->obj.ScrollIntoView(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ScrollIntoView(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14518,7 +15658,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetIndex(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetIndex(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14559,7 +15703,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetPoint(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPoint(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14599,7 +15747,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.SetRange(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRange(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14639,7 +15791,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14679,7 +15835,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                self->obj.SetTextViaStream(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTextViaStream(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14719,7 +15879,11 @@ namespace py::cpp::Microsoft::UI::Text
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.StartOf(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartOf(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14757,7 +15921,11 @@ namespace py::cpp::Microsoft::UI::Text
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.TypeText(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TypeText(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14790,7 +15958,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -14824,7 +15996,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::SelectionOptions>(arg);
 
-            self->obj.Options(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Options(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14851,7 +16027,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -14877,7 +16057,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Character());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Character();
+            }());
         }
         catch (...)
         {
@@ -14911,7 +16095,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<char16_t>(arg);
 
-            self->obj.Character(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Character(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14938,7 +16126,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacterFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacterFormat();
+            }());
         }
         catch (...)
         {
@@ -14972,7 +16164,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextCharacterFormat>(arg);
 
-            self->obj.CharacterFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharacterFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14999,7 +16195,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndPosition();
+            }());
         }
         catch (...)
         {
@@ -15033,7 +16233,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.EndPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15060,7 +16264,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.FormattedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormattedText();
+            }());
         }
         catch (...)
         {
@@ -15094,7 +16302,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextRange>(arg);
 
-            self->obj.FormattedText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FormattedText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15121,7 +16333,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gravity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gravity();
+            }());
         }
         catch (...)
         {
@@ -15155,7 +16371,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::RangeGravity>(arg);
 
-            self->obj.Gravity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gravity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15182,7 +16402,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -15208,7 +16432,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Link());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Link();
+            }());
         }
         catch (...)
         {
@@ -15242,7 +16470,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Link(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Link(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15269,7 +16501,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParagraphFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParagraphFormat();
+            }());
         }
         catch (...)
         {
@@ -15303,7 +16539,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Text::ITextParagraphFormat>(arg);
 
-            self->obj.ParagraphFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ParagraphFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15330,7 +16570,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartPosition();
+            }());
         }
         catch (...)
         {
@@ -15364,7 +16608,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.StartPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15391,7 +16639,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.StoryLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoryLength();
+            }());
         }
         catch (...)
         {
@@ -15417,7 +16669,11 @@ namespace py::cpp::Microsoft::UI::Text
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -15451,7 +16707,11 @@ namespace py::cpp::Microsoft::UI::Text
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)

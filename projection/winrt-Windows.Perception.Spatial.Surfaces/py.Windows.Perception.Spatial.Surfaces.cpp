@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.TryComputeLatestMeshAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryComputeLatestMeshAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>(args, 1);
 
-                return py::convert(self->obj.TryComputeLatestMeshAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryComputeLatestMeshAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetBounds(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBounds(param0);
+                }());
             }
             catch (...)
             {
@@ -153,7 +165,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -179,7 +195,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTime();
+            }());
         }
         catch (...)
         {
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -302,7 +326,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.SurfaceInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SurfaceInfo();
+            }());
         }
         catch (...)
         {
@@ -328,7 +356,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriangleIndices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriangleIndices();
+            }());
         }
         catch (...)
         {
@@ -354,7 +386,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexNormals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexNormals();
+            }());
         }
         catch (...)
         {
@@ -380,7 +416,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexPositionScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexPositionScale();
+            }());
         }
         catch (...)
         {
@@ -406,7 +446,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexPositions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexPositions();
+            }());
         }
         catch (...)
         {
@@ -504,7 +548,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -530,7 +578,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementCount();
+            }());
         }
         catch (...)
         {
@@ -556,7 +608,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -582,7 +638,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stride();
+            }());
         }
         catch (...)
         {
@@ -700,7 +760,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexPositionFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexPositionFormat();
+            }());
         }
         catch (...)
         {
@@ -734,7 +798,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
-            self->obj.VertexPositionFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VertexPositionFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -761,7 +829,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexNormalFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexNormalFormat();
+            }());
         }
         catch (...)
         {
@@ -795,7 +867,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
-            self->obj.VertexNormalFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VertexNormalFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -822,7 +898,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriangleIndexFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriangleIndexFormat();
+            }());
         }
         catch (...)
         {
@@ -856,7 +936,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
-            self->obj.TriangleIndexFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TriangleIndexFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -883,7 +967,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeVertexNormals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeVertexNormals();
+            }());
         }
         catch (...)
         {
@@ -917,7 +1005,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeVertexNormals(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeVertexNormals(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -944,7 +1036,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedTriangleIndexFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedTriangleIndexFormats();
+            }());
         }
         catch (...)
         {
@@ -970,7 +1066,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedVertexNormalFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedVertexNormalFormats();
+            }());
         }
         catch (...)
         {
@@ -996,7 +1096,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedVertexPositionFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions::SupportedVertexPositionFormats();
+            }());
         }
         catch (...)
         {
@@ -1146,7 +1250,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetObservedSurfaces());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObservedSurfaces();
+                }());
             }
             catch (...)
             {
@@ -1182,7 +1290,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -1218,7 +1330,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -1256,7 +1372,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>(args, 0);
 
-                self->obj.SetBoundingVolume(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBoundingVolume(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1295,7 +1415,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>>(args, 0);
 
-                self->obj.SetBoundingVolumes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBoundingVolumes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1330,7 +1454,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ObservedSurfacesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ObservedSurfacesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1358,7 +1486,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ObservedSurfacesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ObservedSurfacesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

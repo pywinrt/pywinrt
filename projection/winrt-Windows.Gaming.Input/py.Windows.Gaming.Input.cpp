@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::ArcadeStick::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::ArcadeStick::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickButtons>(args, 0);
 
-                return py::convert(self->obj.GetButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -186,7 +202,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -212,7 +232,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -238,7 +262,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -264,7 +292,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::ArcadeStick::ArcadeSticks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::ArcadeStick::ArcadeSticks();
+            }());
         }
         catch (...)
         {
@@ -292,7 +324,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -320,7 +356,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -349,7 +389,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -377,7 +421,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -406,7 +454,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -434,7 +486,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -463,7 +519,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::ArcadeStick>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -491,7 +551,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -520,7 +584,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::ArcadeStick>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -548,7 +616,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::ArcadeStick::ArcadeStickRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -690,7 +762,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::FlightStick::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::FlightStick::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -728,7 +804,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::FlightStickButtons>(args, 0);
 
-                return py::convert(self->obj.GetButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -764,7 +844,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -800,7 +884,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -832,7 +920,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HatSwitchKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HatSwitchKind();
+            }());
         }
         catch (...)
         {
@@ -858,7 +950,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -884,7 +980,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -910,7 +1010,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -936,7 +1040,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::FlightStick::FlightSticks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::FlightStick::FlightSticks();
+            }());
         }
         catch (...)
         {
@@ -964,7 +1072,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -992,7 +1104,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1021,7 +1137,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -1049,7 +1169,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1078,7 +1202,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1106,7 +1234,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1135,7 +1267,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::FlightStick>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::FlightStick::FlightStickAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::FlightStick::FlightStickAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -1163,7 +1299,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::FlightStick::FlightStickAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::FlightStick::FlightStickAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1192,7 +1332,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::FlightStick>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::FlightStick::FlightStickRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::FlightStick::FlightStickRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -1220,7 +1364,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::FlightStick::FlightStickRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::FlightStick::FlightStickRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1363,7 +1511,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::Gamepad::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Gamepad::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -1401,7 +1553,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(args, 0);
 
-                return py::convert(self->obj.GetButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -1437,7 +1593,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -1473,7 +1633,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -1505,7 +1669,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -1531,7 +1699,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -1557,7 +1729,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1583,7 +1759,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Vibration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Vibration();
+            }());
         }
         catch (...)
         {
@@ -1617,7 +1797,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadVibration>(arg);
 
-            self->obj.Vibration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Vibration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1644,7 +1828,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::Gamepad::Gamepads());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::Gamepad::Gamepads();
+            }());
         }
         catch (...)
         {
@@ -1672,7 +1860,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -1700,7 +1892,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1729,7 +1925,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -1757,7 +1957,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1786,7 +1990,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1814,7 +2022,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1843,7 +2055,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::Gamepad>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::Gamepad::GamepadAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::Gamepad::GamepadAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -1871,7 +2087,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::Gamepad::GamepadAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::Gamepad::GamepadAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1900,7 +2120,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::Gamepad>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::Gamepad::GamepadRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::Gamepad::GamepadRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -1928,7 +2152,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::Gamepad::GamepadRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::Gamepad::GamepadRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2069,7 +2297,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -2101,7 +2333,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CaptureDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CaptureDeviceId();
+            }());
         }
         catch (...)
         {
@@ -2127,7 +2363,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.RenderDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RenderDeviceId();
+            }());
         }
         catch (...)
         {
@@ -2228,7 +2468,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::RacingWheel::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::RacingWheel::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -2266,7 +2510,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelButtons>(args, 0);
 
-                return py::convert(self->obj.GetButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -2302,7 +2550,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -2338,7 +2590,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -2370,7 +2626,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -2396,7 +2656,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -2422,7 +2686,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -2448,7 +2716,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasClutch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasClutch();
+            }());
         }
         catch (...)
         {
@@ -2474,7 +2746,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasHandbrake());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasHandbrake();
+            }());
         }
         catch (...)
         {
@@ -2500,7 +2776,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasPatternShifter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasPatternShifter();
+            }());
         }
         catch (...)
         {
@@ -2526,7 +2806,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPatternShifterGear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPatternShifterGear();
+            }());
         }
         catch (...)
         {
@@ -2552,7 +2836,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxWheelAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxWheelAngle();
+            }());
         }
         catch (...)
         {
@@ -2578,7 +2866,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.WheelMotor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WheelMotor();
+            }());
         }
         catch (...)
         {
@@ -2604,7 +2896,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::RacingWheel::RacingWheels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RacingWheel::RacingWheels();
+            }());
         }
         catch (...)
         {
@@ -2632,7 +2928,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -2660,7 +2960,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2689,7 +2993,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -2717,7 +3025,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2746,7 +3058,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2774,7 +3090,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2803,7 +3123,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RacingWheel>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::RacingWheel::RacingWheelAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RacingWheel::RacingWheelAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -2831,7 +3155,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::RacingWheel::RacingWheelAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::RacingWheel::RacingWheelAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2860,7 +3188,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RacingWheel>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::RacingWheel::RacingWheelRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RacingWheel::RacingWheelRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -2888,7 +3220,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::RacingWheel::RacingWheelRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::RacingWheel::RacingWheelRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3036,7 +3372,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::RawGameController::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::RawGameController::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -3074,7 +3414,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -3114,7 +3458,11 @@ namespace py::cpp::Windows::Gaming::Input
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Gaming::Input::GameControllerSwitchPosition, true>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<double, true>>(args, 2);
 
-                return py::convert(self->obj.GetCurrentReading(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3152,7 +3500,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetSwitchKind(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSwitchKind(param0);
+                }());
             }
             catch (...)
             {
@@ -3188,7 +3540,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -3220,7 +3576,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -3246,7 +3606,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -3272,7 +3636,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -3298,7 +3666,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.AxisCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AxisCount();
+            }());
         }
         catch (...)
         {
@@ -3324,7 +3696,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ButtonCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonCount();
+            }());
         }
         catch (...)
         {
@@ -3350,7 +3726,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceFeedbackMotors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceFeedbackMotors();
+            }());
         }
         catch (...)
         {
@@ -3376,7 +3756,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -3402,7 +3786,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -3428,7 +3816,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SwitchCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SwitchCount();
+            }());
         }
         catch (...)
         {
@@ -3454,7 +3846,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3480,7 +3876,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonRoamableId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonRoamableId();
+            }());
         }
         catch (...)
         {
@@ -3506,7 +3906,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsControllers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsControllers();
+            }());
         }
         catch (...)
         {
@@ -3532,7 +3936,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::RawGameController::RawGameControllers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RawGameController::RawGameControllers();
+            }());
         }
         catch (...)
         {
@@ -3560,7 +3968,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -3588,7 +4000,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3617,7 +4033,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -3645,7 +4065,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3674,7 +4098,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3702,7 +4130,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3731,7 +4163,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RawGameController>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::RawGameController::RawGameControllerAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RawGameController::RawGameControllerAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -3759,7 +4195,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::RawGameController::RawGameControllerAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::RawGameController::RawGameControllerAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3788,7 +4228,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RawGameController>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::RawGameController::RawGameControllerRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::RawGameController::RawGameControllerRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -3816,7 +4260,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::RawGameController::RawGameControllerRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::RawGameController::RawGameControllerRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3968,7 +4416,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::UINavigationController::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::UINavigationController::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -4004,7 +4456,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -4042,7 +4498,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(args, 0);
 
-                return py::convert(self->obj.GetOptionalButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOptionalButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -4080,7 +4540,11 @@ namespace py::cpp::Windows::Gaming::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(args, 0);
 
-                return py::convert(self->obj.GetRequiredButtonLabel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRequiredButtonLabel(param0);
+                }());
             }
             catch (...)
             {
@@ -4116,7 +4580,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -4148,7 +4616,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -4174,7 +4646,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -4200,7 +4676,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -4226,7 +4706,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllers();
+            }());
         }
         catch (...)
         {
@@ -4254,7 +4738,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -4282,7 +4770,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4311,7 +4803,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -4339,7 +4835,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4368,7 +4868,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4396,7 +4900,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4425,7 +4933,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::UINavigationController>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -4453,7 +4965,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4482,7 +4998,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::UINavigationController>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -4510,7 +5030,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Input::UINavigationController::UINavigationControllerRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4647,7 +5171,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headset();
+            }());
         }
         catch (...)
         {
@@ -4673,7 +5201,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWireless());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWireless();
+            }());
         }
         catch (...)
         {
@@ -4699,7 +5231,11 @@ namespace py::cpp::Windows::Gaming::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -4727,7 +5263,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetConnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetConnected(param0);
+            }());
         }
         catch (...)
         {
@@ -4755,7 +5295,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetConnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4784,7 +5328,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
-            return py::convert(self->obj.HeadsetDisconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadsetDisconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -4812,7 +5360,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HeadsetDisconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeadsetDisconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4841,7 +5393,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4869,7 +5425,11 @@ namespace py::cpp::Windows::Gaming::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5283,7 +5843,11 @@ namespace py::cpp::Windows::Gaming::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {

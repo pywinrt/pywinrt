@@ -34,7 +34,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay();
+                }());
             }
             catch (...)
             {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsHolographicActivation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsHolographicActivation(param0);
+                }());
             }
             catch (...)
             {
@@ -174,7 +182,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -210,7 +222,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
                     return nullptr;
                 }
 
-                self->obj.ResetPlacementOverride();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResetPlacementOverride();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -251,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
 
-                self->obj.SetPlacementOverride(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPlacementOverride(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -293,7 +313,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 3);
 
-                self->obj.SetPlacementOverride(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPlacementOverride(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

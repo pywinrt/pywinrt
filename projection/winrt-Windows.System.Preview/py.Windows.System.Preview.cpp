@@ -42,7 +42,11 @@ namespace py::cpp::Windows::System::Preview
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentPostureAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentPostureAsync();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::System::Preview
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -112,7 +120,11 @@ namespace py::cpp::Windows::System::Preview
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview, winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PostureChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PostureChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Windows::System::Preview
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PostureChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PostureChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -262,7 +278,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.HingeState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HingeState();
+            }());
         }
         catch (...)
         {
@@ -288,7 +308,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Panel1Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Panel1Id();
+            }());
         }
         catch (...)
         {
@@ -314,7 +338,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Panel1Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Panel1Orientation();
+            }());
         }
         catch (...)
         {
@@ -340,7 +368,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Panel2Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Panel2Id();
+            }());
         }
         catch (...)
         {
@@ -366,7 +398,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Panel2Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Panel2Orientation();
+            }());
         }
         catch (...)
         {
@@ -392,7 +428,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -490,7 +530,11 @@ namespace py::cpp::Windows::System::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {

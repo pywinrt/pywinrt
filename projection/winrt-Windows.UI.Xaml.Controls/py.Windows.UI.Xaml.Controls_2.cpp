@@ -120,7 +120,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Label();
+            }());
         }
         catch (...)
         {
@@ -154,7 +158,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -181,7 +189,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Icon();
+            }());
         }
         catch (...)
         {
@@ -215,7 +227,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -242,7 +258,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().LabelPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().LabelPosition();
+            }());
         }
         catch (...)
         {
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::CommandBarLabelPosition>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().LabelPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().LabelPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -303,7 +327,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().KeyboardAcceleratorTextOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().KeyboardAcceleratorTextOverride();
+            }());
         }
         catch (...)
         {
@@ -337,7 +365,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().KeyboardAcceleratorTextOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().KeyboardAcceleratorTextOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -364,7 +396,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -390,7 +426,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsCompact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsCompact();
+            }());
         }
         catch (...)
         {
@@ -424,7 +464,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsCompact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsCompact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -451,7 +495,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().DynamicOverflowOrder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().DynamicOverflowOrder();
+            }());
         }
         catch (...)
         {
@@ -485,7 +533,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().DynamicOverflowOrder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().DynamicOverflowOrder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -512,7 +564,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsInOverflow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarButton>().IsInOverflow();
+            }());
         }
         catch (...)
         {
@@ -538,7 +594,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::IconProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::IconProperty();
+            }());
         }
         catch (...)
         {
@@ -564,7 +624,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::IsCompactProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::IsCompactProperty();
+            }());
         }
         catch (...)
         {
@@ -590,7 +654,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::LabelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::LabelProperty();
+            }());
         }
         catch (...)
         {
@@ -616,7 +684,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::DynamicOverflowOrderProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::DynamicOverflowOrderProperty();
+            }());
         }
         catch (...)
         {
@@ -642,7 +714,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::IsInOverflowProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::IsInOverflowProperty();
+            }());
         }
         catch (...)
         {
@@ -668,7 +744,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::LabelPositionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::LabelPositionProperty();
+            }());
         }
         catch (...)
         {
@@ -694,7 +774,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarButton::KeyboardAcceleratorTextOverrideProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarButton::KeyboardAcceleratorTextOverrideProperty();
+            }());
         }
         catch (...)
         {
@@ -908,7 +992,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Label();
+            }());
         }
         catch (...)
         {
@@ -942,7 +1030,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -969,7 +1061,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Icon();
+            }());
         }
         catch (...)
         {
@@ -1003,7 +1099,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1030,7 +1130,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().LabelPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().LabelPosition();
+            }());
         }
         catch (...)
         {
@@ -1064,7 +1168,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::CommandBarLabelPosition>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().LabelPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().LabelPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1091,7 +1199,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().KeyboardAcceleratorTextOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().KeyboardAcceleratorTextOverride();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1237,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().KeyboardAcceleratorTextOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().KeyboardAcceleratorTextOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1152,7 +1268,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -1178,7 +1298,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsCompact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsCompact();
+            }());
         }
         catch (...)
         {
@@ -1212,7 +1336,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsCompact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsCompact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1239,7 +1367,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().DynamicOverflowOrder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().DynamicOverflowOrder();
+            }());
         }
         catch (...)
         {
@@ -1273,7 +1405,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().DynamicOverflowOrder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().DynamicOverflowOrder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1300,7 +1436,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsInOverflow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>().IsInOverflow();
+            }());
         }
         catch (...)
         {
@@ -1326,7 +1466,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IconProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IconProperty();
+            }());
         }
         catch (...)
         {
@@ -1352,7 +1496,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IsCompactProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IsCompactProperty();
+            }());
         }
         catch (...)
         {
@@ -1378,7 +1526,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::LabelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::LabelProperty();
+            }());
         }
         catch (...)
         {
@@ -1404,7 +1556,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::DynamicOverflowOrderProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::DynamicOverflowOrderProperty();
+            }());
         }
         catch (...)
         {
@@ -1430,7 +1586,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IsInOverflowProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::IsInOverflowProperty();
+            }());
         }
         catch (...)
         {
@@ -1456,7 +1616,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::LabelPositionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::LabelPositionProperty();
+            }());
         }
         catch (...)
         {
@@ -1482,7 +1646,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::KeyboardAcceleratorTextOverrideProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::AppBarToggleButton::KeyboardAcceleratorTextOverrideProperty();
+            }());
         }
         catch (...)
         {
@@ -1696,7 +1864,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Button>().Flyout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Button>().Flyout();
+            }());
         }
         catch (...)
         {
@@ -1730,7 +1902,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Button>().Flyout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Button>().Flyout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1757,7 +1933,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Button::FlyoutProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Button::FlyoutProperty();
+            }());
         }
         catch (...)
         {
@@ -2201,7 +2381,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides>().OnDropDownClosed(param0);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides>().OnDropDownClosed(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2240,7 +2424,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides>().OnDropDownOpened(param0);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides>().OnDropDownOpened(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2273,7 +2461,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().MaxDropDownHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().MaxDropDownHeight();
+            }());
         }
         catch (...)
         {
@@ -2307,7 +2499,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().MaxDropDownHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().MaxDropDownHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2334,7 +2530,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsEditable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsEditable();
+            }());
         }
         catch (...)
         {
@@ -2368,7 +2568,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsEditable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsEditable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2395,7 +2599,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsDropDownOpen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsDropDownOpen();
+            }());
         }
         catch (...)
         {
@@ -2429,7 +2637,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsDropDownOpen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsDropDownOpen(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2456,7 +2668,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsSelectionBoxHighlighted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsSelectionBoxHighlighted();
+            }());
         }
         catch (...)
         {
@@ -2482,7 +2698,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionBoxItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionBoxItem();
+            }());
         }
         catch (...)
         {
@@ -2508,7 +2728,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionBoxItemTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionBoxItemTemplate();
+            }());
         }
         catch (...)
         {
@@ -2534,7 +2758,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -2560,7 +2788,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderText();
+            }());
         }
         catch (...)
         {
@@ -2594,7 +2826,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2621,7 +2857,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().HeaderTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().HeaderTemplate();
+            }());
         }
         catch (...)
         {
@@ -2655,7 +2895,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().HeaderTemplate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().HeaderTemplate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2682,7 +2926,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Header());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Header();
+            }());
         }
         catch (...)
         {
@@ -2716,7 +2964,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Header(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Header(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2743,7 +2995,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().LightDismissOverlayMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().LightDismissOverlayMode();
+            }());
         }
         catch (...)
         {
@@ -2777,7 +3033,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().LightDismissOverlayMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().LightDismissOverlayMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2804,7 +3064,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsTextSearchEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsTextSearchEnabled();
+            }());
         }
         catch (...)
         {
@@ -2838,7 +3102,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsTextSearchEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().IsTextSearchEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2865,7 +3133,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionChangedTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionChangedTrigger();
+            }());
         }
         catch (...)
         {
@@ -2899,7 +3171,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ComboBoxSelectionChangedTrigger>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionChangedTrigger(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().SelectionChangedTrigger(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2926,7 +3202,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderForeground());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderForeground();
+            }());
         }
         catch (...)
         {
@@ -2960,7 +3240,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderForeground(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().PlaceholderForeground(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2987,7 +3271,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextBoxStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextBoxStyle();
+            }());
         }
         catch (...)
         {
@@ -3021,7 +3309,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Style>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextBoxStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextBoxStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3048,7 +3340,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Text();
+            }());
         }
         catch (...)
         {
@@ -3082,7 +3378,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3109,7 +3409,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Description();
+            }());
         }
         catch (...)
         {
@@ -3143,7 +3447,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3170,7 +3478,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::IsDropDownOpenProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::IsDropDownOpenProperty();
+            }());
         }
         catch (...)
         {
@@ -3196,7 +3508,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::MaxDropDownHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::MaxDropDownHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -3222,7 +3538,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::HeaderProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::HeaderProperty();
+            }());
         }
         catch (...)
         {
@@ -3248,7 +3568,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::HeaderTemplateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::HeaderTemplateProperty();
+            }());
         }
         catch (...)
         {
@@ -3274,7 +3598,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::PlaceholderTextProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::PlaceholderTextProperty();
+            }());
         }
         catch (...)
         {
@@ -3300,7 +3628,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::IsTextSearchEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::IsTextSearchEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3658,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::LightDismissOverlayModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::LightDismissOverlayModeProperty();
+            }());
         }
         catch (...)
         {
@@ -3352,7 +3688,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::SelectionChangedTriggerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::SelectionChangedTriggerProperty();
+            }());
         }
         catch (...)
         {
@@ -3378,7 +3718,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::PlaceholderForegroundProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::PlaceholderForegroundProperty();
+            }());
         }
         catch (...)
         {
@@ -3404,7 +3748,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::DescriptionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::DescriptionProperty();
+            }());
         }
         catch (...)
         {
@@ -3430,7 +3778,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::IsEditableProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::IsEditableProperty();
+            }());
         }
         catch (...)
         {
@@ -3456,7 +3808,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::TextBoxStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::TextBoxStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -3482,7 +3838,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ComboBox::TextProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ComboBox::TextProperty();
+            }());
         }
         catch (...)
         {
@@ -3510,7 +3870,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownClosed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownClosed(param0);
+            }());
         }
         catch (...)
         {
@@ -3538,7 +3902,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownClosed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownClosed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3567,7 +3935,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownOpened(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownOpened(param0);
+            }());
         }
         catch (...)
         {
@@ -3595,7 +3967,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownOpened(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().DropDownOpened(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3624,7 +4000,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ComboBox, winrt::Windows::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextSubmitted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextSubmitted(param0);
+            }());
         }
         catch (...)
         {
@@ -3652,7 +4032,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextSubmitted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ComboBox>().TextSubmitted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4063,7 +4447,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>().PrimaryCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>().PrimaryCommands();
+            }());
         }
         catch (...)
         {
@@ -4089,7 +4477,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>().SecondaryCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>().SecondaryCommands();
+            }());
         }
         catch (...)
         {
@@ -4236,7 +4628,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
-                return py::convert(self->obj.ShowAtAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAtAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4268,7 +4664,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.YearVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YearVisible();
+            }());
         }
         catch (...)
         {
@@ -4302,7 +4702,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.YearVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YearVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4329,7 +4733,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MonthVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MonthVisible();
+            }());
         }
         catch (...)
         {
@@ -4363,7 +4771,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MonthVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MonthVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4390,7 +4802,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinYear();
+            }());
         }
         catch (...)
         {
@@ -4424,7 +4840,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.MinYear(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinYear(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4451,7 +4871,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxYear();
+            }());
         }
         catch (...)
         {
@@ -4485,7 +4909,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.MaxYear(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxYear(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4512,7 +4940,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DayVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DayVisible();
+            }());
         }
         catch (...)
         {
@@ -4546,7 +4978,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DayVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DayVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4573,7 +5009,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -4607,7 +5047,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Date(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Date(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4634,7 +5078,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CalendarIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CalendarIdentifier();
+            }());
         }
         catch (...)
         {
@@ -4668,7 +5116,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CalendarIdentifier(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CalendarIdentifier(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4695,7 +5147,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.YearFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YearFormat();
+            }());
         }
         catch (...)
         {
@@ -4729,7 +5185,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.YearFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YearFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4756,7 +5216,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MonthFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MonthFormat();
+            }());
         }
         catch (...)
         {
@@ -4790,7 +5254,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MonthFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MonthFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4817,7 +5285,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DayFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DayFormat();
+            }());
         }
         catch (...)
         {
@@ -4851,7 +5323,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DayFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DayFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4878,7 +5354,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::CalendarIdentifierProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::CalendarIdentifierProperty();
+            }());
         }
         catch (...)
         {
@@ -4904,7 +5384,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DateProperty();
+            }());
         }
         catch (...)
         {
@@ -4930,7 +5414,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DayVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DayVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -4956,7 +5444,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MaxYearProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MaxYearProperty();
+            }());
         }
         catch (...)
         {
@@ -4982,7 +5474,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MinYearProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MinYearProperty();
+            }());
         }
         catch (...)
         {
@@ -5008,7 +5504,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MonthVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MonthVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -5034,7 +5534,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::YearVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::YearVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -5060,7 +5564,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DayFormatProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::DayFormatProperty();
+            }());
         }
         catch (...)
         {
@@ -5086,7 +5594,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MonthFormatProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::MonthFormatProperty();
+            }());
         }
         catch (...)
         {
@@ -5112,7 +5624,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::YearFormatProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::DatePickerFlyout::YearFormatProperty();
+            }());
         }
         catch (...)
         {
@@ -5140,7 +5656,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::DatePickerFlyout, winrt::Windows::UI::Xaml::Controls::DatePickedEventArgs>>(arg);
 
-            return py::convert(self->obj.DatePicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DatePicked(param0);
+            }());
         }
         catch (...)
         {
@@ -5168,7 +5688,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DatePicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DatePicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5564,7 +6088,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::FlipView>().UseTouchAnimationsForAllNavigation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::FlipView>().UseTouchAnimationsForAllNavigation();
+            }());
         }
         catch (...)
         {
@@ -5598,7 +6126,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::FlipView>().UseTouchAnimationsForAllNavigation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::FlipView>().UseTouchAnimationsForAllNavigation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5625,7 +6157,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::FlipView::UseTouchAnimationsForAllNavigationProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::FlipView::UseTouchAnimationsForAllNavigationProperty();
+            }());
         }
         catch (...)
         {
@@ -5999,7 +6535,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle();
+            }());
         }
         catch (...)
         {
@@ -6033,7 +6573,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Style>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6060,7 +6604,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().Content();
+            }());
         }
         catch (...)
         {
@@ -6094,7 +6642,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Flyout>().Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6121,7 +6673,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Flyout::ContentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Flyout::ContentProperty();
+            }());
         }
         catch (...)
         {
@@ -6147,7 +6703,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Flyout::FlyoutPresenterStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Flyout::FlyoutPresenterStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -6523,7 +7083,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::GridViewItem>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::GridViewItem>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -6723,7 +7287,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>().NavigateUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>().NavigateUri();
+            }());
         }
         catch (...)
         {
@@ -6757,7 +7325,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>().NavigateUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>().NavigateUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6784,7 +7356,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::HyperlinkButton::NavigateUriProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::HyperlinkButton::NavigateUriProperty();
+            }());
         }
         catch (...)
         {
@@ -7158,7 +7734,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().CustomPen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().CustomPen();
+            }());
         }
         catch (...)
         {
@@ -7192,7 +7772,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPen>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().CustomPen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().CustomPen(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7219,7 +7803,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().ConfigurationContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().ConfigurationContent();
+            }());
         }
         catch (...)
         {
@@ -7253,7 +7841,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().ConfigurationContent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>().ConfigurationContent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7280,7 +7872,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton::ConfigurationContentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton::ConfigurationContentProperty();
+            }());
         }
         catch (...)
         {
@@ -7306,7 +7902,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton::CustomPenProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton::CustomPenProperty();
+            }());
         }
         catch (...)
         {
@@ -7682,7 +8282,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>().ConfigurationContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>().ConfigurationContent();
+            }());
         }
         catch (...)
         {
@@ -7716,7 +8320,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>().ConfigurationContent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>().ConfigurationContent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7743,7 +8351,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton::ConfigurationContentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton::ConfigurationContentProperty();
+            }());
         }
         catch (...)
         {
@@ -7944,7 +8556,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>().IsClearAllVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>().IsClearAllVisible();
+            }());
         }
         catch (...)
         {
@@ -7978,7 +8594,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>().IsClearAllVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>().IsClearAllVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8005,7 +8625,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton::IsClearAllVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton::IsClearAllVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -8206,7 +8830,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Kind();
+            }());
         }
         catch (...)
         {
@@ -8240,7 +8868,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItemKind>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8267,7 +8899,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().IsChecked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().IsChecked();
+            }());
         }
         catch (...)
         {
@@ -8301,7 +8937,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().IsChecked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().IsChecked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8328,7 +8968,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem::IsCheckedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem::IsCheckedProperty();
+            }());
         }
         catch (...)
         {
@@ -8354,7 +8998,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem::KindProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem::KindProperty();
+            }());
         }
         catch (...)
         {
@@ -8382,7 +9030,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Checked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Checked(param0);
+            }());
         }
         catch (...)
         {
@@ -8410,7 +9062,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Checked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Checked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8439,7 +9095,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Unchecked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Unchecked(param0);
+            }());
         }
         catch (...)
         {
@@ -8467,7 +9127,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Unchecked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>().Unchecked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8766,7 +9430,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().IsExtensionGlyphShown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().IsExtensionGlyphShown();
+            }());
         }
         catch (...)
         {
@@ -8800,7 +9468,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().IsExtensionGlyphShown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().IsExtensionGlyphShown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8827,7 +9499,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().MenuKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>().MenuKind();
+            }());
         }
         catch (...)
         {
@@ -8853,7 +9529,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton::IsExtensionGlyphShownProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton::IsExtensionGlyphShownProperty();
+            }());
         }
         catch (...)
         {
@@ -8973,7 +9653,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedStrokeWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedStrokeWidth();
+            }());
         }
         catch (...)
         {
@@ -9007,7 +9691,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedStrokeWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedStrokeWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9034,7 +9722,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrushIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrushIndex();
+            }());
         }
         catch (...)
         {
@@ -9068,7 +9760,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrushIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrushIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9095,7 +9791,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().Palette());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().Palette();
+            }());
         }
         catch (...)
         {
@@ -9129,7 +9829,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Media::Brush>>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().Palette(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().Palette(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9156,7 +9860,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MinStrokeWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MinStrokeWidth();
+            }());
         }
         catch (...)
         {
@@ -9190,7 +9898,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MinStrokeWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MinStrokeWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9217,7 +9929,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MaxStrokeWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MaxStrokeWidth();
+            }());
         }
         catch (...)
         {
@@ -9251,7 +9967,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MaxStrokeWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().MaxStrokeWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9278,7 +9998,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrush());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>().SelectedBrush();
+            }());
         }
         catch (...)
         {
@@ -9304,7 +10028,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::MaxStrokeWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::MaxStrokeWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -9330,7 +10058,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::MinStrokeWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::MinStrokeWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -9356,7 +10088,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::PaletteProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::PaletteProperty();
+            }());
         }
         catch (...)
         {
@@ -9382,7 +10118,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedBrushIndexProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedBrushIndexProperty();
+            }());
         }
         catch (...)
         {
@@ -9408,7 +10148,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedBrushProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedBrushProperty();
+            }());
         }
         catch (...)
         {
@@ -9434,7 +10178,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedStrokeWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton::SelectedStrokeWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -9818,7 +10566,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>().Ruler());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>().Ruler();
+            }());
         }
         catch (...)
         {
@@ -9844,7 +10596,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton::RulerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton::RulerProperty();
+            }());
         }
         catch (...)
         {
@@ -10045,7 +10801,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().SelectedStencil());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().SelectedStencil();
+            }());
         }
         catch (...)
         {
@@ -10079,7 +10839,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilKind>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().SelectedStencil(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().SelectedStencil(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10106,7 +10870,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsRulerItemVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsRulerItemVisible();
+            }());
         }
         catch (...)
         {
@@ -10140,7 +10908,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsRulerItemVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsRulerItemVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10167,7 +10939,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsProtractorItemVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsProtractorItemVisible();
+            }());
         }
         catch (...)
         {
@@ -10201,7 +10977,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsProtractorItemVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().IsProtractorItemVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10228,7 +11008,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().Protractor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().Protractor();
+            }());
         }
         catch (...)
         {
@@ -10254,7 +11038,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().Ruler());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>().Ruler();
+            }());
         }
         catch (...)
         {
@@ -10280,7 +11068,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::IsProtractorItemVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::IsProtractorItemVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -10306,7 +11098,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::IsRulerItemVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::IsRulerItemVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -10332,7 +11128,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::ProtractorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::ProtractorProperty();
+            }());
         }
         catch (...)
         {
@@ -10358,7 +11158,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::RulerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::RulerProperty();
+            }());
         }
         catch (...)
         {
@@ -10384,7 +11188,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::SelectedStencilProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton::SelectedStencilProperty();
+            }());
         }
         catch (...)
         {
@@ -10511,7 +11319,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>().ToggleKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>().ToggleKind();
+            }());
         }
         catch (...)
         {
@@ -10629,7 +11441,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().IsExtensionGlyphShown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().IsExtensionGlyphShown();
+            }());
         }
         catch (...)
         {
@@ -10663,7 +11479,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().IsExtensionGlyphShown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().IsExtensionGlyphShown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10690,7 +11510,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().ToolKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>().ToolKind();
+            }());
         }
         catch (...)
         {
@@ -10716,7 +11540,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton::IsExtensionGlyphShownProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton::IsExtensionGlyphShownProperty();
+            }());
         }
         catch (...)
         {
@@ -10924,7 +11752,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().ScrollIntoView(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().ScrollIntoView(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10961,7 +11793,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10994,7 +11830,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectionMode();
+            }());
         }
         catch (...)
         {
@@ -11028,7 +11868,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SelectionMode>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11055,7 +11899,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SelectedItems();
+            }());
         }
         catch (...)
         {
@@ -11081,7 +11929,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SingleSelectionFollowsFocus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SingleSelectionFollowsFocus();
+            }());
         }
         catch (...)
         {
@@ -11115,7 +11967,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SingleSelectionFollowsFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListBox>().SingleSelectionFollowsFocus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11142,7 +11998,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListBox::SelectionModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListBox::SelectionModeProperty();
+            }());
         }
         catch (...)
         {
@@ -11168,7 +12028,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListBox::SingleSelectionFollowsFocusProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListBox::SingleSelectionFollowsFocusProperty();
+            }());
         }
         catch (...)
         {
@@ -11493,7 +12357,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
-                return py::convert(self->obj.ShowAtAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAtAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -11525,7 +12393,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionMode();
+            }());
         }
         catch (...)
         {
@@ -11559,7 +12431,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ListPickerFlyoutSelectionMode>(arg);
 
-            self->obj.SelectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11586,7 +12462,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedValuePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedValuePath();
+            }());
         }
         catch (...)
         {
@@ -11620,7 +12500,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SelectedValuePath(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedValuePath(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11647,7 +12531,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedValue();
+            }());
         }
         catch (...)
         {
@@ -11681,7 +12569,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.SelectedValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11708,7 +12600,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedItem();
+            }());
         }
         catch (...)
         {
@@ -11742,7 +12638,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.SelectedItem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedItem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11769,7 +12669,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedIndex();
+            }());
         }
         catch (...)
         {
@@ -11803,7 +12707,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SelectedIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11830,7 +12738,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemsSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemsSource();
+            }());
         }
         catch (...)
         {
@@ -11864,7 +12776,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.ItemsSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemsSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11891,7 +12807,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemTemplate();
+            }());
         }
         catch (...)
         {
@@ -11925,7 +12845,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
-            self->obj.ItemTemplate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemTemplate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11952,7 +12876,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMemberPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMemberPath();
+            }());
         }
         catch (...)
         {
@@ -11986,7 +12914,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayMemberPath(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayMemberPath(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12013,7 +12945,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedItems();
+            }());
         }
         catch (...)
         {
@@ -12039,7 +12975,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::DisplayMemberPathProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::DisplayMemberPathProperty();
+            }());
         }
         catch (...)
         {
@@ -12065,7 +13005,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::ItemTemplateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::ItemTemplateProperty();
+            }());
         }
         catch (...)
         {
@@ -12091,7 +13035,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::ItemsSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::ItemsSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -12117,7 +13065,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedIndexProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedIndexProperty();
+            }());
         }
         catch (...)
         {
@@ -12143,7 +13095,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedItemProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedItemProperty();
+            }());
         }
         catch (...)
         {
@@ -12169,7 +13125,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedValuePathProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedValuePathProperty();
+            }());
         }
         catch (...)
         {
@@ -12195,7 +13155,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedValueProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectedValueProperty();
+            }());
         }
         catch (...)
         {
@@ -12221,7 +13185,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectionModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListPickerFlyout::SelectionModeProperty();
+            }());
         }
         catch (...)
         {
@@ -12249,7 +13217,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ListPickerFlyout, winrt::Windows::UI::Xaml::Controls::ItemsPickedEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemsPicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemsPicked(param0);
+            }());
         }
         catch (...)
         {
@@ -12277,7 +13249,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemsPicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemsPicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12621,7 +13597,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChange();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChange();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12661,7 +13641,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChangeFrom(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChangeFrom(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12701,7 +13685,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChangeTo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CompleteViewChangeTo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12740,7 +13728,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::ItemIndexRange>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DeselectRange(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DeselectRange(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12777,7 +13769,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().InitializeViewChange();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().InitializeViewChange();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12814,7 +13810,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsDragSource());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsDragSource();
+                }());
             }
             catch (...)
             {
@@ -12850,7 +13850,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().LoadMoreItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().LoadMoreItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -12888,7 +13892,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().MakeVisible(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().MakeVisible(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12929,7 +13937,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().PrepareConnectedAnimation(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().PrepareConnectedAnimation(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -12967,7 +13979,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ScrollIntoView(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ScrollIntoView(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13007,7 +14023,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ScrollIntoViewAlignment>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ScrollIntoView(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ScrollIntoView(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13044,7 +14064,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13083,7 +14107,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::ItemIndexRange>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectRange(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectRange(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13122,7 +14150,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SetDesiredContainerUpdateDuration(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SetDesiredContainerUpdateDuration(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13162,7 +14194,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().StartViewChangeFrom(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().StartViewChangeFrom(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13202,7 +14238,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().StartViewChangeTo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().StartViewChangeTo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13243,7 +14283,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().TryStartConnectedAnimationAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().TryStartConnectedAnimationAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -13275,7 +14319,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectionMode();
+            }());
         }
         catch (...)
         {
@@ -13309,7 +14357,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ListViewSelectionMode>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13336,7 +14388,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsSwipeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsSwipeEnabled();
+            }());
         }
         catch (...)
         {
@@ -13370,7 +14426,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsSwipeEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsSwipeEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13397,7 +14457,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsItemClickEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsItemClickEnabled();
+            }());
         }
         catch (...)
         {
@@ -13431,7 +14495,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsItemClickEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsItemClickEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13458,7 +14526,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingTrigger();
+            }());
         }
         catch (...)
         {
@@ -13492,7 +14564,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IncrementalLoadingTrigger>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingTrigger(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingTrigger(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13519,7 +14595,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingThreshold();
+            }());
         }
         catch (...)
         {
@@ -13553,7 +14633,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingThreshold(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IncrementalLoadingThreshold(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13580,7 +14664,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTransitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTransitions();
+            }());
         }
         catch (...)
         {
@@ -13614,7 +14702,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTransitions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTransitions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13641,7 +14733,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTemplate();
+            }());
         }
         catch (...)
         {
@@ -13675,7 +14771,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTemplate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().HeaderTemplate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13702,7 +14802,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Header());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Header();
+            }());
         }
         catch (...)
         {
@@ -13736,7 +14840,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Header(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Header(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13763,7 +14871,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DataFetchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DataFetchSize();
+            }());
         }
         catch (...)
         {
@@ -13797,7 +14909,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DataFetchSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DataFetchSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13824,7 +14940,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanReorderItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanReorderItems();
+            }());
         }
         catch (...)
         {
@@ -13858,7 +14978,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanReorderItems(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanReorderItems(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13885,7 +15009,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanDragItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanDragItems();
+            }());
         }
         catch (...)
         {
@@ -13919,7 +15047,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanDragItems(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().CanDragItems(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13946,7 +15078,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectedItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectedItems();
+            }());
         }
         catch (...)
         {
@@ -13972,7 +15108,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ShowsScrollingPlaceholders());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ShowsScrollingPlaceholders();
+            }());
         }
         catch (...)
         {
@@ -14006,7 +15146,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ShowsScrollingPlaceholders(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ShowsScrollingPlaceholders(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14033,7 +15177,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTransitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTransitions();
+            }());
         }
         catch (...)
         {
@@ -14067,7 +15215,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTransitions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTransitions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14094,7 +15246,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTemplate();
+            }());
         }
         catch (...)
         {
@@ -14128,7 +15284,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTemplate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().FooterTemplate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14155,7 +15315,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Footer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Footer();
+            }());
         }
         catch (...)
         {
@@ -14189,7 +15353,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Footer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().Footer(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14216,7 +15384,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ReorderMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ReorderMode();
+            }());
         }
         catch (...)
         {
@@ -14250,7 +15422,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ListViewReorderMode>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ReorderMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ReorderMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14277,7 +15453,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsMultiSelectCheckBoxEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsMultiSelectCheckBoxEnabled();
+            }());
         }
         catch (...)
         {
@@ -14311,7 +15491,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsMultiSelectCheckBoxEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsMultiSelectCheckBoxEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14338,7 +15522,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectedRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SelectedRanges();
+            }());
         }
         catch (...)
         {
@@ -14364,7 +15552,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SingleSelectionFollowsFocus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SingleSelectionFollowsFocus();
+            }());
         }
         catch (...)
         {
@@ -14398,7 +15590,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SingleSelectionFollowsFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SingleSelectionFollowsFocus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14425,7 +15621,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SemanticZoomOwner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SemanticZoomOwner();
+            }());
         }
         catch (...)
         {
@@ -14459,7 +15659,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SemanticZoom>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SemanticZoomOwner(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().SemanticZoomOwner(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14486,7 +15690,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsZoomedInView());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsZoomedInView();
+            }());
         }
         catch (...)
         {
@@ -14520,7 +15728,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsZoomedInView(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsZoomedInView(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14547,7 +15759,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsActiveView());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsActiveView();
+            }());
         }
         catch (...)
         {
@@ -14581,7 +15797,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsActiveView(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().IsActiveView(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14608,7 +15828,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::CanDragItemsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::CanDragItemsProperty();
+            }());
         }
         catch (...)
         {
@@ -14634,7 +15858,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::CanReorderItemsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::CanReorderItemsProperty();
+            }());
         }
         catch (...)
         {
@@ -14660,7 +15888,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::DataFetchSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::DataFetchSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -14686,7 +15918,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderProperty();
+            }());
         }
         catch (...)
         {
@@ -14712,7 +15948,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderTemplateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderTemplateProperty();
+            }());
         }
         catch (...)
         {
@@ -14738,7 +15978,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderTransitionsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::HeaderTransitionsProperty();
+            }());
         }
         catch (...)
         {
@@ -14764,7 +16008,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IncrementalLoadingThresholdProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IncrementalLoadingThresholdProperty();
+            }());
         }
         catch (...)
         {
@@ -14790,7 +16038,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IncrementalLoadingTriggerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IncrementalLoadingTriggerProperty();
+            }());
         }
         catch (...)
         {
@@ -14816,7 +16068,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IsActiveViewProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IsActiveViewProperty();
+            }());
         }
         catch (...)
         {
@@ -14842,7 +16098,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IsItemClickEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IsItemClickEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -14868,7 +16128,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IsSwipeEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IsSwipeEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -14894,7 +16158,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IsZoomedInViewProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IsZoomedInViewProperty();
+            }());
         }
         catch (...)
         {
@@ -14920,7 +16188,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::SelectionModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::SelectionModeProperty();
+            }());
         }
         catch (...)
         {
@@ -14946,7 +16218,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::SemanticZoomOwnerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::SemanticZoomOwnerProperty();
+            }());
         }
         catch (...)
         {
@@ -14972,7 +16248,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterProperty();
+            }());
         }
         catch (...)
         {
@@ -14998,7 +16278,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterTemplateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterTemplateProperty();
+            }());
         }
         catch (...)
         {
@@ -15024,7 +16308,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterTransitionsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::FooterTransitionsProperty();
+            }());
         }
         catch (...)
         {
@@ -15050,7 +16338,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::ShowsScrollingPlaceholdersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::ShowsScrollingPlaceholdersProperty();
+            }());
         }
         catch (...)
         {
@@ -15076,7 +16368,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::ReorderModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::ReorderModeProperty();
+            }());
         }
         catch (...)
         {
@@ -15102,7 +16398,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::IsMultiSelectCheckBoxEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::IsMultiSelectCheckBoxEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -15128,7 +16428,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ListViewBase::SingleSelectionFollowsFocusProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ListViewBase::SingleSelectionFollowsFocusProperty();
+            }());
         }
         catch (...)
         {
@@ -15156,7 +16460,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventHandler>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -15184,7 +16492,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15213,7 +16525,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ItemClickEventHandler>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ItemClick(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ItemClick(param0);
+            }());
         }
         catch (...)
         {
@@ -15241,7 +16557,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ItemClick(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ItemClick(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15270,7 +16590,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ListViewBase, winrt::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ContainerContentChanging(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ContainerContentChanging(param0);
+            }());
         }
         catch (...)
         {
@@ -15298,7 +16622,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ContainerContentChanging(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ContainerContentChanging(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15327,7 +16655,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ListViewBase, winrt::Windows::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingGroupHeaderContainer(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingGroupHeaderContainer(param0);
+            }());
         }
         catch (...)
         {
@@ -15355,7 +16687,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingGroupHeaderContainer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingGroupHeaderContainer(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15384,7 +16720,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ListViewBase, winrt::Windows::UI::Xaml::Controls::ChoosingItemContainerEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingItemContainer(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingItemContainer(param0);
+            }());
         }
         catch (...)
         {
@@ -15412,7 +16752,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingItemContainer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().ChoosingItemContainer(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15441,7 +16785,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::ListViewBase, winrt::Windows::UI::Xaml::Controls::DragItemsCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -15469,7 +16817,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewBase>().DragItemsCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15742,7 +17094,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewItem>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ListViewItem>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -16122,7 +17478,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().ShowAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().ShowAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16155,7 +17515,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle();
+            }());
         }
         catch (...)
         {
@@ -16189,7 +17553,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Style>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16216,7 +17584,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::MenuFlyout>().Items();
+            }());
         }
         catch (...)
         {
@@ -16242,7 +17614,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::MenuFlyout::MenuFlyoutPresenterStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::MenuFlyout::MenuFlyoutPresenterStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -16445,7 +17821,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().Icon();
+            }());
         }
         catch (...)
         {
@@ -16479,7 +17859,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16506,7 +17890,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().CompactPaneLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().CompactPaneLength();
+            }());
         }
         catch (...)
         {
@@ -16532,7 +17920,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().SelectsOnInvoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().SelectsOnInvoked();
+            }());
         }
         catch (...)
         {
@@ -16566,7 +17958,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().SelectsOnInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>().SelectsOnInvoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16593,7 +17989,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::NavigationViewItem::CompactPaneLengthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::NavigationViewItem::CompactPaneLengthProperty();
+            }());
         }
         catch (...)
         {
@@ -16619,7 +18019,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::NavigationViewItem::IconProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::NavigationViewItem::IconProperty();
+            }());
         }
         catch (...)
         {
@@ -16645,7 +18049,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::NavigationViewItem::SelectsOnInvokedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::NavigationViewItem::SelectsOnInvokedProperty();
+            }());
         }
         catch (...)
         {
@@ -17406,7 +18814,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
-                return py::convert(self->obj.ShowAtAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAtAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -17438,7 +18850,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -17472,7 +18888,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17499,7 +18919,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConfirmationButtonsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConfirmationButtonsVisible();
+            }());
         }
         catch (...)
         {
@@ -17533,7 +18957,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConfirmationButtonsVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConfirmationButtonsVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17560,7 +18988,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::PickerFlyout::ConfirmationButtonsVisibleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::PickerFlyout::ConfirmationButtonsVisibleProperty();
+            }());
         }
         catch (...)
         {
@@ -17586,7 +19018,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::PickerFlyout::ContentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::PickerFlyout::ContentProperty();
+            }());
         }
         catch (...)
         {
@@ -17614,7 +19050,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::PickerFlyout, winrt::Windows::UI::Xaml::Controls::PickerConfirmedEventArgs>>(arg);
 
-            return py::convert(self->obj.Confirmed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Confirmed(param0);
+            }());
         }
         catch (...)
         {
@@ -17642,7 +19082,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Confirmed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Confirmed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -17849,7 +19293,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowPaused());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowPaused();
+            }());
         }
         catch (...)
         {
@@ -17883,7 +19331,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowPaused(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowPaused(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17910,7 +19362,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowError();
+            }());
         }
         catch (...)
         {
@@ -17944,7 +19400,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowError(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().ShowError(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17971,7 +19431,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().IsIndeterminate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().IsIndeterminate();
+            }());
         }
         catch (...)
         {
@@ -18005,7 +19469,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().IsIndeterminate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().IsIndeterminate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18032,7 +19500,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().TemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::ProgressBar>().TemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -18058,7 +19530,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ProgressBar::IsIndeterminateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ProgressBar::IsIndeterminateProperty();
+            }());
         }
         catch (...)
         {
@@ -18084,7 +19560,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ProgressBar::ShowErrorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ProgressBar::ShowErrorProperty();
+            }());
         }
         catch (...)
         {
@@ -18110,7 +19590,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::ProgressBar::ShowPausedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::ProgressBar::ShowPausedProperty();
+            }());
         }
         catch (...)
         {
@@ -18316,7 +19800,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::RadioButton>().GroupName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::RadioButton>().GroupName();
+            }());
         }
         catch (...)
         {
@@ -18350,7 +19838,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::RadioButton>().GroupName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::RadioButton>().GroupName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18377,7 +19869,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::RadioButton::GroupNameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::RadioButton::GroupNameProperty();
+            }());
         }
         catch (...)
         {
@@ -18578,7 +20074,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickPlacement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickPlacement();
+            }());
         }
         catch (...)
         {
@@ -18612,7 +20112,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::TickPlacement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickPlacement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickPlacement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18639,7 +20143,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickFrequency();
+            }());
         }
         catch (...)
         {
@@ -18673,7 +20181,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickFrequency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().TickFrequency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18700,7 +20212,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().ThumbToolTipValueConverter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().ThumbToolTipValueConverter();
+            }());
         }
         catch (...)
         {
@@ -18734,7 +20250,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::IValueConverter>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().ThumbToolTipValueConverter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().ThumbToolTipValueConverter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18761,7 +20281,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().StepFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().StepFrequency();
+            }());
         }
         catch (...)
         {
@@ -18795,7 +20319,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().StepFrequency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().StepFrequency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18822,7 +20350,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().SnapsTo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().SnapsTo();
+            }());
         }
         catch (...)
         {
@@ -18856,7 +20388,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SliderSnapsTo>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().SnapsTo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().SnapsTo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18883,7 +20419,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Orientation();
+            }());
         }
         catch (...)
         {
@@ -18917,7 +20457,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18944,7 +20488,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsThumbToolTipEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsThumbToolTipEnabled();
+            }());
         }
         catch (...)
         {
@@ -18978,7 +20526,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsThumbToolTipEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsThumbToolTipEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19005,7 +20557,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsDirectionReversed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsDirectionReversed();
+            }());
         }
         catch (...)
         {
@@ -19039,7 +20595,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsDirectionReversed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IsDirectionReversed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19066,7 +20626,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IntermediateValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IntermediateValue();
+            }());
         }
         catch (...)
         {
@@ -19100,7 +20664,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IntermediateValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().IntermediateValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19127,7 +20695,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().HeaderTemplate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().HeaderTemplate();
+            }());
         }
         catch (...)
         {
@@ -19161,7 +20733,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().HeaderTemplate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().HeaderTemplate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19188,7 +20764,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Header());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Header();
+            }());
         }
         catch (...)
         {
@@ -19222,7 +20802,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Header(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Slider>().Header(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19249,7 +20833,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::IntermediateValueProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::IntermediateValueProperty();
+            }());
         }
         catch (...)
         {
@@ -19275,7 +20863,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::IsDirectionReversedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::IsDirectionReversedProperty();
+            }());
         }
         catch (...)
         {
@@ -19301,7 +20893,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::IsThumbToolTipEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::IsThumbToolTipEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -19327,7 +20923,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::OrientationProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::OrientationProperty();
+            }());
         }
         catch (...)
         {
@@ -19353,7 +20953,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::SnapsToProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::SnapsToProperty();
+            }());
         }
         catch (...)
         {
@@ -19379,7 +20983,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::StepFrequencyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::StepFrequencyProperty();
+            }());
         }
         catch (...)
         {
@@ -19405,7 +21013,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::ThumbToolTipValueConverterProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::ThumbToolTipValueConverterProperty();
+            }());
         }
         catch (...)
         {
@@ -19431,7 +21043,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::TickFrequencyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::TickFrequencyProperty();
+            }());
         }
         catch (...)
         {
@@ -19457,7 +21073,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::TickPlacementProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::TickPlacementProperty();
+            }());
         }
         catch (...)
         {
@@ -19483,7 +21103,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::HeaderProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::HeaderProperty();
+            }());
         }
         catch (...)
         {
@@ -19509,7 +21133,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Slider::HeaderTemplateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Slider::HeaderTemplateProperty();
+            }());
         }
         catch (...)
         {
@@ -19849,7 +21477,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
-                return py::convert(self->obj.ShowAtAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAtAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -19881,7 +21513,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Time());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Time();
+            }());
         }
         catch (...)
         {
@@ -19915,7 +21551,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Time(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Time(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19942,7 +21582,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinuteIncrement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinuteIncrement();
+            }());
         }
         catch (...)
         {
@@ -19976,7 +21620,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MinuteIncrement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinuteIncrement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20003,7 +21651,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClockIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClockIdentifier();
+            }());
         }
         catch (...)
         {
@@ -20037,7 +21689,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ClockIdentifier(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClockIdentifier(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20064,7 +21720,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::ClockIdentifierProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::ClockIdentifierProperty();
+            }());
         }
         catch (...)
         {
@@ -20090,7 +21750,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::MinuteIncrementProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::MinuteIncrementProperty();
+            }());
         }
         catch (...)
         {
@@ -20116,7 +21780,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::TimeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TimePickerFlyout::TimeProperty();
+            }());
         }
         catch (...)
         {
@@ -20144,7 +21812,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::TimePickerFlyout, winrt::Windows::UI::Xaml::Controls::TimePickedEventArgs>>(arg);
 
-            return py::convert(self->obj.TimePicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimePicked(param0);
+            }());
         }
         catch (...)
         {
@@ -20172,7 +21844,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TimePicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimePicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -20381,7 +22057,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().IsExpanded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().IsExpanded();
+            }());
         }
         catch (...)
         {
@@ -20415,7 +22095,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().IsExpanded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().IsExpanded(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20442,7 +22126,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphSize();
+            }());
         }
         catch (...)
         {
@@ -20476,7 +22164,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20503,7 +22195,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphOpacity();
+            }());
         }
         catch (...)
         {
@@ -20537,7 +22233,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphOpacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphOpacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20564,7 +22264,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphBrush());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphBrush();
+            }());
         }
         catch (...)
         {
@@ -20598,7 +22302,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphBrush(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().GlyphBrush(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20625,7 +22333,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ExpandedGlyph());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ExpandedGlyph();
+            }());
         }
         catch (...)
         {
@@ -20659,7 +22371,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ExpandedGlyph(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ExpandedGlyph(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20686,7 +22402,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().CollapsedGlyph());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().CollapsedGlyph();
+            }());
         }
         catch (...)
         {
@@ -20720,7 +22440,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().CollapsedGlyph(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().CollapsedGlyph(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20747,7 +22471,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().TreeViewItemTemplateSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().TreeViewItemTemplateSettings();
+            }());
         }
         catch (...)
         {
@@ -20773,7 +22501,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ItemsSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ItemsSource();
+            }());
         }
         catch (...)
         {
@@ -20807,7 +22539,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ItemsSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().ItemsSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20834,7 +22570,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().HasUnrealizedChildren());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().HasUnrealizedChildren();
+            }());
         }
         catch (...)
         {
@@ -20868,7 +22608,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().HasUnrealizedChildren(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::TreeViewItem>().HasUnrealizedChildren(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -20895,7 +22639,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::CollapsedGlyphProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::CollapsedGlyphProperty();
+            }());
         }
         catch (...)
         {
@@ -20921,7 +22669,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::ExpandedGlyphProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::ExpandedGlyphProperty();
+            }());
         }
         catch (...)
         {
@@ -20947,7 +22699,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphBrushProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphBrushProperty();
+            }());
         }
         catch (...)
         {
@@ -20973,7 +22729,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphOpacityProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphOpacityProperty();
+            }());
         }
         catch (...)
         {
@@ -20999,7 +22759,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::GlyphSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -21025,7 +22789,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::IsExpandedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::IsExpandedProperty();
+            }());
         }
         catch (...)
         {
@@ -21051,7 +22819,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::TreeViewItemTemplateSettingsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::TreeViewItemTemplateSettingsProperty();
+            }());
         }
         catch (...)
         {
@@ -21077,7 +22849,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::HasUnrealizedChildrenProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::HasUnrealizedChildrenProperty();
+            }());
         }
         catch (...)
         {
@@ -21103,7 +22879,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::TreeViewItem::ItemsSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::TreeViewItem::ItemsSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -21439,7 +23219,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::GetIsVirtualizing(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::GetIsVirtualizing(param0);
+                }());
             }
             catch (...)
             {
@@ -21477,7 +23261,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::GetVirtualizationMode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::GetVirtualizationMode(param0);
+                }());
             }
             catch (...)
             {
@@ -21515,7 +23303,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>(args, 0);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IVirtualizingStackPanelOverrides>().OnCleanUpVirtualizedItem(param0);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Controls::IVirtualizingStackPanelOverrides>().OnCleanUpVirtualizedItem(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -21555,7 +23347,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::VirtualizationMode>(args, 1);
 
-                winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::SetVirtualizationMode(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::SetVirtualizationMode(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -21588,7 +23384,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -21622,7 +23422,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -21649,7 +23453,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreScrollSnapPointsRegular());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreScrollSnapPointsRegular();
+            }());
         }
         catch (...)
         {
@@ -21683,7 +23491,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreScrollSnapPointsRegular(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreScrollSnapPointsRegular(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -21710,7 +23522,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::AreScrollSnapPointsRegularProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::AreScrollSnapPointsRegularProperty();
+            }());
         }
         catch (...)
         {
@@ -21736,7 +23552,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::IsVirtualizingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::IsVirtualizingProperty();
+            }());
         }
         catch (...)
         {
@@ -21762,7 +23582,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::OrientationProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::OrientationProperty();
+            }());
         }
         catch (...)
         {
@@ -21788,7 +23612,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::VirtualizationModeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel::VirtualizationModeProperty();
+            }());
         }
         catch (...)
         {
@@ -21816,7 +23644,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler>(arg);
 
-            return py::convert(self->obj.CleanUpVirtualizedItemEvent(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CleanUpVirtualizedItemEvent(param0);
+            }());
         }
         catch (...)
         {
@@ -21844,7 +23676,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CleanUpVirtualizedItemEvent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CleanUpVirtualizedItemEvent(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -21996,7 +23832,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalChildrenAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VerticalChildrenAlignment();
+            }());
         }
         catch (...)
         {
@@ -22030,7 +23870,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
 
-            self->obj.VerticalChildrenAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VerticalChildrenAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22057,7 +23901,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -22091,7 +23939,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22118,7 +23970,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaximumRowsOrColumns());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaximumRowsOrColumns();
+            }());
         }
         catch (...)
         {
@@ -22152,7 +24008,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaximumRowsOrColumns(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaximumRowsOrColumns(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22179,7 +24039,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemWidth();
+            }());
         }
         catch (...)
         {
@@ -22213,7 +24077,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ItemWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22240,7 +24108,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemHeight();
+            }());
         }
         catch (...)
         {
@@ -22274,7 +24146,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ItemHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22301,7 +24177,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalChildrenAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HorizontalChildrenAlignment();
+            }());
         }
         catch (...)
         {
@@ -22335,7 +24215,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
 
-            self->obj.HorizontalChildrenAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HorizontalChildrenAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -22362,7 +24246,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::HorizontalChildrenAlignmentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::HorizontalChildrenAlignmentProperty();
+            }());
         }
         catch (...)
         {
@@ -22388,7 +24276,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::ItemHeightProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::ItemHeightProperty();
+            }());
         }
         catch (...)
         {
@@ -22414,7 +24306,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::ItemWidthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::ItemWidthProperty();
+            }());
         }
         catch (...)
         {
@@ -22440,7 +24336,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::MaximumRowsOrColumnsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::MaximumRowsOrColumnsProperty();
+            }());
         }
         catch (...)
         {
@@ -22466,7 +24366,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::OrientationProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::OrientationProperty();
+            }());
         }
         catch (...)
         {
@@ -22492,7 +24396,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::WrapGrid::VerticalChildrenAlignmentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::WrapGrid::VerticalChildrenAlignmentProperty();
+            }());
         }
         catch (...)
         {

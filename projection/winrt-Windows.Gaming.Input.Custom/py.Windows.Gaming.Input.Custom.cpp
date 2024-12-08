@@ -37,7 +37,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForGipInterface(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForGipInterface(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForHardwareId(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForHardwareId(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -119,7 +127,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>(args, 2);
 
-                winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForXusbType(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::RegisterCustomFactoryForXusbType(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -159,7 +171,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::TryGetFactoryControllerFromGameController(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager::TryGetFactoryControllerFromGameController(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -259,7 +275,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedErrorCode();
+            }());
         }
         catch (...)
         {
@@ -285,7 +305,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalComponentId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FinalComponentId();
+            }());
         }
         catch (...)
         {
@@ -311,7 +335,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -414,7 +442,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
 
-                self->obj.SendMessage(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessage(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -456,7 +488,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
                 auto param3 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 3);
 
-                self->obj.SendReceiveMessage(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendReceiveMessage(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -495,7 +531,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.UpdateFirmwareAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateFirmwareAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -527,7 +567,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirmwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirmwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -553,7 +597,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -579,7 +627,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -605,7 +657,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -631,7 +687,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -738,7 +798,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
-                self->obj.GetFeatureReport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetFeatureReport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -778,7 +842,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                self->obj.SendFeatureReport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendFeatureReport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -818,7 +886,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                self->obj.SendOutputReport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendOutputReport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -851,7 +923,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirmwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirmwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -877,7 +953,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -903,7 +983,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -929,7 +1013,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -955,7 +1043,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -981,7 +1073,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -1007,7 +1103,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -1116,7 +1216,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.SetVibration(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetVibration(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1149,7 +1253,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirmwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirmwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -1175,7 +1283,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -1201,7 +1313,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -1227,7 +1343,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -1253,7 +1373,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -1357,7 +1481,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
-                return py::convert(self->obj.CreateGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -1395,7 +1523,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                self->obj.OnGameControllerAdded(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnGameControllerAdded(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1434,7 +1566,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                self->obj.OnGameControllerRemoved(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnGameControllerRemoved(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1696,7 +1832,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputResumed(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputResumed(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1735,7 +1875,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputSuspended(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputSuspended(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1958,7 +2102,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirmwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirmwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -1984,7 +2132,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -2010,7 +2162,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -2036,7 +2192,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVersionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVersionInfo();
+            }());
         }
         catch (...)
         {
@@ -2062,7 +2222,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -2327,7 +2491,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputResumed(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputResumed(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2366,7 +2534,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputSuspended(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputSuspended(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2407,7 +2579,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.OnKeyReceived(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnKeyReceived(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2450,7 +2626,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param3 = py::convert_to<uint8_t>(args, 3);
                 auto param4 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 4);
 
-                self->obj.OnMessageReceived(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnMessageReceived(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2791,7 +2971,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
 
-                self->obj.OnInputReportReceived(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputReportReceived(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2830,7 +3014,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputResumed(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputResumed(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2869,7 +3057,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputSuspended(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputSuspended(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3149,7 +3341,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
 
-                self->obj.OnInputReceived(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputReceived(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3188,7 +3384,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputResumed(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputResumed(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3227,7 +3427,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.OnInputSuspended(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnInputSuspended(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

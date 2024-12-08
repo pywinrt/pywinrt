@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Management::Deployment::Preview::ClassicAppManager::FindInstalledApp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Deployment::Preview::ClassicAppManager::FindInstalledApp(param0);
+                }());
             }
             catch (...)
             {
@@ -133,7 +137,11 @@ namespace py::cpp::Windows::Management::Deployment::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -159,7 +167,11 @@ namespace py::cpp::Windows::Management::Deployment::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayVersion();
+            }());
         }
         catch (...)
         {

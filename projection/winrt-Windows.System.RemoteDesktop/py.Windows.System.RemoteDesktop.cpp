@@ -30,7 +30,11 @@ namespace py::cpp::Windows::System::RemoteDesktop
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteDesktop::InteractiveSession::IsRemote());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteDesktop::InteractiveSession::IsRemote();
+            }());
         }
         catch (...)
         {

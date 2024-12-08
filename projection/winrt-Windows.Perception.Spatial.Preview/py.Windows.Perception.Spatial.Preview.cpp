@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystemToNodeTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystemToNodeTransform();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeId();
+            }());
         }
         catch (...)
         {
@@ -183,7 +195,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0);
+                }());
             }
             catch (...)
             {
@@ -222,7 +238,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -262,7 +282,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -300,7 +324,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateLocatorForNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateLocatorForNode(param0);
+                }());
             }
             catch (...)
             {
@@ -338,7 +366,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0);
+                }());
             }
             catch (...)
             {
@@ -377,7 +409,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -417,7 +453,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
 
-                return py::convert(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::TryCreateFrameOfReference(param0, param1, param2);
+                }());
             }
             catch (...)
             {

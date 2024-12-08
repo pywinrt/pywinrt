@@ -44,7 +44,11 @@ namespace py::cpp::Windows::UI::Input::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource::CreateForView(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource::CreateForView(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::UI::Input::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controller());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controller();
+            }());
         }
         catch (...)
         {
@@ -102,7 +110,11 @@ namespace py::cpp::Windows::UI::Input::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Dispatcher());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Dispatcher();
+            }());
         }
         catch (...)
         {
@@ -128,7 +140,11 @@ namespace py::cpp::Windows::UI::Input::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {

@@ -40,7 +40,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 auto param3 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForFileTypeActivation(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForFileTypeActivation(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -82,7 +86,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForProtocolActivation(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForProtocolActivation(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -122,7 +130,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForStartupActivation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::RegisterForStartupActivation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -162,7 +174,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForFileTypeActivation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForFileTypeActivation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -202,7 +218,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForProtocolActivation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForProtocolActivation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -241,7 +261,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForStartupActivation(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForStartupActivation(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -344,7 +368,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -370,7 +398,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -470,7 +502,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::FindOrRegisterForKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppLifecycle::AppInstance::FindOrRegisterForKey(param0);
+                }());
             }
             catch (...)
             {
@@ -506,7 +542,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetActivatedEventArgs());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActivatedEventArgs();
+                }());
             }
             catch (...)
             {
@@ -542,7 +582,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetCurrent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetCurrent();
+                }());
             }
             catch (...)
             {
@@ -578,7 +622,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetInstances());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetInstances();
+                }());
             }
             catch (...)
             {
@@ -616,7 +664,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>(args, 0);
 
-                return py::convert(self->obj.RedirectActivationToAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RedirectActivationToAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -654,7 +706,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::Restart(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppLifecycle::AppInstance::Restart(param0);
+                }());
             }
             catch (...)
             {
@@ -690,7 +746,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                     return nullptr;
                 }
 
-                self->obj.UnregisterKey();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterKey();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -723,7 +783,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCurrent();
+            }());
         }
         catch (...)
         {
@@ -749,7 +813,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 return nullptr;
             }
 
-            return py::convert(self->obj.Key());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Key();
+            }());
         }
         catch (...)
         {
@@ -775,7 +843,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessId();
+            }());
         }
         catch (...)
         {
@@ -803,7 +875,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>>(arg);
 
-            return py::convert(self->obj.Activated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Activated(param0);
+            }());
         }
         catch (...)
         {
@@ -831,7 +907,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Activated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Activated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

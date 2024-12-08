@@ -60,7 +60,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceDeployment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceDeployment();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceDeployment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceDeployment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                 return nullptr;
             }
 
-            return py::convert(self->obj.OnErrorShowUI());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OnErrorShowUI();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.OnErrorShowUI(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OnErrorShowUI(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -246,7 +262,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::GetStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::GetStatus();
+                }());
             }
             catch (...)
             {
@@ -282,7 +302,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize();
+                }());
             }
             catch (...)
             {
@@ -309,7 +333,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize(param0);
+                }());
             }
             catch (...)
             {
@@ -432,7 +460,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -458,7 +490,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {

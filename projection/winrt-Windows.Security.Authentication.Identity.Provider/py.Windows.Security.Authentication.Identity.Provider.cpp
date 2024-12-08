@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.AbortAuthenticationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AbortAuthenticationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.FinishAuthenticationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FinishAuthenticationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -119,7 +127,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::GetAuthenticationStageInfoAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::GetAuthenticationStageInfoAsync();
+                }());
             }
             catch (...)
             {
@@ -158,7 +170,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationMessage>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::ShowNotificationMessageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::ShowNotificationMessageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -197,7 +213,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::StartAuthenticationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::StartAuthenticationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -229,7 +249,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceConfigurationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceConfigurationData();
+            }());
         }
         catch (...)
         {
@@ -255,7 +279,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceNonce());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceNonce();
+            }());
         }
         catch (...)
         {
@@ -281,7 +309,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceAuthenticationHmac());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceAuthenticationHmac();
+            }());
         }
         catch (...)
         {
@@ -307,7 +339,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionNonce());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionNonce();
+            }());
         }
         catch (...)
         {
@@ -335,7 +371,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::AuthenticationStageChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::AuthenticationStageChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -363,7 +403,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::AuthenticationStageChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication::AuthenticationStageChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -492,7 +536,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Authentication());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Authentication();
+            }());
         }
         catch (...)
         {
@@ -518,7 +566,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -612,7 +664,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.StageInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StageInfo();
+            }());
         }
         catch (...)
         {
@@ -705,7 +761,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -731,7 +791,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scenario());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scenario();
+            }());
         }
         catch (...)
         {
@@ -757,7 +821,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stage();
+            }());
         }
         catch (...)
         {
@@ -858,7 +926,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresence>(args, 0);
 
-                return py::convert(self->obj.UpdateDevicePresenceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateDevicePresenceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -890,7 +962,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceConfigurationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceConfigurationData();
+            }());
         }
         catch (...)
         {
@@ -916,7 +992,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceFriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceFriendlyName();
+            }());
         }
         catch (...)
         {
@@ -942,7 +1022,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -968,7 +1052,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceModelNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceModelNumber();
+            }());
         }
         catch (...)
         {
@@ -994,7 +1082,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAuthenticationSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAuthenticationSupported();
+            }());
         }
         catch (...)
         {
@@ -1020,7 +1112,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresenceMonitoringMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresenceMonitoringMode();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1221,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.AbortRegisteringDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AbortRegisteringDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1163,7 +1263,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceFindScope>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::FindAllRegisteredDeviceInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::FindAllRegisteredDeviceInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1201,7 +1305,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.FinishRegisteringDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FinishRegisteringDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1237,7 +1345,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::IsDevicePresenceMonitoringSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::IsDevicePresenceMonitoringSupported();
+                }());
             }
             catch (...)
             {
@@ -1277,7 +1389,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringMode>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1320,7 +1436,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 5);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -1363,7 +1483,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param4 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 5);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RequestStartRegisteringDeviceAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::RequestStartRegisteringDeviceAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -1401,7 +1525,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UnregisterDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UnregisterDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1439,7 +1567,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UnregisterDevicePresenceMonitoringAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UnregisterDevicePresenceMonitoringAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1478,7 +1610,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UpdateDeviceConfigurationDataAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration::UpdateDeviceConfigurationDataAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1611,7 +1747,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Registration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Registration();
+            }());
         }
         catch (...)
         {
@@ -1637,7 +1777,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {

@@ -36,7 +36,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Shell::AdaptiveCardBuilder::CreateAdaptiveCardFromJson(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::AdaptiveCardBuilder::CreateAdaptiveCardFromJson(param0);
+                }());
             }
             catch (...)
             {
@@ -137,7 +141,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.End();
+                {
+                    auto _gil = release_gil();
+                    self->obj.End();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -170,7 +178,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -268,7 +280,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.DeactivateFocus();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeactivateFocus();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -305,7 +321,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Shell::FocusSessionManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::FocusSessionManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -343,7 +363,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetSession(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSession(param0);
+                }());
             }
             catch (...)
             {
@@ -379,7 +403,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryStartFocusSession());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryStartFocusSession();
+                }());
             }
             catch (...)
             {
@@ -417,7 +445,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(self->obj.TryStartFocusSession(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryStartFocusSession(param0);
+                }());
             }
             catch (...)
             {
@@ -449,7 +481,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFocusActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFocusActive();
+            }());
         }
         catch (...)
         {
@@ -475,7 +511,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Shell::FocusSessionManager::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Shell::FocusSessionManager::IsSupported();
+            }());
         }
         catch (...)
         {
@@ -503,7 +543,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::FocusSessionManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsFocusActiveChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFocusActiveChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -531,7 +575,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsFocusActiveChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsFocusActiveChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -689,7 +737,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                return py::convert(self->obj.Register(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Register(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -728,7 +780,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppKind>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                self->obj.Unregister(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -771,7 +827,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param3 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppSubstatus>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 4);
 
-                self->obj.UpdateState(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateState(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -873,7 +933,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Command());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Command();
+            }());
         }
         catch (...)
         {
@@ -907,7 +971,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::ShareWindowCommand>(arg);
 
-            self->obj.Command(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Command(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -934,7 +1002,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowId();
+            }());
         }
         catch (...)
         {
@@ -1032,7 +1104,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Shell::ShareWindowCommandSource::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::ShareWindowCommandSource::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -1068,7 +1144,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.ReportCommandChanged();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCommandChanged();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1105,7 +1185,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1142,7 +1226,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1177,7 +1265,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::ShareWindowCommandSource, winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>>(arg);
 
-            return py::convert(self->obj.CommandInvoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandInvoked(param0);
+            }());
         }
         catch (...)
         {
@@ -1205,7 +1297,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CommandInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommandInvoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1234,7 +1330,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::ShareWindowCommandSource, winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>>(arg);
 
-            return py::convert(self->obj.CommandRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1262,7 +1362,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CommandRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommandRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1392,7 +1496,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Shell::TaskbarManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::TaskbarManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1430,7 +1538,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
-                return py::convert(self->obj.IsAppListEntryPinnedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAppListEntryPinnedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1466,7 +1578,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsCurrentAppPinnedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsCurrentAppPinnedAsync();
+                }());
             }
             catch (...)
             {
@@ -1504,7 +1620,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsSecondaryTilePinnedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsSecondaryTilePinnedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1542,7 +1662,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
-                return py::convert(self->obj.RequestPinAppListEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPinAppListEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1578,7 +1702,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestPinCurrentAppAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPinCurrentAppAsync();
+                }());
             }
             catch (...)
             {
@@ -1616,7 +1744,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::SecondaryTile>(args, 0);
 
-                return py::convert(self->obj.RequestPinSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPinSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1654,7 +1786,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryUnpinSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUnpinSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1686,7 +1822,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPinningAllowed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPinningAllowed();
+            }());
         }
         catch (...)
         {
@@ -1712,7 +1852,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSupported();
+            }());
         }
         catch (...)
         {
@@ -1865,7 +2009,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.ReportThumbnailAvailable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportThumbnailAvailable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1898,7 +2046,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.TreatAsSecondaryTileId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TreatAsSecondaryTileId();
+            }());
         }
         catch (...)
         {
@@ -1932,7 +2084,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TreatAsSecondaryTileId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TreatAsSecondaryTileId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1959,7 +2115,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -1993,7 +2153,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2020,7 +2184,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -2054,7 +2222,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2081,7 +2253,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -2115,7 +2291,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabIcon>(arg);
 
-            self->obj.Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2142,7 +2322,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -2176,7 +2360,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabGroup>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2275,7 +2463,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tab();
+            }());
         }
         catch (...)
         {
@@ -2374,7 +2566,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2411,7 +2607,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2448,7 +2648,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2486,7 +2690,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -2525,7 +2733,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Shell::WindowTab, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2561,7 +2773,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -2600,7 +2816,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2612,6 +2832,7 @@ namespace py::cpp::Windows::UI::Shell
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2651,7 +2872,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2691,7 +2916,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.MoveTab(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.MoveTab(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2730,7 +2959,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2767,7 +3000,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2806,7 +3043,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Shell::WindowTab, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2846,7 +3087,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2879,7 +3124,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2916,7 +3165,11 @@ namespace py::cpp::Windows::UI::Shell
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2929,6 +3182,7 @@ namespace py::cpp::Windows::UI::Shell
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2942,7 +3196,11 @@ namespace py::cpp::Windows::UI::Shell
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -2981,7 +3239,12 @@ namespace py::cpp::Windows::UI::Shell
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -2994,7 +3257,11 @@ namespace py::cpp::Windows::UI::Shell
 
             winrt::com_array<winrt::Windows::UI::Shell::WindowTab> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Shell::WindowTab>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -3017,11 +3284,16 @@ namespace py::cpp::Windows::UI::Shell
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Shell::WindowTab>(value));
+                auto _value = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -3133,7 +3405,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -3167,7 +3443,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3194,7 +3474,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -3228,7 +3512,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabIcon>(arg);
 
-            self->obj.Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3330,7 +3618,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabIcon::CreateFromFontGlyph(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabIcon::CreateFromFontGlyph(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3370,7 +3662,11 @@ namespace py::cpp::Windows::UI::Shell
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabIcon::CreateFromFontGlyph(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabIcon::CreateFromFontGlyph(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3408,7 +3704,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabIcon::CreateFromImage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabIcon::CreateFromImage(param0);
+                }());
             }
             catch (...)
             {
@@ -3540,7 +3840,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabManager::GetForWindow(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabManager::GetForWindow(param0);
+                }());
             }
             catch (...)
             {
@@ -3576,7 +3880,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -3612,7 +3920,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Shell::WindowTabManager::IsTabTearOutSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Shell::WindowTabManager::IsTabTearOutSupported();
+                }());
             }
             catch (...)
             {
@@ -3650,7 +3962,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
 
-                self->obj.SetActiveTab(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetActiveTab(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3683,7 +3999,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tabs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tabs();
+            }());
         }
         catch (...)
         {
@@ -3711,7 +4031,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TabCloseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabCloseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3739,7 +4063,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TabCloseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TabCloseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3768,7 +4096,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TabSwitchRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabSwitchRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3796,7 +4128,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TabSwitchRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TabSwitchRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3825,7 +4161,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TabTearOutRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabTearOutRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3853,7 +4193,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TabTearOutRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TabTearOutRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3882,7 +4226,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TabThumbnailRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TabThumbnailRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3910,7 +4258,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TabThumbnailRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TabThumbnailRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4041,7 +4393,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tab();
+            }());
         }
         catch (...)
         {
@@ -4138,7 +4494,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4170,7 +4530,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowId();
+            }());
         }
         catch (...)
         {
@@ -4204,7 +4568,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.WindowId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WindowId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4231,7 +4599,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tab();
+            }());
         }
         catch (...)
         {
@@ -4330,7 +4702,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4362,7 +4738,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Image());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Image();
+            }());
         }
         catch (...)
         {
@@ -4396,7 +4776,11 @@ namespace py::cpp::Windows::UI::Shell
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Image(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Image(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4423,7 +4807,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCompositedOnWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCompositedOnWindow();
+            }());
         }
         catch (...)
         {
@@ -4449,7 +4837,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedSize();
+            }());
         }
         catch (...)
         {
@@ -4475,7 +4867,11 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tab();
+            }());
         }
         catch (...)
         {
@@ -4576,7 +4972,11 @@ namespace py::cpp::Windows::UI::Shell
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToJson());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToJson();
+                }());
             }
             catch (...)
             {
@@ -4769,7 +5169,11 @@ namespace py::cpp::Windows::UI::Shell
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateAdaptiveCardFromJson(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAdaptiveCardFromJson(param0);
+                }());
             }
             catch (...)
             {

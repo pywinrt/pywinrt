@@ -38,7 +38,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomState();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Verb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Verb();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -212,7 +228,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnalyticsJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AnalyticsJson();
+            }());
         }
         catch (...)
         {
@@ -238,7 +258,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -332,7 +356,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefinitionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefinitionId();
+            }());
         }
         catch (...)
         {
@@ -358,7 +386,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -384,7 +416,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -410,7 +446,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -506,7 +546,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -599,7 +643,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomState();
+            }());
         }
         catch (...)
         {
@@ -625,7 +673,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -719,7 +771,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorJson();
+            }());
         }
         catch (...)
         {
@@ -745,7 +801,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -839,7 +899,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomState();
+            }());
         }
         catch (...)
         {
@@ -865,7 +929,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -891,7 +959,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUpdateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUpdateTime();
+            }());
         }
         catch (...)
         {
@@ -917,7 +989,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Template());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Template();
+            }());
         }
         catch (...)
         {
@@ -943,7 +1019,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
         }
         catch (...)
         {
@@ -1046,7 +1126,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.DeleteWidget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteWidget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1083,7 +1167,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Widgets::Providers::WidgetManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Widgets::Providers::WidgetManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1119,7 +1207,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetWidgetIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetIds();
+                }());
             }
             catch (...)
             {
@@ -1157,7 +1249,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetWidgetInfo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetInfo(param0);
+                }());
             }
             catch (...)
             {
@@ -1193,7 +1289,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetWidgetInfos());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetInfos();
+                }());
             }
             catch (...)
             {
@@ -1231,7 +1331,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>(args, 0);
 
-                self->obj.UpdateWidget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateWidget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1385,7 +1489,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Template());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Template();
+            }());
         }
         catch (...)
         {
@@ -1419,7 +1527,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Template(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Template(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1446,7 +1558,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -1480,7 +1596,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1507,7 +1627,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomState();
+            }());
         }
         catch (...)
         {
@@ -1541,7 +1665,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CustomState(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomState(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1568,7 +1696,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WidgetId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetId();
+            }());
         }
         catch (...)
         {
@@ -1594,7 +1726,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions::UnsetValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions::UnsetValue();
+            }());
         }
         catch (...)
         {
@@ -1722,7 +1858,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.DeleteWidget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteWidget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1759,7 +1899,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetWidgetIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetIds();
+                }());
             }
             catch (...)
             {
@@ -1797,7 +1941,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetWidgetInfo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetInfo(param0);
+                }());
             }
             catch (...)
             {
@@ -1833,7 +1981,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetWidgetInfos());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWidgetInfos();
+                }());
             }
             catch (...)
             {
@@ -1871,7 +2023,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>(args, 0);
 
-                self->obj.UpdateWidget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateWidget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2189,7 +2345,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>(args, 0);
 
-                self->obj.Activate(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Activate(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2228,7 +2388,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>(args, 0);
 
-                self->obj.CreateWidget(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateWidget(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2267,7 +2431,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Deactivate(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Deactivate(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2307,7 +2475,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.DeleteWidget(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteWidget(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2346,7 +2518,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs>(args, 0);
 
-                self->obj.OnActionInvoked(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnActionInvoked(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2385,7 +2561,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs>(args, 0);
 
-                self->obj.OnWidgetContextChanged(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnWidgetContextChanged(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2750,7 +2930,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs>(args, 0);
 
-                self->obj.OnCustomizationRequested(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnCustomizationRequested(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2948,7 +3132,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs>(args, 0);
 
-                self->obj.OnAnalyticsInfoReported(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnAnalyticsInfoReported(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3146,7 +3334,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs>(args, 0);
 
-                self->obj.OnErrorInfoReported(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnErrorInfoReported(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

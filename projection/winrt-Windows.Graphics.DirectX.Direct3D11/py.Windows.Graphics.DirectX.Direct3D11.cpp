@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
                     return nullptr;
                 }
 
-                self->obj.Trim();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Trim();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -128,7 +136,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -315,7 +327,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -348,7 +364,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -390,7 +410,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

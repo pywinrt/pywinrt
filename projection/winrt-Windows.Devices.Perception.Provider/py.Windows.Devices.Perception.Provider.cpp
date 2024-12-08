@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Color();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Depth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Depth();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Infrared());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind::Infrared();
+            }());
         }
         catch (...)
         {
@@ -199,7 +211,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameProviderIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameProviderIds();
+            }());
         }
         catch (...)
         {
@@ -318,7 +334,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -344,7 +364,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -370,7 +394,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetId();
+            }());
         }
         catch (...)
         {
@@ -489,7 +517,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeLocations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelativeLocations();
+            }());
         }
         catch (...)
         {
@@ -608,7 +640,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameProviderIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameProviderIds();
+            }());
         }
         catch (...)
         {
@@ -701,7 +737,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelativeTime();
+            }());
         }
         catch (...)
         {
@@ -735,7 +775,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.RelativeTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelativeTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -762,7 +806,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameData();
+            }());
         }
         catch (...)
         {
@@ -788,7 +836,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -905,7 +957,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -939,7 +995,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -966,7 +1026,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Hidden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Hidden();
+            }());
         }
         catch (...)
         {
@@ -1000,7 +1064,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Hidden(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Hidden(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1027,7 +1095,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameKind();
+            }());
         }
         catch (...)
         {
@@ -1061,7 +1133,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FrameKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1088,7 +1164,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1122,7 +1202,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1149,7 +1233,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceKind();
+            }());
         }
         catch (...)
         {
@@ -1183,7 +1271,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DeviceKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1280,7 +1372,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::PublishFrameForProvider(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::PublishFrameForProvider(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1320,7 +1416,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterControlGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterControlGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1360,7 +1460,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterCorrelationGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterCorrelationGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1400,7 +1504,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterFaceAuthenticationGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterFaceAuthenticationGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1440,7 +1548,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterFrameProviderInfo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::RegisterFrameProviderInfo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1480,7 +1592,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterControlGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterControlGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1520,7 +1636,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterCorrelationGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterCorrelationGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1560,7 +1680,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterFaceAuthenticationGroup(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterFaceAuthenticationGroup(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1600,7 +1724,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterFrameProviderInfo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UnregisterFrameProviderInfo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1640,7 +1768,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UpdateAvailabilityForProvider(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService::UpdateAvailabilityForProvider(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1751,7 +1883,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1783,7 +1919,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1817,7 +1957,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1844,7 +1988,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1870,7 +2018,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1997,7 +2149,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AllocateFrame());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AllocateFrame();
+                }());
             }
             catch (...)
             {
@@ -2033,7 +2189,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2072,7 +2232,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
-                return py::convert(self->obj.CopyFromVideoFrame(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CopyFromVideoFrame(param0);
+                }());
             }
             catch (...)
             {
@@ -2120,7 +2284,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2198,7 +2366,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2237,7 +2409,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>(args, 0);
 
-                self->obj.SetProperty(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetProperty(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2274,7 +2450,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2311,7 +2491,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2344,7 +2528,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Available());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Available();
+            }());
         }
         catch (...)
         {
@@ -2370,7 +2558,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameProviderInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameProviderInfo();
+            }());
         }
         catch (...)
         {
@@ -2396,7 +2588,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2438,7 +2634,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2744,7 +2944,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2783,7 +2987,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>(args, 0);
 
-                return py::convert(self->obj.GetFrameProvider(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFrameProvider(param0);
+                }());
             }
             catch (...)
             {
@@ -2831,7 +3039,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

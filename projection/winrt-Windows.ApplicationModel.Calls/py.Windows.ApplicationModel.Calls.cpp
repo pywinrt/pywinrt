@@ -75,7 +75,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceName();
+            }());
         }
         catch (...)
         {
@@ -109,7 +113,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -136,7 +144,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -170,7 +182,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -197,7 +213,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Context());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
         }
         catch (...)
         {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Context(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Context(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -258,7 +282,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactNumber();
+            }());
         }
         catch (...)
         {
@@ -292,7 +320,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -319,7 +351,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -353,7 +389,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -380,7 +420,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AssociatedDeviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AssociatedDeviceIds();
+            }());
         }
         catch (...)
         {
@@ -515,7 +559,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceName();
+            }());
         }
         catch (...)
         {
@@ -549,7 +597,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -576,7 +628,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -610,7 +666,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -637,7 +697,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Context());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
         }
         catch (...)
         {
@@ -671,7 +735,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Context(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Context(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -698,7 +766,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactNumber();
+            }());
         }
         catch (...)
         {
@@ -732,7 +804,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -759,7 +835,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -793,7 +873,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -820,7 +904,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AssociatedDeviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AssociatedDeviceIds();
+            }());
         }
         catch (...)
         {
@@ -918,7 +1006,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptedMedia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptedMedia();
+            }());
         }
         catch (...)
         {
@@ -944,7 +1036,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDeviceId();
+            }());
         }
         catch (...)
         {
@@ -1038,7 +1134,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RejectReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RejectReason();
+            }());
         }
         catch (...)
         {
@@ -1131,7 +1231,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1261,7 +1365,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceName();
+            }());
         }
         catch (...)
         {
@@ -1295,7 +1403,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1322,7 +1434,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ringtone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ringtone();
+            }());
         }
         catch (...)
         {
@@ -1356,7 +1472,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Ringtone(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ringtone(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1383,7 +1503,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RingTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RingTimeout();
+            }());
         }
         catch (...)
         {
@@ -1417,7 +1541,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.RingTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RingTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1444,7 +1572,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -1478,7 +1610,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1505,7 +1641,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Context());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
         }
         catch (...)
         {
@@ -1539,7 +1679,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Context(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Context(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1566,7 +1710,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactRemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactRemoteId();
+            }());
         }
         catch (...)
         {
@@ -1600,7 +1748,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactRemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactRemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1627,7 +1779,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactNumber();
+            }());
         }
         catch (...)
         {
@@ -1661,7 +1817,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1688,7 +1848,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -1722,7 +1886,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1749,7 +1917,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactImage();
+            }());
         }
         catch (...)
         {
@@ -1783,7 +1955,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContactImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1810,7 +1986,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallDetails();
+            }());
         }
         catch (...)
         {
@@ -1844,7 +2024,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CallDetails(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallDetails(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1871,7 +2055,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrandingImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrandingImage();
+            }());
         }
         catch (...)
         {
@@ -1905,7 +2093,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BrandingImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrandingImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1932,7 +2124,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AssociatedDeviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AssociatedDeviceIds();
+            }());
         }
         catch (...)
         {
@@ -2040,7 +2236,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2144,7 +2344,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2176,7 +2380,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -2274,7 +2482,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.Dismiss();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Dismiss();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2307,7 +2519,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallTitle();
+            }());
         }
         catch (...)
         {
@@ -2341,7 +2557,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CallTitle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallTitle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2370,7 +2590,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -2398,7 +2622,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2427,7 +2655,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI, winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.EndRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2455,7 +2687,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EndRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2554,7 +2790,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Muted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Muted();
+            }());
         }
         catch (...)
         {
@@ -2684,7 +2924,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceName();
+            }());
         }
         catch (...)
         {
@@ -2718,7 +2962,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2745,7 +2993,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -2779,7 +3031,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2806,7 +3062,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Context());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
         }
         catch (...)
         {
@@ -2840,7 +3100,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Context(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Context(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2867,7 +3131,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -2901,7 +3169,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2928,7 +3200,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AssociatedDeviceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AssociatedDeviceIds();
+            }());
         }
         catch (...)
         {
@@ -3029,7 +3305,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AcceptIncoming());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AcceptIncoming();
+                }());
             }
             catch (...)
             {
@@ -3065,7 +3345,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AcceptIncomingAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AcceptIncomingAsync();
+                }());
             }
             catch (...)
             {
@@ -3103,7 +3387,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallAudioDevice>(args, 0);
 
-                return py::convert(self->obj.ChangeAudioDevice(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ChangeAudioDevice(param0);
+                }());
             }
             catch (...)
             {
@@ -3141,7 +3429,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallAudioDevice>(args, 0);
 
-                return py::convert(self->obj.ChangeAudioDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ChangeAudioDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3177,7 +3469,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.End());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.End();
+                }());
             }
             catch (...)
             {
@@ -3213,7 +3509,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.EndAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EndAsync();
+                }());
             }
             catch (...)
             {
@@ -3251,7 +3551,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCall::GetFromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCall::GetFromId(param0);
+                }());
             }
             catch (...)
             {
@@ -3287,7 +3591,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPhoneCallInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPhoneCallInfo();
+                }());
             }
             catch (...)
             {
@@ -3323,7 +3631,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPhoneCallInfoAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPhoneCallInfoAsync();
+                }());
             }
             catch (...)
             {
@@ -3359,7 +3671,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Hold());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Hold();
+                }());
             }
             catch (...)
             {
@@ -3395,7 +3711,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HoldAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HoldAsync();
+                }());
             }
             catch (...)
             {
@@ -3431,7 +3751,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Mute());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Mute();
+                }());
             }
             catch (...)
             {
@@ -3467,7 +3791,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MuteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MuteAsync();
+                }());
             }
             catch (...)
             {
@@ -3503,7 +3831,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RejectIncoming());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RejectIncoming();
+                }());
             }
             catch (...)
             {
@@ -3539,7 +3871,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RejectIncomingAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RejectIncomingAsync();
+                }());
             }
             catch (...)
             {
@@ -3575,7 +3911,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ResumeFromHold());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResumeFromHold();
+                }());
             }
             catch (...)
             {
@@ -3611,7 +3951,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ResumeFromHoldAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResumeFromHoldAsync();
+                }());
             }
             catch (...)
             {
@@ -3650,7 +3994,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::DtmfKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::DtmfToneAudioPlayback>(args, 1);
 
-                return py::convert(self->obj.SendDtmfKey(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendDtmfKey(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3689,7 +4037,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::DtmfKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::DtmfToneAudioPlayback>(args, 1);
 
-                return py::convert(self->obj.SendDtmfKeyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendDtmfKeyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3725,7 +4077,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Unmute());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Unmute();
+                }());
             }
             catch (...)
             {
@@ -3761,7 +4117,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UnmuteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnmuteAsync();
+                }());
             }
             catch (...)
             {
@@ -3793,7 +4153,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioDevice();
+            }());
         }
         catch (...)
         {
@@ -3819,7 +4183,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallId();
+            }());
         }
         catch (...)
         {
@@ -3845,7 +4213,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMuted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMuted();
+            }());
         }
         catch (...)
         {
@@ -3871,7 +4243,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3899,7 +4275,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneCall, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AudioDeviceChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioDeviceChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3927,7 +4307,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioDeviceChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioDeviceChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3956,7 +4340,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneCall, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsMutedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMutedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3984,7 +4372,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsMutedChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMutedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4013,7 +4405,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneCall, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4041,7 +4437,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4188,7 +4588,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::SetCallBlockingListAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::SetCallBlockingListAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4220,7 +4624,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockUnknownNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockUnknownNumbers();
+            }());
         }
         catch (...)
         {
@@ -4254,7 +4662,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockUnknownNumbers(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockUnknownNumbers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4281,7 +4693,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockPrivateNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockPrivateNumbers();
+            }());
         }
         catch (...)
         {
@@ -4315,7 +4731,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockPrivateNumbers(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking::BlockPrivateNumbers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4431,7 +4851,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -4465,7 +4889,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4492,7 +4920,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMissed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMissed();
+            }());
         }
         catch (...)
         {
@@ -4526,7 +4958,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsMissed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMissed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4553,7 +4989,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIncoming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIncoming();
+            }());
         }
         catch (...)
         {
@@ -4587,7 +5027,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIncoming(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsIncoming(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4614,7 +5058,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCallerIdBlocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCallerIdBlocked();
+            }());
         }
         catch (...)
         {
@@ -4648,7 +5096,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCallerIdBlocked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCallerIdBlocked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4675,7 +5127,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSeen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSeen();
+            }());
         }
         catch (...)
         {
@@ -4709,7 +5165,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSeen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSeen(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4736,7 +5196,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -4770,7 +5234,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.Duration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4797,7 +5265,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEmergency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEmergency();
+            }());
         }
         catch (...)
         {
@@ -4831,7 +5303,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEmergency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEmergency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4858,7 +5334,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSuppressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSuppressed();
+            }());
         }
         catch (...)
         {
@@ -4892,7 +5372,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSuppressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSuppressed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4919,7 +5403,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -4953,7 +5441,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.StartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4980,7 +5472,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceIdKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceIdKind();
+            }());
         }
         catch (...)
         {
@@ -5014,7 +5510,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistorySourceIdKind>(arg);
 
-            self->obj.SourceIdKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceIdKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5041,7 +5541,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -5075,7 +5579,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress>(arg);
 
-            self->obj.Address(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Address(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5102,7 +5610,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceId();
+            }());
         }
         catch (...)
         {
@@ -5136,7 +5648,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SourceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5163,7 +5679,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -5197,7 +5717,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5224,7 +5748,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppReadAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppReadAccess();
+            }());
         }
         catch (...)
         {
@@ -5258,7 +5786,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryOtherAppReadAccess>(arg);
 
-            self->obj.OtherAppReadAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppReadAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5285,7 +5817,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRinging());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRinging();
+            }());
         }
         catch (...)
         {
@@ -5319,7 +5855,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRinging(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRinging(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5346,7 +5886,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVoicemail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVoicemail();
+            }());
         }
         catch (...)
         {
@@ -5380,7 +5924,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsVoicemail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsVoicemail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5407,7 +5955,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -5433,7 +5985,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDisplayName();
+            }());
         }
         catch (...)
         {
@@ -5581,7 +6137,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawAddressKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawAddressKind();
+            }());
         }
         catch (...)
         {
@@ -5615,7 +6175,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryRawAddressKind>(arg);
 
-            self->obj.RawAddressKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RawAddressKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5642,7 +6206,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawAddress();
+            }());
         }
         catch (...)
         {
@@ -5676,7 +6244,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RawAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RawAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5703,7 +6275,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -5737,7 +6313,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5764,7 +6344,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactId();
+            }());
         }
         catch (...)
         {
@@ -5798,7 +6382,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5917,7 +6505,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredMedia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredMedia();
+            }());
         }
         catch (...)
         {
@@ -5951,7 +6543,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia>(arg);
 
-            self->obj.DesiredMedia(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredMedia(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5978,7 +6574,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceIds();
+            }());
         }
         catch (...)
         {
@@ -6076,7 +6676,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -6173,7 +6777,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -6211,7 +6819,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStoreAccessType>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager::RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager::RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6315,7 +6927,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStoreAccessType>(args, 0);
 
-                return py::convert(self->obj.RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6347,7 +6963,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -6447,7 +7067,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>>(args, 0);
 
-                return py::convert(self->obj.DeleteEntriesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteEntriesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6485,7 +7109,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>(args, 0);
 
-                return py::convert(self->obj.DeleteEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6523,7 +7151,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6559,7 +7191,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetEntryReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEntryReader();
+                }());
             }
             catch (...)
             {
@@ -6597,7 +7233,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions>(args, 0);
 
-                return py::convert(self->obj.GetEntryReader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEntryReader(param0);
+                }());
             }
             catch (...)
             {
@@ -6635,7 +7275,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetSourcesUnseenCountAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSourcesUnseenCountAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6671,7 +7315,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUnseenCountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUnseenCountAsync();
+                }());
             }
             catch (...)
             {
@@ -6707,7 +7355,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MarkAllAsSeenAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkAllAsSeenAsync();
+                }());
             }
             catch (...)
             {
@@ -6745,7 +7397,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>>(args, 0);
 
-                return py::convert(self->obj.MarkEntriesAsSeenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkEntriesAsSeenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6783,7 +7439,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>(args, 0);
 
-                return py::convert(self->obj.MarkEntryAsSeenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkEntryAsSeenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6821,7 +7481,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.MarkSourcesAsSeenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MarkSourcesAsSeenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6859,7 +7523,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>(args, 0);
 
-                return py::convert(self->obj.SaveEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6969,7 +7637,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallDirection();
+            }());
         }
         catch (...)
         {
@@ -6995,7 +7667,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -7021,7 +7697,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHoldSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHoldSupported();
+            }());
         }
         catch (...)
         {
@@ -7047,7 +7727,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -7073,7 +7757,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -7099,7 +7787,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -7193,7 +7885,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallManager::RequestStoreAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCallManager::RequestStoreAsync();
+                }());
             }
             catch (...)
             {
@@ -7229,7 +7925,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Calls::PhoneCallManager::ShowPhoneCallSettingsUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Calls::PhoneCallManager::ShowPhoneCallSettingsUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7269,7 +7969,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Calls::PhoneCallManager::ShowPhoneCallUI(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Calls::PhoneCallManager::ShowPhoneCallUI(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7302,7 +8006,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallManager::IsCallActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::PhoneCallManager::IsCallActive();
+            }());
         }
         catch (...)
         {
@@ -7328,7 +8036,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallManager::IsCallIncoming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::PhoneCallManager::IsCallIncoming();
+            }());
         }
         catch (...)
         {
@@ -7356,7 +8068,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallManager::CallStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::PhoneCallManager::CallStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -7384,7 +8100,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Calls::PhoneCallManager::CallStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Calls::PhoneCallManager::CallStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7486,7 +8206,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDefaultLineAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDefaultLineAsync();
+                }());
             }
             catch (...)
             {
@@ -7524,7 +8248,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsEmergencyPhoneNumberAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEmergencyPhoneNumberAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7560,7 +8288,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestLineWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestLineWatcher();
+                }());
             }
             catch (...)
             {
@@ -7661,7 +8393,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVideoCallingCapable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVideoCallingCapable();
+            }());
         }
         catch (...)
         {
@@ -7752,7 +8488,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager::GetCapabilitiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager::GetCapabilitiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7849,7 +8589,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllActivePhoneCalls());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllActivePhoneCalls();
+            }());
         }
         catch (...)
         {
@@ -7875,7 +8619,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -7991,7 +8739,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Number());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Number();
+            }());
         }
         catch (...)
         {
@@ -8025,7 +8777,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Number(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Number(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8052,7 +8808,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Media());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Media();
+            }());
         }
         catch (...)
         {
@@ -8086,7 +8846,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallMedia>(arg);
 
-            self->obj.Media(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Media(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8113,7 +8877,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -8147,7 +8915,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8174,7 +8946,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactPhone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactPhone();
+            }());
         }
         catch (...)
         {
@@ -8208,7 +8984,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactPhone>(arg);
 
-            self->obj.ContactPhone(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactPhone(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8235,7 +9015,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -8269,7 +9053,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(arg);
 
-            self->obj.Contact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Contact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8296,7 +9084,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioEndpoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioEndpoint();
+            }());
         }
         catch (...)
         {
@@ -8330,7 +9122,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneAudioRoutingEndpoint>(arg);
 
-            self->obj.AudioEndpoint(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioEndpoint(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8436,7 +9232,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Dial(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Dial(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8475,7 +9275,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions>(args, 0);
 
-                self->obj.DialWithOptions(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DialWithOptions(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8515,7 +9319,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.DialWithResult(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DialWithResult(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8554,7 +9362,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.DialWithResultAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DialWithResultAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8592,7 +9404,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.EnableTextReply(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableTextReply(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8631,7 +9447,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneLine::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneLine::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8667,7 +9487,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllActivePhoneCalls());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllActivePhoneCalls();
+                }());
             }
             catch (...)
             {
@@ -8703,7 +9527,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllActivePhoneCallsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllActivePhoneCallsAsync();
+                }());
             }
             catch (...)
             {
@@ -8741,7 +9569,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsImmediateDialNumberAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsImmediateDialNumberAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8773,7 +9605,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanDial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanDial();
+            }());
         }
         catch (...)
         {
@@ -8799,7 +9635,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CellularDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CellularDetails();
+            }());
         }
         catch (...)
         {
@@ -8825,7 +9665,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayColor();
+            }());
         }
         catch (...)
         {
@@ -8851,7 +9695,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -8877,7 +9725,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -8903,7 +9755,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineConfiguration();
+            }());
         }
         catch (...)
         {
@@ -8929,7 +9785,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkName();
+            }());
         }
         catch (...)
         {
@@ -8955,7 +9815,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkState();
+            }());
         }
         catch (...)
         {
@@ -8981,7 +9845,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsTile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsTile();
+            }());
         }
         catch (...)
         {
@@ -9007,7 +9875,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Transport();
+            }());
         }
         catch (...)
         {
@@ -9033,7 +9905,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoCallingCapabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoCallingCapabilities();
+            }());
         }
         catch (...)
         {
@@ -9059,7 +9935,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Voicemail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Voicemail();
+            }());
         }
         catch (...)
         {
@@ -9085,7 +9965,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportDeviceId();
+            }());
         }
         catch (...)
         {
@@ -9113,7 +9997,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLine, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LineChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9141,7 +10029,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LineChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LineChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9289,7 +10181,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation>(args, 0);
 
-                return py::convert(self->obj.GetNetworkOperatorDisplayText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkOperatorDisplayText(param0);
+                }());
             }
             catch (...)
             {
@@ -9321,7 +10217,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsModemOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsModemOn();
+            }());
         }
         catch (...)
         {
@@ -9347,7 +10247,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.RegistrationRejectCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegistrationRejectCode();
+            }());
         }
         catch (...)
         {
@@ -9373,7 +10277,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimSlotIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimSlotIndex();
+            }());
         }
         catch (...)
         {
@@ -9399,7 +10307,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimState();
+            }());
         }
         catch (...)
         {
@@ -9496,7 +10408,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedProperties();
+            }());
         }
         catch (...)
         {
@@ -9522,7 +10438,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVideoCallingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVideoCallingEnabled();
+            }());
         }
         catch (...)
         {
@@ -9616,7 +10536,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DialCallStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DialCallStatus();
+            }());
         }
         catch (...)
         {
@@ -9642,7 +10566,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DialedCall());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DialedCall();
+            }());
         }
         catch (...)
         {
@@ -9740,7 +10668,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Connect());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Connect();
+                }());
             }
             catch (...)
             {
@@ -9776,7 +10708,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ConnectAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync();
+                }());
             }
             catch (...)
             {
@@ -9814,7 +10750,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -9850,7 +10790,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -9888,7 +10832,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneLineTransport>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -9924,7 +10872,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsRegistered());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsRegistered();
+                }());
             }
             catch (...)
             {
@@ -9960,7 +10912,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.RegisterApp();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RegisterApp();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9999,7 +10955,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                self->obj.RegisterAppForUser(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RegisterAppForUser(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10036,7 +10996,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -10072,7 +11036,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.UnregisterApp();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterApp();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10111,7 +11079,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                self->obj.UnregisterAppForUser(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterAppForUser(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10144,7 +11116,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -10170,7 +11146,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Transport();
+            }());
         }
         catch (...)
         {
@@ -10196,7 +11176,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioRoutingStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioRoutingStatus();
+            }());
         }
         catch (...)
         {
@@ -10222,7 +11206,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.InBandRingingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InBandRingingEnabled();
+            }());
         }
         catch (...)
         {
@@ -10250,7 +11238,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AudioRoutingStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioRoutingStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10278,7 +11270,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioRoutingStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioRoutingStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10307,7 +11303,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.InBandRingingEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InBandRingingEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10335,7 +11335,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InBandRingingEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InBandRingingEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10476,7 +11480,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10513,7 +11521,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10546,7 +11558,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -10574,7 +11590,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -10602,7 +11622,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10631,7 +11655,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>>(arg);
 
-            return py::convert(self->obj.LineAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -10659,7 +11687,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LineAdded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LineAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10688,7 +11720,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>>(arg);
 
-            return py::convert(self->obj.LineRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -10716,7 +11752,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LineRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LineRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10745,7 +11785,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>>(arg);
 
-            return py::convert(self->obj.LineUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -10773,7 +11817,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LineUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LineUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10802,7 +11850,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Stopped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped(param0);
+            }());
         }
         catch (...)
         {
@@ -10830,7 +11882,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Stopped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Stopped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10936,7 +11992,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -11033,7 +12093,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DialVoicemailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DialVoicemailAsync();
+                }());
             }
             catch (...)
             {
@@ -11065,7 +12129,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageCount();
+            }());
         }
         catch (...)
         {
@@ -11091,7 +12159,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Number());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Number();
+            }());
         }
         catch (...)
         {
@@ -11117,7 +12189,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -11219,7 +12295,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.CancelUpgrade(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CancelUpgrade(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11256,7 +12336,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -11292,7 +12376,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::GetDeviceSelectorForCallControl());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::GetDeviceSelectorForCallControl();
+                }());
             }
             catch (...)
             {
@@ -11330,7 +12418,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipCallControlDeviceKind>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::IsCallControlDeviceKindSupportedForAssociation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::IsCallControlDeviceKindSupportedForAssociation(param0);
+                }());
             }
             catch (...)
             {
@@ -11366,7 +12458,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyMuted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyMuted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11403,7 +12499,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyUnmuted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyUnmuted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11450,7 +12550,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param7 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 7);
                 auto param8 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 8);
 
-                return py::convert(self->obj.RequestIncomingUpgradeToVideoCall(param0, param1, param2, param3, param4, param5, param6, param7, param8));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestIncomingUpgradeToVideoCall(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                }());
             }
             catch (...)
             {
@@ -11492,7 +12596,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 4);
 
-                return py::convert(self->obj.RequestNewAppInitiatedCall(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewAppInitiatedCall(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -11530,7 +12638,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>(args, 0);
 
-                return py::convert(self->obj.RequestNewAppInitiatedCallWithOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewAppInitiatedCallWithOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -11577,7 +12689,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param8 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 8);
                 auto param9 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 9);
 
-                return py::convert(self->obj.RequestNewIncomingCall(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewIncomingCall(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                }());
             }
             catch (...)
             {
@@ -11625,7 +12741,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param9 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 9);
                 auto param10 = py::convert_to<winrt::hstring>(args, 10);
 
-                return py::convert(self->obj.RequestNewIncomingCall(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewIncomingCall(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+                }());
             }
             catch (...)
             {
@@ -11663,7 +12783,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>(args, 0);
 
-                return py::convert(self->obj.RequestNewIncomingCallWithOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewIncomingCallWithOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -11704,7 +12828,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 3);
 
-                return py::convert(self->obj.RequestNewOutgoingCall(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewOutgoingCall(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -11742,7 +12870,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>(args, 0);
 
-                return py::convert(self->obj.RequestNewOutgoingCallWithOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestNewOutgoingCallWithOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -11783,7 +12915,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.RequestOutgoingUpgradeToVideoCall(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestOutgoingUpgradeToVideoCall(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -11821,7 +12957,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ReserveCallResourcesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReserveCallResourcesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -11857,7 +12997,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReserveCallResourcesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReserveCallResourcesAsync();
+                }());
             }
             catch (...)
             {
@@ -11899,7 +13043,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 4);
 
-                return py::convert(self->obj.SetupNewAcceptedCall(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetupNewAcceptedCall(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -11937,7 +13085,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>(args, 0);
 
-                return py::convert(self->obj.SetupNewAcceptedCallWithOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetupNewAcceptedCallWithOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -11975,7 +13127,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.TerminateCellularCall(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TerminateCellularCall(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12010,7 +13166,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator, winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>>(arg);
 
-            return py::convert(self->obj.MuteStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MuteStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -12038,7 +13198,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MuteStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MuteStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12184,7 +13348,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddAssociatedCallControlDevice(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddAssociatedCallControlDevice(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12221,7 +13389,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAssociatedCallControlDevices());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAssociatedCallControlDevices();
+                }());
             }
             catch (...)
             {
@@ -12259,7 +13431,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 0);
 
-                self->obj.NotifyCallAccepted(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallAccepted(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12296,7 +13472,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyCallActive();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallActive();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12335,7 +13515,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                self->obj.NotifyCallActive(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallActive(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12372,7 +13556,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyCallEnded();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallEnded();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12409,7 +13597,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyCallHeld();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallHeld();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12446,7 +13638,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.NotifyCallReady();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyCallReady();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12485,7 +13681,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveAssociatedCallControlDevice(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAssociatedCallControlDevice(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12524,7 +13724,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                self->obj.SetAssociatedCallControlDevices(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAssociatedCallControlDevices(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12561,7 +13765,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                     return nullptr;
                 }
 
-                self->obj.TryShowAppUI();
+                {
+                    auto _gil = release_gil();
+                    self->obj.TryShowAppUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12594,7 +13802,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -12628,7 +13840,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.StartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12655,7 +13871,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -12689,7 +13909,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContactName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContactName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12716,7 +13940,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallMedia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallMedia();
+            }());
         }
         catch (...)
         {
@@ -12750,7 +13978,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
 
-            self->obj.CallMedia(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallMedia(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12777,7 +14009,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUsingAssociatedDevicesList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUsingAssociatedDevicesList();
+            }());
         }
         catch (...)
         {
@@ -12805,7 +14041,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>>(arg);
 
-            return py::convert(self->obj.AnswerRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AnswerRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -12833,7 +14073,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AnswerRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AnswerRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12862,7 +14106,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>>(arg);
 
-            return py::convert(self->obj.EndRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -12890,7 +14138,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EndRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12919,7 +14171,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>>(arg);
 
-            return py::convert(self->obj.HoldRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -12947,7 +14203,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HoldRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12976,7 +14236,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>>(arg);
 
-            return py::convert(self->obj.RejectRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RejectRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -13004,7 +14268,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RejectRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RejectRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13033,7 +14301,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>>(arg);
 
-            return py::convert(self->obj.ResumeRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResumeRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -13061,7 +14333,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ResumeRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResumeRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

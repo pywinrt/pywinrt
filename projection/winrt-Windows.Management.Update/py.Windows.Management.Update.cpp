@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentState());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentState();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Update::PreviewBuildsManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::PreviewBuildsManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Update::PreviewBuildsManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::PreviewBuildsManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -150,7 +162,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SyncAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SyncAsync();
+                }());
             }
             catch (...)
             {
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ArePreviewBuildsAllowed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ArePreviewBuildsAllowed();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ArePreviewBuildsAllowed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ArePreviewBuildsAllowed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -339,7 +363,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -436,7 +464,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                self->obj.AcceptEula();
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptEula();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -475,7 +507,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetPropertyValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertyValue(param0);
+                }());
             }
             catch (...)
             {
@@ -507,7 +543,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActionProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionProgress();
+            }());
         }
         catch (...)
         {
@@ -533,7 +573,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActionResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionResult();
+            }());
         }
         catch (...)
         {
@@ -559,7 +603,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttentionRequiredInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttentionRequiredInfo();
+            }());
         }
         catch (...)
         {
@@ -585,7 +633,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentAction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentAction();
+            }());
         }
         catch (...)
         {
@@ -611,7 +663,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -637,7 +693,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -663,7 +723,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.EulaText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EulaText();
+            }());
         }
         catch (...)
         {
@@ -689,7 +753,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCritical());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCritical();
+            }());
         }
         catch (...)
         {
@@ -715,7 +783,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDriver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDriver();
+            }());
         }
         catch (...)
         {
@@ -741,7 +813,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEulaAccepted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEulaAccepted();
+            }());
         }
         catch (...)
         {
@@ -767,7 +843,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFeatureUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFeatureUpdate();
+            }());
         }
         catch (...)
         {
@@ -793,7 +873,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsForOS());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsForOS();
+            }());
         }
         catch (...)
         {
@@ -819,7 +903,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMandatory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMandatory();
+            }());
         }
         catch (...)
         {
@@ -845,7 +933,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMinorImpact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMinorImpact();
+            }());
         }
         catch (...)
         {
@@ -871,7 +963,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSecurity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSecurity();
+            }());
         }
         catch (...)
         {
@@ -897,7 +993,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSeeker());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSeeker();
+            }());
         }
         catch (...)
         {
@@ -923,7 +1023,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUrgent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUrgent();
+            }());
         }
         catch (...)
         {
@@ -949,7 +1053,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.MoreInfoUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MoreInfoUrl();
+            }());
         }
         catch (...)
         {
@@ -975,7 +1083,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -1001,7 +1113,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportUrl();
+            }());
         }
         catch (...)
         {
@@ -1027,7 +1143,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -1053,7 +1173,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateId();
+            }());
         }
         catch (...)
         {
@@ -1169,7 +1293,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -1195,7 +1323,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1221,7 +1353,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -1247,7 +1383,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Update());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Update();
+            }());
         }
         catch (...)
         {
@@ -1343,7 +1483,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -1369,7 +1513,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -1463,7 +1611,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -1489,7 +1641,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1515,7 +1671,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -1541,7 +1701,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1644,7 +1808,11 @@ namespace py::cpp::Windows::Management::Update
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateApprovalData>(args, 1);
 
-                self->obj.ApproveWindowsUpdate(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ApproveWindowsUpdate(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1684,7 +1852,11 @@ namespace py::cpp::Windows::Management::Update
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.ApproveWindowsUpdateAction(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ApproveWindowsUpdateAction(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1723,7 +1895,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Management::Update::WindowsUpdateAdministrator::CancelRestartRequest(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Management::Update::WindowsUpdateAdministrator::CancelRestartRequest(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1762,7 +1938,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministrator(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministrator(param0);
+                }());
             }
             catch (...)
             {
@@ -1798,7 +1978,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministratorName());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministratorName();
+                }());
             }
             catch (...)
             {
@@ -1834,7 +2018,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUpdates());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUpdates();
+                }());
             }
             catch (...)
             {
@@ -1873,7 +2061,11 @@ namespace py::cpp::Windows::Management::Update
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions>(args, 1);
 
-                return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::RegisterForAdministration(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::WindowsUpdateAdministrator::RegisterForAdministration(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1911,7 +2103,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>(args, 0);
 
-                return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::RequestRestart(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::WindowsUpdateAdministrator::RequestRestart(param0);
+                }());
             }
             catch (...)
             {
@@ -1950,7 +2146,11 @@ namespace py::cpp::Windows::Management::Update
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.RevokeWindowsUpdateActionApproval(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RevokeWindowsUpdateActionApproval(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1989,7 +2189,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RevokeWindowsUpdateApproval(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RevokeWindowsUpdateApproval(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2026,7 +2230,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                self->obj.StartAdministratorScan();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartAdministratorScan();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2065,7 +2273,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::UnregisterForAdministration(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Update::WindowsUpdateAdministrator::UnregisterForAdministration(param0);
+                }());
             }
             catch (...)
             {
@@ -2222,7 +2434,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Seeker());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Seeker();
+            }());
         }
         catch (...)
         {
@@ -2256,7 +2472,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.Seeker(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Seeker(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2283,7 +2503,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptOutOfAutoReboot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptOutOfAutoReboot();
+            }());
         }
         catch (...)
         {
@@ -2317,7 +2541,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.OptOutOfAutoReboot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OptOutOfAutoReboot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2344,7 +2572,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ComplianceGracePeriodInDays());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ComplianceGracePeriodInDays();
+            }());
         }
         catch (...)
         {
@@ -2378,7 +2610,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.ComplianceGracePeriodInDays(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ComplianceGracePeriodInDays(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2405,7 +2641,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ComplianceDeadlineInDays());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ComplianceDeadlineInDays();
+            }());
         }
         catch (...)
         {
@@ -2439,7 +2679,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.ComplianceDeadlineInDays(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ComplianceDeadlineInDays(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2466,7 +2710,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowDownloadOnMetered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowDownloadOnMetered();
+            }());
         }
         catch (...)
         {
@@ -2500,7 +2748,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.AllowDownloadOnMetered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowDownloadOnMetered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2598,7 +2850,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -2624,7 +2880,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2718,7 +2978,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -2744,7 +3008,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Update());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Update();
+            }());
         }
         catch (...)
         {
@@ -2838,7 +3106,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Administrator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Administrator();
+            }());
         }
         catch (...)
         {
@@ -2864,7 +3136,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2958,7 +3234,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -2984,7 +3264,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3010,7 +3294,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.MoreInfoUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MoreInfoUrl();
+            }());
         }
         catch (...)
         {
@@ -3036,7 +3324,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Operation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Operation();
+            }());
         }
         catch (...)
         {
@@ -3062,7 +3354,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -3088,7 +3384,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3114,7 +3414,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -3140,7 +3444,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateId();
+            }());
         }
         catch (...)
         {
@@ -3268,7 +3576,11 @@ namespace py::cpp::Windows::Management::Update
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetApplicableUpdates());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetApplicableUpdates();
+                }());
             }
             catch (...)
             {
@@ -3306,7 +3618,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetMostRecentCompletedUpdates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMostRecentCompletedUpdates(param0);
+                }());
             }
             catch (...)
             {
@@ -3344,7 +3660,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetMostRecentCompletedUpdatesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMostRecentCompletedUpdatesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3382,7 +3702,11 @@ namespace py::cpp::Windows::Management::Update
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.StartScan(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartScan(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3415,7 +3739,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsScanning());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScanning();
+            }());
         }
         catch (...)
         {
@@ -3441,7 +3769,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWorking());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWorking();
+            }());
         }
         catch (...)
         {
@@ -3467,7 +3799,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastSuccessfulScanTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastSuccessfulScanTimestamp();
+            }());
         }
         catch (...)
         {
@@ -3495,7 +3831,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ActionCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -3523,7 +3863,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ActionCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActionCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3552,7 +3896,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AttentionRequiredReasonChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttentionRequiredReasonChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3580,7 +3928,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AttentionRequiredReasonChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AttentionRequiredReasonChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3609,7 +3961,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ProgressChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProgressChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3637,7 +3993,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProgressChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProgressChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3666,7 +4026,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ScanCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScanCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -3694,7 +4058,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScanCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScanCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3723,7 +4091,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ScanningStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScanningStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3751,7 +4123,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScanningStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScanningStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3780,7 +4156,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.WorkingStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkingStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3808,7 +4188,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WorkingStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WorkingStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3920,7 +4304,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActionProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActionProgress();
+            }());
         }
         catch (...)
         {
@@ -3946,7 +4334,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Update());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Update();
+            }());
         }
         catch (...)
         {
@@ -4081,7 +4473,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -4115,7 +4511,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4142,7 +4542,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrganizationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrganizationName();
+            }());
         }
         catch (...)
         {
@@ -4176,7 +4580,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.OrganizationName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OrganizationName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4203,7 +4611,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptOutOfAutoReboot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptOutOfAutoReboot();
+            }());
         }
         catch (...)
         {
@@ -4237,7 +4649,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.OptOutOfAutoReboot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OptOutOfAutoReboot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4264,7 +4680,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.MoreInfoUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MoreInfoUrl();
+            }());
         }
         catch (...)
         {
@@ -4298,7 +4718,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.MoreInfoUrl(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MoreInfoUrl(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4325,7 +4749,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -4359,7 +4787,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4386,7 +4818,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ComplianceGracePeriodInDays());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ComplianceGracePeriodInDays();
+            }());
         }
         catch (...)
         {
@@ -4420,7 +4856,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ComplianceGracePeriodInDays(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ComplianceGracePeriodInDays(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4447,7 +4887,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ComplianceDeadlineInDays());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ComplianceDeadlineInDays();
+            }());
         }
         catch (...)
         {
@@ -4481,7 +4925,11 @@ namespace py::cpp::Windows::Management::Update
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ComplianceDeadlineInDays(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ComplianceDeadlineInDays(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4581,7 +5029,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -4607,7 +5059,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -4633,7 +5089,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -4659,7 +5119,11 @@ namespace py::cpp::Windows::Management::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Updates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updates();
+            }());
         }
         catch (...)
         {

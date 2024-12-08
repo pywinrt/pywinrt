@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.AcquirePin(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcquirePin(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.DisablePin(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisablePin(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -122,7 +130,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.EnablePin(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnablePin(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -161,7 +173,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.ReleasePin(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReleasePin(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -200,7 +216,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.SetDesiredFrequency(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDesiredFrequency(param0);
+                }());
             }
             catch (...)
             {
@@ -240,7 +260,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetPulseParameters(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPulseParameters(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -273,7 +297,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualFrequency();
+            }());
         }
         catch (...)
         {
@@ -299,7 +327,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxFrequency();
+            }());
         }
         catch (...)
         {
@@ -325,7 +357,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinFrequency();
+            }());
         }
         catch (...)
         {
@@ -351,7 +387,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinCount();
+            }());
         }
         catch (...)
         {
@@ -799,7 +839,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetControllers());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetControllers();
+                }());
             }
             catch (...)
             {

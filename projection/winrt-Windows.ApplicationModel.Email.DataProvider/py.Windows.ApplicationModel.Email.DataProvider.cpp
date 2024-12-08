@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -77,7 +81,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.CreateFolderRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CreateFolderRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -105,7 +113,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CreateFolderRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CreateFolderRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -134,7 +146,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.DeleteFolderRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeleteFolderRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -162,7 +178,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeleteFolderRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeleteFolderRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -191,7 +211,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadAttachmentRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadAttachmentRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -219,7 +243,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadAttachmentRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadAttachmentRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -248,7 +276,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadMessageRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadMessageRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -276,7 +308,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadMessageRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadMessageRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -305,7 +341,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.EmptyFolderRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmptyFolderRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -333,7 +373,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EmptyFolderRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EmptyFolderRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -362,7 +406,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ForwardMeetingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardMeetingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -390,7 +438,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ForwardMeetingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForwardMeetingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -419,7 +471,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.GetAutoReplySettingsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GetAutoReplySettingsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -447,7 +503,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GetAutoReplySettingsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GetAutoReplySettingsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -476,7 +536,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.MailboxSyncRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MailboxSyncRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -504,7 +568,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MailboxSyncRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MailboxSyncRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -533,7 +601,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.MoveFolderRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MoveFolderRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -561,7 +633,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MoveFolderRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MoveFolderRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -590,7 +666,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ProposeNewTimeForMeetingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProposeNewTimeForMeetingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -618,7 +698,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProposeNewTimeForMeetingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProposeNewTimeForMeetingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -647,7 +731,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ResolveRecipientsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolveRecipientsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -675,7 +763,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ResolveRecipientsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResolveRecipientsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -704,7 +796,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerSearchReadBatchRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerSearchReadBatchRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -732,7 +828,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerSearchReadBatchRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerSearchReadBatchRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -761,7 +861,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.SetAutoReplySettingsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SetAutoReplySettingsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -789,7 +893,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SetAutoReplySettingsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SetAutoReplySettingsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -818,7 +926,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.UpdateMeetingResponseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateMeetingResponseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -846,7 +958,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UpdateMeetingResponseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdateMeetingResponseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -875,7 +991,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ValidateCertificatesRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidateCertificatesRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -903,7 +1023,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValidateCertificatesRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValidateCertificatesRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1027,7 +1151,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -1126,7 +1254,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFolder>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1164,7 +1296,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1196,7 +1332,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -1222,7 +1362,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1248,7 +1392,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentFolderId();
+            }());
         }
         catch (...)
         {
@@ -1349,7 +1497,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1381,7 +1533,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1479,7 +1635,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1517,7 +1677,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1549,7 +1713,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailFolderId();
+            }());
         }
         catch (...)
         {
@@ -1575,7 +1743,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -1675,7 +1847,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1707,7 +1883,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1805,7 +1985,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1841,7 +2025,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1873,7 +2061,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailAttachmentId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailAttachmentId();
+            }());
         }
         catch (...)
         {
@@ -1899,7 +2091,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -1925,7 +2121,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessageId();
+            }());
         }
         catch (...)
         {
@@ -2026,7 +2226,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2058,7 +2262,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2156,7 +2364,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -2192,7 +2404,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -2224,7 +2440,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -2250,7 +2470,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessageId();
+            }());
         }
         catch (...)
         {
@@ -2350,7 +2574,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2382,7 +2610,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2480,7 +2712,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -2518,7 +2754,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2550,7 +2790,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailFolderId();
+            }());
         }
         catch (...)
         {
@@ -2576,7 +2820,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -2676,7 +2924,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2708,7 +2960,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2806,7 +3062,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -2842,7 +3102,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -2874,7 +3138,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -2900,7 +3168,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -2926,7 +3198,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessageId();
+            }());
         }
         catch (...)
         {
@@ -2952,7 +3228,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForwardHeader());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardHeader();
+            }());
         }
         catch (...)
         {
@@ -2978,7 +3258,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForwardHeaderType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardHeaderType();
+            }());
         }
         catch (...)
         {
@@ -3004,7 +3288,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recipients());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recipients();
+            }());
         }
         catch (...)
         {
@@ -3030,7 +3318,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -3135,7 +3427,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3167,7 +3463,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3267,7 +3567,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3303,7 +3607,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -3335,7 +3643,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -3361,7 +3673,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedFormat();
+            }());
         }
         catch (...)
         {
@@ -3461,7 +3777,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3493,7 +3813,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3591,7 +3915,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -3627,7 +3955,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -3659,7 +3991,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailFolderId();
+            }());
         }
         catch (...)
         {
@@ -3685,7 +4021,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -3711,7 +4051,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewFolderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewFolderName();
+            }());
         }
         catch (...)
         {
@@ -3737,7 +4081,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewParentFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewParentFolderId();
+            }());
         }
         catch (...)
         {
@@ -3839,7 +4187,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3871,7 +4223,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3969,7 +4325,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -4005,7 +4365,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -4037,7 +4401,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -4063,7 +4431,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -4089,7 +4461,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessageId();
+            }());
         }
         catch (...)
         {
@@ -4115,7 +4491,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewDuration();
+            }());
         }
         catch (...)
         {
@@ -4141,7 +4521,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewStartTime();
+            }());
         }
         catch (...)
         {
@@ -4167,7 +4551,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -4271,7 +4659,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4303,7 +4695,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -4403,7 +4799,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4439,7 +4839,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -4471,7 +4875,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -4497,7 +4905,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recipients());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recipients();
+            }());
         }
         catch (...)
         {
@@ -4597,7 +5009,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4629,7 +5045,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -4727,7 +5147,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -4765,7 +5189,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailBatchStatus>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4803,7 +5231,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
-                return py::convert(self->obj.SaveMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4835,7 +5267,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailFolderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailFolderId();
+            }());
         }
         catch (...)
         {
@@ -4861,7 +5297,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -4887,7 +5327,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -4913,7 +5357,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -4939,7 +5387,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedBatchSize();
+            }());
         }
         catch (...)
         {
@@ -5043,7 +5495,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -5075,7 +5531,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -5173,7 +5633,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -5209,7 +5673,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -5241,7 +5709,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoReplySettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoReplySettings();
+            }());
         }
         catch (...)
         {
@@ -5267,7 +5739,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -5367,7 +5843,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -5399,7 +5879,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -5497,7 +5981,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -5533,7 +6021,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -5565,7 +6057,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -5664,7 +6160,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -5696,7 +6196,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -5794,7 +6298,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -5830,7 +6338,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -5862,7 +6374,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -5888,7 +6404,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -5914,7 +6434,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessageId();
+            }());
         }
         catch (...)
         {
@@ -5940,7 +6464,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -5966,7 +6494,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SendUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SendUpdate();
+            }());
         }
         catch (...)
         {
@@ -5992,7 +6524,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -6096,7 +6632,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -6128,7 +6668,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -6228,7 +6772,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6264,7 +6812,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -6296,7 +6848,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Certificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Certificates();
+            }());
         }
         catch (...)
         {
@@ -6322,7 +6878,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMailboxId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMailboxId();
+            }());
         }
         catch (...)
         {
@@ -6422,7 +6982,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -6454,7 +7018,11 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

@@ -67,7 +67,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -107,7 +111,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -119,6 +127,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -151,7 +160,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -275,7 +288,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -315,7 +332,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -327,6 +348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -359,7 +381,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -483,7 +509,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -523,7 +553,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -535,6 +569,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -567,7 +602,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -691,7 +730,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -731,7 +774,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -743,6 +790,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -775,7 +823,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -899,7 +951,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -939,7 +995,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -951,6 +1011,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -983,7 +1044,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -1107,7 +1172,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1147,7 +1216,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1159,6 +1232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1191,7 +1265,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -1315,7 +1393,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1355,7 +1437,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1367,6 +1453,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1399,7 +1486,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -1523,7 +1614,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1563,7 +1658,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
-                auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateAnimatedVisual(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1575,6 +1674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1607,7 +1707,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {

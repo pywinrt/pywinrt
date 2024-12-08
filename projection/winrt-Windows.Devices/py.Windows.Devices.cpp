@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdcControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdcControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -92,7 +96,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.GpioControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GpioControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.I2cControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.I2cControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -144,7 +156,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.PwmControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PwmControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -170,7 +186,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpiControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpiControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -267,7 +287,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider();
+            }());
         }
         catch (...)
         {
@@ -301,7 +325,11 @@ namespace py::cpp::Windows::Devices
 
             auto param0 = py::convert_to<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>(arg);
 
-            winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -420,7 +448,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdcControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdcControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -446,7 +478,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.GpioControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GpioControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -472,7 +508,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.I2cControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.I2cControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -498,7 +538,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.PwmControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PwmControllerProvider();
+            }());
         }
         catch (...)
         {
@@ -524,7 +568,11 @@ namespace py::cpp::Windows::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpiControllerProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpiControllerProvider();
+            }());
         }
         catch (...)
         {

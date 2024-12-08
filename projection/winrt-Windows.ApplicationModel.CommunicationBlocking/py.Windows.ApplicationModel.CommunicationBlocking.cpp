@@ -36,7 +36,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockedNumberAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockedNumberAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockNumbersUI(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockNumbersUI(param0);
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedCallsUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedCallsUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -147,7 +159,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedMessagesUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedMessagesUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -186,7 +202,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowUnblockNumbersUI(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowUnblockNumbersUI(param0);
+                }());
             }
             catch (...)
             {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockingActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockingActive();
+            }());
         }
         catch (...)
         {
@@ -310,7 +334,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync();
+                }());
             }
             catch (...)
             {
@@ -346,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -379,7 +411,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::IsCurrentAppActiveBlockingApp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::IsCurrentAppActiveBlockingApp();
+            }());
         }
         catch (...)
         {

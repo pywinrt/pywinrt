@@ -38,7 +38,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Center();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Extents());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Extents();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Max());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Max();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Min());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Min();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -239,7 +259,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::SceneComponent>().ComponentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::SceneComponent>().ComponentType();
+            }());
         }
         catch (...)
         {
@@ -363,7 +387,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -400,7 +428,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -437,7 +469,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -475,7 +511,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -514,7 +554,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Composition::Scenes::SceneComponent, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -550,7 +594,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -589,7 +637,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -601,6 +653,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -640,7 +693,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -679,7 +736,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -716,7 +777,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -755,7 +820,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Composition::Scenes::SceneComponent, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -795,7 +864,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -828,7 +901,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -865,7 +942,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -878,6 +959,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -891,7 +973,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -930,7 +1016,12 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -943,7 +1034,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             winrt::com_array<winrt::Windows::UI::Composition::Scenes::SceneComponent> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Composition::Scenes::SceneComponent>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -966,11 +1061,16 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(value));
+                auto _value = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -1247,7 +1347,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneMesh::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneMesh::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -1287,7 +1391,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::MemoryBuffer>(args, 2);
 
-                self->obj.FillMeshAttribute(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.FillMeshAttribute(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1320,7 +1428,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimitiveTopology());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimitiveTopology();
+            }());
         }
         catch (...)
         {
@@ -1354,7 +1466,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPrimitiveTopology>(arg);
 
-            self->obj.PrimitiveTopology(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrimitiveTopology(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1381,7 +1497,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bounds();
+            }());
         }
         catch (...)
         {
@@ -1506,7 +1626,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1543,7 +1667,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1579,7 +1707,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -1617,7 +1749,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1656,7 +1792,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1694,7 +1834,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -1732,7 +1876,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1765,7 +1913,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1802,7 +1954,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -1822,7 +1978,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1835,6 +1995,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1849,12 +2010,22 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1880,7 +2051,12 @@ namespace py::cpp::Windows::UI::Composition::Scenes
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -1888,7 +2064,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic>(value));
+            auto _value = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -1977,7 +2157,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -2009,7 +2193,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mesh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mesh();
+            }());
         }
         catch (...)
         {
@@ -2043,7 +2231,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMesh>(arg);
 
-            self->obj.Mesh(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mesh(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2070,7 +2262,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Material());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Material();
+            }());
         }
         catch (...)
         {
@@ -2104,7 +2300,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterial>(arg);
 
-            self->obj.Material(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Material(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2131,7 +2331,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.UVMappings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UVMappings();
+            }());
         }
         catch (...)
         {
@@ -2258,7 +2462,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -2290,7 +2498,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoughnessFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoughnessFactor();
+            }());
         }
         catch (...)
         {
@@ -2324,7 +2536,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RoughnessFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoughnessFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2351,7 +2567,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.MetallicRoughnessInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MetallicRoughnessInput();
+            }());
         }
         catch (...)
         {
@@ -2385,7 +2605,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.MetallicRoughnessInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MetallicRoughnessInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2412,7 +2636,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.MetallicFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MetallicFactor();
+            }());
         }
         catch (...)
         {
@@ -2446,7 +2674,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.MetallicFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MetallicFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2473,7 +2705,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseColorInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseColorInput();
+            }());
         }
         catch (...)
         {
@@ -2507,7 +2743,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.BaseColorInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseColorInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2534,7 +2774,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseColorFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseColorFactor();
+            }());
         }
         catch (...)
         {
@@ -2568,7 +2812,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
 
-            self->obj.BaseColorFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseColorFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2692,7 +2940,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Translation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Translation();
+            }());
         }
         catch (...)
         {
@@ -2726,7 +2978,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Translation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Translation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2753,7 +3009,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scale();
+            }());
         }
         catch (...)
         {
@@ -2787,7 +3047,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Scale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Scale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2814,7 +3078,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAxis());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationAxis();
+            }());
         }
         catch (...)
         {
@@ -2848,7 +3116,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.RotationAxis(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationAxis(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2875,7 +3147,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationAngleInDegrees();
+            }());
         }
         catch (...)
         {
@@ -2909,7 +3185,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngleInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationAngleInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2936,7 +3216,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationAngle();
+            }());
         }
         catch (...)
         {
@@ -2970,7 +3254,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationAngle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2997,7 +3285,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -3031,7 +3323,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3136,7 +3432,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneNode::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneNode::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -3174,7 +3474,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponentType>(args, 0);
 
-                return py::convert(self->obj.FindFirstComponentOfType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindFirstComponentOfType(param0);
+                }());
             }
             catch (...)
             {
@@ -3206,7 +3510,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -3232,7 +3540,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Components());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Components();
+            }());
         }
         catch (...)
         {
@@ -3258,7 +3570,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -3284,7 +3600,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Transform();
+            }());
         }
         catch (...)
         {
@@ -3413,7 +3733,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3450,7 +3774,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3487,7 +3815,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3525,7 +3857,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -3564,7 +3900,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Composition::Scenes::SceneNode, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3600,7 +3940,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -3639,7 +3983,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3651,6 +3999,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3690,7 +4039,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3729,7 +4082,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3766,7 +4123,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3805,7 +4166,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Composition::Scenes::SceneNode, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3845,7 +4210,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3878,7 +4247,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3915,7 +4288,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -3928,6 +4305,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3941,7 +4319,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -3980,7 +4362,12 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -3993,7 +4380,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             winrt::com_array<winrt::Windows::UI::Composition::Scenes::SceneNode> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Composition::Scenes::SceneNode>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -4016,11 +4407,16 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(value));
+                auto _value = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -4200,7 +4596,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength();
+            }());
         }
         catch (...)
         {
@@ -4234,7 +4634,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4261,7 +4665,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput();
+            }());
         }
         catch (...)
         {
@@ -4295,7 +4703,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4322,7 +4734,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale();
+            }());
         }
         catch (...)
         {
@@ -4356,7 +4772,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4383,7 +4803,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput();
+            }());
         }
         catch (...)
         {
@@ -4417,7 +4841,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4444,7 +4872,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided();
+            }());
         }
         catch (...)
         {
@@ -4478,7 +4910,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4505,7 +4941,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput();
+            }());
         }
         catch (...)
         {
@@ -4539,7 +4979,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4566,7 +5010,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor();
+            }());
         }
         catch (...)
         {
@@ -4600,7 +5048,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4627,7 +5079,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode();
+            }());
         }
         catch (...)
         {
@@ -4661,7 +5117,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneAlphaMode>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4688,7 +5148,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff();
+            }());
         }
         catch (...)
         {
@@ -4722,7 +5186,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4946,7 +5414,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -4978,7 +5450,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.WrappingVMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WrappingVMode();
+            }());
         }
         catch (...)
         {
@@ -5012,7 +5488,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneWrappingMode>(arg);
 
-            self->obj.WrappingVMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WrappingVMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5039,7 +5519,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.WrappingUMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WrappingUMode();
+            }());
         }
         catch (...)
         {
@@ -5073,7 +5557,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneWrappingMode>(arg);
 
-            self->obj.WrappingUMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WrappingUMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5100,7 +5588,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Surface());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Surface();
+            }());
         }
         catch (...)
         {
@@ -5134,7 +5626,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionSurface>(arg);
 
-            self->obj.Surface(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Surface(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5161,7 +5657,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapInterpolationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapInterpolationMode();
+            }());
         }
         catch (...)
         {
@@ -5195,7 +5695,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode>(arg);
 
-            self->obj.BitmapInterpolationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitmapInterpolationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5324,7 +5828,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Composition::Scenes::SceneVisual::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Composition::Scenes::SceneVisual::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -5356,7 +5864,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Root());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Root();
+            }());
         }
         catch (...)
         {
@@ -5390,7 +5902,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(arg);
 
-            self->obj.Root(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Root(param0);
+            }
+
             return 0;
         }
         catch (...)

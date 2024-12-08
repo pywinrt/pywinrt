@@ -60,7 +60,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCurrentAppBroadcasting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCurrentAppBroadcasting();
+            }());
         }
         catch (...)
         {
@@ -88,7 +92,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsCurrentAppBroadcastingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCurrentAppBroadcastingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsCurrentAppBroadcastingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCurrentAppBroadcastingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -212,7 +224,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanStartBroadcast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanStartBroadcast();
+            }());
         }
         catch (...)
         {
@@ -238,7 +254,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -332,7 +352,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAnyAppBroadcasting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAnyAppBroadcasting();
+            }());
         }
         catch (...)
         {
@@ -358,7 +382,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAppInactive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAppInactive();
+            }());
         }
         catch (...)
         {
@@ -384,7 +412,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBlockedForApp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBlockedForApp();
+            }());
         }
         catch (...)
         {
@@ -410,7 +442,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCaptureResourceUnavailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCaptureResourceUnavailable();
+            }());
         }
         catch (...)
         {
@@ -436,7 +472,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDisabledBySystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDisabledBySystem();
+            }());
         }
         catch (...)
         {
@@ -462,7 +502,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDisabledByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDisabledByUser();
+            }());
         }
         catch (...)
         {
@@ -488,7 +532,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGameStreamInProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGameStreamInProgress();
+            }());
         }
         catch (...)
         {
@@ -514,7 +562,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGpuConstrained());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGpuConstrained();
+            }());
         }
         catch (...)
         {
@@ -618,7 +670,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -656,7 +712,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -692,7 +752,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatus();
+                }());
             }
             catch (...)
             {
@@ -728,7 +792,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
                     return nullptr;
                 }
 
-                self->obj.ShowBroadcastUI();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowBroadcastUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

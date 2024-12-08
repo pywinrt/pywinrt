@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -77,7 +81,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerSearchReadBatchRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerSearchReadBatchRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -105,7 +113,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerSearchReadBatchRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerSearchReadBatchRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -134,7 +146,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.SyncRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -162,7 +178,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SyncRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -191,7 +211,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.CreateOrUpdateContactRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CreateOrUpdateContactRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -219,7 +243,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CreateOrUpdateContactRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CreateOrUpdateContactRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -248,7 +276,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.DeleteContactRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeleteContactRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -276,7 +308,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeleteContactRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeleteContactRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -378,7 +414,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -477,7 +517,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -513,7 +557,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -545,7 +593,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -571,7 +623,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactListId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactListId();
+            }());
         }
         catch (...)
         {
@@ -671,7 +727,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -703,7 +763,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -801,7 +865,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -837,7 +905,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -869,7 +941,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactId();
+            }());
         }
         catch (...)
         {
@@ -895,7 +971,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactListId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactListId();
+            }());
         }
         catch (...)
         {
@@ -995,7 +1075,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1027,7 +1111,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1213,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1163,7 +1255,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactBatchStatus>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1201,7 +1297,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
-                return py::convert(self->obj.SaveContactAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveContactAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1233,7 +1333,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactListId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactListId();
+            }());
         }
         catch (...)
         {
@@ -1259,7 +1363,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -1285,7 +1393,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -1311,7 +1423,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedBatchSize();
+            }());
         }
         catch (...)
         {
@@ -1414,7 +1530,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1446,7 +1566,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1544,7 +1668,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1580,7 +1708,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1612,7 +1744,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactListId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactListId();
+            }());
         }
         catch (...)
         {
@@ -1711,7 +1847,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1743,7 +1883,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommunicationConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommunicationConfiguration();
+            }());
         }
         catch (...)
         {
@@ -100,7 +108,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorKind();
+            }());
         }
         catch (...)
         {
@@ -126,7 +138,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -226,7 +242,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -259,7 +279,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.Printer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Printer();
+            }());
         }
         catch (...)
         {
@@ -287,7 +311,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PrintDeviceCapabilitiesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintDeviceCapabilitiesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -315,7 +343,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PrintDeviceCapabilitiesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrintDeviceCapabilitiesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -344,7 +376,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PrintTicketValidationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTicketValidationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -372,7 +408,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PrintTicketValidationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrintTicketValidationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -401,7 +441,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>>(arg);
 
-            return py::convert(self->obj.PrinterSelected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterSelected(param0);
+            }());
         }
         catch (...)
         {
@@ -429,7 +473,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PrinterSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrinterSelected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -458,7 +506,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.CommunicationErrorDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommunicationErrorDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -486,7 +538,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CommunicationErrorDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommunicationErrorDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -589,7 +645,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -682,7 +742,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanModifyTimeouts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanModifyTimeouts();
+            }());
         }
         catch (...)
         {
@@ -708,7 +772,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommunicationKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommunicationKind();
+            }());
         }
         catch (...)
         {
@@ -734,7 +802,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.IppAttributeTimeouts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IppAttributeTimeouts();
+            }());
         }
         catch (...)
         {
@@ -760,7 +832,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.IppJobTimeouts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IppJobTimeouts();
+            }());
         }
         catch (...)
         {
@@ -856,7 +932,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SendTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SendTimeout();
+            }());
         }
         catch (...)
         {
@@ -890,7 +970,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.SendTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SendTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -917,7 +1001,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReceiveTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReceiveTimeout();
+            }());
         }
         catch (...)
         {
@@ -951,7 +1039,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.ReceiveTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReceiveTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -978,7 +1070,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectTimeout();
+            }());
         }
         catch (...)
         {
@@ -1012,7 +1108,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.ConnectTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1108,7 +1208,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1142,7 +1246,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.TextOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1169,7 +1277,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhotographicOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhotographicOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1203,7 +1315,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.PhotographicOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PhotographicOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1230,7 +1346,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1264,7 +1384,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.NormalOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NormalOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1291,7 +1415,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1325,7 +1453,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.HighOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HighOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1352,7 +1484,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.FaxOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FaxOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1386,7 +1522,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.FaxOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FaxOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1413,7 +1553,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.DraftOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DraftOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1447,7 +1591,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.DraftOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DraftOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1474,7 +1622,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomaticOutputQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomaticOutputQuality();
+            }());
         }
         catch (...)
         {
@@ -1508,7 +1660,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
 
-            self->obj.AutomaticOutputQuality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutomaticOutputQuality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1612,7 +1768,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentPrintDeviceCapabilities());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentPrintDeviceCapabilities();
+                }());
             }
             catch (...)
             {
@@ -1648,7 +1808,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentPrintDeviceResources());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentPrintDeviceResources();
+                }());
             }
             catch (...)
             {
@@ -1684,7 +1848,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1722,7 +1890,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>(args, 0);
 
-                self->obj.SetPrintDeviceCapabilitiesUpdatePolicy(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPrintDeviceCapabilitiesUpdatePolicy(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1761,7 +1933,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                self->obj.SetSupportedPdlPassthroughContentTypes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSupportedPdlPassthroughContentTypes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1800,7 +1976,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                self->obj.UpdatePrintDeviceCapabilities(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdatePrintDeviceCapabilities(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1839,7 +2019,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                self->obj.UpdatePrintDeviceResources(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdatePrintDeviceResources(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1872,7 +2056,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceLanguage();
+            }());
         }
         catch (...)
         {
@@ -1898,7 +2086,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommunicationConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommunicationConfiguration();
+            }());
         }
         catch (...)
         {
@@ -1924,7 +2116,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.MxdcImageQualityConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MxdcImageQualityConfiguration();
+            }());
         }
         catch (...)
         {
@@ -2032,7 +2228,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePeriodicRefresh(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePeriodicRefresh(param0);
+                }());
             }
             catch (...)
             {
@@ -2070,7 +2270,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePrintJobRefresh(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePrintJobRefresh(param0);
+                }());
             }
             catch (...)
             {
@@ -2217,7 +2421,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceUri();
+            }());
         }
         catch (...)
         {
@@ -2251,7 +2459,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NamespaceUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NamespaceUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2278,7 +2490,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalName();
+            }());
         }
         catch (...)
         {
@@ -2312,7 +2528,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LocalName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocalName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2411,7 +2631,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2449,7 +2673,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus>(args, 0);
 
-                self->obj.SetPrintTicketValidationStatus(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPrintTicketValidationStatus(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2482,7 +2710,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTicket();
+            }());
         }
         catch (...)
         {
@@ -2581,7 +2813,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2619,7 +2855,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::IAdaptiveCard>(args, 0);
 
-                self->obj.SetAdaptiveCard(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAdaptiveCard(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2658,7 +2898,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>>(args, 0);
 
-                self->obj.SetAdditionalFeatures(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAdditionalFeatures(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2697,7 +2941,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>>(args, 0);
 
-                self->obj.SetAdditionalParameters(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAdditionalParameters(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2730,7 +2978,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTicket();
+            }());
         }
         catch (...)
         {
@@ -2764,7 +3016,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(arg);
 
-            self->obj.PrintTicket(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrintTicket(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2791,7 +3047,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedAdditionalFeaturesAndParametersCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedAdditionalFeaturesAndParametersCount();
+            }());
         }
         catch (...)
         {
@@ -2817,7 +3077,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceAppInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceAppInfo();
+            }());
         }
         catch (...)
         {
@@ -2916,7 +3180,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.Printer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Printer();
+            }());
         }
         catch (...)
         {
@@ -2942,7 +3210,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceAppInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceAppInfo();
+            }());
         }
         catch (...)
         {
@@ -3040,7 +3312,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3072,7 +3348,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3098,7 +3378,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousExecutionState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousExecutionState();
+            }());
         }
         catch (...)
         {
@@ -3124,7 +3408,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SplashScreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SplashScreen();
+            }());
         }
         catch (...)
         {
@@ -3150,7 +3438,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -3176,7 +3468,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -3202,7 +3498,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerWindowId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerWindowId();
+            }());
         }
         catch (...)
         {
@@ -3307,7 +3607,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
 
-                self->obj.UpdatePrintTicket(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdatePrintTicket(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3340,7 +3644,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentTitle();
+            }());
         }
         catch (...)
         {
@@ -3366,7 +3674,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaunchKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchKind();
+            }());
         }
         catch (...)
         {
@@ -3392,7 +3704,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInfo();
+            }());
         }
         catch (...)
         {
@@ -3418,7 +3734,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionPrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionPrintTicket();
+            }());
         }
         catch (...)
         {

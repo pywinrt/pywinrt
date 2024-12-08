@@ -62,7 +62,11 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
 
-            return py::convert(self->obj.SlaveAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SlaveAddress();
+            }());
         }
         catch (...)
         {
@@ -96,7 +100,11 @@ namespace py::cpp::Windows::Devices::I2c
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SlaveAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SlaveAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -123,7 +131,11 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharingMode();
+            }());
         }
         catch (...)
         {
@@ -157,7 +169,11 @@ namespace py::cpp::Windows::Devices::I2c
 
             auto param0 = py::convert_to<winrt::Windows::Devices::I2c::I2cSharingMode>(arg);
 
-            self->obj.SharingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SharingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -184,7 +200,11 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
 
-            return py::convert(self->obj.BusSpeed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BusSpeed();
+            }());
         }
         catch (...)
         {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::Devices::I2c
 
             auto param0 = py::convert_to<winrt::Windows::Devices::I2c::I2cBusSpeed>(arg);
 
-            self->obj.BusSpeed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BusSpeed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -320,7 +344,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::I2c::Provider::II2cProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::I2c::I2cController::GetControllersAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::I2c::I2cController::GetControllersAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -356,7 +384,11 @@ namespace py::cpp::Windows::Devices::I2c
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::I2c::I2cController::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::I2c::I2cController::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -394,7 +426,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::I2c::I2cConnectionSettings>(args, 0);
 
-                return py::convert(self->obj.GetDevice(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDevice(param0);
+                }());
             }
             catch (...)
             {
@@ -524,7 +560,11 @@ namespace py::cpp::Windows::Devices::I2c
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -564,7 +604,11 @@ namespace py::cpp::Windows::Devices::I2c
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::I2c::I2cConnectionSettings>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::I2c::I2cDevice::FromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::I2c::I2cDevice::FromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -600,7 +644,11 @@ namespace py::cpp::Windows::Devices::I2c
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::I2c::I2cDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::I2c::I2cDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -638,7 +686,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::I2c::I2cDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::I2c::I2cDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -676,7 +728,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
-                self->obj.Read(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Read(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -715,7 +771,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
-                return py::convert(self->obj.ReadPartial(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadPartial(param0);
+                }());
             }
             catch (...)
             {
@@ -753,7 +813,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.Write(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Write(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -792,7 +856,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.WritePartial(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WritePartial(param0);
+                }());
             }
             catch (...)
             {
@@ -831,7 +899,11 @@ namespace py::cpp::Windows::Devices::I2c
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
-                self->obj.WriteRead(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.WriteRead(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -871,7 +943,11 @@ namespace py::cpp::Windows::Devices::I2c
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
-                return py::convert(self->obj.WriteReadPartial(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteReadPartial(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -903,7 +979,11 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionSettings();
+            }());
         }
         catch (...)
         {
@@ -929,7 +1009,11 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -971,7 +1055,11 @@ namespace py::cpp::Windows::Devices::I2c
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1086,7 +1174,11 @@ namespace py::cpp::Windows::Devices::I2c
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::I2c::I2cConnectionSettings>(args, 1);
 
-                return py::convert(self->obj.FromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1122,7 +1214,11 @@ namespace py::cpp::Windows::Devices::I2c
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1160,7 +1256,11 @@ namespace py::cpp::Windows::Devices::I2c
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {

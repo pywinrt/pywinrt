@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
                     return nullptr;
                 }
 
-                self->obj.ClearOverridePosition();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearOverridePosition();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -105,7 +109,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::PositionSource>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                return py::convert(self->obj.SetOverridePosition(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetOverridePosition(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -137,7 +145,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOverridden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverridden();
+            }());
         }
         catch (...)
         {
@@ -165,7 +177,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsOverriddenChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverriddenChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -193,7 +209,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsOverriddenChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOverriddenChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

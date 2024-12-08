@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromStreamAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromStreamAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -124,7 +132,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Web::Http::HttpClient>(args, 3);
 
-                return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromStreamAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromStreamAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -162,7 +174,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromUriAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromUriAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -201,7 +217,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpClient>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -237,7 +257,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCorrelatedTimes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCorrelatedTimes();
+                }());
             }
             catch (...)
             {
@@ -275,7 +299,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::IsContentTypeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::IsContentTypeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -307,7 +335,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialBitrate();
+            }());
         }
         catch (...)
         {
@@ -341,7 +373,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.InitialBitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InitialBitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -368,7 +404,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundBitsPerSecondWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundBitsPerSecondWindow();
+            }());
         }
         catch (...)
         {
@@ -402,7 +442,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.InboundBitsPerSecondWindow(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InboundBitsPerSecondWindow(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -429,7 +473,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredMaxBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredMaxBitrate();
+            }());
         }
         catch (...)
         {
@@ -463,7 +511,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.DesiredMaxBitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredMaxBitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -490,7 +542,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredLiveOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredLiveOffset();
+            }());
         }
         catch (...)
         {
@@ -524,7 +580,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DesiredLiveOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredLiveOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -551,7 +611,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredMinBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredMinBitrate();
+            }());
         }
         catch (...)
         {
@@ -585,7 +649,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.DesiredMinBitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredMinBitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -612,7 +680,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentPlaybackBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentPlaybackBitrate();
+            }());
         }
         catch (...)
         {
@@ -638,7 +710,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioOnlyPlayback());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioOnlyPlayback();
+            }());
         }
         catch (...)
         {
@@ -664,7 +740,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundBitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundBitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -690,7 +770,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailableBitrates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailableBitrates();
+            }());
         }
         catch (...)
         {
@@ -716,7 +800,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentDownloadBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentDownloadBitrate();
+            }());
         }
         catch (...)
         {
@@ -742,7 +830,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLive();
+            }());
         }
         catch (...)
         {
@@ -768,7 +860,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdvancedSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvancedSettings();
+            }());
         }
         catch (...)
         {
@@ -794,7 +890,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredSeekableWindowSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredSeekableWindowSize();
+            }());
         }
         catch (...)
         {
@@ -828,7 +928,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.DesiredSeekableWindowSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredSeekableWindowSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -855,7 +959,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Diagnostics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Diagnostics();
+            }());
         }
         catch (...)
         {
@@ -881,7 +989,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSeekableWindowSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSeekableWindowSize();
+            }());
         }
         catch (...)
         {
@@ -907,7 +1019,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinLiveOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinLiveOffset();
+            }());
         }
         catch (...)
         {
@@ -935,7 +1051,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadBitrateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadBitrateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -963,7 +1083,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadBitrateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadBitrateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -992,7 +1116,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -1020,7 +1148,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1049,7 +1181,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadFailed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadFailed(param0);
+            }());
         }
         catch (...)
         {
@@ -1077,7 +1213,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadFailed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadFailed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1106,7 +1246,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1134,7 +1278,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1163,7 +1311,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PlaybackBitrateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackBitrateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1191,7 +1343,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PlaybackBitrateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaybackBitrateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1234,7 +1390,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1363,7 +1523,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredBitrateHeadroomRatio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredBitrateHeadroomRatio();
+            }());
         }
         catch (...)
         {
@@ -1397,7 +1561,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
-            self->obj.DesiredBitrateHeadroomRatio(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredBitrateHeadroomRatio(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1424,7 +1592,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitrateDowngradeTriggerRatio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitrateDowngradeTriggerRatio();
+            }());
         }
         catch (...)
         {
@@ -1458,7 +1630,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
-            self->obj.BitrateDowngradeTriggerRatio(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitrateDowngradeTriggerRatio(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1485,7 +1661,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllSegmentsIndependent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllSegmentsIndependent();
+            }());
         }
         catch (...)
         {
@@ -1519,7 +1699,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllSegmentsIndependent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllSegmentsIndependent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1615,7 +1799,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -1641,7 +1829,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationTimeStamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationTimeStamp();
+            }());
         }
         catch (...)
         {
@@ -1667,7 +1859,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProgramDateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProgramDateTime();
+            }());
         }
         catch (...)
         {
@@ -1762,7 +1958,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.HttpResponseMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HttpResponseMessage();
+            }());
         }
         catch (...)
         {
@@ -1788,7 +1988,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSource();
+            }());
         }
         catch (...)
         {
@@ -1814,7 +2018,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1840,7 +2048,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1936,7 +2148,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bitrate();
+            }());
         }
         catch (...)
         {
@@ -1962,7 +2178,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DiagnosticType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiagnosticType();
+            }());
         }
         catch (...)
         {
@@ -1988,7 +2208,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2014,7 +2238,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -2040,7 +2268,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeLength();
+            }());
         }
         catch (...)
         {
@@ -2066,7 +2298,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeOffset();
+            }());
         }
         catch (...)
         {
@@ -2092,7 +2328,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceType();
+            }());
         }
         catch (...)
         {
@@ -2118,7 +2358,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceUri();
+            }());
         }
         catch (...)
         {
@@ -2144,7 +2388,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.SegmentId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SegmentId();
+            }());
         }
         catch (...)
         {
@@ -2170,7 +2418,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -2196,7 +2448,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceContentType();
+            }());
         }
         catch (...)
         {
@@ -2222,7 +2478,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceDuration();
+            }());
         }
         catch (...)
         {
@@ -2328,7 +2588,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>>(arg);
 
-            return py::convert(self->obj.DiagnosticAvailable(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiagnosticAvailable(param0);
+            }());
         }
         catch (...)
         {
@@ -2356,7 +2620,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DiagnosticAvailable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DiagnosticAvailable(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2451,7 +2719,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewValue();
+            }());
         }
         catch (...)
         {
@@ -2477,7 +2749,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldValue();
+            }());
         }
         catch (...)
         {
@@ -2503,7 +2779,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -2598,7 +2878,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.HttpResponseMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HttpResponseMessage();
+            }());
         }
         catch (...)
         {
@@ -2624,7 +2908,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeLength();
+            }());
         }
         catch (...)
         {
@@ -2650,7 +2938,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeOffset();
+            }());
         }
         catch (...)
         {
@@ -2676,7 +2968,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceType();
+            }());
         }
         catch (...)
         {
@@ -2702,7 +2998,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceUri();
+            }());
         }
         catch (...)
         {
@@ -2728,7 +3028,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2754,7 +3058,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -2780,7 +3088,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Statistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Statistics();
+            }());
         }
         catch (...)
         {
@@ -2806,7 +3118,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceContentType();
+            }());
         }
         catch (...)
         {
@@ -2832,7 +3148,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceDuration();
+            }());
         }
         catch (...)
         {
@@ -2934,7 +3254,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.HttpResponseMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HttpResponseMessage();
+            }());
         }
         catch (...)
         {
@@ -2960,7 +3284,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeLength();
+            }());
         }
         catch (...)
         {
@@ -2986,7 +3314,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeOffset();
+            }());
         }
         catch (...)
         {
@@ -3012,7 +3344,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceType();
+            }());
         }
         catch (...)
         {
@@ -3038,7 +3374,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceUri();
+            }());
         }
         catch (...)
         {
@@ -3064,7 +3404,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3090,7 +3434,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3116,7 +3464,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -3142,7 +3494,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Statistics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Statistics();
+            }());
         }
         catch (...)
         {
@@ -3168,7 +3524,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceContentType();
+            }());
         }
         catch (...)
         {
@@ -3194,7 +3554,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceDuration();
+            }());
         }
         catch (...)
         {
@@ -3301,7 +3665,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3405,7 +3773,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3437,7 +3809,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeLength();
+            }());
         }
         catch (...)
         {
@@ -3463,7 +3839,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeOffset();
+            }());
         }
         catch (...)
         {
@@ -3489,7 +3869,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceType();
+            }());
         }
         catch (...)
         {
@@ -3515,7 +3899,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceUri();
+            }());
         }
         catch (...)
         {
@@ -3541,7 +3929,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Result());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Result();
+            }());
         }
         catch (...)
         {
@@ -3567,7 +3959,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3593,7 +3989,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -3619,7 +4019,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceContentType();
+            }());
         }
         catch (...)
         {
@@ -3645,7 +4049,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceDuration();
+            }());
         }
         catch (...)
         {
@@ -3747,7 +4155,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceUri();
+            }());
         }
         catch (...)
         {
@@ -3781,7 +4193,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ResourceUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResourceUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3808,7 +4224,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -3842,7 +4262,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(arg);
 
-            self->obj.InputStream(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputStream(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3869,7 +4293,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedStatus();
+            }());
         }
         catch (...)
         {
@@ -3903,7 +4331,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ExtendedStatus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExtendedStatus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3930,7 +4362,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -3964,7 +4400,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContentType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3991,7 +4431,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Buffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Buffer();
+            }());
         }
         catch (...)
         {
@@ -4025,7 +4469,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.Buffer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Buffer(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4052,7 +4500,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeOffset();
+            }());
         }
         catch (...)
         {
@@ -4086,7 +4538,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
-            self->obj.ResourceByteRangeOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResourceByteRangeOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4113,7 +4569,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceByteRangeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceByteRangeLength();
+            }());
         }
         catch (...)
         {
@@ -4147,7 +4607,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
-            self->obj.ResourceByteRangeLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResourceByteRangeLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4247,7 +4711,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentBytesReceivedCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentBytesReceivedCount();
+            }());
         }
         catch (...)
         {
@@ -4273,7 +4741,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeToFirstByteReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeToFirstByteReceived();
+            }());
         }
         catch (...)
         {
@@ -4299,7 +4771,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeToHeadersReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeToHeadersReceived();
+            }());
         }
         catch (...)
         {
@@ -4325,7 +4801,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeToLastByteReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeToLastByteReceived();
+            }());
         }
         catch (...)
         {
@@ -4421,7 +4901,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioOnly();
+            }());
         }
         catch (...)
         {
@@ -4447,7 +4931,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewValue();
+            }());
         }
         catch (...)
         {
@@ -4473,7 +4961,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldValue();
+            }());
         }
         catch (...)
         {

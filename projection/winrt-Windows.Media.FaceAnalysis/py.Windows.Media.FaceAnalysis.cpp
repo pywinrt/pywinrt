@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.FaceBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FaceBox();
+            }());
         }
         catch (...)
         {
@@ -135,7 +139,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::CreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceDetector::CreateAsync();
+                }());
             }
             catch (...)
             {
@@ -173,7 +181,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(self->obj.DetectFacesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DetectFacesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -212,7 +224,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBounds>(args, 1);
 
-                return py::convert(self->obj.DetectFacesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DetectFacesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -248,7 +264,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::GetSupportedBitmapPixelFormats());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceDetector::GetSupportedBitmapPixelFormats();
+                }());
             }
             catch (...)
             {
@@ -286,7 +306,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::IsBitmapPixelFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceDetector::IsBitmapPixelFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -318,7 +342,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDetectableFaceSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDetectableFaceSize();
+            }());
         }
         catch (...)
         {
@@ -352,7 +380,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
-            self->obj.MinDetectableFaceSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinDetectableFaceSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -379,7 +411,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectableFaceSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectableFaceSize();
+            }());
         }
         catch (...)
         {
@@ -413,7 +449,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
-            self->obj.MaxDetectableFaceSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxDetectableFaceSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -440,7 +480,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::FaceAnalysis::FaceDetector::IsSupported();
+            }());
         }
         catch (...)
         {
@@ -569,7 +613,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::CreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceTracker::CreateAsync();
+                }());
             }
             catch (...)
             {
@@ -605,7 +653,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::GetSupportedBitmapPixelFormats());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceTracker::GetSupportedBitmapPixelFormats();
+                }());
             }
             catch (...)
             {
@@ -643,7 +695,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
-                return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::IsBitmapPixelFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::FaceAnalysis::FaceTracker::IsBitmapPixelFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -681,7 +737,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
-                return py::convert(self->obj.ProcessNextFrameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessNextFrameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -713,7 +773,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDetectableFaceSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDetectableFaceSize();
+            }());
         }
         catch (...)
         {
@@ -747,7 +811,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
-            self->obj.MinDetectableFaceSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinDetectableFaceSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -774,7 +842,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectableFaceSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectableFaceSize();
+            }());
         }
         catch (...)
         {
@@ -808,7 +880,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
-            self->obj.MaxDetectableFaceSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxDetectableFaceSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -835,7 +911,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::FaceAnalysis::FaceTracker::IsSupported();
+            }());
         }
         catch (...)
         {

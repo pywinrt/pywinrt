@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
-                self->obj.Hide(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Hide(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
-                self->obj.ShowMemoryUsage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowMemoryUsage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -123,7 +131,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>(args, 1);
 
-                self->obj.ShowOverdraw(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowOverdraw(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -162,7 +174,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
-                self->obj.ShowRedraw(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowRedraw(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -271,7 +287,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings::TryGetSettings(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings::TryGetSettings(param0);
+                }());
             }
             catch (...)
             {
@@ -303,7 +323,11 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeatMaps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeatMaps();
+            }());
         }
         catch (...)
         {

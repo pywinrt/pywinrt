@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioFilePaths());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioFilePaths();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioNotification();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioText();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOnRoute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOnRoute();
+            }());
         }
         catch (...)
         {
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaneMarkers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaneMarkers();
+            }());
         }
         catch (...)
         {
@@ -305,7 +325,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.DepartureRoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DepartureRoadName();
+            }());
         }
         catch (...)
         {
@@ -331,7 +355,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.DepartureShortRoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DepartureShortRoadName();
+            }());
         }
         catch (...)
         {
@@ -357,7 +385,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceFromPreviousManeuver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceFromPreviousManeuver();
+            }());
         }
         catch (...)
         {
@@ -383,7 +415,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceFromRouteStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceFromRouteStart();
+            }());
         }
         catch (...)
         {
@@ -409,7 +445,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndAngle();
+            }());
         }
         catch (...)
         {
@@ -435,7 +475,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstructionText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstructionText();
+            }());
         }
         catch (...)
         {
@@ -461,7 +505,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -487,7 +535,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextRoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextRoadName();
+            }());
         }
         catch (...)
         {
@@ -513,7 +565,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextShortRoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextShortRoadName();
+            }());
         }
         catch (...)
         {
@@ -539,7 +595,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoadSignpost());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoadSignpost();
+            }());
         }
         catch (...)
         {
@@ -565,7 +625,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartAngle();
+            }());
         }
         catch (...)
         {
@@ -591,7 +655,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartLocation();
+            }());
         }
         catch (...)
         {
@@ -695,7 +763,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentHeading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentHeading();
+            }());
         }
         catch (...)
         {
@@ -721,7 +793,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentSpeed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentSpeed();
+            }());
         }
         catch (...)
         {
@@ -747,7 +823,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOnStreet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOnStreet();
+            }());
         }
         catch (...)
         {
@@ -773,7 +853,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Location();
+            }());
         }
         catch (...)
         {
@@ -799,7 +883,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Road());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Road();
+            }());
         }
         catch (...)
         {
@@ -900,7 +988,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::GetCurrent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::GetCurrent();
+                }());
             }
             catch (...)
             {
@@ -936,7 +1028,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -973,7 +1069,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.RepeatLastAudioNotification();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RepeatLastAudioNotification();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1010,7 +1110,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1050,7 +1154,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetGuidanceVoice(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetGuidanceVoice(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1089,7 +1197,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>(args, 0);
 
-                self->obj.StartNavigating(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartNavigating(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1129,7 +1241,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.StartSimulating(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartSimulating(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1166,7 +1282,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.StartTracking();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartTracking();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1203,7 +1323,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1242,7 +1366,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocoordinate>(args, 0);
 
-                self->obj.UpdateUserLocation(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateUserLocation(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1282,7 +1410,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocoordinate>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 1);
 
-                self->obj.UpdateUserLocation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateUserLocation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1315,7 +1447,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioNotifications());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioNotifications();
+            }());
         }
         catch (...)
         {
@@ -1349,7 +1485,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications>(arg);
 
-            self->obj.AudioNotifications(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioNotifications(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1376,7 +1516,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioMeasurementSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioMeasurementSystem();
+            }());
         }
         catch (...)
         {
@@ -1410,7 +1554,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>(arg);
 
-            self->obj.AudioMeasurementSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioMeasurementSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1437,7 +1585,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGuidanceAudioMuted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGuidanceAudioMuted();
+            }());
         }
         catch (...)
         {
@@ -1471,7 +1623,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGuidanceAudioMuted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGuidanceAudioMuted(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1498,7 +1654,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::UseAppProvidedVoice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::UseAppProvidedVoice();
+            }());
         }
         catch (...)
         {
@@ -1526,7 +1686,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DestinationReached(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DestinationReached(param0);
+            }());
         }
         catch (...)
         {
@@ -1554,7 +1718,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DestinationReached(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DestinationReached(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1583,7 +1751,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.GuidanceUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GuidanceUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -1611,7 +1783,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GuidanceUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GuidanceUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1640,7 +1816,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.RerouteFailed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RerouteFailed(param0);
+            }());
         }
         catch (...)
         {
@@ -1668,7 +1848,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RerouteFailed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RerouteFailed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1697,7 +1881,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>>(arg);
 
-            return py::convert(self->obj.Rerouted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rerouted(param0);
+            }());
         }
         catch (...)
         {
@@ -1725,7 +1913,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Rerouted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rerouted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1754,7 +1946,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Rerouting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rerouting(param0);
+            }());
         }
         catch (...)
         {
@@ -1782,7 +1978,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Rerouting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rerouting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1811,7 +2011,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.UserLocationLost(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserLocationLost(param0);
+            }());
         }
         catch (...)
         {
@@ -1839,7 +2043,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserLocationLost(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserLocationLost(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1868,7 +2076,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.UserLocationRestored(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserLocationRestored(param0);
+            }());
         }
         catch (...)
         {
@@ -1896,7 +2108,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserLocationRestored(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserLocationRestored(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1925,7 +2141,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.AudioNotificationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioNotificationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1953,7 +2173,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioNotificationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioNotificationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2102,7 +2326,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Route());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Route();
+            }());
         }
         catch (...)
         {
@@ -2195,7 +2423,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2221,7 +2453,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHighway());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHighway();
+            }());
         }
         catch (...)
         {
@@ -2247,7 +2483,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTollRoad());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTollRoad();
+            }());
         }
         catch (...)
         {
@@ -2273,7 +2513,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTunnel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTunnel();
+            }());
         }
         catch (...)
         {
@@ -2299,7 +2543,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -2325,7 +2573,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoadName();
+            }());
         }
         catch (...)
         {
@@ -2351,7 +2603,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShortRoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShortRoadName();
+            }());
         }
         catch (...)
         {
@@ -2377,7 +2633,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeedLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpeedLimit();
+            }());
         }
         catch (...)
         {
@@ -2403,7 +2663,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.TravelTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TravelTime();
+            }());
         }
         catch (...)
         {
@@ -2429,7 +2693,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsScenic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScenic();
+            }());
         }
         catch (...)
         {
@@ -2531,7 +2799,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2557,7 +2829,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Exit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exit();
+            }());
         }
         catch (...)
         {
@@ -2583,7 +2859,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExitDirections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExitDirections();
+            }());
         }
         catch (...)
         {
@@ -2609,7 +2889,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExitNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExitNumber();
+            }());
         }
         catch (...)
         {
@@ -2635,7 +2919,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -2738,7 +3026,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceRoute::CanCreateFromMapRoute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::Guidance::GuidanceRoute::CanCreateFromMapRoute(param0);
+                }());
             }
             catch (...)
             {
@@ -2774,7 +3066,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ConvertToMapRoute());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConvertToMapRoute();
+                }());
             }
             catch (...)
             {
@@ -2812,7 +3108,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceRoute::TryCreateFromMapRoute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::Guidance::GuidanceRoute::TryCreateFromMapRoute(param0);
+                }());
             }
             catch (...)
             {
@@ -2844,7 +3144,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingBox();
+            }());
         }
         catch (...)
         {
@@ -2870,7 +3174,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Distance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Distance();
+            }());
         }
         catch (...)
         {
@@ -2896,7 +3204,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -2922,7 +3234,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Maneuvers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Maneuvers();
+            }());
         }
         catch (...)
         {
@@ -2948,7 +3264,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -2974,7 +3294,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoadSegments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoadSegments();
+            }());
         }
         catch (...)
         {
@@ -3104,7 +3428,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                self->obj.ClearLocalData();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearLocalData();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3141,7 +3469,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector::GetCurrent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector::GetCurrent();
+                }());
             }
             catch (...)
             {
@@ -3173,7 +3505,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.UploadFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UploadFrequency();
+            }());
         }
         catch (...)
         {
@@ -3207,7 +3543,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.UploadFrequency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UploadFrequency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3234,7 +3574,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeedTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpeedTrigger();
+            }());
         }
         catch (...)
         {
@@ -3268,7 +3612,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.SpeedTrigger(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpeedTrigger(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3295,7 +3643,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Enabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Enabled();
+            }());
         }
         catch (...)
         {
@@ -3329,7 +3681,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Enabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Enabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3452,7 +3808,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AfterNextManeuver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AfterNextManeuver();
+            }());
         }
         catch (...)
         {
@@ -3478,7 +3838,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.AfterNextManeuverDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AfterNextManeuverDistance();
+            }());
         }
         catch (...)
         {
@@ -3504,7 +3868,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentLocation();
+            }());
         }
         catch (...)
         {
@@ -3530,7 +3898,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceToDestination());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceToDestination();
+            }());
         }
         catch (...)
         {
@@ -3556,7 +3928,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElapsedDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElapsedDistance();
+            }());
         }
         catch (...)
         {
@@ -3582,7 +3958,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElapsedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElapsedTime();
+            }());
         }
         catch (...)
         {
@@ -3608,7 +3988,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNewManeuver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNewManeuver();
+            }());
         }
         catch (...)
         {
@@ -3634,7 +4018,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaneInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaneInfo();
+            }());
         }
         catch (...)
         {
@@ -3660,7 +4048,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
         }
         catch (...)
         {
@@ -3686,7 +4078,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextManeuver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextManeuver();
+            }());
         }
         catch (...)
         {
@@ -3712,7 +4108,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextManeuverDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextManeuverDistance();
+            }());
         }
         catch (...)
         {
@@ -3738,7 +4138,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoadName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoadName();
+            }());
         }
         catch (...)
         {
@@ -3764,7 +4168,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.Route());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Route();
+            }());
         }
         catch (...)
         {
@@ -3790,7 +4198,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeToDestination());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeToDestination();
+            }());
         }
         catch (...)
         {

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -138,7 +142,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::WindowId>(args, 1);
 
-                return py::convert(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo::GetForLaunchUri(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo::GetForLaunchUri(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -176,7 +184,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction>(args, 0);
 
-                self->obj.PerformLocalActionFromRemote(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PerformLocalActionFromRemote(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -215,7 +227,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus>(args, 0);
 
-                self->obj.SetConnectionStatus(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetConnectionStatus(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -252,7 +268,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                     return nullptr;
                 }
 
-                self->obj.SwitchToLocalSession();
+                {
+                    auto _gil = release_gil();
+                    self->obj.SwitchToLocalSession();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -384,7 +404,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -423,7 +447,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo::GetForLaunchUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo::GetForLaunchUri(param0);
+                }());
             }
             catch (...)
             {
@@ -459,7 +487,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo::IsSwitchSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo::IsSwitchSupported();
+                }());
             }
             catch (...)
             {
@@ -495,7 +527,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                     return nullptr;
                 }
 
-                self->obj.ReportSwitched();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportSwitched();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -530,7 +566,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo, winrt::Windows::System::RemoteDesktop::Provider::PerformLocalActionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PerformLocalActionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformLocalActionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -558,7 +598,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PerformLocalActionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PerformLocalActionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -587,7 +631,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SwitchToLocalSessionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SwitchToLocalSessionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -615,7 +663,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SwitchToLocalSessionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SwitchToLocalSessionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -658,7 +710,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -787,7 +843,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -813,7 +873,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -903,7 +967,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar::IsSwitchToLocalSessionEnabled());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar::IsSwitchToLocalSessionEnabled();
+                }());
             }
             catch (...)
             {
@@ -935,7 +1003,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar::DesktopInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar::DesktopInfos();
+            }());
         }
         catch (...)
         {

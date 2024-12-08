@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                self->obj.ClearKnownTransmitters();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearKnownTransmitters();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +107,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
-                return py::convert(self->obj.CreateSession(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSession(param0);
+                }());
             }
             catch (...)
             {
@@ -141,7 +149,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
-                return py::convert(self->obj.CreateSessionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSessionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -179,7 +191,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverSettings>(args, 0);
 
-                return py::convert(self->obj.DisconnectAllAndApplySettings(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DisconnectAllAndApplySettings(param0);
+                }());
             }
             catch (...)
             {
@@ -217,7 +233,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverSettings>(args, 0);
 
-                return py::convert(self->obj.DisconnectAllAndApplySettingsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DisconnectAllAndApplySettingsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -253,7 +273,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentSettings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentSettings();
+                }());
             }
             catch (...)
             {
@@ -289,7 +313,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentSettingsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentSettingsAsync();
+                }());
             }
             catch (...)
             {
@@ -325,7 +353,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDefaultSettings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDefaultSettings();
+                }());
             }
             catch (...)
             {
@@ -361,7 +393,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatus();
+                }());
             }
             catch (...)
             {
@@ -397,7 +433,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatusAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatusAsync();
+                }());
             }
             catch (...)
             {
@@ -435,7 +475,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastTransmitter>(args, 0);
 
-                self->obj.RemoveKnownTransmitter(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveKnownTransmitter(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -470,7 +514,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -498,7 +546,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -604,7 +656,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -630,7 +686,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -728,7 +788,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -767,7 +831,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>(args, 0);
 
-                self->obj.Disconnect(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Disconnect(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -807,7 +875,11 @@ namespace py::cpp::Windows::Media::Miracast
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Disconnect(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Disconnect(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -844,7 +916,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -881,7 +957,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PauseAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PauseAsync();
+                }());
             }
             catch (...)
             {
@@ -917,7 +997,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -954,7 +1038,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ResumeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResumeAsync();
+                }());
             }
             catch (...)
             {
@@ -986,7 +1074,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.CursorImageChannel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CursorImageChannel();
+            }());
         }
         catch (...)
         {
@@ -1012,7 +1104,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputDevices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputDevices();
+            }());
         }
         catch (...)
         {
@@ -1038,7 +1134,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.StreamControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StreamControl();
+            }());
         }
         catch (...)
         {
@@ -1064,7 +1164,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transmitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Transmitter();
+            }());
         }
         catch (...)
         {
@@ -1106,7 +1210,11 @@ namespace py::cpp::Windows::Media::Miracast
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1192,7 +1300,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1224,7 +1336,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -1250,7 +1366,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pin();
+            }());
         }
         catch (...)
         {
@@ -1345,7 +1465,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageStream();
+            }());
         }
         catch (...)
         {
@@ -1371,7 +1495,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1397,7 +1525,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxImageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxImageSize();
+            }());
         }
         catch (...)
         {
@@ -1423,7 +1555,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -1451,7 +1587,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ImageStreamChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageStreamChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1479,7 +1619,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ImageStreamChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ImageStreamChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1508,7 +1652,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.PositionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1536,7 +1684,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PositionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1637,7 +1789,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxImageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxImageSize();
+            }());
         }
         catch (...)
         {
@@ -1671,7 +1827,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
-            self->obj.MaxImageSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxImageSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1698,7 +1858,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1732,7 +1896,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1827,7 +1995,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -1920,7 +2092,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransmitInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransmitInput();
+            }());
         }
         catch (...)
         {
@@ -1954,7 +2130,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.TransmitInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransmitInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1981,7 +2161,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
         }
         catch (...)
         {
@@ -2015,7 +2199,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode>(arg);
 
-            self->obj.Mode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2042,7 +2230,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequestedByTransmitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequestedByTransmitter();
+            }());
         }
         catch (...)
         {
@@ -2068,7 +2260,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTransmittingInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTransmittingInput();
+            }());
         }
         catch (...)
         {
@@ -2096,7 +2292,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -2124,7 +2324,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2223,7 +2427,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.GameController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GameController();
+            }());
         }
         catch (...)
         {
@@ -2249,7 +2457,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Keyboard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Keyboard();
+            }());
         }
         catch (...)
         {
@@ -2343,7 +2555,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransmitInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransmitInput();
+            }());
         }
         catch (...)
         {
@@ -2377,7 +2593,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.TransmitInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransmitInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2404,7 +2624,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequestedByTransmitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequestedByTransmitter();
+            }());
         }
         catch (...)
         {
@@ -2430,7 +2654,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTransmittingInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTransmittingInput();
+            }());
         }
         catch (...)
         {
@@ -2458,7 +2686,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -2486,7 +2718,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2588,7 +2824,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2620,7 +2860,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -2646,7 +2890,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.CursorImageChannelSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CursorImageChannelSettings();
+            }());
         }
         catch (...)
         {
@@ -2672,7 +2920,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSource();
+            }());
         }
         catch (...)
         {
@@ -2772,7 +3024,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2809,7 +3065,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Start());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Start();
+                }());
             }
             catch (...)
             {
@@ -2845,7 +3105,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -2877,7 +3141,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSimultaneousConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSimultaneousConnections();
+            }());
         }
         catch (...)
         {
@@ -2911,7 +3179,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaxSimultaneousConnections(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxSimultaneousConnections(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2938,7 +3210,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowConnectionTakeover());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowConnectionTakeover();
+            }());
         }
         catch (...)
         {
@@ -2972,7 +3248,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowConnectionTakeover(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowConnectionTakeover(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3001,7 +3281,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>>(arg);
 
-            return py::convert(self->obj.ConnectionCreated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionCreated(param0);
+            }());
         }
         catch (...)
         {
@@ -3029,7 +3313,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionCreated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionCreated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3058,7 +3346,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>>(arg);
 
-            return py::convert(self->obj.Disconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Disconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -3086,7 +3378,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Disconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Disconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3115,7 +3411,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>>(arg);
 
-            return py::convert(self->obj.MediaSourceCreated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSourceCreated(param0);
+            }());
         }
         catch (...)
         {
@@ -3143,7 +3443,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MediaSourceCreated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaSourceCreated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3186,7 +3490,11 @@ namespace py::cpp::Windows::Media::Miracast
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3268,7 +3576,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3294,7 +3606,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3388,7 +3704,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequireAuthorizationFromKnownTransmitters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequireAuthorizationFromKnownTransmitters();
+            }());
         }
         catch (...)
         {
@@ -3422,7 +3742,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequireAuthorizationFromKnownTransmitters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequireAuthorizationFromKnownTransmitters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3449,7 +3773,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelNumber();
+            }());
         }
         catch (...)
         {
@@ -3483,7 +3811,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ModelNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ModelNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3510,7 +3842,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelName();
+            }());
         }
         catch (...)
         {
@@ -3544,7 +3880,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ModelName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ModelName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3571,7 +3911,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -3605,7 +3949,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3632,7 +3980,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthorizationMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthorizationMethod();
+            }());
         }
         catch (...)
         {
@@ -3666,7 +4018,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod>(arg);
 
-            self->obj.AuthorizationMethod(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthorizationMethod(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3764,7 +4120,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnectionTakeoverSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnectionTakeoverSupported();
+            }());
         }
         catch (...)
         {
@@ -3790,7 +4150,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.KnownTransmitters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KnownTransmitters();
+            }());
         }
         catch (...)
         {
@@ -3816,7 +4180,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListeningStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListeningStatus();
+            }());
         }
         catch (...)
         {
@@ -3842,7 +4210,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSimultaneousConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSimultaneousConnections();
+            }());
         }
         catch (...)
         {
@@ -3868,7 +4240,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.WiFiStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WiFiStatus();
+            }());
         }
         catch (...)
         {
@@ -3969,7 +4345,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVideoStreamSettings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVideoStreamSettings();
+                }());
             }
             catch (...)
             {
@@ -4005,7 +4385,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVideoStreamSettingsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVideoStreamSettingsAsync();
+                }());
             }
             catch (...)
             {
@@ -4043,7 +4427,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>(args, 0);
 
-                self->obj.SuggestVideoStreamSettings(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SuggestVideoStreamSettings(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4082,7 +4470,11 @@ namespace py::cpp::Windows::Media::Miracast
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>(args, 0);
 
-                return py::convert(self->obj.SuggestVideoStreamSettingsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SuggestVideoStreamSettingsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4114,7 +4506,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MuteAudio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MuteAudio();
+            }());
         }
         catch (...)
         {
@@ -4148,7 +4544,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MuteAudio(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MuteAudio(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4246,7 +4646,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4280,7 +4684,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4307,7 +4715,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bitrate();
+            }());
         }
         catch (...)
         {
@@ -4341,7 +4753,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Bitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4440,7 +4856,11 @@ namespace py::cpp::Windows::Media::Miracast
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnections());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnections();
+                }());
             }
             catch (...)
             {
@@ -4472,7 +4892,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4506,7 +4930,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4533,7 +4961,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthorizationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthorizationStatus();
+            }());
         }
         catch (...)
         {
@@ -4567,7 +4999,11 @@ namespace py::cpp::Windows::Media::Miracast
 
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus>(arg);
 
-            self->obj.AuthorizationStatus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthorizationStatus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4594,7 +5030,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastConnectionTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastConnectionTime();
+            }());
         }
         catch (...)
         {
@@ -4620,7 +5060,11 @@ namespace py::cpp::Windows::Media::Miracast
                 return nullptr;
             }
 
-            return py::convert(self->obj.MacAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MacAddress();
+            }());
         }
         catch (...)
         {

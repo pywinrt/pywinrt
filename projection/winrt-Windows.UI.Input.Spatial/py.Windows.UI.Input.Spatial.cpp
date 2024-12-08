@@ -66,7 +66,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                self->obj.CancelPendingGestures();
+                {
+                    auto _gil = release_gil();
+                    self->obj.CancelPendingGestures();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -105,7 +109,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteraction>(args, 0);
 
-                self->obj.CaptureInteraction(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CaptureInteraction(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -144,7 +152,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>(args, 0);
 
-                return py::convert(self->obj.TrySetGestureSettings(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetGestureSettings(param0);
+                }());
             }
             catch (...)
             {
@@ -176,7 +188,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.GestureSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GestureSettings();
+            }());
         }
         catch (...)
         {
@@ -204,7 +220,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>>(arg);
 
-            return py::convert(self->obj.HoldCanceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldCanceled(param0);
+            }());
         }
         catch (...)
         {
@@ -232,7 +252,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HoldCanceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldCanceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -261,7 +285,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.HoldCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -289,7 +317,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HoldCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -318,7 +350,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.HoldStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -346,7 +382,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HoldStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -375,7 +415,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationCanceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationCanceled(param0);
+            }());
         }
         catch (...)
         {
@@ -403,7 +447,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationCanceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationCanceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -432,7 +480,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -489,7 +545,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -517,7 +577,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -546,7 +610,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -574,7 +642,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -603,7 +675,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationCanceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationCanceled(param0);
+            }());
         }
         catch (...)
         {
@@ -631,7 +707,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationCanceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationCanceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -660,7 +740,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -688,7 +772,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -717,7 +805,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -745,7 +837,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -774,7 +870,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -802,7 +902,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -831,7 +935,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>>(arg);
 
-            return py::convert(self->obj.RecognitionEnded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognitionEnded(param0);
+            }());
         }
         catch (...)
         {
@@ -859,7 +967,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RecognitionEnded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RecognitionEnded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -888,7 +1000,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.RecognitionStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognitionStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -916,7 +1032,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RecognitionStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RecognitionStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -945,7 +1065,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>>(arg);
 
-            return py::convert(self->obj.Tapped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tapped(param0);
+            }());
         }
         catch (...)
         {
@@ -973,7 +1097,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Tapped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tapped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1098,7 +1226,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -1191,7 +1323,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -1290,7 +1426,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -1322,7 +1462,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -1416,7 +1560,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceState();
+            }());
         }
         catch (...)
         {
@@ -1513,7 +1661,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetBatteryReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetBatteryReport();
+                }());
             }
             catch (...)
             {
@@ -1549,7 +1701,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetRenderableModelAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetRenderableModelAsync();
+                }());
             }
             catch (...)
             {
@@ -1581,7 +1737,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasThumbstick());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasThumbstick();
+            }());
         }
         catch (...)
         {
@@ -1607,7 +1767,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasTouchpad());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasTouchpad();
+            }());
         }
         catch (...)
         {
@@ -1633,7 +1797,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProductId();
+            }());
         }
         catch (...)
         {
@@ -1659,7 +1827,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -1685,7 +1857,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.VendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VendorId();
+            }());
         }
         catch (...)
         {
@@ -1711,7 +1887,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -1811,7 +1991,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsThumbstickPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsThumbstickPressed();
+            }());
         }
         catch (...)
         {
@@ -1837,7 +2021,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTouchpadPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTouchpadPressed();
+            }());
         }
         catch (...)
         {
@@ -1863,7 +2051,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTouchpadTouched());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTouchpadTouched();
+            }());
         }
         catch (...)
         {
@@ -1889,7 +2081,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThumbstickX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThumbstickX();
+            }());
         }
         catch (...)
         {
@@ -1915,7 +2111,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThumbstickY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThumbstickY();
+            }());
         }
         catch (...)
         {
@@ -1941,7 +2141,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.TouchpadX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchpadX();
+            }());
         }
         catch (...)
         {
@@ -1967,7 +2171,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.TouchpadY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchpadY();
+            }());
         }
         catch (...)
         {
@@ -2072,7 +2280,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -2104,7 +2316,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interaction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interaction();
+            }());
         }
         catch (...)
         {
@@ -2130,7 +2346,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -2156,7 +2376,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSource();
+            }());
         }
         catch (...)
         {
@@ -2258,7 +2482,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
-                return py::convert(self->obj.GetDetectedSourcesAtTimestamp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDetectedSourcesAtTimestamp(param0);
+                }());
             }
             catch (...)
             {
@@ -2294,7 +2522,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -2332,7 +2564,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceKind>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::IsSourceKindSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::IsSourceKindSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2366,7 +2602,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.InteractionDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -2394,7 +2634,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InteractionDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InteractionDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2423,7 +2667,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -2451,7 +2699,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2480,7 +2732,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceLost(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceLost(param0);
+            }());
         }
         catch (...)
         {
@@ -2508,7 +2764,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceLost(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceLost(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2537,7 +2797,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
-            return py::convert(self->obj.SourcePressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePressed(param0);
+            }());
         }
         catch (...)
         {
@@ -2565,7 +2829,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourcePressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourcePressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2594,7 +2862,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceReleased(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceReleased(param0);
+            }());
         }
         catch (...)
         {
@@ -2622,7 +2894,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceReleased(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceReleased(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2651,7 +2927,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -2679,7 +2959,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2816,7 +3100,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryCreateHandMeshObserver());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateHandMeshObserver();
+                }());
             }
             catch (...)
             {
@@ -2852,7 +3140,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryCreateHandMeshObserverAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateHandMeshObserverAsync();
+                }());
             }
             catch (...)
             {
@@ -2890,7 +3182,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
-                return py::convert(self->obj.TryGetStateAtTimestamp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetStateAtTimestamp(param0);
+                }());
             }
             catch (...)
             {
@@ -2922,7 +3218,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2948,7 +3248,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2974,7 +3278,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controller());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controller();
+            }());
         }
         catch (...)
         {
@@ -3000,7 +3308,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGraspSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGraspSupported();
+            }());
         }
         catch (...)
         {
@@ -3026,7 +3338,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMenuSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMenuSupported();
+            }());
         }
         catch (...)
         {
@@ -3052,7 +3368,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPointingSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPointingSupported();
+            }());
         }
         catch (...)
         {
@@ -3078,7 +3398,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handedness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handedness();
+            }());
         }
         catch (...)
         {
@@ -3180,7 +3504,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3206,7 +3534,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.PressKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PressKind();
+            }());
         }
         catch (...)
         {
@@ -3300,7 +3632,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3662,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocity();
+            }());
         }
         catch (...)
         {
@@ -3352,7 +3692,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -3378,7 +3722,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AngularVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngularVelocity();
+            }());
         }
         catch (...)
         {
@@ -3404,7 +3752,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionAccuracy();
+            }());
         }
         catch (...)
         {
@@ -3430,7 +3782,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourcePointerPose());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePointerPose();
+            }());
         }
         catch (...)
         {
@@ -3534,7 +3890,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetLocation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetLocation(param0);
+                }());
             }
             catch (...)
             {
@@ -3572,7 +3932,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetSourceLossMitigationDirection(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetSourceLossMitigationDirection(param0);
+                }());
             }
             catch (...)
             {
@@ -3604,7 +3968,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceLossRisk());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceLossRisk();
+            }());
         }
         catch (...)
         {
@@ -3703,7 +4071,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetHandPose());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetHandPose();
+                }());
             }
             catch (...)
             {
@@ -3741,7 +4113,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -3773,7 +4149,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPressed();
+            }());
         }
         catch (...)
         {
@@ -3799,7 +4179,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -3825,7 +4209,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -3851,7 +4239,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3877,7 +4269,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControllerProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControllerProperties();
+            }());
         }
         catch (...)
         {
@@ -3903,7 +4299,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrasped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrasped();
+            }());
         }
         catch (...)
         {
@@ -3929,7 +4329,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMenuPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMenuPressed();
+            }());
         }
         catch (...)
         {
@@ -3955,7 +4359,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelectPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSelectPressed();
+            }());
         }
         catch (...)
         {
@@ -3981,7 +4389,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectPressedValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectPressedValue();
+            }());
         }
         catch (...)
         {
@@ -4084,7 +4496,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4183,7 +4599,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetCumulativeDelta(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetCumulativeDelta(param0);
+                }());
             }
             catch (...)
             {
@@ -4215,7 +4635,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4309,7 +4733,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Translation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Translation();
+            }());
         }
         catch (...)
         {
@@ -4408,7 +4836,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -4440,7 +4872,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4540,7 +4976,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetCumulativeDelta(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetCumulativeDelta(param0);
+                }());
             }
             catch (...)
             {
@@ -4572,7 +5012,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4666,7 +5110,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4759,7 +5207,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4785,7 +5237,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalizedOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalizedOffset();
+            }());
         }
         catch (...)
         {
@@ -4885,7 +5341,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -4917,7 +5377,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -4943,7 +5407,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNavigatingX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNavigatingX();
+            }());
         }
         catch (...)
         {
@@ -4969,7 +5437,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNavigatingY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNavigatingY();
+            }());
         }
         catch (...)
         {
@@ -4995,7 +5467,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNavigatingZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNavigatingZ();
+            }());
         }
         catch (...)
         {
@@ -5092,7 +5568,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -5118,7 +5598,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalizedOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalizedOffset();
+            }());
         }
         catch (...)
         {
@@ -5212,7 +5696,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForwardDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardDirection();
+            }());
         }
         catch (...)
         {
@@ -5238,7 +5726,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -5264,7 +5756,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpDirection();
+            }());
         }
         catch (...)
         {
@@ -5290,7 +5786,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -5316,7 +5816,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionAccuracy();
+            }());
         }
         catch (...)
         {
@@ -5420,7 +5924,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::Spatial::SpatialPointerPose::TryGetAtTimestamp(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Spatial::SpatialPointerPose::TryGetAtTimestamp(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5458,7 +5966,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>(args, 0);
 
-                return py::convert(self->obj.TryGetInteractionSourcePose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetInteractionSourcePose(param0);
+                }());
             }
             catch (...)
             {
@@ -5490,7 +6002,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Head());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Head();
+            }());
         }
         catch (...)
         {
@@ -5516,7 +6032,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -5542,7 +6062,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Eyes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Eyes();
+            }());
         }
         catch (...)
         {
@@ -5568,7 +6092,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHeadCapturedBySystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHeadCapturedBySystem();
+            }());
         }
         catch (...)
         {
@@ -5691,7 +6219,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -5790,7 +6322,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>(args, 0);
 
-                return py::convert(self->obj.IsGesturePossible(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsGesturePossible(param0);
+                }());
             }
             catch (...)
             {
@@ -5828,7 +6364,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -5860,7 +6400,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -5961,7 +6505,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetPointerPose(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPointerPose(param0);
+                }());
             }
             catch (...)
             {
@@ -5993,7 +6541,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSourceKind();
+            }());
         }
         catch (...)
         {
@@ -6019,7 +6571,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapCount();
+            }());
         }
         catch (...)
         {

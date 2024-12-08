@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.City());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.City();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Country());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Country();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PostalCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PostalCode();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -305,7 +325,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0);
+                }());
             }
             catch (...)
             {
@@ -344,7 +368,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -384,7 +412,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -416,7 +448,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Center();
+            }());
         }
         catch (...)
         {
@@ -442,7 +478,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAltitude());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAltitude();
+            }());
         }
         catch (...)
         {
@@ -468,7 +508,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinAltitude());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinAltitude();
+            }());
         }
         catch (...)
         {
@@ -494,7 +538,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NorthwestCorner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NorthwestCorner();
+            }());
         }
         catch (...)
         {
@@ -520,7 +568,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SoutheastCorner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SoutheastCorner();
+            }());
         }
         catch (...)
         {
@@ -546,7 +598,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeReferenceSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeReferenceSystem();
+            }());
         }
         catch (...)
         {
@@ -572,7 +628,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeoshapeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeoshapeType();
+            }());
         }
         catch (...)
         {
@@ -598,7 +658,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialReferenceId();
+            }());
         }
         catch (...)
         {
@@ -786,7 +850,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Center();
+            }());
         }
         catch (...)
         {
@@ -812,7 +880,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Radius());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Radius();
+            }());
         }
         catch (...)
         {
@@ -838,7 +910,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeReferenceSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeReferenceSystem();
+            }());
         }
         catch (...)
         {
@@ -864,7 +940,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeoshapeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeoshapeType();
+            }());
         }
         catch (...)
         {
@@ -890,7 +970,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialReferenceId();
+            }());
         }
         catch (...)
         {
@@ -987,7 +1071,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Accuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Accuracy();
+            }());
         }
         catch (...)
         {
@@ -1013,7 +1101,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Altitude());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Altitude();
+            }());
         }
         catch (...)
         {
@@ -1039,7 +1131,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeAccuracy();
+            }());
         }
         catch (...)
         {
@@ -1065,7 +1161,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Heading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Heading();
+            }());
         }
         catch (...)
         {
@@ -1091,7 +1191,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Latitude());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Latitude();
+            }());
         }
         catch (...)
         {
@@ -1117,7 +1221,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Longitude());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Longitude();
+            }());
         }
         catch (...)
         {
@@ -1143,7 +1251,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Speed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Speed();
+            }());
         }
         catch (...)
         {
@@ -1169,7 +1281,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1195,7 +1311,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Point());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Point();
+            }());
         }
         catch (...)
         {
@@ -1221,7 +1341,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionSource();
+            }());
         }
         catch (...)
         {
@@ -1247,7 +1371,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SatelliteData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SatelliteData();
+            }());
         }
         catch (...)
         {
@@ -1273,7 +1401,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionSourceTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionSourceTimestamp();
+            }());
         }
         catch (...)
         {
@@ -1299,7 +1431,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRemoteSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteSource();
+            }());
         }
         catch (...)
         {
@@ -1404,7 +1540,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalDilutionOfPrecision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HorizontalDilutionOfPrecision();
+            }());
         }
         catch (...)
         {
@@ -1430,7 +1570,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionDilutionOfPrecision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionDilutionOfPrecision();
+            }());
         }
         catch (...)
         {
@@ -1456,7 +1600,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalDilutionOfPrecision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VerticalDilutionOfPrecision();
+            }());
         }
         catch (...)
         {
@@ -1482,7 +1630,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeometricDilutionOfPrecision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeometricDilutionOfPrecision();
+            }());
         }
         catch (...)
         {
@@ -1508,7 +1660,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeDilutionOfPrecision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeDilutionOfPrecision();
+            }());
         }
         catch (...)
         {
@@ -1631,7 +1787,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                self->obj.AllowFallbackToConsentlessPositions();
+                {
+                    auto _gil = release_gil();
+                    self->obj.AllowFallbackToConsentlessPositions();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1668,7 +1828,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetGeopositionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGeopositionAsync();
+                }());
             }
             catch (...)
             {
@@ -1707,7 +1871,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.GetGeopositionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGeopositionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1745,7 +1913,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::GetGeopositionHistoryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::Geolocator::GetGeopositionHistoryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1784,7 +1956,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::GetGeopositionHistoryAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::Geolocator::GetGeopositionHistoryAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1820,7 +1996,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::Geolocator::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -1852,7 +2032,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -1886,7 +2070,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1913,7 +2101,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.MovementThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MovementThreshold();
+            }());
         }
         catch (...)
         {
@@ -1947,7 +2139,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MovementThreshold(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MovementThreshold(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1974,7 +2170,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredAccuracy();
+            }());
         }
         catch (...)
         {
@@ -2008,7 +2208,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::PositionAccuracy>(arg);
 
-            self->obj.DesiredAccuracy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredAccuracy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2035,7 +2239,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocationStatus();
+            }());
         }
         catch (...)
         {
@@ -2061,7 +2269,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredAccuracyInMeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredAccuracyInMeters();
+            }());
         }
         catch (...)
         {
@@ -2095,7 +2307,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.DesiredAccuracyInMeters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredAccuracyInMeters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2122,7 +2338,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition();
+            }());
         }
         catch (...)
         {
@@ -2156,7 +2376,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(arg);
 
-            winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2183,7 +2407,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::IsDefaultGeopositionRecommended());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Geolocation::Geolocator::IsDefaultGeopositionRecommended();
+            }());
         }
         catch (...)
         {
@@ -2211,7 +2439,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geolocator, winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PositionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2239,7 +2471,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PositionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2268,7 +2504,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geolocator, winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2296,7 +2536,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2488,7 +2732,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Positions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Positions();
+            }());
         }
         catch (...)
         {
@@ -2514,7 +2762,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeReferenceSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeReferenceSystem();
+            }());
         }
         catch (...)
         {
@@ -2540,7 +2792,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeoshapeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeoshapeType();
+            }());
         }
         catch (...)
         {
@@ -2566,7 +2822,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialReferenceId();
+            }());
         }
         catch (...)
         {
@@ -2719,7 +2979,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2745,7 +3009,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeReferenceSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeReferenceSystem();
+            }());
         }
         catch (...)
         {
@@ -2771,7 +3039,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeoshapeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeoshapeType();
+            }());
         }
         catch (...)
         {
@@ -2797,7 +3069,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialReferenceId();
+            }());
         }
         catch (...)
         {
@@ -2893,7 +3169,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.CivicAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CivicAddress();
+            }());
         }
         catch (...)
         {
@@ -2919,7 +3199,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Coordinate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Coordinate();
+            }());
         }
         catch (...)
         {
@@ -2945,7 +3229,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.VenueData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VenueData();
+            }());
         }
         catch (...)
         {
@@ -3040,7 +3328,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3066,7 +3358,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.StateChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChange();
+            }());
         }
         catch (...)
         {
@@ -3092,7 +3388,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3213,7 +3513,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Geolocation::GeovisitMonitor::GetLastReportAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Geolocation::GeovisitMonitor::GetLastReportAsync();
+                }());
             }
             catch (...)
             {
@@ -3251,7 +3555,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>(args, 0);
 
-                self->obj.Start(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3288,7 +3596,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3321,7 +3633,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.MonitoringScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MonitoringScope();
+            }());
         }
         catch (...)
         {
@@ -3349,7 +3665,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::GeovisitMonitor, winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.VisitStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisitStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3377,7 +3697,11 @@ namespace py::cpp::Windows::Devices::Geolocation
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.VisitStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VisitStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3501,7 +3825,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Visit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Visit();
+            }());
         }
         catch (...)
         {
@@ -3598,7 +3926,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadReports());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadReports();
+                }());
             }
             catch (...)
             {
@@ -3697,7 +4029,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3790,7 +4126,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3883,7 +4223,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3909,7 +4253,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Level());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Level();
+            }());
         }
         catch (...)
         {
@@ -4003,7 +4351,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeReferenceSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeReferenceSystem();
+            }());
         }
         catch (...)
         {
@@ -4029,7 +4381,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeoshapeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeoshapeType();
+            }());
         }
         catch (...)
         {
@@ -4055,7 +4411,11 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialReferenceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialReferenceId();
+            }());
         }
         catch (...)
         {

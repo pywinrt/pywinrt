@@ -66,7 +66,11 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
-                return py::convert(self->obj.GetXamlType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXamlType(param0);
+                }());
             }
             catch (...)
             {
@@ -104,7 +108,11 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetXamlType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXamlType(param0);
+                }());
             }
             catch (...)
             {
@@ -140,7 +148,11 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetXmlnsDefinitions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlnsDefinitions();
+                }());
             }
             catch (...)
             {
@@ -176,7 +188,11 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
                     return nullptr;
                 }
 
-                winrt::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider::Initialize();
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider::Initialize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

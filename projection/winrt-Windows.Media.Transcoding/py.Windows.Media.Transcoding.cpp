@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddAudioEffect(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddAudioEffect(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -107,7 +111,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
-                self->obj.AddAudioEffect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddAudioEffect(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -146,7 +154,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddVideoEffect(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddVideoEffect(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -187,7 +199,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
-                self->obj.AddVideoEffect(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddVideoEffect(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -224,7 +240,11 @@ namespace py::cpp::Windows::Media::Transcoding
                     return nullptr;
                 }
 
-                self->obj.ClearEffects();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearEffects();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -265,7 +285,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
 
-                return py::convert(self->obj.PrepareFileTranscodeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrepareFileTranscodeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -305,7 +329,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
 
-                return py::convert(self->obj.PrepareMediaStreamSourceTranscodeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrepareMediaStreamSourceTranscodeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -345,7 +373,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
 
-                return py::convert(self->obj.PrepareStreamTranscodeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrepareStreamTranscodeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -377,7 +409,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimStopTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrimStopTime();
+            }());
         }
         catch (...)
         {
@@ -411,7 +447,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.TrimStopTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TrimStopTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -438,7 +478,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrimStartTime();
+            }());
         }
         catch (...)
         {
@@ -472,7 +516,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.TrimStartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TrimStartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -499,7 +547,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareAccelerationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareAccelerationEnabled();
+            }());
         }
         catch (...)
         {
@@ -533,7 +585,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.HardwareAccelerationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HardwareAccelerationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -560,7 +616,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysReencode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysReencode();
+            }());
         }
         catch (...)
         {
@@ -594,7 +654,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysReencode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysReencode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -621,7 +685,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoProcessingAlgorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoProcessingAlgorithm();
+            }());
         }
         catch (...)
         {
@@ -655,7 +723,11 @@ namespace py::cpp::Windows::Media::Transcoding
 
             auto param0 = py::convert_to<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>(arg);
 
-            self->obj.VideoProcessingAlgorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VideoProcessingAlgorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -765,7 +837,11 @@ namespace py::cpp::Windows::Media::Transcoding
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TranscodeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TranscodeAsync();
+                }());
             }
             catch (...)
             {
@@ -797,7 +873,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanTranscode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanTranscode();
+            }());
         }
         catch (...)
         {
@@ -823,7 +903,11 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailureReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureReason();
+            }());
         }
         catch (...)
         {

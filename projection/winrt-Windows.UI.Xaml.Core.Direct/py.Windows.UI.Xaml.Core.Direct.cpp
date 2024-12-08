@@ -46,7 +46,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                self->obj.AddEventHandler(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEventHandler(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -88,7 +92,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                self->obj.AddEventHandler(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddEventHandler(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -128,7 +136,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 1);
 
-                self->obj.AddToCollection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddToCollection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -167,7 +179,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
-                self->obj.ClearCollection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearCollection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -207,7 +223,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                self->obj.ClearProperty(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearProperty(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -246,7 +266,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>(args, 0);
 
-                return py::convert(self->obj.CreateInstance(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateInstance(param0);
+                }());
             }
             catch (...)
             {
@@ -285,7 +309,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetBooleanProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -323,7 +351,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
-                return py::convert(self->obj.GetCollectionCount(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCollectionCount(param0);
+                }());
             }
             catch (...)
             {
@@ -362,7 +394,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetColorProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetColorProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -401,7 +437,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetCornerRadiusProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCornerRadiusProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -440,7 +480,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetDateTimeProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDateTimeProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -476,7 +520,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Xaml::Core::Direct::XamlDirect::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Core::Direct::XamlDirect::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -515,7 +563,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetDoubleProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDoubleProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -554,7 +606,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetDurationProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDurationProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -593,7 +649,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetEnumProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnumProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -632,7 +692,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetGridLengthProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGridLengthProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -671,7 +735,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetInt32Property(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInt32Property(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -710,7 +778,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetMatrix3DProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMatrix3DProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -749,7 +821,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetMatrixProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMatrixProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -787,7 +863,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
-                return py::convert(self->obj.GetObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObject(param0);
+                }());
             }
             catch (...)
             {
@@ -826,7 +906,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetObjectProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObjectProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -865,7 +949,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetPointProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPointProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -904,7 +992,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetRectProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRectProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -943,7 +1035,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetSizeProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSizeProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -982,7 +1078,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetStringProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStringProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1021,7 +1121,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetThicknessProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThicknessProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1060,7 +1164,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetTimeSpanProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTimeSpanProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1098,7 +1206,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.GetXamlDirectObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXamlDirectObject(param0);
+                }());
             }
             catch (...)
             {
@@ -1137,7 +1249,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetXamlDirectObjectFromCollectionAt(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXamlDirectObjectFromCollectionAt(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1176,7 +1292,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
-                return py::convert(self->obj.GetXamlDirectObjectProperty(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXamlDirectObjectProperty(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1216,7 +1336,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 2);
 
-                self->obj.InsertIntoCollectionAt(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertIntoCollectionAt(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1257,7 +1381,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                self->obj.RemoveEventHandler(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveEventHandler(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1297,7 +1425,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 1);
 
-                return py::convert(self->obj.RemoveFromCollection(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveFromCollection(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1336,7 +1468,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.RemoveFromCollectionAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveFromCollectionAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1377,7 +1513,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.SetBooleanProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBooleanProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1418,7 +1558,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Color>(args, 2);
 
-                self->obj.SetColorProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1459,7 +1603,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(args, 2);
 
-                self->obj.SetCornerRadiusProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetCornerRadiusProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1500,7 +1648,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
 
-                self->obj.SetDateTimeProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDateTimeProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1541,7 +1693,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                self->obj.SetDoubleProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDoubleProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1582,7 +1738,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Duration>(args, 2);
 
-                self->obj.SetDurationProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDurationProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1623,7 +1783,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                self->obj.SetEnumProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEnumProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1664,7 +1828,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::GridLength>(args, 2);
 
-                self->obj.SetGridLengthProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetGridLengthProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1705,7 +1873,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                self->obj.SetInt32Property(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetInt32Property(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1746,7 +1918,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 2);
 
-                self->obj.SetMatrix3DProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetMatrix3DProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1787,7 +1963,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Media::Matrix>(args, 2);
 
-                self->obj.SetMatrixProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetMatrixProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1828,7 +2008,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                self->obj.SetObjectProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetObjectProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1869,7 +2053,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Point>(args, 2);
 
-                self->obj.SetPointProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPointProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1910,7 +2098,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
 
-                self->obj.SetRectProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRectProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1951,7 +2143,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Size>(args, 2);
 
-                self->obj.SetSizeProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSizeProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1992,7 +2188,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.SetStringProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetStringProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2033,7 +2233,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(args, 2);
 
-                self->obj.SetThicknessProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetThicknessProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2074,7 +2278,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
-                self->obj.SetTimeSpanProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTimeSpanProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2115,7 +2323,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 2);
 
-                self->obj.SetXamlDirectObjectProperty(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetXamlDirectObjectProperty(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

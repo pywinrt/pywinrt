@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -261,7 +277,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -293,7 +313,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -391,7 +415,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -427,7 +455,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -466,7 +498,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -504,7 +540,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -610,7 +650,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -642,7 +686,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -740,7 +788,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -777,7 +829,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -813,7 +869,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StopAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StopAsync();
+                }());
             }
             catch (...)
             {
@@ -849,7 +909,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryAcquireLatestFrameAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryAcquireLatestFrameAsync();
+                }());
             }
             catch (...)
             {
@@ -881,7 +945,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -909,7 +977,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameArrived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameArrived(param0);
+            }());
         }
         catch (...)
         {
@@ -937,7 +1009,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameArrived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameArrived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -980,7 +1056,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1062,7 +1142,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1167,7 +1251,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1203,7 +1291,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1242,7 +1334,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1280,7 +1376,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1312,7 +1412,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Symbology());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Symbology();
+            }());
         }
         catch (...)
         {
@@ -1413,7 +1517,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1445,7 +1553,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1543,7 +1655,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1579,7 +1695,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1618,7 +1738,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1656,7 +1780,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1762,7 +1890,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1794,7 +1926,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1892,7 +2028,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1929,7 +2069,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateFrameReaderAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameReaderAsync();
+                }());
             }
             catch (...)
             {
@@ -1968,7 +2112,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(args, 1);
 
-                return py::convert(self->obj.CreateFrameReaderAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameReaderAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2006,7 +2154,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
-                return py::convert(self->obj.CreateFrameReaderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameReaderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2044,7 +2196,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>(args, 0);
 
-                return py::convert(self->obj.ReportErrorAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportErrorAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2084,7 +2240,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>(args, 2);
 
-                return py::convert(self->obj.ReportErrorAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportErrorAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2122,7 +2282,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>(args, 0);
 
-                return py::convert(self->obj.ReportScannedDataAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportScannedDataAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2160,7 +2324,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState>(args, 0);
 
-                return py::convert(self->obj.ReportTriggerStateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportTriggerStateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2196,7 +2364,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2229,7 +2401,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -2263,7 +2439,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Version(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Version(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2290,7 +2470,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2324,7 +2508,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2351,7 +2539,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompanyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompanyName();
+            }());
         }
         catch (...)
         {
@@ -2385,7 +2577,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CompanyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompanyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2412,7 +2608,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2438,7 +2638,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedSymbologies());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedSymbologies();
+            }());
         }
         catch (...)
         {
@@ -2464,7 +2668,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoDeviceId();
+            }());
         }
         catch (...)
         {
@@ -2492,7 +2700,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.DisableScannerRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisableScannerRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2520,7 +2732,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DisableScannerRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisableScannerRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2549,7 +2765,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.EnableScannerRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnableScannerRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2577,7 +2797,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnableScannerRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnableScannerRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2606,7 +2830,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.GetBarcodeSymbologyAttributesRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GetBarcodeSymbologyAttributesRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2634,7 +2862,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GetBarcodeSymbologyAttributesRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GetBarcodeSymbologyAttributesRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2663,7 +2895,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.HideVideoPreviewRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HideVideoPreviewRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2691,7 +2927,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HideVideoPreviewRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HideVideoPreviewRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2720,7 +2960,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.SetActiveSymbologiesRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SetActiveSymbologiesRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2748,7 +2992,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SetActiveSymbologiesRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SetActiveSymbologiesRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2777,7 +3025,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.SetBarcodeSymbologyAttributesRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SetBarcodeSymbologyAttributesRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2805,7 +3057,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SetBarcodeSymbologyAttributesRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SetBarcodeSymbologyAttributesRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2834,7 +3090,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.StartSoftwareTriggerRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartSoftwareTriggerRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2862,7 +3122,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StartSoftwareTriggerRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartSoftwareTriggerRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2891,7 +3155,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.StopSoftwareTriggerRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StopSoftwareTriggerRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2919,7 +3187,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StopSoftwareTriggerRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StopSoftwareTriggerRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2962,7 +3234,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3064,7 +3340,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -3161,7 +3441,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -3197,7 +3481,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -3236,7 +3524,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3274,7 +3566,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3306,7 +3602,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Symbologies());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Symbologies();
+            }());
         }
         catch (...)
         {
@@ -3407,7 +3707,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3439,7 +3743,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3537,7 +3845,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -3573,7 +3885,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -3612,7 +3928,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3650,7 +3970,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3682,7 +4006,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -3708,7 +4036,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Symbology());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Symbology();
+            }());
         }
         catch (...)
         {
@@ -3810,7 +4142,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3842,7 +4178,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3940,7 +4280,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -3976,7 +4320,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -4015,7 +4363,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4053,7 +4405,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4159,7 +4515,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4191,7 +4551,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -4289,7 +4653,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -4325,7 +4693,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -4364,7 +4736,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.ReportFailedAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4402,7 +4778,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.ReportFailedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4508,7 +4888,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4540,7 +4924,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -4638,7 +5026,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4671,7 +5063,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -4697,7 +5093,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -4723,7 +5123,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelData();
+            }());
         }
         catch (...)
         {
@@ -4749,7 +5153,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -4791,7 +5199,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4893,7 +5305,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateAttributes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttributes();
+                }());
             }
             catch (...)
             {
@@ -4925,7 +5341,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecodeLengthSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecodeLengthSupported();
+            }());
         }
         catch (...)
         {
@@ -4959,7 +5379,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecodeLengthSupported(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecodeLengthSupported(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4986,7 +5410,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCheckDigitValidationSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCheckDigitValidationSupported();
+            }());
         }
         catch (...)
         {
@@ -5020,7 +5448,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCheckDigitValidationSupported(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCheckDigitValidationSupported(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5047,7 +5479,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCheckDigitTransmissionSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCheckDigitTransmissionSupported();
+            }());
         }
         catch (...)
         {
@@ -5081,7 +5517,11 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCheckDigitTransmissionSupported(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCheckDigitTransmissionSupported(param0);
+            }
+
             return 0;
         }
         catch (...)

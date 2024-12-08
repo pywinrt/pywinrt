@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedDataFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedDataFormats();
+            }());
         }
         catch (...)
         {
@@ -269,7 +297,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedFileTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedFileTypes();
+            }());
         }
         catch (...)
         {
@@ -370,7 +402,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.DismissUI();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DismissUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.RemoveThisQuickLink();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveThisQuickLink();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -444,7 +484,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.ReportCompleted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -483,7 +527,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>(args, 0);
 
-                self->obj.ReportCompleted(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -520,7 +568,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.ReportDataRetrieved();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportDataRetrieved();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -559,7 +611,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ReportError(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportError(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -596,7 +652,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.ReportStarted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportStarted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -633,7 +693,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                     return nullptr;
                 }
 
-                self->obj.ReportSubmittedBackgroundTask();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportSubmittedBackgroundTask();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -666,7 +730,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -692,7 +760,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.QuickLinkId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuickLinkId();
+            }());
         }
         catch (...)
         {
@@ -718,7 +790,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contacts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contacts();
+            }());
         }
         catch (...)
         {

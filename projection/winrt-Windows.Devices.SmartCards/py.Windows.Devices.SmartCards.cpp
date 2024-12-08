@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCard();
+            }());
         }
         catch (...)
         {
@@ -131,7 +135,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCard();
+            }());
         }
         catch (...)
         {
@@ -216,7 +224,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds::PaymentSystemEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds::PaymentSystemEnvironment();
+            }());
         }
         catch (...)
         {
@@ -242,7 +254,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds::ProximityPaymentSystemEnvironment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds::ProximityPaymentSystemEnvironment();
+            }());
         }
         catch (...)
         {
@@ -338,7 +354,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ConnectAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectAsync();
+                }());
             }
             catch (...)
             {
@@ -374,7 +394,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAnswerToResetAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAnswerToResetAsync();
+                }());
             }
             catch (...)
             {
@@ -410,7 +434,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatusAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatusAsync();
+                }());
             }
             catch (...)
             {
@@ -442,7 +470,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reader());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reader();
+            }());
         }
         catch (...)
         {
@@ -578,7 +610,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCardEmulationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCardEmulationType();
+            }());
         }
         catch (...)
         {
@@ -612,7 +648,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationType>(arg);
 
-            self->obj.SmartCardEmulationType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmartCardEmulationType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -639,7 +679,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCardEmulationCategory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCardEmulationCategory();
+            }());
         }
         catch (...)
         {
@@ -673,7 +717,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationCategory>(arg);
 
-            self->obj.SmartCardEmulationCategory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmartCardEmulationCategory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -700,7 +748,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -734,7 +786,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -761,7 +817,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomaticEnablement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomaticEnablement();
+            }());
         }
         catch (...)
         {
@@ -795,7 +855,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutomaticEnablement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutomaticEnablement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -822,7 +886,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppletIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppletIds();
+            }());
         }
         catch (...)
         {
@@ -848,7 +916,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecureUserAuthenticationRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecureUserAuthenticationRequired();
+            }());
         }
         catch (...)
         {
@@ -882,7 +954,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SecureUserAuthenticationRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SecureUserAuthenticationRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -909,7 +985,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo();
+            }());
         }
         catch (...)
         {
@@ -943,7 +1023,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -970,7 +1054,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1004,7 +1092,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1031,7 +1123,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1057,7 +1153,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup::MaxAppletIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup::MaxAppletIds();
+            }());
         }
         catch (...)
         {
@@ -1190,7 +1290,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>(args, 0);
 
-                return py::convert(self->obj.RequestActivationPolicyChangeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestActivationPolicyChangeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1228,7 +1332,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>>(args, 0);
 
-                return py::convert(self->obj.SetAutomaticResponseApdusAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetAutomaticResponseApdusAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1266,7 +1374,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.SetPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1298,7 +1410,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivationPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationPolicy();
+            }());
         }
         catch (...)
         {
@@ -1324,7 +1440,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppletIdGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppletIdGroup();
+            }());
         }
         catch (...)
         {
@@ -1350,7 +1470,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1376,7 +1500,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCardReaderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCardReaderId();
+            }());
         }
         catch (...)
         {
@@ -1500,7 +1628,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldMatchLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldMatchLength();
+            }());
         }
         catch (...)
         {
@@ -1534,7 +1666,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldMatchLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldMatchLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1561,7 +1697,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseApdu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseApdu();
+            }());
         }
         catch (...)
         {
@@ -1595,7 +1735,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.ResponseApdu(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResponseApdu(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1622,7 +1766,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommandApduBitMask());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandApduBitMask();
+            }());
         }
         catch (...)
         {
@@ -1656,7 +1804,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.CommandApduBitMask(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommandApduBitMask(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1683,7 +1835,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommandApdu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandApdu();
+            }());
         }
         catch (...)
         {
@@ -1717,7 +1873,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.CommandApdu(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommandApdu(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1744,7 +1904,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppletId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppletId();
+            }());
         }
         catch (...)
         {
@@ -1778,7 +1942,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.AppletId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppletId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1805,7 +1973,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputState();
+            }());
         }
         catch (...)
         {
@@ -1839,7 +2011,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.OutputState(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutputState(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1866,7 +2042,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputState();
+            }());
         }
         catch (...)
         {
@@ -1900,7 +2080,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.InputState(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputState(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1927,7 +2111,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWhenCryptogramGeneratorNotPrepared());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWhenCryptogramGeneratorNotPrepared();
+            }());
         }
         catch (...)
         {
@@ -1961,7 +2149,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWhenCryptogramGeneratorNotPrepared(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWhenCryptogramGeneratorNotPrepared(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2069,7 +2261,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.ChangeAdministrativeKeyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ChangeAdministrativeKeyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2105,7 +2301,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2145,7 +2345,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.ProvisionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProvisionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2185,7 +2389,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
 
-                return py::convert(self->obj.ProvisionAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProvisionAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2223,7 +2431,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.VerifyResponseAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.VerifyResponseAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2255,7 +2467,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Challenge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Challenge();
+            }());
         }
         catch (...)
         {
@@ -2297,7 +2513,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2378,7 +2598,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2417,7 +2641,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.TransmitAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TransmitAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2465,7 +2693,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2547,7 +2779,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>(args, 3);
 
-                return py::convert(self->obj.CreateCryptogramMaterialStorageKeyAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCryptogramMaterialStorageKeyAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2585,7 +2821,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteCryptogramMaterialPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteCryptogramMaterialPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2623,7 +2863,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteCryptogramMaterialStorageKeyAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteCryptogramMaterialStorageKeyAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2662,7 +2906,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetAllCryptogramMaterialCharacteristicsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllCryptogramMaterialCharacteristicsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2698,7 +2946,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync();
+                }());
             }
             catch (...)
             {
@@ -2736,7 +2988,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2772,7 +3028,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllCryptogramStorageKeyCharacteristicsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllCryptogramStorageKeyCharacteristicsAsync();
+                }());
             }
             catch (...)
             {
@@ -2808,7 +3068,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator::GetSmartCardCryptogramGeneratorAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator::GetSmartCardCryptogramGeneratorAsync();
+                }());
             }
             catch (...)
             {
@@ -2849,7 +3113,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 3);
 
-                return py::convert(self->obj.ImportCryptogramMaterialPackageAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportCryptogramMaterialPackageAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2885,7 +3153,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -2925,7 +3197,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 2);
 
-                return py::convert(self->obj.RequestCryptogramMaterialStorageKeyInfoAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCryptogramMaterialStorageKeyInfoAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2963,7 +3239,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
 
-                return py::convert(self->obj.RequestUnlockCryptogramMaterialForUseAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestUnlockCryptogramMaterialForUseAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3005,7 +3285,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 4);
 
-                return py::convert(self->obj.TryProvePossessionOfCryptogramMaterialPackageAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryProvePossessionOfCryptogramMaterialPackageAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -3045,7 +3329,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 2);
 
-                return py::convert(self->obj.ValidateRequestApduAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ValidateRequestApduAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3077,7 +3365,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedCryptogramAlgorithms());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedCryptogramAlgorithms();
+            }());
         }
         catch (...)
         {
@@ -3103,7 +3395,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedCryptogramMaterialPackageConfirmationResponseFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedCryptogramMaterialPackageConfirmationResponseFormats();
+            }());
         }
         catch (...)
         {
@@ -3129,7 +3425,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedCryptogramMaterialPackageFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedCryptogramMaterialPackageFormats();
+            }());
         }
         catch (...)
         {
@@ -3155,7 +3455,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedCryptogramMaterialTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedCryptogramMaterialTypes();
+            }());
         }
         catch (...)
         {
@@ -3181,7 +3485,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedSmartCardCryptogramStorageKeyCapabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedSmartCardCryptogramStorageKeyCapabilities();
+            }());
         }
         catch (...)
         {
@@ -3339,7 +3647,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristics();
+            }());
         }
         catch (...)
         {
@@ -3365,7 +3677,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -3481,7 +3797,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristics();
+            }());
         }
         catch (...)
         {
@@ -3507,7 +3827,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -3623,7 +3947,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristics();
+            }());
         }
         catch (...)
         {
@@ -3649,7 +3977,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -3765,7 +4097,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedAlgorithms());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedAlgorithms();
+            }());
         }
         catch (...)
         {
@@ -3791,7 +4127,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedProofOfPossessionAlgorithms());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedProofOfPossessionAlgorithms();
+            }());
         }
         catch (...)
         {
@@ -3817,7 +4157,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedValidations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedValidations();
+            }());
         }
         catch (...)
         {
@@ -3843,7 +4187,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialLength();
+            }());
         }
         catch (...)
         {
@@ -3869,7 +4217,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialName();
+            }());
         }
         catch (...)
         {
@@ -3895,7 +4247,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialType();
+            }());
         }
         catch (...)
         {
@@ -3921,7 +4277,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionMethod();
+            }());
         }
         catch (...)
         {
@@ -3947,7 +4307,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionVersion();
+            }());
         }
         catch (...)
         {
@@ -4069,7 +4433,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.DateImported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DateImported();
+            }());
         }
         catch (...)
         {
@@ -4095,7 +4463,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFormat();
+            }());
         }
         catch (...)
         {
@@ -4121,7 +4493,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageName();
+            }());
         }
         catch (...)
         {
@@ -4147,7 +4523,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.StorageKeyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StorageKeyName();
+            }());
         }
         catch (...)
         {
@@ -4243,7 +4623,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -4269,7 +4653,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Proof());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Proof();
+            }());
         }
         catch (...)
         {
@@ -4385,7 +4773,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.TemplateOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TemplateOffset();
+            }());
         }
         catch (...)
         {
@@ -4419,7 +4811,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TemplateOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TemplateOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4446,7 +4842,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceData();
+            }());
         }
         catch (...)
         {
@@ -4480,7 +4880,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.SourceData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4507,7 +4911,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CryptogramPlacementOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CryptogramPlacementOptions();
+            }());
         }
         catch (...)
         {
@@ -4541,7 +4949,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>(arg);
 
-            self->obj.CryptogramPlacementOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CryptogramPlacementOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4568,7 +4980,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CryptogramOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CryptogramOffset();
+            }());
         }
         catch (...)
         {
@@ -4602,7 +5018,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.CryptogramOffset(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CryptogramOffset(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4629,7 +5049,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CryptogramMaterialPackageName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CryptogramMaterialPackageName();
+            }());
         }
         catch (...)
         {
@@ -4663,7 +5087,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CryptogramMaterialPackageName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CryptogramMaterialPackageName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4690,7 +5118,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CryptogramMaterialName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CryptogramMaterialName();
+            }());
         }
         catch (...)
         {
@@ -4724,7 +5156,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CryptogramMaterialName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CryptogramMaterialName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4751,7 +5187,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CryptogramLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CryptogramLength();
+            }());
         }
         catch (...)
         {
@@ -4785,7 +5225,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.CryptogramLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CryptogramLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4812,7 +5256,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChainedOutputStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChainedOutputStep();
+            }());
         }
         catch (...)
         {
@@ -4846,7 +5294,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>(arg);
 
-            self->obj.ChainedOutputStep(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChainedOutputStep(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4873,7 +5325,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Algorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Algorithm();
+            }());
         }
         catch (...)
         {
@@ -4907,7 +5363,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>(arg);
 
-            self->obj.Algorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Algorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5031,7 +5491,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Algorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Algorithm();
+            }());
         }
         catch (...)
         {
@@ -5057,7 +5521,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Capabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Capabilities();
+            }());
         }
         catch (...)
         {
@@ -5083,7 +5551,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.DateCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DateCreated();
+            }());
         }
         catch (...)
         {
@@ -5109,7 +5581,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.StorageKeyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StorageKeyName();
+            }());
         }
         catch (...)
         {
@@ -5205,7 +5681,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attestation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attestation();
+            }());
         }
         catch (...)
         {
@@ -5231,7 +5711,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttestationCertificateChain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttestationCertificateChain();
+            }());
         }
         catch (...)
         {
@@ -5257,7 +5741,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttestationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttestationStatus();
+            }());
         }
         catch (...)
         {
@@ -5283,7 +5771,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Capabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Capabilities();
+            }());
         }
         catch (...)
         {
@@ -5309,7 +5801,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationStatus();
+            }());
         }
         catch (...)
         {
@@ -5335,7 +5831,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublicKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublicKey();
+            }());
         }
         catch (...)
         {
@@ -5361,7 +5861,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublicKeyBlobType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublicKeyBlobType();
+            }());
         }
         catch (...)
         {
@@ -5387,7 +5891,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperationalRequirements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperationalRequirements();
+            }());
         }
         catch (...)
         {
@@ -5491,7 +5999,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::GetAppletIdGroupRegistrationsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardEmulator::GetAppletIdGroupRegistrationsAsync();
+                }());
             }
             catch (...)
             {
@@ -5527,7 +6039,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardEmulator::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -5563,7 +6079,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsHostCardEmulationSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsHostCardEmulationSupported();
+                }());
             }
             catch (...)
             {
@@ -5599,7 +6119,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardEmulator::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -5637,7 +6161,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::RegisterAppletIdGroupAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardEmulator::RegisterAppletIdGroupAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5673,7 +6201,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5712,7 +6244,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::UnregisterAppletIdGroupAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardEmulator::UnregisterAppletIdGroupAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5744,7 +6280,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnablementPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnablementPolicy();
+            }());
         }
         catch (...)
         {
@@ -5770,7 +6310,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::SmartCards::SmartCardEmulator::MaxAppletIdGroupRegistrations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::SmartCards::SmartCardEmulator::MaxAppletIdGroupRegistrations();
+            }());
         }
         catch (...)
         {
@@ -5798,7 +6342,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardEmulator, winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ApduReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApduReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -5826,7 +6374,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ApduReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ApduReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5855,7 +6407,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardEmulator, winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>>(arg);
 
-            return py::convert(self->obj.ConnectionDeactivated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionDeactivated(param0);
+            }());
         }
         catch (...)
         {
@@ -5883,7 +6439,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionDeactivated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionDeactivated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6020,7 +6580,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.TryRespondAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRespondAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6060,7 +6624,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 2);
 
-                return py::convert(self->obj.TryRespondWithCryptogramsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRespondWithCryptogramsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -6099,7 +6667,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
 
-                return py::convert(self->obj.TryRespondWithCryptogramsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRespondWithCryptogramsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6138,7 +6710,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
-                return py::convert(self->obj.TryRespondAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRespondAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6170,7 +6746,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomaticResponseStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomaticResponseStatus();
+            }());
         }
         catch (...)
         {
@@ -6196,7 +6776,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommandApdu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandApdu();
+            }());
         }
         catch (...)
         {
@@ -6222,7 +6806,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionProperties();
+            }());
         }
         catch (...)
         {
@@ -6248,7 +6836,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -6348,7 +6940,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionProperties();
+            }());
         }
         catch (...)
         {
@@ -6374,7 +6970,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -6468,7 +7068,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -6494,7 +7098,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -6610,7 +7218,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.UppercaseLetters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UppercaseLetters();
+            }());
         }
         catch (...)
         {
@@ -6644,7 +7256,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
-            self->obj.UppercaseLetters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UppercaseLetters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6671,7 +7287,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpecialCharacters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpecialCharacters();
+            }());
         }
         catch (...)
         {
@@ -6705,7 +7325,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
-            self->obj.SpecialCharacters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpecialCharacters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6732,7 +7356,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinLength();
+            }());
         }
         catch (...)
         {
@@ -6766,7 +7394,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MinLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6793,7 +7425,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxLength();
+            }());
         }
         catch (...)
         {
@@ -6827,7 +7463,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6854,7 +7494,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.LowercaseLetters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LowercaseLetters();
+            }());
         }
         catch (...)
         {
@@ -6888,7 +7532,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
-            self->obj.LowercaseLetters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LowercaseLetters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6915,7 +7563,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Digits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Digits();
+            }());
         }
         catch (...)
         {
@@ -6949,7 +7601,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
-            self->obj.Digits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Digits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7052,7 +7708,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7156,7 +7816,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -7194,7 +7858,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.SetResponse(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetResponse(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7227,7 +7895,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Challenge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Challenge();
+            }());
         }
         catch (...)
         {
@@ -7253,7 +7925,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -7355,7 +8031,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCard>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::FromSmartCardAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::FromSmartCardAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7391,7 +8071,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAuthorityKeyContainerNameAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAuthorityKeyContainerNameAsync();
+                }());
             }
             catch (...)
             {
@@ -7427,7 +8111,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetChallengeContextAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetChallengeContextAsync();
+                }());
             }
             catch (...)
             {
@@ -7463,7 +8151,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetIdAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIdAsync();
+                }());
             }
             catch (...)
             {
@@ -7499,7 +8191,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNameAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNameAsync();
+                }());
             }
             catch (...)
             {
@@ -7539,7 +8235,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7580,7 +8280,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>(args, 2);
                 auto param3 = py::convert_to<winrt::guid>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -7616,7 +8320,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestPinChangeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPinChangeAsync();
+                }());
             }
             catch (...)
             {
@@ -7654,7 +8362,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinResetHandler>(args, 0);
 
-                return py::convert(self->obj.RequestPinResetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestPinResetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7694,7 +8406,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7735,7 +8451,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>(args, 2);
                 auto param3 = py::convert_to<winrt::guid>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -7773,7 +8493,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCard>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardDeletionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardProvisioning::RequestVirtualSmartCardDeletionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7805,7 +8529,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCard();
+            }());
         }
         catch (...)
         {
@@ -7939,7 +8667,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindAllCardsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindAllCardsAsync();
+                }());
             }
             catch (...)
             {
@@ -7977,7 +8709,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardReader::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardReader::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8013,7 +8749,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardReader::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardReader::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -8051,7 +8791,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardReaderKind>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::SmartCards::SmartCardReader::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::SmartCards::SmartCardReader::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -8087,7 +8831,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatusAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatusAsync();
+                }());
             }
             catch (...)
             {
@@ -8119,7 +8867,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -8145,7 +8897,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -8171,7 +8927,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -8199,7 +8959,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardReader, winrt::Windows::Devices::SmartCards::CardAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.CardAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CardAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -8227,7 +8991,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CardAdded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CardAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8256,7 +9024,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardReader, winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.CardRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CardRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -8284,7 +9056,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CardRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CardRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8420,7 +9196,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryLaunchCurrentAppAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryLaunchCurrentAppAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8459,7 +9239,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardLaunchBehavior>(args, 1);
 
-                return py::convert(self->obj.TryLaunchCurrentAppAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryLaunchCurrentAppAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8491,7 +9275,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceAppletId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceAppletId();
+            }());
         }
         catch (...)
         {
@@ -8517,7 +9305,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerData();
+            }());
         }
         catch (...)
         {
@@ -8543,7 +9335,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerType();
+            }());
         }
         catch (...)
         {
@@ -8569,7 +9365,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emulator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emulator();
+            }());
         }
         catch (...)
         {
@@ -8595,7 +9395,11 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartCard());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartCard();
+            }());
         }
         catch (...)
         {

@@ -60,7 +60,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -86,7 +90,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -112,7 +120,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperatingSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperatingSystem();
+            }());
         }
         catch (...)
         {
@@ -138,7 +150,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemManufacturer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemManufacturer();
+            }());
         }
         catch (...)
         {
@@ -164,7 +180,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemProductName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemProductName();
+            }());
         }
         catch (...)
         {
@@ -190,7 +210,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemSku());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemSku();
+            }());
         }
         catch (...)
         {
@@ -216,7 +240,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemFirmwareVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFirmwareVersion();
+            }());
         }
         catch (...)
         {
@@ -242,7 +270,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemHardwareVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemHardwareVersion();
+            }());
         }
         catch (...)
         {
@@ -368,7 +400,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ApplyAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApplyAsync();
+                }());
             }
             catch (...)
             {
@@ -404,7 +440,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CheckCompliance());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CheckCompliance();
+                }());
             }
             catch (...)
             {
@@ -436,7 +476,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequireEncryption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequireEncryption();
+            }());
         }
         catch (...)
         {
@@ -470,7 +514,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequireEncryption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequireEncryption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -497,7 +545,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasswordHistory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasswordHistory();
+            }());
         }
         catch (...)
         {
@@ -531,7 +583,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PasswordHistory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PasswordHistory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -558,7 +614,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasswordExpiration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasswordExpiration();
+            }());
         }
         catch (...)
         {
@@ -592,7 +652,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.PasswordExpiration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PasswordExpiration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -619,7 +683,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinPasswordLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinPasswordLength();
+            }());
         }
         catch (...)
         {
@@ -653,7 +721,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.MinPasswordLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinPasswordLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -680,7 +752,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinPasswordComplexCharacters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinPasswordComplexCharacters();
+            }());
         }
         catch (...)
         {
@@ -714,7 +790,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.MinPasswordComplexCharacters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinPasswordComplexCharacters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -741,7 +821,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPasswordFailedAttempts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPasswordFailedAttempts();
+            }());
         }
         catch (...)
         {
@@ -775,7 +859,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.MaxPasswordFailedAttempts(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxPasswordFailedAttempts(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -802,7 +890,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxInactivityTimeLock());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxInactivityTimeLock();
+            }());
         }
         catch (...)
         {
@@ -836,7 +928,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.MaxInactivityTimeLock(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxInactivityTimeLock(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -863,7 +959,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisallowConvenienceLogon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisallowConvenienceLogon();
+            }());
         }
         catch (...)
         {
@@ -897,7 +997,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DisallowConvenienceLogon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisallowConvenienceLogon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1000,7 +1104,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compliant());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compliant();
+            }());
         }
         catch (...)
         {
@@ -1026,7 +1134,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisallowConvenienceLogonResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisallowConvenienceLogonResult();
+            }());
         }
         catch (...)
         {
@@ -1052,7 +1164,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxInactivityTimeLockResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxInactivityTimeLockResult();
+            }());
         }
         catch (...)
         {
@@ -1078,7 +1194,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPasswordFailedAttemptsResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPasswordFailedAttemptsResult();
+            }());
         }
         catch (...)
         {
@@ -1104,7 +1224,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinPasswordComplexCharactersResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinPasswordComplexCharactersResult();
+            }());
         }
         catch (...)
         {
@@ -1130,7 +1254,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinPasswordLengthResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinPasswordLengthResult();
+            }());
         }
         catch (...)
         {
@@ -1156,7 +1284,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasswordExpirationResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasswordExpirationResult();
+            }());
         }
         catch (...)
         {
@@ -1182,7 +1314,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasswordHistoryResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasswordHistoryResult();
+            }());
         }
         catch (...)
         {
@@ -1208,7 +1344,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequireEncryptionResult());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequireEncryptionResult();
+            }());
         }
         catch (...)
         {
@@ -1234,7 +1374,11 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncryptionProviderType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncryptionProviderType();
+            }());
         }
         catch (...)
         {

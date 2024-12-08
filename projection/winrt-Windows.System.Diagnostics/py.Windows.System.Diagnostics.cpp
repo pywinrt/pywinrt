@@ -38,7 +38,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Results());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Results();
+            }());
         }
         catch (...)
         {
@@ -162,7 +170,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -200,7 +212,11 @@ namespace py::cpp::Windows::System::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -238,7 +254,11 @@ namespace py::cpp::Windows::System::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::JsonObject>(args, 0);
 
-                return py::convert(self->obj.RunDiagnosticActionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RunDiagnosticActionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::System::Diagnostics
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RunDiagnosticActionFromStringAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RunDiagnosticActionFromStringAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -308,7 +332,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Diagnostics::DiagnosticInvoker::IsSupported();
+            }());
         }
         catch (...)
         {
@@ -434,7 +462,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -533,7 +565,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.KernelTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KernelTime();
+            }());
         }
         catch (...)
         {
@@ -559,7 +595,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserTime();
+            }());
         }
         catch (...)
         {
@@ -657,7 +697,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAppDiagnosticInfos());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppDiagnosticInfos();
+                }());
             }
             catch (...)
             {
@@ -693,7 +737,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForCurrentProcess());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForCurrentProcess();
+                }());
             }
             catch (...)
             {
@@ -729,7 +777,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForProcesses());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForProcesses();
+                }());
             }
             catch (...)
             {
@@ -767,7 +819,11 @@ namespace py::cpp::Windows::System::Diagnostics
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::TryGetForProcessId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::TryGetForProcessId(param0);
+                }());
             }
             catch (...)
             {
@@ -799,7 +855,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.CpuUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CpuUsage();
+            }());
         }
         catch (...)
         {
@@ -825,7 +885,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.DiskUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiskUsage();
+            }());
         }
         catch (...)
         {
@@ -851,7 +915,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExecutableFileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExecutableFileName();
+            }());
         }
         catch (...)
         {
@@ -877,7 +945,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.MemoryUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MemoryUsage();
+            }());
         }
         catch (...)
         {
@@ -903,7 +975,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -929,7 +1005,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessId();
+            }());
         }
         catch (...)
         {
@@ -955,7 +1035,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessStartTime();
+            }());
         }
         catch (...)
         {
@@ -981,7 +1065,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPackaged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPackaged();
+            }());
         }
         catch (...)
         {
@@ -1114,7 +1202,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -1213,7 +1305,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReadCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReadCount();
+            }());
         }
         catch (...)
         {
@@ -1239,7 +1335,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesWrittenCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesWrittenCount();
+            }());
         }
         catch (...)
         {
@@ -1265,7 +1365,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherBytesCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherBytesCount();
+            }());
         }
         catch (...)
         {
@@ -1291,7 +1395,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherOperationCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherOperationCount();
+            }());
         }
         catch (...)
         {
@@ -1317,7 +1425,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadOperationCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadOperationCount();
+            }());
         }
         catch (...)
         {
@@ -1343,7 +1455,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteOperationCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteOperationCount();
+            }());
         }
         catch (...)
         {
@@ -1445,7 +1561,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -1544,7 +1664,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonPagedPoolSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonPagedPoolSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1570,7 +1694,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageFaultCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageFaultCount();
+            }());
         }
         catch (...)
         {
@@ -1596,7 +1724,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageFileSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageFileSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1622,7 +1754,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PagedPoolSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PagedPoolSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1648,7 +1784,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeakNonPagedPoolSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeakNonPagedPoolSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1674,7 +1814,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeakPageFileSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeakPageFileSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1700,7 +1844,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeakPagedPoolSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeakPagedPoolSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1726,7 +1874,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeakVirtualMemorySizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeakVirtualMemorySizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1752,7 +1904,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeakWorkingSetSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeakWorkingSetSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1778,7 +1934,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrivatePageCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrivatePageCount();
+            }());
         }
         catch (...)
         {
@@ -1804,7 +1964,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.VirtualMemorySizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VirtualMemorySizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1830,7 +1994,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.WorkingSetSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkingSetSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -1938,7 +2106,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -2037,7 +2209,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.IdleTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IdleTime();
+            }());
         }
         catch (...)
         {
@@ -2063,7 +2239,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.KernelTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KernelTime();
+            }());
         }
         catch (...)
         {
@@ -2089,7 +2269,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserTime();
+            }());
         }
         catch (...)
         {
@@ -2188,7 +2372,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::GetForCurrentSystem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::GetForCurrentSystem();
+                }());
             }
             catch (...)
             {
@@ -2226,7 +2414,11 @@ namespace py::cpp::Windows::System::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::System::ProcessorArchitecture>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::IsArchitectureSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::IsArchitectureSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2258,7 +2450,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.CpuUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CpuUsage();
+            }());
         }
         catch (...)
         {
@@ -2284,7 +2480,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.MemoryUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MemoryUsage();
+            }());
         }
         catch (...)
         {
@@ -2310,7 +2510,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::PreferredArchitecture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::PreferredArchitecture();
+            }());
         }
         catch (...)
         {
@@ -2436,7 +2640,11 @@ namespace py::cpp::Windows::System::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReport();
+                }());
             }
             catch (...)
             {
@@ -2535,7 +2743,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailableSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailableSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -2561,7 +2773,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommittedSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommittedSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -2587,7 +2803,11 @@ namespace py::cpp::Windows::System::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalPhysicalSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalPhysicalSizeInBytes();
+            }());
         }
         catch (...)
         {

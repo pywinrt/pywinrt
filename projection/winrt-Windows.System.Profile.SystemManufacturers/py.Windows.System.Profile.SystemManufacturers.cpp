@@ -38,7 +38,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportAppLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportAppLink();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportLink();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportProvider();
+            }());
         }
         catch (...)
         {
@@ -177,7 +189,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation::SerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation::SerialNumber();
+            }());
         }
         catch (...)
         {
@@ -268,7 +284,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -294,7 +314,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperatingSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperatingSystem();
+            }());
         }
         catch (...)
         {
@@ -320,7 +344,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemFirmwareVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFirmwareVersion();
+            }());
         }
         catch (...)
         {
@@ -346,7 +374,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemHardwareVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemHardwareVersion();
+            }());
         }
         catch (...)
         {
@@ -372,7 +404,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemManufacturer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemManufacturer();
+            }());
         }
         catch (...)
         {
@@ -398,7 +434,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemProductName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemProductName();
+            }());
         }
         catch (...)
         {
@@ -424,7 +464,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemSku());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemSku();
+            }());
         }
         catch (...)
         {
@@ -515,7 +559,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalSystemEdition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalSystemEdition();
+            }());
         }
         catch (...)
         {
@@ -541,7 +589,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::OemSupportInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::OemSupportInfo();
+            }());
         }
         catch (...)
         {
@@ -567,7 +619,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalDeviceInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalDeviceInfo();
+            }());
         }
         catch (...)
         {

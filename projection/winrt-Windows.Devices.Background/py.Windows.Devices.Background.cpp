@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Devices::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Devices::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpectedDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpectedDuration();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::Devices::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::Devices::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {

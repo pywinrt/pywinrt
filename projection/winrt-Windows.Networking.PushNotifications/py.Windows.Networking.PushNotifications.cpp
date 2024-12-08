@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -75,7 +79,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationTime();
+            }());
         }
         catch (...)
         {
@@ -101,7 +109,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -129,7 +141,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::PushNotifications::PushNotificationChannel, winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.PushNotificationReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PushNotificationReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -157,7 +173,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PushNotificationReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PushNotificationReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -251,7 +271,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync();
+                }());
             }
             catch (...)
             {
@@ -289,7 +313,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -327,7 +355,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::CreatePushNotificationChannelForSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -363,7 +395,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -401,7 +437,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -435,7 +475,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::ChannelsRevoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::ChannelsRevoked(param0);
+            }());
         }
         catch (...)
         {
@@ -463,7 +507,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::ChannelsRevoked(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager::ChannelsRevoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -565,7 +613,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreatePushNotificationChannelForApplicationAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreatePushNotificationChannelForApplicationAsync();
+                }());
             }
             catch (...)
             {
@@ -603,7 +655,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreatePushNotificationChannelForApplicationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreatePushNotificationChannelForApplicationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -641,7 +697,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreatePushNotificationChannelForSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreatePushNotificationChannelForSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -680,7 +740,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -720,7 +784,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -752,7 +820,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -916,7 +988,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -950,7 +1026,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -977,7 +1057,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.BadgeNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BadgeNotification();
+            }());
         }
         catch (...)
         {
@@ -1003,7 +1087,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.NotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotificationType();
+            }());
         }
         catch (...)
         {
@@ -1029,7 +1117,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawNotification();
+            }());
         }
         catch (...)
         {
@@ -1055,7 +1147,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileNotification();
+            }());
         }
         catch (...)
         {
@@ -1081,7 +1177,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToastNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ToastNotification();
+            }());
         }
         catch (...)
         {
@@ -1179,7 +1279,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -1205,7 +1309,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChannelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelId();
+            }());
         }
         catch (...)
         {
@@ -1231,7 +1339,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1369,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentBytes();
+            }());
         }
         catch (...)
         {

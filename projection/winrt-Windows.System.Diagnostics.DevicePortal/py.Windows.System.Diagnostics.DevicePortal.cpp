@@ -44,7 +44,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection::GetForAppServiceConnection(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection::GetForAppServiceConnection(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                return py::convert(self->obj.GetServerMessageWebSocketForRequest(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetServerMessageWebSocketForRequest(param0);
+                }());
             }
             catch (...)
             {
@@ -122,7 +130,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -165,7 +177,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 auto param4 = py::convert_to<uint32_t>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Networking::Sockets::MessageWebSocketReceiveMode>(args, 5);
 
-                return py::convert(self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -203,7 +219,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                return py::convert(self->obj.GetServerStreamWebSocketForRequest(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetServerStreamWebSocketForRequest(param0);
+                }());
             }
             catch (...)
             {
@@ -244,7 +264,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 auto param2 = py::convert_to<uint32_t>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                return py::convert(self->obj.GetServerStreamWebSocketForRequest(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetServerStreamWebSocketForRequest(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -278,7 +302,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection, winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
         }
         catch (...)
         {
@@ -306,7 +334,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -335,7 +367,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection, winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -363,7 +399,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -491,7 +531,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -588,7 +632,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -620,7 +668,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestMessage();
+            }());
         }
         catch (...)
         {
@@ -646,7 +698,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseMessage();
+            }());
         }
         catch (...)
         {
@@ -672,7 +728,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWebSocketUpgradeRequest());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWebSocketUpgradeRequest();
+            }());
         }
         catch (...)
         {
@@ -698,7 +758,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebSocketProtocolsRequested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebSocketProtocolsRequested();
+            }());
         }
         catch (...)
         {

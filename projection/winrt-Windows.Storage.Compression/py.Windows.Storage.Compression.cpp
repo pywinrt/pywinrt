@@ -83,7 +83,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -120,7 +124,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DetachStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DetachStream();
+                }());
             }
             catch (...)
             {
@@ -156,7 +164,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FinishAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FinishAsync();
+                }());
             }
             catch (...)
             {
@@ -192,7 +204,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FlushAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FlushAsync();
+                }());
             }
             catch (...)
             {
@@ -230,7 +246,11 @@ namespace py::cpp::Windows::Storage::Compression
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -278,7 +298,11 @@ namespace py::cpp::Windows::Storage::Compression
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -382,7 +406,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -419,7 +447,11 @@ namespace py::cpp::Windows::Storage::Compression
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DetachStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DetachStream();
+                }());
             }
             catch (...)
             {
@@ -459,7 +491,11 @@ namespace py::cpp::Windows::Storage::Compression
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
 
-                return py::convert(self->obj.ReadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -507,7 +543,11 @@ namespace py::cpp::Windows::Storage::Compression
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

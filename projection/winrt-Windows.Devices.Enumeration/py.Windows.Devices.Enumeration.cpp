@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserPromptRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserPromptRequired();
+            }());
         }
         catch (...)
         {
@@ -191,7 +203,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromDeviceClass(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromDeviceClass(param0);
+                }());
             }
             catch (...)
             {
@@ -229,7 +245,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromDeviceClassId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromDeviceClassId(param0);
+                }());
             }
             catch (...)
             {
@@ -267,7 +287,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceAccessInformation::CreateFromId(param0);
+                }());
             }
             catch (...)
             {
@@ -299,7 +323,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentStatus();
+            }());
         }
         catch (...)
         {
@@ -325,7 +353,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserPromptRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserPromptRequired();
+            }());
         }
         catch (...)
         {
@@ -353,7 +385,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceAccessInformation, winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccessChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -381,7 +417,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccessChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccessChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -506,7 +546,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -599,7 +643,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -698,7 +746,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -737,7 +789,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -778,7 +834,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -818,7 +878,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -854,7 +918,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher();
+                }());
             }
             catch (...)
             {
@@ -892,7 +960,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0);
+                }());
             }
             catch (...)
             {
@@ -931,7 +1003,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -969,7 +1045,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0);
+                }());
             }
             catch (...)
             {
@@ -1010,7 +1090,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1050,7 +1134,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1086,7 +1174,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync();
+                }());
             }
             catch (...)
             {
@@ -1124,7 +1216,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1163,7 +1259,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1201,7 +1301,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1242,7 +1346,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1282,7 +1390,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1320,7 +1432,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::GetAqsFilterFromDeviceClass(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformation::GetAqsFilterFromDeviceClass(param0);
+                }());
             }
             catch (...)
             {
@@ -1356,7 +1472,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetGlyphThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGlyphThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -1392,7 +1512,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -1430,7 +1554,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>(args, 0);
 
-                self->obj.Update(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Update(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1463,7 +1591,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnclosureLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnclosureLocation();
+            }());
         }
         catch (...)
         {
@@ -1489,7 +1621,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1515,7 +1651,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDefault());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDefault();
+            }());
         }
         catch (...)
         {
@@ -1541,7 +1681,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1567,7 +1711,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1593,7 +1741,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1619,7 +1771,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1645,7 +1801,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pairing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pairing();
+            }());
         }
         catch (...)
         {
@@ -1794,7 +1954,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1832,7 +1996,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -1871,7 +2039,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Devices::Enumeration::DeviceInformation, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1910,7 +2082,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1922,6 +2098,7 @@ namespace py::cpp::Windows::Devices::Enumeration
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1954,7 +2131,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1991,7 +2172,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2004,6 +2189,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2017,7 +2203,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -2056,7 +2246,12 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -2069,7 +2264,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             winrt::com_array<winrt::Windows::Devices::Enumeration::DeviceInformation> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Devices::Enumeration::DeviceInformation>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -2160,7 +2359,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                self->obj.AddPairingSetMember(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddPairingSetMember(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2199,7 +2402,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
 
-                return py::convert(self->obj.PairAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2239,7 +2446,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>(args, 2);
 
-                return py::convert(self->obj.PairAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2278,7 +2489,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 1);
 
-                return py::convert(self->obj.PairAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2312,7 +2527,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing, winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PairingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PairingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2340,7 +2559,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PairingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PairingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2369,7 +2592,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing, winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PairingSetMembersRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PairingSetMembersRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2397,7 +2624,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PairingSetMembersRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PairingSetMembersRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2502,7 +2733,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PairAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync();
+                }());
             }
             catch (...)
             {
@@ -2541,7 +2776,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>(args, 1);
 
-                return py::convert(self->obj.PairAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2579,7 +2818,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 0);
 
-                return py::convert(self->obj.PairAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PairAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2617,7 +2860,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformationPairing::TryRegisterForAllInboundPairingRequests(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformationPairing::TryRegisterForAllInboundPairingRequests(param0);
+                }());
             }
             catch (...)
             {
@@ -2656,7 +2903,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformationPairing::TryRegisterForAllInboundPairingRequestsWithProtectionLevel(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Enumeration::DeviceInformationPairing::TryRegisterForAllInboundPairingRequestsWithProtectionLevel(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2692,7 +2943,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UnpairAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnpairAsync();
+                }());
             }
             catch (...)
             {
@@ -2724,7 +2979,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanPair());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanPair();
+            }());
         }
         catch (...)
         {
@@ -2750,7 +3009,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPaired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPaired();
+            }());
         }
         catch (...)
         {
@@ -2776,7 +3039,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Custom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Custom();
+            }());
         }
         catch (...)
         {
@@ -2802,7 +3069,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -2929,7 +3200,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2955,7 +3230,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2981,7 +3260,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3080,7 +3363,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                self->obj.Accept();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Accept();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3119,7 +3406,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AcceptWithAddress(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptWithAddress(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3158,7 +3449,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 0);
 
-                self->obj.AcceptWithPasswordCredential(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptWithPasswordCredential(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3197,7 +3492,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Accept(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Accept(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3234,7 +3533,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3266,7 +3569,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceInformation();
+            }());
         }
         catch (...)
         {
@@ -3292,7 +3599,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.PairingKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PairingKind();
+            }());
         }
         catch (...)
         {
@@ -3318,7 +3629,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pin();
+            }());
         }
         catch (...)
         {
@@ -3418,7 +3733,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevelUsed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevelUsed();
+            }());
         }
         catch (...)
         {
@@ -3444,7 +3763,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3538,7 +3861,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.PairingSetMembers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PairingSetMembers();
+            }());
         }
         catch (...)
         {
@@ -3564,7 +3891,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentDeviceInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentDeviceInformation();
+            }());
         }
         catch (...)
         {
@@ -3590,7 +3921,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3711,7 +4046,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                self->obj.Hide();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Hide();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3750,7 +4089,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.PickSingleDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3789,7 +4132,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                return py::convert(self->obj.PickSingleDeviceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleDeviceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3829,7 +4176,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePickerDisplayStatusOptions>(args, 2);
 
-                self->obj.SetDisplayStatus(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDisplayStatus(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3868,7 +4219,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                self->obj.Show(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3908,7 +4263,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                self->obj.Show(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3941,7 +4300,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appearance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appearance();
+            }());
         }
         catch (...)
         {
@@ -3967,7 +4330,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Filter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Filter();
+            }());
         }
         catch (...)
         {
@@ -3993,7 +4360,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedProperties();
+            }());
         }
         catch (...)
         {
@@ -4021,7 +4392,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DevicePicker, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DevicePickerDismissed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DevicePickerDismissed(param0);
+            }());
         }
         catch (...)
         {
@@ -4049,7 +4424,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DevicePickerDismissed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DevicePickerDismissed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4078,7 +4457,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DevicePicker, winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs>>(arg);
 
-            return py::convert(self->obj.DeviceSelected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceSelected(param0);
+            }());
         }
         catch (...)
         {
@@ -4106,7 +4489,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeviceSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceSelected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4135,7 +4522,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DevicePicker, winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs>>(arg);
 
-            return py::convert(self->obj.DisconnectButtonClicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisconnectButtonClicked(param0);
+            }());
         }
         catch (...)
         {
@@ -4163,7 +4554,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DisconnectButtonClicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisconnectButtonClicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4271,7 +4666,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -4305,7 +4704,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4332,7 +4735,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -4366,7 +4773,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.SelectedForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4393,7 +4804,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -4427,7 +4842,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.SelectedBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4454,7 +4873,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedAccentColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedAccentColor();
+            }());
         }
         catch (...)
         {
@@ -4488,7 +4911,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.SelectedAccentColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedAccentColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4515,7 +4942,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -4549,7 +4980,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.ForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4576,7 +5011,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -4610,7 +5049,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4637,7 +5080,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccentColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccentColor();
+            }());
         }
         catch (...)
         {
@@ -4671,7 +5118,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.AccentColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccentColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4771,7 +5222,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedDeviceClasses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedDeviceClasses();
+            }());
         }
         catch (...)
         {
@@ -4797,7 +5252,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedDeviceSelectors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedDeviceSelectors();
+            }());
         }
         catch (...)
         {
@@ -4891,7 +5350,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedDevice();
+            }());
         }
         catch (...)
         {
@@ -4988,7 +5451,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloneStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneStream();
+                }());
             }
             catch (...)
             {
@@ -5024,7 +5491,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5061,7 +5532,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FlushAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FlushAsync();
+                }());
             }
             catch (...)
             {
@@ -5099,7 +5574,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetInputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -5137,7 +5616,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetOutputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -5177,7 +5660,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
 
-                return py::convert(self->obj.ReadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5215,7 +5702,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5254,7 +5745,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5286,7 +5781,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -5312,7 +5811,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -5346,7 +5849,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5373,7 +5880,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRead();
+            }());
         }
         catch (...)
         {
@@ -5399,7 +5910,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanWrite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanWrite();
+            }());
         }
         catch (...)
         {
@@ -5425,7 +5940,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -5467,7 +5986,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -5551,7 +6074,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -5650,7 +6177,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Enumeration::DeviceWatcherEventKind>>(args, 0);
 
-                return py::convert(self->obj.GetBackgroundTrigger(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBackgroundTrigger(param0);
+                }());
             }
             catch (...)
             {
@@ -5686,7 +6217,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5723,7 +6258,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5756,7 +6295,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -5784,7 +6327,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceWatcher, winrt::Windows::Devices::Enumeration::DeviceInformation>>(arg);
 
-            return py::convert(self->obj.Added(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Added(param0);
+            }());
         }
         catch (...)
         {
@@ -5812,7 +6359,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Added(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Added(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5841,7 +6392,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -5869,7 +6424,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5898,7 +6457,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceWatcher, winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -5926,7 +6489,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5955,7 +6522,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Stopped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped(param0);
+            }());
         }
         catch (...)
         {
@@ -5983,7 +6554,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Stopped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Stopped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6012,7 +6587,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceWatcher, winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>>(arg);
 
-            return py::convert(self->obj.Updated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updated(param0);
+            }());
         }
         catch (...)
         {
@@ -6040,7 +6619,11 @@ namespace py::cpp::Windows::Devices::Enumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Updated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Updated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6147,7 +6730,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceInformation();
+            }());
         }
         catch (...)
         {
@@ -6173,7 +6760,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceInformationUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceInformationUpdate();
+            }());
         }
         catch (...)
         {
@@ -6199,7 +6790,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -6294,7 +6889,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceWatcherEvents());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceWatcherEvents();
+            }());
         }
         catch (...)
         {
@@ -6387,7 +6986,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.InDock());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InDock();
+            }());
         }
         catch (...)
         {
@@ -6413,7 +7016,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.InLid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InLid();
+            }());
         }
         catch (...)
         {
@@ -6439,7 +7046,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Panel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Panel();
+            }());
         }
         catch (...)
         {
@@ -6465,7 +7076,11 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegreesClockwise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationAngleInDegreesClockwise();
+            }());
         }
         catch (...)
         {

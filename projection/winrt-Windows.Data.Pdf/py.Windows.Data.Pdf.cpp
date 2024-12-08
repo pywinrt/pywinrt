@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Data::Pdf
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetPage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPage(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Data::Pdf
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Pdf::PdfDocument::LoadFromFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Data::Pdf
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Pdf::PdfDocument::LoadFromFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -159,7 +171,11 @@ namespace py::cpp::Windows::Data::Pdf
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Pdf::PdfDocument::LoadFromStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -198,7 +214,11 @@ namespace py::cpp::Windows::Data::Pdf
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Pdf::PdfDocument::LoadFromStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPasswordProtected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPasswordProtected();
+            }());
         }
         catch (...)
         {
@@ -256,7 +280,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageCount();
+            }());
         }
         catch (...)
         {
@@ -384,7 +412,11 @@ namespace py::cpp::Windows::Data::Pdf
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -421,7 +453,11 @@ namespace py::cpp::Windows::Data::Pdf
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PreparePageAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PreparePageAsync();
+                }());
             }
             catch (...)
             {
@@ -459,7 +495,11 @@ namespace py::cpp::Windows::Data::Pdf
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.RenderToStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RenderToStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -498,7 +538,11 @@ namespace py::cpp::Windows::Data::Pdf
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Pdf::PdfPageRenderOptions>(args, 1);
 
-                return py::convert(self->obj.RenderToStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RenderToStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -530,7 +574,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.Dimensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Dimensions();
+            }());
         }
         catch (...)
         {
@@ -556,7 +604,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.Index());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Index();
+            }());
         }
         catch (...)
         {
@@ -582,7 +634,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredZoom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredZoom();
+            }());
         }
         catch (...)
         {
@@ -608,7 +664,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rotation();
+            }());
         }
         catch (...)
         {
@@ -634,7 +694,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -676,7 +740,11 @@ namespace py::cpp::Windows::Data::Pdf
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -756,7 +824,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.ArtBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ArtBox();
+            }());
         }
         catch (...)
         {
@@ -782,7 +854,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.BleedBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BleedBox();
+            }());
         }
         catch (...)
         {
@@ -808,7 +884,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.CropBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CropBox();
+            }());
         }
         catch (...)
         {
@@ -834,7 +914,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaBox();
+            }());
         }
         catch (...)
         {
@@ -860,7 +944,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrimBox();
+            }());
         }
         catch (...)
         {
@@ -979,7 +1067,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceRect();
+            }());
         }
         catch (...)
         {
@@ -1013,7 +1105,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.SourceRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1040,7 +1136,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIgnoringHighContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIgnoringHighContrast();
+            }());
         }
         catch (...)
         {
@@ -1074,7 +1174,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIgnoringHighContrast(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsIgnoringHighContrast(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1101,7 +1205,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.DestinationWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DestinationWidth();
+            }());
         }
         catch (...)
         {
@@ -1135,7 +1243,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.DestinationWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DestinationWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1162,7 +1274,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.DestinationHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DestinationHeight();
+            }());
         }
         catch (...)
         {
@@ -1196,7 +1312,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.DestinationHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DestinationHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1223,7 +1343,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapEncoderId();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1381,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.BitmapEncoderId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitmapEncoderId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1284,7 +1412,11 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -1318,7 +1450,11 @@ namespace py::cpp::Windows::Data::Pdf
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)

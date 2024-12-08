@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloneStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneStream();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FlushAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FlushAsync();
+                }());
             }
             catch (...)
             {
@@ -153,7 +165,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetInputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -191,7 +207,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetOutputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
 
-                return py::convert(self->obj.ReadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -269,7 +293,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -308,7 +336,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -340,7 +372,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimedMetadataTracks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimedMetadataTracks();
+            }());
         }
         catch (...)
         {
@@ -366,7 +402,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Markers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Markers();
+            }());
         }
         catch (...)
         {
@@ -392,7 +432,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -418,7 +462,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -452,7 +500,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -479,7 +531,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRead();
+            }());
         }
         catch (...)
         {
@@ -505,7 +561,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanWrite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanWrite();
+            }());
         }
         catch (...)
         {
@@ -531,7 +591,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -573,7 +637,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -685,7 +753,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -724,7 +796,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SynthesizeSsmlToStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SynthesizeSsmlToStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -762,7 +838,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SynthesizeTextToStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SynthesizeTextToStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -800,7 +880,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
                 auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::TrySetDefaultVoiceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::TrySetDefaultVoiceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -832,7 +916,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Voice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Voice();
+            }());
         }
         catch (...)
         {
@@ -866,7 +954,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>(arg);
 
-            self->obj.Voice(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Voice(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -893,7 +985,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -919,7 +1015,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::AllVoices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::AllVoices();
+            }());
         }
         catch (...)
         {
@@ -945,7 +1045,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::DefaultVoice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::DefaultVoice();
+            }());
         }
         catch (...)
         {
@@ -987,7 +1091,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1091,7 +1199,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeWordBoundaryMetadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeWordBoundaryMetadata();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1237,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeWordBoundaryMetadata(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeWordBoundaryMetadata(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1152,7 +1268,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeSentenceBoundaryMetadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeSentenceBoundaryMetadata();
+            }());
         }
         catch (...)
         {
@@ -1186,7 +1306,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeSentenceBoundaryMetadata(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeSentenceBoundaryMetadata(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1213,7 +1337,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeakingRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpeakingRate();
+            }());
         }
         catch (...)
         {
@@ -1247,7 +1375,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.SpeakingRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpeakingRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1274,7 +1406,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioVolume();
+            }());
         }
         catch (...)
         {
@@ -1308,7 +1444,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.AudioVolume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioVolume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1335,7 +1475,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioPitch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioPitch();
+            }());
         }
         catch (...)
         {
@@ -1369,7 +1513,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.AudioPitch(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioPitch(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1396,7 +1544,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.PunctuationSilence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PunctuationSilence();
+            }());
         }
         catch (...)
         {
@@ -1430,7 +1582,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>(arg);
 
-            self->obj.PunctuationSilence(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PunctuationSilence(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1457,7 +1613,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppendedSilence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppendedSilence();
+            }());
         }
         catch (...)
         {
@@ -1491,7 +1651,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>(arg);
 
-            self->obj.AppendedSilence(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppendedSilence(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1591,7 +1755,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1617,7 +1785,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1643,7 +1815,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gender());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gender();
+            }());
         }
         catch (...)
         {
@@ -1669,7 +1845,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1695,7 +1875,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {

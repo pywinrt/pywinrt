@@ -108,7 +108,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPlaybackInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPlaybackInfo();
+                }());
             }
             catch (...)
             {
@@ -144,7 +148,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTimelineProperties());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTimelineProperties();
+                }());
             }
             catch (...)
             {
@@ -182,7 +190,11 @@ namespace py::cpp::Windows::Media::Control
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaPlaybackAutoRepeatMode>(args, 0);
 
-                return py::convert(self->obj.TryChangeAutoRepeatModeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangeAutoRepeatModeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -218,7 +230,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryChangeChannelDownAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangeChannelDownAsync();
+                }());
             }
             catch (...)
             {
@@ -254,7 +270,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryChangeChannelUpAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangeChannelUpAsync();
+                }());
             }
             catch (...)
             {
@@ -292,7 +312,11 @@ namespace py::cpp::Windows::Media::Control
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.TryChangePlaybackPositionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangePlaybackPositionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -330,7 +354,11 @@ namespace py::cpp::Windows::Media::Control
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.TryChangePlaybackRateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangePlaybackRateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -368,7 +396,11 @@ namespace py::cpp::Windows::Media::Control
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.TryChangeShuffleActiveAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryChangeShuffleActiveAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -404,7 +436,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryFastForwardAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryFastForwardAsync();
+                }());
             }
             catch (...)
             {
@@ -440,7 +476,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryGetMediaPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetMediaPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -476,7 +516,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryPauseAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryPauseAsync();
+                }());
             }
             catch (...)
             {
@@ -512,7 +556,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryPlayAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryPlayAsync();
+                }());
             }
             catch (...)
             {
@@ -548,7 +596,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryRecordAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRecordAsync();
+                }());
             }
             catch (...)
             {
@@ -584,7 +636,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryRewindAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRewindAsync();
+                }());
             }
             catch (...)
             {
@@ -620,7 +676,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TrySkipNextAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySkipNextAsync();
+                }());
             }
             catch (...)
             {
@@ -656,7 +716,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TrySkipPreviousAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySkipPreviousAsync();
+                }());
             }
             catch (...)
             {
@@ -692,7 +756,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryStopAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryStopAsync();
+                }());
             }
             catch (...)
             {
@@ -728,7 +796,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryTogglePlayPauseAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryTogglePlayPauseAsync();
+                }());
             }
             catch (...)
             {
@@ -760,7 +832,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceAppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceAppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -788,7 +864,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.MediaPropertiesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaPropertiesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -816,7 +896,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MediaPropertiesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaPropertiesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -845,7 +929,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PlaybackInfoChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackInfoChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -873,7 +961,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PlaybackInfoChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaybackInfoChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -902,7 +994,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.TimelinePropertiesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimelinePropertiesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -930,7 +1026,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TimelinePropertiesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimelinePropertiesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1052,7 +1152,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentSession());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentSession();
+                }());
             }
             catch (...)
             {
@@ -1088,7 +1192,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSessions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSessions();
+                }());
             }
             catch (...)
             {
@@ -1124,7 +1232,11 @@ namespace py::cpp::Windows::Media::Control
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager::RequestAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager::RequestAsync();
+                }());
             }
             catch (...)
             {
@@ -1158,7 +1270,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager, winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.CurrentSessionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentSessionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1186,7 +1302,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CurrentSessionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CurrentSessionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1215,7 +1335,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager, winrt::Windows::Media::Control::SessionsChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SessionsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1243,7 +1367,11 @@ namespace py::cpp::Windows::Media::Control
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SessionsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SessionsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1368,7 +1496,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlbumArtist());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlbumArtist();
+            }());
         }
         catch (...)
         {
@@ -1394,7 +1526,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlbumTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlbumTitle();
+            }());
         }
         catch (...)
         {
@@ -1420,7 +1556,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlbumTrackCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlbumTrackCount();
+            }());
         }
         catch (...)
         {
@@ -1446,7 +1586,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Artist());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Artist();
+            }());
         }
         catch (...)
         {
@@ -1472,7 +1616,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Genres());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Genres();
+            }());
         }
         catch (...)
         {
@@ -1498,7 +1646,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackType();
+            }());
         }
         catch (...)
         {
@@ -1524,7 +1676,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtitle();
+            }());
         }
         catch (...)
         {
@@ -1550,7 +1706,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -1576,7 +1736,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -1602,7 +1766,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrackNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrackNumber();
+            }());
         }
         catch (...)
         {
@@ -1704,7 +1872,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsChannelDownEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsChannelDownEnabled();
+            }());
         }
         catch (...)
         {
@@ -1730,7 +1902,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsChannelUpEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsChannelUpEnabled();
+            }());
         }
         catch (...)
         {
@@ -1756,7 +1932,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFastForwardEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFastForwardEnabled();
+            }());
         }
         catch (...)
         {
@@ -1782,7 +1962,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNextEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNextEnabled();
+            }());
         }
         catch (...)
         {
@@ -1808,7 +1992,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPauseEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPauseEnabled();
+            }());
         }
         catch (...)
         {
@@ -1834,7 +2022,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlayEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlayEnabled();
+            }());
         }
         catch (...)
         {
@@ -1860,7 +2052,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlayPauseToggleEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlayPauseToggleEnabled();
+            }());
         }
         catch (...)
         {
@@ -1886,7 +2082,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlaybackPositionEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlaybackPositionEnabled();
+            }());
         }
         catch (...)
         {
@@ -1912,7 +2112,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPlaybackRateEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlaybackRateEnabled();
+            }());
         }
         catch (...)
         {
@@ -1938,7 +2142,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPreviousEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPreviousEnabled();
+            }());
         }
         catch (...)
         {
@@ -1964,7 +2172,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRecordEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRecordEnabled();
+            }());
         }
         catch (...)
         {
@@ -1990,7 +2202,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRepeatEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRepeatEnabled();
+            }());
         }
         catch (...)
         {
@@ -2016,7 +2232,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRewindEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRewindEnabled();
+            }());
         }
         catch (...)
         {
@@ -2042,7 +2262,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsShuffleEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsShuffleEnabled();
+            }());
         }
         catch (...)
         {
@@ -2068,7 +2292,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStopEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStopEnabled();
+            }());
         }
         catch (...)
         {
@@ -2175,7 +2403,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoRepeatMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoRepeatMode();
+            }());
         }
         catch (...)
         {
@@ -2201,7 +2433,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controls());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controls();
+            }());
         }
         catch (...)
         {
@@ -2227,7 +2463,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsShuffleActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsShuffleActive();
+            }());
         }
         catch (...)
         {
@@ -2253,7 +2493,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackRate();
+            }());
         }
         catch (...)
         {
@@ -2279,7 +2523,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackStatus();
+            }());
         }
         catch (...)
         {
@@ -2305,7 +2553,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackType();
+            }());
         }
         catch (...)
         {
@@ -2403,7 +2655,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndTime();
+            }());
         }
         catch (...)
         {
@@ -2429,7 +2685,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUpdatedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUpdatedTime();
+            }());
         }
         catch (...)
         {
@@ -2455,7 +2715,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSeekTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSeekTime();
+            }());
         }
         catch (...)
         {
@@ -2481,7 +2745,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinSeekTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinSeekTime();
+            }());
         }
         catch (...)
         {
@@ -2507,7 +2775,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2533,7 +2805,11 @@ namespace py::cpp::Windows::Media::Control
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {

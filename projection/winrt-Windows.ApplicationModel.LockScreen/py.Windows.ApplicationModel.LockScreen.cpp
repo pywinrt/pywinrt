@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                     return nullptr;
                 }
 
-                self->obj.RequestUnlock();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestUnlock();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -113,7 +121,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost, winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>>(arg);
 
-            return py::convert(self->obj.Unlocking(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unlocking(param0);
+            }());
         }
         catch (...)
         {
@@ -141,7 +153,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Unlocking(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unlocking(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -267,7 +283,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                     return nullptr;
                 }
 
-                self->obj.LaunchApp();
+                {
+                    auto _gil = release_gil();
+                    self->obj.LaunchApp();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -300,7 +320,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutomationName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutomationName();
+            }());
         }
         catch (...)
         {
@@ -326,7 +350,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Glyph());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Glyph();
+            }());
         }
         catch (...)
         {
@@ -352,7 +380,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo();
+            }());
         }
         catch (...)
         {
@@ -378,7 +410,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Number());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Number();
+            }());
         }
         catch (...)
         {
@@ -475,7 +511,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlarmIcon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlarmIcon();
+            }());
         }
         catch (...)
         {
@@ -501,7 +541,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Badges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Badges();
+            }());
         }
         catch (...)
         {
@@ -527,7 +571,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetailText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailText();
+            }());
         }
         catch (...)
         {
@@ -553,7 +601,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockScreenImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockScreenImage();
+            }());
         }
         catch (...)
         {
@@ -581,7 +633,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AlarmIconChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlarmIconChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -609,7 +665,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AlarmIconChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlarmIconChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -638,7 +698,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.BadgesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BadgesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -666,7 +730,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BadgesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BadgesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -695,7 +763,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DetailTextChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailTextChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -723,7 +795,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DetailTextChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DetailTextChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -752,7 +828,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LockScreenImageChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockScreenImageChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -780,7 +860,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LockScreenImageChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LockScreenImageChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -889,7 +973,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -993,7 +1081,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1025,7 +1117,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {

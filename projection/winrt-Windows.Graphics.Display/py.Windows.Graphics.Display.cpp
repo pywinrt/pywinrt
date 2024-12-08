@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::AdvancedColorKind>(args, 0);
 
-                return py::convert(self->obj.IsAdvancedColorKindAvailable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAdvancedColorKindAvailable(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::HdrMetadataFormat>(args, 0);
 
-                return py::convert(self->obj.IsHdrMetadataFormatCurrentlySupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsHdrMetadataFormatCurrentlySupported(param0);
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.BluePrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BluePrimary();
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentAdvancedColorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentAdvancedColorKind();
+            }());
         }
         catch (...)
         {
@@ -166,7 +182,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.GreenPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GreenPrimary();
+            }());
         }
         catch (...)
         {
@@ -192,7 +212,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAverageFullFrameLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAverageFullFrameLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -218,7 +242,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -244,7 +272,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -270,7 +302,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RedPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RedPrimary();
+            }());
         }
         catch (...)
         {
@@ -296,7 +332,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.SdrWhiteLevelInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SdrWhiteLevelInNits();
+            }());
         }
         catch (...)
         {
@@ -322,7 +362,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.WhitePoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WhitePoint();
+            }());
         }
         catch (...)
         {
@@ -429,7 +473,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::GetDefaultForSystem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverride::GetDefaultForSystem();
+                }());
             }
             catch (...)
             {
@@ -465,7 +513,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverride::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -503,7 +555,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>(args, 0);
 
-                return py::convert(self->obj.GetLevelForScenario(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLevelForScenario(param0);
+                }());
             }
             catch (...)
             {
@@ -541,7 +597,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::BrightnessOverride>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::SaveForSystemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverride::SaveForSystemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -580,7 +640,11 @@ namespace py::cpp::Windows::Graphics::Display
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>(args, 1);
 
-                self->obj.SetBrightnessLevel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBrightnessLevel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -620,7 +684,11 @@ namespace py::cpp::Windows::Graphics::Display
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>(args, 1);
 
-                self->obj.SetBrightnessScenario(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetBrightnessScenario(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -657,7 +725,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                self->obj.StartOverride();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartOverride();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -694,7 +766,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                self->obj.StopOverride();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopOverride();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -727,7 +803,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessLevel();
+            }());
         }
         catch (...)
         {
@@ -753,7 +833,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOverrideActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverrideActive();
+            }());
         }
         catch (...)
         {
@@ -779,7 +863,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSupported();
+            }());
         }
         catch (...)
         {
@@ -807,7 +895,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.BrightnessLevelChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessLevelChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -835,7 +927,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BrightnessLevelChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrightnessLevelChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -864,7 +960,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsOverrideActiveChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverrideActiveChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -892,7 +992,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsOverrideActiveChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOverrideActiveChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -921,7 +1025,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsSupportedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSupportedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -949,7 +1057,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsSupportedChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSupportedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1090,7 +1202,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromDisplayBrightnessOverrideScenario(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromDisplayBrightnessOverrideScenario(param0);
+                }());
             }
             catch (...)
             {
@@ -1128,7 +1244,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromLevel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromLevel(param0);
+                }());
             }
             catch (...)
             {
@@ -1166,7 +1286,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<float>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromNits(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromNits(param0);
+                }());
             }
             catch (...)
             {
@@ -1198,7 +1322,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredLevel();
+            }());
         }
         catch (...)
         {
@@ -1224,7 +1352,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredNits();
+            }());
         }
         catch (...)
         {
@@ -1352,7 +1484,11 @@ namespace py::cpp::Windows::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayColorOverrideScenario>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Display::ColorOverrideSettings::CreateFromDisplayColorOverrideScenario(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::ColorOverrideSettings::CreateFromDisplayColorOverrideScenario(param0);
+                }());
             }
             catch (...)
             {
@@ -1384,7 +1520,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredDisplayColorOverrideScenario());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredDisplayColorOverrideScenario();
+            }());
         }
         catch (...)
         {
@@ -1507,7 +1647,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentDisplayEnhancementOverrideCapabilities());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentDisplayEnhancementOverrideCapabilities();
+                }());
             }
             catch (...)
             {
@@ -1543,7 +1687,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::DisplayEnhancementOverride::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::DisplayEnhancementOverride::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -1579,7 +1727,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                self->obj.RequestOverride();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestOverride();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1616,7 +1768,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                self->obj.StopOverride();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopOverride();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1649,7 +1805,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorOverrideSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorOverrideSettings();
+            }());
         }
         catch (...)
         {
@@ -1683,7 +1843,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::ColorOverrideSettings>(arg);
 
-            self->obj.ColorOverrideSettings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorOverrideSettings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1710,7 +1874,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessOverrideSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessOverrideSettings();
+            }());
         }
         catch (...)
         {
@@ -1744,7 +1912,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>(arg);
 
-            self->obj.BrightnessOverrideSettings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrightnessOverrideSettings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1771,7 +1943,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanOverride();
+            }());
         }
         catch (...)
         {
@@ -1797,7 +1973,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOverrideActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverrideActive();
+            }());
         }
         catch (...)
         {
@@ -1825,7 +2005,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CanOverrideChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanOverrideChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1853,7 +2037,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CanOverrideChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanOverrideChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1882,7 +2070,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1910,7 +2102,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1939,7 +2135,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsOverrideActiveChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverrideActiveChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1967,7 +2167,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsOverrideActiveChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOverrideActiveChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2103,7 +2307,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedNitRanges());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedNitRanges();
+                }());
             }
             catch (...)
             {
@@ -2135,7 +2343,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBrightnessControlSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBrightnessControlSupported();
+            }());
         }
         catch (...)
         {
@@ -2161,7 +2373,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBrightnessNitsControlSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBrightnessNitsControlSupported();
+            }());
         }
         catch (...)
         {
@@ -2256,7 +2472,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.Capabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Capabilities();
+            }());
         }
         catch (...)
         {
@@ -2353,7 +2573,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAdvancedColorInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAdvancedColorInfo();
+                }());
             }
             catch (...)
             {
@@ -2389,7 +2613,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetColorProfileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetColorProfileAsync();
+                }());
             }
             catch (...)
             {
@@ -2425,7 +2653,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::DisplayInformation::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -2457,7 +2689,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentOrientation();
+            }());
         }
         catch (...)
         {
@@ -2483,7 +2719,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogicalDpi());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogicalDpi();
+            }());
         }
         catch (...)
         {
@@ -2509,7 +2749,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeOrientation();
+            }());
         }
         catch (...)
         {
@@ -2535,7 +2779,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawDpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawDpiX();
+            }());
         }
         catch (...)
         {
@@ -2561,7 +2809,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawDpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawDpiY();
+            }());
         }
         catch (...)
         {
@@ -2587,7 +2839,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolutionScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolutionScale();
+            }());
         }
         catch (...)
         {
@@ -2613,7 +2869,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.StereoEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StereoEnabled();
+            }());
         }
         catch (...)
         {
@@ -2639,7 +2899,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawPixelsPerViewPixel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawPixelsPerViewPixel();
+            }());
         }
         catch (...)
         {
@@ -2665,7 +2929,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DiagonalSizeInInches());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiagonalSizeInInches();
+            }());
         }
         catch (...)
         {
@@ -2691,7 +2959,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScreenHeightInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenHeightInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -2717,7 +2989,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScreenWidthInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenWidthInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -2743,7 +3019,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences();
+            }());
         }
         catch (...)
         {
@@ -2777,7 +3057,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2806,7 +3090,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ColorProfileChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorProfileChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2834,7 +3122,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ColorProfileChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorProfileChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2863,7 +3155,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DpiChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2891,7 +3187,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DpiChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DpiChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2920,7 +3220,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.OrientationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2948,7 +3252,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.OrientationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OrientationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2977,7 +3285,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StereoEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StereoEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3005,7 +3317,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StereoEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StereoEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3034,7 +3350,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AdvancedColorInfoChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvancedColorInfoChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3062,7 +3382,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AdvancedColorInfoChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdvancedColorInfoChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3091,7 +3415,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0);
+            }());
         }
         catch (...)
         {
@@ -3119,7 +3447,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3260,7 +3592,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::GetColorProfileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::DisplayProperties::GetColorProfileAsync();
+                }());
             }
             catch (...)
             {
@@ -3292,7 +3628,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3666,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3353,7 +3697,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::CurrentOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::CurrentOrientation();
+            }());
         }
         catch (...)
         {
@@ -3379,7 +3727,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpi());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpi();
+            }());
         }
         catch (...)
         {
@@ -3405,7 +3757,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::NativeOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::NativeOrientation();
+            }());
         }
         catch (...)
         {
@@ -3431,7 +3787,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::ResolutionScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::ResolutionScale();
+            }());
         }
         catch (...)
         {
@@ -3457,7 +3817,11 @@ namespace py::cpp::Windows::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabled();
+            }());
         }
         catch (...)
         {
@@ -3485,7 +3849,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3513,7 +3881,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3542,7 +3914,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0);
+            }());
         }
         catch (...)
         {
@@ -3570,7 +3946,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3599,7 +3979,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3627,7 +4011,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3656,7 +4044,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3684,7 +4076,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3713,7 +4109,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3741,7 +4141,11 @@ namespace py::cpp::Windows::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3853,7 +4257,11 @@ namespace py::cpp::Windows::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::DisplayServices::FindAll());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::DisplayServices::FindAll();
+                }());
             }
             catch (...)
             {

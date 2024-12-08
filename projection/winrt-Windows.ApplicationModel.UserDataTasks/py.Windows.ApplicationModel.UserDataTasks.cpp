@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.RegenerationProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegenerationProperties();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>(arg);
 
-            self->obj.RegenerationProperties(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RegenerationProperties(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskPriority>(arg);
 
-            self->obj.Priority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Priority(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletedDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletedDate();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.CompletedDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompletedDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.DueDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DueDate();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.DueDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DueDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetailsKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailsKind();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDetailsKind>(arg);
 
-            self->obj.DetailsKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DetailsKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartDate();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.StartDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Details(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Details(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subject(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subject(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sensitivity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sensitivity();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskSensitivity>(arg);
 
-            self->obj.Sensitivity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Sensitivity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reminder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reminder();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Reminder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Reminder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecurrenceProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecurrenceProperties();
+            }());
         }
         catch (...)
         {
@@ -765,7 +857,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>(arg);
 
-            self->obj.RecurrenceProperties(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RecurrenceProperties(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -792,7 +888,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -818,7 +918,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -844,7 +948,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListId();
+            }());
         }
         catch (...)
         {
@@ -951,7 +1059,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tasks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tasks();
+            }());
         }
         catch (...)
         {
@@ -1048,7 +1160,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -1086,7 +1202,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1124,7 +1244,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1160,7 +1284,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTaskReader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTaskReader();
+                }());
             }
             catch (...)
             {
@@ -1198,7 +1326,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>(args, 0);
 
-                return py::convert(self->obj.GetTaskReader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTaskReader(param0);
+                }());
             }
             catch (...)
             {
@@ -1234,7 +1366,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RegisterSyncManagerAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterSyncManagerAsync();
+                }());
             }
             catch (...)
             {
@@ -1270,7 +1406,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -1308,7 +1448,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>(args, 0);
 
-                return py::convert(self->obj.SaveTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1340,7 +1484,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppWriteAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppWriteAccess();
+            }());
         }
         catch (...)
         {
@@ -1374,7 +1522,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppWriteAccess>(arg);
 
-            self->obj.OtherAppWriteAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppWriteAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1401,7 +1553,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.OtherAppReadAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OtherAppReadAccess();
+            }());
         }
         catch (...)
         {
@@ -1435,7 +1591,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppReadAccess>(arg);
 
-            self->obj.OtherAppReadAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OtherAppReadAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1462,7 +1622,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1496,7 +1660,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1523,7 +1691,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1549,7 +1721,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.LimitedWriteOperations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LimitedWriteOperations();
+            }());
         }
         catch (...)
         {
@@ -1575,7 +1751,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceDisplayName();
+            }());
         }
         catch (...)
         {
@@ -1601,7 +1781,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.SyncManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncManager();
+            }());
         }
         catch (...)
         {
@@ -1627,7 +1811,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDataAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDataAccountId();
+            }());
         }
         catch (...)
         {
@@ -1741,7 +1929,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryCompleteTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCompleteTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1779,7 +1971,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>(args, 0);
 
-                return py::convert(self->obj.TryCreateOrUpdateTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCreateOrUpdateTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1817,7 +2013,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryDeleteTaskAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryDeleteTaskAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1855,7 +2055,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TrySkipOccurrenceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySkipOccurrenceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1961,7 +2165,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SyncAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SyncAsync();
+                }());
             }
             catch (...)
             {
@@ -1993,7 +2201,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2027,7 +2239,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2054,7 +2270,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastSuccessfulSyncTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastSuccessfulSyncTime();
+            }());
         }
         catch (...)
         {
@@ -2088,7 +2308,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastSuccessfulSyncTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastSuccessfulSyncTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2115,7 +2339,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastAttemptedSyncTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastAttemptedSyncTime();
+            }());
         }
         catch (...)
         {
@@ -2149,7 +2377,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastAttemptedSyncTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastAttemptedSyncTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2178,7 +2410,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SyncStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2206,7 +2442,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SyncStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2309,7 +2549,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -2347,7 +2591,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -2385,7 +2633,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStoreAccessType>(args, 0);
 
-                return py::convert(self->obj.RequestStoreAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStoreAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2417,7 +2669,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -2560,7 +2816,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.SortProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SortProperty();
+            }());
         }
         catch (...)
         {
@@ -2594,7 +2854,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQuerySortProperty>(arg);
 
-            self->obj.SortProperty(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SortProperty(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2621,7 +2885,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2655,7 +2923,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryKind>(arg);
 
-            self->obj.Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2754,7 +3026,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadBatchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadBatchAsync();
+                }());
             }
             catch (...)
             {
@@ -2875,7 +3151,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.WeekOfMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WeekOfMonth();
+            }());
         }
         catch (...)
         {
@@ -2909,7 +3189,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth>>(arg);
 
-            self->obj.WeekOfMonth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WeekOfMonth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2936,7 +3220,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Until());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Until();
+            }());
         }
         catch (...)
         {
@@ -2970,7 +3258,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Until(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Until(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2997,7 +3289,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -3031,7 +3327,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceUnit>(arg);
 
-            self->obj.Unit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3058,7 +3358,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Occurrences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Occurrences();
+            }());
         }
         catch (...)
         {
@@ -3092,7 +3396,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.Occurrences(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Occurrences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3119,7 +3427,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Month());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Month();
+            }());
         }
         catch (...)
         {
@@ -3153,7 +3465,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.Month(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Month(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3180,7 +3496,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -3214,7 +3534,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Interval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Interval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3241,7 +3565,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.DaysOfWeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DaysOfWeek();
+            }());
         }
         catch (...)
         {
@@ -3275,7 +3603,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek>>(arg);
 
-            self->obj.DaysOfWeek(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DaysOfWeek(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3302,7 +3634,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Day());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Day();
+            }());
         }
         catch (...)
         {
@@ -3336,7 +3672,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.Day(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Day(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3459,7 +3799,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Until());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Until();
+            }());
         }
         catch (...)
         {
@@ -3493,7 +3837,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Until(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Until(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3520,7 +3868,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -3554,7 +3906,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit>(arg);
 
-            self->obj.Unit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3581,7 +3937,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Occurrences());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Occurrences();
+            }());
         }
         catch (...)
         {
@@ -3615,7 +3975,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.Occurrences(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Occurrences(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3642,7 +4006,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -3676,7 +4044,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Interval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Interval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3779,7 +4151,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateListAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateListAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3818,7 +4194,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateListAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateListAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3854,7 +4234,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FindListsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindListsAsync();
+                }());
             }
             catch (...)
             {
@@ -3892,7 +4276,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetListAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetListAsync(param0);
+                }());
             }
             catch (...)
             {

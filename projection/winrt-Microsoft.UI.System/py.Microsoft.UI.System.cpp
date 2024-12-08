@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::UI::System
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::System::ThemeSettings::CreateForWindowId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::System::ThemeSettings::CreateForWindowId(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Microsoft::UI::System
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighContrast();
+            }());
         }
         catch (...)
         {
@@ -102,7 +110,11 @@ namespace py::cpp::Microsoft::UI::System
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighContrastScheme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighContrastScheme();
+            }());
         }
         catch (...)
         {
@@ -130,7 +142,11 @@ namespace py::cpp::Microsoft::UI::System
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::System::ThemeSettings, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -158,7 +174,11 @@ namespace py::cpp::Microsoft::UI::System
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

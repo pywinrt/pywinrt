@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Location();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Location(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Location(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.CategoryDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CategoryDescription();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CategoryDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CategoryDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Category(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Category(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPicture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPicture();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(arg);
 
-            self->obj.DisplayPicture(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayPicture(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -432,7 +472,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::RequestSetAsActiveCallOriginAppAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::RequestSetAsActiveCallOriginAppAsync();
+                }());
             }
             catch (...)
             {
@@ -471,7 +515,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>(args, 1);
 
-                winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::SetCallOrigin(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::SetCallOrigin(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -508,7 +556,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::ShowPhoneCallOriginSettingsUI();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::ShowPhoneCallOriginSettingsUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -541,7 +593,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsCurrentAppActiveCallOriginApp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsCurrentAppActiveCallOriginApp();
+            }());
         }
         catch (...)
         {
@@ -567,7 +623,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsSupported();
+            }());
         }
         catch (...)
         {

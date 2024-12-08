@@ -81,7 +81,11 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.ProtectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProtectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +124,11 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
-                return py::convert(self->obj.ProtectStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProtectStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -158,7 +166,11 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.UnprotectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnprotectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -197,7 +209,11 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
-                return py::convert(self->obj.UnprotectStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnprotectStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {

@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUnsupportedValues());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUnsupportedValues();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -100,7 +108,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -201,7 +213,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateBoolean(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateBoolean(param0);
+                }());
             }
             catch (...)
             {
@@ -239,7 +255,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<bool>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateBooleanArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateBooleanArray(param0);
+                }());
             }
             catch (...)
             {
@@ -277,7 +297,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateCharset(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateCharset(param0);
+                }());
             }
             catch (...)
             {
@@ -315,7 +339,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateCharsetArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateCharsetArray(param0);
+                }());
             }
             catch (...)
             {
@@ -353,7 +381,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateCollection(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateCollection(param0);
+                }());
             }
             catch (...)
             {
@@ -391,7 +423,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateCollectionArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateCollectionArray(param0);
+                }());
             }
             catch (...)
             {
@@ -429,7 +465,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateDateTime(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateDateTime(param0);
+                }());
             }
             catch (...)
             {
@@ -467,7 +507,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::DateTime>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateDateTimeArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateDateTimeArray(param0);
+                }());
             }
             catch (...)
             {
@@ -505,7 +549,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateEnum(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateEnum(param0);
+                }());
             }
             catch (...)
             {
@@ -543,7 +591,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int32_t>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateEnumArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateEnumArray(param0);
+                }());
             }
             catch (...)
             {
@@ -581,7 +633,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateInteger(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateInteger(param0);
+                }());
             }
             catch (...)
             {
@@ -619,7 +675,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int32_t>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateIntegerArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateIntegerArray(param0);
+                }());
             }
             catch (...)
             {
@@ -657,7 +717,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateKeyword(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateKeyword(param0);
+                }());
             }
             catch (...)
             {
@@ -695,7 +759,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateKeywordArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateKeywordArray(param0);
+                }());
             }
             catch (...)
             {
@@ -733,7 +801,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateMimeMedia(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateMimeMedia(param0);
+                }());
             }
             catch (...)
             {
@@ -771,7 +843,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateMimeMediaArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateMimeMediaArray(param0);
+                }());
             }
             catch (...)
             {
@@ -809,7 +885,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::IppTextWithLanguage>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -847,7 +927,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Printers::IppTextWithLanguage>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithLanguageArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithLanguageArray(param0);
+                }());
             }
             catch (...)
             {
@@ -885,7 +969,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithoutLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithoutLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -923,7 +1011,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithoutLanguageArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNameWithoutLanguageArray(param0);
+                }());
             }
             catch (...)
             {
@@ -961,7 +1053,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNaturalLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNaturalLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -999,7 +1095,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNaturalLanguageArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNaturalLanguageArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1035,7 +1135,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateNoValue());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateNoValue();
+                }());
             }
             catch (...)
             {
@@ -1073,7 +1177,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateOctetString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateOctetString(param0);
+                }());
             }
             catch (...)
             {
@@ -1111,7 +1219,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Streams::IBuffer>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateOctetStringArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateOctetStringArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1149,7 +1261,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::IppIntegerRange>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateRangeOfInteger(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateRangeOfInteger(param0);
+                }());
             }
             catch (...)
             {
@@ -1187,7 +1303,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Printers::IppIntegerRange>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateRangeOfIntegerArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateRangeOfIntegerArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1225,7 +1345,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::IppResolution>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateResolution(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateResolution(param0);
+                }());
             }
             catch (...)
             {
@@ -1263,7 +1387,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Printers::IppResolution>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateResolutionArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateResolutionArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1301,7 +1429,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::IppTextWithLanguage>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -1339,7 +1471,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Printers::IppTextWithLanguage>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithLanguageArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithLanguageArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1377,7 +1513,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithoutLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithoutLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -1415,7 +1555,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithoutLanguageArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateTextWithoutLanguageArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1451,7 +1595,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUnknown());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUnknown();
+                }());
             }
             catch (...)
             {
@@ -1487,7 +1635,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUnsupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUnsupported();
+                }());
             }
             catch (...)
             {
@@ -1525,7 +1677,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUri(param0);
+                }());
             }
             catch (...)
             {
@@ -1563,7 +1719,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1601,7 +1761,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriSchema(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriSchema(param0);
+                }());
             }
             catch (...)
             {
@@ -1639,7 +1803,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriSchemaArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppAttributeValue::CreateUriSchemaArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1675,7 +1843,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBooleanArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanArray();
+                }());
             }
             catch (...)
             {
@@ -1711,7 +1883,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCharsetArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharsetArray();
+                }());
             }
             catch (...)
             {
@@ -1747,7 +1923,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCollectionArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCollectionArray();
+                }());
             }
             catch (...)
             {
@@ -1783,7 +1963,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDateTimeArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDateTimeArray();
+                }());
             }
             catch (...)
             {
@@ -1819,7 +2003,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetEnumArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnumArray();
+                }());
             }
             catch (...)
             {
@@ -1855,7 +2043,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetIntegerArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIntegerArray();
+                }());
             }
             catch (...)
             {
@@ -1891,7 +2083,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetKeywordArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetKeywordArray();
+                }());
             }
             catch (...)
             {
@@ -1927,7 +2123,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMimeMediaTypeArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMimeMediaTypeArray();
+                }());
             }
             catch (...)
             {
@@ -1963,7 +2163,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNameWithLanguageArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNameWithLanguageArray();
+                }());
             }
             catch (...)
             {
@@ -1999,7 +2203,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNameWithoutLanguageArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNameWithoutLanguageArray();
+                }());
             }
             catch (...)
             {
@@ -2035,7 +2243,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNaturalLanguageArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNaturalLanguageArray();
+                }());
             }
             catch (...)
             {
@@ -2071,7 +2283,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetOctetStringArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOctetStringArray();
+                }());
             }
             catch (...)
             {
@@ -2107,7 +2323,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRangeOfIntegerArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRangeOfIntegerArray();
+                }());
             }
             catch (...)
             {
@@ -2143,7 +2363,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResolutionArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResolutionArray();
+                }());
             }
             catch (...)
             {
@@ -2179,7 +2403,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTextWithLanguageArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTextWithLanguageArray();
+                }());
             }
             catch (...)
             {
@@ -2215,7 +2443,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTextWithoutLanguageArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTextWithoutLanguageArray();
+                }());
             }
             catch (...)
             {
@@ -2251,7 +2483,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUriArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUriArray();
+                }());
             }
             catch (...)
             {
@@ -2287,7 +2523,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUriSchemaArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUriSchemaArray();
+                }());
             }
             catch (...)
             {
@@ -2319,7 +2559,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2519,7 +2763,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.End());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.End();
+            }());
         }
         catch (...)
         {
@@ -2545,7 +2793,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Start());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Start();
+            }());
         }
         catch (...)
         {
@@ -2645,7 +2897,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppPrintDevice::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppPrintDevice::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -2683,7 +2939,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppPrintDevice::FromPrinterName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppPrintDevice::FromPrinterName(param0);
+                }());
             }
             catch (...)
             {
@@ -2719,7 +2979,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Printers::IppPrintDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppPrintDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -2755,7 +3019,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMaxSupportedPdfSize());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMaxSupportedPdfSize();
+                }());
             }
             catch (...)
             {
@@ -2791,7 +3059,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMaxSupportedPdfVersion());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMaxSupportedPdfVersion();
+                }());
             }
             catch (...)
             {
@@ -2829,7 +3101,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetMaxSupportedPdlVersion(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMaxSupportedPdlVersion(param0);
+                }());
             }
             catch (...)
             {
@@ -2865,7 +3141,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPdlPassthroughProvider());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPdlPassthroughProvider();
+                }());
             }
             catch (...)
             {
@@ -2903,7 +3183,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetPrinterAttributes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPrinterAttributes(param0);
+                }());
             }
             catch (...)
             {
@@ -2941,7 +3225,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetPrinterAttributesAsBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPrinterAttributesAsBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -2979,7 +3267,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::IppPrintDevice::IsIppPrinter(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::IppPrintDevice::IsIppPrinter(param0);
+                }());
             }
             catch (...)
             {
@@ -3017,7 +3309,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsPdlPassthroughSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPdlPassthroughSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -3053,7 +3349,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                self->obj.RefreshPrintDeviceCapabilities();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RefreshPrintDeviceCapabilities();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3092,7 +3392,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 0);
 
-                return py::convert(self->obj.SetPrinterAttributes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPrinterAttributes(param0);
+                }());
             }
             catch (...)
             {
@@ -3130,7 +3434,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.SetPrinterAttributesFromBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPrinterAttributesFromBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -3162,7 +3470,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrinterName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterName();
+            }());
         }
         catch (...)
         {
@@ -3188,7 +3500,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrinterUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterUri();
+            }());
         }
         catch (...)
         {
@@ -3214,7 +3530,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIppFaxOutPrinter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIppFaxOutPrinter();
+            }());
         }
         catch (...)
         {
@@ -3240,7 +3560,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDefaultPrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDefaultPrintTicket();
+            }());
         }
         catch (...)
         {
@@ -3274,7 +3598,11 @@ namespace py::cpp::Windows::Devices::Printers
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(arg);
 
-            self->obj.UserDefaultPrintTicket(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserDefaultPrintTicket(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3301,7 +3629,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanModifyUserDefaultPrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanModifyUserDefaultPrintTicket();
+            }());
         }
         catch (...)
         {
@@ -3327,7 +3659,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceKind();
+            }());
         }
         catch (...)
         {
@@ -3490,7 +3826,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -3516,7 +3856,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -3542,7 +3886,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -3637,7 +3985,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeErrors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeErrors();
+            }());
         }
         catch (...)
         {
@@ -3663,7 +4015,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -3782,7 +4138,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -3808,7 +4168,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3924,7 +4288,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SizeSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SizeSource();
+            }());
         }
         catch (...)
         {
@@ -3958,7 +4326,11 @@ namespace py::cpp::Windows::Devices::Printers
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Printers::PageConfigurationSource>(arg);
 
-            self->obj.SizeSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SizeSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3985,7 +4357,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientationSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientationSource();
+            }());
         }
         catch (...)
         {
@@ -4019,7 +4395,11 @@ namespace py::cpp::Windows::Devices::Printers
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Printers::PageConfigurationSource>(arg);
 
-            self->obj.OrientationSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OrientationSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4123,7 +4503,11 @@ namespace py::cpp::Windows::Devices::Printers
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Printers::PageConfigurationSettings>(args, 3);
 
-                return py::convert(self->obj.StartPrintJobWithPrintTicket(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartPrintJobWithPrintTicket(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4164,7 +4548,11 @@ namespace py::cpp::Windows::Devices::Printers
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTaskOptions>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Printers::PageConfigurationSettings>(args, 3);
 
-                return py::convert(self->obj.StartPrintJobWithTaskOptions(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartPrintJobWithTaskOptions(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4196,7 +4584,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedPdlContentTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedPdlContentTypes();
+            }());
         }
         catch (...)
         {
@@ -4295,7 +4687,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4332,7 +4728,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetOutputStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStream();
+                }());
             }
             catch (...)
             {
@@ -4368,7 +4768,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                self->obj.Submit();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Submit();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4401,7 +4805,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintJobId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintJobId();
+            }());
         }
         catch (...)
         {
@@ -4443,7 +4851,11 @@ namespace py::cpp::Windows::Devices::Printers
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4524,7 +4936,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::Print3DDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::Print3DDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4560,7 +4976,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Printers::Print3DDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::Print3DDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -4592,7 +5012,11 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintSchema());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintSchema();
+            }());
         }
         catch (...)
         {
@@ -4718,7 +5142,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>(args, 0);
 
-                return py::convert(self->obj.GetCapabilitiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCapabilitiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4754,7 +5182,11 @@ namespace py::cpp::Windows::Devices::Printers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDefaultPrintTicketAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDefaultPrintTicketAsync();
+                }());
             }
             catch (...)
             {
@@ -4792,7 +5224,11 @@ namespace py::cpp::Windows::Devices::Printers
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>(args, 0);
 
-                return py::convert(self->obj.MergeAndValidateWithDefaultPrintTicketAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MergeAndValidateWithDefaultPrintTicketAsync(param0);
+                }());
             }
             catch (...)
             {

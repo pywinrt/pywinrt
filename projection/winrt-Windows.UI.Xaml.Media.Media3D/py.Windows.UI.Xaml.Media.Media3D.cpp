@@ -60,7 +60,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslateZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslateZ();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TranslateZ(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslateZ(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslateY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslateY();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TranslateY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslateY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslateX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslateX();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TranslateX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslateX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleZ();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ScaleZ(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleZ(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleY();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ScaleY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleX();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ScaleX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationZ();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RotationZ(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationZ(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationY();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RotationY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationX();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RotationX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CenterZ();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.CenterZ(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CenterZ(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CenterY();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.CenterY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CenterY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CenterX();
+            }());
         }
         catch (...)
         {
@@ -765,7 +857,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.CenterX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CenterX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -792,7 +888,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterXProperty();
+            }());
         }
         catch (...)
         {
@@ -818,7 +918,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterYProperty();
+            }());
         }
         catch (...)
         {
@@ -844,7 +948,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterZProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterZProperty();
+            }());
         }
         catch (...)
         {
@@ -870,7 +978,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationXProperty();
+            }());
         }
         catch (...)
         {
@@ -896,7 +1008,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationYProperty();
+            }());
         }
         catch (...)
         {
@@ -922,7 +1038,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationZProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationZProperty();
+            }());
         }
         catch (...)
         {
@@ -948,7 +1068,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleXProperty();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1098,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleYProperty();
+            }());
         }
         catch (...)
         {
@@ -1000,7 +1128,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleZProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleZProperty();
+            }());
         }
         catch (...)
         {
@@ -1026,7 +1158,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateXProperty();
+            }());
         }
         catch (...)
         {
@@ -1052,7 +1188,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateYProperty();
+            }());
         }
         catch (...)
         {
@@ -1078,7 +1218,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateZProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateZProperty();
+            }());
         }
         catch (...)
         {
@@ -1240,7 +1384,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 auto param14 = py::convert_to<double>(args, 14);
                 auto param15 = py::convert_to<double>(args, 15);
 
-                return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::FromElements(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::FromElements(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15);
+                }());
             }
             catch (...)
             {
@@ -1278,7 +1426,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::GetHasInverse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::GetHasInverse(param0);
+                }());
             }
             catch (...)
             {
@@ -1316,7 +1468,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::GetIsIdentity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::GetIsIdentity(param0);
+                }());
             }
             catch (...)
             {
@@ -1354,7 +1510,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Invert(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Invert(param0);
+                }());
             }
             catch (...)
             {
@@ -1393,7 +1553,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Multiply(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Multiply(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1425,7 +1589,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Identity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper::Identity();
+            }());
         }
         catch (...)
         {
@@ -1570,7 +1738,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.OffsetY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OffsetY();
+            }());
         }
         catch (...)
         {
@@ -1604,7 +1776,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OffsetY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OffsetY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1631,7 +1807,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.OffsetX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OffsetX();
+            }());
         }
         catch (...)
         {
@@ -1665,7 +1845,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OffsetX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OffsetX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1692,7 +1876,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Depth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Depth();
+            }());
         }
         catch (...)
         {
@@ -1726,7 +1914,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Depth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Depth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1753,7 +1945,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::DepthProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::DepthProperty();
+            }());
         }
         catch (...)
         {
@@ -1779,7 +1975,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetXProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetXProperty();
+            }());
         }
         catch (...)
         {
@@ -1805,7 +2005,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetYProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetYProperty();
+            }());
         }
         catch (...)
         {

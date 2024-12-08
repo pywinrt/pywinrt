@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentDisplayMode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentDisplayMode();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedDisplayModes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedDisplayModes();
+                }());
             }
             catch (...)
             {
@@ -152,7 +164,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
 
-                return py::convert(self->obj.RequestSetCurrentDisplayModeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestSetCurrentDisplayModeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>(args, 2);
 
-                return py::convert(self->obj.RequestSetCurrentDisplayModeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestSetCurrentDisplayModeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
 
-                return py::convert(self->obj.RequestSetCurrentDisplayModeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestSetCurrentDisplayModeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -267,7 +291,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SetDefaultDisplayModeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDefaultDisplayModeAsync();
+                }());
             }
             catch (...)
             {
@@ -301,7 +329,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DisplayModesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayModesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -329,7 +361,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DisplayModesChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayModesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -462,7 +498,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -494,7 +534,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitsPerPixel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitsPerPixel();
+            }());
         }
         catch (...)
         {
@@ -520,7 +564,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorSpace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorSpace();
+            }());
         }
         catch (...)
         {
@@ -546,7 +594,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Is2086MetadataSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Is2086MetadataSupported();
+            }());
         }
         catch (...)
         {
@@ -572,7 +624,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSdrLuminanceSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSdrLuminanceSupported();
+            }());
         }
         catch (...)
         {
@@ -598,7 +654,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSmpte2084Supported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSmpte2084Supported();
+            }());
         }
         catch (...)
         {
@@ -624,7 +684,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelEncoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelEncoding();
+            }());
         }
         catch (...)
         {
@@ -650,7 +714,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.RefreshRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RefreshRate();
+            }());
         }
         catch (...)
         {
@@ -676,7 +744,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolutionHeightInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolutionHeightInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -702,7 +774,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolutionWidthInRawPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolutionWidthInRawPixels();
+            }());
         }
         catch (...)
         {
@@ -728,7 +804,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.StereoEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StereoEnabled();
+            }());
         }
         catch (...)
         {
@@ -754,7 +834,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDolbyVisionLowLatencySupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDolbyVisionLowLatencySupported();
+            }());
         }
         catch (...)
         {

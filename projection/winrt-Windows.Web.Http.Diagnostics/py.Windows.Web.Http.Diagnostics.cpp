@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
                 auto param0 = py::convert_to<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -152,7 +164,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestResponseCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestResponseCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -180,7 +196,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestResponseCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestResponseCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -209,7 +229,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestSent(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestSent(param0);
+            }());
         }
         catch (...)
         {
@@ -237,7 +261,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestSent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestSent(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -266,7 +294,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ResponseReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -294,7 +326,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ResponseReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResponseReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -421,7 +457,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -447,7 +487,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Initiator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Initiator();
+            }());
         }
         catch (...)
         {
@@ -473,7 +517,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessId();
+            }());
         }
         catch (...)
         {
@@ -499,7 +547,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedUri();
+            }());
         }
         catch (...)
         {
@@ -525,7 +577,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceLocations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceLocations();
+            }());
         }
         catch (...)
         {
@@ -551,7 +607,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThreadId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThreadId();
+            }());
         }
         catch (...)
         {
@@ -577,7 +637,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamps();
+            }());
         }
         catch (...)
         {
@@ -676,7 +740,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.CacheCheckedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CacheCheckedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -702,7 +770,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionCompletedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionCompletedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -728,7 +800,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionInitiatedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionInitiatedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -754,7 +830,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.NameResolvedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NameResolvedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -780,7 +860,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestCompletedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestCompletedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -806,7 +890,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestSentTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestSentTimestamp();
+            }());
         }
         catch (...)
         {
@@ -832,7 +920,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCompletedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCompletedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -858,7 +950,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseReceivedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseReceivedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -884,7 +980,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SslNegotiatedTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SslNegotiatedTimestamp();
+            }());
         }
         catch (...)
         {
@@ -985,7 +1085,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -1011,7 +1115,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Initiator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Initiator();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1145,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1063,7 +1175,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessId();
+            }());
         }
         catch (...)
         {
@@ -1089,7 +1205,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceLocations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceLocations();
+            }());
         }
         catch (...)
         {
@@ -1115,7 +1235,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThreadId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThreadId();
+            }());
         }
         catch (...)
         {
@@ -1141,7 +1265,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1240,7 +1368,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -1266,7 +1398,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1292,7 +1428,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1387,7 +1527,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColumnNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColumnNumber();
+            }());
         }
         catch (...)
         {
@@ -1413,7 +1557,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineNumber();
+            }());
         }
         catch (...)
         {
@@ -1439,7 +1587,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceUri();
+            }());
         }
         catch (...)
         {

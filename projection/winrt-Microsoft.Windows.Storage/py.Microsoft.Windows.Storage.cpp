@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Storage::ApplicationDataLocality>(args, 0);
 
-                return py::convert(self->obj.ClearAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ClearPublisherCacheFolderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearPublisherCacheFolderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -155,7 +167,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Storage::ApplicationData::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Storage::ApplicationData::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -193,7 +209,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::Storage::ApplicationData::GetForPackageFamily(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Storage::ApplicationData::GetForPackageFamily(param0);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::Storage::ApplicationData::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Storage::ApplicationData::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -269,7 +293,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetPublisherCacheFolder(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPublisherCacheFolder(param0);
+                }());
             }
             catch (...)
             {
@@ -307,7 +335,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetPublisherCachePath(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPublisherCachePath(param0);
+                }());
             }
             catch (...)
             {
@@ -339,7 +371,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMachinePathSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMachinePathSupported();
+            }());
         }
         catch (...)
         {
@@ -365,7 +401,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalCacheFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalCacheFolder();
+            }());
         }
         catch (...)
         {
@@ -391,7 +431,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalCachePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalCachePath();
+            }());
         }
         catch (...)
         {
@@ -417,7 +461,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalFolder();
+            }());
         }
         catch (...)
         {
@@ -443,7 +491,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPath();
+            }());
         }
         catch (...)
         {
@@ -469,7 +521,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalSettings();
+            }());
         }
         catch (...)
         {
@@ -495,7 +551,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.MachineFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MachineFolder();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.MachinePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MachinePath();
+            }());
         }
         catch (...)
         {
@@ -547,7 +611,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedLocalFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedLocalFolder();
+            }());
         }
         catch (...)
         {
@@ -573,7 +641,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedLocalPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedLocalPath();
+            }());
         }
         catch (...)
         {
@@ -599,7 +671,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.TemporaryFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TemporaryFolder();
+            }());
         }
         catch (...)
         {
@@ -625,7 +701,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.TemporaryPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TemporaryPath();
+            }());
         }
         catch (...)
         {
@@ -667,7 +747,11 @@ namespace py::cpp::Microsoft::Windows::Storage
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -787,7 +871,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -827,7 +915,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Storage::ApplicationDataCreateDisposition>(args, 1);
 
-                return py::convert(self->obj.CreateContainer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContainer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -865,7 +957,11 @@ namespace py::cpp::Microsoft::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.DeleteContainer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteContainer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -898,7 +994,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Containers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Containers();
+            }());
         }
         catch (...)
         {
@@ -924,7 +1024,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Locality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Locality();
+            }());
         }
         catch (...)
         {
@@ -950,7 +1054,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -976,7 +1084,11 @@ namespace py::cpp::Microsoft::Windows::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Values());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Values();
+            }());
         }
         catch (...)
         {
@@ -1018,7 +1130,11 @@ namespace py::cpp::Microsoft::Windows::Storage
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

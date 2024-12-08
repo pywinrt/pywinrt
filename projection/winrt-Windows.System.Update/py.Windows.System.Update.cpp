@@ -38,7 +38,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.DownloadProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadProgress();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallProgress();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Revision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Revision();
+            }());
         }
         catch (...)
         {
@@ -194,7 +218,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -220,7 +248,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -320,7 +352,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -346,7 +382,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInteractive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInteractive();
+            }());
         }
         catch (...)
         {
@@ -372,7 +412,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -465,7 +509,11 @@ namespace py::cpp::Windows::System::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::BlockAutomaticRebootAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::BlockAutomaticRebootAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -501,7 +549,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::GetAutomaticRebootBlockIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::GetAutomaticRebootBlockIds();
+                }());
             }
             catch (...)
             {
@@ -537,7 +589,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::GetFlightRing());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::GetFlightRing();
+                }());
             }
             catch (...)
             {
@@ -573,7 +629,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::GetUpdateItems());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::GetUpdateItems();
+                }());
             }
             catch (...)
             {
@@ -609,7 +669,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -645,7 +709,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                winrt::Windows::System::Update::SystemUpdateManager::RebootToCompleteInstall();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::System::Update::SystemUpdateManager::RebootToCompleteInstall();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -684,7 +752,11 @@ namespace py::cpp::Windows::System::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::SetFlightRing(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::SetFlightRing(param0);
+                }());
             }
             catch (...)
             {
@@ -720,7 +792,11 @@ namespace py::cpp::Windows::System::Update
                     return nullptr;
                 }
 
-                winrt::Windows::System::Update::SystemUpdateManager::StartCancelUpdates();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::System::Update::SystemUpdateManager::StartCancelUpdates();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -759,7 +835,11 @@ namespace py::cpp::Windows::System::Update
 
                 auto param0 = py::convert_to<winrt::Windows::System::Update::SystemUpdateStartInstallAction>(args, 0);
 
-                winrt::Windows::System::Update::SystemUpdateManager::StartInstall(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::System::Update::SystemUpdateManager::StartInstall(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -799,7 +879,11 @@ namespace py::cpp::Windows::System::Update
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::TrySetUserActiveHours(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::TrySetUserActiveHours(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -837,7 +921,11 @@ namespace py::cpp::Windows::System::Update
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::System::Update::SystemUpdateManager::UnblockAutomaticRebootAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Update::SystemUpdateManager::UnblockAutomaticRebootAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -869,7 +957,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::AttentionRequiredReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::AttentionRequiredReason();
+            }());
         }
         catch (...)
         {
@@ -895,7 +987,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::DownloadProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::DownloadProgress();
+            }());
         }
         catch (...)
         {
@@ -921,7 +1017,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -947,7 +1047,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::InstallProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::InstallProgress();
+            }());
         }
         catch (...)
         {
@@ -973,7 +1077,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::LastErrorInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::LastErrorInfo();
+            }());
         }
         catch (...)
         {
@@ -999,7 +1107,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::LastUpdateCheckTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::LastUpdateCheckTime();
+            }());
         }
         catch (...)
         {
@@ -1025,7 +1137,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::LastUpdateInstallTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::LastUpdateInstallTime();
+            }());
         }
         catch (...)
         {
@@ -1051,7 +1167,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::State();
+            }());
         }
         catch (...)
         {
@@ -1077,7 +1197,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursEnd());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursEnd();
+            }());
         }
         catch (...)
         {
@@ -1103,7 +1227,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursMax());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursMax();
+            }());
         }
         catch (...)
         {
@@ -1129,7 +1257,11 @@ namespace py::cpp::Windows::System::Update
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::UserActiveHoursStart();
+            }());
         }
         catch (...)
         {
@@ -1157,7 +1289,11 @@ namespace py::cpp::Windows::System::Update
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::System::Update::SystemUpdateManager::StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Update::SystemUpdateManager::StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1185,7 +1321,11 @@ namespace py::cpp::Windows::System::Update
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::System::Update::SystemUpdateManager::StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::System::Update::SystemUpdateManager::StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

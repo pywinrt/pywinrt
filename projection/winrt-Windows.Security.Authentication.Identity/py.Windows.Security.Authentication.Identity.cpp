@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyId();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyName();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(self->obj.TenantId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TenantId();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(self->obj.TenantName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TenantName();
+            }());
         }
         catch (...)
         {
@@ -243,7 +263,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRegistrationsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRegistrationsAsync();
+                }());
             }
             catch (...)
             {
@@ -275,7 +299,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager::Current();
+            }());
         }
         catch (...)
         {

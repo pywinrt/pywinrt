@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::Windows::System
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddExecutableFileExtension(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddExecutableFileExtension(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -83,7 +87,11 @@ namespace py::cpp::Microsoft::Windows::System
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AppendToPath(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendToPath(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -122,7 +130,11 @@ namespace py::cpp::Microsoft::Windows::System
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetEnvironmentVariable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnvironmentVariable(param0);
+                }());
             }
             catch (...)
             {
@@ -158,7 +170,11 @@ namespace py::cpp::Microsoft::Windows::System
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetEnvironmentVariables());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEnvironmentVariables();
+                }());
             }
             catch (...)
             {
@@ -194,7 +210,11 @@ namespace py::cpp::Microsoft::Windows::System
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::System::EnvironmentManager::GetForMachine());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::System::EnvironmentManager::GetForMachine();
+                }());
             }
             catch (...)
             {
@@ -230,7 +250,11 @@ namespace py::cpp::Microsoft::Windows::System
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::System::EnvironmentManager::GetForProcess());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::System::EnvironmentManager::GetForProcess();
+                }());
             }
             catch (...)
             {
@@ -266,7 +290,11 @@ namespace py::cpp::Microsoft::Windows::System
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::System::EnvironmentManager::GetForUser());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::System::EnvironmentManager::GetForUser();
+                }());
             }
             catch (...)
             {
@@ -304,7 +332,11 @@ namespace py::cpp::Microsoft::Windows::System
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveExecutableFileExtension(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveExecutableFileExtension(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -343,7 +375,11 @@ namespace py::cpp::Microsoft::Windows::System
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveFromPath(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveFromPath(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -383,7 +419,11 @@ namespace py::cpp::Microsoft::Windows::System
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetEnvironmentVariable(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEnvironmentVariable(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -416,7 +456,11 @@ namespace py::cpp::Microsoft::Windows::System
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreChangesTracked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreChangesTracked();
+            }());
         }
         catch (...)
         {
@@ -442,7 +486,11 @@ namespace py::cpp::Microsoft::Windows::System
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::EnvironmentManager::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::EnvironmentManager::IsSupported();
+            }());
         }
         catch (...)
         {
