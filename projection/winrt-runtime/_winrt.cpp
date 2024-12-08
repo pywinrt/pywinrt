@@ -86,11 +86,68 @@ namespace py::cpp::_winrt
             nullptr},
            {}};
 
+    static PyObject* Object_richcompare(
+        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
+        PyObject* other,
+        int op) noexcept
+    {
+        if (op == Py_EQ)
+        {
+            try
+            {
+                auto other_inspectable
+                    = py::convert_to<winrt::Windows::Foundation::IInspectable>(other);
+
+                if (other_inspectable)
+                {
+                    return PyBool_FromLong(self->obj == other_inspectable);
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_Clear();
+            }
+
+            Py_RETURN_FALSE;
+        }
+
+        if (op == Py_NE)
+        {
+            try
+            {
+                auto other_inspectable
+                    = py::convert_to<winrt::Windows::Foundation::IInspectable>(other);
+
+                if (other_inspectable)
+                {
+                    return PyBool_FromLong(self->obj != other_inspectable);
+                }
+            }
+            catch (python_exception)
+            {
+                PyErr_Clear();
+            }
+
+            Py_RETURN_TRUE;
+        }
+
+        Py_RETURN_NOTIMPLEMENTED;
+    }
+
+    static Py_hash_t Object_hash(
+        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        return static_cast<Py_hash_t>(
+            std::hash<winrt::Windows::Foundation::IInspectable>{}(self->obj));
+    }
+
     static PyType_Slot Object_type_slots[]
         = {{Py_tp_doc, const_cast<char*>(Object_doc)},
            {Py_tp_new, reinterpret_cast<void*>(Object_new)},
            {Py_tp_dealloc, reinterpret_cast<void*>(Object_dealloc)},
            {Py_tp_getset, reinterpret_cast<void*>(Object_getset)},
+           {Py_tp_richcompare, reinterpret_cast<void*>(Object_richcompare)},
+           {Py_tp_hash, reinterpret_cast<void*>(Object_hash)},
            {}};
 
     static PyType_Spec Object_type_spec

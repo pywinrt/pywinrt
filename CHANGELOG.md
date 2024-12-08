@@ -8,6 +8,7 @@
 - Added new `winrt.runtime` module.
 - Added new `winrt.runtime.interop` module.
 - Added new `box_...()` and `unbox_...()` functions to `winrt.system`.
+- Added support for `==`, `!=` and `hash()` of `winrt.system.Object`.
 
 ### Changed
 - BREAKING: Use `[Windows.Foundation.Metadata.Overload]` attribute for method

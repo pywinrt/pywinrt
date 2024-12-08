@@ -187,6 +187,50 @@ class TestTestComponent(unittest.TestCase):
             class s(tc.ITests):  # type: ignore
                 pass
 
+    def test_object_equality(self):
+        c1 = tc.Derived()
+        c2 = tc.Composable._from(c1)
+        c3 = tc.Derived()
+        c4 = str()
+
+        # these have to be true in order for tests to be valid
+        self.assertIsNot(
+            c1, c2, "python should create new wrappers for the same WinRT object"
+        )
+        self.assertNotEqual(type(c1), type(c2))
+
+        self.assertEqual(
+            c1,
+            c2,
+            "different wrappers of the same WinRT object instance should be equal",
+        )
+        self.assertNotEqual(
+            c1,
+            c3,
+            "different wrappers of the different WinRT object instances should not be equal",
+        )
+        self.assertNotEqual(
+            c1,
+            c4,
+            "WinRT object any any other type should not be equal",
+        )
+
+    def test_object_hashable(self):
+        c1 = tc.Derived()
+        c2 = tc.Composable._from(c1)
+
+        # these have to be true in order for test to be valid
+        self.assertIsNot(
+            c1, c2, "python should create new wrappers for the same WinRT object"
+        )
+        self.assertNotEqual(type(c1), type(c2))
+
+        self.assertEqual(
+            hash(c1),
+            hash(c2),
+            "different wrappers of the same WinRT object instance should hash the same",
+        )
+
     def test_struct_hashable(self):
         b = tc.Blittable()
 
